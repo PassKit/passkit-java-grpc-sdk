@@ -1,0 +1,1150 @@
+package com.passkit.grpc.Raw;
+
+import static io.grpc.MethodDescriptor.generateFullMethodName;
+import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ClientCalls.asyncUnaryCall;
+import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
+import static io.grpc.stub.ClientCalls.blockingUnaryCall;
+import static io.grpc.stub.ClientCalls.futureUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnaryCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
+import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
+
+/**
+ */
+@javax.annotation.Generated(
+    value = "by gRPC proto compiler (version 1.19.0)",
+    comments = "Source: io/raw/a_rpc.proto")
+public final class RawGrpc {
+
+  private RawGrpc() {}
+
+  public static final String SERVICE_NAME = "raw.Raw";
+
+  // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject,
+      com.passkit.grpc.CommonObjects.Id> getCreatePassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createPassProject",
+      requestType = com.passkit.grpc.Raw.Project.PassProject.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject,
+      com.passkit.grpc.CommonObjects.Id> getCreatePassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.CommonObjects.Id> getCreatePassProjectMethod;
+    if ((getCreatePassProjectMethod = RawGrpc.getCreatePassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getCreatePassProjectMethod = RawGrpc.getCreatePassProjectMethod) == null) {
+          RawGrpc.getCreatePassProjectMethod = getCreatePassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "createPassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPassProject"))
+                  .build();
+          }
+        }
+     }
+     return getCreatePassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject,
+      com.passkit.grpc.Raw.Project.PassProject> getUpdatePassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updatePassProject",
+      requestType = com.passkit.grpc.Raw.Project.PassProject.class,
+      responseType = com.passkit.grpc.Raw.Project.PassProject.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject,
+      com.passkit.grpc.Raw.Project.PassProject> getUpdatePassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.Raw.Project.PassProject> getUpdatePassProjectMethod;
+    if ((getUpdatePassProjectMethod = RawGrpc.getUpdatePassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getUpdatePassProjectMethod = RawGrpc.getUpdatePassProjectMethod) == null) {
+          RawGrpc.getUpdatePassProjectMethod = getUpdatePassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.Raw.Project.PassProject>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "updatePassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePassProject"))
+                  .build();
+          }
+        }
+     }
+     return getUpdatePassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Raw.Project.PassProject> getGetPassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getPassProject",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.Raw.Project.PassProject.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Raw.Project.PassProject> getGetPassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.Project.PassProject> getGetPassProjectMethod;
+    if ((getGetPassProjectMethod = RawGrpc.getGetPassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getGetPassProjectMethod = RawGrpc.getGetPassProjectMethod) == null) {
+          RawGrpc.getGetPassProjectMethod = getGetPassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.Project.PassProject>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "getPassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassProject"))
+                  .build();
+          }
+        }
+     }
+     return getGetPassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProjectCopyRequest,
+      com.passkit.grpc.CommonObjects.Id> getCopyPassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "copyPassProject",
+      requestType = com.passkit.grpc.Raw.Project.PassProjectCopyRequest.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProjectCopyRequest,
+      com.passkit.grpc.CommonObjects.Id> getCopyPassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProjectCopyRequest, com.passkit.grpc.CommonObjects.Id> getCopyPassProjectMethod;
+    if ((getCopyPassProjectMethod = RawGrpc.getCopyPassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getCopyPassProjectMethod = RawGrpc.getCopyPassProjectMethod) == null) {
+          RawGrpc.getCopyPassProjectMethod = getCopyPassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProjectCopyRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "copyPassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.Project.PassProjectCopyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("copyPassProject"))
+                  .build();
+          }
+        }
+     }
+     return getCopyPassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getDeletePassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deletePassProject",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getDeletePassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty> getDeletePassProjectMethod;
+    if ((getDeletePassProjectMethod = RawGrpc.getDeletePassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getDeletePassProjectMethod = RawGrpc.getDeletePassProjectMethod) == null) {
+          RawGrpc.getDeletePassProjectMethod = getDeletePassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "deletePassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePassProject"))
+                  .build();
+          }
+        }
+     }
+     return getDeletePassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getCreatePassMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createPass",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getCreatePassMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id> getCreatePassMethod;
+    if ((getCreatePassMethod = RawGrpc.getCreatePassMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getCreatePassMethod = RawGrpc.getCreatePassMethod) == null) {
+          RawGrpc.getCreatePassMethod = getCreatePassMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "createPass"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPass"))
+                  .build();
+          }
+        }
+     }
+     return getCreatePassMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getUpdatePassMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updatePass",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getUpdatePassMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id> getUpdatePassMethod;
+    if ((getUpdatePassMethod = RawGrpc.getUpdatePassMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getUpdatePassMethod = RawGrpc.getUpdatePassMethod) == null) {
+          RawGrpc.getUpdatePassMethod = getUpdatePassMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "updatePass"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePass"))
+                  .build();
+          }
+        }
+     }
+     return getUpdatePassMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getStreamPassUpdatesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "streamPassUpdates",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.passkit.grpc.CommonObjects.Id> getStreamPassUpdatesMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id> getStreamPassUpdatesMethod;
+    if ((getStreamPassUpdatesMethod = RawGrpc.getStreamPassUpdatesMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getStreamPassUpdatesMethod = RawGrpc.getStreamPassUpdatesMethod) == null) {
+          RawGrpc.getStreamPassUpdatesMethod = getStreamPassUpdatesMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "streamPassUpdates"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("streamPassUpdates"))
+                  .build();
+          }
+        }
+     }
+     return getStreamPassUpdatesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getPassById",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByIdMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByIdMethod;
+    if ((getGetPassByIdMethod = RawGrpc.getGetPassByIdMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getGetPassByIdMethod = RawGrpc.getGetPassByIdMethod) == null) {
+          RawGrpc.getGetPassByIdMethod = getGetPassByIdMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "getPassById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassById"))
+                  .build();
+          }
+        }
+     }
+     return getGetPassByIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByExternalIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getPassByExternalId",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest.class,
+      responseType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByExternalIdMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest, com.passkit.grpc.Raw.PassOuterClass.Pass> getGetPassByExternalIdMethod;
+    if ((getGetPassByExternalIdMethod = RawGrpc.getGetPassByExternalIdMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getGetPassByExternalIdMethod = RawGrpc.getGetPassByExternalIdMethod) == null) {
+          RawGrpc.getGetPassByExternalIdMethod = getGetPassByExternalIdMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "getPassByExternalId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassByExternalId"))
+                  .build();
+          }
+        }
+     }
+     return getGetPassByExternalIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.google.protobuf.Empty> getDeletePassMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deletePass",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
+      com.google.protobuf.Empty> getDeletePassMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass, com.google.protobuf.Empty> getDeletePassMethod;
+    if ((getDeletePassMethod = RawGrpc.getDeletePassMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getDeletePassMethod = RawGrpc.getDeletePassMethod) == null) {
+          RawGrpc.getDeletePassMethod = getDeletePassMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "deletePass"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePass"))
+                  .build();
+          }
+        }
+     }
+     return getDeletePassMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "listPassesByPassProject",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest.class,
+      responseType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassProjectMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest, com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassProjectMethod;
+    if ((getListPassesByPassProjectMethod = RawGrpc.getListPassesByPassProjectMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getListPassesByPassProjectMethod = RawGrpc.getListPassesByPassProjectMethod) == null) {
+          RawGrpc.getListPassesByPassProjectMethod = getListPassesByPassProjectMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "listPassesByPassProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassProject"))
+                  .build();
+          }
+        }
+     }
+     return getListPassesByPassProjectMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassTemplateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "listPassesByPassTemplate",
+      requestType = com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest.class,
+      responseType = com.passkit.grpc.Raw.PassOuterClass.Pass.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest,
+      com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassTemplateMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest, com.passkit.grpc.Raw.PassOuterClass.Pass> getListPassesByPassTemplateMethod;
+    if ((getListPassesByPassTemplateMethod = RawGrpc.getListPassesByPassTemplateMethod) == null) {
+      synchronized (RawGrpc.class) {
+        if ((getListPassesByPassTemplateMethod = RawGrpc.getListPassesByPassTemplateMethod) == null) {
+          RawGrpc.getListPassesByPassTemplateMethod = getListPassesByPassTemplateMethod = 
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(
+                  "raw.Raw", "listPassesByPassTemplate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
+                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassTemplate"))
+                  .build();
+          }
+        }
+     }
+     return getListPassesByPassTemplateMethod;
+  }
+
+  /**
+   * Creates a new async stub that supports all call types for the service
+   */
+  public static RawStub newStub(io.grpc.Channel channel) {
+    return new RawStub(channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
+   */
+  public static RawBlockingStub newBlockingStub(
+      io.grpc.Channel channel) {
+    return new RawBlockingStub(channel);
+  }
+
+  /**
+   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   */
+  public static RawFutureStub newFutureStub(
+      io.grpc.Channel channel) {
+    return new RawFutureStub(channel);
+  }
+
+  /**
+   */
+  public static abstract class RawImplBase implements io.grpc.BindableService {
+
+    /**
+     */
+    public void createPassProject(com.passkit.grpc.Raw.Project.PassProject request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreatePassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void updatePassProject(com.passkit.grpc.Raw.Project.PassProject request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdatePassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getPassProject(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetPassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnimplementedUnaryCall(getCopyPassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deletePassProject(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeletePassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnimplementedUnaryCall(getCreatePassMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdatePassMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> streamPassUpdates(
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      return asyncUnimplementedStreamingCall(getStreamPassUpdatesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getPassById(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetPassByIdMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetPassByExternalIdMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnimplementedUnaryCall(getDeletePassMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void listPassesByPassProject(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnimplementedUnaryCall(getListPassesByPassProjectMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void listPassesByPassTemplate(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnimplementedUnaryCall(getListPassesByPassTemplateMethod(), responseObserver);
+    }
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getCreatePassProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.Project.PassProject,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_CREATE_PASS_PROJECT)))
+          .addMethod(
+            getUpdatePassProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.Project.PassProject,
+                com.passkit.grpc.Raw.Project.PassProject>(
+                  this, METHODID_UPDATE_PASS_PROJECT)))
+          .addMethod(
+            getGetPassProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.Id,
+                com.passkit.grpc.Raw.Project.PassProject>(
+                  this, METHODID_GET_PASS_PROJECT)))
+          .addMethod(
+            getCopyPassProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.Project.PassProjectCopyRequest,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_COPY_PASS_PROJECT)))
+          .addMethod(
+            getDeletePassProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.Id,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DELETE_PASS_PROJECT)))
+          .addMethod(
+            getCreatePassMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.Pass,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_CREATE_PASS)))
+          .addMethod(
+            getUpdatePassMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.Pass,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_UPDATE_PASS)))
+          .addMethod(
+            getStreamPassUpdatesMethod(),
+            asyncBidiStreamingCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.Pass,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_STREAM_PASS_UPDATES)))
+          .addMethod(
+            getGetPassByIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.Id,
+                com.passkit.grpc.Raw.PassOuterClass.Pass>(
+                  this, METHODID_GET_PASS_BY_ID)))
+          .addMethod(
+            getGetPassByExternalIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest,
+                com.passkit.grpc.Raw.PassOuterClass.Pass>(
+                  this, METHODID_GET_PASS_BY_EXTERNAL_ID)))
+          .addMethod(
+            getDeletePassMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.Pass,
+                com.google.protobuf.Empty>(
+                  this, METHODID_DELETE_PASS)))
+          .addMethod(
+            getListPassesByPassProjectMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest,
+                com.passkit.grpc.Raw.PassOuterClass.Pass>(
+                  this, METHODID_LIST_PASSES_BY_PASS_PROJECT)))
+          .addMethod(
+            getListPassesByPassTemplateMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest,
+                com.passkit.grpc.Raw.PassOuterClass.Pass>(
+                  this, METHODID_LIST_PASSES_BY_PASS_TEMPLATE)))
+          .build();
+    }
+  }
+
+  /**
+   */
+  public static final class RawStub extends io.grpc.stub.AbstractStub<RawStub> {
+    private RawStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private RawStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RawStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      return new RawStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void createPassProject(com.passkit.grpc.Raw.Project.PassProject request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreatePassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updatePassProject(com.passkit.grpc.Raw.Project.PassProject request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdatePassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getPassProject(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetPassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCopyPassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deletePassProject(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeletePassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getCreatePassMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdatePassMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> streamPassUpdates(
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      return asyncBidiStreamingCall(
+          getChannel().newCall(getStreamPassUpdatesMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public void getPassById(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetPassByIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetPassByExternalIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDeletePassMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listPassesByPassProject(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getListPassesByPassProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listPassesByPassTemplate(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getListPassesByPassTemplateMethod(), getCallOptions()), request, responseObserver);
+    }
+  }
+
+  /**
+   */
+  public static final class RawBlockingStub extends io.grpc.stub.AbstractStub<RawBlockingStub> {
+    private RawBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private RawBlockingStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RawBlockingStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      return new RawBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id createPassProject(com.passkit.grpc.Raw.Project.PassProject request) {
+      return blockingUnaryCall(
+          getChannel(), getCreatePassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Raw.Project.PassProject updatePassProject(com.passkit.grpc.Raw.Project.PassProject request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdatePassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Raw.Project.PassProject getPassProject(com.passkit.grpc.CommonObjects.Id request) {
+      return blockingUnaryCall(
+          getChannel(), getGetPassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getCopyPassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty deletePassProject(com.passkit.grpc.CommonObjects.Id request) {
+      return blockingUnaryCall(
+          getChannel(), getDeletePassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return blockingUnaryCall(
+          getChannel(), getCreatePassMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdatePassMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Raw.PassOuterClass.Pass getPassById(com.passkit.grpc.CommonObjects.Id request) {
+      return blockingUnaryCall(
+          getChannel(), getGetPassByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Raw.PassOuterClass.Pass getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getGetPassByExternalIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return blockingUnaryCall(
+          getChannel(), getDeletePassMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.passkit.grpc.Raw.PassOuterClass.Pass> listPassesByPassProject(
+        com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getListPassesByPassProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.passkit.grpc.Raw.PassOuterClass.Pass> listPassesByPassTemplate(
+        com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request) {
+      return blockingServerStreamingCall(
+          getChannel(), getListPassesByPassTemplateMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   */
+  public static final class RawFutureStub extends io.grpc.stub.AbstractStub<RawFutureStub> {
+    private RawFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
+    private RawFutureStub(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected RawFutureStub build(io.grpc.Channel channel,
+        io.grpc.CallOptions callOptions) {
+      return new RawFutureStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPassProject(
+        com.passkit.grpc.Raw.Project.PassProject request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreatePassProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.Project.PassProject> updatePassProject(
+        com.passkit.grpc.Raw.Project.PassProject request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdatePassProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.Project.PassProject> getPassProject(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetPassProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyPassProject(
+        com.passkit.grpc.Raw.Project.PassProjectCopyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCopyPassProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePassProject(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeletePassProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPass(
+        com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return futureUnaryCall(
+          getChannel().newCall(getCreatePassMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updatePass(
+        com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdatePassMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.PassOuterClass.Pass> getPassById(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetPassByIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.PassOuterClass.Pass> getPassByExternalId(
+        com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetPassByExternalIdMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePass(
+        com.passkit.grpc.Raw.PassOuterClass.Pass request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDeletePassMethod(), getCallOptions()), request);
+    }
+  }
+
+  private static final int METHODID_CREATE_PASS_PROJECT = 0;
+  private static final int METHODID_UPDATE_PASS_PROJECT = 1;
+  private static final int METHODID_GET_PASS_PROJECT = 2;
+  private static final int METHODID_COPY_PASS_PROJECT = 3;
+  private static final int METHODID_DELETE_PASS_PROJECT = 4;
+  private static final int METHODID_CREATE_PASS = 5;
+  private static final int METHODID_UPDATE_PASS = 6;
+  private static final int METHODID_GET_PASS_BY_ID = 7;
+  private static final int METHODID_GET_PASS_BY_EXTERNAL_ID = 8;
+  private static final int METHODID_DELETE_PASS = 9;
+  private static final int METHODID_LIST_PASSES_BY_PASS_PROJECT = 10;
+  private static final int METHODID_LIST_PASSES_BY_PASS_TEMPLATE = 11;
+  private static final int METHODID_STREAM_PASS_UPDATES = 12;
+
+  private static final class MethodHandlers<Req, Resp> implements
+      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+    private final RawImplBase serviceImpl;
+    private final int methodId;
+
+    MethodHandlers(RawImplBase serviceImpl, int methodId) {
+      this.serviceImpl = serviceImpl;
+      this.methodId = methodId;
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        case METHODID_CREATE_PASS_PROJECT:
+          serviceImpl.createPassProject((com.passkit.grpc.Raw.Project.PassProject) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_UPDATE_PASS_PROJECT:
+          serviceImpl.updatePassProject((com.passkit.grpc.Raw.Project.PassProject) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject>) responseObserver);
+          break;
+        case METHODID_GET_PASS_PROJECT:
+          serviceImpl.getPassProject((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject>) responseObserver);
+          break;
+        case METHODID_COPY_PASS_PROJECT:
+          serviceImpl.copyPassProject((com.passkit.grpc.Raw.Project.PassProjectCopyRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_DELETE_PASS_PROJECT:
+          serviceImpl.deletePassProject((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_CREATE_PASS:
+          serviceImpl.createPass((com.passkit.grpc.Raw.PassOuterClass.Pass) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_UPDATE_PASS:
+          serviceImpl.updatePass((com.passkit.grpc.Raw.PassOuterClass.Pass) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_GET_PASS_BY_ID:
+          serviceImpl.getPassById((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass>) responseObserver);
+          break;
+        case METHODID_GET_PASS_BY_EXTERNAL_ID:
+          serviceImpl.getPassByExternalId((com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass>) responseObserver);
+          break;
+        case METHODID_DELETE_PASS:
+          serviceImpl.deletePass((com.passkit.grpc.Raw.PassOuterClass.Pass) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_LIST_PASSES_BY_PASS_PROJECT:
+          serviceImpl.listPassesByPassProject((com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass>) responseObserver);
+          break;
+        case METHODID_LIST_PASSES_BY_PASS_TEMPLATE:
+          serviceImpl.listPassesByPassTemplate((com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass>) responseObserver);
+          break;
+        default:
+          throw new AssertionError();
+      }
+    }
+
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
+    public io.grpc.stub.StreamObserver<Req> invoke(
+        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+      switch (methodId) {
+        case METHODID_STREAM_PASS_UPDATES:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.streamPassUpdates(
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+        default:
+          throw new AssertionError();
+      }
+    }
+  }
+
+  private static abstract class RawBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+    RawBaseDescriptorSupplier() {}
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+      return com.passkit.grpc.Raw.ARpc.getDescriptor();
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
+      return getFileDescriptor().findServiceByName("Raw");
+    }
+  }
+
+  private static final class RawFileDescriptorSupplier
+      extends RawBaseDescriptorSupplier {
+    RawFileDescriptorSupplier() {}
+  }
+
+  private static final class RawMethodDescriptorSupplier
+      extends RawBaseDescriptorSupplier
+      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+    private final String methodName;
+
+    RawMethodDescriptorSupplier(String methodName) {
+      this.methodName = methodName;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
+      return getServiceDescriptor().findMethodByName(methodName);
+    }
+  }
+
+  private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
+
+  public static io.grpc.ServiceDescriptor getServiceDescriptor() {
+    io.grpc.ServiceDescriptor result = serviceDescriptor;
+    if (result == null) {
+      synchronized (RawGrpc.class) {
+        result = serviceDescriptor;
+        if (result == null) {
+          serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
+              .setSchemaDescriptor(new RawFileDescriptorSupplier())
+              .addMethod(getCreatePassProjectMethod())
+              .addMethod(getUpdatePassProjectMethod())
+              .addMethod(getGetPassProjectMethod())
+              .addMethod(getCopyPassProjectMethod())
+              .addMethod(getDeletePassProjectMethod())
+              .addMethod(getCreatePassMethod())
+              .addMethod(getUpdatePassMethod())
+              .addMethod(getStreamPassUpdatesMethod())
+              .addMethod(getGetPassByIdMethod())
+              .addMethod(getGetPassByExternalIdMethod())
+              .addMethod(getDeletePassMethod())
+              .addMethod(getListPassesByPassProjectMethod())
+              .addMethod(getListPassesByPassTemplateMethod())
+              .build();
+        }
+      }
+    }
+    return result;
+  }
+}
