@@ -24357,123 +24357,123 @@ public final class Offer {
       "mmon/distribution.proto\032\034io/common/local" +
       "ization.proto\032\032io/common/pagination.prot" +
       "o\032\026io/common/filter.proto\032\030io/common/tem" +
-      "plate.proto\032\024io/image/image.proto\032,proto" +
-      "c-gen-swagger/options/annotations.proto\"" +
-      "\340\010\n\013CouponOffer\022\n\n\002id\030\001 \001(\t\022\022\n\nofferTitl" +
-      "e\030\002 \001(\t\0220\n\023localizedOfferTitle\030\003 \001(\0132\023.i" +
-      "o.LocalizedString\022\027\n\017offerShortTitle\030\004 \001" +
-      "(\t\0225\n\030localizedOfferShortTitle\030\005 \001(\0132\023.i" +
-      "o.LocalizedString\022\024\n\014offerDetails\030\006 \001(\t\022" +
-      "2\n\025localizedOfferDetails\030\007 \001(\0132\023.io.Loca" +
-      "lizedString\022\026\n\016offerFinePrint\030\010 \001(\t\0224\n\027l" +
-      "ocalizedOfferFinePrint\030\t \001(\0132\023.io.Locali" +
-      "zedString\022\"\n\032beforeRedeemPassTemplateId\030" +
-      "\n \001(\t\022!\n\031afterRedeemPassTemplateId\030\013 \001(\t" +
-      "\022\030\n\005quota\030\014 \001(\0132\t.io.Quota\022F\n\024couponExpi" +
-      "rySettings\030\r \001(\0132(.single_use_coupons.Co" +
-      "uponExpirySettings\022B\n\022redemptionSettings" +
-      "\030\016 \001(\0132&.single_use_coupons.RedemptionSe" +
-      "ttings\0222\n\016issueStartDate\030\017 \001(\0132\032.google." +
-      "protobuf.Timestamp\0220\n\014issueEndDate\030\020 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022+\n\007created\030" +
-      "\021 \001(\0132\032.google.protobuf.Timestamp\022+\n\007upd" +
-      "ated\030\022 \001(\0132\032.google.protobuf.Timestamp\022\022" +
-      "\n\ncampaignId\030\023 \001(\t\0226\n\024distributionSettin" +
-      "gs\030\024 \001(\0132\030.io.DistributionSettings\022\021\n\tsh" +
-      "ortCode\030\025 \001(\t\022\024\n\014ianaTimezone\030\026 \001(\t\022\020\n\010d" +
-      "isabled\030\027 \001(\010:\342\001\222A\336\001\n\333\001*\014Coupon Offer2\221\001" +
-      "Holds the offer details, redemption sett" +
-      "ings and before & after-redeem template " +
-      "designs (Apple Wallet & Google Pay desig" +
-      "ns) for the Coupon Offer.\322\001\nofferTitle\322\001" +
-      "\014offerDetails\322\001\032beforeRedeemPassTemplate" +
-      "Id\"p\n\024CouponExpirySettings\022>\n\020couponExpi" +
-      "ryType\030\001 \001(\0162$.single_use_coupons.Coupon" +
-      "ExpiryType\022\030\n\020expireAfterXDays\030\003 \001(\r\"\334\003\n" +
-      "\022RedemptionSettings\0227\n\023redemptionStartDa" +
-      "te\030\001 \001(\0132\032.google.protobuf.Timestamp\0225\n\021" +
-      "redemptionEndDate\030\002 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022:\n\016redemptionType\030\003 \003(\0162\".si" +
-      "ngle_use_coupons.RedemptionType\022f\n\034codeP" +
-      "rovidedOnRedeemSettings\030\005 \001(\0132@.single_u" +
-      "se_coupons.CustomerInitiatedCodeProvideO" +
-      "nRedeemSettings\022Q\n\021fixedCodeSettings\030\006 \001" +
-      "(\01326.single_use_coupons.CustomerInitiate" +
-      "dFixedCodeSettings\022G\n\020standardSettings\030\007" +
-      " \001(\0132-.single_use_coupons.StandardPassKi" +
-      "tHostedPageJ\004\010\004\020\005J\004\010\010\020\tJ\004\010\t\020\nJ\004\010\n\020\013\"\265\001\n\"" +
-      "CustomerInitiatedFixedCodeSettings\022\021\n\tfi" +
-      "xedCode\030\001 \001(\t\022\024\n\014useCouponSku\030\002 \001(\010\022 \n\007b" +
-      "arcode\030\003 \001(\0162\017.io.BarcodeType\022D\n\017redempt" +
-      "ionTimer\030\004 \001(\0132+.single_use_coupons.Rede" +
-      "mptionTimerSettings\"|\n\027RedemptionTimerSe" +
-      "ttings\022\026\n\016timeoutSeconds\030\001 \001(\r\022\025\n\rtimerH" +
-      "elpText\030\002 \001(\t\0222\n\025localizedTimeHelpText\030\003" +
-      " \001(\0132\023.io.LocalizedString\"\321\001\n,CustomerIn" +
-      "itiatedCodeProvideOnRedeemSettings\022\022\n\nva" +
-      "lidCodes\030\001 \003(\t\022;\n\023redemptionCodeInput\030\002 " +
-      "\001(\0132\036.single_use_coupons.InputField\022\030\n\020s" +
-      "ubmitButtonText\030\003 \001(\t\0226\n\031localizedSubmit" +
-      "ButtonText\030\004 \001(\0132\023.io.LocalizedString\"\376\002" +
-      "\n\nInputField\022\r\n\005label\030\001 \001(\t\022+\n\016localized" +
-      "Label\030\002 \001(\0132\023.io.LocalizedString\022\022\n\nhelp" +
-      "erText\030\003 \001(\t\0220\n\023localizedHelperText\030\004 \001(" +
-      "\0132\023.io.LocalizedString\022\024\n\014errorMessage\030\005" +
-      " \001(\t\0222\n\025localizedErrorMessage\030\006 \001(\0132\023.io" +
-      ".LocalizedString\022\024\n\014defaultValue\030\007 \001(\t\0222" +
-      "\n\025localizedDefaultValue\030\010 \001(\0132\023.io.Local" +
-      "izedString\022\023\n\013placeholder\030\t \001(\t\0221\n\024local" +
-      "izedPlaceholder\030\n \001(\0132\023.io.LocalizedStri" +
-      "ng\022\022\n\nvalidation\030\013 \001(\t\"\211\004\n\031StandardPassK" +
-      "itHostedPage\022\r\n\005title\030\001 \001(\t\022+\n\016localized" +
-      "Title\030\002 \001(\0132\023.io.LocalizedString\022\036\n\026rede" +
-      "mptionInstructions\030\003 \001(\t\022<\n\037localizedRed" +
-      "emptionInstructions\030\004 \001(\0132\023.io.Localized" +
-      "String\022 \n\010imageIds\030\005 \001(\0132\014.io.ImageIdsH\000" +
-      "\022\037\n\006images\030\006 \001(\0132\r.io.ImageDataH\000\022\022\n\nfoo" +
-      "terText\030\007 \001(\t\0220\n\023localizedFooterText\030\010 \001" +
-      "(\0132\023.io.LocalizedString\0228\n\rresponseTexts" +
-      "\030\t \001(\0132!.single_use_coupons.ResponseText" +
-      "s\022\034\n\024hideRedeemedDateTime\030\n \001(\010\022B\n\022callT" +
-      "oActionButton\030\013 \001(\0132&.single_use_coupons" +
-      ".CallToActionButton\022\024\n\014cssOverrides\030\014 \001(" +
-      "\tB\027\n\025RedemptionImageAssets\"\264\001\n\022CallToAct" +
-      "ionButton\022\036\n\026hideCallToActionButton\030\001 \001(" +
-      "\010\022\022\n\nbuttonText\030\002 \001(\t\0220\n\023localizedButton" +
-      "Text\030\003 \001(\0132\023.io.LocalizedString\022\014\n\004link\030" +
-      "\004 \001(\t\022*\n\rlocalizedLink\030\005 \001(\0132\023.io.Locali" +
-      "zedString\"\253\004\n\rResponseTexts\022\'\n\037redeemCon" +
-      "firmationDialogBoxText\030\001 \001(\t\022E\n(localize" +
-      "dRedeemConfirmationDialogBoxText\030\002 \001(\0132\023" +
-      ".io.LocalizedString\022\030\n\020cancelRedeemText\030" +
-      "\003 \001(\t\0226\n\031localizedCancelRedeemText\030\004 \001(\013" +
-      "2\023.io.LocalizedString\022\027\n\017afterRedeemText" +
-      "\030\005 \001(\t\0225\n\030localizedAfterRedeemText\030\006 \001(\013" +
-      "2\023.io.LocalizedString\022!\n\031couponAlreadyRe" +
-      "deemedText\030\007 \001(\t\022?\n\"localizedCouponAlrea" +
-      "dyRedeemedText\030\010 \001(\0132\023.io.LocalizedStrin" +
-      "g\022\030\n\020offerExpiredText\030\t \001(\t\0226\n\031localized" +
-      "OfferExpiredText\030\n \001(\0132\023.io.LocalizedStr" +
-      "ing\022\031\n\021couponExpiredText\030\013 \001(\t\0227\n\032locali" +
-      "zedCouponExpiredText\030\014 \001(\0132\023.io.Localize" +
-      "dString\"[\n!CouponOffersListRequestDeprec" +
-      "ated\022\022\n\ncampaignId\030\001 \001(\t\022\"\n\npagination\030\002" +
-      " \001(\0132\016.io.Pagination\"K\n\027CouponOffersList" +
-      "Request\022\022\n\ncampaignId\030\001 \001(\t\022\034\n\007filters\030\002" +
-      " \001(\0132\013.io.Filters*\251\001\n\020CouponExpiryType\022\025" +
-      "\n\021EXPIRY_DO_NOT_USE\020\000\022\036\n\032AUTO_EXPIRE_OFF" +
-      "ER_END_DATE\020\001\022#\n\037AUTO_EXPIRE_REDEMPTION_" +
-      "END_DATE\020\002\022\027\n\023EXPIRE_AFTER_X_DAYS\020\003\022 \n\034E" +
-      "XPIRE_ON_VARIABLE_DATE_TIME\020\004*\344\001\n\016Redemp" +
-      "tionType\022\036\n\032REDEMPTION_TYPE_DO_NOT_USE\020\000" +
-      "\022\027\n\023REDEMPTION_TYPE_API\020\001\022&\n\"REDEMPTION_" +
-      "TYPE_CUSTOMER_INITIATED\020\002\0221\n-REDEMPTION_" +
-      "TYPE_CUSTOMER_INITIATED_CODE_FIXED\020\003\022>\n:" +
-      "REDEMPTION_TYPE_CUSTOMER_INITIATED_CODE_" +
-      "PROVIDED_ON_REDEEM\020\004Bq\n!com.passkit.grpc" +
-      ".SingleUseCouponsZ7stash.passkit.com/io/" +
-      "model/sdk/go/io/single_use_coupons\252\002\022PKS" +
-      "ingleUseCouponsb\006proto3"
+      "plate.proto\032\024io/image/image.proto\032.proto" +
+      "c-gen-openapiv2/options/annotations.prot" +
+      "o\"\340\010\n\013CouponOffer\022\n\n\002id\030\001 \001(\t\022\022\n\nofferTi" +
+      "tle\030\002 \001(\t\0220\n\023localizedOfferTitle\030\003 \001(\0132\023" +
+      ".io.LocalizedString\022\027\n\017offerShortTitle\030\004" +
+      " \001(\t\0225\n\030localizedOfferShortTitle\030\005 \001(\0132\023" +
+      ".io.LocalizedString\022\024\n\014offerDetails\030\006 \001(" +
+      "\t\0222\n\025localizedOfferDetails\030\007 \001(\0132\023.io.Lo" +
+      "calizedString\022\026\n\016offerFinePrint\030\010 \001(\t\0224\n" +
+      "\027localizedOfferFinePrint\030\t \001(\0132\023.io.Loca" +
+      "lizedString\022\"\n\032beforeRedeemPassTemplateI" +
+      "d\030\n \001(\t\022!\n\031afterRedeemPassTemplateId\030\013 \001" +
+      "(\t\022\030\n\005quota\030\014 \001(\0132\t.io.Quota\022F\n\024couponEx" +
+      "pirySettings\030\r \001(\0132(.single_use_coupons." +
+      "CouponExpirySettings\022B\n\022redemptionSettin" +
+      "gs\030\016 \001(\0132&.single_use_coupons.Redemption" +
+      "Settings\0222\n\016issueStartDate\030\017 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\0220\n\014issueEndDate\030\020 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022+\n\007create" +
+      "d\030\021 \001(\0132\032.google.protobuf.Timestamp\022+\n\007u" +
+      "pdated\030\022 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\022\n\ncampaignId\030\023 \001(\t\0226\n\024distributionSett" +
+      "ings\030\024 \001(\0132\030.io.DistributionSettings\022\021\n\t" +
+      "shortCode\030\025 \001(\t\022\024\n\014ianaTimezone\030\026 \001(\t\022\020\n" +
+      "\010disabled\030\027 \001(\010:\342\001\222A\336\001\n\333\001*\014Coupon Offer2" +
+      "\221\001Holds the offer details, redemption se" +
+      "ttings and before & after-redeem templat" +
+      "e designs (Apple Wallet & Google Pay des" +
+      "igns) for the Coupon Offer.\322\001\nofferTitle" +
+      "\322\001\014offerDetails\322\001\032beforeRedeemPassTempla" +
+      "teId\"p\n\024CouponExpirySettings\022>\n\020couponEx" +
+      "piryType\030\001 \001(\0162$.single_use_coupons.Coup" +
+      "onExpiryType\022\030\n\020expireAfterXDays\030\003 \001(\r\"\334" +
+      "\003\n\022RedemptionSettings\0227\n\023redemptionStart" +
+      "Date\030\001 \001(\0132\032.google.protobuf.Timestamp\0225" +
+      "\n\021redemptionEndDate\030\002 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022:\n\016redemptionType\030\003 \003(\0162\"." +
+      "single_use_coupons.RedemptionType\022f\n\034cod" +
+      "eProvidedOnRedeemSettings\030\005 \001(\0132@.single" +
+      "_use_coupons.CustomerInitiatedCodeProvid" +
+      "eOnRedeemSettings\022Q\n\021fixedCodeSettings\030\006" +
+      " \001(\01326.single_use_coupons.CustomerInitia" +
+      "tedFixedCodeSettings\022G\n\020standardSettings" +
+      "\030\007 \001(\0132-.single_use_coupons.StandardPass" +
+      "KitHostedPageJ\004\010\004\020\005J\004\010\010\020\tJ\004\010\t\020\nJ\004\010\n\020\013\"\265\001" +
+      "\n\"CustomerInitiatedFixedCodeSettings\022\021\n\t" +
+      "fixedCode\030\001 \001(\t\022\024\n\014useCouponSku\030\002 \001(\010\022 \n" +
+      "\007barcode\030\003 \001(\0162\017.io.BarcodeType\022D\n\017redem" +
+      "ptionTimer\030\004 \001(\0132+.single_use_coupons.Re" +
+      "demptionTimerSettings\"|\n\027RedemptionTimer" +
+      "Settings\022\026\n\016timeoutSeconds\030\001 \001(\r\022\025\n\rtime" +
+      "rHelpText\030\002 \001(\t\0222\n\025localizedTimeHelpText" +
+      "\030\003 \001(\0132\023.io.LocalizedString\"\321\001\n,Customer" +
+      "InitiatedCodeProvideOnRedeemSettings\022\022\n\n" +
+      "validCodes\030\001 \003(\t\022;\n\023redemptionCodeInput\030" +
+      "\002 \001(\0132\036.single_use_coupons.InputField\022\030\n" +
+      "\020submitButtonText\030\003 \001(\t\0226\n\031localizedSubm" +
+      "itButtonText\030\004 \001(\0132\023.io.LocalizedString\"" +
+      "\376\002\n\nInputField\022\r\n\005label\030\001 \001(\t\022+\n\016localiz" +
+      "edLabel\030\002 \001(\0132\023.io.LocalizedString\022\022\n\nhe" +
+      "lperText\030\003 \001(\t\0220\n\023localizedHelperText\030\004 " +
+      "\001(\0132\023.io.LocalizedString\022\024\n\014errorMessage" +
+      "\030\005 \001(\t\0222\n\025localizedErrorMessage\030\006 \001(\0132\023." +
+      "io.LocalizedString\022\024\n\014defaultValue\030\007 \001(\t" +
+      "\0222\n\025localizedDefaultValue\030\010 \001(\0132\023.io.Loc" +
+      "alizedString\022\023\n\013placeholder\030\t \001(\t\0221\n\024loc" +
+      "alizedPlaceholder\030\n \001(\0132\023.io.LocalizedSt" +
+      "ring\022\022\n\nvalidation\030\013 \001(\t\"\211\004\n\031StandardPas" +
+      "sKitHostedPage\022\r\n\005title\030\001 \001(\t\022+\n\016localiz" +
+      "edTitle\030\002 \001(\0132\023.io.LocalizedString\022\036\n\026re" +
+      "demptionInstructions\030\003 \001(\t\022<\n\037localizedR" +
+      "edemptionInstructions\030\004 \001(\0132\023.io.Localiz" +
+      "edString\022 \n\010imageIds\030\005 \001(\0132\014.io.ImageIds" +
+      "H\000\022\037\n\006images\030\006 \001(\0132\r.io.ImageDataH\000\022\022\n\nf" +
+      "ooterText\030\007 \001(\t\0220\n\023localizedFooterText\030\010" +
+      " \001(\0132\023.io.LocalizedString\0228\n\rresponseTex" +
+      "ts\030\t \001(\0132!.single_use_coupons.ResponseTe" +
+      "xts\022\034\n\024hideRedeemedDateTime\030\n \001(\010\022B\n\022cal" +
+      "lToActionButton\030\013 \001(\0132&.single_use_coupo" +
+      "ns.CallToActionButton\022\024\n\014cssOverrides\030\014 " +
+      "\001(\tB\027\n\025RedemptionImageAssets\"\264\001\n\022CallToA" +
+      "ctionButton\022\036\n\026hideCallToActionButton\030\001 " +
+      "\001(\010\022\022\n\nbuttonText\030\002 \001(\t\0220\n\023localizedButt" +
+      "onText\030\003 \001(\0132\023.io.LocalizedString\022\014\n\004lin" +
+      "k\030\004 \001(\t\022*\n\rlocalizedLink\030\005 \001(\0132\023.io.Loca" +
+      "lizedString\"\253\004\n\rResponseTexts\022\'\n\037redeemC" +
+      "onfirmationDialogBoxText\030\001 \001(\t\022E\n(locali" +
+      "zedRedeemConfirmationDialogBoxText\030\002 \001(\013" +
+      "2\023.io.LocalizedString\022\030\n\020cancelRedeemTex" +
+      "t\030\003 \001(\t\0226\n\031localizedCancelRedeemText\030\004 \001" +
+      "(\0132\023.io.LocalizedString\022\027\n\017afterRedeemTe" +
+      "xt\030\005 \001(\t\0225\n\030localizedAfterRedeemText\030\006 \001" +
+      "(\0132\023.io.LocalizedString\022!\n\031couponAlready" +
+      "RedeemedText\030\007 \001(\t\022?\n\"localizedCouponAlr" +
+      "eadyRedeemedText\030\010 \001(\0132\023.io.LocalizedStr" +
+      "ing\022\030\n\020offerExpiredText\030\t \001(\t\0226\n\031localiz" +
+      "edOfferExpiredText\030\n \001(\0132\023.io.LocalizedS" +
+      "tring\022\031\n\021couponExpiredText\030\013 \001(\t\0227\n\032loca" +
+      "lizedCouponExpiredText\030\014 \001(\0132\023.io.Locali" +
+      "zedString\"[\n!CouponOffersListRequestDepr" +
+      "ecated\022\022\n\ncampaignId\030\001 \001(\t\022\"\n\npagination" +
+      "\030\002 \001(\0132\016.io.Pagination\"K\n\027CouponOffersLi" +
+      "stRequest\022\022\n\ncampaignId\030\001 \001(\t\022\034\n\007filters" +
+      "\030\002 \001(\0132\013.io.Filters*\251\001\n\020CouponExpiryType" +
+      "\022\025\n\021EXPIRY_DO_NOT_USE\020\000\022\036\n\032AUTO_EXPIRE_O" +
+      "FFER_END_DATE\020\001\022#\n\037AUTO_EXPIRE_REDEMPTIO" +
+      "N_END_DATE\020\002\022\027\n\023EXPIRE_AFTER_X_DAYS\020\003\022 \n" +
+      "\034EXPIRE_ON_VARIABLE_DATE_TIME\020\004*\344\001\n\016Rede" +
+      "mptionType\022\036\n\032REDEMPTION_TYPE_DO_NOT_USE" +
+      "\020\000\022\027\n\023REDEMPTION_TYPE_API\020\001\022&\n\"REDEMPTIO" +
+      "N_TYPE_CUSTOMER_INITIATED\020\002\0221\n-REDEMPTIO" +
+      "N_TYPE_CUSTOMER_INITIATED_CODE_FIXED\020\003\022>" +
+      "\n:REDEMPTION_TYPE_CUSTOMER_INITIATED_COD" +
+      "E_PROVIDED_ON_REDEEM\020\004B|\n!com.passkit.gr" +
+      "pc.SingleUseCouponsZ7stash.passkit.com/i" +
+      "o/model/sdk/go/io/single_use_coupons\252\002\035P" +
+      "assKit.Grpc.SingleUseCouponsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24486,7 +24486,7 @@ public final class Offer {
           com.passkit.grpc.Filter.getDescriptor(),
           com.passkit.grpc.Template.getDescriptor(),
           com.passkit.grpc.Image.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_single_use_coupons_CouponOffer_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -24562,7 +24562,7 @@ public final class Offer {
         new java.lang.String[] { "CampaignId", "Filters", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -24573,7 +24573,7 @@ public final class Offer {
     com.passkit.grpc.Filter.getDescriptor();
     com.passkit.grpc.Template.getDescriptor();
     com.passkit.grpc.Image.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

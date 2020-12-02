@@ -5318,6 +5318,66 @@ public final class PassengerOuterClass {
      */
     com.google.protobuf.ByteString
         getBarcodeAdditionalDataBytes();
+
+    /**
+     * <pre>
+     * Security image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string securityImage = 6;</code>
+     * @return The securityImage.
+     */
+    java.lang.String getSecurityImage();
+    /**
+     * <pre>
+     * Security image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string securityImage = 6;</code>
+     * @return The bytes for securityImage.
+     */
+    com.google.protobuf.ByteString
+        getSecurityImageBytes();
+
+    /**
+     * <pre>
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string privilegeImage = 7;</code>
+     * @return The privilegeImage.
+     */
+    java.lang.String getPrivilegeImage();
+    /**
+     * <pre>
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string privilegeImage = 7;</code>
+     * @return The bytes for privilegeImage.
+     */
+    com.google.protobuf.ByteString
+        getPrivilegeImageBytes();
+
+    /**
+     * <pre>
+     * Footer image id for display above the barcode on iOS devices.
+     * </pre>
+     *
+     * <code>string footerImage = 8;</code>
+     * @return The footerImage.
+     */
+    java.lang.String getFooterImage();
+    /**
+     * <pre>
+     * Footer image id for display above the barcode on iOS devices.
+     * </pre>
+     *
+     * <code>string footerImage = 8;</code>
+     * @return The bytes for footerImage.
+     */
+    com.google.protobuf.ByteString
+        getFooterImageBytes();
   }
   /**
    * <pre>
@@ -5338,6 +5398,9 @@ public final class PassengerOuterClass {
     private Infant() {
       barcodePayload_ = "";
       barcodeAdditionalData_ = "";
+      securityImage_ = "";
+      privilegeImage_ = "";
+      footerImage_ = "";
     }
 
     @java.lang.Override
@@ -5419,6 +5482,24 @@ public final class PassengerOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               barcodeAdditionalData_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              securityImage_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              privilegeImage_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              footerImage_ = s;
               break;
             }
             default: {
@@ -5659,6 +5740,144 @@ public final class PassengerOuterClass {
       }
     }
 
+    public static final int SECURITYIMAGE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object securityImage_;
+    /**
+     * <pre>
+     * Security image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string securityImage = 6;</code>
+     * @return The securityImage.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityImage() {
+      java.lang.Object ref = securityImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Security image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string securityImage = 6;</code>
+     * @return The bytes for securityImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityImageBytes() {
+      java.lang.Object ref = securityImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PRIVILEGEIMAGE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object privilegeImage_;
+    /**
+     * <pre>
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string privilegeImage = 7;</code>
+     * @return The privilegeImage.
+     */
+    @java.lang.Override
+    public java.lang.String getPrivilegeImage() {
+      java.lang.Object ref = privilegeImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privilegeImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Privilege image id for display above the barcode on a Google Pay pass.
+     * </pre>
+     *
+     * <code>string privilegeImage = 7;</code>
+     * @return The bytes for privilegeImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrivilegeImageBytes() {
+      java.lang.Object ref = privilegeImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privilegeImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOOTERIMAGE_FIELD_NUMBER = 8;
+    private volatile java.lang.Object footerImage_;
+    /**
+     * <pre>
+     * Footer image id for display above the barcode on iOS devices.
+     * </pre>
+     *
+     * <code>string footerImage = 8;</code>
+     * @return The footerImage.
+     */
+    @java.lang.Override
+    public java.lang.String getFooterImage() {
+      java.lang.Object ref = footerImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        footerImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Footer image id for display above the barcode on iOS devices.
+     * </pre>
+     *
+     * <code>string footerImage = 8;</code>
+     * @return The bytes for footerImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFooterImageBytes() {
+      java.lang.Object ref = footerImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        footerImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5688,6 +5907,15 @@ public final class PassengerOuterClass {
       if (!getBarcodeAdditionalDataBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, barcodeAdditionalData_);
       }
+      if (!getSecurityImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityImage_);
+      }
+      if (!getPrivilegeImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privilegeImage_);
+      }
+      if (!getFooterImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, footerImage_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5714,6 +5942,15 @@ public final class PassengerOuterClass {
       }
       if (!getBarcodeAdditionalDataBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, barcodeAdditionalData_);
+      }
+      if (!getSecurityImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, securityImage_);
+      }
+      if (!getPrivilegeImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privilegeImage_);
+      }
+      if (!getFooterImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, footerImage_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5749,6 +5986,12 @@ public final class PassengerOuterClass {
       }
       if (!getBarcodeAdditionalData()
           .equals(other.getBarcodeAdditionalData())) return false;
+      if (!getSecurityImage()
+          .equals(other.getSecurityImage())) return false;
+      if (!getPrivilegeImage()
+          .equals(other.getPrivilegeImage())) return false;
+      if (!getFooterImage()
+          .equals(other.getFooterImage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5776,6 +6019,12 @@ public final class PassengerOuterClass {
       }
       hash = (37 * hash) + BARCODEADDITIONALDATA_FIELD_NUMBER;
       hash = (53 * hash) + getBarcodeAdditionalData().hashCode();
+      hash = (37 * hash) + SECURITYIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityImage().hashCode();
+      hash = (37 * hash) + PRIVILEGEIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrivilegeImage().hashCode();
+      hash = (37 * hash) + FOOTERIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getFooterImage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5935,6 +6184,12 @@ public final class PassengerOuterClass {
         }
         barcodeAdditionalData_ = "";
 
+        securityImage_ = "";
+
+        privilegeImage_ = "";
+
+        footerImage_ = "";
+
         return this;
       }
 
@@ -5978,6 +6233,9 @@ public final class PassengerOuterClass {
           result.conditionalItems_ = conditionalItemsBuilder_.build();
         }
         result.barcodeAdditionalData_ = barcodeAdditionalData_;
+        result.securityImage_ = securityImage_;
+        result.privilegeImage_ = privilegeImage_;
+        result.footerImage_ = footerImage_;
         onBuilt();
         return result;
       }
@@ -6041,6 +6299,18 @@ public final class PassengerOuterClass {
         }
         if (!other.getBarcodeAdditionalData().isEmpty()) {
           barcodeAdditionalData_ = other.barcodeAdditionalData_;
+          onChanged();
+        }
+        if (!other.getSecurityImage().isEmpty()) {
+          securityImage_ = other.securityImage_;
+          onChanged();
+        }
+        if (!other.getPrivilegeImage().isEmpty()) {
+          privilegeImage_ = other.privilegeImage_;
+          onChanged();
+        }
+        if (!other.getFooterImage().isEmpty()) {
+          footerImage_ = other.footerImage_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -6728,6 +6998,294 @@ public final class PassengerOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object securityImage_ = "";
+      /**
+       * <pre>
+       * Security image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string securityImage = 6;</code>
+       * @return The securityImage.
+       */
+      public java.lang.String getSecurityImage() {
+        java.lang.Object ref = securityImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Security image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string securityImage = 6;</code>
+       * @return The bytes for securityImage.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityImageBytes() {
+        java.lang.Object ref = securityImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Security image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string securityImage = 6;</code>
+       * @param value The securityImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        securityImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string securityImage = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityImage() {
+        
+        securityImage_ = getDefaultInstance().getSecurityImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string securityImage = 6;</code>
+       * @param value The bytes for securityImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        securityImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object privilegeImage_ = "";
+      /**
+       * <pre>
+       * Privilege image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string privilegeImage = 7;</code>
+       * @return The privilegeImage.
+       */
+      public java.lang.String getPrivilegeImage() {
+        java.lang.Object ref = privilegeImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          privilegeImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Privilege image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string privilegeImage = 7;</code>
+       * @return The bytes for privilegeImage.
+       */
+      public com.google.protobuf.ByteString
+          getPrivilegeImageBytes() {
+        java.lang.Object ref = privilegeImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          privilegeImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Privilege image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string privilegeImage = 7;</code>
+       * @param value The privilegeImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        privilegeImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Privilege image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string privilegeImage = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrivilegeImage() {
+        
+        privilegeImage_ = getDefaultInstance().getPrivilegeImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Privilege image id for display above the barcode on a Google Pay pass.
+       * </pre>
+       *
+       * <code>string privilegeImage = 7;</code>
+       * @param value The bytes for privilegeImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrivilegeImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        privilegeImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object footerImage_ = "";
+      /**
+       * <pre>
+       * Footer image id for display above the barcode on iOS devices.
+       * </pre>
+       *
+       * <code>string footerImage = 8;</code>
+       * @return The footerImage.
+       */
+      public java.lang.String getFooterImage() {
+        java.lang.Object ref = footerImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          footerImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Footer image id for display above the barcode on iOS devices.
+       * </pre>
+       *
+       * <code>string footerImage = 8;</code>
+       * @return The bytes for footerImage.
+       */
+      public com.google.protobuf.ByteString
+          getFooterImageBytes() {
+        java.lang.Object ref = footerImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          footerImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Footer image id for display above the barcode on iOS devices.
+       * </pre>
+       *
+       * <code>string footerImage = 8;</code>
+       * @param value The footerImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFooterImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        footerImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Footer image id for display above the barcode on iOS devices.
+       * </pre>
+       *
+       * <code>string footerImage = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFooterImage() {
+        
+        footerImage_ = getDefaultInstance().getFooterImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Footer image id for display above the barcode on iOS devices.
+       * </pre>
+       *
+       * <code>string footerImage = 8;</code>
+       * @param value The bytes for footerImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFooterImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        footerImage_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6813,43 +7371,45 @@ public final class PassengerOuterClass {
       "\n\032io/flights/passenger.proto\022\007flights\032\030i" +
       "o/flights/barcode.proto\032\036io/common/commo" +
       "n_objects.proto\032\030io/common/personal.prot" +
-      "o\032,protoc-gen-swagger/options/annotation" +
-      "s.proto\"\311\004\n\tPassenger\022$\n\020passengerDetail" +
-      "s\030\001 \001(\0132\n.io.Person\0225\n\021frequentFlyerInfo" +
-      "\030\002 \001(\0132\032.flights.FrequentFlyerInfo\0221\n\017id" +
-      "entityDetails\030\003 \001(\0132\030.flights.IdentityDe" +
-      "tails\022\022\n\nwithInfant\030\004 \001(\010\022&\n\rinfantDetai" +
-      "ls\030\005 \001(\0132\017.flights.Infant\022\033\n\023knownTravel" +
-      "erNumber\030\007 \001(\t:\322\002\222A\316\002\n\313\002*\tPassenger2\252\002Pa" +
-      "ssenger information can optionally be pr" +
-      "ovided. All fields are optional with the" +
-      " exception of the Passenger name to be r" +
-      "endered on the boarding pass. All passen" +
-      "ger is treated as PII and encrypted at r" +
-      "est. Passenger information is deleted or" +
-      " rendered unusable once the pass record " +
-      "has invalidated.\322\001\020passengerDetails\"a\n\021F" +
-      "requentFlyerInfo\022\023\n\013programName\030\001 \001(\t\022\031\n" +
-      "\021airlineDesignator\030\002 \001(\t\022\016\n\006number\030\003 \001(\t" +
-      "\022\014\n\004tier\030\004 \001(\t\"\202\002\n\017IdentityDetails\0223\n\020id" +
-      "entityDocument\030\001 \001(\0162\031.flights.IdentityD" +
-      "ocument\022\026\n\016issuingCountry\030\002 \001(\t\022\023\n\013natio" +
-      "nality\030\003 \001(\t\022\026\n\016documentNumber\030\004 \001(\t\022\035\n\013" +
-      "dateOfBirth\030\005 \001(\0132\010.io.Date\022\032\n\006gender\030\006 " +
-      "\001(\0162\n.io.Gender\022\034\n\nissuedDate\030\007 \001(\0132\010.io" +
-      ".Date\022\034\n\nexpiryDate\030\010 \001(\0132\010.io.Date\"\312\001\n\006" +
-      "Infant\022!\n\rinfantDetails\030\001 \001(\0132\n.io.Perso" +
-      "n\0221\n\017identityDetails\030\002 \001(\0132\030.flights.Ide" +
-      "ntityDetails\022\026\n\016barcodePayload\030\003 \001(\t\0223\n\020" +
-      "conditionalItems\030\004 \001(\0132\031.flights.Conditi" +
-      "onalItems\022\035\n\025barcodeAdditionalData\030\005 \001(\t" +
-      "*\220\001\n\020IdentityDocument\022\014\n\010PASSPORT\020\000\022\024\n\020N" +
-      "ATIONAL_ID_CARD\020\001\022\023\n\017DRIVING_LICENSE\020\002\022\017" +
-      "\n\013CREDIT_CARD\020\003\022\027\n\023FREQUENT_FLYER_CARD\020\004" +
-      "\022\031\n\025OTHER_TRAVEL_DOCUMENT\020\005BT\n\030com.passk" +
-      "it.grpc.FlightsZ,stash.passkit.com/io/mo" +
-      "del/sdk/go/io/flights\252\002\tPKFlightsb\006proto" +
-      "3"
+      "o\032.protoc-gen-openapiv2/options/annotati" +
+      "ons.proto\"\311\004\n\tPassenger\022$\n\020passengerDeta" +
+      "ils\030\001 \001(\0132\n.io.Person\0225\n\021frequentFlyerIn" +
+      "fo\030\002 \001(\0132\032.flights.FrequentFlyerInfo\0221\n\017" +
+      "identityDetails\030\003 \001(\0132\030.flights.Identity" +
+      "Details\022\022\n\nwithInfant\030\004 \001(\010\022&\n\rinfantDet" +
+      "ails\030\005 \001(\0132\017.flights.Infant\022\033\n\023knownTrav" +
+      "elerNumber\030\007 \001(\t:\322\002\222A\316\002\n\313\002*\tPassenger2\252\002" +
+      "Passenger information can optionally be " +
+      "provided. All fields are optional with t" +
+      "he exception of the Passenger name to be" +
+      " rendered on the boarding pass. All pass" +
+      "enger is treated as PII and encrypted at" +
+      " rest. Passenger information is deleted " +
+      "or rendered unusable once the pass recor" +
+      "d has invalidated.\322\001\020passengerDetails\"a\n" +
+      "\021FrequentFlyerInfo\022\023\n\013programName\030\001 \001(\t\022" +
+      "\031\n\021airlineDesignator\030\002 \001(\t\022\016\n\006number\030\003 \001" +
+      "(\t\022\014\n\004tier\030\004 \001(\t\"\202\002\n\017IdentityDetails\0223\n\020" +
+      "identityDocument\030\001 \001(\0162\031.flights.Identit" +
+      "yDocument\022\026\n\016issuingCountry\030\002 \001(\t\022\023\n\013nat" +
+      "ionality\030\003 \001(\t\022\026\n\016documentNumber\030\004 \001(\t\022\035" +
+      "\n\013dateOfBirth\030\005 \001(\0132\010.io.Date\022\032\n\006gender\030" +
+      "\006 \001(\0162\n.io.Gender\022\034\n\nissuedDate\030\007 \001(\0132\010." +
+      "io.Date\022\034\n\nexpiryDate\030\010 \001(\0132\010.io.Date\"\216\002" +
+      "\n\006Infant\022!\n\rinfantDetails\030\001 \001(\0132\n.io.Per" +
+      "son\0221\n\017identityDetails\030\002 \001(\0132\030.flights.I" +
+      "dentityDetails\022\026\n\016barcodePayload\030\003 \001(\t\0223" +
+      "\n\020conditionalItems\030\004 \001(\0132\031.flights.Condi" +
+      "tionalItems\022\035\n\025barcodeAdditionalData\030\005 \001" +
+      "(\t\022\025\n\rsecurityImage\030\006 \001(\t\022\026\n\016privilegeIm" +
+      "age\030\007 \001(\t\022\023\n\013footerImage\030\010 \001(\t*\220\001\n\020Ident" +
+      "ityDocument\022\014\n\010PASSPORT\020\000\022\024\n\020NATIONAL_ID" +
+      "_CARD\020\001\022\023\n\017DRIVING_LICENSE\020\002\022\017\n\013CREDIT_C" +
+      "ARD\020\003\022\027\n\023FREQUENT_FLYER_CARD\020\004\022\031\n\025OTHER_" +
+      "TRAVEL_DOCUMENT\020\005B_\n\030com.passkit.grpc.Fl" +
+      "ightsZ,stash.passkit.com/io/model/sdk/go" +
+      "/io/flights\252\002\024PassKit.Grpc.Flightsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6857,7 +7417,7 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.Barcode.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Personal.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_Passenger_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6882,16 +7442,16 @@ public final class PassengerOuterClass {
     internal_static_flights_Infant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_flights_Infant_descriptor,
-        new java.lang.String[] { "InfantDetails", "IdentityDetails", "BarcodePayload", "ConditionalItems", "BarcodeAdditionalData", });
+        new java.lang.String[] { "InfantDetails", "IdentityDetails", "BarcodePayload", "ConditionalItems", "BarcodeAdditionalData", "SecurityImage", "PrivilegeImage", "FooterImage", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Flights.Barcode.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Personal.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -25,117 +25,117 @@ public final class ARpcImages {
     java.lang.String[] descriptorData = {
       "\n\032io/core/a_rpc_images.proto\022\002io\032\034google" +
       "/api/annotations.proto\032\033google/protobuf/" +
-      "empty.proto\032,protoc-gen-swagger/options/" +
-      "annotations.proto\032\036io/common/common_obje" +
-      "cts.proto\032\032io/common/pagination.proto\032\024i" +
-      "o/image/image.proto\032\026io/common/filter.pr" +
-      "oto2\243\036\n\006Images\022[\n\017setProfileImage\022\025.io.P" +
-      "rofileImageInput\032\026.google.protobuf.Empty" +
-      "\"\031\202\323\344\223\002\023\"\016/image/profile:\001*\022J\n\017getProfil" +
-      "eImage\022\026.google.protobuf.Empty\032\007.io.Url\"" +
-      "\026\202\323\344\223\002\020\022\016/image/profile\022C\n\023getProfileIma" +
-      "geById\022\006.io.Id\032\007.io.Url\"\033\202\323\344\223\002\025\022\023/image/" +
-      "profile/{id}\022\331\001\n\014createImages\022\024.io.Creat" +
-      "eImageInput\032\014.io.ImageIds\"\244\001\202\323\344\223\002\014\"\007/ima" +
-      "ges:\001*\222A\216\001\022\rCreate Images\032\025Creates image" +
-      " record.J0\n\003400\022)\n\'There is a problem wi" +
-      "th the input data.J4\n\003403\022-\n+Returned wh" +
-      "en the user lacks authorization.\022\303\002\n\013upd" +
-      "ateImage\022\024.io.UpdateImageInput\032\017.io.Imag" +
-      "eRecord\"\214\002\202\323\344\223\002\013\032\006/image:\001*\222A\367\001\022\014Update " +
-      "Image\032\030Updates an image record.J0\n\003400\022)" +
-      "\n\'There is a problem with the input data" +
-      ".J\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
-      "\003404\022\027\n\025Record was not found.JW\n\003503\022P\nN" +
-      "Server is unavailable. Back off for 250m" +
-      "s and repeat request until successful.\022\243" +
-      "\001\n\013getImageURL\022\006.io.Id\032\007.io.Url\"\202\001\202\323\344\223\002\r" +
-      "\022\013/image/{id}\222Al\022\rGet Image URL\032\027Retriev" +
-      "es an image url.J\"\n\003403\022\033\n\031User lacks au" +
-      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
-      "und.\022\273\001\n\016getImageBundle\022\006.io.Id\032\017.io.Ima" +
-      "geBundle\"\217\001\202\323\344\223\002\024\022\022/image/bundle/{id}\222Ar" +
-      "\022\020Get Image Bundle\032\032Retrieves an image b" +
-      "undle.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.\022\265\001\n\014g" +
-      "etImageData\022\006.io.Id\032\017.io.ImageRecord\"\213\001\202" +
-      "\323\344\223\002\022\022\020/image/data/{id}\222Ap\022\016Get Image Da" +
-      "ta\032\032Retrieves an image record.J\"\n\003403\022\033\n" +
-      "\031User lacks authorization.J\036\n\003404\022\027\n\025Rec" +
-      "ord was not found.\022\337\001\n\024getLocalizedImage" +
-      "URL\022\027.io.LocalizedImageInput\032\007.io.Url\"\244\001" +
-      "\202\323\344\223\002\034\022\032/image/{id}/{languageCode}\222A\177\022\027G" +
-      "et Localized Image URL\032 Retrieves a loca" +
-      "lized image URL.J\"\n\003403\022\033\n\031User lacks au" +
-      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
-      "und.\022\261\001\n\013deleteImage\022\006.io.Id\032\026.google.pr" +
-      "otobuf.Empty\"\201\001\202\323\344\223\002\r*\013/image/{id}\222Ak\022\014D" +
-      "elete Image\032\027Deletes an image recordJ\"\n\003" +
-      "403\022\033\n\031User lacks authorization.J\036\n\003404\022" +
-      "\027\n\025Record was not found.\022\346\001\n\024deleteLocal" +
-      "izedImage\022\027.io.LocalizedImageInput\032\017.io." +
-      "ImageRecord\"\243\001\202\323\344\223\002\034*\032/image/{id}/{langu" +
-      "ageCode}\222A~\022\026Delete Localized Image\032 Del" +
-      "etes a localized image recordJ\"\n\003403\022\033\n\031" +
+      "empty.proto\032.protoc-gen-openapiv2/option" +
+      "s/annotations.proto\032\036io/common/common_ob" +
+      "jects.proto\032\032io/common/pagination.proto\032" +
+      "\024io/image/image.proto\032\026io/common/filter." +
+      "proto2\243\036\n\006Images\022[\n\017setProfileImage\022\025.io" +
+      ".ProfileImageInput\032\026.google.protobuf.Emp" +
+      "ty\"\031\202\323\344\223\002\023\"\016/image/profile:\001*\022J\n\017getProf" +
+      "ileImage\022\026.google.protobuf.Empty\032\007.io.Ur" +
+      "l\"\026\202\323\344\223\002\020\022\016/image/profile\022\331\001\n\014createImag" +
+      "es\022\024.io.CreateImageInput\032\014.io.ImageIds\"\244" +
+      "\001\202\323\344\223\002\014\"\007/images:\001*\222A\216\001\022\rCreate Images\032\025" +
+      "Creates image record.J0\n\003400\022)\n\'There is" +
+      " a problem with the input data.J4\n\003403\022-" +
+      "\n+Returned when the user lacks authoriza" +
+      "tion.\022\303\002\n\013updateImage\022\024.io.UpdateImageIn" +
+      "put\032\017.io.ImageRecord\"\214\002\202\323\344\223\002\013\032\006/image:\001*" +
+      "\222A\367\001\022\014Update Image\032\030Updates an image rec" +
+      "ord.J0\n\003400\022)\n\'There is a problem with t" +
+      "he input data.J\"\n\003403\022\033\n\031User lacks auth" +
+      "orization.J\036\n\003404\022\027\n\025Record was not foun" +
+      "d.JW\n\003503\022P\nNServer is unavailable. Back" +
+      " off for 250ms and repeat request until " +
+      "successful.\022\243\001\n\013getImageURL\022\006.io.Id\032\007.io" +
+      ".Url\"\202\001\202\323\344\223\002\r\022\013/image/{id}\222Al\022\rGet Image" +
+      " URL\032\027Retrieves an image url.J\"\n\003403\022\033\n\031" +
       "User lacks authorization.J\036\n\003404\022\027\n\025Reco" +
-      "rd was not found.\022\355\001\n\033listImagesForUserD" +
-      "eprecated\022\016.io.Pagination\032\017.io.ImageReco" +
-      "rd\"\252\001\202\323\344\223\002\016\022\014/images/user\222A\222\001\022\027Get All I" +
-      "mages For User\0323Retrieves all images sto" +
-      "red under the user account.J\"\n\003403\022\033\n\031Us" +
-      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
-      " was not found.0\001\022\350\001\n\021listImagesForUser\022" +
-      "\013.io.Filters\032\017.io.ImageRecord\"\262\001\202\323\344\223\002\026\"\021" +
-      "/images/user/list:\001*\222A\222\001\022\027Get All Images" +
-      " For User\0323Retrieves all images stored u" +
-      "nder the user account.J\"\n\003403\022\033\n\031User la" +
-      "cks authorization.J\036\n\003404\022\027\n\025Record was " +
-      "not found.0\001\022\335\001\n\024listImagesDeprecated\022\016." +
-      "io.Pagination\032\017.io.ImageRecord\"\241\001\202\323\344\223\002\t\022" +
-      "\007/images\222A\216\001\022\030Get All Available Images\032." +
-      "Retrieves all images stored under the co" +
-      "mpany.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.0\001\022\330\001\n" +
-      "\nlistImages\022\013.io.Filters\032\017.io.ImageRecor" +
-      "d\"\251\001\202\323\344\223\002\021\"\014/images/list:\001*\222A\216\001\022\030Get All" +
-      " Available Images\032.Retrieves all images " +
-      "stored under the company.J\"\n\003403\022\033\n\031User" +
-      " lacks authorization.J\036\n\003404\022\027\n\025Record w" +
-      "as not found.0\001\022\370\001\n\025countImagesDeprecate" +
-      "d\022\016.io.Pagination\032\t.io.Count\"\303\001\202\323\344\223\002\017\022\r/" +
-      "images/count\222A\252\001\022&Count All Images Avail" +
-      "able to The User\032<Retrieves a count of i" +
-      "mages stored under the user\'s company.J\"" +
+      "rd was not found.\022\337\001\n\024getLocalizedImageU" +
+      "RL\022\027.io.LocalizedImageInput\032\007.io.Url\"\244\001\202" +
+      "\323\344\223\002\034\022\032/image/{id}/{languageCode}\222A\177\022\027Ge" +
+      "t Localized Image URL\032 Retrieves a local" +
+      "ized image URL.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.\022C\n\023getProfileImageById\022\006.io.Id\032\007.io." +
+      "Url\"\033\202\323\344\223\002\025\022\023/image/profile/{id}\022\273\001\n\016get" +
+      "ImageBundle\022\006.io.Id\032\017.io.ImageBundle\"\217\001\202" +
+      "\323\344\223\002\024\022\022/image/bundle/{id}\222Ar\022\020Get Image " +
+      "Bundle\032\032Retrieves an image bundle.J\"\n\00340" +
+      "3\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n" +
+      "\025Record was not found.\022\265\001\n\014getImageData\022" +
+      "\006.io.Id\032\017.io.ImageRecord\"\213\001\202\323\344\223\002\022\022\020/imag" +
+      "e/data/{id}\222Ap\022\016Get Image Data\032\032Retrieve" +
+      "s an image record.J\"\n\003403\022\033\n\031User lacks " +
+      "authorization.J\036\n\003404\022\027\n\025Record was not " +
+      "found.\022\261\001\n\013deleteImage\022\006.io.Id\032\026.google." +
+      "protobuf.Empty\"\201\001\202\323\344\223\002\r*\013/image/{id}\222Ak\022" +
+      "\014Delete Image\032\027Deletes an image recordJ\"" +
       "\n\003403\022\033\n\031User lacks authorization.J\036\n\00340" +
-      "4\022\027\n\025Record was not found.\022\356\001\n\013countImag" +
-      "es\022\013.io.Filters\032\t.io.Count\"\306\001\202\323\344\223\002\022\"\r/im" +
-      "ages/count:\001*\222A\252\001\022&Count All Images Avai" +
-      "lable to The User\032<Retrieves a count of " +
-      "images stored under the user\'s company.J" +
-      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
-      "04\022\027\n\025Record was not found.\022\371\001\n\034countIma" +
-      "gesForUserDeprecated\022\016.io.Pagination\032\t.i" +
-      "o.Count\"\275\001\202\323\344\223\002\024\022\022/images/user/count\222A\237\001" +
-      "\022\"Count All Images Owned by The User\0325Re" +
-      "trieves all images stored under the user" +
-      "\'s account.J\"\n\003403\022\033\n\031User lacks authori" +
-      "zation.J\036\n\003404\022\027\n\025Record was not found.\022" +
-      "\357\001\n\022countImagesForUser\022\013.io.Filters\032\t.io" +
-      ".Count\"\300\001\202\323\344\223\002\027\"\022/images/user/count:\001*\222A" +
+      "4\022\027\n\025Record was not found.\022\346\001\n\024deleteLoc" +
+      "alizedImage\022\027.io.LocalizedImageInput\032\017.i" +
+      "o.ImageRecord\"\243\001\202\323\344\223\002\034*\032/image/{id}/{lan" +
+      "guageCode}\222A~\022\026Delete Localized Image\032 D" +
+      "eletes a localized image recordJ\"\n\003403\022\033" +
+      "\n\031User lacks authorization.J\036\n\003404\022\027\n\025Re" +
+      "cord was not found.\022\355\001\n\033listImagesForUse" +
+      "rDeprecated\022\016.io.Pagination\032\017.io.ImageRe" +
+      "cord\"\252\001\202\323\344\223\002\016\022\014/images/user\222A\222\001\022\027Get All" +
+      " Images For User\0323Retrieves all images s" +
+      "tored under the user account.J\"\n\003403\022\033\n\031" +
+      "User lacks authorization.J\036\n\003404\022\027\n\025Reco" +
+      "rd was not found.0\001\022\350\001\n\021listImagesForUse" +
+      "r\022\013.io.Filters\032\017.io.ImageRecord\"\262\001\202\323\344\223\002\026" +
+      "\"\021/images/user/list:\001*\222A\222\001\022\027Get All Imag" +
+      "es For User\0323Retrieves all images stored" +
+      " under the user account.J\"\n\003403\022\033\n\031User " +
+      "lacks authorization.J\036\n\003404\022\027\n\025Record wa" +
+      "s not found.0\001\022\335\001\n\024listImagesDeprecated\022" +
+      "\016.io.Pagination\032\017.io.ImageRecord\"\241\001\202\323\344\223\002" +
+      "\t\022\007/images\222A\216\001\022\030Get All Available Images" +
+      "\032.Retrieves all images stored under the " +
+      "company.J\"\n\003403\022\033\n\031User lacks authorizat" +
+      "ion.J\036\n\003404\022\027\n\025Record was not found.0\001\022\330" +
+      "\001\n\nlistImages\022\013.io.Filters\032\017.io.ImageRec" +
+      "ord\"\251\001\202\323\344\223\002\021\"\014/images/list:\001*\222A\216\001\022\030Get A" +
+      "ll Available Images\032.Retrieves all image" +
+      "s stored under the company.J\"\n\003403\022\033\n\031Us" +
+      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
+      " was not found.0\001\022\370\001\n\025countImagesDepreca" +
+      "ted\022\016.io.Pagination\032\t.io.Count\"\303\001\202\323\344\223\002\017\022" +
+      "\r/images/count\222A\252\001\022&Count All Images Ava" +
+      "ilable to The User\032<Retrieves a count of" +
+      " images stored under the user\'s company." +
+      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
+      "404\022\027\n\025Record was not found.\022\356\001\n\013countIm" +
+      "ages\022\013.io.Filters\032\t.io.Count\"\306\001\202\323\344\223\002\022\"\r/" +
+      "images/count:\001*\222A\252\001\022&Count All Images Av" +
+      "ailable to The User\032<Retrieves a count o" +
+      "f images stored under the user\'s company" +
+      ".J\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
+      "\003404\022\027\n\025Record was not found.\022\371\001\n\034countI" +
+      "magesForUserDeprecated\022\016.io.Pagination\032\t" +
+      ".io.Count\"\275\001\202\323\344\223\002\024\022\022/images/user/count\222A" +
       "\237\001\022\"Count All Images Owned by The User\0325" +
       "Retrieves all images stored under the us" +
       "er\'s account.J\"\n\003403\022\033\n\031User lacks autho" +
       "rization.J\036\n\003404\022\027\n\025Record was not found" +
-      ".BG\n\020com.passkit.grpcZ$stash.passkit.com" +
-      "/io/model/sdk/go/io\252\002\014PassKit.GRPCb\006prot" +
-      "o3"
+      ".\022\357\001\n\022countImagesForUser\022\013.io.Filters\032\t." +
+      "io.Count\"\300\001\202\323\344\223\002\027\"\022/images/user/count:\001*" +
+      "\222A\237\001\022\"Count All Images Owned by The User" +
+      "\0325Retrieves all images stored under the " +
+      "user\'s account.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.BG\n\020com.passkit.grpcZ$stash.passkit.c" +
+      "om/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
           com.passkit.grpc.Image.getDescriptor(),
@@ -144,12 +144,12 @@ public final class ARpcImages {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
     com.passkit.grpc.Image.getDescriptor();

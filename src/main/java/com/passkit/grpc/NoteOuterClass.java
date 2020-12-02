@@ -1272,7 +1272,7 @@ public final class NoteOuterClass {
       "\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\017\n\007message\030\003 \001(" +
       "\t\022+\n\007created\030\004 \001(\0132\032.google.protobuf.Tim" +
       "estampBG\n\020com.passkit.grpcZ$stash.passki" +
-      "t.com/io/model/sdk/go/io\252\002\014PassKit.GRPCb" +
+      "t.com/io/model/sdk/go/io\252\002\014PassKit.Grpcb" +
       "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

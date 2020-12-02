@@ -9671,7 +9671,7 @@ public final class MetricsOuterClass {
       "ASS_ISSUED\020\000\022\022\n\016PASS_INSTALLED\020\001\022\024\n\020PASS" +
       "_UNINSTALLED\020\002\022\024\n\020PASS_INVALIDATED\020\003BG\n\020" +
       "com.passkit.grpcZ$stash.passkit.com/io/m" +
-      "odel/sdk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "odel/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

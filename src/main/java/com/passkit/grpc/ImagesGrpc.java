@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_images.proto")
 public final class ImagesGrpc {
 
@@ -41,22 +41,21 @@ public final class ImagesGrpc {
     if ((getSetProfileImageMethod = ImagesGrpc.getSetProfileImageMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getSetProfileImageMethod = ImagesGrpc.getSetProfileImageMethod) == null) {
-          ImagesGrpc.getSetProfileImageMethod = getSetProfileImageMethod = 
+          ImagesGrpc.getSetProfileImageMethod = getSetProfileImageMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Image.ProfileImageInput, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "setProfileImage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "setProfileImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ProfileImageInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("setProfileImage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("setProfileImage"))
+              .build();
         }
-     }
-     return getSetProfileImageMethod;
+      }
+    }
+    return getSetProfileImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -73,54 +72,21 @@ public final class ImagesGrpc {
     if ((getGetProfileImageMethod = ImagesGrpc.getGetProfileImageMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getGetProfileImageMethod = ImagesGrpc.getGetProfileImageMethod) == null) {
-          ImagesGrpc.getGetProfileImageMethod = getGetProfileImageMethod = 
+          ImagesGrpc.getGetProfileImageMethod = getGetProfileImageMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.CommonObjects.Url>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getProfileImage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProfileImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getProfileImage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getProfileImage"))
+              .build();
         }
-     }
-     return getGetProfileImageMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getProfileImageById",
-      requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = com.passkit.grpc.CommonObjects.Url.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod;
-    if ((getGetProfileImageByIdMethod = ImagesGrpc.getGetProfileImageByIdMethod) == null) {
-      synchronized (ImagesGrpc.class) {
-        if ((getGetProfileImageByIdMethod = ImagesGrpc.getGetProfileImageByIdMethod) == null) {
-          ImagesGrpc.getGetProfileImageByIdMethod = getGetProfileImageByIdMethod = 
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Url>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getProfileImageById"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getProfileImageById"))
-                  .build();
-          }
-        }
-     }
-     return getGetProfileImageByIdMethod;
+      }
+    }
+    return getGetProfileImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.CreateImageInput,
@@ -137,22 +103,21 @@ public final class ImagesGrpc {
     if ((getCreateImagesMethod = ImagesGrpc.getCreateImagesMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getCreateImagesMethod = ImagesGrpc.getCreateImagesMethod) == null) {
-          ImagesGrpc.getCreateImagesMethod = getCreateImagesMethod = 
+          ImagesGrpc.getCreateImagesMethod = getCreateImagesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Image.CreateImageInput, com.passkit.grpc.Image.ImageIds>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "createImages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createImages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.CreateImageInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageIds.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("createImages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("createImages"))
+              .build();
         }
-     }
-     return getCreateImagesMethod;
+      }
+    }
+    return getCreateImagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.UpdateImageInput,
@@ -169,22 +134,21 @@ public final class ImagesGrpc {
     if ((getUpdateImageMethod = ImagesGrpc.getUpdateImageMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getUpdateImageMethod = ImagesGrpc.getUpdateImageMethod) == null) {
-          ImagesGrpc.getUpdateImageMethod = getUpdateImageMethod = 
+          ImagesGrpc.getUpdateImageMethod = getUpdateImageMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Image.UpdateImageInput, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "updateImage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.UpdateImageInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("updateImage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("updateImage"))
+              .build();
         }
-     }
-     return getUpdateImageMethod;
+      }
+    }
+    return getUpdateImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -201,86 +165,21 @@ public final class ImagesGrpc {
     if ((getGetImageURLMethod = ImagesGrpc.getGetImageURLMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getGetImageURLMethod = ImagesGrpc.getGetImageURLMethod) == null) {
-          ImagesGrpc.getGetImageURLMethod = getGetImageURLMethod = 
+          ImagesGrpc.getGetImageURLMethod = getGetImageURLMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Url>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getImageURL"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getImageURL"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageURL"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageURL"))
+              .build();
         }
-     }
-     return getGetImageURLMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getImageBundle",
-      requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = com.passkit.grpc.Image.ImageBundle.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod;
-    if ((getGetImageBundleMethod = ImagesGrpc.getGetImageBundleMethod) == null) {
-      synchronized (ImagesGrpc.class) {
-        if ((getGetImageBundleMethod = ImagesGrpc.getGetImageBundleMethod) == null) {
-          ImagesGrpc.getGetImageBundleMethod = getGetImageBundleMethod = 
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageBundle>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getImageBundle"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.Image.ImageBundle.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageBundle"))
-                  .build();
-          }
-        }
-     }
-     return getGetImageBundleMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getImageData",
-      requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = com.passkit.grpc.Image.ImageRecord.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod;
-    if ((getGetImageDataMethod = ImagesGrpc.getGetImageDataMethod) == null) {
-      synchronized (ImagesGrpc.class) {
-        if ((getGetImageDataMethod = ImagesGrpc.getGetImageDataMethod) == null) {
-          ImagesGrpc.getGetImageDataMethod = getGetImageDataMethod = 
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageRecord>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getImageData"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageData"))
-                  .build();
-          }
-        }
-     }
-     return getGetImageDataMethod;
+      }
+    }
+    return getGetImageURLMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.LocalizedImageInput,
@@ -297,22 +196,114 @@ public final class ImagesGrpc {
     if ((getGetLocalizedImageURLMethod = ImagesGrpc.getGetLocalizedImageURLMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getGetLocalizedImageURLMethod = ImagesGrpc.getGetLocalizedImageURLMethod) == null) {
-          ImagesGrpc.getGetLocalizedImageURLMethod = getGetLocalizedImageURLMethod = 
+          ImagesGrpc.getGetLocalizedImageURLMethod = getGetLocalizedImageURLMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Image.LocalizedImageInput, com.passkit.grpc.CommonObjects.Url>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "getLocalizedImageURL"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getLocalizedImageURL"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.LocalizedImageInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getLocalizedImageURL"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getLocalizedImageURL"))
+              .build();
         }
-     }
-     return getGetLocalizedImageURLMethod;
+      }
+    }
+    return getGetLocalizedImageURLMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getProfileImageById",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.CommonObjects.Url.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Url> getGetProfileImageByIdMethod;
+    if ((getGetProfileImageByIdMethod = ImagesGrpc.getGetProfileImageByIdMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getGetProfileImageByIdMethod = ImagesGrpc.getGetProfileImageByIdMethod) == null) {
+          ImagesGrpc.getGetProfileImageByIdMethod = getGetProfileImageByIdMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Url>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProfileImageById"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getProfileImageById"))
+              .build();
+        }
+      }
+    }
+    return getGetProfileImageByIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getImageBundle",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.Image.ImageBundle.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageBundle> getGetImageBundleMethod;
+    if ((getGetImageBundleMethod = ImagesGrpc.getGetImageBundleMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getGetImageBundleMethod = ImagesGrpc.getGetImageBundleMethod) == null) {
+          ImagesGrpc.getGetImageBundleMethod = getGetImageBundleMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageBundle>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getImageBundle"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.ImageBundle.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageBundle"))
+              .build();
+        }
+      }
+    }
+    return getGetImageBundleMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getImageData",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.Image.ImageRecord.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageRecord> getGetImageDataMethod;
+    if ((getGetImageDataMethod = ImagesGrpc.getGetImageDataMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getGetImageDataMethod = ImagesGrpc.getGetImageDataMethod) == null) {
+          ImagesGrpc.getGetImageDataMethod = getGetImageDataMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.ImageRecord>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getImageData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getImageData"))
+              .build();
+        }
+      }
+    }
+    return getGetImageDataMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -329,22 +320,21 @@ public final class ImagesGrpc {
     if ((getDeleteImageMethod = ImagesGrpc.getDeleteImageMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getDeleteImageMethod = ImagesGrpc.getDeleteImageMethod) == null) {
-          ImagesGrpc.getDeleteImageMethod = getDeleteImageMethod = 
+          ImagesGrpc.getDeleteImageMethod = getDeleteImageMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "deleteImage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("deleteImage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("deleteImage"))
+              .build();
         }
-     }
-     return getDeleteImageMethod;
+      }
+    }
+    return getDeleteImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.LocalizedImageInput,
@@ -361,22 +351,21 @@ public final class ImagesGrpc {
     if ((getDeleteLocalizedImageMethod = ImagesGrpc.getDeleteLocalizedImageMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getDeleteLocalizedImageMethod = ImagesGrpc.getDeleteLocalizedImageMethod) == null) {
-          ImagesGrpc.getDeleteLocalizedImageMethod = getDeleteLocalizedImageMethod = 
+          ImagesGrpc.getDeleteLocalizedImageMethod = getDeleteLocalizedImageMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Image.LocalizedImageInput, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "deleteLocalizedImage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteLocalizedImage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.LocalizedImageInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("deleteLocalizedImage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("deleteLocalizedImage"))
+              .build();
         }
-     }
-     return getDeleteLocalizedImageMethod;
+      }
+    }
+    return getDeleteLocalizedImageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -393,22 +382,21 @@ public final class ImagesGrpc {
     if ((getListImagesForUserDeprecatedMethod = ImagesGrpc.getListImagesForUserDeprecatedMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getListImagesForUserDeprecatedMethod = ImagesGrpc.getListImagesForUserDeprecatedMethod) == null) {
-          ImagesGrpc.getListImagesForUserDeprecatedMethod = getListImagesForUserDeprecatedMethod = 
+          ImagesGrpc.getListImagesForUserDeprecatedMethod = getListImagesForUserDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "listImagesForUserDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listImagesForUserDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesForUserDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesForUserDeprecated"))
+              .build();
         }
-     }
-     return getListImagesForUserDeprecatedMethod;
+      }
+    }
+    return getListImagesForUserDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -425,22 +413,21 @@ public final class ImagesGrpc {
     if ((getListImagesForUserMethod = ImagesGrpc.getListImagesForUserMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getListImagesForUserMethod = ImagesGrpc.getListImagesForUserMethod) == null) {
-          ImagesGrpc.getListImagesForUserMethod = getListImagesForUserMethod = 
+          ImagesGrpc.getListImagesForUserMethod = getListImagesForUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "listImagesForUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listImagesForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesForUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesForUser"))
+              .build();
         }
-     }
-     return getListImagesForUserMethod;
+      }
+    }
+    return getListImagesForUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -457,22 +444,21 @@ public final class ImagesGrpc {
     if ((getListImagesDeprecatedMethod = ImagesGrpc.getListImagesDeprecatedMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getListImagesDeprecatedMethod = ImagesGrpc.getListImagesDeprecatedMethod) == null) {
-          ImagesGrpc.getListImagesDeprecatedMethod = getListImagesDeprecatedMethod = 
+          ImagesGrpc.getListImagesDeprecatedMethod = getListImagesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "listImagesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listImagesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImagesDeprecated"))
+              .build();
         }
-     }
-     return getListImagesDeprecatedMethod;
+      }
+    }
+    return getListImagesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -489,22 +475,21 @@ public final class ImagesGrpc {
     if ((getListImagesMethod = ImagesGrpc.getListImagesMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getListImagesMethod = ImagesGrpc.getListImagesMethod) == null) {
-          ImagesGrpc.getListImagesMethod = getListImagesMethod = 
+          ImagesGrpc.getListImagesMethod = getListImagesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Image.ImageRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "listImages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listImages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Image.ImageRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("listImages"))
+              .build();
         }
-     }
-     return getListImagesMethod;
+      }
+    }
+    return getListImagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -521,22 +506,21 @@ public final class ImagesGrpc {
     if ((getCountImagesDeprecatedMethod = ImagesGrpc.getCountImagesDeprecatedMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getCountImagesDeprecatedMethod = ImagesGrpc.getCountImagesDeprecatedMethod) == null) {
-          ImagesGrpc.getCountImagesDeprecatedMethod = getCountImagesDeprecatedMethod = 
+          ImagesGrpc.getCountImagesDeprecatedMethod = getCountImagesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "countImagesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countImagesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesDeprecated"))
+              .build();
         }
-     }
-     return getCountImagesDeprecatedMethod;
+      }
+    }
+    return getCountImagesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -553,22 +537,21 @@ public final class ImagesGrpc {
     if ((getCountImagesMethod = ImagesGrpc.getCountImagesMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getCountImagesMethod = ImagesGrpc.getCountImagesMethod) == null) {
-          ImagesGrpc.getCountImagesMethod = getCountImagesMethod = 
+          ImagesGrpc.getCountImagesMethod = getCountImagesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "countImages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countImages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImages"))
+              .build();
         }
-     }
-     return getCountImagesMethod;
+      }
+    }
+    return getCountImagesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -585,22 +568,21 @@ public final class ImagesGrpc {
     if ((getCountImagesForUserDeprecatedMethod = ImagesGrpc.getCountImagesForUserDeprecatedMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getCountImagesForUserDeprecatedMethod = ImagesGrpc.getCountImagesForUserDeprecatedMethod) == null) {
-          ImagesGrpc.getCountImagesForUserDeprecatedMethod = getCountImagesForUserDeprecatedMethod = 
+          ImagesGrpc.getCountImagesForUserDeprecatedMethod = getCountImagesForUserDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "countImagesForUserDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countImagesForUserDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesForUserDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesForUserDeprecated"))
+              .build();
         }
-     }
-     return getCountImagesForUserDeprecatedMethod;
+      }
+    }
+    return getCountImagesForUserDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -617,29 +599,35 @@ public final class ImagesGrpc {
     if ((getCountImagesForUserMethod = ImagesGrpc.getCountImagesForUserMethod) == null) {
       synchronized (ImagesGrpc.class) {
         if ((getCountImagesForUserMethod = ImagesGrpc.getCountImagesForUserMethod) == null) {
-          ImagesGrpc.getCountImagesForUserMethod = getCountImagesForUserMethod = 
+          ImagesGrpc.getCountImagesForUserMethod = getCountImagesForUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Images", "countImagesForUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countImagesForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesForUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("countImagesForUser"))
+              .build();
         }
-     }
-     return getCountImagesForUserMethod;
+      }
+    }
+    return getCountImagesForUserMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static ImagesStub newStub(io.grpc.Channel channel) {
-    return new ImagesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImagesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImagesStub>() {
+        @java.lang.Override
+        public ImagesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImagesStub(channel, callOptions);
+        }
+      };
+    return ImagesStub.newStub(factory, channel);
   }
 
   /**
@@ -647,7 +635,14 @@ public final class ImagesGrpc {
    */
   public static ImagesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new ImagesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImagesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImagesBlockingStub>() {
+        @java.lang.Override
+        public ImagesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImagesBlockingStub(channel, callOptions);
+        }
+      };
+    return ImagesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -655,7 +650,14 @@ public final class ImagesGrpc {
    */
   public static ImagesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new ImagesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<ImagesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ImagesFutureStub>() {
+        @java.lang.Override
+        public ImagesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ImagesFutureStub(channel, callOptions);
+        }
+      };
+    return ImagesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -674,13 +676,6 @@ public final class ImagesGrpc {
     public void getProfileImage(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
       asyncUnimplementedUnaryCall(getGetProfileImageMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProfileImageByIdMethod(), responseObserver);
     }
 
     /**
@@ -705,6 +700,20 @@ public final class ImagesGrpc {
     }
 
     /**
+     */
+    public void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetLocalizedImageURLMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetProfileImageByIdMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * returns a zip bundle containing all images for that ID
      * </pre>
@@ -719,13 +728,6 @@ public final class ImagesGrpc {
     public void getImageData(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
       asyncUnimplementedUnaryCall(getGetImageDataMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLocalizedImageURLMethod(), responseObserver);
     }
 
     /**
@@ -815,13 +817,6 @@ public final class ImagesGrpc {
                 com.passkit.grpc.CommonObjects.Url>(
                   this, METHODID_GET_PROFILE_IMAGE)))
           .addMethod(
-            getGetProfileImageByIdMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.CommonObjects.Url>(
-                  this, METHODID_GET_PROFILE_IMAGE_BY_ID)))
-          .addMethod(
             getCreateImagesMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -843,6 +838,20 @@ public final class ImagesGrpc {
                 com.passkit.grpc.CommonObjects.Url>(
                   this, METHODID_GET_IMAGE_URL)))
           .addMethod(
+            getGetLocalizedImageURLMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Image.LocalizedImageInput,
+                com.passkit.grpc.CommonObjects.Url>(
+                  this, METHODID_GET_LOCALIZED_IMAGE_URL)))
+          .addMethod(
+            getGetProfileImageByIdMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.Id,
+                com.passkit.grpc.CommonObjects.Url>(
+                  this, METHODID_GET_PROFILE_IMAGE_BY_ID)))
+          .addMethod(
             getGetImageBundleMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -856,13 +865,6 @@ public final class ImagesGrpc {
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Image.ImageRecord>(
                   this, METHODID_GET_IMAGE_DATA)))
-          .addMethod(
-            getGetLocalizedImageURLMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Image.LocalizedImageInput,
-                com.passkit.grpc.CommonObjects.Url>(
-                  this, METHODID_GET_LOCALIZED_IMAGE_URL)))
           .addMethod(
             getDeleteImageMethod(),
             asyncUnaryCall(
@@ -939,19 +941,15 @@ public final class ImagesGrpc {
 
   /**
    */
-  public static final class ImagesStub extends io.grpc.stub.AbstractStub<ImagesStub> {
-    private ImagesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImagesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImagesStub extends io.grpc.stub.AbstractAsyncStub<ImagesStub> {
+    private ImagesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImagesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImagesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImagesStub(channel, callOptions);
     }
 
@@ -969,14 +967,6 @@ public final class ImagesGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetProfileImageMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetProfileImageByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1004,6 +994,22 @@ public final class ImagesGrpc {
     }
 
     /**
+     */
+    public void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetLocalizedImageURLMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetProfileImageByIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * returns a zip bundle containing all images for that ID
      * </pre>
@@ -1020,14 +1026,6 @@ public final class ImagesGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetImageDataMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetLocalizedImageURLMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1113,19 +1111,15 @@ public final class ImagesGrpc {
 
   /**
    */
-  public static final class ImagesBlockingStub extends io.grpc.stub.AbstractStub<ImagesBlockingStub> {
-    private ImagesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImagesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImagesBlockingStub extends io.grpc.stub.AbstractBlockingStub<ImagesBlockingStub> {
+    private ImagesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImagesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImagesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImagesBlockingStub(channel, callOptions);
     }
 
@@ -1141,13 +1135,6 @@ public final class ImagesGrpc {
     public com.passkit.grpc.CommonObjects.Url getProfileImage(com.google.protobuf.Empty request) {
       return blockingUnaryCall(
           getChannel(), getGetProfileImageMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.passkit.grpc.CommonObjects.Url getProfileImageById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
-          getChannel(), getGetProfileImageByIdMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1172,6 +1159,20 @@ public final class ImagesGrpc {
     }
 
     /**
+     */
+    public com.passkit.grpc.CommonObjects.Url getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request) {
+      return blockingUnaryCall(
+          getChannel(), getGetLocalizedImageURLMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Url getProfileImageById(com.passkit.grpc.CommonObjects.Id request) {
+      return blockingUnaryCall(
+          getChannel(), getGetProfileImageByIdMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * returns a zip bundle containing all images for that ID
      * </pre>
@@ -1186,13 +1187,6 @@ public final class ImagesGrpc {
     public com.passkit.grpc.Image.ImageRecord getImageData(com.passkit.grpc.CommonObjects.Id request) {
       return blockingUnaryCall(
           getChannel(), getGetImageDataMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.passkit.grpc.CommonObjects.Url getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request) {
-      return blockingUnaryCall(
-          getChannel(), getGetLocalizedImageURLMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1272,19 +1266,15 @@ public final class ImagesGrpc {
 
   /**
    */
-  public static final class ImagesFutureStub extends io.grpc.stub.AbstractStub<ImagesFutureStub> {
-    private ImagesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private ImagesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class ImagesFutureStub extends io.grpc.stub.AbstractFutureStub<ImagesFutureStub> {
+    private ImagesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected ImagesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected ImagesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new ImagesFutureStub(channel, callOptions);
     }
 
@@ -1302,14 +1292,6 @@ public final class ImagesGrpc {
         com.google.protobuf.Empty request) {
       return futureUnaryCall(
           getChannel().newCall(getGetProfileImageMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getProfileImageById(
-        com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetProfileImageByIdMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1337,6 +1319,22 @@ public final class ImagesGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getLocalizedImageURL(
+        com.passkit.grpc.Image.LocalizedImageInput request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetLocalizedImageURLMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getProfileImageById(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetProfileImageByIdMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * returns a zip bundle containing all images for that ID
      * </pre>
@@ -1353,14 +1351,6 @@ public final class ImagesGrpc {
         com.passkit.grpc.CommonObjects.Id request) {
       return futureUnaryCall(
           getChannel().newCall(getGetImageDataMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getLocalizedImageURL(
-        com.passkit.grpc.Image.LocalizedImageInput request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetLocalizedImageURLMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1414,13 +1404,13 @@ public final class ImagesGrpc {
 
   private static final int METHODID_SET_PROFILE_IMAGE = 0;
   private static final int METHODID_GET_PROFILE_IMAGE = 1;
-  private static final int METHODID_GET_PROFILE_IMAGE_BY_ID = 2;
-  private static final int METHODID_CREATE_IMAGES = 3;
-  private static final int METHODID_UPDATE_IMAGE = 4;
-  private static final int METHODID_GET_IMAGE_URL = 5;
-  private static final int METHODID_GET_IMAGE_BUNDLE = 6;
-  private static final int METHODID_GET_IMAGE_DATA = 7;
-  private static final int METHODID_GET_LOCALIZED_IMAGE_URL = 8;
+  private static final int METHODID_CREATE_IMAGES = 2;
+  private static final int METHODID_UPDATE_IMAGE = 3;
+  private static final int METHODID_GET_IMAGE_URL = 4;
+  private static final int METHODID_GET_LOCALIZED_IMAGE_URL = 5;
+  private static final int METHODID_GET_PROFILE_IMAGE_BY_ID = 6;
+  private static final int METHODID_GET_IMAGE_BUNDLE = 7;
+  private static final int METHODID_GET_IMAGE_DATA = 8;
   private static final int METHODID_DELETE_IMAGE = 9;
   private static final int METHODID_DELETE_LOCALIZED_IMAGE = 10;
   private static final int METHODID_LIST_IMAGES_FOR_USER_DEPRECATED = 11;
@@ -1457,10 +1447,6 @@ public final class ImagesGrpc {
           serviceImpl.getProfileImage((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
           break;
-        case METHODID_GET_PROFILE_IMAGE_BY_ID:
-          serviceImpl.getProfileImageById((com.passkit.grpc.CommonObjects.Id) request,
-              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
-          break;
         case METHODID_CREATE_IMAGES:
           serviceImpl.createImages((com.passkit.grpc.Image.CreateImageInput) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageIds>) responseObserver);
@@ -1473,6 +1459,14 @@ public final class ImagesGrpc {
           serviceImpl.getImageURL((com.passkit.grpc.CommonObjects.Id) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
           break;
+        case METHODID_GET_LOCALIZED_IMAGE_URL:
+          serviceImpl.getLocalizedImageURL((com.passkit.grpc.Image.LocalizedImageInput) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
+          break;
+        case METHODID_GET_PROFILE_IMAGE_BY_ID:
+          serviceImpl.getProfileImageById((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
+          break;
         case METHODID_GET_IMAGE_BUNDLE:
           serviceImpl.getImageBundle((com.passkit.grpc.CommonObjects.Id) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageBundle>) responseObserver);
@@ -1480,10 +1474,6 @@ public final class ImagesGrpc {
         case METHODID_GET_IMAGE_DATA:
           serviceImpl.getImageData((com.passkit.grpc.CommonObjects.Id) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord>) responseObserver);
-          break;
-        case METHODID_GET_LOCALIZED_IMAGE_URL:
-          serviceImpl.getLocalizedImageURL((com.passkit.grpc.Image.LocalizedImageInput) request,
-              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
           break;
         case METHODID_DELETE_IMAGE:
           serviceImpl.deleteImage((com.passkit.grpc.CommonObjects.Id) request,
@@ -1588,13 +1578,13 @@ public final class ImagesGrpc {
               .setSchemaDescriptor(new ImagesFileDescriptorSupplier())
               .addMethod(getSetProfileImageMethod())
               .addMethod(getGetProfileImageMethod())
-              .addMethod(getGetProfileImageByIdMethod())
               .addMethod(getCreateImagesMethod())
               .addMethod(getUpdateImageMethod())
               .addMethod(getGetImageURLMethod())
+              .addMethod(getGetLocalizedImageURLMethod())
+              .addMethod(getGetProfileImageByIdMethod())
               .addMethod(getGetImageBundleMethod())
               .addMethod(getGetImageDataMethod())
-              .addMethod(getGetLocalizedImageURLMethod())
               .addMethod(getDeleteImageMethod())
               .addMethod(getDeleteLocalizedImageMethod())
               .addMethod(getListImagesForUserDeprecatedMethod())

@@ -1269,7 +1269,7 @@ public final class CallbackOuterClass {
       "_SEND_SMS\020\001\022\033\n\027CALLBACK_TYPE_SEND_POST\020\002" +
       "\022\035\n\031CALLBACK_TYPE_INTEGRATION\020\003BG\n\020com.p" +
       "asskit.grpcZ$stash.passkit.com/io/model/" +
-      "sdk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

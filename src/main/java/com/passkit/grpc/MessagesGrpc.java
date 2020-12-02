@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class MessagesGrpc {
 
@@ -41,22 +41,21 @@ public final class MessagesGrpc {
     if ((getSendMessageMethod = MessagesGrpc.getSendMessageMethod) == null) {
       synchronized (MessagesGrpc.class) {
         if ((getSendMessageMethod = MessagesGrpc.getSendMessageMethod) == null) {
-          MessagesGrpc.getSendMessageMethod = getSendMessageMethod = 
+          MessagesGrpc.getSendMessageMethod = getSendMessageMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.MessageOuterClass.Message, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Messages", "sendMessage"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendMessage"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MessagesMethodDescriptorSupplier("sendMessage"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MessagesMethodDescriptorSupplier("sendMessage"))
+              .build();
         }
-     }
-     return getSendMessageMethod;
+      }
+    }
+    return getSendMessageMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -73,29 +72,35 @@ public final class MessagesGrpc {
     if ((getGetMessagesMethod = MessagesGrpc.getGetMessagesMethod) == null) {
       synchronized (MessagesGrpc.class) {
         if ((getGetMessagesMethod = MessagesGrpc.getGetMessagesMethod) == null) {
-          MessagesGrpc.getGetMessagesMethod = getGetMessagesMethod = 
+          MessagesGrpc.getGetMessagesMethod = getGetMessagesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.MessageOuterClass.Message>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Messages", "getMessages"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMessages"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
-                  .setSchemaDescriptor(new MessagesMethodDescriptorSupplier("getMessages"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MessagesMethodDescriptorSupplier("getMessages"))
+              .build();
         }
-     }
-     return getGetMessagesMethod;
+      }
+    }
+    return getGetMessagesMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MessagesStub newStub(io.grpc.Channel channel) {
-    return new MessagesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MessagesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MessagesStub>() {
+        @java.lang.Override
+        public MessagesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MessagesStub(channel, callOptions);
+        }
+      };
+    return MessagesStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +108,14 @@ public final class MessagesGrpc {
    */
   public static MessagesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MessagesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MessagesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MessagesBlockingStub>() {
+        @java.lang.Override
+        public MessagesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MessagesBlockingStub(channel, callOptions);
+        }
+      };
+    return MessagesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +123,14 @@ public final class MessagesGrpc {
    */
   public static MessagesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MessagesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MessagesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MessagesFutureStub>() {
+        @java.lang.Override
+        public MessagesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MessagesFutureStub(channel, callOptions);
+        }
+      };
+    return MessagesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -154,19 +173,15 @@ public final class MessagesGrpc {
 
   /**
    */
-  public static final class MessagesStub extends io.grpc.stub.AbstractStub<MessagesStub> {
-    private MessagesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MessagesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MessagesStub extends io.grpc.stub.AbstractAsyncStub<MessagesStub> {
+    private MessagesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MessagesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MessagesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MessagesStub(channel, callOptions);
     }
 
@@ -189,19 +204,15 @@ public final class MessagesGrpc {
 
   /**
    */
-  public static final class MessagesBlockingStub extends io.grpc.stub.AbstractStub<MessagesBlockingStub> {
-    private MessagesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MessagesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MessagesBlockingStub extends io.grpc.stub.AbstractBlockingStub<MessagesBlockingStub> {
+    private MessagesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MessagesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MessagesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MessagesBlockingStub(channel, callOptions);
     }
 
@@ -223,19 +234,15 @@ public final class MessagesGrpc {
 
   /**
    */
-  public static final class MessagesFutureStub extends io.grpc.stub.AbstractStub<MessagesFutureStub> {
-    private MessagesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MessagesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MessagesFutureStub extends io.grpc.stub.AbstractFutureStub<MessagesFutureStub> {
+    private MessagesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MessagesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MessagesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MessagesFutureStub(channel, callOptions);
     }
 

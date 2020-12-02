@@ -101,6 +101,18 @@ public final class User {
      */
     com.google.protobuf.ByteString
         getPrivateKeyBytes();
+
+    /**
+     * <code>string javaPrivateKey = 8;</code>
+     * @return The javaPrivateKey.
+     */
+    java.lang.String getJavaPrivateKey();
+    /**
+     * <code>string javaPrivateKey = 8;</code>
+     * @return The bytes for javaPrivateKey.
+     */
+    com.google.protobuf.ByteString
+        getJavaPrivateKeyBytes();
   }
   /**
    * Protobuf type {@code io.NewUserResponse}
@@ -122,6 +134,7 @@ public final class User {
       secret_ = "";
       certificate_ = "";
       privateKey_ = "";
+      javaPrivateKey_ = "";
     }
 
     @java.lang.Override
@@ -194,6 +207,12 @@ public final class User {
               java.lang.String s = input.readStringRequireUtf8();
 
               privateKey_ = s;
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              javaPrivateKey_ = s;
               break;
             }
             default: {
@@ -494,6 +513,44 @@ public final class User {
       }
     }
 
+    public static final int JAVAPRIVATEKEY_FIELD_NUMBER = 8;
+    private volatile java.lang.Object javaPrivateKey_;
+    /**
+     * <code>string javaPrivateKey = 8;</code>
+     * @return The javaPrivateKey.
+     */
+    @java.lang.Override
+    public java.lang.String getJavaPrivateKey() {
+      java.lang.Object ref = javaPrivateKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        javaPrivateKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string javaPrivateKey = 8;</code>
+     * @return The bytes for javaPrivateKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getJavaPrivateKeyBytes() {
+      java.lang.Object ref = javaPrivateKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        javaPrivateKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -529,6 +586,9 @@ public final class User {
       if (!getPrivateKeyBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privateKey_);
       }
+      if (!getJavaPrivateKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, javaPrivateKey_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -559,6 +619,9 @@ public final class User {
       if (!getPrivateKeyBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privateKey_);
       }
+      if (!getJavaPrivateKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, javaPrivateKey_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -588,6 +651,8 @@ public final class User {
           .equals(other.getCertificate())) return false;
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
+      if (!getJavaPrivateKey()
+          .equals(other.getJavaPrivateKey())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -613,6 +678,8 @@ public final class User {
       hash = (53 * hash) + getCertificate().hashCode();
       hash = (37 * hash) + PRIVATEKEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
+      hash = (37 * hash) + JAVAPRIVATEKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getJavaPrivateKey().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -760,6 +827,8 @@ public final class User {
 
         privateKey_ = "";
 
+        javaPrivateKey_ = "";
+
         return this;
       }
 
@@ -793,6 +862,7 @@ public final class User {
         result.secret_ = secret_;
         result.certificate_ = certificate_;
         result.privateKey_ = privateKey_;
+        result.javaPrivateKey_ = javaPrivateKey_;
         onBuilt();
         return result;
       }
@@ -867,6 +937,10 @@ public final class User {
         }
         if (!other.getPrivateKey().isEmpty()) {
           privateKey_ = other.privateKey_;
+          onChanged();
+        }
+        if (!other.getJavaPrivateKey().isEmpty()) {
+          javaPrivateKey_ = other.javaPrivateKey_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1426,6 +1500,82 @@ public final class User {
   checkByteStringIsUtf8(value);
         
         privateKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object javaPrivateKey_ = "";
+      /**
+       * <code>string javaPrivateKey = 8;</code>
+       * @return The javaPrivateKey.
+       */
+      public java.lang.String getJavaPrivateKey() {
+        java.lang.Object ref = javaPrivateKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          javaPrivateKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string javaPrivateKey = 8;</code>
+       * @return The bytes for javaPrivateKey.
+       */
+      public com.google.protobuf.ByteString
+          getJavaPrivateKeyBytes() {
+        java.lang.Object ref = javaPrivateKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          javaPrivateKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string javaPrivateKey = 8;</code>
+       * @param value The javaPrivateKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJavaPrivateKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        javaPrivateKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string javaPrivateKey = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJavaPrivateKey() {
+        
+        javaPrivateKey_ = getDefaultInstance().getJavaPrivateKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string javaPrivateKey = 8;</code>
+       * @param value The bytes for javaPrivateKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJavaPrivateKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        javaPrivateKey_ = value;
         onChanged();
         return this;
       }
@@ -8293,29 +8443,30 @@ public final class User {
     java.lang.String[] descriptorData = {
       "\n\022io/user/user.proto\022\002io\032\037google/protobu" +
       "f/timestamp.proto\032\030io/common/personal.pr" +
-      "oto\"\225\001\n\017NewUserResponse\022\016\n\006userId\030\001 \001(\t\022" +
+      "oto\"\255\001\n\017NewUserResponse\022\016\n\006userId\030\001 \001(\t\022" +
       "\021\n\tcompanyId\030\002 \001(\t\022\020\n\010username\030\003 \001(\t\022\024\n\014" +
       "emailAddress\030\004 \001(\t\022\016\n\006secret\030\005 \001(\t\022\023\n\013ce" +
-      "rtificate\030\006 \001(\t\022\022\n\nprivateKey\030\007 \001(\t\"\273\001\n\007" +
-      "NewUser\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 " +
-      "\001(\t\022\024\n\014emailAddress\030\003 \001(\t\022\021\n\tsendEmail\030\004" +
-      " \001(\010\022\023\n\013companyName\030\005 \001(\t\022\024\n\014mobileNumbe" +
-      "r\030\006 \001(\t\022\025\n\rtwoFactorAuth\030\007 \001(\010\022\017\n\007isOwne" +
-      "r\030\010 \001(\010\022\020\n\010readOnly\030\t \001(\010\"\240\001\n\017GetUserRes" +
-      "ponse\022\r\n\005email\030\001 \001(\t\022\020\n\010username\030\002 \001(\t\022\021" +
-      "\n\tcompanyId\030\003 \001(\t\022\023\n\013companyName\030\004 \001(\t\022\025" +
-      "\n\rcompanyStatus\030\005 \001(\004\022-\n\tcreatedAt\030\006 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"i\n\013BillingM" +
-      "eta\022\023\n\013companyName\030\001 \001(\t\022\r\n\005taxId\030\002 \001(\t\022" +
-      "\021\n\treference\030\003 \001(\t\022#\n\016billingAddress\030\004 \001" +
-      "(\0132\013.io.Address\"1\n\013Credentials\022\020\n\010userna" +
-      "me\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"\024\n\003JWT\022\r\n\005tok" +
-      "en\030\001 \001(\t\"j\n\022PasswordResetInput\022\n\n\002id\030\001 \001" +
-      "(\t\022\027\n\017registeredEmail\030\002 \001(\t\022\023\n\013newPasswo" +
-      "rd\030\003 \001(\t\022\032\n\022confirmNewPassword\030\004 \001(\t\"\034\n\010" +
-      "Username\022\020\n\010username\030\001 \001(\tBG\n\020com.passki" +
-      "t.grpcZ$stash.passkit.com/io/model/sdk/g" +
-      "o/io\252\002\014PassKit.GRPCb\006proto3"
+      "rtificate\030\006 \001(\t\022\022\n\nprivateKey\030\007 \001(\t\022\026\n\016j" +
+      "avaPrivateKey\030\010 \001(\t\"\273\001\n\007NewUser\022\020\n\010usern" +
+      "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\024\n\014emailAddr" +
+      "ess\030\003 \001(\t\022\021\n\tsendEmail\030\004 \001(\010\022\023\n\013companyN" +
+      "ame\030\005 \001(\t\022\024\n\014mobileNumber\030\006 \001(\t\022\025\n\rtwoFa" +
+      "ctorAuth\030\007 \001(\010\022\017\n\007isOwner\030\010 \001(\010\022\020\n\010readO" +
+      "nly\030\t \001(\010\"\240\001\n\017GetUserResponse\022\r\n\005email\030\001" +
+      " \001(\t\022\020\n\010username\030\002 \001(\t\022\021\n\tcompanyId\030\003 \001(" +
+      "\t\022\023\n\013companyName\030\004 \001(\t\022\025\n\rcompanyStatus\030" +
+      "\005 \001(\004\022-\n\tcreatedAt\030\006 \001(\0132\032.google.protob" +
+      "uf.Timestamp\"i\n\013BillingMeta\022\023\n\013companyNa" +
+      "me\030\001 \001(\t\022\r\n\005taxId\030\002 \001(\t\022\021\n\treference\030\003 \001" +
+      "(\t\022#\n\016billingAddress\030\004 \001(\0132\013.io.Address\"" +
+      "1\n\013Credentials\022\020\n\010username\030\001 \001(\t\022\020\n\010pass" +
+      "word\030\002 \001(\t\"\024\n\003JWT\022\r\n\005token\030\001 \001(\t\"j\n\022Pass" +
+      "wordResetInput\022\n\n\002id\030\001 \001(\t\022\027\n\017registered" +
+      "Email\030\002 \001(\t\022\023\n\013newPassword\030\003 \001(\t\022\032\n\022conf" +
+      "irmNewPassword\030\004 \001(\t\"\034\n\010Username\022\020\n\010user" +
+      "name\030\001 \001(\tBG\n\020com.passkit.grpcZ$stash.pa" +
+      "sskit.com/io/model/sdk/go/io\252\002\014PassKit.G" +
+      "rpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8328,7 +8479,7 @@ public final class User {
     internal_static_io_NewUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_NewUserResponse_descriptor,
-        new java.lang.String[] { "UserId", "CompanyId", "Username", "EmailAddress", "Secret", "Certificate", "PrivateKey", });
+        new java.lang.String[] { "UserId", "CompanyId", "Username", "EmailAddress", "Secret", "Certificate", "PrivateKey", "JavaPrivateKey", });
     internal_static_io_NewUser_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_NewUser_fieldAccessorTable = new

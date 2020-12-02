@@ -6093,132 +6093,132 @@ public final class Template {
 
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.GPSLocation> 
         getLocationsList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocation getLocations(int index);
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getLocationsCount();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
         getLocationsOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
         int index);
 
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.Beacon> 
         getBeaconsList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.Beacon getBeacons(int index);
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getBeaconsCount();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
         getBeaconsOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
         int index);
 
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     java.util.List<com.passkit.grpc.Links.Link> 
         getLinksList();
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     com.passkit.grpc.Links.Link getLinks(int index);
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     int getLinksCount();
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
         getLinksOrBuilderList();
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
         int index);
@@ -7323,10 +7323,10 @@ public final class Template {
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locations_;
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationsList() {
@@ -7334,10 +7334,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
@@ -7346,10 +7346,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getLocationsCount() {
@@ -7357,10 +7357,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocation getLocations(int index) {
@@ -7368,10 +7368,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
@@ -7383,10 +7383,10 @@ public final class Template {
     private java.util.List<com.passkit.grpc.Proximity.Beacon> beacons_;
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconsList() {
@@ -7394,10 +7394,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
@@ -7406,10 +7406,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getBeaconsCount() {
@@ -7417,10 +7417,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.Beacon getBeacons(int index) {
@@ -7428,10 +7428,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
@@ -7443,10 +7443,10 @@ public final class Template {
     private java.util.List<com.passkit.grpc.Links.Link> links_;
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Links.Link> getLinksList() {
@@ -7454,10 +7454,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
@@ -7466,10 +7466,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     @java.lang.Override
     public int getLinksCount() {
@@ -7477,10 +7477,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Links.Link getLinks(int index) {
@@ -7488,10 +7488,10 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of links to be shown on each membership card.
+     * A list of links to be shown on each pass.
      * </pre>
      *
-     * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 21;</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
@@ -10843,10 +10843,10 @@ public final class Template {
 
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationsList() {
         if (locationsBuilder_ == null) {
@@ -10857,10 +10857,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getLocationsCount() {
         if (locationsBuilder_ == null) {
@@ -10871,10 +10871,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation getLocations(int index) {
         if (locationsBuilder_ == null) {
@@ -10885,10 +10885,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -10906,10 +10906,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -10924,10 +10924,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(com.passkit.grpc.Proximity.GPSLocation value) {
         if (locationsBuilder_ == null) {
@@ -10944,10 +10944,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -10965,10 +10965,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -10983,10 +10983,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -11001,10 +11001,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllLocations(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.GPSLocation> values) {
@@ -11020,10 +11020,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearLocations() {
         if (locationsBuilder_ == null) {
@@ -11037,10 +11037,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeLocations(int index) {
         if (locationsBuilder_ == null) {
@@ -11054,10 +11054,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder getLocationsBuilder(
           int index) {
@@ -11065,10 +11065,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
           int index) {
@@ -11079,10 +11079,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
            getLocationsOrBuilderList() {
@@ -11094,10 +11094,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationsBuilder() {
         return getLocationsFieldBuilder().addBuilder(
@@ -11105,10 +11105,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationsBuilder(
           int index) {
@@ -11117,10 +11117,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this membership card should be presented on the lock-screen.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation.Builder> 
            getLocationsBuilderList() {
@@ -11155,10 +11155,10 @@ public final class Template {
 
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconsList() {
         if (beaconsBuilder_ == null) {
@@ -11169,10 +11169,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getBeaconsCount() {
         if (beaconsBuilder_ == null) {
@@ -11183,10 +11183,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon getBeacons(int index) {
         if (beaconsBuilder_ == null) {
@@ -11197,10 +11197,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeacons(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -11218,10 +11218,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeacons(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -11236,10 +11236,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(com.passkit.grpc.Proximity.Beacon value) {
         if (beaconsBuilder_ == null) {
@@ -11256,10 +11256,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -11277,10 +11277,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -11295,10 +11295,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -11313,10 +11313,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllBeacons(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.Beacon> values) {
@@ -11332,10 +11332,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearBeacons() {
         if (beaconsBuilder_ == null) {
@@ -11349,10 +11349,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeBeacons(int index) {
         if (beaconsBuilder_ == null) {
@@ -11366,10 +11366,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder getBeaconsBuilder(
           int index) {
@@ -11377,10 +11377,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
           int index) {
@@ -11391,10 +11391,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
            getBeaconsOrBuilderList() {
@@ -11406,10 +11406,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconsBuilder() {
         return getBeaconsFieldBuilder().addBuilder(
@@ -11417,10 +11417,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconsBuilder(
           int index) {
@@ -11429,10 +11429,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the membership card to be presented on the lock-screen.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon.Builder> 
            getBeaconsBuilderList() {
@@ -11467,10 +11467,10 @@ public final class Template {
 
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public java.util.List<com.passkit.grpc.Links.Link> getLinksList() {
         if (linksBuilder_ == null) {
@@ -11481,10 +11481,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public int getLinksCount() {
         if (linksBuilder_ == null) {
@@ -11495,10 +11495,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public com.passkit.grpc.Links.Link getLinks(int index) {
         if (linksBuilder_ == null) {
@@ -11509,10 +11509,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder setLinks(
           int index, com.passkit.grpc.Links.Link value) {
@@ -11530,10 +11530,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder setLinks(
           int index, com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -11548,10 +11548,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder addLinks(com.passkit.grpc.Links.Link value) {
         if (linksBuilder_ == null) {
@@ -11568,10 +11568,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder addLinks(
           int index, com.passkit.grpc.Links.Link value) {
@@ -11589,10 +11589,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder addLinks(
           com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -11607,10 +11607,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder addLinks(
           int index, com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -11625,10 +11625,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder addAllLinks(
           java.lang.Iterable<? extends com.passkit.grpc.Links.Link> values) {
@@ -11644,10 +11644,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
@@ -11661,10 +11661,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
@@ -11678,10 +11678,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public com.passkit.grpc.Links.Link.Builder getLinksBuilder(
           int index) {
@@ -11689,10 +11689,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
           int index) {
@@ -11703,10 +11703,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
            getLinksOrBuilderList() {
@@ -11718,10 +11718,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public com.passkit.grpc.Links.Link.Builder addLinksBuilder() {
         return getLinksFieldBuilder().addBuilder(
@@ -11729,10 +11729,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public com.passkit.grpc.Links.Link.Builder addLinksBuilder(
           int index) {
@@ -11741,10 +11741,10 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of links to be shown on each membership card.
+       * A list of links to be shown on each pass.
        * </pre>
        *
-       * <code>repeated .io.Link links = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 21;</code>
        */
       public java.util.List<com.passkit.grpc.Links.Link.Builder> 
            getLinksBuilderList() {
@@ -44046,293 +44046,293 @@ public final class Template {
       "zation.proto\032\031io/common/protocols.proto\032" +
       "\031io/common/proximity.proto\032\025io/common/li" +
       "nks.proto\032\030io/common/tracking.proto\032\024io/" +
-      "image/image.proto\032,protoc-gen-swagger/op" +
-      "tions/annotations.proto\032\037google/protobuf" +
-      "/timestamp.proto\032\026io/common/expiry.proto" +
-      "\"w\n\014SelectOption\022\024\n\014listPriority\030\001 \001(\r\022\021" +
-      "\n\ttextLabel\030\002 \001(\t\022/\n\022localizedTextLabel\030" +
-      "\003 \001(\0132\023.io.LocalizedString\022\r\n\005value\030\004 \001(" +
-      "\t\"\224\001\n\007Barcode\022\017\n\007payload\030\001 \001(\t\022\037\n\006format" +
-      "\030\002 \001(\0162\017.io.BarcodeType\022\017\n\007altText\030\003 \001(\t" +
-      "\022-\n\020localizedAltText\030\004 \001(\0132\023.io.Localize" +
-      "dString\022\027\n\017messageEncoding\030\005 \001(\t\"\261\007\n\014Pas" +
-      "sTemplate\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\"\n\010p" +
-      "rotocol\030\003 \001(\0162\020.io.PassProtocol\022\020\n\010revis" +
-      "ion\030\004 \001(\r\022)\n\017defaultLanguage\030\005 \001(\0162\020.io." +
-      "LanguageCode\022\030\n\020organizationName\030\006 \001(\t\0226" +
-      "\n\031localizedOrganizationName\030\007 \001(\0132\023.io.L" +
-      "ocalizedString\022\023\n\013description\030\010 \001(\t\0221\n\024l" +
-      "ocalizedDescription\030\t \001(\0132\023.io.Localized" +
-      "String\022\026\n\004data\030\n \001(\0132\010.io.Data\022 \n\010imageI" +
-      "ds\030\013 \001(\0132\014.io.ImageIdsH\000\022\037\n\006images\030\014 \001(\013" +
-      "2\r.io.ImageDataH\000\022\032\n\006colors\030\r \001(\0132\n.io.C" +
-      "olors\022\034\n\007barcode\030\016 \001(\0132\013.io.Barcode\022\033\n\nn" +
-      "fcEnabled\030\017 \001(\0132\007.io.NFC\022\034\n\007sharing\030\020 \001(" +
-      "\0132\013.io.Sharing\0224\n\023appleWalletSettings\030\021 " +
-      "\001(\0132\027.io.AppleWalletSettings\0220\n\021googlePa" +
-      "ySettings\030\022 \001(\0132\025.io.GooglePaySettings\022*" +
-      "\n\tlocations\030\023 \003(\0132\017.io.GPSLocationB\006\222A\003\240" +
-      "\001\n\022#\n\007beacons\030\024 \003(\0132\n.io.BeaconB\006\222A\003\240\001\n\022" +
-      "\037\n\005links\030\025 \003(\0132\010.io.LinkB\006\222A\003\240\001\n\022\020\n\010time" +
-      "zone\030\026 \001(\t\022*\n\016expirySettings\030\027 \001(\0132\022.io." +
-      "ExpirySettings\0224\n\023landingPageSettings\030\030 " +
-      "\001(\0132\027.io.LandingPageSettings:_\222A\\\nZ*\013Pas" +
-      "s Design29Design record for the Apple Wa" +
-      "llet and Google Pay passes.\322\001\017defaultLan" +
-      "guageB\r\n\013ImageAssets\"\370\001\n\023AppleWalletSett" +
-      "ings\022#\n\010passType\030\001 \001(\0162\021.io.ApplePassTyp" +
-      "e\022\020\n\010userInfo\030\002 \001(\t\022\024\n\014appLaunchUrl\030\003 \001(" +
-      "\t\022\"\n\032associatedStoreIdentifiers\030\004 \003(\r\022\023\n" +
-      "\013maxDistance\030\005 \001(\r\022\031\n\021appStoreCountries\030" +
-      "\006 \003(\t\022$\n\013transitType\030\007 \001(\0162\017.io.TransitT" +
-      "ype\022\032\n\022groupingIdentifier\030\010 \001(\t\"\207\002\n\021Goog" +
-      "lePaySettings\022\'\n\010passType\030\001 \001(\0162\025.io.Goo" +
-      "glePayPassType\022$\n\nandroidApp\030\002 \001(\0132\020.io." +
-      "GooglePayApp\022 \n\006iosApp\030\003 \001(\0132\020.io.Google" +
-      "PayApp\022 \n\006webApp\030\004 \001(\0132\020.io.GooglePayApp" +
-      "\022\031\n\021classTemplateInfo\030\005 \001(\t\022\027\n\017backgroun" +
-      "dColor\030\006 \001(\t\022+\n\021languageOverrides\030\007 \003(\0162" +
-      "\020.io.LanguageCode\"\250\001\n\014GooglePayApp\022\024\n\003ur" +
-      "l\030\001 \001(\0132\007.io.Url\022\r\n\005title\030\002 \001(\t\022+\n\016local" +
-      "izedTitle\030\003 \001(\0132\023.io.LocalizedString\022\023\n\013" +
-      "description\030\004 \001(\t\0221\n\024localizedDescriptio" +
-      "n\030\005 \001(\0132\023.io.LocalizedString\"m\n\004Data\022!\n\n" +
-      "dataFields\030\001 \003(\0132\r.io.DataField\022B\n\032dataC" +
-      "ollectionPageSettings\030\002 \001(\0132\036.io.DataCol" +
-      "lectionPageSettings\"t\n\023LandingPageSettin" +
-      "gs\0225\n\033landingLocalizationOverride\030\001 \003(\0162" +
-      "\020.io.LanguageCode\022&\n\022preferWalletPasses\030" +
-      "\002 \001(\0162\n.io.Toggle\"\254\005\n\032DataCollectionPage" +
-      "Settings\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTitl" +
-      "e\030\002 \001(\0132\023.io.LocalizedString\022\023\n\013descript" +
-      "ion\030\003 \001(\t\0221\n\024localizedDescription\030\004 \001(\0132" +
-      "\023.io.LocalizedString\022\030\n\020submitButtonText" +
-      "\030\005 \001(\t\0226\n\031localizedSubmitButtonText\030\006 \001(" +
-      "\0132\023.io.LocalizedString\022\023\n\013loadingText\030\007 " +
-      "\001(\t\0221\n\024localizedLoadingText\030\010 \001(\0132\023.io.L" +
-      "ocalizedString\022\024\n\014thankYouText\030\t \001(\t\0222\n\025" +
-      "localizedThankYouText\030\n \001(\0132\023.io.Localiz" +
-      "edString\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229\n" +
-      "\034localizedPageBackgroundColor\030\014 \001(\0132\023.io" +
-      ".LocalizedString\022.\n\020trackingSettings\030\r \001" +
-      "(\0132\024.io.TrackingSettings\022\035\n\025submitButton" +
-      "TextColor\030\016 \001(\t\022#\n\033submitButtonBackgroun" +
-      "dColor\030\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023loca" +
-      "lizedFooterText\030\021 \001(\0132\023.io.LocalizedStri" +
-      "ng\022\024\n\014cssOverrides\030\022 \001(\t\"\363\001\n\024PassTemplat" +
-      "eResponse\022\"\n\010template\030\001 \001(\0132\020.io.PassTem" +
-      "plate\022\014\n\004Name\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001" +
-      "(\t\022\"\n\010protocol\030\004 \001(\0162\020.io.PassProtocol\022\020" +
-      "\n\010revision\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022-\n\tupdatedAt\030\007 \001" +
-      "(\0132\032.google.protobuf.Timestamp\"\\\n\006Colors" +
-      "\022\027\n\017backgroundColor\030\001 \001(\t\022\022\n\nlabelColor\030" +
-      "\002 \001(\t\022\021\n\ttextColor\030\003 \001(\t\022\022\n\nstripColor\030\004" +
-      " \001(\t\".\n\017CopyObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007n" +
-      "ewName\030\002 \001(\t\">\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\r" +
-      "certificateId\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n" +
-      "\tDataField\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntempla" +
-      "teId\030\002 \001(\t\022 \n\tfieldType\030\003 \001(\0162\r.io.Field" +
-      "Type\022\022\n\nisRequired\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022" +
-      "+\n\016localizedLabel\030\006 \001(\0132\023.io.LocalizedSt" +
-      "ring\022\036\n\010dataType\030\007 \001(\0162\014.io.DataType\022\024\n\014" +
-      "defaultValue\030\010 \001(\t\0222\n\025localizedDefaultVa" +
-      "lue\030\t \001(\0132\023.io.LocalizedString\022\022\n\nvalida" +
-      "tion\030\n \001(\t\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014c" +
-      "urrencyCode\030\014 \001(\t\022H\n\035appleWalletFieldRen" +
-      "derOptions\030\r \001(\0132!.io.AppleWalletFieldRe" +
-      "nderOptions\022N\n dataCollectionFieldRender" +
-      "Options\030\016 \001(\0132$.io.DataCollectionFieldRe" +
-      "nderOptions\022\034\n\005usage\030\017 \003(\0162\r.io.UsageTyp" +
-      "e\022D\n\033googlePayFieldRenderOptions\030\020 \001(\0132\037" +
-      ".io.GooglePayFieldRenderOptions\022\035\n\025defau" +
-      "ltTelCountryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFi" +
-      "eldRenderOptions\022(\n\rtextAlignment\030\002 \001(\0162" +
-      "\021.io.TextAlignment\022.\n\020positionSettings\030\003" +
-      " \001(\0132\024.io.PositionSettings\022\025\n\rchangeMess" +
-      "age\030\004 \001(\t\0223\n\026localizedChangeMessage\030\005 \001(" +
-      "\0132\023.io.LocalizedString\022$\n\tdateStyle\030\006 \001(" +
-      "\0162\021.io.DateTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162" +
-      "\021.io.DateTimeStyle\022$\n\013numberStyle\030\010 \001(\0162" +
-      "\017.io.NumberStyle\022/\n\025suppressLinkDetectio" +
-      "n\030\t \003(\0162\020.io.LinkDetector\022\026\n\016ignoreTimez" +
-      "one\030\n \001(\010\022\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033Goo" +
-      "glePayFieldRenderOptions\022-\n\021googlePayPos" +
-      "ition\030\001 \001(\0162\022.io.GooglePayField\022\032\n\022textM" +
-      "odulePriority\030\002 \001(\r\"G\n\020PositionSettings\022" +
-      "!\n\007section\030\001 \001(\0162\020.io.FieldSection\022\020\n\010pr" +
-      "iority\030\002 \001(\r\"\237\003\n DataCollectionFieldRend" +
-      "erOptions\022\020\n\010helpText\030\001 \001(\t\022.\n\021localized" +
-      "HelpText\030\002 \001(\0132\023.io.LocalizedString\022\024\n\014d" +
-      "isplayOrder\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'" +
-      "\n\rselectOptions\030\006 \003(\0132\020.io.SelectOption\022" +
-      "1\n\024localizedPlaceholder\030\007 \001(\0132\023.io.Local" +
-      "izedString\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addr" +
-      "essRenderOptions\030\t \001(\0132\030.io.AddressRende" +
-      "rOptions\022 \n\030localizedYearPlaceholder\030\n \001" +
-      "(\t\022!\n\031localizedMonthPlaceholder\030\013 \001(\t\022\037\n" +
-      "\027localizedDayPlaceholder\030\014 \001(\t\"\242\006\n\024Addre" +
-      "ssRenderOptions\022\025\n\raddress1Label\030\001 \001(\t\022\025" +
-      "\n\raddress2Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t" +
-      "\022\024\n\014countryLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t" +
-      "\022\033\n\023address1Placeholder\030\006 \001(\t\022\033\n\023address" +
-      "2Placeholder\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 " +
-      "\001(\t\022\032\n\022countryPlaceholder\030\t \001(\t\022\026\n\016zipPl" +
-      "aceholder\030\n \001(\t\0223\n\026localizedAddress1Labe" +
-      "l\030\013 \001(\0132\023.io.LocalizedString\0223\n\026localize" +
-      "dAddress2Label\030\014 \001(\0132\023.io.LocalizedStrin" +
-      "g\022/\n\022localizedCityLabel\030\r \001(\0132\023.io.Local" +
-      "izedString\0222\n\025localizedCountryLabel\030\016 \001(" +
-      "\0132\023.io.LocalizedString\022.\n\021localizedZipLa" +
-      "bel\030\017 \001(\0132\023.io.LocalizedString\0229\n\034locali" +
-      "zedAddress1Placeholder\030\020 \001(\0132\023.io.Locali" +
-      "zedString\0229\n\034localizedAddress2Placeholde" +
-      "r\030\021 \001(\0132\023.io.LocalizedString\0225\n\030localize" +
-      "dCityPlaceholder\030\022 \001(\0132\023.io.LocalizedStr" +
-      "ing\0228\n\033localizedCountryPlaceholder\030\023 \001(\013" +
-      "2\023.io.LocalizedString\0224\n\027localizedZipPla" +
-      "ceholder\030\024 \001(\0132\023.io.LocalizedString\"\267\001\n\007" +
-      "Sharing\022\027\n\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030" +
-      "\002 \001(\t\022\023\n\013description\030\003 \001(\t\0221\n\024localizedD" +
-      "escription\030\004 \001(\0132\023.io.LocalizedString:>\222" +
-      "A;\n9*\007Sharing2.Controls the sharing sett" +
-      "ings for the program.\"N\n\026DefaultTemplate" +
-      "Request\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProto" +
-      "col\022\020\n\010revision\030\002 \001(\r*v\n\rApplePassType\022\027" +
-      "\n\023APPLE_NOT_SUPPORTED\020\000\022\021\n\rBOARDING_PASS" +
-      "\020\001\022\n\n\006COUPON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENE" +
-      "RIC\020\004\022\016\n\nSTORE_CARD\020\005*w\n\021GooglePayPassTy" +
-      "pe\022\034\n\030GOOGLE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVEN" +
-      "T\020\001\022\n\n\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t" +
-      "\n\005OFFER\020\005\022\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n" +
-      "\027BARCODE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZ" +
-      "TEC\020\002\022\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005" +
-      "*q\n\tFieldType\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004ME" +
-      "TA\020\001\022\007\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017P" +
-      "ROTOCOL_FIELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016" +
-      "StandardFields\022\036\n\032STANDARD_FIELDS_DO_NOT" +
-      "_USE\020\000\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n\016STANDAR" +
-      "D_LEGAL\020\002\022\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025S" +
-      "TANDARD_USEFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_O" +
-      "UT\020\005\022\026\n\022STANDARD_LOCATIONS\020\006*\\\n\rTextAlig" +
-      "nment\022\035\n\031TEXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004" +
-      "LEFT\020\001\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL" +
-      "\020\004*\232\001\n\rDateTimeStyle\022\036\n\032DATE_TIME_STYLE_" +
-      "DO_NOT_USE\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022" +
-      "\032\n\026DATE_TIME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME" +
-      "_STYLE_LONG\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*" +
-      "\217\001\n\014LinkDetector\022\034\n\030LINK_DETECTOR_DO_NOT" +
-      "_USE\020\000\022\031\n\025LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LIN" +
-      "K_DETECTOR_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003" +
-      "\022\027\n\023LINK_DETECTOR_PHONE\020\004*\223\001\n\013NumberStyl" +
-      "e\022\033\n\027NUMBER_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER" +
-      "_STYLE_DECIMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT" +
-      "\020\002\022\033\n\027NUMBER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBE" +
-      "R_STYLE_SPELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANS" +
-      "IT_TYPE_DO_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR" +
-      "\020\001\022\025\n\021TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYP" +
-      "E_BUS\020\003\022\030\n\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRA" +
-      "NSIT_TYPE_TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006" +
-      "*\210\002\n\010DataType\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEX" +
-      "T\020\001\022\r\n\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n" +
-      "\013DATE_YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022" +
-      "\r\n\tDATE_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005E" +
-      "MAIL\020\n\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n" +
-      "\005IMAGE\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007O" +
-      "PTIONS\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyl" +
-      "e\022\014\n\010NO_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_" +
-      "MEDIUM\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016" +
-      "\n\nTIME_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_" +
-      "LONG\020\007\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT" +
-      "\020\t\022\024\n\020DATE_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LO" +
-      "NG\020\013\022\022\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIM" +
-      "AL\020\r*\220\001\n\014FieldSection\022\034\n\030FIELD_SECTION_D" +
-      "O_NOT_USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_" +
-      "FIELDS\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILI" +
-      "ARY_FIELDS\020\004\022\021\n\rHEADER_FIELDS\020\005*\216\031\n\016Goog" +
-      "lePayField\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_US" +
-      "E\020\000\022$\n GOOGLE_PAY_BOARDING_AIRLINE_NAME\020" +
-      "\001\022$\n GOOGLE_PAY_BOARDING_AIRLINE_CODE\020\002\022" +
-      "\036\n\032GOOGLE_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGL" +
-      "E_PAY_BOARDING_DESTINATION\020\004\022\'\n#GOOGLE_P" +
-      "AY_BOARDING_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_" +
-      "PAY_BOARDING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY" +
-      "_BOARDING_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_" +
-      "BOARDING_PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_" +
-      "BOARDING_ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOAR" +
-      "DING_SEAT\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARD" +
-      "ING_POSITION\020\013\022)\n%GOOGLE_PAY_BOARDING_BO" +
-      "ARDING_SEQUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING" +
-      "_BOARDING_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_" +
-      "FLIGHT_NUMBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_C" +
-      "ONFIRMATION_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARD" +
-      "ING_TICKET_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDI" +
-      "NG_FREQUENT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY" +
-      "_BOARDING_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BO" +
-      "ARDING_DEPARTURE_TIME\020\023\022$\n GOOGLE_PAY_BO" +
-      "ARDING_ARRIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOAR" +
-      "DING_ARRIVAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BO" +
-      "ARDING_ARRIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVEN" +
-      "T_NAME\020d\022\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020" +
-      "e\022\"\n\036GOOGLE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n" +
-      "\025GOOGLE_PAY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_E" +
-      "VENT_SECTION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i" +
-      "\022\031\n\025GOOGLE_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PA" +
-      "Y_EVENT_TICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EV" +
-      "ENT_DOORS_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_STA" +
-      "RT\020m\022\030\n\024GOOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE" +
-      "_PAY_EVENT_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_E" +
-      "VENT_TICKET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT" +
-      "_CONFIRMATION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVE" +
-      "NT_FACE_VALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE" +
-      "_PRINT\020s\022\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAM" +
-      "E\020\310\001\022\034\n\027GOOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GO" +
-      "OGLE_PAY_GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_P" +
-      "AY_GIFT_BALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE" +
-      "_PAY_GIFT_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVEN" +
-      "T_NUMBER\020\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRA" +
-      "M_NAME\020\254\002\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255" +
-      "\002\022(\n#GOOGLE_PAY_LOYALTY_SECONDARY_POINTS" +
-      "\020\256\002\022$\n\037GOOGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257" +
-      "\002\022\"\n\035GOOGLE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n" +
-      "\037GOOGLE_PAY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)G" +
-      "OOGLE_PAY_LOYALTY_SECONDARY_REWARDS_TIER" +
-      "\020\262\002\022\033\n\026GOOGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOG" +
-      "LE_PAY_OFFER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_O" +
-      "FFER_DETAILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE" +
-      "_PRINT\020\223\003\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITL" +
-      "E\020\224\003\022#\n\036GOOGLE_PAY_TRANSIT_ISSUER_NAME\020\364" +
-      "\003\022!\n\034GOOGLE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!" +
-      "GOOGLE_PAY_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035" +
-      "GOOGLE_PAY_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOG" +
-      "LE_PAY_TRANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_" +
-      "PAY_TRANSIT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRA" +
-      "NSIT_PASSENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TR" +
-      "ANSIT_CARRIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_" +
-      "COACH\020\374\003\022\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%" +
-      "\n GOOGLE_PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n" +
-      " GOOGLE_PAY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034" +
-      "GOOGLE_PAY_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGL" +
-      "E_PAY_TRANSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_" +
-      "TRANSIT_ZONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FA" +
-      "RE_CLASS\020\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCES" +
-      "SION_CATEGORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_R" +
-      "OUTE_RESTRICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANS" +
-      "IT_ROUTE_RESTRICTION_DETAILS\020\206\004\022)\n$GOOGL" +
-      "E_PAY_TRANSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GO" +
-      "OGLE_PAY_TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&" +
-      "\n!GOOGLE_PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%" +
-      "\n GOOGLE_PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n" +
-      "\035GOOGLE_PAY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOO" +
-      "GLE_PAY_TRANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035" +
-      "GOOGLE_PAY_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOG" +
-      "LE_PAY_TRANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOG" +
-      "LE_PAY_TRANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GO" +
-      "OGLE_PAY_TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_IS" +
-      "SUER_NAME\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_M" +
-      "ODULE\020\352\007BG\n\020com.passkit.grpcZ$stash.pass" +
-      "kit.com/io/model/sdk/go/io\252\002\014PassKit.GRP" +
-      "Cb\006proto3"
+      "image/image.proto\032.protoc-gen-openapiv2/" +
+      "options/annotations.proto\032\037google/protob" +
+      "uf/timestamp.proto\032\026io/common/expiry.pro" +
+      "to\"w\n\014SelectOption\022\024\n\014listPriority\030\001 \001(\r" +
+      "\022\021\n\ttextLabel\030\002 \001(\t\022/\n\022localizedTextLabe" +
+      "l\030\003 \001(\0132\023.io.LocalizedString\022\r\n\005value\030\004 " +
+      "\001(\t\"\224\001\n\007Barcode\022\017\n\007payload\030\001 \001(\t\022\037\n\006form" +
+      "at\030\002 \001(\0162\017.io.BarcodeType\022\017\n\007altText\030\003 \001" +
+      "(\t\022-\n\020localizedAltText\030\004 \001(\0132\023.io.Locali" +
+      "zedString\022\027\n\017messageEncoding\030\005 \001(\t\"\251\007\n\014P" +
+      "assTemplate\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\"\n" +
+      "\010protocol\030\003 \001(\0162\020.io.PassProtocol\022\020\n\010rev" +
+      "ision\030\004 \001(\r\022)\n\017defaultLanguage\030\005 \001(\0162\020.i" +
+      "o.LanguageCode\022\030\n\020organizationName\030\006 \001(\t" +
+      "\0226\n\031localizedOrganizationName\030\007 \001(\0132\023.io" +
+      ".LocalizedString\022\023\n\013description\030\010 \001(\t\0221\n" +
+      "\024localizedDescription\030\t \001(\0132\023.io.Localiz" +
+      "edString\022\026\n\004data\030\n \001(\0132\010.io.Data\022 \n\010imag" +
+      "eIds\030\013 \001(\0132\014.io.ImageIdsH\000\022\037\n\006images\030\014 \001" +
+      "(\0132\r.io.ImageDataH\000\022\032\n\006colors\030\r \001(\0132\n.io" +
+      ".Colors\022\034\n\007barcode\030\016 \001(\0132\013.io.Barcode\022\033\n" +
+      "\nnfcEnabled\030\017 \001(\0132\007.io.NFC\022\034\n\007sharing\030\020 " +
+      "\001(\0132\013.io.Sharing\0224\n\023appleWalletSettings\030" +
+      "\021 \001(\0132\027.io.AppleWalletSettings\0220\n\021google" +
+      "PaySettings\030\022 \001(\0132\025.io.GooglePaySettings" +
+      "\022*\n\tlocations\030\023 \003(\0132\017.io.GPSLocationB\006\222A" +
+      "\003\240\001\n\022#\n\007beacons\030\024 \003(\0132\n.io.BeaconB\006\222A\003\240\001" +
+      "\n\022\027\n\005links\030\025 \003(\0132\010.io.Link\022\020\n\010timezone\030\026" +
+      " \001(\t\022*\n\016expirySettings\030\027 \001(\0132\022.io.Expiry" +
+      "Settings\0224\n\023landingPageSettings\030\030 \001(\0132\027." +
+      "io.LandingPageSettings:_\222A\\\nZ*\013Pass Desi" +
+      "gn29Design record for the Apple Wallet a" +
+      "nd Google Pay passes.\322\001\017defaultLanguageB" +
+      "\r\n\013ImageAssets\"\370\001\n\023AppleWalletSettings\022#" +
+      "\n\010passType\030\001 \001(\0162\021.io.ApplePassType\022\020\n\010u" +
+      "serInfo\030\002 \001(\t\022\024\n\014appLaunchUrl\030\003 \001(\t\022\"\n\032a" +
+      "ssociatedStoreIdentifiers\030\004 \003(\r\022\023\n\013maxDi" +
+      "stance\030\005 \001(\r\022\031\n\021appStoreCountries\030\006 \003(\t\022" +
+      "$\n\013transitType\030\007 \001(\0162\017.io.TransitType\022\032\n" +
+      "\022groupingIdentifier\030\010 \001(\t\"\207\002\n\021GooglePayS" +
+      "ettings\022\'\n\010passType\030\001 \001(\0162\025.io.GooglePay" +
+      "PassType\022$\n\nandroidApp\030\002 \001(\0132\020.io.Google" +
+      "PayApp\022 \n\006iosApp\030\003 \001(\0132\020.io.GooglePayApp" +
+      "\022 \n\006webApp\030\004 \001(\0132\020.io.GooglePayApp\022\031\n\021cl" +
+      "assTemplateInfo\030\005 \001(\t\022\027\n\017backgroundColor" +
+      "\030\006 \001(\t\022+\n\021languageOverrides\030\007 \003(\0162\020.io.L" +
+      "anguageCode\"\250\001\n\014GooglePayApp\022\024\n\003url\030\001 \001(" +
+      "\0132\007.io.Url\022\r\n\005title\030\002 \001(\t\022+\n\016localizedTi" +
+      "tle\030\003 \001(\0132\023.io.LocalizedString\022\023\n\013descri" +
+      "ption\030\004 \001(\t\0221\n\024localizedDescription\030\005 \001(" +
+      "\0132\023.io.LocalizedString\"m\n\004Data\022!\n\ndataFi" +
+      "elds\030\001 \003(\0132\r.io.DataField\022B\n\032dataCollect" +
+      "ionPageSettings\030\002 \001(\0132\036.io.DataCollectio" +
+      "nPageSettings\"t\n\023LandingPageSettings\0225\n\033" +
+      "landingLocalizationOverride\030\001 \003(\0162\020.io.L" +
+      "anguageCode\022&\n\022preferWalletPasses\030\002 \001(\0162" +
+      "\n.io.Toggle\"\254\005\n\032DataCollectionPageSettin" +
+      "gs\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(" +
+      "\0132\023.io.LocalizedString\022\023\n\013description\030\003 " +
+      "\001(\t\0221\n\024localizedDescription\030\004 \001(\0132\023.io.L" +
+      "ocalizedString\022\030\n\020submitButtonText\030\005 \001(\t" +
+      "\0226\n\031localizedSubmitButtonText\030\006 \001(\0132\023.io" +
+      ".LocalizedString\022\023\n\013loadingText\030\007 \001(\t\0221\n" +
+      "\024localizedLoadingText\030\010 \001(\0132\023.io.Localiz" +
+      "edString\022\024\n\014thankYouText\030\t \001(\t\0222\n\025locali" +
+      "zedThankYouText\030\n \001(\0132\023.io.LocalizedStri" +
+      "ng\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229\n\034local" +
+      "izedPageBackgroundColor\030\014 \001(\0132\023.io.Local" +
+      "izedString\022.\n\020trackingSettings\030\r \001(\0132\024.i" +
+      "o.TrackingSettings\022\035\n\025submitButtonTextCo" +
+      "lor\030\016 \001(\t\022#\n\033submitButtonBackgroundColor" +
+      "\030\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023localizedF" +
+      "ooterText\030\021 \001(\0132\023.io.LocalizedString\022\024\n\014" +
+      "cssOverrides\030\022 \001(\t\"\363\001\n\024PassTemplateRespo" +
+      "nse\022\"\n\010template\030\001 \001(\0132\020.io.PassTemplate\022" +
+      "\014\n\004Name\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010" +
+      "protocol\030\004 \001(\0162\020.io.PassProtocol\022\020\n\010revi" +
+      "sion\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"\\\n\006Colors\022\027\n\017ba" +
+      "ckgroundColor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022" +
+      "\021\n\ttextColor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\"." +
+      "\n\017CopyObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName" +
+      "\030\002 \001(\t\">\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertif" +
+      "icateId\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataF" +
+      "ield\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002" +
+      " \001(\t\022 \n\tfieldType\030\003 \001(\0162\r.io.FieldType\022\022" +
+      "\n\nisRequired\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016loc" +
+      "alizedLabel\030\006 \001(\0132\023.io.LocalizedString\022\036" +
+      "\n\010dataType\030\007 \001(\0162\014.io.DataType\022\024\n\014defaul" +
+      "tValue\030\010 \001(\t\0222\n\025localizedDefaultValue\030\t " +
+      "\001(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\n" +
+      " \001(\t\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014currenc" +
+      "yCode\030\014 \001(\t\022H\n\035appleWalletFieldRenderOpt" +
+      "ions\030\r \001(\0132!.io.AppleWalletFieldRenderOp" +
+      "tions\022N\n dataCollectionFieldRenderOption" +
+      "s\030\016 \001(\0132$.io.DataCollectionFieldRenderOp" +
+      "tions\022\034\n\005usage\030\017 \003(\0162\r.io.UsageType\022D\n\033g" +
+      "ooglePayFieldRenderOptions\030\020 \001(\0132\037.io.Go" +
+      "oglePayFieldRenderOptions\022\035\n\025defaultTelC" +
+      "ountryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRen" +
+      "derOptions\022(\n\rtextAlignment\030\002 \001(\0162\021.io.T" +
+      "extAlignment\022.\n\020positionSettings\030\003 \001(\0132\024" +
+      ".io.PositionSettings\022\025\n\rchangeMessage\030\004 " +
+      "\001(\t\0223\n\026localizedChangeMessage\030\005 \001(\0132\023.io" +
+      ".LocalizedString\022$\n\tdateStyle\030\006 \001(\0162\021.io" +
+      ".DateTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162\021.io.D" +
+      "ateTimeStyle\022$\n\013numberStyle\030\010 \001(\0162\017.io.N" +
+      "umberStyle\022/\n\025suppressLinkDetection\030\t \003(" +
+      "\0162\020.io.LinkDetector\022\026\n\016ignoreTimezone\030\n " +
+      "\001(\010\022\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033GooglePay" +
+      "FieldRenderOptions\022-\n\021googlePayPosition\030" +
+      "\001 \001(\0162\022.io.GooglePayField\022\032\n\022textModuleP" +
+      "riority\030\002 \001(\r\"G\n\020PositionSettings\022!\n\007sec" +
+      "tion\030\001 \001(\0162\020.io.FieldSection\022\020\n\010priority" +
+      "\030\002 \001(\r\"\237\003\n DataCollectionFieldRenderOpti" +
+      "ons\022\020\n\010helpText\030\001 \001(\t\022.\n\021localizedHelpTe" +
+      "xt\030\002 \001(\0132\023.io.LocalizedString\022\024\n\014display" +
+      "Order\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rsele" +
+      "ctOptions\030\006 \003(\0132\020.io.SelectOption\0221\n\024loc" +
+      "alizedPlaceholder\030\007 \001(\0132\023.io.LocalizedSt" +
+      "ring\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addressRen" +
+      "derOptions\030\t \001(\0132\030.io.AddressRenderOptio" +
+      "ns\022 \n\030localizedYearPlaceholder\030\n \001(\t\022!\n\031" +
+      "localizedMonthPlaceholder\030\013 \001(\t\022\037\n\027local" +
+      "izedDayPlaceholder\030\014 \001(\t\"\242\006\n\024AddressRend" +
+      "erOptions\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddr" +
+      "ess2Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014co" +
+      "untryLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023ad" +
+      "dress1Placeholder\030\006 \001(\t\022\033\n\023address2Place" +
+      "holder\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n" +
+      "\022countryPlaceholder\030\t \001(\t\022\026\n\016zipPlacehol" +
+      "der\030\n \001(\t\0223\n\026localizedAddress1Label\030\013 \001(" +
+      "\0132\023.io.LocalizedString\0223\n\026localizedAddre" +
+      "ss2Label\030\014 \001(\0132\023.io.LocalizedString\022/\n\022l" +
+      "ocalizedCityLabel\030\r \001(\0132\023.io.LocalizedSt" +
+      "ring\0222\n\025localizedCountryLabel\030\016 \001(\0132\023.io" +
+      ".LocalizedString\022.\n\021localizedZipLabel\030\017 " +
+      "\001(\0132\023.io.LocalizedString\0229\n\034localizedAdd" +
+      "ress1Placeholder\030\020 \001(\0132\023.io.LocalizedStr" +
+      "ing\0229\n\034localizedAddress2Placeholder\030\021 \001(" +
+      "\0132\023.io.LocalizedString\0225\n\030localizedCityP" +
+      "laceholder\030\022 \001(\0132\023.io.LocalizedString\0228\n" +
+      "\033localizedCountryPlaceholder\030\023 \001(\0132\023.io." +
+      "LocalizedString\0224\n\027localizedZipPlacehold" +
+      "er\030\024 \001(\0132\023.io.LocalizedString\"\267\001\n\007Sharin" +
+      "g\022\027\n\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022" +
+      "\023\n\013description\030\003 \001(\t\0221\n\024localizedDescrip" +
+      "tion\030\004 \001(\0132\023.io.LocalizedString:>\222A;\n9*\007" +
+      "Sharing2.Controls the sharing settings f" +
+      "or the program.\"N\n\026DefaultTemplateReques" +
+      "t\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n" +
+      "\010revision\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPL" +
+      "E_NOT_SUPPORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006" +
+      "COUPON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022" +
+      "\016\n\nSTORE_CARD\020\005*w\n\021GooglePayPassType\022\034\n\030" +
+      "GOOGLE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n" +
+      "\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFE" +
+      "R\020\005\022\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCO" +
+      "DE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022" +
+      "\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFi" +
+      "eldType\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007" +
+      "\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCO" +
+      "L_FIELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016Standa" +
+      "rdFields\022\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000" +
+      "\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGA" +
+      "L\020\002\022\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDAR" +
+      "D_USEFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026" +
+      "\n\022STANDARD_LOCATIONS\020\006*\\\n\rTextAlignment\022" +
+      "\035\n\031TEXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001" +
+      "\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n" +
+      "\rDateTimeStyle\022\036\n\032DATE_TIME_STYLE_DO_NOT" +
+      "_USE\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DAT" +
+      "E_TIME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE" +
+      "_LONG\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014Li" +
+      "nkDetector\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000" +
+      "\022\031\n\025LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETE" +
+      "CTOR_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LI" +
+      "NK_DETECTOR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027N" +
+      "UMBER_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE" +
+      "_DECIMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027" +
+      "NUMBER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYL" +
+      "E_SPELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYP" +
+      "E_DO_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021" +
+      "TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020" +
+      "\003\022\030\n\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_T" +
+      "YPE_TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010D" +
+      "ataType\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n" +
+      "\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_" +
+      "YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDAT" +
+      "E_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n" +
+      "\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE" +
+      "\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS" +
+      "\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010N" +
+      "O_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM" +
+      "\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME" +
+      "_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007" +
+      "\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020" +
+      "DATE_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022" +
+      "\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220" +
+      "\001\n\014FieldSection\022\034\n\030FIELD_SECTION_DO_NOT_" +
+      "USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS" +
+      "\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FI" +
+      "ELDS\020\004\022\021\n\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayF" +
+      "ield\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n" +
+      " GOOGLE_PAY_BOARDING_AIRLINE_NAME\020\001\022$\n G" +
+      "OOGLE_PAY_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOO" +
+      "GLE_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_" +
+      "BOARDING_DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOA" +
+      "RDING_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BO" +
+      "ARDING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARD" +
+      "ING_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDI" +
+      "NG_PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDI" +
+      "NG_ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_S" +
+      "EAT\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARDING_PO" +
+      "SITION\020\013\022)\n%GOOGLE_PAY_BOARDING_BOARDING" +
+      "_SEQUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
+      "ING_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT" +
+      "_NUMBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_CONFIRM" +
+      "ATION_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARDING_TI" +
+      "CKET_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDING_FRE" +
+      "QUENT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARD" +
+      "ING_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING" +
+      "_DEPARTURE_TIME\020\023\022$\n GOOGLE_PAY_BOARDING" +
+      "_ARRIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_A" +
+      "RRIVAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BOARDING" +
+      "_ARRIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME" +
+      "\020d\022\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036G" +
+      "OOGLE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGL" +
+      "E_PAY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_S" +
+      "ECTION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GO" +
+      "OGLE_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVEN" +
+      "T_TICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DO" +
+      "ORS_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030" +
+      "\n\024GOOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_E" +
+      "VENT_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_T" +
+      "ICKET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT_CONFI" +
+      "RMATION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FAC" +
+      "E_VALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT" +
+      "\020s\022\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034" +
+      "\n\027GOOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_P" +
+      "AY_GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIF" +
+      "T_BALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_G" +
+      "IFT_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMB" +
+      "ER\020\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRAM_NAME" +
+      "\020\254\002\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#G" +
+      "OOGLE_PAY_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n" +
+      "\037GOOGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035G" +
+      "OOGLE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGL" +
+      "E_PAY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_" +
+      "PAY_LOYALTY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n" +
+      "\026GOOGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY" +
+      "_OFFER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_D" +
+      "ETAILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT" +
+      "\020\223\003\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#" +
+      "\n\036GOOGLE_PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034G" +
+      "OOGLE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE" +
+      "_PAY_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE" +
+      "_PAY_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY" +
+      "_TRANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TR" +
+      "ANSIT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_P" +
+      "ASSENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_" +
+      "CARRIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020" +
+      "\374\003\022\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOG" +
+      "LE_PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGL" +
+      "E_PAY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE" +
+      "_PAY_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_" +
+      "TRANSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSI" +
+      "T_ZONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLA" +
+      "SS\020\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCESSION_C" +
+      "ATEGORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_R" +
+      "ESTRICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROU" +
+      "TE_RESTRICTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_" +
+      "TRANSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_P" +
+      "AY_TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOG" +
+      "LE_PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOG" +
+      "LE_PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGL" +
+      "E_PAY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PA" +
+      "Y_TRANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE" +
+      "_PAY_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY" +
+      "_TRANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY" +
+      "_TRANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_P" +
+      "AY_TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_N" +
+      "AME\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_MODULE\020" +
+      "\352\007BG\n\020com.passkit.grpcZ$stash.passkit.co" +
+      "m/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -44344,7 +44344,7 @@ public final class Template {
           com.passkit.grpc.Links.getDescriptor(),
           com.passkit.grpc.Tracking.getDescriptor(),
           com.passkit.grpc.Image.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.passkit.grpc.Expiry.getDescriptor(),
         });
@@ -44476,8 +44476,8 @@ public final class Template {
         new java.lang.String[] { "Protocol", "Revision", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.CommonObjects.getDescriptor();
@@ -44487,7 +44487,7 @@ public final class Template {
     com.passkit.grpc.Links.getDescriptor();
     com.passkit.grpc.Tracking.getDescriptor();
     com.passkit.grpc.Image.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.passkit.grpc.Expiry.getDescriptor();
   }

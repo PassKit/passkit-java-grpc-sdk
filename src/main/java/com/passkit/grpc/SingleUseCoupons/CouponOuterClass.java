@@ -8772,45 +8772,45 @@ public final class CouponOuterClass {
       "amp.proto\032\032io/common/pagination.proto\032\026i" +
       "o/common/filter.proto\032\024io/common/pass.pr" +
       "oto\032\030io/common/personal.proto\032\027io/common" +
-      "/metrics.proto\032,protoc-gen-swagger/optio" +
-      "ns/annotations.proto\"\274\005\n\006Coupon\022\n\n\002id\030\001 " +
-      "\001(\t\022\022\n\nexternalId\030\002 \001(\t\022\017\n\007offerId\030\003 \001(\t" +
-      "\022\022\n\ncampaignId\030\004 \001(\t\022\032\n\006person\030\005 \001(\0132\n.i" +
-      "o.Person\022:\n\010metaData\030\006 \003(\0132(.single_use_" +
-      "coupons.Coupon.MetaDataEntry\022\013\n\003sku\030\007 \001(" +
-      "\t\022\016\n\006optOut\030\010 \001(\010\0220\n\006status\030\n \001(\0162 .sing" +
-      "le_use_coupons.CouponStatus\022.\n\nexpiryDat" +
-      "e\030\013 \001(\0132\032.google.protobuf.Timestamp\022@\n\021r" +
-      "edemptionDetails\030\014 \001(\0132%.single_use_coup" +
-      "ons.RedemptionDetails\022(\n\rpassOverrides\030\r" +
-      " \001(\0132\021.io.PassOverrides\022\"\n\014passMetaData\030" +
-      "\016 \001(\0132\014.io.Metadata\022+\n\007created\030\017 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022+\n\007updated\030\020 \001(" +
-      "\0132\032.google.protobuf.Timestamp\032/\n\rMetaDat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:u" +
-      "\222Ar\np*\006Coupon2OHolds the details & state" +
-      " of a unique individual coupon instance " +
-      "(i.e. a pass).\322\001\007offerId\322\001\ncampaignIdJ\004\010" +
-      "\t\020\n\"\356\002\n\021RedemptionDetails\0222\n\016redemptionD" +
-      "ate\030\001 \001(\0132\032.google.protobuf.Timestamp\022\026\n" +
-      "\016redemptionCode\030\002 \001(\t\022\013\n\003lat\030\003 \001(\001\022\013\n\003lo" +
-      "n\030\004 \001(\001\022\013\n\003alt\030\005 \001(\005\022\030\n\020redemptionSource" +
-      "\030\006 \001(\t\022\033\n\023redemptionReference\030\007 \001(\t\022\034\n\024t" +
-      "ransactionReference\030\010 \001(\t\022\031\n\021transaction" +
-      "Amount\030\t \001(\001\022E\n\010metaData\030\n \003(\01323.single_" +
-      "use_coupons.RedemptionDetails.MetaDataEn" +
-      "try\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"A\n\021ExternalIdRequest\022\030\n\020cou" +
-      "ponCampaignId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\"" +
-      "U\n\025ListRequestDeprecated\022\030\n\020couponCampai" +
-      "gnId\030\001 \001(\t\022\"\n\npagination\030\002 \001(\0132\016.io.Pagi" +
-      "nation\"Y\n\013ListRequest\022\030\n\020couponCampaignI" +
-      "d\030\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\022\022\n" +
-      "\nemailAsCsv\030\003 \001(\010*,\n\014CouponStatus\022\016\n\nUNR" +
-      "EDEEMED\020\000\022\014\n\010REDEEMED\020\001Bq\n!com.passkit.g" +
-      "rpc.SingleUseCouponsZ7stash.passkit.com/" +
-      "io/model/sdk/go/io/single_use_coupons\252\002\022" +
-      "PKSingleUseCouponsb\006proto3"
+      "/metrics.proto\032.protoc-gen-openapiv2/opt" +
+      "ions/annotations.proto\"\274\005\n\006Coupon\022\n\n\002id\030" +
+      "\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\017\n\007offerId\030\003 \001" +
+      "(\t\022\022\n\ncampaignId\030\004 \001(\t\022\032\n\006person\030\005 \001(\0132\n" +
+      ".io.Person\022:\n\010metaData\030\006 \003(\0132(.single_us" +
+      "e_coupons.Coupon.MetaDataEntry\022\013\n\003sku\030\007 " +
+      "\001(\t\022\016\n\006optOut\030\010 \001(\010\0220\n\006status\030\n \001(\0162 .si" +
+      "ngle_use_coupons.CouponStatus\022.\n\nexpiryD" +
+      "ate\030\013 \001(\0132\032.google.protobuf.Timestamp\022@\n" +
+      "\021redemptionDetails\030\014 \001(\0132%.single_use_co" +
+      "upons.RedemptionDetails\022(\n\rpassOverrides" +
+      "\030\r \001(\0132\021.io.PassOverrides\022\"\n\014passMetaDat" +
+      "a\030\016 \001(\0132\014.io.Metadata\022+\n\007created\030\017 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022+\n\007updated\030\020 " +
+      "\001(\0132\032.google.protobuf.Timestamp\032/\n\rMetaD" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      ":u\222Ar\np*\006Coupon2OHolds the details & sta" +
+      "te of a unique individual coupon instanc" +
+      "e (i.e. a pass).\322\001\007offerId\322\001\ncampaignIdJ" +
+      "\004\010\t\020\n\"\356\002\n\021RedemptionDetails\0222\n\016redemptio" +
+      "nDate\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\026\n\016redemptionCode\030\002 \001(\t\022\013\n\003lat\030\003 \001(\001\022\013\n\003" +
+      "lon\030\004 \001(\001\022\013\n\003alt\030\005 \001(\005\022\030\n\020redemptionSour" +
+      "ce\030\006 \001(\t\022\033\n\023redemptionReference\030\007 \001(\t\022\034\n" +
+      "\024transactionReference\030\010 \001(\t\022\031\n\021transacti" +
+      "onAmount\030\t \001(\001\022E\n\010metaData\030\n \003(\01323.singl" +
+      "e_use_coupons.RedemptionDetails.MetaData" +
+      "Entry\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"A\n\021ExternalIdRequest\022\030\n\020c" +
+      "ouponCampaignId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(" +
+      "\t\"U\n\025ListRequestDeprecated\022\030\n\020couponCamp" +
+      "aignId\030\001 \001(\t\022\"\n\npagination\030\002 \001(\0132\016.io.Pa" +
+      "gination\"Y\n\013ListRequest\022\030\n\020couponCampaig" +
+      "nId\030\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\022" +
+      "\022\n\nemailAsCsv\030\003 \001(\010*,\n\014CouponStatus\022\016\n\nU" +
+      "NREDEEMED\020\000\022\014\n\010REDEEMED\020\001B|\n!com.passkit" +
+      ".grpc.SingleUseCouponsZ7stash.passkit.co" +
+      "m/io/model/sdk/go/io/single_use_coupons\252" +
+      "\002\035PassKit.Grpc.SingleUseCouponsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8821,7 +8821,7 @@ public final class CouponOuterClass {
           com.passkit.grpc.PassOuterClass.getDescriptor(),
           com.passkit.grpc.Personal.getDescriptor(),
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_single_use_coupons_Coupon_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -8867,7 +8867,7 @@ public final class CouponOuterClass {
         new java.lang.String[] { "CouponCampaignId", "Filters", "EmailAsCsv", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -8876,7 +8876,7 @@ public final class CouponOuterClass {
     com.passkit.grpc.PassOuterClass.getDescriptor();
     com.passkit.grpc.Personal.getDescriptor();
     com.passkit.grpc.MetricsOuterClass.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

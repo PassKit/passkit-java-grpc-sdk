@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_certificates.proto")
 public final class CertificatesGrpc {
 
@@ -27,6 +27,37 @@ public final class CertificatesGrpc {
   public static final String SERVICE_NAME = "io.Certificates";
 
   // Static method descriptors that strictly reflect the proto.
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier,
+      com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAppleCertificateData",
+      requestType = com.passkit.grpc.Certificate.PassTypeIdentifier.class,
+      responseType = com.passkit.grpc.Certificate.CertificateData.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier,
+      com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier, com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod;
+    if ((getGetAppleCertificateDataMethod = CertificatesGrpc.getGetAppleCertificateDataMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getGetAppleCertificateDataMethod = CertificatesGrpc.getGetAppleCertificateDataMethod) == null) {
+          CertificatesGrpc.getGetAppleCertificateDataMethod = getGetAppleCertificateDataMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.PassTypeIdentifier, com.passkit.grpc.Certificate.CertificateData>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAppleCertificateData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.PassTypeIdentifier.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("getAppleCertificateData"))
+              .build();
+        }
+      }
+    }
+    return getGetAppleCertificateDataMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
       com.passkit.grpc.Certificate.CertificateSigningRequest> getGetCertificateSigningRequestMethod;
 
@@ -41,22 +72,21 @@ public final class CertificatesGrpc {
     if ((getGetCertificateSigningRequestMethod = CertificatesGrpc.getGetCertificateSigningRequestMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getGetCertificateSigningRequestMethod = CertificatesGrpc.getGetCertificateSigningRequestMethod) == null) {
-          CertificatesGrpc.getGetCertificateSigningRequestMethod = getGetCertificateSigningRequestMethod = 
+          CertificatesGrpc.getGetCertificateSigningRequestMethod = getGetCertificateSigningRequestMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.Certificate.CertificateSigningRequest>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "getCertificateSigningRequest"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCertificateSigningRequest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.CertificateSigningRequest.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("getCertificateSigningRequest"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("getCertificateSigningRequest"))
+              .build();
         }
-     }
-     return getGetCertificateSigningRequestMethod;
+      }
+    }
+    return getGetCertificateSigningRequestMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.FileBytes,
@@ -73,22 +103,21 @@ public final class CertificatesGrpc {
     if ((getAddAppleCertificateMethod = CertificatesGrpc.getAddAppleCertificateMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getAddAppleCertificateMethod = CertificatesGrpc.getAddAppleCertificateMethod) == null) {
-          CertificatesGrpc.getAddAppleCertificateMethod = getAddAppleCertificateMethod = 
+          CertificatesGrpc.getAddAppleCertificateMethod = getAddAppleCertificateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.FileBytes, com.passkit.grpc.Certificate.CertificateData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "addAppleCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addAppleCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.FileBytes.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("addAppleCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("addAppleCertificate"))
+              .build();
         }
-     }
-     return getAddAppleCertificateMethod;
+      }
+    }
+    return getAddAppleCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.FileBytes,
@@ -105,54 +134,21 @@ public final class CertificatesGrpc {
     if ((getUpdateAppleCertificateMethod = CertificatesGrpc.getUpdateAppleCertificateMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getUpdateAppleCertificateMethod = CertificatesGrpc.getUpdateAppleCertificateMethod) == null) {
-          CertificatesGrpc.getUpdateAppleCertificateMethod = getUpdateAppleCertificateMethod = 
+          CertificatesGrpc.getUpdateAppleCertificateMethod = getUpdateAppleCertificateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.FileBytes, com.passkit.grpc.Certificate.CertificateData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "updateAppleCertificate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateAppleCertificate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.FileBytes.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("updateAppleCertificate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("updateAppleCertificate"))
+              .build();
         }
-     }
-     return getUpdateAppleCertificateMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier,
-      com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getAppleCertificateData",
-      requestType = com.passkit.grpc.Certificate.PassTypeIdentifier.class,
-      responseType = com.passkit.grpc.Certificate.CertificateData.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier,
-      com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.PassTypeIdentifier, com.passkit.grpc.Certificate.CertificateData> getGetAppleCertificateDataMethod;
-    if ((getGetAppleCertificateDataMethod = CertificatesGrpc.getGetAppleCertificateDataMethod) == null) {
-      synchronized (CertificatesGrpc.class) {
-        if ((getGetAppleCertificateDataMethod = CertificatesGrpc.getGetAppleCertificateDataMethod) == null) {
-          CertificatesGrpc.getGetAppleCertificateDataMethod = getGetAppleCertificateDataMethod = 
-              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.PassTypeIdentifier, com.passkit.grpc.Certificate.CertificateData>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "getAppleCertificateData"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.Certificate.PassTypeIdentifier.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("getAppleCertificateData"))
-                  .build();
-          }
-        }
-     }
-     return getGetAppleCertificateDataMethod;
+      }
+    }
+    return getUpdateAppleCertificateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -169,22 +165,21 @@ public final class CertificatesGrpc {
     if ((getListAppleCertificatesDeprecatedMethod = CertificatesGrpc.getListAppleCertificatesDeprecatedMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getListAppleCertificatesDeprecatedMethod = CertificatesGrpc.getListAppleCertificatesDeprecatedMethod) == null) {
-          CertificatesGrpc.getListAppleCertificatesDeprecatedMethod = getListAppleCertificatesDeprecatedMethod = 
+          CertificatesGrpc.getListAppleCertificatesDeprecatedMethod = getListAppleCertificatesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Certificate.CertificateData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "listAppleCertificatesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listAppleCertificatesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("listAppleCertificatesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("listAppleCertificatesDeprecated"))
+              .build();
         }
-     }
-     return getListAppleCertificatesDeprecatedMethod;
+      }
+    }
+    return getListAppleCertificatesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -201,22 +196,21 @@ public final class CertificatesGrpc {
     if ((getListAppleCertificatesMethod = CertificatesGrpc.getListAppleCertificatesMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getListAppleCertificatesMethod = CertificatesGrpc.getListAppleCertificatesMethod) == null) {
-          CertificatesGrpc.getListAppleCertificatesMethod = getListAppleCertificatesMethod = 
+          CertificatesGrpc.getListAppleCertificatesMethod = getListAppleCertificatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Certificate.CertificateData>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "listAppleCertificates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listAppleCertificates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("listAppleCertificates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("listAppleCertificates"))
+              .build();
         }
-     }
-     return getListAppleCertificatesMethod;
+      }
+    }
+    return getListAppleCertificatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -233,22 +227,21 @@ public final class CertificatesGrpc {
     if ((getCountAppleCertificatesDeprecatedMethod = CertificatesGrpc.getCountAppleCertificatesDeprecatedMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getCountAppleCertificatesDeprecatedMethod = CertificatesGrpc.getCountAppleCertificatesDeprecatedMethod) == null) {
-          CertificatesGrpc.getCountAppleCertificatesDeprecatedMethod = getCountAppleCertificatesDeprecatedMethod = 
+          CertificatesGrpc.getCountAppleCertificatesDeprecatedMethod = getCountAppleCertificatesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "countAppleCertificatesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countAppleCertificatesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("countAppleCertificatesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("countAppleCertificatesDeprecated"))
+              .build();
         }
-     }
-     return getCountAppleCertificatesDeprecatedMethod;
+      }
+    }
+    return getCountAppleCertificatesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -265,22 +258,21 @@ public final class CertificatesGrpc {
     if ((getCountAppleCertificatesMethod = CertificatesGrpc.getCountAppleCertificatesMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getCountAppleCertificatesMethod = CertificatesGrpc.getCountAppleCertificatesMethod) == null) {
-          CertificatesGrpc.getCountAppleCertificatesMethod = getCountAppleCertificatesMethod = 
+          CertificatesGrpc.getCountAppleCertificatesMethod = getCountAppleCertificatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "countAppleCertificates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countAppleCertificates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("countAppleCertificates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("countAppleCertificates"))
+              .build();
         }
-     }
-     return getCountAppleCertificatesMethod;
+      }
+    }
+    return getCountAppleCertificatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.NFCSigningCredentialsRequest,
@@ -297,29 +289,35 @@ public final class CertificatesGrpc {
     if ((getSendNFCSigningCredentialsMethod = CertificatesGrpc.getSendNFCSigningCredentialsMethod) == null) {
       synchronized (CertificatesGrpc.class) {
         if ((getSendNFCSigningCredentialsMethod = CertificatesGrpc.getSendNFCSigningCredentialsMethod) == null) {
-          CertificatesGrpc.getSendNFCSigningCredentialsMethod = getSendNFCSigningCredentialsMethod = 
+          CertificatesGrpc.getSendNFCSigningCredentialsMethod = getSendNFCSigningCredentialsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.NFCSigningCredentialsRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Certificates", "sendNFCSigningCredentials"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendNFCSigningCredentials"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Certificate.NFCSigningCredentialsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("sendNFCSigningCredentials"))
-                  .build();
-          }
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("sendNFCSigningCredentials"))
+              .build();
         }
-     }
-     return getSendNFCSigningCredentialsMethod;
+      }
+    }
+    return getSendNFCSigningCredentialsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static CertificatesStub newStub(io.grpc.Channel channel) {
-    return new CertificatesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificatesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificatesStub>() {
+        @java.lang.Override
+        public CertificatesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificatesStub(channel, callOptions);
+        }
+      };
+    return CertificatesStub.newStub(factory, channel);
   }
 
   /**
@@ -327,7 +325,14 @@ public final class CertificatesGrpc {
    */
   public static CertificatesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new CertificatesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificatesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificatesBlockingStub>() {
+        @java.lang.Override
+        public CertificatesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificatesBlockingStub(channel, callOptions);
+        }
+      };
+    return CertificatesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -335,12 +340,26 @@ public final class CertificatesGrpc {
    */
   public static CertificatesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new CertificatesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<CertificatesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CertificatesFutureStub>() {
+        @java.lang.Override
+        public CertificatesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CertificatesFutureStub(channel, callOptions);
+        }
+      };
+    return CertificatesFutureStub.newStub(factory, channel);
   }
 
   /**
    */
   public static abstract class CertificatesImplBase implements io.grpc.BindableService {
+
+    /**
+     */
+    public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetAppleCertificateDataMethod(), responseObserver);
+    }
 
     /**
      */
@@ -361,13 +380,6 @@ public final class CertificatesGrpc {
     public void updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateAppleCertificateMethod(), responseObserver);
-    }
-
-    /**
-     */
-    public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAppleCertificateDataMethod(), responseObserver);
     }
 
     /**
@@ -408,6 +420,13 @@ public final class CertificatesGrpc {
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
+            getGetAppleCertificateDataMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Certificate.PassTypeIdentifier,
+                com.passkit.grpc.Certificate.CertificateData>(
+                  this, METHODID_GET_APPLE_CERTIFICATE_DATA)))
+          .addMethod(
             getGetCertificateSigningRequestMethod(),
             asyncUnaryCall(
               new MethodHandlers<
@@ -428,13 +447,6 @@ public final class CertificatesGrpc {
                 com.passkit.grpc.CommonObjects.FileBytes,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_UPDATE_APPLE_CERTIFICATE)))
-          .addMethod(
-            getGetAppleCertificateDataMethod(),
-            asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Certificate.PassTypeIdentifier,
-                com.passkit.grpc.Certificate.CertificateData>(
-                  this, METHODID_GET_APPLE_CERTIFICATE_DATA)))
           .addMethod(
             getListAppleCertificatesDeprecatedMethod(),
             asyncServerStreamingCall(
@@ -476,20 +488,24 @@ public final class CertificatesGrpc {
 
   /**
    */
-  public static final class CertificatesStub extends io.grpc.stub.AbstractStub<CertificatesStub> {
-    private CertificatesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificatesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificatesStub extends io.grpc.stub.AbstractAsyncStub<CertificatesStub> {
+    private CertificatesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificatesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificatesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificatesStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -514,14 +530,6 @@ public final class CertificatesGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getUpdateAppleCertificateMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -567,20 +575,23 @@ public final class CertificatesGrpc {
 
   /**
    */
-  public static final class CertificatesBlockingStub extends io.grpc.stub.AbstractStub<CertificatesBlockingStub> {
-    private CertificatesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificatesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificatesBlockingStub extends io.grpc.stub.AbstractBlockingStub<CertificatesBlockingStub> {
+    private CertificatesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificatesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificatesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificatesBlockingStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Certificate.CertificateData getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request) {
+      return blockingUnaryCall(
+          getChannel(), getGetAppleCertificateDataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -602,13 +613,6 @@ public final class CertificatesGrpc {
     public com.passkit.grpc.Certificate.CertificateData updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request) {
       return blockingUnaryCall(
           getChannel(), getUpdateAppleCertificateMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.passkit.grpc.Certificate.CertificateData getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request) {
-      return blockingUnaryCall(
-          getChannel(), getGetAppleCertificateDataMethod(), getCallOptions(), request);
     }
 
     /**
@@ -651,20 +655,24 @@ public final class CertificatesGrpc {
 
   /**
    */
-  public static final class CertificatesFutureStub extends io.grpc.stub.AbstractStub<CertificatesFutureStub> {
-    private CertificatesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private CertificatesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class CertificatesFutureStub extends io.grpc.stub.AbstractFutureStub<CertificatesFutureStub> {
+    private CertificatesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected CertificatesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected CertificatesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new CertificatesFutureStub(channel, callOptions);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> getAppleCertificateData(
+        com.passkit.grpc.Certificate.PassTypeIdentifier request) {
+      return futureUnaryCall(
+          getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request);
     }
 
     /**
@@ -693,14 +701,6 @@ public final class CertificatesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> getAppleCertificateData(
-        com.passkit.grpc.Certificate.PassTypeIdentifier request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countAppleCertificatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return futureUnaryCall(
@@ -724,10 +724,10 @@ public final class CertificatesGrpc {
     }
   }
 
-  private static final int METHODID_GET_CERTIFICATE_SIGNING_REQUEST = 0;
-  private static final int METHODID_ADD_APPLE_CERTIFICATE = 1;
-  private static final int METHODID_UPDATE_APPLE_CERTIFICATE = 2;
-  private static final int METHODID_GET_APPLE_CERTIFICATE_DATA = 3;
+  private static final int METHODID_GET_APPLE_CERTIFICATE_DATA = 0;
+  private static final int METHODID_GET_CERTIFICATE_SIGNING_REQUEST = 1;
+  private static final int METHODID_ADD_APPLE_CERTIFICATE = 2;
+  private static final int METHODID_UPDATE_APPLE_CERTIFICATE = 3;
   private static final int METHODID_LIST_APPLE_CERTIFICATES_DEPRECATED = 4;
   private static final int METHODID_LIST_APPLE_CERTIFICATES = 5;
   private static final int METHODID_COUNT_APPLE_CERTIFICATES_DEPRECATED = 6;
@@ -751,6 +751,10 @@ public final class CertificatesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_APPLE_CERTIFICATE_DATA:
+          serviceImpl.getAppleCertificateData((com.passkit.grpc.Certificate.PassTypeIdentifier) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData>) responseObserver);
+          break;
         case METHODID_GET_CERTIFICATE_SIGNING_REQUEST:
           serviceImpl.getCertificateSigningRequest((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateSigningRequest>) responseObserver);
@@ -761,10 +765,6 @@ public final class CertificatesGrpc {
           break;
         case METHODID_UPDATE_APPLE_CERTIFICATE:
           serviceImpl.updateAppleCertificate((com.passkit.grpc.CommonObjects.FileBytes) request,
-              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData>) responseObserver);
-          break;
-        case METHODID_GET_APPLE_CERTIFICATE_DATA:
-          serviceImpl.getAppleCertificateData((com.passkit.grpc.Certificate.PassTypeIdentifier) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData>) responseObserver);
           break;
         case METHODID_LIST_APPLE_CERTIFICATES_DEPRECATED:
@@ -848,10 +848,10 @@ public final class CertificatesGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new CertificatesFileDescriptorSupplier())
+              .addMethod(getGetAppleCertificateDataMethod())
               .addMethod(getGetCertificateSigningRequestMethod())
               .addMethod(getAddAppleCertificateMethod())
               .addMethod(getUpdateAppleCertificateMethod())
-              .addMethod(getGetAppleCertificateDataMethod())
               .addMethod(getListAppleCertificatesDeprecatedMethod())
               .addMethod(getListAppleCertificatesMethod())
               .addMethod(getCountAppleCertificatesDeprecatedMethod())

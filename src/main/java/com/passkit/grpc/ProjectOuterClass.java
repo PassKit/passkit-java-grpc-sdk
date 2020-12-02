@@ -3586,7 +3586,7 @@ public final class ProjectOuterClass {
       "T_PRIVATE\020\020\022\026\n\022PROJECT_OVER_QUOTA\020 \022\023\n\017P" +
       "ROJECT_DELETED\020@BG\n\020com.passkit.grpcZ$st" +
       "ash.passkit.com/io/model/sdk/go/io\252\002\014Pas" +
-      "sKit.GRPCb\006proto3"
+      "sKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

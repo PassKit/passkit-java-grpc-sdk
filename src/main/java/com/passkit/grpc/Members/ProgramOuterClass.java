@@ -11514,62 +11514,62 @@ public final class ProgramOuterClass {
       "allback.proto\032\034io/common/distribution.pr" +
       "oto\032\034io/common/localization.proto\032\027io/co" +
       "mmon/metrics.proto\032\027io/common/project.pr" +
-      "oto\032\027io/common/billing.proto\032,protoc-gen" +
-      "-swagger/options/annotations.proto\"M\n\nPo" +
-      "intsType\022)\n\013balanceType\030\001 \001(\0162\024.members." +
-      "BalanceType\022\024\n\014currencyCode\030\002 \001(\t\"\272\010\n\007Pr" +
-      "ogram\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rlocal" +
-      "izedName\030\003 \001(\0132\023.io.LocalizedString\022!\n\006s" +
-      "tatus\030\004 \003(\0162\021.io.ProjectStatus\022\030\n\005quota\030" +
-      "\005 \001(\0132\t.io.Quota\022\032\n\022passTypeIdentifier\030\006" +
-      " \001(\t\0226\n\024distributionSettings\030\007 \001(\0132\030.io." +
-      "DistributionSettings\022!\n\031autoDeleteDaysAf" +
-      "terExpiry\030\010 \001(\r\022$\n\034autoReminderDaysBefor" +
-      "eExpiry\030\t \001(\r\022\025\n\rexpiryMessage\030\n \001(\t\0223\n\026" +
-      "localizedExpiryMessage\030\013 \001(\0132\023.io.Locali" +
-      "zedString\022(\n autoDeleteDaysAfterNotInsta" +
-      "lling\030\014 \001(\r\0222\n\tcallbacks\030\016 \003(\0132\037.members" +
-      ".Program.CallbacksEntry\022\'\n\npointsType\030\020 " +
-      "\001(\0132\023.members.PointsType\0220\n\023secondaryPoi" +
-      "ntsType\030\021 \001(\0132\023.members.PointsType\022\034\n\007me" +
-      "trics\030\023 \001(\0132\013.io.Metrics\022\026\n\016metaFieldsLi" +
-      "st\030\024 \003(\t\022+\n\007created\030\025 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.google." +
-      "protobuf.Timestamp\022:\n\024profileImageSettin" +
-      "gs\030\027 \001(\0162\034.members.ProfileImageSetting\022@" +
-      "\n\035applyFieldToExternalIdOnEnrol\030\030 \001(\0132\031." +
-      "members.CustomExternalId\022;\n\024eventCapture" +
-      "Settings\030\031 \001(\0132\035.members.EventCaptureSet" +
-      "tings\032>\n\016CallbacksEntry\022\013\n\003key\030\001 \001(\r\022\033\n\005" +
-      "value\030\002 \001(\0132\014.io.Callback:\0028\001:s\222Ap\nn*\007Pr" +
-      "ogram2SMembership Programs allow a compa" +
-      "ny to control the business logic of thei" +
-      "r program.\322\001\004name\322\001\006statusJ\004\010\r\020\016J\004\010\022\020\023\"\374" +
-      "\001\n\024EventCaptureSettings\022a\n\032eventDataRete" +
-      "ntionSettings\030\001 \003(\0132=.members.EventCaptu" +
-      "reSettings.EventDataRetentionSettingsEnt" +
-      "ry\022\035\n\025smsConfirmUponCheckIn\030\002 \001(\010\022\037\n\027ema" +
-      "ilConfirmUponCheckIn\030\003 \001(\010\032A\n\037EventDataR" +
-      "etentionSettingsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005va" +
-      "lue\030\002 \001(\r:\0028\001\"m\n\022ProgramCopyRequest\022\n\n\002i" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(\0162\021." +
-      "io.ProjectStatus\022\032\n\022passTypeIdentifier\030\004" +
-      " \001(\t\":\n\024ListProgramsResponse\022\"\n\010programs" +
-      "\030\001 \003(\0132\020.members.Program\"#\n\023GetMetaKeysR" +
-      "esponse\022\014\n\004keys\030\001 \003(\t\"A\n\020CustomExternalI" +
-      "d\022\027\n\017fieldUniqueName\030\001 \001(\t\022\024\n\014errorMessa" +
-      "ge\030\002 \001(\t*\217\001\n\036ProgramAutoUpDownGradeTierT" +
-      "ype\022\026\n\022UPDOWNGRADE_POINTS\020\000\022 \n\034UPDOWNGRA" +
-      "DE_SECONDARY_POINTS\020\001\022\033\n\027UPDOWNGRADE_TIE" +
-      "R_POINTS\020\002\022\026\n\022UPDOWNGRADE_VISITS\020\003*m\n\013Ba" +
-      "lanceType\022\027\n\023BALANCE_TYPE_STRING\020\000\022\024\n\020BA" +
-      "LANCE_TYPE_INT\020\001\022\027\n\023BALANCE_TYPE_DOUBLE\020" +
-      "\002\022\026\n\022BALANCE_TYPE_MONEY\020\003*e\n\023ProfileImag" +
-      "eSetting\022\026\n\022PROFILE_IMAGE_NONE\020\000\022\032\n\026PROF" +
-      "ILE_IMAGE_OPTIONAL\020\001\022\032\n\026PROFILE_IMAGE_RE" +
-      "QUIRED\020\002BT\n\030com.passkit.grpc.MembersZ,st" +
-      "ash.passkit.com/io/model/sdk/go/io/membe" +
-      "rs\252\002\tPKMembersb\006proto3"
+      "oto\032\027io/common/billing.proto\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\"M\n\n" +
+      "PointsType\022)\n\013balanceType\030\001 \001(\0162\024.member" +
+      "s.BalanceType\022\024\n\014currencyCode\030\002 \001(\t\"\272\010\n\007" +
+      "Program\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rloc" +
+      "alizedName\030\003 \001(\0132\023.io.LocalizedString\022!\n" +
+      "\006status\030\004 \003(\0162\021.io.ProjectStatus\022\030\n\005quot" +
+      "a\030\005 \001(\0132\t.io.Quota\022\032\n\022passTypeIdentifier" +
+      "\030\006 \001(\t\0226\n\024distributionSettings\030\007 \001(\0132\030.i" +
+      "o.DistributionSettings\022!\n\031autoDeleteDays" +
+      "AfterExpiry\030\010 \001(\r\022$\n\034autoReminderDaysBef" +
+      "oreExpiry\030\t \001(\r\022\025\n\rexpiryMessage\030\n \001(\t\0223" +
+      "\n\026localizedExpiryMessage\030\013 \001(\0132\023.io.Loca" +
+      "lizedString\022(\n autoDeleteDaysAfterNotIns" +
+      "talling\030\014 \001(\r\0222\n\tcallbacks\030\016 \003(\0132\037.membe" +
+      "rs.Program.CallbacksEntry\022\'\n\npointsType\030" +
+      "\020 \001(\0132\023.members.PointsType\0220\n\023secondaryP" +
+      "ointsType\030\021 \001(\0132\023.members.PointsType\022\034\n\007" +
+      "metrics\030\023 \001(\0132\013.io.Metrics\022\026\n\016metaFields" +
+      "List\030\024 \003(\t\022+\n\007created\030\025 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\022:\n\024profileImageSett" +
+      "ings\030\027 \001(\0162\034.members.ProfileImageSetting" +
+      "\022@\n\035applyFieldToExternalIdOnEnrol\030\030 \001(\0132" +
+      "\031.members.CustomExternalId\022;\n\024eventCaptu" +
+      "reSettings\030\031 \001(\0132\035.members.EventCaptureS" +
+      "ettings\032>\n\016CallbacksEntry\022\013\n\003key\030\001 \001(\r\022\033" +
+      "\n\005value\030\002 \001(\0132\014.io.Callback:\0028\001:s\222Ap\nn*\007" +
+      "Program2SMembership Programs allow a com" +
+      "pany to control the business logic of th" +
+      "eir program.\322\001\004name\322\001\006statusJ\004\010\r\020\016J\004\010\022\020\023" +
+      "\"\374\001\n\024EventCaptureSettings\022a\n\032eventDataRe" +
+      "tentionSettings\030\001 \003(\0132=.members.EventCap" +
+      "tureSettings.EventDataRetentionSettingsE" +
+      "ntry\022\035\n\025smsConfirmUponCheckIn\030\002 \001(\010\022\037\n\027e" +
+      "mailConfirmUponCheckIn\030\003 \001(\010\032A\n\037EventDat" +
+      "aRetentionSettingsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
+      "value\030\002 \001(\r:\0028\001\"m\n\022ProgramCopyRequest\022\n\n" +
+      "\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(\0162" +
+      "\021.io.ProjectStatus\022\032\n\022passTypeIdentifier" +
+      "\030\004 \001(\t\":\n\024ListProgramsResponse\022\"\n\010progra" +
+      "ms\030\001 \003(\0132\020.members.Program\"#\n\023GetMetaKey" +
+      "sResponse\022\014\n\004keys\030\001 \003(\t\"A\n\020CustomExterna" +
+      "lId\022\027\n\017fieldUniqueName\030\001 \001(\t\022\024\n\014errorMes" +
+      "sage\030\002 \001(\t*\217\001\n\036ProgramAutoUpDownGradeTie" +
+      "rType\022\026\n\022UPDOWNGRADE_POINTS\020\000\022 \n\034UPDOWNG" +
+      "RADE_SECONDARY_POINTS\020\001\022\033\n\027UPDOWNGRADE_T" +
+      "IER_POINTS\020\002\022\026\n\022UPDOWNGRADE_VISITS\020\003*m\n\013" +
+      "BalanceType\022\027\n\023BALANCE_TYPE_STRING\020\000\022\024\n\020" +
+      "BALANCE_TYPE_INT\020\001\022\027\n\023BALANCE_TYPE_DOUBL" +
+      "E\020\002\022\026\n\022BALANCE_TYPE_MONEY\020\003*e\n\023ProfileIm" +
+      "ageSetting\022\026\n\022PROFILE_IMAGE_NONE\020\000\022\032\n\026PR" +
+      "OFILE_IMAGE_OPTIONAL\020\001\022\032\n\026PROFILE_IMAGE_" +
+      "REQUIRED\020\002B_\n\030com.passkit.grpc.MembersZ," +
+      "stash.passkit.com/io/model/sdk/go/io/mem" +
+      "bers\252\002\024PassKit.Grpc.Membersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11581,7 +11581,7 @@ public final class ProgramOuterClass {
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Billing.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_members_PointsType_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11639,7 +11639,7 @@ public final class ProgramOuterClass {
         new java.lang.String[] { "FieldUniqueName", "ErrorMessage", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -11649,7 +11649,7 @@ public final class ProgramOuterClass {
     com.passkit.grpc.MetricsOuterClass.getDescriptor();
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Billing.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

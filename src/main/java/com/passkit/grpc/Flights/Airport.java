@@ -23,7 +23,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataAirportCode.
      */
     java.lang.String getIataAirportCode();
@@ -32,7 +32,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for iataAirportCode.
      */
     com.google.protobuf.ByteString
@@ -43,7 +43,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The icaoAirportCode.
      */
     java.lang.String getIcaoAirportCode();
@@ -52,7 +52,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for icaoAirportCode.
      */
     com.google.protobuf.ByteString
@@ -348,7 +348,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataAirportCode.
      */
     @java.lang.Override
@@ -369,7 +369,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for iataAirportCode.
      */
     @java.lang.Override
@@ -394,7 +394,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The icaoAirportCode.
      */
     @java.lang.Override
@@ -415,7 +415,7 @@ public final class Airport {
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
      * </pre>
      *
-     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for icaoAirportCode.
      */
     @java.lang.Override
@@ -1150,7 +1150,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The iataAirportCode.
        */
       public java.lang.String getIataAirportCode() {
@@ -1170,7 +1170,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for iataAirportCode.
        */
       public com.google.protobuf.ByteString
@@ -1191,7 +1191,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The iataAirportCode to set.
        * @return This builder for chaining.
        */
@@ -1210,7 +1210,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIataAirportCode() {
@@ -1224,7 +1224,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataAirportCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for iataAirportCode to set.
        * @return This builder for chaining.
        */
@@ -1246,7 +1246,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The icaoAirportCode.
        */
       public java.lang.String getIcaoAirportCode() {
@@ -1266,7 +1266,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for icaoAirportCode.
        */
       public com.google.protobuf.ByteString
@@ -1287,7 +1287,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The icaoAirportCode to set.
        * @return This builder for chaining.
        */
@@ -1306,7 +1306,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIcaoAirportCode() {
@@ -1320,7 +1320,7 @@ public final class Airport {
        * The IATA code of the port. At least one of IATA or ICAO airport code is required.
        * </pre>
        *
-       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoAirportCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for icaoAirportCode to set.
        * @return This builder for chaining.
        */
@@ -2714,28 +2714,29 @@ public final class Airport {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/flights/airport.proto\022\007flights\032\034io/" +
-      "common/localization.proto\032,protoc-gen-sw" +
-      "agger/options/annotations.proto\"\250\003\n\004Port" +
-      "\022\036\n\017iataAirportCode\030\001 \001(\tB\005\222A\002x\003\022\036\n\017icao" +
-      "AirportCode\030\002 \001(\tB\005\222A\002x\004\022\020\n\010cityName\030\003 \001" +
-      "(\t\022.\n\021localizedCityName\030\004 \001(\0132\023.io.Local" +
-      "izedString\022\023\n\013airportName\030\005 \001(\t\0221\n\024local" +
-      "izedAirportName\030\006 \001(\0132\023.io.LocalizedStri" +
-      "ng\022\023\n\013countryCode\030\007 \001(\t\022\020\n\010timezone\030\010 \001(" +
-      "\t:\256\001\222A\252\001\n\247\001*\016Airport Record2QAirport rec" +
-      "ords are required for each port that a c" +
-      "arrier operates in and out of.\322\001\017iataAir" +
-      "portCode\322\001\010cityName\322\001\013airportName\322\001\013coun" +
-      "tryCode\322\001\010timezone\"\"\n\013AirportCode\022\023\n\013air" +
-      "portCode\030\001 \001(\tBT\n\030com.passkit.grpc.Fligh" +
-      "tsZ,stash.passkit.com/io/model/sdk/go/io" +
-      "/flights\252\002\tPKFlightsb\006proto3"
+      "common/localization.proto\032.protoc-gen-op" +
+      "enapiv2/options/annotations.proto\"\250\003\n\004Po" +
+      "rt\022\036\n\017iataAirportCode\030\001 \001(\tB\005\222A\002x\003\022\036\n\017ic" +
+      "aoAirportCode\030\002 \001(\tB\005\222A\002x\004\022\020\n\010cityName\030\003" +
+      " \001(\t\022.\n\021localizedCityName\030\004 \001(\0132\023.io.Loc" +
+      "alizedString\022\023\n\013airportName\030\005 \001(\t\0221\n\024loc" +
+      "alizedAirportName\030\006 \001(\0132\023.io.LocalizedSt" +
+      "ring\022\023\n\013countryCode\030\007 \001(\t\022\020\n\010timezone\030\010 " +
+      "\001(\t:\256\001\222A\252\001\n\247\001*\016Airport Record2QAirport r" +
+      "ecords are required for each port that a" +
+      " carrier operates in and out of.\322\001\017iataA" +
+      "irportCode\322\001\010cityName\322\001\013airportName\322\001\013co" +
+      "untryCode\322\001\010timezone\"\"\n\013AirportCode\022\023\n\013a" +
+      "irportCode\030\001 \001(\tB_\n\030com.passkit.grpc.Fli" +
+      "ghtsZ,stash.passkit.com/io/model/sdk/go/" +
+      "io/flights\252\002\024PassKit.Grpc.Flightsb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_Port_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2751,12 +2752,12 @@ public final class Airport {
         new java.lang.String[] { "AirportCode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Localization.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

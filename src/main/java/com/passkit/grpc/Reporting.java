@@ -10545,63 +10545,63 @@ public final class Reporting {
     java.lang.String[] descriptorData = {
       "\n\031io/common/reporting.proto\022\002io\032\031io/comm" +
       "on/protocols.proto\032\036io/common/common_obj" +
-      "ects.proto\032,protoc-gen-swagger/options/a" +
-      "nnotations.proto\"\337\006\n\021AnalyticsResponse\022\032" +
-      "\n\006period\030\001 \001(\0162\n.io.Period\022\017\n\007created\030\002 " +
-      "\001(\r\022\021\n\tinstalled\030\003 \001(\r\022\017\n\007deleted\030\004 \001(\r\022" +
-      "\023\n\013invalidated\030\005 \001(\r\022,\n\017deviceBreakdown\030" +
-      "\006 \001(\0132\023.io.DeviceBreakdown\022I\n\022utmSourceB" +
-      "reakdown\030\007 \003(\0132-.io.AnalyticsResponse.Ut" +
-      "mSourceBreakdownEntry\022!\n\004data\030\010 \003(\0132\023.io" +
-      ".ChartDataPoints\022I\n\022utmMediumBreakdown\030\t" +
-      " \003(\0132-.io.AnalyticsResponse.UtmMediumBre" +
-      "akdownEntry\022E\n\020utmNameBreakdown\030\n \003(\0132+." +
-      "io.AnalyticsResponse.UtmNameBreakdownEnt" +
-      "ry\022E\n\020utmTermBreakdown\030\013 \003(\0132+.io.Analyt" +
-      "icsResponse.UtmTermBreakdownEntry\022K\n\023utm" +
-      "ContentBreakdown\030\014 \003(\0132..io.AnalyticsRes" +
-      "ponse.UtmContentBreakdownEntry\0329\n\027UtmSou" +
-      "rceBreakdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\r:\0028\001\0329\n\027UtmMediumBreakdownEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\0327\n\025UtmNameB" +
-      "reakdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\r:\0028\001\0327\n\025UtmTermBreakdownEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\032:\n\030UtmContentBrea" +
-      "kdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r:\002" +
-      "8\001\"N\n\017DeviceBreakdown\022\023\n\013appleWallet\030\001 \001" +
-      "(\r\022\021\n\tgooglePay\030\002 \001(\r\022\023\n\013otherWallet\030\003 \001" +
-      "(\r\"\212\001\n\017ChartDataPoints\022\014\n\004name\030\001 \001(\t\022\017\n\007" +
-      "created\030\002 \001(\r\022\021\n\tinstalled\030\003 \001(\r\022\017\n\007upda" +
-      "ted\030\004 \001(\r\022\017\n\007deleted\030\005 \001(\r\022\023\n\013invalidate" +
-      "d\030\006 \001(\r\022\016\n\006custom\030\007 \001(\r\"\244\003\n\020AnalyticsReq" +
-      "uest\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol" +
-      "\022\017\n\007classId\030\002 \001(\t\022\032\n\006period\030\003 \001(\0162\n.io.P" +
-      "eriod\022\021\n\tstartDate\030\004 \001(\t\022\017\n\007endDate\030\005 \001(" +
-      "\t\022\020\n\010timezone\030\006 \001(\t\022+\n\006coupon\030\017 \001(\0132\031.io" +
-      ".CouponAnalyticsFilterH\000\022+\n\006flight\030\020 \001(\013" +
-      "2\031.io.FlightAnalyticsFilterH\000\0225\n\013eventTi" +
-      "cket\030\021 \001(\0132\036.io.EventTicketAnalyticsFilt" +
-      "erH\000:n\222Ak\ni*\021Analytics Request2?Retrieve" +
-      "s pass created, installed, deleted, inva" +
-      "lidated counts.\322\001\010protocol\322\001\007classIdB\010\n\006" +
-      "filter\"(\n\025CouponAnalyticsFilter\022\017\n\007offer" +
-      "Id\030\001 \001(\t\"}\n\025FlightAnalyticsFilter\022\024\n\014fli" +
-      "ghtNumber\030\001 \001(\t\022\037\n\rdepartureDate\030\002 \001(\0132\010" +
-      ".io.Date\022\025\n\rboardingPoint\030\003 \001(\t\022\026\n\016depla" +
-      "ningPoint\030\004 \001(\t\"}\n\032EventTicketAnalyticsF" +
-      "ilter\022\024\n\014ticketTypeId\030\001 \001(\t\022\025\n\rticketTyp" +
-      "eUid\030\002 \001(\t\022\017\n\007venueId\030\003 \001(\t\022\020\n\010venueUid\030" +
-      "\004 \001(\t\022\017\n\007eventId\030\005 \001(\t*&\n\006Period\022\007\n\003DAY\020" +
-      "\000\022\t\n\005MONTH\020\001\022\010\n\004YEAR\020\002BG\n\020com.passkit.gr" +
-      "pcZ$stash.passkit.com/io/model/sdk/go/io" +
-      "\252\002\014PassKit.GRPCb\006proto3"
+      "ects.proto\032.protoc-gen-openapiv2/options" +
+      "/annotations.proto\"\337\006\n\021AnalyticsResponse" +
+      "\022\032\n\006period\030\001 \001(\0162\n.io.Period\022\017\n\007created\030" +
+      "\002 \001(\r\022\021\n\tinstalled\030\003 \001(\r\022\017\n\007deleted\030\004 \001(" +
+      "\r\022\023\n\013invalidated\030\005 \001(\r\022,\n\017deviceBreakdow" +
+      "n\030\006 \001(\0132\023.io.DeviceBreakdown\022I\n\022utmSourc" +
+      "eBreakdown\030\007 \003(\0132-.io.AnalyticsResponse." +
+      "UtmSourceBreakdownEntry\022!\n\004data\030\010 \003(\0132\023." +
+      "io.ChartDataPoints\022I\n\022utmMediumBreakdown" +
+      "\030\t \003(\0132-.io.AnalyticsResponse.UtmMediumB" +
+      "reakdownEntry\022E\n\020utmNameBreakdown\030\n \003(\0132" +
+      "+.io.AnalyticsResponse.UtmNameBreakdownE" +
+      "ntry\022E\n\020utmTermBreakdown\030\013 \003(\0132+.io.Anal" +
+      "yticsResponse.UtmTermBreakdownEntry\022K\n\023u" +
+      "tmContentBreakdown\030\014 \003(\0132..io.AnalyticsR" +
+      "esponse.UtmContentBreakdownEntry\0329\n\027UtmS" +
+      "ourceBreakdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\r:\0028\001\0329\n\027UtmMediumBreakdownEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\0327\n\025UtmNam" +
+      "eBreakdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\r:\0028\001\0327\n\025UtmTermBreakdownEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\032:\n\030UtmContentBr" +
+      "eakdownEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r" +
+      ":\0028\001\"N\n\017DeviceBreakdown\022\023\n\013appleWallet\030\001" +
+      " \001(\r\022\021\n\tgooglePay\030\002 \001(\r\022\023\n\013otherWallet\030\003" +
+      " \001(\r\"\212\001\n\017ChartDataPoints\022\014\n\004name\030\001 \001(\t\022\017" +
+      "\n\007created\030\002 \001(\r\022\021\n\tinstalled\030\003 \001(\r\022\017\n\007up" +
+      "dated\030\004 \001(\r\022\017\n\007deleted\030\005 \001(\r\022\023\n\013invalida" +
+      "ted\030\006 \001(\r\022\016\n\006custom\030\007 \001(\r\"\244\003\n\020AnalyticsR" +
+      "equest\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtoc" +
+      "ol\022\017\n\007classId\030\002 \001(\t\022\032\n\006period\030\003 \001(\0162\n.io" +
+      ".Period\022\021\n\tstartDate\030\004 \001(\t\022\017\n\007endDate\030\005 " +
+      "\001(\t\022\020\n\010timezone\030\006 \001(\t\022+\n\006coupon\030\017 \001(\0132\031." +
+      "io.CouponAnalyticsFilterH\000\022+\n\006flight\030\020 \001" +
+      "(\0132\031.io.FlightAnalyticsFilterH\000\0225\n\013event" +
+      "Ticket\030\021 \001(\0132\036.io.EventTicketAnalyticsFi" +
+      "lterH\000:n\222Ak\ni*\021Analytics Request2?Retrie" +
+      "ves pass created, installed, deleted, in" +
+      "validated counts.\322\001\010protocol\322\001\007classIdB\010" +
+      "\n\006filter\"(\n\025CouponAnalyticsFilter\022\017\n\007off" +
+      "erId\030\001 \001(\t\"}\n\025FlightAnalyticsFilter\022\024\n\014f" +
+      "lightNumber\030\001 \001(\t\022\037\n\rdepartureDate\030\002 \001(\013" +
+      "2\010.io.Date\022\025\n\rboardingPoint\030\003 \001(\t\022\026\n\016dep" +
+      "laningPoint\030\004 \001(\t\"}\n\032EventTicketAnalytic" +
+      "sFilter\022\024\n\014ticketTypeId\030\001 \001(\t\022\025\n\rticketT" +
+      "ypeUid\030\002 \001(\t\022\017\n\007venueId\030\003 \001(\t\022\020\n\010venueUi" +
+      "d\030\004 \001(\t\022\017\n\007eventId\030\005 \001(\t*&\n\006Period\022\007\n\003DA" +
+      "Y\020\000\022\t\n\005MONTH\020\001\022\010\n\004YEAR\020\002BG\n\020com.passkit." +
+      "grpcZ$stash.passkit.com/io/model/sdk/go/" +
+      "io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Protocols.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_AnalyticsResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10677,12 +10677,12 @@ public final class Reporting {
         new java.lang.String[] { "TicketTypeId", "TicketTypeUid", "VenueId", "VenueUid", "EventId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Protocols.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

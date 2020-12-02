@@ -582,10 +582,11 @@ public final class CabinCodes {
       "\022\005\n\001C\020\006\022\005\n\001D\020\007\022\005\n\001I\020\010\022\005\n\001Z\020\t\022\005\n\001W\020\n\022\005\n\001E" +
       "\020\013\022\005\n\001S\020\014\022\005\n\001Y\020\r\022\005\n\001B\020\016\022\005\n\001H\020\017\022\005\n\001K\020\020\022\005\n" +
       "\001L\020\021\022\005\n\001M\020\022\022\005\n\001N\020\023\022\005\n\001O\020\024\022\005\n\001Q\020\025\022\005\n\001T\020\026\022" +
-      "\005\n\001V\020\027\022\005\n\001X\020\030\022\005\n\001G\020\031\022\005\n\001U\020\032Bu\n#com.passk" +
-      "it.grpc.Flights.CabinCodesZ7stash.passki" +
-      "t.com/io/model/sdk/go/io/flights/cabinco" +
-      "des\252\002\024PKFlights.CabinCodesb\006proto3"
+      "\005\n\001V\020\027\022\005\n\001X\020\030\022\005\n\001G\020\031\022\005\n\001U\020\032B\200\001\n#com.pass" +
+      "kit.grpc.Flights.CabinCodesZ7stash.passk" +
+      "it.com/io/model/sdk/go/io/flights/cabinc" +
+      "odes\252\002\037PassKit.Grpc.Flights.CabinCodesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

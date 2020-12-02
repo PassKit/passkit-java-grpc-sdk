@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/member/a_rpc.proto")
 public final class MembersGrpc {
 
@@ -41,22 +41,21 @@ public final class MembersGrpc {
     if ((getCreateProgramMethod = MembersGrpc.getCreateProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCreateProgramMethod = MembersGrpc.getCreateProgramMethod) == null) {
-          MembersGrpc.getCreateProgramMethod = getCreateProgramMethod = 
+          MembersGrpc.getCreateProgramMethod = getCreateProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.ProgramOuterClass.Program, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "createProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("createProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("createProgram"))
+              .build();
         }
-     }
-     return getCreateProgramMethod;
+      }
+    }
+    return getCreateProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.ProgramOuterClass.Program,
@@ -73,22 +72,21 @@ public final class MembersGrpc {
     if ((getUpdateProgramMethod = MembersGrpc.getUpdateProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getUpdateProgramMethod = MembersGrpc.getUpdateProgramMethod) == null) {
-          MembersGrpc.getUpdateProgramMethod = getUpdateProgramMethod = 
+          MembersGrpc.getUpdateProgramMethod = getUpdateProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.ProgramOuterClass.Program, com.passkit.grpc.Members.ProgramOuterClass.Program>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "updateProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateProgram"))
+              .build();
         }
-     }
-     return getUpdateProgramMethod;
+      }
+    }
+    return getUpdateProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,22 +103,21 @@ public final class MembersGrpc {
     if ((getGetProgramMethod = MembersGrpc.getGetProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetProgramMethod = MembersGrpc.getGetProgramMethod) == null) {
-          MembersGrpc.getGetProgramMethod = getGetProgramMethod = 
+          MembersGrpc.getGetProgramMethod = getGetProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Members.ProgramOuterClass.Program>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getProgram"))
+              .build();
         }
-     }
-     return getGetProgramMethod;
+      }
+    }
+    return getGetProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest,
@@ -137,22 +134,21 @@ public final class MembersGrpc {
     if ((getCopyProgramMethod = MembersGrpc.getCopyProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCopyProgramMethod = MembersGrpc.getCopyProgramMethod) == null) {
-          MembersGrpc.getCopyProgramMethod = getCopyProgramMethod = 
+          MembersGrpc.getCopyProgramMethod = getCopyProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "copyProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("copyProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("copyProgram"))
+              .build();
         }
-     }
-     return getCopyProgramMethod;
+      }
+    }
+    return getCopyProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -169,22 +165,21 @@ public final class MembersGrpc {
     if ((getDeleteProgramMethod = MembersGrpc.getDeleteProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteProgramMethod = MembersGrpc.getDeleteProgramMethod) == null) {
-          MembersGrpc.getDeleteProgramMethod = getDeleteProgramMethod = 
+          MembersGrpc.getDeleteProgramMethod = getDeleteProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteProgram"))
+              .build();
         }
-     }
-     return getDeleteProgramMethod;
+      }
+    }
+    return getDeleteProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -201,22 +196,21 @@ public final class MembersGrpc {
     if ((getListProgramsDeprecatedMethod = MembersGrpc.getListProgramsDeprecatedMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListProgramsDeprecatedMethod = MembersGrpc.getListProgramsDeprecatedMethod) == null) {
-          MembersGrpc.getListProgramsDeprecatedMethod = getListProgramsDeprecatedMethod = 
+          MembersGrpc.getListProgramsDeprecatedMethod = getListProgramsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Members.ProgramOuterClass.Program>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listProgramsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listProgramsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listProgramsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listProgramsDeprecated"))
+              .build();
         }
-     }
-     return getListProgramsDeprecatedMethod;
+      }
+    }
+    return getListProgramsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -233,22 +227,21 @@ public final class MembersGrpc {
     if ((getListProgramsMethod = MembersGrpc.getListProgramsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListProgramsMethod = MembersGrpc.getListProgramsMethod) == null) {
-          MembersGrpc.getListProgramsMethod = getListProgramsMethod = 
+          MembersGrpc.getListProgramsMethod = getListProgramsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Members.ProgramOuterClass.Program>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listPrograms"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listPrograms"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.ProgramOuterClass.Program.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listPrograms"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listPrograms"))
+              .build();
         }
-     }
-     return getListProgramsMethod;
+      }
+    }
+    return getListProgramsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.TierOuterClass.Tier,
@@ -265,22 +258,21 @@ public final class MembersGrpc {
     if ((getCreateTierMethod = MembersGrpc.getCreateTierMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCreateTierMethod = MembersGrpc.getCreateTierMethod) == null) {
-          MembersGrpc.getCreateTierMethod = getCreateTierMethod = 
+          MembersGrpc.getCreateTierMethod = getCreateTierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.TierOuterClass.Tier, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "createTier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createTier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("createTier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("createTier"))
+              .build();
         }
-     }
-     return getCreateTierMethod;
+      }
+    }
+    return getCreateTierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.TierOuterClass.Tier,
@@ -297,22 +289,21 @@ public final class MembersGrpc {
     if ((getUpdateTierMethod = MembersGrpc.getUpdateTierMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getUpdateTierMethod = MembersGrpc.getUpdateTierMethod) == null) {
-          MembersGrpc.getUpdateTierMethod = getUpdateTierMethod = 
+          MembersGrpc.getUpdateTierMethod = getUpdateTierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.TierOuterClass.Tier, com.passkit.grpc.Members.TierOuterClass.Tier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "updateTier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateTier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateTier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateTier"))
+              .build();
         }
-     }
-     return getUpdateTierMethod;
+      }
+    }
+    return getUpdateTierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.TierOuterClass.TierRequestInput,
@@ -329,22 +320,21 @@ public final class MembersGrpc {
     if ((getGetTierMethod = MembersGrpc.getGetTierMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetTierMethod = MembersGrpc.getGetTierMethod) == null) {
-          MembersGrpc.getGetTierMethod = getGetTierMethod = 
+          MembersGrpc.getGetTierMethod = getGetTierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.TierOuterClass.TierRequestInput, com.passkit.grpc.Members.TierOuterClass.Tier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getTier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.TierRequestInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getTier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getTier"))
+              .build();
         }
-     }
-     return getGetTierMethod;
+      }
+    }
+    return getGetTierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.TierOuterClass.TierRequestInput,
@@ -361,22 +351,21 @@ public final class MembersGrpc {
     if ((getDeleteTierMethod = MembersGrpc.getDeleteTierMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteTierMethod = MembersGrpc.getDeleteTierMethod) == null) {
-          MembersGrpc.getDeleteTierMethod = getDeleteTierMethod = 
+          MembersGrpc.getDeleteTierMethod = getDeleteTierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.TierOuterClass.TierRequestInput, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteTier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.TierRequestInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteTier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteTier"))
+              .build();
         }
-     }
-     return getDeleteTierMethod;
+      }
+    }
+    return getDeleteTierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
@@ -393,22 +382,21 @@ public final class MembersGrpc {
     if ((getListTiersDeprecatedMethod = MembersGrpc.getListTiersDeprecatedMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListTiersDeprecatedMethod = MembersGrpc.getListTiersDeprecatedMethod) == null) {
-          MembersGrpc.getListTiersDeprecatedMethod = getListTiersDeprecatedMethod = 
+          MembersGrpc.getListTiersDeprecatedMethod = getListTiersDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated, com.passkit.grpc.Members.TierOuterClass.Tier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listTiersDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTiersDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listTiersDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listTiersDeprecated"))
+              .build();
         }
-     }
-     return getListTiersDeprecatedMethod;
+      }
+    }
+    return getListTiersDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -425,22 +413,21 @@ public final class MembersGrpc {
     if ((getListTiersMethod = MembersGrpc.getListTiersMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListTiersMethod = MembersGrpc.getListTiersMethod) == null) {
-          MembersGrpc.getListTiersMethod = getListTiersMethod = 
+          MembersGrpc.getListTiersMethod = getListTiersMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.passkit.grpc.Members.TierOuterClass.Tier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listTiers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTiers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listTiers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listTiers"))
+              .build();
         }
-     }
-     return getListTiersMethod;
+      }
+    }
+    return getListTiersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.Member,
@@ -457,22 +444,21 @@ public final class MembersGrpc {
     if ((getEnrolMemberMethod = MembersGrpc.getEnrolMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getEnrolMemberMethod = MembersGrpc.getEnrolMemberMethod) == null) {
-          MembersGrpc.getEnrolMemberMethod = getEnrolMemberMethod = 
+          MembersGrpc.getEnrolMemberMethod = getEnrolMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.Member, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "enrolMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "enrolMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("enrolMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("enrolMember"))
+              .build();
         }
-     }
-     return getEnrolMemberMethod;
+      }
+    }
+    return getEnrolMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.Member,
@@ -489,22 +475,21 @@ public final class MembersGrpc {
     if ((getEnrolMemberPublicMethod = MembersGrpc.getEnrolMemberPublicMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getEnrolMemberPublicMethod = MembersGrpc.getEnrolMemberPublicMethod) == null) {
-          MembersGrpc.getEnrolMemberPublicMethod = getEnrolMemberPublicMethod = 
+          MembersGrpc.getEnrolMemberPublicMethod = getEnrolMemberPublicMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.Member, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "enrolMemberPublic"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "enrolMemberPublic"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("enrolMemberPublic"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("enrolMemberPublic"))
+              .build();
         }
-     }
-     return getEnrolMemberPublicMethod;
+      }
+    }
+    return getEnrolMemberPublicMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -521,22 +506,21 @@ public final class MembersGrpc {
     if ((getGetMemberRecordByIdMethod = MembersGrpc.getGetMemberRecordByIdMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetMemberRecordByIdMethod = MembersGrpc.getGetMemberRecordByIdMethod) == null) {
-          MembersGrpc.getGetMemberRecordByIdMethod = getGetMemberRecordByIdMethod = 
+          MembersGrpc.getGetMemberRecordByIdMethod = getGetMemberRecordByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Members.MemberOuterClass.Member>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getMemberRecordById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMemberRecordById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberRecordById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberRecordById"))
+              .build();
         }
-     }
-     return getGetMemberRecordByIdMethod;
+      }
+    }
+    return getGetMemberRecordByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest,
@@ -553,22 +537,21 @@ public final class MembersGrpc {
     if ((getGetMemberRecordByExternalIdMethod = MembersGrpc.getGetMemberRecordByExternalIdMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetMemberRecordByExternalIdMethod = MembersGrpc.getGetMemberRecordByExternalIdMethod) == null) {
-          MembersGrpc.getGetMemberRecordByExternalIdMethod = getGetMemberRecordByExternalIdMethod = 
+          MembersGrpc.getGetMemberRecordByExternalIdMethod = getGetMemberRecordByExternalIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest, com.passkit.grpc.Members.MemberOuterClass.Member>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getMemberRecordByExternalId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMemberRecordByExternalId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberRecordByExternalId"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberRecordByExternalId"))
+              .build();
         }
-     }
-     return getGetMemberRecordByExternalIdMethod;
+      }
+    }
+    return getGetMemberRecordByExternalIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest,
@@ -585,22 +568,21 @@ public final class MembersGrpc {
     if ((getCheckInMemberMethod = MembersGrpc.getCheckInMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCheckInMemberMethod = MembersGrpc.getCheckInMemberMethod) == null) {
-          MembersGrpc.getCheckInMemberMethod = getCheckInMemberMethod = 
+          MembersGrpc.getCheckInMemberMethod = getCheckInMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "checkInMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "checkInMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("checkInMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("checkInMember"))
+              .build();
         }
-     }
-     return getCheckInMemberMethod;
+      }
+    }
+    return getCheckInMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest,
@@ -617,22 +599,21 @@ public final class MembersGrpc {
     if ((getCheckOutMemberMethod = MembersGrpc.getCheckOutMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCheckOutMemberMethod = MembersGrpc.getCheckOutMemberMethod) == null) {
-          MembersGrpc.getCheckOutMemberMethod = getCheckOutMemberMethod = 
+          MembersGrpc.getCheckOutMemberMethod = getCheckOutMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "checkOutMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "checkOutMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("checkOutMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("checkOutMember"))
+              .build();
         }
-     }
-     return getCheckOutMemberMethod;
+      }
+    }
+    return getCheckOutMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
@@ -649,22 +630,21 @@ public final class MembersGrpc {
     if ((getListMembersDeprecatedMethod = MembersGrpc.getListMembersDeprecatedMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListMembersDeprecatedMethod = MembersGrpc.getListMembersDeprecatedMethod) == null) {
-          MembersGrpc.getListMembersDeprecatedMethod = getListMembersDeprecatedMethod = 
+          MembersGrpc.getListMembersDeprecatedMethod = getListMembersDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated, com.passkit.grpc.Members.MemberOuterClass.Member>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listMembersDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listMembersDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMembersDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMembersDeprecated"))
+              .build();
         }
-     }
-     return getListMembersDeprecatedMethod;
+      }
+    }
+    return getListMembersDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -681,22 +661,21 @@ public final class MembersGrpc {
     if ((getListMembersMethod = MembersGrpc.getListMembersMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListMembersMethod = MembersGrpc.getListMembersMethod) == null) {
-          MembersGrpc.getListMembersMethod = getListMembersMethod = 
+          MembersGrpc.getListMembersMethod = getListMembersMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.passkit.grpc.Members.MemberOuterClass.Member>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listMembers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listMembers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMembers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMembers"))
+              .build();
         }
-     }
-     return getListMembersMethod;
+      }
+    }
+    return getListMembersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.Member,
@@ -713,22 +692,21 @@ public final class MembersGrpc {
     if ((getUpdateMemberMethod = MembersGrpc.getUpdateMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getUpdateMemberMethod = MembersGrpc.getUpdateMemberMethod) == null) {
-          MembersGrpc.getUpdateMemberMethod = getUpdateMemberMethod = 
+          MembersGrpc.getUpdateMemberMethod = getUpdateMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.Member, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "updateMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMember"))
+              .build();
         }
-     }
-     return getUpdateMemberMethod;
+      }
+    }
+    return getUpdateMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest,
@@ -745,22 +723,21 @@ public final class MembersGrpc {
     if ((getEarnPointsMethod = MembersGrpc.getEarnPointsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getEarnPointsMethod = MembersGrpc.getEarnPointsMethod) == null) {
-          MembersGrpc.getEarnPointsMethod = getEarnPointsMethod = 
+          MembersGrpc.getEarnPointsMethod = getEarnPointsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest, com.passkit.grpc.Members.MemberOuterClass.MemberPoints>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "earnPoints"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "earnPoints"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberPoints.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("earnPoints"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("earnPoints"))
+              .build();
         }
-     }
-     return getEarnPointsMethod;
+      }
+    }
+    return getEarnPointsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest,
@@ -777,22 +754,21 @@ public final class MembersGrpc {
     if ((getBurnPointsMethod = MembersGrpc.getBurnPointsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getBurnPointsMethod = MembersGrpc.getBurnPointsMethod) == null) {
-          MembersGrpc.getBurnPointsMethod = getBurnPointsMethod = 
+          MembersGrpc.getBurnPointsMethod = getBurnPointsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest, com.passkit.grpc.Members.MemberOuterClass.MemberPoints>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "burnPoints"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "burnPoints"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberPoints.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("burnPoints"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("burnPoints"))
+              .build();
         }
-     }
-     return getBurnPointsMethod;
+      }
+    }
+    return getBurnPointsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest,
@@ -809,22 +785,21 @@ public final class MembersGrpc {
     if ((getSetPointsMethod = MembersGrpc.getSetPointsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getSetPointsMethod = MembersGrpc.getSetPointsMethod) == null) {
-          MembersGrpc.getSetPointsMethod = getSetPointsMethod = 
+          MembersGrpc.getSetPointsMethod = getSetPointsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest, com.passkit.grpc.Members.MemberOuterClass.MemberPoints>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "setPoints"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "setPoints"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberPoints.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("setPoints"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("setPoints"))
+              .build();
         }
-     }
-     return getSetPointsMethod;
+      }
+    }
+    return getSetPointsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest,
@@ -841,22 +816,21 @@ public final class MembersGrpc {
     if ((getUpdateMembersBySegmentMethod = MembersGrpc.getUpdateMembersBySegmentMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getUpdateMembersBySegmentMethod = MembersGrpc.getUpdateMembersBySegmentMethod) == null) {
-          MembersGrpc.getUpdateMembersBySegmentMethod = getUpdateMembersBySegmentMethod = 
+          MembersGrpc.getUpdateMembersBySegmentMethod = getUpdateMembersBySegmentMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "updateMembersBySegment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateMembersBySegment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMembersBySegment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMembersBySegment"))
+              .build();
         }
-     }
-     return getUpdateMembersBySegmentMethod;
+      }
+    }
+    return getUpdateMembersBySegmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest,
@@ -873,22 +847,21 @@ public final class MembersGrpc {
     if ((getDeleteMembersBySegmentMethod = MembersGrpc.getDeleteMembersBySegmentMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteMembersBySegmentMethod = MembersGrpc.getDeleteMembersBySegmentMethod) == null) {
-          MembersGrpc.getDeleteMembersBySegmentMethod = getDeleteMembersBySegmentMethod = 
+          MembersGrpc.getDeleteMembersBySegmentMethod = getDeleteMembersBySegmentMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteMembersBySegment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteMembersBySegment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMembersBySegment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMembersBySegment"))
+              .build();
         }
-     }
-     return getDeleteMembersBySegmentMethod;
+      }
+    }
+    return getDeleteMembersBySegmentMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.Member,
@@ -905,22 +878,21 @@ public final class MembersGrpc {
     if ((getDeleteMemberMethod = MembersGrpc.getDeleteMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteMemberMethod = MembersGrpc.getDeleteMemberMethod) == null) {
-          MembersGrpc.getDeleteMemberMethod = getDeleteMemberMethod = 
+          MembersGrpc.getDeleteMemberMethod = getDeleteMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.Member, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.Member.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMember"))
+              .build();
         }
-     }
-     return getDeleteMemberMethod;
+      }
+    }
+    return getDeleteMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
@@ -937,22 +909,21 @@ public final class MembersGrpc {
     if ((getCountMembersDeprecatedMethod = MembersGrpc.getCountMembersDeprecatedMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCountMembersDeprecatedMethod = MembersGrpc.getCountMembersDeprecatedMethod) == null) {
-          MembersGrpc.getCountMembersDeprecatedMethod = getCountMembersDeprecatedMethod = 
+          MembersGrpc.getCountMembersDeprecatedMethod = getCountMembersDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "countMembersDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countMembersDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMembersDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMembersDeprecated"))
+              .build();
         }
-     }
-     return getCountMembersDeprecatedMethod;
+      }
+    }
+    return getCountMembersDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -969,22 +940,21 @@ public final class MembersGrpc {
     if ((getCountMembersMethod = MembersGrpc.getCountMembersMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCountMembersMethod = MembersGrpc.getCountMembersMethod) == null) {
-          MembersGrpc.getCountMembersMethod = getCountMembersMethod = 
+          MembersGrpc.getCountMembersMethod = getCountMembersMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "countMembers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countMembers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMembers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMembers"))
+              .build();
         }
-     }
-     return getCountMembersMethod;
+      }
+    }
+    return getCountMembersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -1001,22 +971,21 @@ public final class MembersGrpc {
     if ((getGetMessageHistoryForMemberMethod = MembersGrpc.getGetMessageHistoryForMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetMessageHistoryForMemberMethod = MembersGrpc.getGetMessageHistoryForMemberMethod) == null) {
-          MembersGrpc.getGetMessageHistoryForMemberMethod = getGetMessageHistoryForMemberMethod = 
+          MembersGrpc.getGetMessageHistoryForMemberMethod = getGetMessageHistoryForMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.MessageOuterClass.Message>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getMessageHistoryForMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMessageHistoryForMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMessageHistoryForMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMessageHistoryForMember"))
+              .build();
         }
-     }
-     return getGetMessageHistoryForMemberMethod;
+      }
+    }
+    return getGetMessageHistoryForMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1033,22 +1002,21 @@ public final class MembersGrpc {
     if ((getGetMetaKeysForProgramMethod = MembersGrpc.getGetMetaKeysForProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetMetaKeysForProgramMethod = MembersGrpc.getGetMetaKeysForProgramMethod) == null) {
-          MembersGrpc.getGetMetaKeysForProgramMethod = getGetMetaKeysForProgramMethod = 
+          MembersGrpc.getGetMetaKeysForProgramMethod = getGetMetaKeysForProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Strings>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getMetaKeysForProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMetaKeysForProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Strings.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMetaKeysForProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMetaKeysForProgram"))
+              .build();
         }
-     }
-     return getGetMetaKeysForProgramMethod;
+      }
+    }
+    return getGetMetaKeysForProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest,
@@ -1065,22 +1033,21 @@ public final class MembersGrpc {
     if ((getRenewMembersExpiryMethod = MembersGrpc.getRenewMembersExpiryMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getRenewMembersExpiryMethod = MembersGrpc.getRenewMembersExpiryMethod) == null) {
-          MembersGrpc.getRenewMembersExpiryMethod = getRenewMembersExpiryMethod = 
+          MembersGrpc.getRenewMembersExpiryMethod = getRenewMembersExpiryMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "renewMembersExpiry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "renewMembersExpiry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("renewMembersExpiry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("renewMembersExpiry"))
+              .build();
         }
-     }
-     return getRenewMembersExpiryMethod;
+      }
+    }
+    return getRenewMembersExpiryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberExpiry,
@@ -1097,22 +1064,21 @@ public final class MembersGrpc {
     if ((getUpdateMemberExpiryMethod = MembersGrpc.getUpdateMemberExpiryMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getUpdateMemberExpiryMethod = MembersGrpc.getUpdateMemberExpiryMethod) == null) {
-          MembersGrpc.getUpdateMemberExpiryMethod = getUpdateMemberExpiryMethod = 
+          MembersGrpc.getUpdateMemberExpiryMethod = getUpdateMemberExpiryMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.MemberExpiry, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "updateMemberExpiry"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateMemberExpiry"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.MemberExpiry.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMemberExpiry"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("updateMemberExpiry"))
+              .build();
         }
-     }
-     return getUpdateMemberExpiryMethod;
+      }
+    }
+    return getUpdateMemberExpiryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -1129,22 +1095,21 @@ public final class MembersGrpc {
     if ((getCountMemberEventsMethod = MembersGrpc.getCountMemberEventsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getCountMemberEventsMethod = MembersGrpc.getCountMemberEventsMethod) == null) {
-          MembersGrpc.getCountMemberEventsMethod = getCountMemberEventsMethod = 
+          MembersGrpc.getCountMemberEventsMethod = getCountMemberEventsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "countMemberEvents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countMemberEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMemberEvents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("countMemberEvents"))
+              .build();
         }
-     }
-     return getCountMemberEventsMethod;
+      }
+    }
+    return getCountMemberEventsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -1161,22 +1126,21 @@ public final class MembersGrpc {
     if ((getListMemberEventsMethod = MembersGrpc.getListMemberEventsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListMemberEventsMethod = MembersGrpc.getListMemberEventsMethod) == null) {
-          MembersGrpc.getListMemberEventsMethod = getListMemberEventsMethod = 
+          MembersGrpc.getListMemberEventsMethod = getListMemberEventsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listMemberEvents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listMemberEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMemberEvents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listMemberEvents"))
+              .build();
         }
-     }
-     return getListMemberEventsMethod;
+      }
+    }
+    return getListMemberEventsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1193,22 +1157,21 @@ public final class MembersGrpc {
     if ((getGetMemberEventMetaKeysForProgramMethod = MembersGrpc.getGetMemberEventMetaKeysForProgramMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetMemberEventMetaKeysForProgramMethod = MembersGrpc.getGetMemberEventMetaKeysForProgramMethod) == null) {
-          MembersGrpc.getGetMemberEventMetaKeysForProgramMethod = getGetMemberEventMetaKeysForProgramMethod = 
+          MembersGrpc.getGetMemberEventMetaKeysForProgramMethod = getGetMemberEventMetaKeysForProgramMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Strings>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getMemberEventMetaKeysForProgram"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMemberEventMetaKeysForProgram"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Strings.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberEventMetaKeysForProgram"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getMemberEventMetaKeysForProgram"))
+              .build();
         }
-     }
-     return getGetMemberEventMetaKeysForProgramMethod;
+      }
+    }
+    return getGetMemberEventMetaKeysForProgramMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1225,22 +1188,21 @@ public final class MembersGrpc {
     if ((getListEventsForMemberMethod = MembersGrpc.getListEventsForMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getListEventsForMemberMethod = MembersGrpc.getListEventsForMemberMethod) == null) {
-          MembersGrpc.getListEventsForMemberMethod = getListEventsForMemberMethod = 
+          MembersGrpc.getListEventsForMemberMethod = getListEventsForMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "listEventsForMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listEventsForMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listEventsForMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("listEventsForMember"))
+              .build();
         }
-     }
-     return getListEventsForMemberMethod;
+      }
+    }
+    return getListEventsForMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
@@ -1257,22 +1219,21 @@ public final class MembersGrpc {
     if ((getDeleteMemberEventsMethod = MembersGrpc.getDeleteMemberEventsMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteMemberEventsMethod = MembersGrpc.getDeleteMemberEventsMethod) == null) {
-          MembersGrpc.getDeleteMemberEventsMethod = getDeleteMemberEventsMethod = 
+          MembersGrpc.getDeleteMemberEventsMethod = getDeleteMemberEventsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ListRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteMemberEvents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteMemberEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Members.MemberOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMemberEvents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMemberEvents"))
+              .build();
         }
-     }
-     return getDeleteMemberEventsMethod;
+      }
+    }
+    return getDeleteMemberEventsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1289,22 +1250,21 @@ public final class MembersGrpc {
     if ((getDeleteEventsForMemberMethod = MembersGrpc.getDeleteEventsForMemberMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteEventsForMemberMethod = MembersGrpc.getDeleteEventsForMemberMethod) == null) {
-          MembersGrpc.getDeleteEventsForMemberMethod = getDeleteEventsForMemberMethod = 
+          MembersGrpc.getDeleteEventsForMemberMethod = getDeleteEventsForMemberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteEventsForMember"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteEventsForMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteEventsForMember"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteEventsForMember"))
+              .build();
         }
-     }
-     return getDeleteEventsForMemberMethod;
+      }
+    }
+    return getDeleteEventsForMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1321,22 +1281,21 @@ public final class MembersGrpc {
     if ((getDeleteMemberEventMethod = MembersGrpc.getDeleteMemberEventMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getDeleteMemberEventMethod = MembersGrpc.getDeleteMemberEventMethod) == null) {
-          MembersGrpc.getDeleteMemberEventMethod = getDeleteMemberEventMethod = 
+          MembersGrpc.getDeleteMemberEventMethod = getDeleteMemberEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "deleteMemberEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteMemberEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMemberEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("deleteMemberEvent"))
+              .build();
         }
-     }
-     return getDeleteMemberEventMethod;
+      }
+    }
+    return getDeleteMemberEventMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1353,29 +1312,35 @@ public final class MembersGrpc {
     if ((getGetProgramEnrolmentMethod = MembersGrpc.getGetProgramEnrolmentMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetProgramEnrolmentMethod = MembersGrpc.getGetProgramEnrolmentMethod) == null) {
-          MembersGrpc.getGetProgramEnrolmentMethod = getGetProgramEnrolmentMethod = 
+          MembersGrpc.getGetProgramEnrolmentMethod = getGetProgramEnrolmentMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Distribution.DataCollectionPageUrls>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "members.Members", "getProgramEnrolment"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProgramEnrolment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Distribution.DataCollectionPageUrls.getDefaultInstance()))
-                  .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getProgramEnrolment"))
-                  .build();
-          }
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getProgramEnrolment"))
+              .build();
         }
-     }
-     return getGetProgramEnrolmentMethod;
+      }
+    }
+    return getGetProgramEnrolmentMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static MembersStub newStub(io.grpc.Channel channel) {
-    return new MembersStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MembersStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MembersStub>() {
+        @java.lang.Override
+        public MembersStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MembersStub(channel, callOptions);
+        }
+      };
+    return MembersStub.newStub(factory, channel);
   }
 
   /**
@@ -1383,7 +1348,14 @@ public final class MembersGrpc {
    */
   public static MembersBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new MembersBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MembersBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MembersBlockingStub>() {
+        @java.lang.Override
+        public MembersBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MembersBlockingStub(channel, callOptions);
+        }
+      };
+    return MembersBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1391,7 +1363,14 @@ public final class MembersGrpc {
    */
   public static MembersFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new MembersFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<MembersFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MembersFutureStub>() {
+        @java.lang.Override
+        public MembersFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MembersFutureStub(channel, callOptions);
+        }
+      };
+    return MembersFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -2045,19 +2024,15 @@ public final class MembersGrpc {
 
   /**
    */
-  public static final class MembersStub extends io.grpc.stub.AbstractStub<MembersStub> {
-    private MembersStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MembersStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MembersStub extends io.grpc.stub.AbstractAsyncStub<MembersStub> {
+    private MembersStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MembersStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MembersStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MembersStub(channel, callOptions);
     }
 
@@ -2451,19 +2426,15 @@ public final class MembersGrpc {
 
   /**
    */
-  public static final class MembersBlockingStub extends io.grpc.stub.AbstractStub<MembersBlockingStub> {
-    private MembersBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MembersBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MembersBlockingStub extends io.grpc.stub.AbstractBlockingStub<MembersBlockingStub> {
+    private MembersBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MembersBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MembersBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MembersBlockingStub(channel, callOptions);
     }
 
@@ -2824,19 +2795,15 @@ public final class MembersGrpc {
 
   /**
    */
-  public static final class MembersFutureStub extends io.grpc.stub.AbstractStub<MembersFutureStub> {
-    private MembersFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private MembersFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class MembersFutureStub extends io.grpc.stub.AbstractFutureStub<MembersFutureStub> {
+    private MembersFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected MembersFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected MembersFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new MembersFutureStub(channel, callOptions);
     }
 

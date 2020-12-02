@@ -8230,7 +8230,7 @@ public final class Distribution {
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The content.
      */
     java.lang.String getContent();
@@ -8239,7 +8239,7 @@ public final class Distribution {
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for content.
      */
     com.google.protobuf.ByteString
@@ -8250,7 +8250,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the localizedContent field is set.
      */
     boolean hasLocalizedContent();
@@ -8259,7 +8259,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The localizedContent.
      */
     com.passkit.grpc.Localization.LocalizedString getLocalizedContent();
@@ -8268,7 +8268,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder();
   }
@@ -8381,7 +8381,7 @@ public final class Distribution {
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The content.
      */
     @java.lang.Override
@@ -8402,7 +8402,7 @@ public final class Distribution {
      * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for content.
      */
     @java.lang.Override
@@ -8427,7 +8427,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the localizedContent field is set.
      */
     @java.lang.Override
@@ -8439,7 +8439,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The localizedContent.
      */
     @java.lang.Override
@@ -8451,7 +8451,7 @@ public final class Distribution {
      * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder() {
@@ -8801,7 +8801,7 @@ public final class Distribution {
        * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The content.
        */
       public java.lang.String getContent() {
@@ -8821,7 +8821,7 @@ public final class Distribution {
        * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for content.
        */
       public com.google.protobuf.ByteString
@@ -8842,7 +8842,7 @@ public final class Distribution {
        * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The content to set.
        * @return This builder for chaining.
        */
@@ -8861,7 +8861,7 @@ public final class Distribution {
        * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearContent() {
@@ -8875,7 +8875,7 @@ public final class Distribution {
        * content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>string content = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string content = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for content to set.
        * @return This builder for chaining.
        */
@@ -8899,7 +8899,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the localizedContent field is set.
        */
       public boolean hasLocalizedContent() {
@@ -8910,7 +8910,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The localizedContent.
        */
       public com.passkit.grpc.Localization.LocalizedString getLocalizedContent() {
@@ -8925,7 +8925,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocalizedContent(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedContentBuilder_ == null) {
@@ -8945,7 +8945,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocalizedContent(
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
@@ -8963,7 +8963,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeLocalizedContent(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedContentBuilder_ == null) {
@@ -8985,7 +8985,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearLocalizedContent() {
         if (localizedContentBuilder_ == null) {
@@ -9003,7 +9003,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedContentBuilder() {
         
@@ -9015,7 +9015,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder() {
         if (localizedContentBuilder_ != null) {
@@ -9030,7 +9030,7 @@ public final class Distribution {
        * localized content of the SMS; needs to be limited to 70 unicode characters. Can contain any of the fields from fields array: ${DISPLAY_NAME}, ${EMAIL_ADDRESS}, etc.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.io.LocalizedString localizedContent = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
@@ -9940,45 +9940,45 @@ public final class Distribution {
       "\n\034io/common/distribution.proto\022\002io\032\036io/c" +
       "ommon/common_objects.proto\032\034io/common/lo" +
       "calization.proto\032\031io/common/protocols.pr" +
-      "oto\032,protoc-gen-swagger/options/annotati" +
-      "ons.proto\"d\n\030EmailDistributionRequest\022\n\n" +
-      "\002id\030\001 \001(\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassPro" +
-      "tocol\022\030\n\020alternativeEmail\030\003 \001(\t\"\244\001\n\024Smar" +
-      "tPassLinkRequest\022\'\n\026projectDistributionU" +
-      "rl\030\001 \001(\0132\007.io.Url\0224\n\006fields\030\002 \003(\0132$.io.S" +
-      "martPassLinkRequest.FieldsEntry\032-\n\013Field" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\233" +
-      "\001\n\024DistributionSettings\0225\n\024distributionC" +
-      "hannels\030\001 \003(\0162\027.io.DistributionChannel\022\'" +
-      "\n\014welcomeEmail\030\002 \001(\0132\021.io.EmailTemplate\022" +
-      "#\n\nwelcomeSms\030\003 \001(\0132\017.io.SmsTemplate\"\353\004\n" +
-      "\rEmailTemplate\022\017\n\007subject\030\001 \001(\t\022-\n\020local" +
-      "izedSubject\030\002 \001(\0132\023.io.LocalizedString\022\027" +
-      "\n\017bodyTextContent\030\003 \001(\t\0225\n\030localizedBody" +
-      "TextContent\030\004 \001(\0132\023.io.LocalizedString\022\027" +
-      "\n\017bodyHtmlContent\030\005 \001(\t\0225\n\030localizedBody" +
-      "HtmlContent\030\006 \001(\0132\023.io.LocalizedString\022-" +
-      "\n\rconfiguration\030\007 \001(\0132\026.io.EmailConfigur" +
-      "ation\022\022\n\nbuttonText\030\010 \001(\t\022\027\n\017buttonTextC" +
-      "olor\030\t \001(\t\022\035\n\025buttonBackgroundColor\030\n \001(" +
-      "\t\022\032\n\022buttonBorderRadius\030\013 \001(\t\022\031\n\021footerT" +
-      "extContent\030\014 \001(\t\0227\n\032localizedFooterTextC" +
-      "ontent\030\r \001(\0132\023.io.LocalizedString\022\031\n\021foo" +
-      "terHtmlContent\030\016 \001(\t\0227\n\032localizedFooterH" +
-      "tmlContent\030\017 \001(\0132\023.io.LocalizedString\022\036\n" +
-      "\026messageBackgroundColor\030\020 \001(\t\022\033\n\023pageBac" +
-      "kgroundColor\030\021 \001(\t\"c\n\022EmailConfiguration" +
-      "\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailFromName\030\002 \001" +
-      "(\t\022#\n\033EmailFromVerifiedForSending\030\003 \001(\010\"" +
-      "a\n\013SmsTemplate\022\026\n\007content\030\001 \001(\tB\005\222A\002xF\0224" +
-      "\n\020localizedContent\030\002 \001(\0132\023.io.LocalizedS" +
-      "tringB\005\222A\002xFJ\004\010\003\020\004\"<\n\026DataCollectionPage" +
-      "Urls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001(\t" +
-      "*N\n\023DistributionChannel\022\023\n\017NO_DISTRIBUTI" +
-      "ON\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002" +
-      "BG\n\020com.passkit.grpcZ$stash.passkit.com/" +
-      "io/model/sdk/go/io\252\002\014PassKit.GRPCb\006proto" +
-      "3"
+      "oto\032.protoc-gen-openapiv2/options/annota" +
+      "tions.proto\"d\n\030EmailDistributionRequest\022" +
+      "\n\n\002id\030\001 \001(\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassP" +
+      "rotocol\022\030\n\020alternativeEmail\030\003 \001(\t\"\244\001\n\024Sm" +
+      "artPassLinkRequest\022\'\n\026projectDistributio" +
+      "nUrl\030\001 \001(\0132\007.io.Url\0224\n\006fields\030\002 \003(\0132$.io" +
+      ".SmartPassLinkRequest.FieldsEntry\032-\n\013Fie" +
+      "ldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\"\233\001\n\024DistributionSettings\0225\n\024distributio" +
+      "nChannels\030\001 \003(\0162\027.io.DistributionChannel" +
+      "\022\'\n\014welcomeEmail\030\002 \001(\0132\021.io.EmailTemplat" +
+      "e\022#\n\nwelcomeSms\030\003 \001(\0132\017.io.SmsTemplate\"\353" +
+      "\004\n\rEmailTemplate\022\017\n\007subject\030\001 \001(\t\022-\n\020loc" +
+      "alizedSubject\030\002 \001(\0132\023.io.LocalizedString" +
+      "\022\027\n\017bodyTextContent\030\003 \001(\t\0225\n\030localizedBo" +
+      "dyTextContent\030\004 \001(\0132\023.io.LocalizedString" +
+      "\022\027\n\017bodyHtmlContent\030\005 \001(\t\0225\n\030localizedBo" +
+      "dyHtmlContent\030\006 \001(\0132\023.io.LocalizedString" +
+      "\022-\n\rconfiguration\030\007 \001(\0132\026.io.EmailConfig" +
+      "uration\022\022\n\nbuttonText\030\010 \001(\t\022\027\n\017buttonTex" +
+      "tColor\030\t \001(\t\022\035\n\025buttonBackgroundColor\030\n " +
+      "\001(\t\022\032\n\022buttonBorderRadius\030\013 \001(\t\022\031\n\021foote" +
+      "rTextContent\030\014 \001(\t\0227\n\032localizedFooterTex" +
+      "tContent\030\r \001(\0132\023.io.LocalizedString\022\031\n\021f" +
+      "ooterHtmlContent\030\016 \001(\t\0227\n\032localizedFoote" +
+      "rHtmlContent\030\017 \001(\0132\023.io.LocalizedString\022" +
+      "\036\n\026messageBackgroundColor\030\020 \001(\t\022\033\n\023pageB" +
+      "ackgroundColor\030\021 \001(\t\"c\n\022EmailConfigurati" +
+      "on\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailFromName\030\002" +
+      " \001(\t\022#\n\033EmailFromVerifiedForSending\030\003 \001(" +
+      "\010\"a\n\013SmsTemplate\022\026\n\007content\030\001 \001(\tB\005\222A\002xF" +
+      "\0224\n\020localizedContent\030\002 \001(\0132\023.io.Localize" +
+      "dStringB\005\222A\002xFJ\004\010\003\020\004\"<\n\026DataCollectionPa" +
+      "geUrls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001" +
+      "(\t*N\n\023DistributionChannel\022\023\n\017NO_DISTRIBU" +
+      "TION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS" +
+      "\020\002BG\n\020com.passkit.grpcZ$stash.passkit.co" +
+      "m/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9986,7 +9986,7 @@ public final class Distribution {
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.Protocols.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_EmailDistributionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -10038,13 +10038,13 @@ public final class Distribution {
         new java.lang.String[] { "PageUrl", "QrCodeUrl", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.Protocols.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

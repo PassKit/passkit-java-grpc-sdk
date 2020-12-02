@@ -28,19 +28,19 @@ public final class ARpcCertificates {
       "tobuf/empty.proto\032\036io/common/common_obje" +
       "cts.proto\032 io/certificate/certificate.pr" +
       "oto\032\032io/common/pagination.proto\032\026io/comm" +
-      "on/filter.proto2\320\007\n\014Certificates\022\207\001\n\034get" +
-      "CertificateSigningRequest\022\026.google.proto" +
-      "buf.Empty\032\035.io.CertificateSigningRequest" +
-      "\"0\202\323\344\223\002*\022(/certificate/certificate_signi" +
-      "ng_request\022d\n\023addAppleCertificate\022\r.io.F" +
-      "ileBytes\032\023.io.CertificateData\")\202\323\344\223\002#\"\036/" +
-      "certificate/apple_certificate:\001*\022g\n\026upda" +
-      "teAppleCertificate\022\r.io.FileBytes\032\023.io.C" +
-      "ertificateData\")\202\323\344\223\002#\032\036/certificate/app" +
-      "le_certificate:\001*\022i\n\027getAppleCertificate" +
-      "Data\022\026.io.PassTypeIdentifier\032\023.io.Certif" +
-      "icateData\"!\202\323\344\223\002\033\022\031/certificate/{passTyp" +
-      "eId}\022_\n\037listAppleCertificatesDeprecated\022" +
+      "on/filter.proto2\320\007\n\014Certificates\022i\n\027getA" +
+      "ppleCertificateData\022\026.io.PassTypeIdentif" +
+      "ier\032\023.io.CertificateData\"!\202\323\344\223\002\033\022\031/certi" +
+      "ficate/{passTypeId}\022\207\001\n\034getCertificateSi" +
+      "gningRequest\022\026.google.protobuf.Empty\032\035.i" +
+      "o.CertificateSigningRequest\"0\202\323\344\223\002*\022(/ce" +
+      "rtificate/certificate_signing_request\022d\n" +
+      "\023addAppleCertificate\022\r.io.FileBytes\032\023.io" +
+      ".CertificateData\")\202\323\344\223\002#\"\036/certificate/a" +
+      "pple_certificate:\001*\022g\n\026updateAppleCertif" +
+      "icate\022\r.io.FileBytes\032\023.io.CertificateDat" +
+      "a\")\202\323\344\223\002#\032\036/certificate/apple_certificat" +
+      "e:\001*\022_\n\037listAppleCertificatesDeprecated\022" +
       "\016.io.Pagination\032\023.io.CertificateData\"\025\202\323" +
       "\344\223\002\017\022\r/certificates0\001\022`\n\025listAppleCertif" +
       "icates\022\013.io.Filters\032\023.io.CertificateData" +
@@ -54,7 +54,7 @@ public final class ARpcCertificates {
       "est\032\026.google.protobuf.Empty\"-\202\323\344\223\002\'\"\"/ce" +
       "rtificates/nfc/credentials/send:\001*BG\n\020co" +
       "m.passkit.grpcZ$stash.passkit.com/io/mod" +
-      "el/sdk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "el/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -1946,7 +1946,7 @@ public final class Useragent {
       "ion\030\t \001(\t\022\016\n\006mobile\030\n \001(\010\022\030\n\020walletCompa" +
       "tible\030\013 \001(\010BG\n\020com.passkit.grpcZ$stash.p" +
       "asskit.com/io/model/sdk/go/io\252\002\014PassKit." +
-      "GRPCb\006proto3"
+      "Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

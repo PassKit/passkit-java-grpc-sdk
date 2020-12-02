@@ -4268,7 +4268,7 @@ public final class Personal {
       "tryCode\030\007 \001(\t*-\n\006Gender\022\r\n\tNOT_KNOWN\020\000\022\010" +
       "\n\004MALE\020\001\022\n\n\006FEMALE\020\002BG\n\020com.passkit.grpc" +
       "Z$stash.passkit.com/io/model/sdk/go/io\252\002" +
-      "\014PassKit.GRPCb\006proto3"
+      "\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

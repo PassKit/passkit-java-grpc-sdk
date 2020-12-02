@@ -1425,7 +1425,7 @@ public final class Billing {
       "\001(\0132\020.io.QuotaDetails:\0028\001\"-\n\014QuotaDetail" +
       "s\022\r\n\005quota\030\001 \001(\005\022\016\n\006status\030\002 \001(\004BG\n\020com." +
       "passkit.grpcZ$stash.passkit.com/io/model" +
-      "/sdk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

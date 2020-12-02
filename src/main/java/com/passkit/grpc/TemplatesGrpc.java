@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_templates.proto")
 public final class TemplatesGrpc {
 
@@ -41,22 +41,21 @@ public final class TemplatesGrpc {
     if ((getCreateTemplateMethod = TemplatesGrpc.getCreateTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCreateTemplateMethod = TemplatesGrpc.getCreateTemplateMethod) == null) {
-          TemplatesGrpc.getCreateTemplateMethod = getCreateTemplateMethod = 
+          TemplatesGrpc.getCreateTemplateMethod = getCreateTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.PassTemplate, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "createTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createTemplate"))
+              .build();
         }
-     }
-     return getCreateTemplateMethod;
+      }
+    }
+    return getCreateTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.PassTemplate,
@@ -73,22 +72,21 @@ public final class TemplatesGrpc {
     if ((getUpdateTemplateMethod = TemplatesGrpc.getUpdateTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getUpdateTemplateMethod = TemplatesGrpc.getUpdateTemplateMethod) == null) {
-          TemplatesGrpc.getUpdateTemplateMethod = getUpdateTemplateMethod = 
+          TemplatesGrpc.getUpdateTemplateMethod = getUpdateTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.PassTemplate, com.passkit.grpc.Template.PassTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "updateTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplate.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateTemplate"))
+              .build();
         }
-     }
-     return getUpdateTemplateMethod;
+      }
+    }
+    return getUpdateTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,22 +103,21 @@ public final class TemplatesGrpc {
     if ((getGetTemplateMethod = TemplatesGrpc.getGetTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getGetTemplateMethod = TemplatesGrpc.getGetTemplateMethod) == null) {
-          TemplatesGrpc.getGetTemplateMethod = getGetTemplateMethod = 
+          TemplatesGrpc.getGetTemplateMethod = getGetTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Template.PassTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "getTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getTemplate"))
+              .build();
         }
-     }
-     return getGetTemplateMethod;
+      }
+    }
+    return getGetTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.DefaultTemplateRequest,
@@ -137,22 +134,21 @@ public final class TemplatesGrpc {
     if ((getGetDefaultTemplateMethod = TemplatesGrpc.getGetDefaultTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getGetDefaultTemplateMethod = TemplatesGrpc.getGetDefaultTemplateMethod) == null) {
-          TemplatesGrpc.getGetDefaultTemplateMethod = getGetDefaultTemplateMethod = 
+          TemplatesGrpc.getGetDefaultTemplateMethod = getGetDefaultTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.DefaultTemplateRequest, com.passkit.grpc.Template.PassTemplate>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "getDefaultTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getDefaultTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.DefaultTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplate.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getDefaultTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getDefaultTemplate"))
+              .build();
         }
-     }
-     return getGetDefaultTemplateMethod;
+      }
+    }
+    return getGetDefaultTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.CopyObjectInput,
@@ -169,22 +165,21 @@ public final class TemplatesGrpc {
     if ((getCopyTemplateMethod = TemplatesGrpc.getCopyTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCopyTemplateMethod = TemplatesGrpc.getCopyTemplateMethod) == null) {
-          TemplatesGrpc.getCopyTemplateMethod = getCopyTemplateMethod = 
+          TemplatesGrpc.getCopyTemplateMethod = getCopyTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.CopyObjectInput, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "copyTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.CopyObjectInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyTemplate"))
+              .build();
         }
-     }
-     return getCopyTemplateMethod;
+      }
+    }
+    return getCopyTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -201,22 +196,21 @@ public final class TemplatesGrpc {
     if ((getDeleteTemplateMethod = TemplatesGrpc.getDeleteTemplateMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getDeleteTemplateMethod = TemplatesGrpc.getDeleteTemplateMethod) == null) {
-          TemplatesGrpc.getDeleteTemplateMethod = getDeleteTemplateMethod = 
+          TemplatesGrpc.getDeleteTemplateMethod = getDeleteTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "deleteTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteTemplate"))
+              .build();
         }
-     }
-     return getDeleteTemplateMethod;
+      }
+    }
+    return getDeleteTemplateMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -233,22 +227,21 @@ public final class TemplatesGrpc {
     if ((getListTemplatesForUserDeprecatedMethod = TemplatesGrpc.getListTemplatesForUserDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListTemplatesForUserDeprecatedMethod = TemplatesGrpc.getListTemplatesForUserDeprecatedMethod) == null) {
-          TemplatesGrpc.getListTemplatesForUserDeprecatedMethod = getListTemplatesForUserDeprecatedMethod = 
+          TemplatesGrpc.getListTemplatesForUserDeprecatedMethod = getListTemplatesForUserDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Template.PassTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listTemplatesForUserDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTemplatesForUserDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesForUserDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesForUserDeprecated"))
+              .build();
         }
-     }
-     return getListTemplatesForUserDeprecatedMethod;
+      }
+    }
+    return getListTemplatesForUserDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -265,22 +258,21 @@ public final class TemplatesGrpc {
     if ((getListTemplatesForUserMethod = TemplatesGrpc.getListTemplatesForUserMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListTemplatesForUserMethod = TemplatesGrpc.getListTemplatesForUserMethod) == null) {
-          TemplatesGrpc.getListTemplatesForUserMethod = getListTemplatesForUserMethod = 
+          TemplatesGrpc.getListTemplatesForUserMethod = getListTemplatesForUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Template.PassTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listTemplatesForUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTemplatesForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesForUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesForUser"))
+              .build();
         }
-     }
-     return getListTemplatesForUserMethod;
+      }
+    }
+    return getListTemplatesForUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -297,22 +289,21 @@ public final class TemplatesGrpc {
     if ((getListTemplatesDeprecatedMethod = TemplatesGrpc.getListTemplatesDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListTemplatesDeprecatedMethod = TemplatesGrpc.getListTemplatesDeprecatedMethod) == null) {
-          TemplatesGrpc.getListTemplatesDeprecatedMethod = getListTemplatesDeprecatedMethod = 
+          TemplatesGrpc.getListTemplatesDeprecatedMethod = getListTemplatesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Template.PassTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listTemplatesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTemplatesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplatesDeprecated"))
+              .build();
         }
-     }
-     return getListTemplatesDeprecatedMethod;
+      }
+    }
+    return getListTemplatesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -329,22 +320,21 @@ public final class TemplatesGrpc {
     if ((getListTemplatesMethod = TemplatesGrpc.getListTemplatesMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListTemplatesMethod = TemplatesGrpc.getListTemplatesMethod) == null) {
-          TemplatesGrpc.getListTemplatesMethod = getListTemplatesMethod = 
+          TemplatesGrpc.getListTemplatesMethod = getListTemplatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Template.PassTemplateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.PassTemplateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listTemplates"))
+              .build();
         }
-     }
-     return getListTemplatesMethod;
+      }
+    }
+    return getListTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -361,22 +351,21 @@ public final class TemplatesGrpc {
     if ((getCountTemplatesDeprecatedMethod = TemplatesGrpc.getCountTemplatesDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountTemplatesDeprecatedMethod = TemplatesGrpc.getCountTemplatesDeprecatedMethod) == null) {
-          TemplatesGrpc.getCountTemplatesDeprecatedMethod = getCountTemplatesDeprecatedMethod = 
+          TemplatesGrpc.getCountTemplatesDeprecatedMethod = getCountTemplatesDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countTemplatesDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countTemplatesDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesDeprecated"))
+              .build();
         }
-     }
-     return getCountTemplatesDeprecatedMethod;
+      }
+    }
+    return getCountTemplatesDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -393,22 +382,21 @@ public final class TemplatesGrpc {
     if ((getCountTemplatesMethod = TemplatesGrpc.getCountTemplatesMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountTemplatesMethod = TemplatesGrpc.getCountTemplatesMethod) == null) {
-          TemplatesGrpc.getCountTemplatesMethod = getCountTemplatesMethod = 
+          TemplatesGrpc.getCountTemplatesMethod = getCountTemplatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countTemplates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countTemplates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplates"))
+              .build();
         }
-     }
-     return getCountTemplatesMethod;
+      }
+    }
+    return getCountTemplatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -425,22 +413,21 @@ public final class TemplatesGrpc {
     if ((getCountTemplatesForUserDeprecatedMethod = TemplatesGrpc.getCountTemplatesForUserDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountTemplatesForUserDeprecatedMethod = TemplatesGrpc.getCountTemplatesForUserDeprecatedMethod) == null) {
-          TemplatesGrpc.getCountTemplatesForUserDeprecatedMethod = getCountTemplatesForUserDeprecatedMethod = 
+          TemplatesGrpc.getCountTemplatesForUserDeprecatedMethod = getCountTemplatesForUserDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countTemplatesForUserDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countTemplatesForUserDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesForUserDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesForUserDeprecated"))
+              .build();
         }
-     }
-     return getCountTemplatesForUserDeprecatedMethod;
+      }
+    }
+    return getCountTemplatesForUserDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -457,22 +444,21 @@ public final class TemplatesGrpc {
     if ((getCountTemplatesForUserMethod = TemplatesGrpc.getCountTemplatesForUserMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountTemplatesForUserMethod = TemplatesGrpc.getCountTemplatesForUserMethod) == null) {
-          TemplatesGrpc.getCountTemplatesForUserMethod = getCountTemplatesForUserMethod = 
+          TemplatesGrpc.getCountTemplatesForUserMethod = getCountTemplatesForUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countTemplatesForUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countTemplatesForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesForUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countTemplatesForUser"))
+              .build();
         }
-     }
-     return getCountTemplatesForUserMethod;
+      }
+    }
+    return getCountTemplatesForUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Proximity.GPSLocation,
@@ -489,22 +475,21 @@ public final class TemplatesGrpc {
     if ((getCreateLocationMethod = TemplatesGrpc.getCreateLocationMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCreateLocationMethod = TemplatesGrpc.getCreateLocationMethod) == null) {
-          TemplatesGrpc.getCreateLocationMethod = getCreateLocationMethod = 
+          TemplatesGrpc.getCreateLocationMethod = getCreateLocationMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Proximity.GPSLocation, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "createLocation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createLocation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createLocation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createLocation"))
+              .build();
         }
-     }
-     return getCreateLocationMethod;
+      }
+    }
+    return getCreateLocationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Proximity.GPSLocation,
@@ -521,22 +506,21 @@ public final class TemplatesGrpc {
     if ((getUpdateLocationMethod = TemplatesGrpc.getUpdateLocationMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getUpdateLocationMethod = TemplatesGrpc.getUpdateLocationMethod) == null) {
-          TemplatesGrpc.getUpdateLocationMethod = getUpdateLocationMethod = 
+          TemplatesGrpc.getUpdateLocationMethod = getUpdateLocationMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Proximity.GPSLocation, com.passkit.grpc.Proximity.GPSLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "updateLocation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateLocation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateLocation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateLocation"))
+              .build();
         }
-     }
-     return getUpdateLocationMethod;
+      }
+    }
+    return getUpdateLocationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -553,22 +537,21 @@ public final class TemplatesGrpc {
     if ((getGetLocationMethod = TemplatesGrpc.getGetLocationMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getGetLocationMethod = TemplatesGrpc.getGetLocationMethod) == null) {
-          TemplatesGrpc.getGetLocationMethod = getGetLocationMethod = 
+          TemplatesGrpc.getGetLocationMethod = getGetLocationMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Proximity.GPSLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "getLocation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getLocation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getLocation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getLocation"))
+              .build();
         }
-     }
-     return getGetLocationMethod;
+      }
+    }
+    return getGetLocationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -585,22 +568,21 @@ public final class TemplatesGrpc {
     if ((getListLocationsDeprecatedMethod = TemplatesGrpc.getListLocationsDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListLocationsDeprecatedMethod = TemplatesGrpc.getListLocationsDeprecatedMethod) == null) {
-          TemplatesGrpc.getListLocationsDeprecatedMethod = getListLocationsDeprecatedMethod = 
+          TemplatesGrpc.getListLocationsDeprecatedMethod = getListLocationsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Proximity.GPSLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listLocationsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listLocationsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLocationsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLocationsDeprecated"))
+              .build();
         }
-     }
-     return getListLocationsDeprecatedMethod;
+      }
+    }
+    return getListLocationsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -617,22 +599,21 @@ public final class TemplatesGrpc {
     if ((getListLocationsMethod = TemplatesGrpc.getListLocationsMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListLocationsMethod = TemplatesGrpc.getListLocationsMethod) == null) {
-          TemplatesGrpc.getListLocationsMethod = getListLocationsMethod = 
+          TemplatesGrpc.getListLocationsMethod = getListLocationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Proximity.GPSLocation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listLocations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listLocations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLocations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLocations"))
+              .build();
         }
-     }
-     return getListLocationsMethod;
+      }
+    }
+    return getListLocationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.CopyObjectInput,
@@ -649,22 +630,21 @@ public final class TemplatesGrpc {
     if ((getCopyLocationMethod = TemplatesGrpc.getCopyLocationMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCopyLocationMethod = TemplatesGrpc.getCopyLocationMethod) == null) {
-          TemplatesGrpc.getCopyLocationMethod = getCopyLocationMethod = 
+          TemplatesGrpc.getCopyLocationMethod = getCopyLocationMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.CopyObjectInput, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "copyLocation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyLocation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.CopyObjectInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyLocation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyLocation"))
+              .build();
         }
-     }
-     return getCopyLocationMethod;
+      }
+    }
+    return getCopyLocationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -681,22 +661,21 @@ public final class TemplatesGrpc {
     if ((getDeleteLocationMethod = TemplatesGrpc.getDeleteLocationMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getDeleteLocationMethod = TemplatesGrpc.getDeleteLocationMethod) == null) {
-          TemplatesGrpc.getDeleteLocationMethod = getDeleteLocationMethod = 
+          TemplatesGrpc.getDeleteLocationMethod = getDeleteLocationMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "deleteLocation"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteLocation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteLocation"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteLocation"))
+              .build();
         }
-     }
-     return getDeleteLocationMethod;
+      }
+    }
+    return getDeleteLocationMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -713,22 +692,21 @@ public final class TemplatesGrpc {
     if ((getCountLocationsDeprecatedMethod = TemplatesGrpc.getCountLocationsDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountLocationsDeprecatedMethod = TemplatesGrpc.getCountLocationsDeprecatedMethod) == null) {
-          TemplatesGrpc.getCountLocationsDeprecatedMethod = getCountLocationsDeprecatedMethod = 
+          TemplatesGrpc.getCountLocationsDeprecatedMethod = getCountLocationsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countLocationsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countLocationsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLocationsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLocationsDeprecated"))
+              .build();
         }
-     }
-     return getCountLocationsDeprecatedMethod;
+      }
+    }
+    return getCountLocationsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -745,22 +723,21 @@ public final class TemplatesGrpc {
     if ((getCountLocationsMethod = TemplatesGrpc.getCountLocationsMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountLocationsMethod = TemplatesGrpc.getCountLocationsMethod) == null) {
-          TemplatesGrpc.getCountLocationsMethod = getCountLocationsMethod = 
+          TemplatesGrpc.getCountLocationsMethod = getCountLocationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countLocations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countLocations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLocations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLocations"))
+              .build();
         }
-     }
-     return getCountLocationsMethod;
+      }
+    }
+    return getCountLocationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Proximity.Beacon,
@@ -777,22 +754,21 @@ public final class TemplatesGrpc {
     if ((getCreateBeaconMethod = TemplatesGrpc.getCreateBeaconMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCreateBeaconMethod = TemplatesGrpc.getCreateBeaconMethod) == null) {
-          TemplatesGrpc.getCreateBeaconMethod = getCreateBeaconMethod = 
+          TemplatesGrpc.getCreateBeaconMethod = getCreateBeaconMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Proximity.Beacon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "createBeacon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createBeacon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createBeacon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createBeacon"))
+              .build();
         }
-     }
-     return getCreateBeaconMethod;
+      }
+    }
+    return getCreateBeaconMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Proximity.Beacon,
@@ -809,22 +785,21 @@ public final class TemplatesGrpc {
     if ((getUpdateBeaconMethod = TemplatesGrpc.getUpdateBeaconMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getUpdateBeaconMethod = TemplatesGrpc.getUpdateBeaconMethod) == null) {
-          TemplatesGrpc.getUpdateBeaconMethod = getUpdateBeaconMethod = 
+          TemplatesGrpc.getUpdateBeaconMethod = getUpdateBeaconMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Proximity.Beacon, com.passkit.grpc.Proximity.Beacon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "updateBeacon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateBeacon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateBeacon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateBeacon"))
+              .build();
         }
-     }
-     return getUpdateBeaconMethod;
+      }
+    }
+    return getUpdateBeaconMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -841,22 +816,21 @@ public final class TemplatesGrpc {
     if ((getGetBeaconMethod = TemplatesGrpc.getGetBeaconMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getGetBeaconMethod = TemplatesGrpc.getGetBeaconMethod) == null) {
-          TemplatesGrpc.getGetBeaconMethod = getGetBeaconMethod = 
+          TemplatesGrpc.getGetBeaconMethod = getGetBeaconMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Proximity.Beacon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "getBeacon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBeacon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getBeacon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getBeacon"))
+              .build();
         }
-     }
-     return getGetBeaconMethod;
+      }
+    }
+    return getGetBeaconMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -873,22 +847,21 @@ public final class TemplatesGrpc {
     if ((getListBeaconsDeprecatedMethod = TemplatesGrpc.getListBeaconsDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListBeaconsDeprecatedMethod = TemplatesGrpc.getListBeaconsDeprecatedMethod) == null) {
-          TemplatesGrpc.getListBeaconsDeprecatedMethod = getListBeaconsDeprecatedMethod = 
+          TemplatesGrpc.getListBeaconsDeprecatedMethod = getListBeaconsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Proximity.Beacon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listBeaconsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listBeaconsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listBeaconsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listBeaconsDeprecated"))
+              .build();
         }
-     }
-     return getListBeaconsDeprecatedMethod;
+      }
+    }
+    return getListBeaconsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -905,22 +878,21 @@ public final class TemplatesGrpc {
     if ((getListBeaconsMethod = TemplatesGrpc.getListBeaconsMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListBeaconsMethod = TemplatesGrpc.getListBeaconsMethod) == null) {
-          TemplatesGrpc.getListBeaconsMethod = getListBeaconsMethod = 
+          TemplatesGrpc.getListBeaconsMethod = getListBeaconsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Proximity.Beacon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listBeacons"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listBeacons"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Proximity.Beacon.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listBeacons"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listBeacons"))
+              .build();
         }
-     }
-     return getListBeaconsMethod;
+      }
+    }
+    return getListBeaconsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.CopyObjectInput,
@@ -937,22 +909,21 @@ public final class TemplatesGrpc {
     if ((getCopyBeaconMethod = TemplatesGrpc.getCopyBeaconMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCopyBeaconMethod = TemplatesGrpc.getCopyBeaconMethod) == null) {
-          TemplatesGrpc.getCopyBeaconMethod = getCopyBeaconMethod = 
+          TemplatesGrpc.getCopyBeaconMethod = getCopyBeaconMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.CopyObjectInput, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "copyBeacon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyBeacon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.CopyObjectInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyBeacon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyBeacon"))
+              .build();
         }
-     }
-     return getCopyBeaconMethod;
+      }
+    }
+    return getCopyBeaconMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -969,22 +940,21 @@ public final class TemplatesGrpc {
     if ((getDeleteBeaconMethod = TemplatesGrpc.getDeleteBeaconMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getDeleteBeaconMethod = TemplatesGrpc.getDeleteBeaconMethod) == null) {
-          TemplatesGrpc.getDeleteBeaconMethod = getDeleteBeaconMethod = 
+          TemplatesGrpc.getDeleteBeaconMethod = getDeleteBeaconMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "deleteBeacon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteBeacon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteBeacon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteBeacon"))
+              .build();
         }
-     }
-     return getDeleteBeaconMethod;
+      }
+    }
+    return getDeleteBeaconMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -1001,22 +971,21 @@ public final class TemplatesGrpc {
     if ((getCountBeaconsDeprecatedMethod = TemplatesGrpc.getCountBeaconsDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountBeaconsDeprecatedMethod = TemplatesGrpc.getCountBeaconsDeprecatedMethod) == null) {
-          TemplatesGrpc.getCountBeaconsDeprecatedMethod = getCountBeaconsDeprecatedMethod = 
+          TemplatesGrpc.getCountBeaconsDeprecatedMethod = getCountBeaconsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countBeaconsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countBeaconsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countBeaconsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countBeaconsDeprecated"))
+              .build();
         }
-     }
-     return getCountBeaconsDeprecatedMethod;
+      }
+    }
+    return getCountBeaconsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -1033,22 +1002,21 @@ public final class TemplatesGrpc {
     if ((getCountBeaconsMethod = TemplatesGrpc.getCountBeaconsMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountBeaconsMethod = TemplatesGrpc.getCountBeaconsMethod) == null) {
-          TemplatesGrpc.getCountBeaconsMethod = getCountBeaconsMethod = 
+          TemplatesGrpc.getCountBeaconsMethod = getCountBeaconsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countBeacons"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countBeacons"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countBeacons"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countBeacons"))
+              .build();
         }
-     }
-     return getCountBeaconsMethod;
+      }
+    }
+    return getCountBeaconsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Links.Link,
@@ -1065,22 +1033,21 @@ public final class TemplatesGrpc {
     if ((getCreateLinkMethod = TemplatesGrpc.getCreateLinkMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCreateLinkMethod = TemplatesGrpc.getCreateLinkMethod) == null) {
-          TemplatesGrpc.getCreateLinkMethod = getCreateLinkMethod = 
+          TemplatesGrpc.getCreateLinkMethod = getCreateLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Links.Link, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "createLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("createLink"))
+              .build();
         }
-     }
-     return getCreateLinkMethod;
+      }
+    }
+    return getCreateLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Links.Link,
@@ -1097,22 +1064,21 @@ public final class TemplatesGrpc {
     if ((getUpdateLinkMethod = TemplatesGrpc.getUpdateLinkMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getUpdateLinkMethod = TemplatesGrpc.getUpdateLinkMethod) == null) {
-          TemplatesGrpc.getUpdateLinkMethod = getUpdateLinkMethod = 
+          TemplatesGrpc.getUpdateLinkMethod = getUpdateLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Links.Link, com.passkit.grpc.Links.Link>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "updateLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("updateLink"))
+              .build();
         }
-     }
-     return getUpdateLinkMethod;
+      }
+    }
+    return getUpdateLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1129,22 +1095,21 @@ public final class TemplatesGrpc {
     if ((getGetLinkMethod = TemplatesGrpc.getGetLinkMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getGetLinkMethod = TemplatesGrpc.getGetLinkMethod) == null) {
-          TemplatesGrpc.getGetLinkMethod = getGetLinkMethod = 
+          TemplatesGrpc.getGetLinkMethod = getGetLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Links.Link>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "getLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("getLink"))
+              .build();
         }
-     }
-     return getGetLinkMethod;
+      }
+    }
+    return getGetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -1161,22 +1126,21 @@ public final class TemplatesGrpc {
     if ((getListLinksDeprecatedMethod = TemplatesGrpc.getListLinksDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListLinksDeprecatedMethod = TemplatesGrpc.getListLinksDeprecatedMethod) == null) {
-          TemplatesGrpc.getListLinksDeprecatedMethod = getListLinksDeprecatedMethod = 
+          TemplatesGrpc.getListLinksDeprecatedMethod = getListLinksDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.Links.Link>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listLinksDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listLinksDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLinksDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLinksDeprecated"))
+              .build();
         }
-     }
-     return getListLinksDeprecatedMethod;
+      }
+    }
+    return getListLinksDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -1193,22 +1157,21 @@ public final class TemplatesGrpc {
     if ((getListLinksMethod = TemplatesGrpc.getListLinksMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getListLinksMethod = TemplatesGrpc.getListLinksMethod) == null) {
-          TemplatesGrpc.getListLinksMethod = getListLinksMethod = 
+          TemplatesGrpc.getListLinksMethod = getListLinksMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.Links.Link>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "listLinks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Links.Link.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLinks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("listLinks"))
+              .build();
         }
-     }
-     return getListLinksMethod;
+      }
+    }
+    return getListLinksMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Template.CopyObjectInput,
@@ -1225,22 +1188,21 @@ public final class TemplatesGrpc {
     if ((getCopyLinkMethod = TemplatesGrpc.getCopyLinkMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCopyLinkMethod = TemplatesGrpc.getCopyLinkMethod) == null) {
-          TemplatesGrpc.getCopyLinkMethod = getCopyLinkMethod = 
+          TemplatesGrpc.getCopyLinkMethod = getCopyLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Template.CopyObjectInput, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "copyLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Template.CopyObjectInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("copyLink"))
+              .build();
         }
-     }
-     return getCopyLinkMethod;
+      }
+    }
+    return getCopyLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1257,22 +1219,21 @@ public final class TemplatesGrpc {
     if ((getDeleteLinkMethod = TemplatesGrpc.getDeleteLinkMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getDeleteLinkMethod = TemplatesGrpc.getDeleteLinkMethod) == null) {
-          TemplatesGrpc.getDeleteLinkMethod = getDeleteLinkMethod = 
+          TemplatesGrpc.getDeleteLinkMethod = getDeleteLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "deleteLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("deleteLink"))
+              .build();
         }
-     }
-     return getDeleteLinkMethod;
+      }
+    }
+    return getDeleteLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -1289,22 +1250,21 @@ public final class TemplatesGrpc {
     if ((getCountLinksDeprecatedMethod = TemplatesGrpc.getCountLinksDeprecatedMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountLinksDeprecatedMethod = TemplatesGrpc.getCountLinksDeprecatedMethod) == null) {
-          TemplatesGrpc.getCountLinksDeprecatedMethod = getCountLinksDeprecatedMethod = 
+          TemplatesGrpc.getCountLinksDeprecatedMethod = getCountLinksDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countLinksDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countLinksDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLinksDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLinksDeprecated"))
+              .build();
         }
-     }
-     return getCountLinksDeprecatedMethod;
+      }
+    }
+    return getCountLinksDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -1321,29 +1281,35 @@ public final class TemplatesGrpc {
     if ((getCountLinksMethod = TemplatesGrpc.getCountLinksMethod) == null) {
       synchronized (TemplatesGrpc.class) {
         if ((getCountLinksMethod = TemplatesGrpc.getCountLinksMethod) == null) {
-          TemplatesGrpc.getCountLinksMethod = getCountLinksMethod = 
+          TemplatesGrpc.getCountLinksMethod = getCountLinksMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Templates", "countLinks"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countLinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLinks"))
-                  .build();
-          }
+              .setSchemaDescriptor(new TemplatesMethodDescriptorSupplier("countLinks"))
+              .build();
         }
-     }
-     return getCountLinksMethod;
+      }
+    }
+    return getCountLinksMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static TemplatesStub newStub(io.grpc.Channel channel) {
-    return new TemplatesStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TemplatesStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TemplatesStub>() {
+        @java.lang.Override
+        public TemplatesStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TemplatesStub(channel, callOptions);
+        }
+      };
+    return TemplatesStub.newStub(factory, channel);
   }
 
   /**
@@ -1351,7 +1317,14 @@ public final class TemplatesGrpc {
    */
   public static TemplatesBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new TemplatesBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TemplatesBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TemplatesBlockingStub>() {
+        @java.lang.Override
+        public TemplatesBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TemplatesBlockingStub(channel, callOptions);
+        }
+      };
+    return TemplatesBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1359,7 +1332,14 @@ public final class TemplatesGrpc {
    */
   public static TemplatesFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new TemplatesFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TemplatesFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TemplatesFutureStub>() {
+        @java.lang.Override
+        public TemplatesFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TemplatesFutureStub(channel, callOptions);
+        }
+      };
+    return TemplatesFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -1948,19 +1928,15 @@ public final class TemplatesGrpc {
 
   /**
    */
-  public static final class TemplatesStub extends io.grpc.stub.AbstractStub<TemplatesStub> {
-    private TemplatesStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TemplatesStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TemplatesStub extends io.grpc.stub.AbstractAsyncStub<TemplatesStub> {
+    private TemplatesStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TemplatesStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TemplatesStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TemplatesStub(channel, callOptions);
     }
 
@@ -2295,19 +2271,15 @@ public final class TemplatesGrpc {
 
   /**
    */
-  public static final class TemplatesBlockingStub extends io.grpc.stub.AbstractStub<TemplatesBlockingStub> {
-    private TemplatesBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TemplatesBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TemplatesBlockingStub extends io.grpc.stub.AbstractBlockingStub<TemplatesBlockingStub> {
+    private TemplatesBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TemplatesBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TemplatesBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TemplatesBlockingStub(channel, callOptions);
     }
 
@@ -2611,19 +2583,15 @@ public final class TemplatesGrpc {
 
   /**
    */
-  public static final class TemplatesFutureStub extends io.grpc.stub.AbstractStub<TemplatesFutureStub> {
-    private TemplatesFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private TemplatesFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class TemplatesFutureStub extends io.grpc.stub.AbstractFutureStub<TemplatesFutureStub> {
+    private TemplatesFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected TemplatesFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected TemplatesFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new TemplatesFutureStub(channel, callOptions);
     }
 

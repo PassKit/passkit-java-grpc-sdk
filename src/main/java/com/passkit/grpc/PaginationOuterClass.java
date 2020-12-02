@@ -3042,23 +3042,23 @@ public final class PaginationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032io/common/pagination.proto\022\002io\032,protoc" +
-      "-gen-swagger/options/annotations.proto\"\340" +
-      "\001\n\nPagination\022\r\n\005limit\030\001 \001(\005\022\016\n\006offset\030\002" +
-      " \001(\005\022\023\n\013filterField\030\003 \003(\t\022\023\n\013filterValue" +
-      "\030\004 \003(\t\022\026\n\016filterOperator\030\005 \003(\t\022\017\n\007orderB" +
-      "y\030\006 \001(\t\022\020\n\010orderAsc\030\007 \001(\010:N\222AK\nI*\nPagina" +
-      "tion2;Pagination object used to split co" +
-      "ntent into smaller parts.\"J\n\006Filter\022\023\n\013f" +
-      "ilterField\030\001 \003(\t\022\023\n\013filterValue\030\002 \003(\t\022\026\n" +
-      "\016filterOperator\030\003 \003(\tBG\n\020com.passkit.grp" +
-      "cZ$stash.passkit.com/io/model/sdk/go/io\252" +
-      "\002\014PassKit.GRPCb\006proto3"
+      "\n\032io/common/pagination.proto\022\002io\032.protoc" +
+      "-gen-openapiv2/options/annotations.proto" +
+      "\"\340\001\n\nPagination\022\r\n\005limit\030\001 \001(\005\022\016\n\006offset" +
+      "\030\002 \001(\005\022\023\n\013filterField\030\003 \003(\t\022\023\n\013filterVal" +
+      "ue\030\004 \003(\t\022\026\n\016filterOperator\030\005 \003(\t\022\017\n\007orde" +
+      "rBy\030\006 \001(\t\022\020\n\010orderAsc\030\007 \001(\010:N\222AK\nI*\nPagi" +
+      "nation2;Pagination object used to split " +
+      "content into smaller parts.\"J\n\006Filter\022\023\n" +
+      "\013filterField\030\001 \003(\t\022\023\n\013filterValue\030\002 \003(\t\022" +
+      "\026\n\016filterOperator\030\003 \003(\tBG\n\020com.passkit.g" +
+      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
+      "o\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_Pagination_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3074,10 +3074,10 @@ public final class PaginationOuterClass {
         new java.lang.String[] { "FilterField", "FilterValue", "FilterOperator", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

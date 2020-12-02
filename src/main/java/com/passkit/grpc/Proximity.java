@@ -83,7 +83,7 @@ public final class Proximity {
      * Major indicator.
      * </pre>
      *
-     * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The major.
      */
     int getMajor();
@@ -93,7 +93,7 @@ public final class Proximity {
      * Minor indicator.
      * </pre>
      *
-     * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The minor.
      */
     int getMinor();
@@ -437,7 +437,7 @@ public final class Proximity {
      * Major indicator.
      * </pre>
      *
-     * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The major.
      */
     @java.lang.Override
@@ -452,7 +452,7 @@ public final class Proximity {
      * Minor indicator.
      * </pre>
      *
-     * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The minor.
      */
     @java.lang.Override
@@ -1291,7 +1291,7 @@ public final class Proximity {
        * Major indicator.
        * </pre>
        *
-       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The major.
        */
       @java.lang.Override
@@ -1303,7 +1303,7 @@ public final class Proximity {
        * Major indicator.
        * </pre>
        *
-       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The major to set.
        * @return This builder for chaining.
        */
@@ -1318,7 +1318,7 @@ public final class Proximity {
        * Major indicator.
        * </pre>
        *
-       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 major = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearMajor() {
@@ -1334,7 +1334,7 @@ public final class Proximity {
        * Minor indicator.
        * </pre>
        *
-       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The minor.
        */
       @java.lang.Override
@@ -1346,7 +1346,7 @@ public final class Proximity {
        * Minor indicator.
        * </pre>
        *
-       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The minor to set.
        * @return This builder for chaining.
        */
@@ -1361,7 +1361,7 @@ public final class Proximity {
        * Minor indicator.
        * </pre>
        *
-       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 minor = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearMinor() {
@@ -3869,38 +3869,38 @@ public final class Proximity {
   static {
     java.lang.String[] descriptorData = {
       "\n\031io/common/proximity.proto\022\002io\032\034io/comm" +
-      "on/localization.proto\032,protoc-gen-swagge" +
-      "r/options/annotations.proto\"\247\003\n\006Beacon\022\n" +
-      "\n\002id\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\033" +
-      "\n\005major\030\004 \001(\rB\014\222A\tY\000\000\000\000\340\377\357@\022\033\n\005minor\030\005 \001" +
-      "(\rB\014\222A\tY\000\000\000\000\340\377\357@\022\031\n\021lockScreenMessage\030\006 " +
+      "on/localization.proto\032.protoc-gen-openap" +
+      "iv2/options/annotations.proto\"\247\003\n\006Beacon" +
+      "\022\n\n\002id\030\001 \001(\t\022\014\n\004uuid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t" +
+      "\022\033\n\005major\030\004 \001(\rB\014\222A\tY\000\000\000\000\340\377\357@\022\033\n\005minor\030\005" +
+      " \001(\rB\014\222A\tY\000\000\000\000\340\377\357@\022\031\n\021lockScreenMessage\030" +
+      "\006 \001(\t\0227\n\032localizedLockScreenMessage\030\007 \001(" +
+      "\0132\023.io.LocalizedString\022\020\n\010position\030\010 \001(\r" +
+      ":\324\001\222A\320\001\n\315\001*\006Beacon2\247\001A beacon record ena" +
+      "bles the pass to push a message to the l" +
+      "ock screen when the user is in close pro" +
+      "ximity with the beacon. Beacons are curr" +
+      "ently only supported by iOS.\322\001\004uuid\322\001\021lo" +
+      "ckScreenMessage\"\224\003\n\013GPSLocation\022\n\n\002id\030\001 " +
+      "\001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003lat\030\003 \001(\001\022\013\n\003lon\030\004 " +
+      "\001(\001\022\013\n\003alt\030\005 \001(\005\022\031\n\021lockScreenMessage\030\006 " +
       "\001(\t\0227\n\032localizedLockScreenMessage\030\007 \001(\0132" +
-      "\023.io.LocalizedString\022\020\n\010position\030\010 \001(\r:\324" +
-      "\001\222A\320\001\n\315\001*\006Beacon2\247\001A beacon record enabl" +
-      "es the pass to push a message to the loc" +
-      "k screen when the user is in close proxi" +
-      "mity with the beacon. Beacons are curren" +
-      "tly only supported by iOS.\322\001\004uuid\322\001\021lock" +
-      "ScreenMessage\"\224\003\n\013GPSLocation\022\n\n\002id\030\001 \001(" +
-      "\t\022\014\n\004name\030\002 \001(\t\022\013\n\003lat\030\003 \001(\001\022\013\n\003lon\030\004 \001(" +
-      "\001\022\013\n\003alt\030\005 \001(\005\022\031\n\021lockScreenMessage\030\006 \001(" +
-      "\t\0227\n\032localizedLockScreenMessage\030\007 \001(\0132\023." +
-      "io.LocalizedString\022\020\n\010position\030\010 \001(\r:\335\001\222" +
-      "A\331\001\n\326\001*\014GPS Location2\244\001A location record" +
-      " enables the pass to be pushed to the lo" +
-      "ck screen when the user is in near the l" +
-      "ocation. For iOS users, a customized mes" +
-      "sage can also be displayed.\322\001\003lat\322\001\004long" +
-      "\322\001\021lockScreenMessage\"!\n\014RelevantDate\022\021\n\t" +
-      "timestamp\030\001 \001(\rBG\n\020com.passkit.grpcZ$sta" +
-      "sh.passkit.com/io/model/sdk/go/io\252\002\014Pass" +
-      "Kit.GRPCb\006proto3"
+      "\023.io.LocalizedString\022\020\n\010position\030\010 \001(\r:\335" +
+      "\001\222A\331\001\n\326\001*\014GPS Location2\244\001A location reco" +
+      "rd enables the pass to be pushed to the " +
+      "lock screen when the user is in near the" +
+      " location. For iOS users, a customized m" +
+      "essage can also be displayed.\322\001\003lat\322\001\004lo" +
+      "ng\322\001\021lockScreenMessage\"!\n\014RelevantDate\022\021" +
+      "\n\ttimestamp\030\001 \001(\rBG\n\020com.passkit.grpcZ$s" +
+      "tash.passkit.com/io/model/sdk/go/io\252\002\014Pa" +
+      "ssKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_Beacon_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3922,12 +3922,12 @@ public final class Proximity {
         new java.lang.String[] { "Timestamp", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Localization.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

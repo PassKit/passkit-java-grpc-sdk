@@ -8390,7 +8390,7 @@ public final class Certificate {
       "ntialsRequest\022\020\n\010password\030\001 \001(\t\022\024\n\014priva" +
       "teKeyId\030\002 \001(\tBG\n\020com.passkit.grpcZ$stash" +
       ".passkit.com/io/model/sdk/go/io\252\002\014PassKi" +
-      "t.GRPCb\006proto3"
+      "t.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -1816,7 +1816,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return A list containing the baggageTagNumber.
      */
     java.util.List<java.lang.String>
@@ -1826,7 +1826,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The count of baggageTagNumber.
      */
     int getBaggageTagNumberCount();
@@ -1835,7 +1835,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The baggageTagNumber at the given index.
      */
@@ -1845,7 +1845,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the baggageTagNumber at the given index.
      */
@@ -2298,7 +2298,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return A list containing the baggageTagNumber.
      */
     public com.google.protobuf.ProtocolStringList
@@ -2310,7 +2310,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The count of baggageTagNumber.
      */
     public int getBaggageTagNumberCount() {
@@ -2321,7 +2321,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The baggageTagNumber at the given index.
      */
@@ -2333,7 +2333,7 @@ public final class Barcode {
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
      * </pre>
      *
-     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the baggageTagNumber at the given index.
      */
@@ -3509,7 +3509,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return A list containing the baggageTagNumber.
        */
       public com.google.protobuf.ProtocolStringList
@@ -3521,7 +3521,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The count of baggageTagNumber.
        */
       public int getBaggageTagNumberCount() {
@@ -3532,7 +3532,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param index The index of the element to return.
        * @return The baggageTagNumber at the given index.
        */
@@ -3544,7 +3544,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the baggageTagNumber at the given index.
        */
@@ -3557,7 +3557,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The baggageTagNumber to set.
        * @return This builder for chaining.
@@ -3577,7 +3577,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The baggageTagNumber to add.
        * @return This builder for chaining.
        */
@@ -3596,7 +3596,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param values The baggageTagNumber to add.
        * @return This builder for chaining.
        */
@@ -3613,7 +3613,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearBaggageTagNumber() {
@@ -3627,7 +3627,7 @@ public final class Barcode {
        * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
        * </pre>
        *
-       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated string baggageTagNumber = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes of the baggageTagNumber to add.
        * @return This builder for chaining.
        */
@@ -4006,68 +4006,68 @@ public final class Barcode {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/flights/barcode.proto\022\007flights\032\036io/" +
-      "common/common_objects.proto\032,protoc-gen-" +
-      "swagger/options/annotations.proto\"\302\010\n\020Co" +
-      "nditionalItems\022;\n\024passengerDescription\030\001" +
-      " \001(\0162\035.flights.PassengerDescription\022&\n\rc" +
-      "heckInSource\030\002 \001(\0162\017.flights.Source\0223\n\032b" +
-      "oardingPassIssuanceSource\030\003 \001(\0162\017.flight" +
-      "s.Source\022\'\n\025boardingPassIssueDate\030\004 \001(\0132" +
-      "\010.io.Date\022&\n\014documentType\030\005 \001(\0162\020.flight" +
-      "s.DocType\022\032\n\022boardingPassIssuer\030\006 \001(\t\022\314\004" +
-      "\n\020baggageTagNumber\030\007 \003(\tB\261\004\222A\255\0042\252\004This f" +
-      "ield allows carriers to populate baggage" +
-      " tag numbers and the number of consecuti" +
-      "ve bags. It contains 13 characters corre" +
-      "sponding to the 10 digit bag tag number," +
-      " as per IATA BCM specifications, Resolut" +
-      "ion 740 and 3 digits identifying the num" +
-      "ber of consecutive tags.\n1: leading digi" +
-      "t \342\200\223 0 for interline tag, 1 for fall-ba" +
-      "ck tag, 2 for interline rush tag.\n2-4: c" +
-      "arrier numeric code.\n5-10: carrier initi" +
-      "al tag number (leading zeros).\n11-13: nu" +
-      "mber of consecutive tags (allows for up " +
-      "to 999 tags).\nUp to 2 additional, non-co" +
-      "nsecutive tags can be added.\0225\n\021selectee" +
-      "Indicator\030\010 \001(\0162\032.flights.SelecteeIndica" +
-      "tor\022K\n\034internationalDocVerification\030\t \001(" +
-      "\0162%.flights.InternationalDocVerification" +
-      "\022-\n\ridadIndicator\030\n \001(\0162\026.flights.IDADIn" +
-      "dicator\022%\n\tfastTrack\030\013 \001(\0162\022.flights.Fas" +
-      "tTrack*\357\002\n\017PassengerStatus\022\031\n\025ISSUED_NOT" +
-      "_CHECKED_IN\020\000\022\025\n\021ISSUED_CHECKED_IN\020\001\022,\n(" +
-      "BAGGAGE_CHECKED_PASSENGER_NOT_CHECKED_IN" +
-      "\020\002\022(\n$BAGGAGE_CHECKED_PASSENGER_CHECKED_" +
-      "IN\020\003\022#\n\037PASSENGER_PASSED_SECURITY_CHECK\020" +
-      "\004\022\031\n\025PASSENGER_PASSED_GATE\020\005\022\013\n\007TRANSIT\020" +
-      "\006\022\013\n\007STANDBY\020\007\022#\n\037BOARDING_DATA_REVALIDA" +
-      "TION_DONE\020\010\0222\n.ORIGINAL_BOARDING_LINE_US" +
-      "ED_AT_TICKET_ISSUANCE\020\t\022\037\n\033UP_OR_DOWN_GR" +
-      "ADING_REQUIRED\020\n*\220\001\n\024PassengerDescriptio" +
-      "n\022\t\n\005ADULT\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\022\t\n\005CH" +
-      "ILD\020\003\022\n\n\006INFANT\020\004\022\020\n\014NO_PASSENGER\020\005\022\025\n\021A" +
-      "DULT_WITH_INFANT\020\006\022\027\n\023UNACCOMPANIED_MINO" +
-      "R\020\007*@\n\006Source\022\005\n\001W\020\000\022\005\n\001K\020\001\022\005\n\001X\020\002\022\005\n\001R\020" +
-      "\003\022\005\n\001M\020\004\022\005\n\001O\020\005\022\005\n\001T\020\006\022\005\n\001V\020\007*\027\n\007DocType" +
-      "\022\005\n\001B\020\000\022\005\n\001I\020\001*M\n\034InternationalDocVerifi" +
-      "cation\022\020\n\014NOT_REQUIRED\020\000\022\014\n\010REQUIRED\020\001\022\r" +
-      "\n\tCOMPLETED\020\002*\253\001\n\rIDADIndicator\022\010\n\004NONE\020" +
-      "\000\022\010\n\004IDN1\020\001\022\010\n\004IDN2\020\002\022\010\n\004IDB1\020\003\022\010\n\004IDB2\020" +
-      "\004\022\006\n\002AD\020\005\022\006\n\002DG\020\006\022\006\n\002DM\020\007\022\006\n\002GE\020\010\022\006\n\002IG\020" +
-      "\t\022\006\n\002RG\020\n\022\006\n\002UD\020\013\022\006\n\002ID\020\014\022\t\n\005IDFS1\020\r\022\t\n\005" +
-      "IDFS2\020\016\022\010\n\004IDR1\020\017\022\010\n\004IDR2\020\020*E\n\021SelecteeI" +
-      "ndicator\022\020\n\014NOT_SELECTEE\020\000\022\014\n\010SELECTEE\020\001" +
-      "\022\020\n\014TSA_PRECHECK\020\003*\031\n\tFastTrack\022\005\n\001N\020\000\022\005" +
-      "\n\001Y\020\001BT\n\030com.passkit.grpc.FlightsZ,stash" +
-      ".passkit.com/io/model/sdk/go/io/flights\252" +
-      "\002\tPKFlightsb\006proto3"
+      "common/common_objects.proto\032.protoc-gen-" +
+      "openapiv2/options/annotations.proto\"\302\010\n\020" +
+      "ConditionalItems\022;\n\024passengerDescription" +
+      "\030\001 \001(\0162\035.flights.PassengerDescription\022&\n" +
+      "\rcheckInSource\030\002 \001(\0162\017.flights.Source\0223\n" +
+      "\032boardingPassIssuanceSource\030\003 \001(\0162\017.flig" +
+      "hts.Source\022\'\n\025boardingPassIssueDate\030\004 \001(" +
+      "\0132\010.io.Date\022&\n\014documentType\030\005 \001(\0162\020.flig" +
+      "hts.DocType\022\032\n\022boardingPassIssuer\030\006 \001(\t\022" +
+      "\314\004\n\020baggageTagNumber\030\007 \003(\tB\261\004\222A\255\0042\252\004This" +
+      " field allows carriers to populate bagga" +
+      "ge tag numbers and the number of consecu" +
+      "tive bags. It contains 13 characters cor" +
+      "responding to the 10 digit bag tag numbe" +
+      "r, as per IATA BCM specifications, Resol" +
+      "ution 740 and 3 digits identifying the n" +
+      "umber of consecutive tags.\n1: leading di" +
+      "git \342\200\223 0 for interline tag, 1 for fall-" +
+      "back tag, 2 for interline rush tag.\n2-4:" +
+      " carrier numeric code.\n5-10: carrier ini" +
+      "tial tag number (leading zeros).\n11-13: " +
+      "number of consecutive tags (allows for u" +
+      "p to 999 tags).\nUp to 2 additional, non-" +
+      "consecutive tags can be added.\0225\n\021select" +
+      "eeIndicator\030\010 \001(\0162\032.flights.SelecteeIndi" +
+      "cator\022K\n\034internationalDocVerification\030\t " +
+      "\001(\0162%.flights.InternationalDocVerificati" +
+      "on\022-\n\ridadIndicator\030\n \001(\0162\026.flights.IDAD" +
+      "Indicator\022%\n\tfastTrack\030\013 \001(\0162\022.flights.F" +
+      "astTrack*\357\002\n\017PassengerStatus\022\031\n\025ISSUED_N" +
+      "OT_CHECKED_IN\020\000\022\025\n\021ISSUED_CHECKED_IN\020\001\022," +
+      "\n(BAGGAGE_CHECKED_PASSENGER_NOT_CHECKED_" +
+      "IN\020\002\022(\n$BAGGAGE_CHECKED_PASSENGER_CHECKE" +
+      "D_IN\020\003\022#\n\037PASSENGER_PASSED_SECURITY_CHEC" +
+      "K\020\004\022\031\n\025PASSENGER_PASSED_GATE\020\005\022\013\n\007TRANSI" +
+      "T\020\006\022\013\n\007STANDBY\020\007\022#\n\037BOARDING_DATA_REVALI" +
+      "DATION_DONE\020\010\0222\n.ORIGINAL_BOARDING_LINE_" +
+      "USED_AT_TICKET_ISSUANCE\020\t\022\037\n\033UP_OR_DOWN_" +
+      "GRADING_REQUIRED\020\n*\220\001\n\024PassengerDescript" +
+      "ion\022\t\n\005ADULT\020\000\022\010\n\004MALE\020\001\022\n\n\006FEMALE\020\002\022\t\n\005" +
+      "CHILD\020\003\022\n\n\006INFANT\020\004\022\020\n\014NO_PASSENGER\020\005\022\025\n" +
+      "\021ADULT_WITH_INFANT\020\006\022\027\n\023UNACCOMPANIED_MI" +
+      "NOR\020\007*@\n\006Source\022\005\n\001W\020\000\022\005\n\001K\020\001\022\005\n\001X\020\002\022\005\n\001" +
+      "R\020\003\022\005\n\001M\020\004\022\005\n\001O\020\005\022\005\n\001T\020\006\022\005\n\001V\020\007*\027\n\007DocTy" +
+      "pe\022\005\n\001B\020\000\022\005\n\001I\020\001*M\n\034InternationalDocVeri" +
+      "fication\022\020\n\014NOT_REQUIRED\020\000\022\014\n\010REQUIRED\020\001" +
+      "\022\r\n\tCOMPLETED\020\002*\253\001\n\rIDADIndicator\022\010\n\004NON" +
+      "E\020\000\022\010\n\004IDN1\020\001\022\010\n\004IDN2\020\002\022\010\n\004IDB1\020\003\022\010\n\004IDB" +
+      "2\020\004\022\006\n\002AD\020\005\022\006\n\002DG\020\006\022\006\n\002DM\020\007\022\006\n\002GE\020\010\022\006\n\002I" +
+      "G\020\t\022\006\n\002RG\020\n\022\006\n\002UD\020\013\022\006\n\002ID\020\014\022\t\n\005IDFS1\020\r\022\t" +
+      "\n\005IDFS2\020\016\022\010\n\004IDR1\020\017\022\010\n\004IDR2\020\020*E\n\021Selecte" +
+      "eIndicator\022\020\n\014NOT_SELECTEE\020\000\022\014\n\010SELECTEE" +
+      "\020\001\022\020\n\014TSA_PRECHECK\020\003*\031\n\tFastTrack\022\005\n\001N\020\000" +
+      "\022\005\n\001Y\020\001B_\n\030com.passkit.grpc.FlightsZ,sta" +
+      "sh.passkit.com/io/model/sdk/go/io/flight" +
+      "s\252\002\024PassKit.Grpc.Flightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.CommonObjects.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_ConditionalItems_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4077,11 +4077,11 @@ public final class Barcode {
         new java.lang.String[] { "PassengerDescription", "CheckInSource", "BoardingPassIssuanceSource", "BoardingPassIssueDate", "DocumentType", "BoardingPassIssuer", "BaggageTagNumber", "SelecteeIndicator", "InternationalDocVerification", "IdadIndicator", "FastTrack", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.CommonObjects.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/analytics/a_rpc.proto")
 public final class AnalyticsGrpc {
 
@@ -41,29 +41,35 @@ public final class AnalyticsGrpc {
     if ((getGetAnalyticsMethod = AnalyticsGrpc.getGetAnalyticsMethod) == null) {
       synchronized (AnalyticsGrpc.class) {
         if ((getGetAnalyticsMethod = AnalyticsGrpc.getGetAnalyticsMethod) == null) {
-          AnalyticsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod = 
+          AnalyticsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Reporting.AnalyticsRequest, com.passkit.grpc.Reporting.AnalyticsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "analytics.Analytics", "getAnalytics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnalytics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Reporting.AnalyticsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Reporting.AnalyticsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new AnalyticsMethodDescriptorSupplier("getAnalytics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new AnalyticsMethodDescriptorSupplier("getAnalytics"))
+              .build();
         }
-     }
-     return getGetAnalyticsMethod;
+      }
+    }
+    return getGetAnalyticsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static AnalyticsStub newStub(io.grpc.Channel channel) {
-    return new AnalyticsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnalyticsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnalyticsStub>() {
+        @java.lang.Override
+        public AnalyticsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnalyticsStub(channel, callOptions);
+        }
+      };
+    return AnalyticsStub.newStub(factory, channel);
   }
 
   /**
@@ -71,7 +77,14 @@ public final class AnalyticsGrpc {
    */
   public static AnalyticsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new AnalyticsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnalyticsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnalyticsBlockingStub>() {
+        @java.lang.Override
+        public AnalyticsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnalyticsBlockingStub(channel, callOptions);
+        }
+      };
+    return AnalyticsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -79,7 +92,14 @@ public final class AnalyticsGrpc {
    */
   public static AnalyticsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new AnalyticsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<AnalyticsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AnalyticsFutureStub>() {
+        @java.lang.Override
+        public AnalyticsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AnalyticsFutureStub(channel, callOptions);
+        }
+      };
+    return AnalyticsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -111,19 +131,15 @@ public final class AnalyticsGrpc {
 
   /**
    */
-  public static final class AnalyticsStub extends io.grpc.stub.AbstractStub<AnalyticsStub> {
-    private AnalyticsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AnalyticsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AnalyticsStub extends io.grpc.stub.AbstractAsyncStub<AnalyticsStub> {
+    private AnalyticsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnalyticsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnalyticsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnalyticsStub(channel, callOptions);
     }
 
@@ -141,19 +157,15 @@ public final class AnalyticsGrpc {
 
   /**
    */
-  public static final class AnalyticsBlockingStub extends io.grpc.stub.AbstractStub<AnalyticsBlockingStub> {
-    private AnalyticsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AnalyticsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AnalyticsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AnalyticsBlockingStub> {
+    private AnalyticsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnalyticsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnalyticsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnalyticsBlockingStub(channel, callOptions);
     }
 
@@ -170,19 +182,15 @@ public final class AnalyticsGrpc {
 
   /**
    */
-  public static final class AnalyticsFutureStub extends io.grpc.stub.AbstractStub<AnalyticsFutureStub> {
-    private AnalyticsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private AnalyticsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class AnalyticsFutureStub extends io.grpc.stub.AbstractFutureStub<AnalyticsFutureStub> {
+    private AnalyticsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected AnalyticsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected AnalyticsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new AnalyticsFutureStub(channel, callOptions);
     }
 

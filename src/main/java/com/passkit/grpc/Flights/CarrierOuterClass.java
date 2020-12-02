@@ -23,7 +23,7 @@ public final class CarrierOuterClass {
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      * </pre>
      *
-     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataCarrierCode.
      */
     java.lang.String getIataCarrierCode();
@@ -32,7 +32,7 @@ public final class CarrierOuterClass {
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      * </pre>
      *
-     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for iataCarrierCode.
      */
     com.google.protobuf.ByteString
@@ -43,7 +43,7 @@ public final class CarrierOuterClass {
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      * </pre>
      *
-     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The icaoCarrierCode.
      */
     java.lang.String getIcaoCarrierCode();
@@ -52,7 +52,7 @@ public final class CarrierOuterClass {
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      * </pre>
      *
-     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for icaoCarrierCode.
      */
     com.google.protobuf.ByteString
@@ -63,7 +63,7 @@ public final class CarrierOuterClass {
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      * </pre>
      *
-     * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataAccountingCode.
      */
     int getIataAccountingCode();
@@ -296,7 +296,7 @@ public final class CarrierOuterClass {
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      * </pre>
      *
-     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataCarrierCode.
      */
     @java.lang.Override
@@ -317,7 +317,7 @@ public final class CarrierOuterClass {
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
      * </pre>
      *
-     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for iataCarrierCode.
      */
     @java.lang.Override
@@ -342,7 +342,7 @@ public final class CarrierOuterClass {
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      * </pre>
      *
-     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The icaoCarrierCode.
      */
     @java.lang.Override
@@ -363,7 +363,7 @@ public final class CarrierOuterClass {
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
      * </pre>
      *
-     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for icaoCarrierCode.
      */
     @java.lang.Override
@@ -388,7 +388,7 @@ public final class CarrierOuterClass {
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
      * </pre>
      *
-     * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The iataAccountingCode.
      */
     @java.lang.Override
@@ -999,7 +999,7 @@ public final class CarrierOuterClass {
        * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
        * </pre>
        *
-       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The iataCarrierCode.
        */
       public java.lang.String getIataCarrierCode() {
@@ -1019,7 +1019,7 @@ public final class CarrierOuterClass {
        * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
        * </pre>
        *
-       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for iataCarrierCode.
        */
       public com.google.protobuf.ByteString
@@ -1040,7 +1040,7 @@ public final class CarrierOuterClass {
        * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
        * </pre>
        *
-       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The iataCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -1059,7 +1059,7 @@ public final class CarrierOuterClass {
        * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
        * </pre>
        *
-       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIataCarrierCode() {
@@ -1073,7 +1073,7 @@ public final class CarrierOuterClass {
        * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
        * </pre>
        *
-       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string iataCarrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for iataCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -1095,7 +1095,7 @@ public final class CarrierOuterClass {
        * The ICAO carrier code. Required if an iataCarrierCode is not provided.
        * </pre>
        *
-       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The icaoCarrierCode.
        */
       public java.lang.String getIcaoCarrierCode() {
@@ -1115,7 +1115,7 @@ public final class CarrierOuterClass {
        * The ICAO carrier code. Required if an iataCarrierCode is not provided.
        * </pre>
        *
-       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for icaoCarrierCode.
        */
       public com.google.protobuf.ByteString
@@ -1136,7 +1136,7 @@ public final class CarrierOuterClass {
        * The ICAO carrier code. Required if an iataCarrierCode is not provided.
        * </pre>
        *
-       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The icaoCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -1155,7 +1155,7 @@ public final class CarrierOuterClass {
        * The ICAO carrier code. Required if an iataCarrierCode is not provided.
        * </pre>
        *
-       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIcaoCarrierCode() {
@@ -1169,7 +1169,7 @@ public final class CarrierOuterClass {
        * The ICAO carrier code. Required if an iataCarrierCode is not provided.
        * </pre>
        *
-       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string icaoCarrierCode = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for icaoCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -1191,7 +1191,7 @@ public final class CarrierOuterClass {
        * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
        * </pre>
        *
-       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The iataAccountingCode.
        */
       @java.lang.Override
@@ -1203,7 +1203,7 @@ public final class CarrierOuterClass {
        * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
        * </pre>
        *
-       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The iataAccountingCode to set.
        * @return This builder for chaining.
        */
@@ -1218,7 +1218,7 @@ public final class CarrierOuterClass {
        * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
        * </pre>
        *
-       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>int32 iataAccountingCode = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIataAccountingCode() {
@@ -2355,32 +2355,32 @@ public final class CarrierOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/flights/carrier.proto\022\007flights\032\034io/" +
-      "common/localization.proto\032,protoc-gen-sw" +
-      "agger/options/annotations.proto\"\257\004\n\007Carr" +
-      "ier\022,\n\017iataCarrierCode\030\001 \001(\tB\023\222A\020\212\001\r^[A-" +
-      "Z0-9]{2}$\022,\n\017icaoCarrierCode\030\002 \001(\tB\023\222A\020\212" +
-      "\001\r^[A-Z0-9]{3}$\022(\n\022iataAccountingCode\030\003 " +
-      "\001(\005B\014\222A\tY\000\000\000\000\0008\217@\022\023\n\013airlineName\030\004 \001(\t\0221" +
-      "\n\024localizedAirlineName\030\005 \001(\0132\023.io.Locali" +
-      "zedString\022\032\n\022passTypeIdentifier\030\006 \001(\t\022\024\n" +
-      "\014privateKeyId\030\007 \001(\t:\243\002\222A\237\002\n\234\002*\007Carrier2\333" +
-      "\001A carrier record contains details of th" +
-      "e carrier.  The carrier will be the issu" +
-      "er of the boarding pass and may be used " +
-      "as a marketing or operating carrier.  Al" +
-      "l marketing and operating carriers requi" +
-      "re a Carrier record.\322\001\017iataCarrierCode\322\001" +
-      "\013airlineName\322\001\022passTypeIdentifier\"\"\n\013Car" +
-      "rierCode\022\023\n\013carrierCode\030\001 \001(\tBT\n\030com.pas" +
-      "skit.grpc.FlightsZ,stash.passkit.com/io/" +
-      "model/sdk/go/io/flights\252\002\tPKFlightsb\006pro" +
-      "to3"
+      "common/localization.proto\032.protoc-gen-op" +
+      "enapiv2/options/annotations.proto\"\257\004\n\007Ca" +
+      "rrier\022,\n\017iataCarrierCode\030\001 \001(\tB\023\222A\020\212\001\r^[" +
+      "A-Z0-9]{2}$\022,\n\017icaoCarrierCode\030\002 \001(\tB\023\222A" +
+      "\020\212\001\r^[A-Z0-9]{3}$\022(\n\022iataAccountingCode\030" +
+      "\003 \001(\005B\014\222A\tY\000\000\000\000\0008\217@\022\023\n\013airlineName\030\004 \001(\t" +
+      "\0221\n\024localizedAirlineName\030\005 \001(\0132\023.io.Loca" +
+      "lizedString\022\032\n\022passTypeIdentifier\030\006 \001(\t\022" +
+      "\024\n\014privateKeyId\030\007 \001(\t:\243\002\222A\237\002\n\234\002*\007Carrier" +
+      "2\333\001A carrier record contains details of " +
+      "the carrier.  The carrier will be the is" +
+      "suer of the boarding pass and may be use" +
+      "d as a marketing or operating carrier.  " +
+      "All marketing and operating carriers req" +
+      "uire a Carrier record.\322\001\017iataCarrierCode" +
+      "\322\001\013airlineName\322\001\022passTypeIdentifier\"\"\n\013C" +
+      "arrierCode\022\023\n\013carrierCode\030\001 \001(\tB_\n\030com.p" +
+      "asskit.grpc.FlightsZ,stash.passkit.com/i" +
+      "o/model/sdk/go/io/flights\252\002\024PassKit.Grpc" +
+      ".Flightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_Carrier_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2396,12 +2396,12 @@ public final class CarrierOuterClass {
         new java.lang.String[] { "CarrierCode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Localization.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

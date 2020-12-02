@@ -689,7 +689,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The carrierCode.
      */
     java.lang.String getCarrierCode();
@@ -698,7 +698,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for carrierCode.
      */
     com.google.protobuf.ByteString
@@ -709,7 +709,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.  Note this number must match the carrier code.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The flightNumber.
      */
     java.lang.String getFlightNumber();
@@ -718,7 +718,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.  Note this number must match the carrier code.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for flightNumber.
      */
     com.google.protobuf.ByteString
@@ -766,7 +766,7 @@ public final class FlightDesignatorOuterClass {
      * Setting to false will prevent further flights to be created against this flight number. Will automatically be set to false if a second designator with a validFrom date before the current date and after this designator's validFrom date is found.
      * </pre>
      *
-     * <code>bool active = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>bool active = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The active.
      */
     boolean getActive();
@@ -803,7 +803,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      * </pre>
      *
-     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The operatingCarrierCode.
      */
     java.lang.String getOperatingCarrierCode();
@@ -812,7 +812,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      * </pre>
      *
-     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for operatingCarrierCode.
      */
     com.google.protobuf.ByteString
@@ -823,7 +823,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      * </pre>
      *
-     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The operatingFlightNumber.
      */
     java.lang.String getOperatingFlightNumber();
@@ -832,7 +832,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      * </pre>
      *
-     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for operatingFlightNumber.
      */
     com.google.protobuf.ByteString
@@ -1150,30 +1150,30 @@ public final class FlightDesignatorOuterClass {
 
     /**
      * <pre>
-     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     * Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      * </pre>
      *
-     * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The autoInvalidateAfter.
      */
     int getAutoInvalidateAfter();
 
     /**
      * <pre>
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     * Deprecated: Use InvalidateCancelledPasses.
      * </pre>
      *
-     * <code>bool autoInvalidateCancelledPasses = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
      * @return The autoInvalidateCancelledPasses.
      */
-    boolean getAutoInvalidateCancelledPasses();
+    @java.lang.Deprecated boolean getAutoInvalidateCancelledPasses();
 
     /**
      * <pre>
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.GPSLocation> 
         getLocationMessagesList();
@@ -1182,7 +1182,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocation getLocationMessages(int index);
     /**
@@ -1190,7 +1190,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getLocationMessagesCount();
     /**
@@ -1198,7 +1198,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
         getLocationMessagesOrBuilderList();
@@ -1207,7 +1207,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationMessagesOrBuilder(
         int index);
@@ -1217,7 +1217,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.Beacon> 
         getBeaconMessagesList();
@@ -1226,7 +1226,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.Beacon getBeaconMessages(int index);
     /**
@@ -1234,7 +1234,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getBeaconMessagesCount();
     /**
@@ -1242,7 +1242,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
         getBeaconMessagesOrBuilderList();
@@ -1251,7 +1251,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconMessagesOrBuilder(
         int index);
@@ -1329,6 +1329,25 @@ public final class FlightDesignatorOuterClass {
      */
     com.google.protobuf.ByteString
         getBarcodeAdditionalDataBytes();
+
+    /**
+     * <pre>
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     * </pre>
+     *
+     * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+     * @return The enum numeric value on the wire for invalidateCancelledPasses.
+     */
+    int getInvalidateCancelledPassesValue();
+    /**
+     * <pre>
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     * </pre>
+     *
+     * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+     * @return The invalidateCancelledPasses.
+     */
+    com.passkit.grpc.CommonObjects.Toggle getInvalidateCancelledPasses();
   }
   /**
    * <pre>
@@ -1366,6 +1385,7 @@ public final class FlightDesignatorOuterClass {
       beaconMessages_ = java.util.Collections.emptyList();
       defaultLinks_ = java.util.Collections.emptyList();
       barcodeAdditionalData_ = "";
+      invalidateCancelledPasses_ = 0;
     }
 
     @java.lang.Override
@@ -1599,6 +1619,12 @@ public final class FlightDesignatorOuterClass {
               barcodeAdditionalData_ = s;
               break;
             }
+            case 216: {
+              int rawValue = input.readEnum();
+
+              invalidateCancelledPasses_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1659,7 +1685,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The carrierCode.
      */
     @java.lang.Override
@@ -1680,7 +1706,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for carrierCode.
      */
     @java.lang.Override
@@ -1705,7 +1731,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.  Note this number must match the carrier code.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The flightNumber.
      */
     @java.lang.Override
@@ -1726,7 +1752,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.  Note this number must match the carrier code.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for flightNumber.
      */
     @java.lang.Override
@@ -1804,7 +1830,7 @@ public final class FlightDesignatorOuterClass {
      * Setting to false will prevent further flights to be created against this flight number. Will automatically be set to false if a second designator with a validFrom date before the current date and after this designator's validFrom date is found.
      * </pre>
      *
-     * <code>bool active = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>bool active = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The active.
      */
     @java.lang.Override
@@ -1857,7 +1883,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      * </pre>
      *
-     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The operatingCarrierCode.
      */
     @java.lang.Override
@@ -1878,7 +1904,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
      * </pre>
      *
-     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for operatingCarrierCode.
      */
     @java.lang.Override
@@ -1903,7 +1929,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      * </pre>
      *
-     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The operatingFlightNumber.
      */
     @java.lang.Override
@@ -1924,7 +1950,7 @@ public final class FlightDesignatorOuterClass {
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
      * </pre>
      *
-     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for operatingFlightNumber.
      */
     @java.lang.Override
@@ -2461,10 +2487,10 @@ public final class FlightDesignatorOuterClass {
     private int autoInvalidateAfter_;
     /**
      * <pre>
-     * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+     * Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
      * </pre>
      *
-     * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The autoInvalidateAfter.
      */
     @java.lang.Override
@@ -2476,14 +2502,14 @@ public final class FlightDesignatorOuterClass {
     private boolean autoInvalidateCancelledPasses_;
     /**
      * <pre>
-     * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+     * Deprecated: Use InvalidateCancelledPasses.
      * </pre>
      *
-     * <code>bool autoInvalidateCancelledPasses = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Override
-    public boolean getAutoInvalidateCancelledPasses() {
+    @java.lang.Deprecated public boolean getAutoInvalidateCancelledPasses() {
       return autoInvalidateCancelledPasses_;
     }
 
@@ -2494,7 +2520,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationMessagesList() {
@@ -2505,7 +2531,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
@@ -2517,7 +2543,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getLocationMessagesCount() {
@@ -2528,7 +2554,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocation getLocationMessages(int index) {
@@ -2539,7 +2565,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationMessagesOrBuilder(
@@ -2554,7 +2580,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconMessagesList() {
@@ -2565,7 +2591,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
@@ -2577,7 +2603,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getBeaconMessagesCount() {
@@ -2588,7 +2614,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.Beacon getBeaconMessages(int index) {
@@ -2599,7 +2625,7 @@ public final class FlightDesignatorOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
      * </pre>
      *
-     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconMessagesOrBuilder(
@@ -2728,6 +2754,33 @@ public final class FlightDesignatorOuterClass {
       }
     }
 
+    public static final int INVALIDATECANCELLEDPASSES_FIELD_NUMBER = 27;
+    private int invalidateCancelledPasses_;
+    /**
+     * <pre>
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     * </pre>
+     *
+     * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+     * @return The enum numeric value on the wire for invalidateCancelledPasses.
+     */
+    @java.lang.Override public int getInvalidateCancelledPassesValue() {
+      return invalidateCancelledPasses_;
+    }
+    /**
+     * <pre>
+     * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+     * </pre>
+     *
+     * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+     * @return The invalidateCancelledPasses.
+     */
+    @java.lang.Override public com.passkit.grpc.CommonObjects.Toggle getInvalidateCancelledPasses() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(invalidateCancelledPasses_);
+      return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2824,6 +2877,9 @@ public final class FlightDesignatorOuterClass {
       }
       if (!getBarcodeAdditionalDataBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 26, barcodeAdditionalData_);
+      }
+      if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
+        output.writeEnum(27, invalidateCancelledPasses_);
       }
       unknownFields.writeTo(output);
     }
@@ -2948,6 +3004,10 @@ public final class FlightDesignatorOuterClass {
       if (!getBarcodeAdditionalDataBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, barcodeAdditionalData_);
       }
+      if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(27, invalidateCancelledPasses_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3018,6 +3078,7 @@ public final class FlightDesignatorOuterClass {
           != other.getConditionalItems()) return false;
       if (!getBarcodeAdditionalData()
           .equals(other.getBarcodeAdditionalData())) return false;
+      if (invalidateCancelledPasses_ != other.invalidateCancelledPasses_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3102,6 +3163,8 @@ public final class FlightDesignatorOuterClass {
           getConditionalItems());
       hash = (37 * hash) + BARCODEADDITIONALDATA_FIELD_NUMBER;
       hash = (53 * hash) + getBarcodeAdditionalData().hashCode();
+      hash = (37 * hash) + INVALIDATECANCELLEDPASSES_FIELD_NUMBER;
+      hash = (53 * hash) + invalidateCancelledPasses_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3314,6 +3377,8 @@ public final class FlightDesignatorOuterClass {
 
         barcodeAdditionalData_ = "";
 
+        invalidateCancelledPasses_ = 0;
+
         return this;
       }
 
@@ -3415,6 +3480,7 @@ public final class FlightDesignatorOuterClass {
         }
         result.conditionalItems_ = conditionalItems_;
         result.barcodeAdditionalData_ = barcodeAdditionalData_;
+        result.invalidateCancelledPasses_ = invalidateCancelledPasses_;
         onBuilt();
         return result;
       }
@@ -3648,6 +3714,9 @@ public final class FlightDesignatorOuterClass {
           barcodeAdditionalData_ = other.barcodeAdditionalData_;
           onChanged();
         }
+        if (other.invalidateCancelledPasses_ != 0) {
+          setInvalidateCancelledPassesValue(other.getInvalidateCancelledPassesValue());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3684,7 +3753,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The carrierCode.
        */
       public java.lang.String getCarrierCode() {
@@ -3704,7 +3773,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for carrierCode.
        */
       public com.google.protobuf.ByteString
@@ -3725,7 +3794,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The carrierCode to set.
        * @return This builder for chaining.
        */
@@ -3744,7 +3813,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCarrierCode() {
@@ -3758,7 +3827,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for carrierCode to set.
        * @return This builder for chaining.
        */
@@ -3780,7 +3849,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.  Note this number must match the carrier code.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The flightNumber.
        */
       public java.lang.String getFlightNumber() {
@@ -3800,7 +3869,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.  Note this number must match the carrier code.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for flightNumber.
        */
       public com.google.protobuf.ByteString
@@ -3821,7 +3890,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.  Note this number must match the carrier code.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The flightNumber to set.
        * @return This builder for chaining.
        */
@@ -3840,7 +3909,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.  Note this number must match the carrier code.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearFlightNumber() {
@@ -3854,7 +3923,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.  Note this number must match the carrier code.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for flightNumber to set.
        * @return This builder for chaining.
        */
@@ -4074,7 +4143,7 @@ public final class FlightDesignatorOuterClass {
        * Setting to false will prevent further flights to be created against this flight number. Will automatically be set to false if a second designator with a validFrom date before the current date and after this designator's validFrom date is found.
        * </pre>
        *
-       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The active.
        */
       @java.lang.Override
@@ -4086,7 +4155,7 @@ public final class FlightDesignatorOuterClass {
        * Setting to false will prevent further flights to be created against this flight number. Will automatically be set to false if a second designator with a validFrom date before the current date and after this designator's validFrom date is found.
        * </pre>
        *
-       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The active to set.
        * @return This builder for chaining.
        */
@@ -4101,7 +4170,7 @@ public final class FlightDesignatorOuterClass {
        * Setting to false will prevent further flights to be created against this flight number. Will automatically be set to false if a second designator with a validFrom date before the current date and after this designator's validFrom date is found.
        * </pre>
        *
-       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool active = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearActive() {
@@ -4272,7 +4341,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
        * </pre>
        *
-       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The operatingCarrierCode.
        */
       public java.lang.String getOperatingCarrierCode() {
@@ -4292,7 +4361,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
        * </pre>
        *
-       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for operatingCarrierCode.
        */
       public com.google.protobuf.ByteString
@@ -4313,7 +4382,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
        * </pre>
        *
-       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The operatingCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -4332,7 +4401,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
        * </pre>
        *
-       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearOperatingCarrierCode() {
@@ -4346,7 +4415,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
        * </pre>
        *
-       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingCarrierCode = 7 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for operatingCarrierCode to set.
        * @return This builder for chaining.
        */
@@ -4368,7 +4437,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
        * </pre>
        *
-       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The operatingFlightNumber.
        */
       public java.lang.String getOperatingFlightNumber() {
@@ -4388,7 +4457,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
        * </pre>
        *
-       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for operatingFlightNumber.
        */
       public com.google.protobuf.ByteString
@@ -4409,7 +4478,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
        * </pre>
        *
-       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The operatingFlightNumber to set.
        * @return This builder for chaining.
        */
@@ -4428,7 +4497,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
        * </pre>
        *
-       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearOperatingFlightNumber() {
@@ -4442,7 +4511,7 @@ public final class FlightDesignatorOuterClass {
        * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
        * </pre>
        *
-       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string operatingFlightNumber = 8 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for operatingFlightNumber to set.
        * @return This builder for chaining.
        */
@@ -5715,10 +5784,10 @@ public final class FlightDesignatorOuterClass {
       private int autoInvalidateAfter_ ;
       /**
        * <pre>
-       * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+       * Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
        * </pre>
        *
-       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The autoInvalidateAfter.
        */
       @java.lang.Override
@@ -5727,10 +5796,10 @@ public final class FlightDesignatorOuterClass {
       }
       /**
        * <pre>
-       * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+       * Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
        * </pre>
        *
-       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The autoInvalidateAfter to set.
        * @return This builder for chaining.
        */
@@ -5742,10 +5811,10 @@ public final class FlightDesignatorOuterClass {
       }
       /**
        * <pre>
-       * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter -1 if the pass should not auto invalidate. Default is 48 hours.
+       * Minutes after scheduled arrival time to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
        * </pre>
        *
-       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>uint32 autoInvalidateAfter = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearAutoInvalidateAfter() {
@@ -5758,26 +5827,26 @@ public final class FlightDesignatorOuterClass {
       private boolean autoInvalidateCancelledPasses_ ;
       /**
        * <pre>
-       * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+       * Deprecated: Use InvalidateCancelledPasses.
        * </pre>
        *
-       * <code>bool autoInvalidateCancelledPasses = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
        * @return The autoInvalidateCancelledPasses.
        */
       @java.lang.Override
-      public boolean getAutoInvalidateCancelledPasses() {
+      @java.lang.Deprecated public boolean getAutoInvalidateCancelledPasses() {
         return autoInvalidateCancelledPasses_;
       }
       /**
        * <pre>
-       * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+       * Deprecated: Use InvalidateCancelledPasses.
        * </pre>
        *
-       * <code>bool autoInvalidateCancelledPasses = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
        * @param value The autoInvalidateCancelledPasses to set.
        * @return This builder for chaining.
        */
-      public Builder setAutoInvalidateCancelledPasses(boolean value) {
+      @java.lang.Deprecated public Builder setAutoInvalidateCancelledPasses(boolean value) {
         
         autoInvalidateCancelledPasses_ = value;
         onChanged();
@@ -5785,13 +5854,13 @@ public final class FlightDesignatorOuterClass {
       }
       /**
        * <pre>
-       * Invalidate passes where either the booking or the flight have been cancelled. Default is true.
+       * Deprecated: Use InvalidateCancelledPasses.
        * </pre>
        *
-       * <code>bool autoInvalidateCancelledPasses = 21 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
        * @return This builder for chaining.
        */
-      public Builder clearAutoInvalidateCancelledPasses() {
+      @java.lang.Deprecated public Builder clearAutoInvalidateCancelledPasses() {
         
         autoInvalidateCancelledPasses_ = false;
         onChanged();
@@ -5815,7 +5884,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationMessagesList() {
         if (locationMessagesBuilder_ == null) {
@@ -5829,7 +5898,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getLocationMessagesCount() {
         if (locationMessagesBuilder_ == null) {
@@ -5843,7 +5912,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation getLocationMessages(int index) {
         if (locationMessagesBuilder_ == null) {
@@ -5857,7 +5926,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocationMessages(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -5878,7 +5947,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocationMessages(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -5896,7 +5965,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocationMessages(com.passkit.grpc.Proximity.GPSLocation value) {
         if (locationMessagesBuilder_ == null) {
@@ -5916,7 +5985,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocationMessages(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -5937,7 +6006,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocationMessages(
           com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -5955,7 +6024,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocationMessages(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -5973,7 +6042,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllLocationMessages(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.GPSLocation> values) {
@@ -5992,7 +6061,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearLocationMessages() {
         if (locationMessagesBuilder_ == null) {
@@ -6009,7 +6078,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeLocationMessages(int index) {
         if (locationMessagesBuilder_ == null) {
@@ -6026,7 +6095,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder getLocationMessagesBuilder(
           int index) {
@@ -6037,7 +6106,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationMessagesOrBuilder(
           int index) {
@@ -6051,7 +6120,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
            getLocationMessagesOrBuilderList() {
@@ -6066,7 +6135,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationMessagesBuilder() {
         return getLocationMessagesFieldBuilder().addBuilder(
@@ -6077,7 +6146,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationMessagesBuilder(
           int index) {
@@ -6089,7 +6158,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locationMessages = 22 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation.Builder> 
            getLocationMessagesBuilderList() {
@@ -6127,7 +6196,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconMessagesList() {
         if (beaconMessagesBuilder_ == null) {
@@ -6141,7 +6210,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getBeaconMessagesCount() {
         if (beaconMessagesBuilder_ == null) {
@@ -6155,7 +6224,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon getBeaconMessages(int index) {
         if (beaconMessagesBuilder_ == null) {
@@ -6169,7 +6238,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeaconMessages(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -6190,7 +6259,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeaconMessages(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -6208,7 +6277,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeaconMessages(com.passkit.grpc.Proximity.Beacon value) {
         if (beaconMessagesBuilder_ == null) {
@@ -6228,7 +6297,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeaconMessages(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -6249,7 +6318,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeaconMessages(
           com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -6267,7 +6336,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeaconMessages(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -6285,7 +6354,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllBeaconMessages(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.Beacon> values) {
@@ -6304,7 +6373,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearBeaconMessages() {
         if (beaconMessagesBuilder_ == null) {
@@ -6321,7 +6390,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeBeaconMessages(int index) {
         if (beaconMessagesBuilder_ == null) {
@@ -6338,7 +6407,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder getBeaconMessagesBuilder(
           int index) {
@@ -6349,7 +6418,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconMessagesOrBuilder(
           int index) {
@@ -6363,7 +6432,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
            getBeaconMessagesOrBuilderList() {
@@ -6378,7 +6447,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconMessagesBuilder() {
         return getBeaconMessagesFieldBuilder().addBuilder(
@@ -6389,7 +6458,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconMessagesBuilder(
           int index) {
@@ -6401,7 +6470,7 @@ public final class FlightDesignatorOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen.
        * </pre>
        *
-       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beaconMessages = 23 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon.Builder> 
            getBeaconMessagesBuilderList() {
@@ -6872,6 +6941,80 @@ public final class FlightDesignatorOuterClass {
         onChanged();
         return this;
       }
+
+      private int invalidateCancelledPasses_ = 0;
+      /**
+       * <pre>
+       * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+       * </pre>
+       *
+       * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+       * @return The enum numeric value on the wire for invalidateCancelledPasses.
+       */
+      @java.lang.Override public int getInvalidateCancelledPassesValue() {
+        return invalidateCancelledPasses_;
+      }
+      /**
+       * <pre>
+       * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+       * </pre>
+       *
+       * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+       * @param value The enum numeric value on the wire for invalidateCancelledPasses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvalidateCancelledPassesValue(int value) {
+        
+        invalidateCancelledPasses_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+       * </pre>
+       *
+       * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+       * @return The invalidateCancelledPasses.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.Toggle getInvalidateCancelledPasses() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(invalidateCancelledPasses_);
+        return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+       * </pre>
+       *
+       * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+       * @param value The invalidateCancelledPasses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvalidateCancelledPasses(com.passkit.grpc.CommonObjects.Toggle value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        invalidateCancelledPasses_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
+       * </pre>
+       *
+       * <code>.io.Toggle invalidateCancelledPasses = 27 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvalidateCancelledPasses() {
+        
+        invalidateCancelledPasses_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6934,7 +7077,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The carrierCode.
      */
     java.lang.String getCarrierCode();
@@ -6943,7 +7086,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for carrierCode.
      */
     com.google.protobuf.ByteString
@@ -6954,7 +7097,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The flightNumber.
      */
     java.lang.String getFlightNumber();
@@ -6963,7 +7106,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for flightNumber.
      */
     com.google.protobuf.ByteString
@@ -7082,7 +7225,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The carrierCode.
      */
     @java.lang.Override
@@ -7103,7 +7246,7 @@ public final class FlightDesignatorOuterClass {
      * The IATA or ICAO carrier code for the flight.
      * </pre>
      *
-     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for carrierCode.
      */
     @java.lang.Override
@@ -7128,7 +7271,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The flightNumber.
      */
     @java.lang.Override
@@ -7149,7 +7292,7 @@ public final class FlightDesignatorOuterClass {
      * The flight number.
      * </pre>
      *
-     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for flightNumber.
      */
     @java.lang.Override
@@ -7524,7 +7667,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The carrierCode.
        */
       public java.lang.String getCarrierCode() {
@@ -7544,7 +7687,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for carrierCode.
        */
       public com.google.protobuf.ByteString
@@ -7565,7 +7708,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The carrierCode to set.
        * @return This builder for chaining.
        */
@@ -7584,7 +7727,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCarrierCode() {
@@ -7598,7 +7741,7 @@ public final class FlightDesignatorOuterClass {
        * The IATA or ICAO carrier code for the flight.
        * </pre>
        *
-       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string carrierCode = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for carrierCode to set.
        * @return This builder for chaining.
        */
@@ -7620,7 +7763,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The flightNumber.
        */
       public java.lang.String getFlightNumber() {
@@ -7640,7 +7783,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for flightNumber.
        */
       public com.google.protobuf.ByteString
@@ -7661,7 +7804,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The flightNumber to set.
        * @return This builder for chaining.
        */
@@ -7680,7 +7823,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearFlightNumber() {
@@ -7694,7 +7837,7 @@ public final class FlightDesignatorOuterClass {
        * The flight number.
        * </pre>
        *
-       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string flightNumber = 2 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for flightNumber to set.
        * @return This builder for chaining.
        */
@@ -11154,66 +11297,68 @@ public final class FlightDesignatorOuterClass {
       "\n\"io/flights/flight_designator.proto\022\007fl" +
       "ights\032\036io/common/common_objects.proto\032\031i" +
       "o/common/proximity.proto\032\025io/common/link" +
-      "s.proto\032,protoc-gen-swagger/options/anno" +
-      "tations.proto\"\321\010\n\020FlightDesignator\022*\n\013ca" +
-      "rrierCode\030\001 \001(\tB\025\222A\022\212\001\017^[A-Z0-9]{3,4}$\022\033" +
-      "\n\014flightNumber\030\002 \001(\tB\005\222A\002x\005\022\033\n\tvalidFrom" +
-      "\030\003 \001(\0132\010.io.Date\022\020\n\010revision\030\004 \001(\r\022\031\n\006ac" +
-      "tive\030\005 \001(\010B\t\222A\006:\004TRUE\022)\n\010schedule\030\006 \001(\0132" +
-      "\027.flights.FlightSchedule\022&\n\024operatingCar" +
-      "rierCode\030\007 \001(\tB\010\222A\005x\003\200\001\002\022$\n\025operatingFli" +
-      "ghtNumber\030\010 \001(\tB\005\222A\002x\005\022\036\n\026codeShareFligh" +
-      "tNumbers\030\t \003(\t\022\016\n\006origin\030\n \001(\t\022\023\n\013destin" +
-      "ation\030\013 \001(\t\022\025\n\rtransitPoints\030\014 \003(\t\022\031\n\021de" +
-      "partureTerminal\030\r \001(\t\022\027\n\017arrivalTerminal" +
-      "\030\016 \001(\t\022\030\n\020transitTerminals\030\017 \003(\t\022/\n\016boar" +
-      "dingPolicy\030\020 \001(\0162\027.flights.BoardingPolic" +
-      "y\0221\n\017seatClassPolicy\030\021 \001(\0162\030.flights.Sea" +
-      "tClassPolicy\022%\n\006alerts\030\022 \003(\0162\025.flights.F" +
-      "lightAlerts\022\026\n\016passTemplateId\030\023 \001(\t\022&\n\023a" +
-      "utoInvalidateAfter\030\024 \001(\rB\t\222A\006:\0042880\0220\n\035a" +
-      "utoInvalidateCancelledPasses\030\025 \001(\010B\t\222A\006:" +
-      "\004TRUE\0221\n\020locationMessages\030\026 \003(\0132\017.io.GPS" +
-      "LocationB\006\222A\003\240\001\n\022*\n\016beaconMessages\030\027 \003(\013" +
-      "2\n.io.BeaconB\006\222A\003\240\001\n\022\036\n\014defaultLinks\030\030 \003" +
-      "(\0132\010.io.Link\022\030\n\020ConditionalItems\030\031 \001(\010\022\035" +
-      "\n\025BarcodeAdditionalData\030\032 \001(\t:\321\001\222A\315\001\n\312\001*" +
-      "\021Flight Designator2ZA flight designator " +
-      "record describes mostly static data with" +
-      " regard to a flight operation.\322\001\013carrier" +
-      "Code\322\001\014flightNumber\322\001\006origin\322\001\010schedule\322" +
-      "\001\010revision\322\001\013destination\322\001\016passTemplateI" +
-      "d\"\346\001\n\027FlightDesignatorRequest\022\035\n\013carrier" +
-      "Code\030\001 \001(\tB\010\222A\005x\003\200\001\002\022\033\n\014flightNumber\030\002 \001" +
-      "(\tB\005\222A\002x\005\022\020\n\010revision\030\003 \001(\r:}\222Az\nx*\031Flig" +
-      "ht Designator Request2>Used for retrievi" +
-      "ng details of a particular flight design" +
-      "ator.\322\001\013carrierCode\322\001\014flightNumber\"\242\002\n\016F" +
-      "lightSchedule\022$\n\006monday\030\001 \001(\0132\024.flights." +
-      "FlightTimes\022%\n\007tuesday\030\002 \001(\0132\024.flights.F" +
-      "lightTimes\022\'\n\twednesday\030\003 \001(\0132\024.flights." +
-      "FlightTimes\022&\n\010thursday\030\004 \001(\0132\024.flights." +
-      "FlightTimes\022$\n\006friday\030\005 \001(\0132\024.flights.Fl" +
-      "ightTimes\022&\n\010saturday\030\006 \001(\0132\024.flights.Fl" +
-      "ightTimes\022$\n\006sunday\030\007 \001(\0132\024.flights.Flig" +
-      "htTimes\"\242\001\n\013FlightTimes\022(\n\026scheduledDepa" +
-      "rtureTime\030\001 \001(\0132\010.io.Time\022\036\n\014boardingTim" +
-      "e\030\002 \001(\0132\010.io.Time\022!\n\017gateClosingTime\030\003 \001" +
-      "(\0132\010.io.Time\022&\n\024scheduledArrivalTime\030\004 \001" +
-      "(\0132\010.io.Time*\251\001\n\014FlightAlerts\022\r\n\tNO_ALER" +
-      "TS\020\000\022\016\n\nALL_ALERTS\020\001\022\030\n\024DEPARTURE_GATE_A" +
-      "LERT\020\002\022\030\n\024DEPARTURE_TIME_ALERT\020\004\022\026\n\022ARRI" +
-      "VAL_GATE_ALERT\020\010\022\026\n\022ARRIVAL_TIME_ALERT\020\020" +
-      "\022\026\n\022BAGGAGE_BELT_ALERT\020 *m\n\016BoardingPoli" +
-      "cy\022\037\n\033BOARDING_POLICY_UNSPECIFIED\020\000\022\016\n\nZ" +
-      "ONE_BASED\020\001\022\017\n\013GROUP_BASED\020\002\022\031\n\025BOARDING" +
-      "_POLICY_OTHER\020\003*\203\001\n\017SeatClassPolicy\022!\n\035S" +
-      "EAT_CLASS_POLICY_UNSPECIFIED\020\000\022\017\n\013CABIN_" +
-      "BASED\020\001\022\017\n\013CLASS_BASED\020\002\022\016\n\nTIER_BASED\020\003" +
-      "\022\033\n\027SEAT_CLASS_POLICY_OTHER\020\004*\037\n\tAuthori" +
-      "ty\022\010\n\004IATA\020\000\022\010\n\004ICAO\020\001BT\n\030com.passkit.gr" +
-      "pc.FlightsZ,stash.passkit.com/io/model/s" +
-      "dk/go/io/flights\252\002\tPKFlightsb\006proto3"
+      "s.proto\032.protoc-gen-openapiv2/options/an" +
+      "notations.proto\"\204\t\n\020FlightDesignator\022*\n\013" +
+      "carrierCode\030\001 \001(\tB\025\222A\022\212\001\017^[A-Z0-9]{3,4}$" +
+      "\022\033\n\014flightNumber\030\002 \001(\tB\005\222A\002x\005\022\033\n\tvalidFr" +
+      "om\030\003 \001(\0132\010.io.Date\022\020\n\010revision\030\004 \001(\r\022\031\n\006" +
+      "active\030\005 \001(\010B\t\222A\006:\004TRUE\022)\n\010schedule\030\006 \001(" +
+      "\0132\027.flights.FlightSchedule\022&\n\024operatingC" +
+      "arrierCode\030\007 \001(\tB\010\222A\005x\003\200\001\002\022$\n\025operatingF" +
+      "lightNumber\030\010 \001(\tB\005\222A\002x\005\022\036\n\026codeShareFli" +
+      "ghtNumbers\030\t \003(\t\022\016\n\006origin\030\n \001(\t\022\023\n\013dest" +
+      "ination\030\013 \001(\t\022\025\n\rtransitPoints\030\014 \003(\t\022\031\n\021" +
+      "departureTerminal\030\r \001(\t\022\027\n\017arrivalTermin" +
+      "al\030\016 \001(\t\022\030\n\020transitTerminals\030\017 \003(\t\022/\n\016bo" +
+      "ardingPolicy\030\020 \001(\0162\027.flights.BoardingPol" +
+      "icy\0221\n\017seatClassPolicy\030\021 \001(\0162\030.flights.S" +
+      "eatClassPolicy\022%\n\006alerts\030\022 \003(\0162\025.flights" +
+      ".FlightAlerts\022\026\n\016passTemplateId\030\023 \001(\t\022&\n" +
+      "\023autoInvalidateAfter\030\024 \001(\rB\t\222A\006:\0042880\022)\n" +
+      "\035autoInvalidateCancelledPasses\030\025 \001(\010B\002\030\001" +
+      "\0221\n\020locationMessages\030\026 \003(\0132\017.io.GPSLocat" +
+      "ionB\006\222A\003\240\001\n\022*\n\016beaconMessages\030\027 \003(\0132\n.io" +
+      ".BeaconB\006\222A\003\240\001\n\022\036\n\014defaultLinks\030\030 \003(\0132\010." +
+      "io.Link\022\030\n\020ConditionalItems\030\031 \001(\010\022\035\n\025Bar" +
+      "codeAdditionalData\030\032 \001(\t\0228\n\031invalidateCa" +
+      "ncelledPasses\030\033 \001(\0162\n.io.ToggleB\t\222A\006:\004TR" +
+      "UE:\321\001\222A\315\001\n\312\001*\021Flight Designator2ZA fligh" +
+      "t designator record describes mostly sta" +
+      "tic data with regard to a flight operati" +
+      "on.\322\001\013carrierCode\322\001\014flightNumber\322\001\006origi" +
+      "n\322\001\010schedule\322\001\010revision\322\001\013destination\322\001\016" +
+      "passTemplateId\"\346\001\n\027FlightDesignatorReque" +
+      "st\022\035\n\013carrierCode\030\001 \001(\tB\010\222A\005x\003\200\001\002\022\033\n\014fli" +
+      "ghtNumber\030\002 \001(\tB\005\222A\002x\005\022\020\n\010revision\030\003 \001(\r" +
+      ":}\222Az\nx*\031Flight Designator Request2>Used" +
+      " for retrieving details of a particular " +
+      "flight designator.\322\001\013carrierCode\322\001\014fligh" +
+      "tNumber\"\242\002\n\016FlightSchedule\022$\n\006monday\030\001 \001" +
+      "(\0132\024.flights.FlightTimes\022%\n\007tuesday\030\002 \001(" +
+      "\0132\024.flights.FlightTimes\022\'\n\twednesday\030\003 \001" +
+      "(\0132\024.flights.FlightTimes\022&\n\010thursday\030\004 \001" +
+      "(\0132\024.flights.FlightTimes\022$\n\006friday\030\005 \001(\013" +
+      "2\024.flights.FlightTimes\022&\n\010saturday\030\006 \001(\013" +
+      "2\024.flights.FlightTimes\022$\n\006sunday\030\007 \001(\0132\024" +
+      ".flights.FlightTimes\"\242\001\n\013FlightTimes\022(\n\026" +
+      "scheduledDepartureTime\030\001 \001(\0132\010.io.Time\022\036" +
+      "\n\014boardingTime\030\002 \001(\0132\010.io.Time\022!\n\017gateCl" +
+      "osingTime\030\003 \001(\0132\010.io.Time\022&\n\024scheduledAr" +
+      "rivalTime\030\004 \001(\0132\010.io.Time*\251\001\n\014FlightAler" +
+      "ts\022\r\n\tNO_ALERTS\020\000\022\016\n\nALL_ALERTS\020\001\022\030\n\024DEP" +
+      "ARTURE_GATE_ALERT\020\002\022\030\n\024DEPARTURE_TIME_AL" +
+      "ERT\020\004\022\026\n\022ARRIVAL_GATE_ALERT\020\010\022\026\n\022ARRIVAL" +
+      "_TIME_ALERT\020\020\022\026\n\022BAGGAGE_BELT_ALERT\020 *m\n" +
+      "\016BoardingPolicy\022\037\n\033BOARDING_POLICY_UNSPE" +
+      "CIFIED\020\000\022\016\n\nZONE_BASED\020\001\022\017\n\013GROUP_BASED\020" +
+      "\002\022\031\n\025BOARDING_POLICY_OTHER\020\003*\203\001\n\017SeatCla" +
+      "ssPolicy\022!\n\035SEAT_CLASS_POLICY_UNSPECIFIE" +
+      "D\020\000\022\017\n\013CABIN_BASED\020\001\022\017\n\013CLASS_BASED\020\002\022\016\n" +
+      "\nTIER_BASED\020\003\022\033\n\027SEAT_CLASS_POLICY_OTHER" +
+      "\020\004*\037\n\tAuthority\022\010\n\004IATA\020\000\022\010\n\004ICAO\020\001B_\n\030c" +
+      "om.passkit.grpc.FlightsZ,stash.passkit.c" +
+      "om/io/model/sdk/go/io/flights\252\002\024PassKit." +
+      "Grpc.Flightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11221,14 +11366,14 @@ public final class FlightDesignatorOuterClass {
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
           com.passkit.grpc.Links.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_FlightDesignator_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_flights_FlightDesignator_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_flights_FlightDesignator_descriptor,
-        new java.lang.String[] { "CarrierCode", "FlightNumber", "ValidFrom", "Revision", "Active", "Schedule", "OperatingCarrierCode", "OperatingFlightNumber", "CodeShareFlightNumbers", "Origin", "Destination", "TransitPoints", "DepartureTerminal", "ArrivalTerminal", "TransitTerminals", "BoardingPolicy", "SeatClassPolicy", "Alerts", "PassTemplateId", "AutoInvalidateAfter", "AutoInvalidateCancelledPasses", "LocationMessages", "BeaconMessages", "DefaultLinks", "ConditionalItems", "BarcodeAdditionalData", });
+        new java.lang.String[] { "CarrierCode", "FlightNumber", "ValidFrom", "Revision", "Active", "Schedule", "OperatingCarrierCode", "OperatingFlightNumber", "CodeShareFlightNumbers", "Origin", "Destination", "TransitPoints", "DepartureTerminal", "ArrivalTerminal", "TransitTerminals", "BoardingPolicy", "SeatClassPolicy", "Alerts", "PassTemplateId", "AutoInvalidateAfter", "AutoInvalidateCancelledPasses", "LocationMessages", "BeaconMessages", "DefaultLinks", "ConditionalItems", "BarcodeAdditionalData", "InvalidateCancelledPasses", });
     internal_static_flights_FlightDesignatorRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_flights_FlightDesignatorRequest_fieldAccessorTable = new
@@ -11249,14 +11394,14 @@ public final class FlightDesignatorOuterClass {
         new java.lang.String[] { "ScheduledDepartureTime", "BoardingTime", "GateClosingTime", "ScheduledArrivalTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
     com.passkit.grpc.Links.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

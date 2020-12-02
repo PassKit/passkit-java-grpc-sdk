@@ -5990,7 +5990,7 @@ public final class CommonObjects {
      * ISO 8601 format date without a time. E.g. 2019-08-07.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The dateTime.
      */
     java.lang.String getDateTime();
@@ -5999,7 +5999,7 @@ public final class CommonObjects {
      * ISO 8601 format date without a time. E.g. 2019-08-07.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for dateTime.
      */
     com.google.protobuf.ByteString
@@ -6100,7 +6100,7 @@ public final class CommonObjects {
      * ISO 8601 format date without a time. E.g. 2019-08-07.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The dateTime.
      */
     @java.lang.Override
@@ -6121,7 +6121,7 @@ public final class CommonObjects {
      * ISO 8601 format date without a time. E.g. 2019-08-07.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for dateTime.
      */
     @java.lang.Override
@@ -6451,7 +6451,7 @@ public final class CommonObjects {
        * ISO 8601 format date without a time. E.g. 2019-08-07.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The dateTime.
        */
       public java.lang.String getDateTime() {
@@ -6471,7 +6471,7 @@ public final class CommonObjects {
        * ISO 8601 format date without a time. E.g. 2019-08-07.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for dateTime.
        */
       public com.google.protobuf.ByteString
@@ -6492,7 +6492,7 @@ public final class CommonObjects {
        * ISO 8601 format date without a time. E.g. 2019-08-07.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The dateTime to set.
        * @return This builder for chaining.
        */
@@ -6511,7 +6511,7 @@ public final class CommonObjects {
        * ISO 8601 format date without a time. E.g. 2019-08-07.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDateTime() {
@@ -6525,7 +6525,7 @@ public final class CommonObjects {
        * ISO 8601 format date without a time. E.g. 2019-08-07.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for dateTime to set.
        * @return This builder for chaining.
        */
@@ -6602,7 +6602,7 @@ public final class CommonObjects {
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The dateTime.
      */
     java.lang.String getDateTime();
@@ -6611,7 +6611,7 @@ public final class CommonObjects {
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for dateTime.
      */
     com.google.protobuf.ByteString
@@ -6712,7 +6712,7 @@ public final class CommonObjects {
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The dateTime.
      */
     @java.lang.Override
@@ -6733,7 +6733,7 @@ public final class CommonObjects {
      * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
      * </pre>
      *
-     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for dateTime.
      */
     @java.lang.Override
@@ -7063,7 +7063,7 @@ public final class CommonObjects {
        * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The dateTime.
        */
       public java.lang.String getDateTime() {
@@ -7083,7 +7083,7 @@ public final class CommonObjects {
        * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for dateTime.
        */
       public com.google.protobuf.ByteString
@@ -7104,7 +7104,7 @@ public final class CommonObjects {
        * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The dateTime to set.
        * @return This builder for chaining.
        */
@@ -7123,7 +7123,7 @@ public final class CommonObjects {
        * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDateTime() {
@@ -7137,7 +7137,7 @@ public final class CommonObjects {
        * ISO 8601 extended format date/time without an offset E.g. 2019-08-07T18:00:00. Time can optionally be stated to millisecond precision. E.g. 2019-08-07T18:00:00.123.
        * </pre>
        *
-       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string dateTime = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for dateTime to set.
        * @return This builder for chaining.
        */
@@ -13428,52 +13428,52 @@ public final class CommonObjects {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\036io/common/common_objects.proto\022\002io\032,pr" +
-      "otoc-gen-swagger/options/annotations.pro" +
-      "to\032\032io/common/pagination.proto\032\026io/commo" +
-      "n/filter.proto\032\031io/common/protocols.prot" +
-      "o\"\020\n\002Id\022\n\n\002id\030\001 \001(\t\"\021\n\003Ids\022\n\n\002id\030\001 \003(\t\"\022" +
-      "\n\003Url\022\013\n\003url\030\001 \001(\t\"\026\n\005Count\022\r\n\005total\030\001 \001" +
-      "(\005\"\036\n\tFileBytes\022\021\n\tfileBytes\030\001 \001(\014\"\033\n\007Bo" +
-      "olean\022\020\n\010response\030\001 \001(\010\"\033\n\007Strings\022\020\n\010re" +
-      "sponse\030\001 \003(\t\"0\n\004Date\022\014\n\004year\030\001 \001(\005\022\r\n\005mo" +
-      "nth\030\002 \001(\005\022\013\n\003day\030\003 \001(\005\"4\n\004Time\022\014\n\004hour\030\001" +
-      " \001(\005\022\016\n\006minute\030\002 \001(\005\022\016\n\006second\030\003 \001(\005\"[\n\t" +
-      "LocalDate\022N\n\010dateTime\030\001 \001(\tB<\222A9\212\0016^([0-" +
-      "9]{4})-?(1[0-2]|0[1-9])-?(3[01]|0[1-9]|[" +
-      "12][0-9])\"\234\001\n\rLocalDateTime\022\212\001\n\010dateTime" +
-      "\030\001 \001(\tBx\222Au\212\001r^([0-9]{4})-?(1[0-2]|0[1-9" +
-      "])-?(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01" +
-      "][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]" +
-      "{1,3})?$\"n\n\nPassBundle\022\n\n\002id\030\001 \001(\t\022\013\n\003ur" +
-      "l\030\002 \001(\t\022\024\n\014googlePayURL\030\005 \001(\t\022\026\n\016applePa" +
-      "ssBytes\030\006 \001(\014\022\031\n\021multiplePassesURL\030\007 \001(\t" +
-      "\"-\n\013PassBundles\022\036\n\006passes\030\001 \003(\0132\016.io.Pas" +
-      "sBundle\"E\n\021PassBundleRequest\022\n\n\002id\030\001 \001(\t" +
-      "\022$\n\006format\030\002 \003(\0162\024.io.PassBundleFormat\"p" +
-      "\n\025ListRequestDeprecated\022\017\n\007classId\030\001 \001(\t" +
-      "\022\"\n\010protocol\030\002 \001(\0162\020.io.PassProtocol\022\"\n\n" +
-      "pagination\030\003 \001(\0132\016.io.Pagination\"`\n\013List" +
-      "Request\022\017\n\007classId\030\001 \001(\t\022\"\n\010protocol\030\002 \001" +
-      "(\0162\020.io.PassProtocol\022\034\n\007filters\030\003 \001(\0132\013." +
-      "io.Filters\"b\n\tDataItems\022\'\n\005items\030\001 \003(\0132\030" +
-      ".io.DataItems.ItemsEntry\032,\n\nItemsEntry\022\013" +
-      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\024\n\006PkBool" +
-      "\022\n\n\002ok\030\001 \001(\010*4\n\014ListPosition\022\n\n\006APPEND\020\000" +
-      "\022\013\n\007PREPEND\020\001\022\013\n\007REPLACE\020\002*)\n\006Toggle\022\016\n\n" +
-      "DO_NOT_USE\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002*W\n\020PassBun" +
-      "dleFormat\022\014\n\010PASS_URL\020\000\022\016\n\nGOOGLE_URL\020\002\022" +
-      "\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nMULTI_LINK\020\020*g" +
-      "\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026\n\022USAGE_APPLE" +
-      "_WALLET\020\001\022\024\n\020USAGE_GOOGLE_PAY\020\002\022\036\n\032USAGE" +
-      "_DATA_COLLECTION_PAGE\020\004BG\n\020com.passkit.g" +
-      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
-      "o\252\002\014PassKit.GRPCb\006proto3"
+      "\n\036io/common/common_objects.proto\022\002io\032.pr" +
+      "otoc-gen-openapiv2/options/annotations.p" +
+      "roto\032\032io/common/pagination.proto\032\026io/com" +
+      "mon/filter.proto\032\031io/common/protocols.pr" +
+      "oto\"\020\n\002Id\022\n\n\002id\030\001 \001(\t\"\021\n\003Ids\022\n\n\002id\030\001 \003(\t" +
+      "\"\022\n\003Url\022\013\n\003url\030\001 \001(\t\"\026\n\005Count\022\r\n\005total\030\001" +
+      " \001(\005\"\036\n\tFileBytes\022\021\n\tfileBytes\030\001 \001(\014\"\033\n\007" +
+      "Boolean\022\020\n\010response\030\001 \001(\010\"\033\n\007Strings\022\020\n\010" +
+      "response\030\001 \003(\t\"0\n\004Date\022\014\n\004year\030\001 \001(\005\022\r\n\005" +
+      "month\030\002 \001(\005\022\013\n\003day\030\003 \001(\005\"4\n\004Time\022\014\n\004hour" +
+      "\030\001 \001(\005\022\016\n\006minute\030\002 \001(\005\022\016\n\006second\030\003 \001(\005\"[" +
+      "\n\tLocalDate\022N\n\010dateTime\030\001 \001(\tB<\222A9\212\0016^([" +
+      "0-9]{4})-?(1[0-2]|0[1-9])-?(3[01]|0[1-9]" +
+      "|[12][0-9])\"\234\001\n\rLocalDateTime\022\212\001\n\010dateTi" +
+      "me\030\001 \001(\tBx\222Au\212\001r^([0-9]{4})-?(1[0-2]|0[1" +
+      "-9])-?(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[" +
+      "01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-" +
+      "9]{1,3})?$\"n\n\nPassBundle\022\n\n\002id\030\001 \001(\t\022\013\n\003" +
+      "url\030\002 \001(\t\022\024\n\014googlePayURL\030\005 \001(\t\022\026\n\016apple" +
+      "PassBytes\030\006 \001(\014\022\031\n\021multiplePassesURL\030\007 \001" +
+      "(\t\"-\n\013PassBundles\022\036\n\006passes\030\001 \003(\0132\016.io.P" +
+      "assBundle\"E\n\021PassBundleRequest\022\n\n\002id\030\001 \001" +
+      "(\t\022$\n\006format\030\002 \003(\0162\024.io.PassBundleFormat" +
+      "\"p\n\025ListRequestDeprecated\022\017\n\007classId\030\001 \001" +
+      "(\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassProtocol\022\"" +
+      "\n\npagination\030\003 \001(\0132\016.io.Pagination\"`\n\013Li" +
+      "stRequest\022\017\n\007classId\030\001 \001(\t\022\"\n\010protocol\030\002" +
+      " \001(\0162\020.io.PassProtocol\022\034\n\007filters\030\003 \001(\0132" +
+      "\013.io.Filters\"b\n\tDataItems\022\'\n\005items\030\001 \003(\013" +
+      "2\030.io.DataItems.ItemsEntry\032,\n\nItemsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\024\n\006PkBo" +
+      "ol\022\n\n\002ok\030\001 \001(\010*4\n\014ListPosition\022\n\n\006APPEND" +
+      "\020\000\022\013\n\007PREPEND\020\001\022\013\n\007REPLACE\020\002*)\n\006Toggle\022\016" +
+      "\n\nDO_NOT_USE\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002*W\n\020PassB" +
+      "undleFormat\022\014\n\010PASS_URL\020\000\022\016\n\nGOOGLE_URL\020" +
+      "\002\022\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nMULTI_LINK\020\020" +
+      "*g\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026\n\022USAGE_APP" +
+      "LE_WALLET\020\001\022\024\n\020USAGE_GOOGLE_PAY\020\002\022\036\n\032USA" +
+      "GE_DATA_COLLECTION_PAGE\020\004BG\n\020com.passkit" +
+      ".grpcZ$stash.passkit.com/io/model/sdk/go" +
+      "/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
           com.passkit.grpc.Protocols.getDescriptor(),
@@ -13594,10 +13594,10 @@ public final class CommonObjects {
         new java.lang.String[] { "Ok", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
     com.passkit.grpc.Protocols.getDescriptor();

@@ -3953,7 +3953,7 @@ public final class MessageOuterClass {
       "\020\003\022\031\n\025COMPLETED_WITH_ERRORS\020\004\022\034\n\030COMPLET" +
       "ED_WITHOUT_ERRORS\020\005BG\n\020com.passkit.grpcZ" +
       "$stash.passkit.com/io/model/sdk/go/io\252\002\014" +
-      "PassKit.GRPCb\006proto3"
+      "PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

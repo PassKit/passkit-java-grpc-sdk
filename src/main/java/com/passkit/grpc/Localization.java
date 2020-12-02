@@ -1684,7 +1684,7 @@ public final class Localization {
       "U\020\220\001\022\007\n\002SK\020\224\001\022\007\n\002SV\020\230\001\022\007\n\002TH\020\234\001\022\007\n\002TR\020\240\001" +
       "\022\007\n\002UK\020\244\001\022\007\n\002VI\020\250\001BG\n\020com.passkit.grpcZ$" +
       "stash.passkit.com/io/model/sdk/go/io\252\002\014P" +
-      "assKit.GRPCb\006proto3"
+      "assKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -247,7 +247,7 @@ public final class Attributes {
       "\200\002\022\013\n\006Mobile\020\200\004\022\014\n\007Desktop\020\200\010\022\013\n\006Tablet\020" +
       "\200\020\022\023\n\016UnsupportedIos\020\200 BG\n\020com.passkit.g" +
       "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
-      "o\252\002\014PassKit.GRPCb\006proto3"
+      "o\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

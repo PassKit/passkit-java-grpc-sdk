@@ -3164,7 +3164,7 @@ public final class Links {
       "_NOT_USE\020\000\022\013\n\007URI_WEB\020\001\022\013\n\007URI_TEL\020\002\022\r\n\t" +
       "URI_EMAIL\020\003\022\020\n\014URI_LOCATION\020\004\022\020\n\014URI_CAL" +
       "ENDAR\020\005BG\n\020com.passkit.grpcZ$stash.passk" +
-      "it.com/io/model/sdk/go/io\252\002\014PassKit.GRPC" +
+      "it.com/io/model/sdk/go/io\252\002\014PassKit.Grpc" +
       "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

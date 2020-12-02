@@ -12382,96 +12382,96 @@ public final class Integration {
     java.lang.String[] descriptorData = {
       "\n\033io/common/integration.proto\022\002io\032\024io/co" +
       "mmon/pass.proto\032\030io/common/template.prot" +
-      "o\032,protoc-gen-swagger/options/annotation" +
-      "s.proto\032\031io/common/protocols.proto\032\037goog" +
-      "le/protobuf/timestamp.proto\"8\n\022Membershi" +
-      "pEventIds\022\"\n\003ids\030\001 \003(\0162\025.io.MembershipEv" +
-      "entId\"0\n\016CouponEventIds\022\036\n\003ids\030\001 \003(\0162\021.i" +
-      "o.CouponEventId\"\240\001\n\022IntegrationConfigs\022\017" +
-      "\n\007classId\030\001 \001(\t\022B\n\016configurations\030\002 \003(\0132" +
-      "*.io.IntegrationConfigs.ConfigurationsEn" +
-      "try\0325\n\023ConfigurationsEntry\022\013\n\003key\030\001 \001(\005\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"F\n\017ProtocolIdInput\022\"\n" +
-      "\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\017\n\007cla" +
-      "ssId\030\002 \001(\t\"Q\n\023SubscriptionRequest\022\"\n\010pro" +
-      "tocol\030\001 \001(\0162\020.io.PassProtocol\022\026\n\016subscri" +
-      "ptionId\030\002 \001(\t\"\221\002\n\034SubscriptionRequestByC" +
-      "lassId\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtoc" +
-      "ol\022\017\n\007classId\030\002 \001(\t\022)\n\nconfigType\030\003 \001(\0162" +
-      "\025.io.ConfigurationType\022&\n\013passEventId\030\004 " +
-      "\001(\0162\017.io.PassEventIdH\000\0222\n\021membershipEven" +
-      "tId\030\005 \001(\0162\025.io.MembershipEventIdH\000\022*\n\rco" +
-      "uponEventId\030\006 \001(\0162\021.io.CouponEventIdH\000B\t" +
-      "\n\007eventId\"\216\001\n\014FieldMapping\022\033\n\023destinatio" +
-      "nFieldKey\030\001 \001(\t\022.\n\030destinationFieldDataT" +
-      "ype\030\002 \001(\0162\014.io.DataType\022\022\n\nisRequired\030\003 " +
-      "\001(\010\022\035\n\025sourceFieldUniqueName\030\004 \001(\t\"r\n\rWe" +
-      "bhookConfig\022\021\n\ttargetUrl\030\001 \001(\t\022&\n\014action" +
-      "Method\030\002 \001(\0162\020.io.ActionMethod\022&\n\014fieldM" +
-      "apping\030\003 \001(\0132\020.io.FieldMapping\"@\n\027SinkSu" +
-      "bscriptionPayload\022\r\n\005event\030\001 \001(\t\022\026\n\004pass" +
-      "\030\002 \001(\0132\010.io.Pass\"\305\005\n\020SinkSubscription\022\n\n" +
-      "\002id\030\001 \001(\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003" +
-      " \001(\0162\020.io.PassProtocol\022$\n\013passEventId\030\004 " +
-      "\003(\0162\017.io.PassEventId\022%\n\006status\030\005 \001(\0162\025.i" +
-      "o.IntegrationStatus\022)\n\nconfigType\030\006 \001(\0162" +
-      "\025.io.ConfigurationType\022\025\n\rconfiguration\030" +
-      "\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022-\n\tupdatedAt\030\t \001(\0132\032.google" +
-      ".protobuf.Timestamp\0222\n\020membershipEvents\030" +
-      "\n \001(\0132\026.io.MembershipEventIdsH\000\022*\n\014coupo" +
-      "nEvents\030\013 \001(\0132\022.io.CouponEventIdsH\000:\217\002\222A" +
-      "\213\002\n\210\002*\021Sink Subscription2\340\001Set up a subs" +
-      "cription for sink integration. Sink subs" +
-      "cription is triggered after all chain of" +
-      " events finished inside PassKit. E.g. Cr" +
-      "eate a pass holder record and issue a pa" +
-      "ss, then create a record on a third part" +
-      "y platform.\322\001\017defaultLanguageB\021\n\017protoco" +
-      "lEventId*}\n\021IntegrationStatus\022\033\n\027INTEGRA" +
-      "TION_STATUS_NONE\020\000\022\030\n\024INTEGRATION_DISABL" +
-      "ED\020\001\022\026\n\022INTEGRATION_ACTIVE\020\002\022\031\n\025INTEGRAT" +
-      "ION_SUSPENDED\020\003*\212\001\n\021ConfigurationType\022\026\n" +
-      "\022CONFIGURATION_NONE\020\000\022\013\n\007WEBHOOK\020\001\022\014\n\010DB" +
-      "_MYSQL\020\002\022\010\n\004ZOHO\020\003\022\t\n\005BRAZE\020\004\022\r\n\tCODEREA" +
-      "DR\020\005\022\n\n\006ZAPIER\020\006\022\022\n\016_CONFIG_TYPE_1\020d*\243\004\n" +
-      "\017IntegrationType\022\031\n\025INTEGRATION_TYPE_NON" +
-      "E\020\000\022\026\n\022SOURCE_INTEGRATION\020\001\022&\n\"HOOK_BEFO" +
-      "RE_OBJECT_RECORD_CREATION\020\004\022%\n!HOOK_AFTE" +
-      "R_OBJECT_RECORD_CREATION\020\010\022\032\n\026HOOK_BEFOR" +
-      "E_PASS_ISSUE\020\020\022\031\n\025HOOK_AFTER_PASS_ISSUE\020" +
-      " \022\033\n\027HOOK_AFTER_PASS_INSTALL\020@\022\036\n\031HOOK_A" +
-      "FTER_PASS_UNINSTALL\020\200\001\022%\n HOOK_BEFORE_OB" +
-      "JECT_RECORD_UPDATE\020\200\002\022$\n\037HOOK_AFTER_OBJE" +
-      "CT_RECORD_UPDATE\020\200\004\022#\n\036HOOK_BEFORE_PASS_" +
-      "RECORD_UPDATE\020\200\010\022\"\n\035HOOK_AFTER_PASS_RECO" +
-      "RD_UPDATE\020\200\020\022\034\n\027HOOK_BEFORE_PASS_UPDATE\020" +
-      "\200 \022\033\n\026HOOK_AFTER_PASS_UPDATE\020\200@\022$\n\036HOOK_" +
-      "BEFORE_PASS_RECORD_DELETE\020\200\200\001\022#\n\035HOOK_AF" +
-      "TER_PASS_RECORD_DELETE\020\200\200\002*\321\001\n\013PassEvent" +
-      "Id\022\023\n\017PASS_EVENT_NONE\020\000\022\035\n\031PASS_EVENT_RE" +
-      "CORD_CREATED\020\001\022\030\n\024PASS_EVENT_INSTALLED\020\002" +
-      "\022\035\n\031PASS_EVENT_RECORD_UPDATED\020\004\022\032\n\026PASS_" +
-      "EVENT_UNINSTALLED\020\010\022\032\n\026PASS_EVENT_INVALI" +
-      "DATED\020\020\022\035\n\031PASS_EVENT_RECORD_DELETED\020 *_" +
-      "\n\021MembershipEventId\022\025\n\021MEMBER_EVENT_NONE" +
-      "\020\000\022\031\n\025MEMBER_EVENT_ENROLLED\020\001\022\030\n\024MEMBER_" +
-      "EVENT_UPDATED\020\002*\217\001\n\rCouponEventId\022\025\n\021COU" +
-      "PON_EVENT_NONE\020\000\022\030\n\024COUPON_EVENT_CREATED" +
-      "\020\001\022\031\n\025COUPON_EVENT_REDEEMED\020\002\022\030\n\024COUPON_" +
-      "EVENT_UPDATED\020\004\022\030\n\024COUPON_EVENT_DELETED\020" +
-      "\010*S\n\014ActionMethod\022\017\n\013METHOD_NONE\020\000\022\017\n\013ME" +
-      "THOD_POST\020\001\022\016\n\nMETHOD_PUT\020\002\022\021\n\rMETHOD_DE" +
-      "LETE\020\003BG\n\020com.passkit.grpcZ$stash.passki" +
-      "t.com/io/model/sdk/go/io\252\002\014PassKit.GRPCb" +
-      "\006proto3"
+      "o\032.protoc-gen-openapiv2/options/annotati" +
+      "ons.proto\032\031io/common/protocols.proto\032\037go" +
+      "ogle/protobuf/timestamp.proto\"8\n\022Members" +
+      "hipEventIds\022\"\n\003ids\030\001 \003(\0162\025.io.Membership" +
+      "EventId\"0\n\016CouponEventIds\022\036\n\003ids\030\001 \003(\0162\021" +
+      ".io.CouponEventId\"\240\001\n\022IntegrationConfigs" +
+      "\022\017\n\007classId\030\001 \001(\t\022B\n\016configurations\030\002 \003(" +
+      "\0132*.io.IntegrationConfigs.Configurations" +
+      "Entry\0325\n\023ConfigurationsEntry\022\013\n\003key\030\001 \001(" +
+      "\005\022\r\n\005value\030\002 \001(\t:\0028\001\"F\n\017ProtocolIdInput\022" +
+      "\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\017\n\007c" +
+      "lassId\030\002 \001(\t\"Q\n\023SubscriptionRequest\022\"\n\010p" +
+      "rotocol\030\001 \001(\0162\020.io.PassProtocol\022\026\n\016subsc" +
+      "riptionId\030\002 \001(\t\"\221\002\n\034SubscriptionRequestB" +
+      "yClassId\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProt" +
+      "ocol\022\017\n\007classId\030\002 \001(\t\022)\n\nconfigType\030\003 \001(" +
+      "\0162\025.io.ConfigurationType\022&\n\013passEventId\030" +
+      "\004 \001(\0162\017.io.PassEventIdH\000\0222\n\021membershipEv" +
+      "entId\030\005 \001(\0162\025.io.MembershipEventIdH\000\022*\n\r" +
+      "couponEventId\030\006 \001(\0162\021.io.CouponEventIdH\000" +
+      "B\t\n\007eventId\"\216\001\n\014FieldMapping\022\033\n\023destinat" +
+      "ionFieldKey\030\001 \001(\t\022.\n\030destinationFieldDat" +
+      "aType\030\002 \001(\0162\014.io.DataType\022\022\n\nisRequired\030" +
+      "\003 \001(\010\022\035\n\025sourceFieldUniqueName\030\004 \001(\t\"r\n\r" +
+      "WebhookConfig\022\021\n\ttargetUrl\030\001 \001(\t\022&\n\014acti" +
+      "onMethod\030\002 \001(\0162\020.io.ActionMethod\022&\n\014fiel" +
+      "dMapping\030\003 \001(\0132\020.io.FieldMapping\"@\n\027Sink" +
+      "SubscriptionPayload\022\r\n\005event\030\001 \001(\t\022\026\n\004pa" +
+      "ss\030\002 \001(\0132\010.io.Pass\"\305\005\n\020SinkSubscription\022" +
+      "\n\n\002id\030\001 \001(\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protocol" +
+      "\030\003 \001(\0162\020.io.PassProtocol\022$\n\013passEventId\030" +
+      "\004 \003(\0162\017.io.PassEventId\022%\n\006status\030\005 \001(\0162\025" +
+      ".io.IntegrationStatus\022)\n\nconfigType\030\006 \001(" +
+      "\0162\025.io.ConfigurationType\022\025\n\rconfiguratio" +
+      "n\030\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022-\n\tupdatedAt\030\t \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\0222\n\020membershipEvent" +
+      "s\030\n \001(\0132\026.io.MembershipEventIdsH\000\022*\n\014cou" +
+      "ponEvents\030\013 \001(\0132\022.io.CouponEventIdsH\000:\217\002" +
+      "\222A\213\002\n\210\002*\021Sink Subscription2\340\001Set up a su" +
+      "bscription for sink integration. Sink su" +
+      "bscription is triggered after all chain " +
+      "of events finished inside PassKit. E.g. " +
+      "Create a pass holder record and issue a " +
+      "pass, then create a record on a third pa" +
+      "rty platform.\322\001\017defaultLanguageB\021\n\017proto" +
+      "colEventId*}\n\021IntegrationStatus\022\033\n\027INTEG" +
+      "RATION_STATUS_NONE\020\000\022\030\n\024INTEGRATION_DISA" +
+      "BLED\020\001\022\026\n\022INTEGRATION_ACTIVE\020\002\022\031\n\025INTEGR" +
+      "ATION_SUSPENDED\020\003*\212\001\n\021ConfigurationType\022" +
+      "\026\n\022CONFIGURATION_NONE\020\000\022\013\n\007WEBHOOK\020\001\022\014\n\010" +
+      "DB_MYSQL\020\002\022\010\n\004ZOHO\020\003\022\t\n\005BRAZE\020\004\022\r\n\tCODER" +
+      "EADR\020\005\022\n\n\006ZAPIER\020\006\022\022\n\016_CONFIG_TYPE_1\020d*\243" +
+      "\004\n\017IntegrationType\022\031\n\025INTEGRATION_TYPE_N" +
+      "ONE\020\000\022\026\n\022SOURCE_INTEGRATION\020\001\022&\n\"HOOK_BE" +
+      "FORE_OBJECT_RECORD_CREATION\020\004\022%\n!HOOK_AF" +
+      "TER_OBJECT_RECORD_CREATION\020\010\022\032\n\026HOOK_BEF" +
+      "ORE_PASS_ISSUE\020\020\022\031\n\025HOOK_AFTER_PASS_ISSU" +
+      "E\020 \022\033\n\027HOOK_AFTER_PASS_INSTALL\020@\022\036\n\031HOOK" +
+      "_AFTER_PASS_UNINSTALL\020\200\001\022%\n HOOK_BEFORE_" +
+      "OBJECT_RECORD_UPDATE\020\200\002\022$\n\037HOOK_AFTER_OB" +
+      "JECT_RECORD_UPDATE\020\200\004\022#\n\036HOOK_BEFORE_PAS" +
+      "S_RECORD_UPDATE\020\200\010\022\"\n\035HOOK_AFTER_PASS_RE" +
+      "CORD_UPDATE\020\200\020\022\034\n\027HOOK_BEFORE_PASS_UPDAT" +
+      "E\020\200 \022\033\n\026HOOK_AFTER_PASS_UPDATE\020\200@\022$\n\036HOO" +
+      "K_BEFORE_PASS_RECORD_DELETE\020\200\200\001\022#\n\035HOOK_" +
+      "AFTER_PASS_RECORD_DELETE\020\200\200\002*\321\001\n\013PassEve" +
+      "ntId\022\023\n\017PASS_EVENT_NONE\020\000\022\035\n\031PASS_EVENT_" +
+      "RECORD_CREATED\020\001\022\030\n\024PASS_EVENT_INSTALLED" +
+      "\020\002\022\035\n\031PASS_EVENT_RECORD_UPDATED\020\004\022\032\n\026PAS" +
+      "S_EVENT_UNINSTALLED\020\010\022\032\n\026PASS_EVENT_INVA" +
+      "LIDATED\020\020\022\035\n\031PASS_EVENT_RECORD_DELETED\020 " +
+      "*_\n\021MembershipEventId\022\025\n\021MEMBER_EVENT_NO" +
+      "NE\020\000\022\031\n\025MEMBER_EVENT_ENROLLED\020\001\022\030\n\024MEMBE" +
+      "R_EVENT_UPDATED\020\002*\217\001\n\rCouponEventId\022\025\n\021C" +
+      "OUPON_EVENT_NONE\020\000\022\030\n\024COUPON_EVENT_CREAT" +
+      "ED\020\001\022\031\n\025COUPON_EVENT_REDEEMED\020\002\022\030\n\024COUPO" +
+      "N_EVENT_UPDATED\020\004\022\030\n\024COUPON_EVENT_DELETE" +
+      "D\020\010*S\n\014ActionMethod\022\017\n\013METHOD_NONE\020\000\022\017\n\013" +
+      "METHOD_POST\020\001\022\016\n\nMETHOD_PUT\020\002\022\021\n\rMETHOD_" +
+      "DELETE\020\003BG\n\020com.passkit.grpcZ$stash.pass" +
+      "kit.com/io/model/sdk/go/io\252\002\014PassKit.Grp" +
+      "cb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.PassOuterClass.getDescriptor(),
           com.passkit.grpc.Template.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.Protocols.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
@@ -12543,12 +12543,12 @@ public final class Integration {
         new java.lang.String[] { "Id", "ClassId", "Protocol", "PassEventId", "Status", "ConfigType", "Configuration", "CreatedAt", "UpdatedAt", "MembershipEvents", "CouponEvents", "ProtocolEventId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.PassOuterClass.getDescriptor();
     com.passkit.grpc.Template.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.Protocols.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

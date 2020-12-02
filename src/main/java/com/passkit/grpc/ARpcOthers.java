@@ -25,161 +25,161 @@ public final class ARpcOthers {
     java.lang.String[] descriptorData = {
       "\n\032io/core/a_rpc_others.proto\022\002io\032\034google" +
       "/api/annotations.proto\032\033google/protobuf/" +
-      "empty.proto\032,protoc-gen-swagger/options/" +
-      "annotations.proto\032\036io/common/common_obje" +
-      "cts.proto\032\027io/common/project.proto\032\027io/c" +
-      "ommon/message.proto\032\023io/common/job.proto" +
-      "\032\032io/common/pagination.proto\032\026io/common/" +
-      "filter.proto\032\033io/common/integration.prot" +
-      "o\032\022io/user/user.proto2\347\n\n\005Users\022@\n\ncreat" +
-      "eUser\022\013.io.NewUser\032\023.io.NewUserResponse\"" +
-      "\020\202\323\344\223\002\n\"\005/user:\001*\0225\n\007newUser\022\013.io.NewUse" +
-      "r\032\007.io.JWT\"\024\202\323\344\223\002\016\"\t/user/new:\001*\0226\n\006veri" +
-      "fy\022\006.io.Id\032\013.io.Boolean\"\027\202\323\344\223\002\021\032\014/user/v" +
-      "erify:\001*\022^\n\027resendVerificationEmail\022\026.go" +
-      "ogle.protobuf.Empty\032\013.io.Boolean\"\036\202\323\344\223\002\030" +
-      "\"\023/user/verify/resend:\001*\022M\n\007getUser\022\026.go" +
-      "ogle.protobuf.Empty\032\023.io.GetUserResponse" +
-      "\"\025\202\323\344\223\002\017\022\r/user/profile\0224\n\005login\022\017.io.Cr" +
-      "edentials\032\007.io.JWT\"\021\202\323\344\223\002\013\"\006/login:\001*\022P\n" +
-      "\rresetPassword\022\017.io.Credentials\032\026.google" +
-      ".protobuf.Empty\"\026\202\323\344\223\002\020\032\013/user/reset:\001*\022" +
-      "^\n\025sendPasswordResetLink\022\014.io.Username\032\026" +
-      ".google.protobuf.Empty\"\037\202\323\344\223\002\031\"\024/user/re" +
-      "set/password:\001*\022a\n\016changePassword\022\026.io.P" +
-      "asswordResetInput\032\026.google.protobuf.Empt" +
-      "y\"\037\202\323\344\223\002\031\032\024/user/reset/password:\001*\022`\n!ge" +
-      "tProjectsForUserQueryDeprecated\022\016.io.Pag" +
-      "ination\032\013.io.Project\"\034\202\323\344\223\002\026\022\024/projects/" +
-      "user/query0\001\022T\n\032getProjectsQueryDeprecat" +
-      "ed\022\016.io.Pagination\032\013.io.Project\"\027\202\323\344\223\002\021\022" +
-      "\017/projects/query0\001\022U\n\027getProjectsForUser" +
-      "Query\022\013.io.Filters\032\013.io.Project\"\036\202\323\344\223\002\030\"" +
-      "\023/projects/user/list:\001*0\001\022I\n\020getProjects" +
-      "Query\022\013.io.Filters\032\013.io.Project\"\031\202\323\344\223\002\023\"" +
-      "\016/projects/list:\001*0\001\022B\n\020getProjectByUuid" +
-      "\022\006.io.Id\032\013.io.Project\"\031\202\323\344\223\002\023\022\021/projects" +
-      "/id/{id}\022c\n getProjectAndTemplateByShort" +
-      "Code\022\006.io.Id\032\034.io.ProjectByShortCodeResu" +
-      "lt\"\031\202\323\344\223\002\023\022\021/projects/sc/{id}\022]\n\022getProj" +
-      "ectsForUser\022\027.io.ProjectStatusFilter\032\013.i" +
-      "o.Project\"\037\202\323\344\223\002\031\022\027/projects/user/{statu" +
-      "s}0\001\022Q\n\013getProjects\022\027.io.ProjectStatusFi" +
-      "lter\032\013.io.Project\"\032\202\323\344\223\002\024\022\022/projects/{st" +
-      "atus}0\0012\217\003\n\010Messages\022\304\001\n\013sendMessage\022\013.i" +
-      "o.Message\032\006.io.Id\"\237\001\202\323\344\223\002\r\"\010/message:\001*\222" +
-      "A\210\001\022\014Send Message\032FCreates a new message" +
-      " in the database and updates all relevan" +
-      "t passes.J0\n\003400\022)\n\'There is a problem w" +
-      "ith the input data.\022\273\001\n\013getMessages\022\016.io" +
-      ".Pagination\032\013.io.Message\"\214\001\202\323\344\223\002\013\022\t/mess" +
-      "ages\222Ax\022\014Get Messages\0326Retrieves all mes" +
-      "sages matching the criteria provided.J0\n" +
-      "\003400\022)\n\'There is a problem with the inpu" +
-      "t data.0\0012\262\004\n\004Jobs\022\336\001\n\timportCsv\022\024.io.Cs" +
-      "vImportRequest\032\006.io.Id\"\262\001\202\323\344\223\002\024\"\017/job/cs" +
-      "v_import:\001*\222A\224\001\022\nImport Csv\032*Takes a pro" +
-      "vided csv and builds a Csv job.J0\n\003400\022)" +
-      "\n\'There is a problem with the input data" +
-      ".J(\n\003413\022!\n\037The file provided is too lar" +
-      "ge.\022\247\001\n\007getJobs\022\016.io.Pagination\032\007.io.Job" +
-      "\"\200\001\202\323\344\223\002\007\022\005/jobs\222Ap\022\010Get Jobs\0322Retrieves" +
-      " all jobs matching the criteria provided" +
-      ".J0\n\003400\022)\n\'There is a problem with the " +
-      "input data.0\001\022\236\001\n\006getJob\022\006.io.Id\032\007.io.Jo" +
-      "b\"\202\001\202\323\344\223\002\013\022\t/job/{id}\222An\022\007Get Job\0321Retri" +
-      "eves a job record with the corresponding" +
-      " id.J0\n\003400\022)\n\'There is a problem with t" +
-      "he input data.2\215\031\n\014Integrations\022\201\002\n\022crea" +
-      "teIntegrations\022\026.io.IntegrationConfigs\032\006" +
-      ".io.Id\"\312\001\202\323\344\223\002\036\"\031/integrations/integrati" +
-      "on:\001*\222A\242\001\022\023Create Integrations\032#Sets up " +
-      "integration configurations.J0\n\003400\022)\n\'Th" +
-      "ere is a problem with the input data.J4\n" +
-      "\003403\022-\n+Returned when the user lacks aut" +
-      "horization.\022\367\001\n\017getIntegrations\022\023.io.Pro" +
-      "tocolIdInput\032\026.io.IntegrationConfigs\"\266\001\202" +
-      "\323\344\223\0020\022./integrations/integration/{protoc" +
-      "ol}/{classId}\222A}\022\020Get Integrations\032%Retr" +
-      "ieves integration configurations.J\"\n\003403" +
-      "\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025" +
-      "Record was not found.\022\343\002\n\022updateIntegrat" +
-      "ions\022\026.io.IntegrationConfigs\032\006.io.Id\"\254\002\202" +
-      "\323\344\223\002\036\032\031/integrations/integration:\001*\222A\204\002\022" +
-      "\023Update Integrations\032\036Updates an integra" +
-      "tion record.J0\n\003400\022)\n\'There is a proble" +
-      "m with the input data.J\"\n\003403\022\033\n\031User la" +
-      "cks authorization.J\036\n\003404\022\027\n\025Record was " +
-      "not found.JW\n\003503\022P\nNServer is unavailab" +
-      "le. Back off for 250ms and repeat reques" +
-      "t until successful.\022\365\001\n\022deleteIntegratio" +
-      "ns\022\023.io.ProtocolIdInput\032\026.google.protobu" +
-      "f.Empty\"\261\001\202\323\344\223\0020*./integrations/integrat" +
-      "ion/{protocol}/{classId}\222Ax\022\023Delete Inte" +
-      "grations\032\035Deletes an integration recordJ" +
-      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
-      "04\022\027\n\025Record was not found.\022\310\002\n\026createSi" +
-      "nkSubscription\022\024.io.SinkSubscription\032\006.i" +
-      "o.Id\"\217\002\202\323\344\223\002\027\"\022/integrations/sink:\001*\222A\356\001" +
-      "\022\030Create Sink Subscription\032jCreates a si" +
-      "nk subscription so that PassKit can send" +
-      " a message to a URL after certain event " +
-      "has completed.J0\n\003400\022)\n\'There is a prob" +
-      "lem with the input data.J4\n\003403\022-\n+Retur" +
-      "ned when the user lacks authorization.\022\203" +
-      "\002\n\023getSinkSubscription\022\027.io.Subscription" +
-      "Request\032\024.io.SinkSubscription\"\274\001\202\323\344\223\0020\022." +
-      "/integrations/sink/{protocol}/{subscript" +
-      "ionId}\222A\202\001\022\025Get Sink Subscription\032%Retri" +
-      "eves a sink subscription config.J\"\n\003403\022" +
-      "\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025R" +
-      "ecord was not found.\022\326\002\n\037listSinkSubscri" +
-      "ptionsDeprecated\022\031.io.ListRequestDepreca" +
-      "ted\032\024.io.SinkSubscription\"\377\001\202\323\344\223\002\032\022\030/int" +
-      "egrations/sinks/list\222A\333\001\022$List Sink Subs" +
-      "criptions [DEPRECATED]\032o[DEPRECATED: OR " +
-      "operator is not supported] List all sink" +
-      " subscriptions for a given segment. Supp" +
-      "ort pagination.J\"\n\003403\022\033\n\031User lacks aut" +
-      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
-      "nd.0\001\022\215\002\n\025listSinkSubscriptions\022\017.io.Lis" +
-      "tRequest\032\024.io.SinkSubscription\"\312\001\202\323\344\223\002\035\"" +
-      "\030/integrations/sinks/list:\001*\222A\243\001\022\027List S" +
-      "ink Subscriptions\032DList all sink subscri" +
-      "ptions for a given segment. Support pagi" +
-      "nation.J\"\n\003403\022\033\n\031User lacks authorizati" +
-      "on.J\036\n\003404\022\027\n\025Record was not found.0\001\022\350\002" +
-      "\n\026updateSinkSubscription\022\024.io.SinkSubscr" +
-      "iption\032\006.io.Id\"\257\002\202\323\344\223\002\027\032\022/integrations/s" +
-      "ink:\001*\222A\216\002\022\030Update Sink Subscription\032#Up" +
-      "dates a sink subscription record.J0\n\003400" +
+      "empty.proto\032.protoc-gen-openapiv2/option" +
+      "s/annotations.proto\032\036io/common/common_ob" +
+      "jects.proto\032\027io/common/project.proto\032\027io" +
+      "/common/message.proto\032\023io/common/job.pro" +
+      "to\032\032io/common/pagination.proto\032\026io/commo" +
+      "n/filter.proto\032\033io/common/integration.pr" +
+      "oto\032\022io/user/user.proto2\347\n\n\005Users\022@\n\ncre" +
+      "ateUser\022\013.io.NewUser\032\023.io.NewUserRespons" +
+      "e\"\020\202\323\344\223\002\n\"\005/user:\001*\0225\n\007newUser\022\013.io.NewU" +
+      "ser\032\007.io.JWT\"\024\202\323\344\223\002\016\"\t/user/new:\001*\0226\n\006ve" +
+      "rify\022\006.io.Id\032\013.io.Boolean\"\027\202\323\344\223\002\021\032\014/user" +
+      "/verify:\001*\022^\n\027resendVerificationEmail\022\026." +
+      "google.protobuf.Empty\032\013.io.Boolean\"\036\202\323\344\223" +
+      "\002\030\"\023/user/verify/resend:\001*\022M\n\007getUser\022\026." +
+      "google.protobuf.Empty\032\023.io.GetUserRespon" +
+      "se\"\025\202\323\344\223\002\017\022\r/user/profile\0224\n\005login\022\017.io." +
+      "Credentials\032\007.io.JWT\"\021\202\323\344\223\002\013\"\006/login:\001*\022" +
+      "P\n\rresetPassword\022\017.io.Credentials\032\026.goog" +
+      "le.protobuf.Empty\"\026\202\323\344\223\002\020\032\013/user/reset:\001" +
+      "*\022^\n\025sendPasswordResetLink\022\014.io.Username" +
+      "\032\026.google.protobuf.Empty\"\037\202\323\344\223\002\031\"\024/user/" +
+      "reset/password:\001*\022a\n\016changePassword\022\026.io" +
+      ".PasswordResetInput\032\026.google.protobuf.Em" +
+      "pty\"\037\202\323\344\223\002\031\032\024/user/reset/password:\001*\022`\n!" +
+      "getProjectsForUserQueryDeprecated\022\016.io.P" +
+      "agination\032\013.io.Project\"\034\202\323\344\223\002\026\022\024/project" +
+      "s/user/query0\001\022T\n\032getProjectsQueryDeprec" +
+      "ated\022\016.io.Pagination\032\013.io.Project\"\027\202\323\344\223\002" +
+      "\021\022\017/projects/query0\001\022U\n\027getProjectsForUs" +
+      "erQuery\022\013.io.Filters\032\013.io.Project\"\036\202\323\344\223\002" +
+      "\030\"\023/projects/user/list:\001*0\001\022I\n\020getProjec" +
+      "tsQuery\022\013.io.Filters\032\013.io.Project\"\031\202\323\344\223\002" +
+      "\023\"\016/projects/list:\001*0\001\022B\n\020getProjectByUu" +
+      "id\022\006.io.Id\032\013.io.Project\"\031\202\323\344\223\002\023\022\021/projec" +
+      "ts/id/{id}\022c\n getProjectAndTemplateBySho" +
+      "rtCode\022\006.io.Id\032\034.io.ProjectByShortCodeRe" +
+      "sult\"\031\202\323\344\223\002\023\022\021/projects/sc/{id}\022]\n\022getPr" +
+      "ojectsForUser\022\027.io.ProjectStatusFilter\032\013" +
+      ".io.Project\"\037\202\323\344\223\002\031\022\027/projects/user/{sta" +
+      "tus}0\001\022Q\n\013getProjects\022\027.io.ProjectStatus" +
+      "Filter\032\013.io.Project\"\032\202\323\344\223\002\024\022\022/projects/{" +
+      "status}0\0012\217\003\n\010Messages\022\304\001\n\013sendMessage\022\013" +
+      ".io.Message\032\006.io.Id\"\237\001\202\323\344\223\002\r\"\010/message:\001" +
+      "*\222A\210\001\022\014Send Message\032FCreates a new messa" +
+      "ge in the database and updates all relev" +
+      "ant passes.J0\n\003400\022)\n\'There is a problem" +
+      " with the input data.\022\273\001\n\013getMessages\022\016." +
+      "io.Pagination\032\013.io.Message\"\214\001\202\323\344\223\002\013\022\t/me" +
+      "ssages\222Ax\022\014Get Messages\0326Retrieves all m" +
+      "essages matching the criteria provided.J" +
+      "0\n\003400\022)\n\'There is a problem with the in" +
+      "put data.0\0012\262\004\n\004Jobs\022\336\001\n\timportCsv\022\024.io." +
+      "CsvImportRequest\032\006.io.Id\"\262\001\202\323\344\223\002\024\"\017/job/" +
+      "csv_import:\001*\222A\224\001\022\nImport Csv\032*Takes a p" +
+      "rovided csv and builds a Csv job.J0\n\003400" +
       "\022)\n\'There is a problem with the input da" +
-      "ta.J\"\n\003403\022\033\n\031User lacks authorization.J" +
-      "\036\n\003404\022\027\n\025Record was not found.JW\n\003503\022P" +
-      "\nNServer is unavailable. Back off for 25" +
-      "0ms and repeat request until successful." +
-      "\022\211\002\n\026deleteSinkSubscription\022\027.io.Subscri" +
-      "ptionRequest\032\026.google.protobuf.Empty\"\275\001\202" +
-      "\323\344\223\0020*./integrations/sink/{protocol}/{su" +
-      "bscriptionId}\222A\203\001\022\030Delete Sink Subscript" +
-      "ion\032#Deletes an sink subscription record" +
-      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
-      "404\022\027\n\025Record was not found.\022\357\001\n\032getSamp" +
-      "leSubscriptionEvent\022\006.io.Id\032\024.io.SinkSub" +
-      "scription\"\262\001\202\323\344\223\002\033\022\031/integrations/sink/s" +
-      "ample\222A\215\001\022\035Get Sample Subscription Event" +
-      "\032(Retrieves a sample subscription payloa" +
-      "d.J\"\n\003403\022\033\n\031User lacks authorization.J\036" +
-      "\n\003404\022\027\n\025Record was not found.BG\n\020com.pa" +
-      "sskit.grpcZ$stash.passkit.com/io/model/s" +
-      "dk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "ta.J(\n\003413\022!\n\037The file provided is too l" +
+      "arge.\022\247\001\n\007getJobs\022\016.io.Pagination\032\007.io.J" +
+      "ob\"\200\001\202\323\344\223\002\007\022\005/jobs\222Ap\022\010Get Jobs\0322Retriev" +
+      "es all jobs matching the criteria provid" +
+      "ed.J0\n\003400\022)\n\'There is a problem with th" +
+      "e input data.0\001\022\236\001\n\006getJob\022\006.io.Id\032\007.io." +
+      "Job\"\202\001\202\323\344\223\002\013\022\t/job/{id}\222An\022\007Get Job\0321Ret" +
+      "rieves a job record with the correspondi" +
+      "ng id.J0\n\003400\022)\n\'There is a problem with" +
+      " the input data.2\215\031\n\014Integrations\022\201\002\n\022cr" +
+      "eateIntegrations\022\026.io.IntegrationConfigs" +
+      "\032\006.io.Id\"\312\001\202\323\344\223\002\036\"\031/integrations/integra" +
+      "tion:\001*\222A\242\001\022\023Create Integrations\032#Sets u" +
+      "p integration configurations.J0\n\003400\022)\n\'" +
+      "There is a problem with the input data.J" +
+      "4\n\003403\022-\n+Returned when the user lacks a" +
+      "uthorization.\022\367\001\n\017getIntegrations\022\023.io.P" +
+      "rotocolIdInput\032\026.io.IntegrationConfigs\"\266" +
+      "\001\202\323\344\223\0020\022./integrations/integration/{prot" +
+      "ocol}/{classId}\222A}\022\020Get Integrations\032%Re" +
+      "trieves integration configurations.J\"\n\0034" +
+      "03\022\033\n\031User lacks authorization.J\036\n\003404\022\027" +
+      "\n\025Record was not found.\022\343\002\n\022updateIntegr" +
+      "ations\022\026.io.IntegrationConfigs\032\006.io.Id\"\254" +
+      "\002\202\323\344\223\002\036\032\031/integrations/integration:\001*\222A\204" +
+      "\002\022\023Update Integrations\032\036Updates an integ" +
+      "ration record.J0\n\003400\022)\n\'There is a prob" +
+      "lem with the input data.J\"\n\003403\022\033\n\031User " +
+      "lacks authorization.J\036\n\003404\022\027\n\025Record wa" +
+      "s not found.JW\n\003503\022P\nNServer is unavail" +
+      "able. Back off for 250ms and repeat requ" +
+      "est until successful.\022\365\001\n\022deleteIntegrat" +
+      "ions\022\023.io.ProtocolIdInput\032\026.google.proto" +
+      "buf.Empty\"\261\001\202\323\344\223\0020*./integrations/integr" +
+      "ation/{protocol}/{classId}\222Ax\022\023Delete In" +
+      "tegrations\032\035Deletes an integration recor" +
+      "dJ\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
+      "\003404\022\027\n\025Record was not found.\022\310\002\n\026create" +
+      "SinkSubscription\022\024.io.SinkSubscription\032\006" +
+      ".io.Id\"\217\002\202\323\344\223\002\027\"\022/integrations/sink:\001*\222A" +
+      "\356\001\022\030Create Sink Subscription\032jCreates a " +
+      "sink subscription so that PassKit can se" +
+      "nd a message to a URL after certain even" +
+      "t has completed.J0\n\003400\022)\n\'There is a pr" +
+      "oblem with the input data.J4\n\003403\022-\n+Ret" +
+      "urned when the user lacks authorization." +
+      "\022\203\002\n\023getSinkSubscription\022\027.io.Subscripti" +
+      "onRequest\032\024.io.SinkSubscription\"\274\001\202\323\344\223\0020" +
+      "\022./integrations/sink/{protocol}/{subscri" +
+      "ptionId}\222A\202\001\022\025Get Sink Subscription\032%Ret" +
+      "rieves a sink subscription config.J\"\n\00340" +
+      "3\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n" +
+      "\025Record was not found.\022\326\002\n\037listSinkSubsc" +
+      "riptionsDeprecated\022\031.io.ListRequestDepre" +
+      "cated\032\024.io.SinkSubscription\"\377\001\202\323\344\223\002\032\022\030/i" +
+      "ntegrations/sinks/list\222A\333\001\022$List Sink Su" +
+      "bscriptions [DEPRECATED]\032o[DEPRECATED: O" +
+      "R operator is not supported] List all si" +
+      "nk subscriptions for a given segment. Su" +
+      "pport pagination.J\"\n\003403\022\033\n\031User lacks a" +
+      "uthorization.J\036\n\003404\022\027\n\025Record was not f" +
+      "ound.0\001\022\215\002\n\025listSinkSubscriptions\022\017.io.L" +
+      "istRequest\032\024.io.SinkSubscription\"\312\001\202\323\344\223\002" +
+      "\035\"\030/integrations/sinks/list:\001*\222A\243\001\022\027List" +
+      " Sink Subscriptions\032DList all sink subsc" +
+      "riptions for a given segment. Support pa" +
+      "gination.J\"\n\003403\022\033\n\031User lacks authoriza" +
+      "tion.J\036\n\003404\022\027\n\025Record was not found.0\001\022" +
+      "\350\002\n\026updateSinkSubscription\022\024.io.SinkSubs" +
+      "cription\032\006.io.Id\"\257\002\202\323\344\223\002\027\032\022/integrations" +
+      "/sink:\001*\222A\216\002\022\030Update Sink Subscription\032#" +
+      "Updates a sink subscription record.J0\n\0034" +
+      "00\022)\n\'There is a problem with the input " +
+      "data.J\"\n\003403\022\033\n\031User lacks authorization" +
+      ".J\036\n\003404\022\027\n\025Record was not found.JW\n\003503" +
+      "\022P\nNServer is unavailable. Back off for " +
+      "250ms and repeat request until successfu" +
+      "l.\022\211\002\n\026deleteSinkSubscription\022\027.io.Subsc" +
+      "riptionRequest\032\026.google.protobuf.Empty\"\275" +
+      "\001\202\323\344\223\0020*./integrations/sink/{protocol}/{" +
+      "subscriptionId}\222A\203\001\022\030Delete Sink Subscri" +
+      "ption\032#Deletes an sink subscription reco" +
+      "rdJ\"\n\003403\022\033\n\031User lacks authorization.J\036" +
+      "\n\003404\022\027\n\025Record was not found.\022\357\001\n\032getSa" +
+      "mpleSubscriptionEvent\022\006.io.Id\032\024.io.SinkS" +
+      "ubscription\"\262\001\202\323\344\223\002\033\022\031/integrations/sink" +
+      "/sample\222A\215\001\022\035Get Sample Subscription Eve" +
+      "nt\032(Retrieves a sample subscription payl" +
+      "oad.J\"\n\003403\022\033\n\031User lacks authorization." +
+      "J\036\n\003404\022\027\n\025Record was not found.BG\n\020com." +
+      "passkit.grpcZ$stash.passkit.com/io/model" +
+      "/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.MessageOuterClass.getDescriptor(),
@@ -192,12 +192,12 @@ public final class ARpcOthers {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.MessageOuterClass.getDescriptor();

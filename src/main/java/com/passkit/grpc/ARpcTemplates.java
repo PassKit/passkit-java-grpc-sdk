@@ -25,143 +25,91 @@ public final class ARpcTemplates {
     java.lang.String[] descriptorData = {
       "\n\035io/core/a_rpc_templates.proto\022\002io\032\034goo" +
       "gle/api/annotations.proto\032\033google/protob" +
-      "uf/empty.proto\032,protoc-gen-swagger/optio" +
-      "ns/annotations.proto\032\036io/common/common_o" +
-      "bjects.proto\032\030io/common/template.proto\032\031" +
-      "io/common/proximity.proto\032\025io/common/lin" +
-      "ks.proto\032\032io/common/pagination.proto\032\026io" +
-      "/common/filter.proto2\243r\n\tTemplates\022\364\001\n\016c" +
-      "reateTemplate\022\020.io.PassTemplate\032\006.io.Id\"" +
-      "\307\001\202\323\344\223\002\016\"\t/template:\001*\222A\257\001\n\016Pass Templat" +
-      "es\022\024Create Pass Template\032\037Creates a pass" +
-      " template record.J0\n\003400\022)\n\'There is a p" +
-      "roblem with the input data.J4\n\003403\022-\n+Re" +
-      "turned when the user lacks authorization" +
-      ".\022\346\002\n\016updateTemplate\022\020.io.PassTemplate\032\020" +
-      ".io.PassTemplate\"\257\002\202\323\344\223\002\016\032\t/template:\001*\222" +
-      "A\227\002\n\016Pass Templates\022\024Update Pass Templat" +
-      "e\032 Updates an pass template record.J0\n\0034" +
-      "00\022)\n\'There is a problem with the input " +
-      "data.J\"\n\003403\022\033\n\031User lacks authorization" +
-      ".J\036\n\003404\022\027\n\025Record was not found.JW\n\003503" +
-      "\022P\nNServer is unavailable. Back off for " +
-      "250ms and repeat request until successfu" +
-      "l.\022\342\001\n\013getTemplate\022\006.io.Id\032\030.io.PassTemp" +
-      "lateResponse\"\260\001\202\323\344\223\002\025\022\023/template/data/{i" +
-      "d}\222A\221\001\n\016Pass Templates\022\030Get Pass Templat" +
-      "e Record\032!Retrieves a pass template reco" +
-      "rd.J\"\n\003403\022\033\n\031User lacks authorization.J" +
-      "\036\n\003404\022\027\n\025Record was not found.\022\220\002\n\022getD" +
-      "efaultTemplate\022\032.io.DefaultTemplateReque" +
-      "st\032\020.io.PassTemplate\"\313\001\202\323\344\223\002&\022$/template" +
-      "/data/{protocol}/{revision}\222A\233\001\n\016Pass Te" +
-      "mplates\022\"Get A Default Pass Template Rec" +
-      "ord\032!Retrieves a pass template record.J\"" +
-      "\n\003403\022\033\n\031User lacks authorization.J\036\n\00340" +
-      "4\022\027\n\025Record was not found.\022\361\001\n\014copyTempl" +
-      "ate\022\023.io.CopyObjectInput\032\006.io.Id\"\303\001\202\323\344\223\002" +
-      "\023\"\016/template/copy:\001*\222A\246\001\n\016Pass Templates" +
-      "\022\033Copy a Pass Template Record\0323Copies a " +
-      "pass template record and returns a new i" +
-      "d.J\"\n\003403\022\033\n\031User lacks authorization.J\036" +
-      "\n\003404\022\027\n\025Record was not found.\022\330\001\n\016delet" +
-      "eTemplate\022\006.io.Id\032\026.google.protobuf.Empt" +
-      "y\"\245\001\202\323\344\223\002\020*\016/template/{id}\222A\213\001\n\016Pass Tem" +
-      "plates\022\024Delete Pass Template\032\037Deletes an" +
-      " pass template recordJ\"\n\003403\022\033\n\031User lac" +
+      "uf/empty.proto\032.protoc-gen-openapiv2/opt" +
+      "ions/annotations.proto\032\036io/common/common" +
+      "_objects.proto\032\030io/common/template.proto" +
+      "\032\031io/common/proximity.proto\032\025io/common/l" +
+      "inks.proto\032\032io/common/pagination.proto\032\026" +
+      "io/common/filter.proto2\243r\n\tTemplates\022\364\001\n" +
+      "\016createTemplate\022\020.io.PassTemplate\032\006.io.I" +
+      "d\"\307\001\202\323\344\223\002\016\"\t/template:\001*\222A\257\001\n\016Pass Templ" +
+      "ates\022\024Create Pass Template\032\037Creates a pa" +
+      "ss template record.J0\n\003400\022)\n\'There is a" +
+      " problem with the input data.J4\n\003403\022-\n+" +
+      "Returned when the user lacks authorizati" +
+      "on.\022\346\002\n\016updateTemplate\022\020.io.PassTemplate" +
+      "\032\020.io.PassTemplate\"\257\002\202\323\344\223\002\016\032\t/template:\001" +
+      "*\222A\227\002\n\016Pass Templates\022\024Update Pass Templ" +
+      "ate\032 Updates an pass template record.J0\n" +
+      "\003400\022)\n\'There is a problem with the inpu" +
+      "t data.J\"\n\003403\022\033\n\031User lacks authorizati" +
+      "on.J\036\n\003404\022\027\n\025Record was not found.JW\n\0035" +
+      "03\022P\nNServer is unavailable. Back off fo" +
+      "r 250ms and repeat request until success" +
+      "ful.\022\342\001\n\013getTemplate\022\006.io.Id\032\030.io.PassTe" +
+      "mplateResponse\"\260\001\202\323\344\223\002\025\022\023/template/data/" +
+      "{id}\222A\221\001\n\016Pass Templates\022\030Get Pass Templ" +
+      "ate Record\032!Retrieves a pass template re" +
+      "cord.J\"\n\003403\022\033\n\031User lacks authorization" +
+      ".J\036\n\003404\022\027\n\025Record was not found.\022\220\002\n\022ge" +
+      "tDefaultTemplate\022\032.io.DefaultTemplateReq" +
+      "uest\032\020.io.PassTemplate\"\313\001\202\323\344\223\002&\022$/templa" +
+      "te/data/{protocol}/{revision}\222A\233\001\n\016Pass " +
+      "Templates\022\"Get A Default Pass Template R" +
+      "ecord\032!Retrieves a pass template record." +
+      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
+      "404\022\027\n\025Record was not found.\022\361\001\n\014copyTem" +
+      "plate\022\023.io.CopyObjectInput\032\006.io.Id\"\303\001\202\323\344" +
+      "\223\002\023\"\016/template/copy:\001*\222A\246\001\n\016Pass Templat" +
+      "es\022\033Copy a Pass Template Record\0323Copies " +
+      "a pass template record and returns a new" +
+      " id.J\"\n\003403\022\033\n\031User lacks authorization." +
+      "J\036\n\003404\022\027\n\025Record was not found.\022\330\001\n\016del" +
+      "eteTemplate\022\006.io.Id\032\026.google.protobuf.Em" +
+      "pty\"\245\001\202\323\344\223\002\020*\016/template/{id}\222A\213\001\n\016Pass T" +
+      "emplates\022\024Delete Pass Template\032\037Deletes " +
+      "an pass template recordJ\"\n\003403\022\033\n\031User l" +
+      "acks authorization.J\036\n\003404\022\027\n\025Record was" +
+      " not found.\022\324\002\n\036listTemplatesForUserDepr" +
+      "ecated\022\016.io.Pagination\032\030.io.PassTemplate" +
+      "Response\"\205\002\202\323\344\223\002\021\022\017/templates/user\222A\352\001\n\016" +
+      "Pass Templates\022,Get All Pass Templates F" +
+      "or User [DEPRECATED]\032f[DEPRECATED: OR op" +
+      "erator is not supported] Retrieves all p" +
+      "ass templates stored under the user acco" +
+      "unt.J\"\n\003403\022\033\n\031User lacks authorization." +
+      "J\036\n\003404\022\027\n\025Record was not found.0\001\022\266\005\n\024l" +
+      "istTemplatesForUser\022\013.io.Filters\032\030.io.Pa" +
+      "ssTemplateResponse\"\364\004\202\323\344\223\002\031\"\024/templates/" +
+      "user/list:\001*\222A\321\004\n\016Pass Templates\022\037Get Al" +
+      "l Pass Templates For User\032\331\003Retrieves al" +
+      "l pass templates stored under the user a" +
+      "ccount.\n\n<span style=\"font-weight:bold\">" +
+      "About filter field names, operators and " +
+      "sample payloads:</span> <a target=\"_blan" +
+      "k\" href=\"https://help.passkit.com/en/art" +
+      "icles/4200250-pass-templates-locations-b" +
+      "eacons-links-filtering-listing-and-count" +
+      "ing-by-api#filter-pass-templates\">https:" +
+      "//help.passkit.com/en/articles/4200250-p" +
+      "ass-templates-locations-beacons-links-fi" +
+      "ltering-listing-and-counting-by-api#filt" +
+      "er-pass-templates</a>J\"\n\003403\022\033\n\031User lac" +
       "ks authorization.J\036\n\003404\022\027\n\025Record was n" +
-      "ot found.\022\324\002\n\036listTemplatesForUserDeprec" +
-      "ated\022\016.io.Pagination\032\030.io.PassTemplateRe" +
-      "sponse\"\205\002\202\323\344\223\002\021\022\017/templates/user\222A\352\001\n\016Pa" +
-      "ss Templates\022,Get All Pass Templates For" +
-      " User [DEPRECATED]\032f[DEPRECATED: OR oper" +
-      "ator is not supported] Retrieves all pas" +
-      "s templates stored under the user accoun" +
-      "t.J\"\n\003403\022\033\n\031User lacks authorization.J\036" +
-      "\n\003404\022\027\n\025Record was not found.0\001\022\266\005\n\024lis" +
-      "tTemplatesForUser\022\013.io.Filters\032\030.io.Pass" +
-      "TemplateResponse\"\364\004\202\323\344\223\002\031\"\024/templates/us" +
-      "er/list:\001*\222A\321\004\n\016Pass Templates\022\037Get All " +
-      "Pass Templates For User\032\331\003Retrieves all " +
-      "pass templates stored under the user acc" +
-      "ount.\n\n<span style=\"font-weight:bold\">Ab" +
-      "out filter field names, operators and sa" +
-      "mple payloads:</span> <a target=\"_blank\"" +
-      " href=\"https://help.passkit.com/en/artic" +
-      "les/4200250-pass-templates-locations-bea" +
-      "cons-links-filtering-listing-and-countin" +
-      "g-by-api#filter-pass-templates\">https://" +
-      "help.passkit.com/en/articles/4200250-pas" +
-      "s-templates-locations-beacons-links-filt" +
-      "ering-listing-and-counting-by-api#filter" +
-      "-pass-templates</a>J\"\n\003403\022\033\n\031User lacks" +
-      " authorization.J\036\n\003404\022\027\n\025Record was not" +
-      " found.0\001\022\306\002\n\027listTemplatesDeprecated\022\016." +
-      "io.Pagination\032\030.io.PassTemplateResponse\"" +
-      "\376\001\202\323\344\223\002\014\022\n/templates\222A\350\001\n\016Pass Templates" +
-      "\022/Get All Pass Templates For Company [DE" +
-      "PRECATED]\032a[DEPRECATED: OR operator is n" +
-      "ot supported] Retrieves all pass templat" +
-      "es stored under the company.J\"\n\003403\022\033\n\031U" +
-      "ser lacks authorization.J\036\n\003404\022\027\n\025Recor" +
-      "d was not found.0\001\022\250\005\n\rlistTemplates\022\013.i" +
-      "o.Filters\032\030.io.PassTemplateResponse\"\355\004\202\323" +
-      "\344\223\002\024\"\017/templates/list:\001*\222A\317\004\n\016Pass Templ" +
-      "ates\022\"Get All Pass Templates For Company" +
-      "\032\324\003Retrieves all pass templates stored u" +
-      "nder the company.\n\n<span style=\"font-wei" +
-      "ght:bold\">About filter field names, oper" +
-      "ators and sample payloads:</span> <a tar" +
-      "get=\"_blank\" href=\"https://help.passkit." +
-      "com/en/articles/4200250-pass-templates-l" +
-      "ocations-beacons-links-filtering-listing" +
-      "-and-counting-by-api#filter-pass-templat" +
-      "es\">https://help.passkit.com/en/articles" +
-      "/4200250-pass-templates-locations-beacon" +
-      "s-links-filtering-listing-and-counting-b" +
-      "y-api#filter-pass-templates</a>J\"\n\003403\022\033" +
-      "\n\031User lacks authorization.J\036\n\003404\022\027\n\025Re" +
-      "cord was not found.0\001\022\326\002\n\030countTemplates" +
-      "Deprecated\022\016.io.Pagination\032\t.io.Count\"\236\002" +
-      "\202\323\344\223\002\022\022\020/templates/count\222A\202\002\n\016Pass Templ" +
-      "ates\022;Count All Pass Templates Available" +
-      " to The User [DEPRECATED]\032o[DEPRECATED: " +
-      "OR operator is not supported] Retrieves " +
-      "a count of pass templates stored under t" +
-      "he user\'s company.J\"\n\003403\022\033\n\031User lacks " +
-      "authorization.J\036\n\003404\022\027\n\025Record was not " +
-      "found.\022\263\005\n\016countTemplates\022\013.io.Filters\032\t" +
-      ".io.Count\"\210\005\202\323\344\223\002\025\"\020/templates/count:\001*\222" +
-      "A\351\004\n\016Pass Templates\022.Count All Pass Temp" +
-      "lates Available to The User\032\342\003Retrieves " +
-      "a count of pass templates stored under t" +
-      "he user\'s company.\n\n<span style=\"font-we" +
-      "ight:bold\">About filter field names, ope" +
-      "rators and sample payloads:</span> <a ta" +
-      "rget=\"_blank\" href=\"https://help.passkit" +
-      ".com/en/articles/4200250-pass-templates-" +
-      "locations-beacons-links-filtering-listin" +
-      "g-and-counting-by-api#filter-pass-templa" +
-      "tes\">https://help.passkit.com/en/article" +
-      "s/4200250-pass-templates-locations-beaco" +
-      "ns-links-filtering-listing-and-counting-" +
-      "by-api#filter-pass-templates</a>J\"\n\003403\022" +
-      "\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025R" +
-      "ecord was not found.\022\327\002\n\037countTemplatesF" +
-      "orUserDeprecated\022\016.io.Pagination\032\t.io.Co" +
-      "unt\"\230\002\202\323\344\223\002\027\022\025/templates/user/count\222A\367\001\n" +
-      "\016Pass Templates\0227Count All Pass Template" +
-      "s Owned by The User [DEPRECATED]\032h[DEPRE" +
-      "CATED: OR operator is not supported] Ret" +
-      "rieves all pass templates stored under t" +
-      "he user\'s account.J\"\n\003403\022\033\n\031User lacks " +
-      "authorization.J\036\n\003404\022\027\n\025Record was not " +
-      "found.\022\264\005\n\025countTemplatesForUser\022\013.io.Fi" +
-      "lters\032\t.io.Count\"\202\005\202\323\344\223\002\032\"\025/templates/us" +
-      "er/count:\001*\222A\336\004\n\016Pass Templates\022*Count A" +
-      "ll Pass Templates Owned by The User\032\333\003Re" +
-      "trieves all pass templates stored under " +
-      "the user\'s account.\n\n<span style=\"font-w" +
+      "ot found.0\001\022\306\002\n\027listTemplatesDeprecated\022" +
+      "\016.io.Pagination\032\030.io.PassTemplateRespons" +
+      "e\"\376\001\202\323\344\223\002\014\022\n/templates\222A\350\001\n\016Pass Templat" +
+      "es\022/Get All Pass Templates For Company [" +
+      "DEPRECATED]\032a[DEPRECATED: OR operator is" +
+      " not supported] Retrieves all pass templ" +
+      "ates stored under the company.J\"\n\003403\022\033\n" +
+      "\031User lacks authorization.J\036\n\003404\022\027\n\025Rec" +
+      "ord was not found.0\001\022\250\005\n\rlistTemplates\022\013" +
+      ".io.Filters\032\030.io.PassTemplateResponse\"\355\004" +
+      "\202\323\344\223\002\024\"\017/templates/list:\001*\222A\317\004\n\016Pass Tem" +
+      "plates\022\"Get All Pass Templates For Compa" +
+      "ny\032\324\003Retrieves all pass templates stored" +
+      " under the company.\n\n<span style=\"font-w" +
       "eight:bold\">About filter field names, op" +
       "erators and sample payloads:</span> <a t" +
       "arget=\"_blank\" href=\"https://help.passki" +
@@ -173,239 +121,291 @@ public final class ARpcTemplates {
       "ons-links-filtering-listing-and-counting" +
       "-by-api#filter-pass-templates</a>J\"\n\003403" +
       "\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025" +
-      "Record was not found.\022\344\001\n\016createLocation" +
-      "\022\017.io.GPSLocation\032\006.io.Id\"\270\001\202\323\344\223\002\016\"\t/loc" +
-      "ation:\001*\222A\240\001\n\tLocations\022\017Create Location" +
-      "\032\032Creates a location object.J0\n\003400\022)\n\'T" +
-      "here is a problem with the input data.J4" +
-      "\n\003403\022-\n+Returned when the user lacks au" +
-      "thorization.\022\324\002\n\016updateLocation\022\017.io.GPS" +
-      "Location\032\017.io.GPSLocation\"\237\002\202\323\344\223\002\016\032\t/loc" +
-      "ation:\001*\222A\207\002\n\tLocations\022\017Update Location" +
-      "\032\032Updates a location object.J0\n\003400\022)\n\'T" +
-      "here is a problem with the input data.J\"" +
-      "\n\003403\022\033\n\031User lacks authorization.J\036\n\00340" +
-      "4\022\027\n\025Record was not found.JW\n\003503\022P\nNSer" +
-      "ver is unavailable. Back off for 250ms a" +
-      "nd repeat request until successful.\022\305\001\n\013" +
-      "getLocation\022\006.io.Id\032\017.io.GPSLocation\"\234\001\202" +
-      "\323\344\223\002\020\022\016/location/{id}\222A\202\001\n\tLocations\022\014Ge" +
-      "t Location\032#Retrieves a single location " +
-      "object.J\"\n\003403\022\033\n\031User lacks authorizati" +
-      "on.J\036\n\003404\022\027\n\025Record was not found.\022\253\002\n\027" +
-      "listLocationsDeprecated\022\016.io.Pagination\032" +
-      "\017.io.GPSLocation\"\354\001\202\323\344\223\002\014\022\n/locations\222A\326" +
-      "\001\n\tLocations\022\033List Locations [DEPRECATED" +
-      "]\032h[DEPRECATED: OR operator is not suppo" +
-      "rted] Retrieves locations objects that m" +
-      "atch the supplied criteria.J\"\n\003403\022\033\n\031Us" +
-      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
-      " was not found.0\001\022\203\005\n\rlistLocations\022\013.io" +
-      ".Filters\032\017.io.GPSLocation\"\321\004\202\323\344\223\002\024\"\017/loc" +
-      "ations/list:\001*\222A\263\004\n\tLocations\022\016List Loca" +
-      "tions\032\321\003Retrieves locations objects that" +
-      " match the supplied criteria.\n\n<span sty" +
-      "le=\"font-weight:bold\">About filter field" +
-      " names, operators and sample payloads:</" +
-      "span> <a target=\"_blank\" href=\"https://h" +
-      "elp.passkit.com/en/articles/4200250-pass" +
-      "-templates-locations-beacons-links-filte" +
-      "ring-listing-and-counting-by-api#filter-" +
-      "locations\">https://help.passkit.com/en/a" +
-      "rticles/4200250-pass-templates-locations" +
-      "-beacons-links-filtering-listing-and-cou" +
-      "nting-by-api#filter-locations</a>J\"\n\003403" +
-      "\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025" +
-      "Record was not found.0\001\022\331\001\n\014copyLocation" +
-      "\022\023.io.CopyObjectInput\032\006.io.Id\"\253\001\202\323\344\223\002\023\"\016" +
-      "/location/copy:\001*\222A\216\001\n\tLocations\022\rCopy L" +
-      "ocation\032.Copies a location record and re" +
-      "turns a new id.J\"\n\003403\022\033\n\031User lacks aut" +
-      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
-      "nd.\022\307\001\n\016deleteLocation\022\006.io.Id\032\026.google." +
-      "protobuf.Empty\"\224\001\202\323\344\223\002\020*\016/location/{id}\222" +
-      "A{\n\tLocations\022\017Delete Location\032\031Deletes " +
-      "a location objectJ\"\n\003403\022\033\n\031User lacks a" +
-      "uthorization.J\036\n\003404\022\027\n\025Record was not f" +
-      "ound.\022\256\002\n\030countLocationsDeprecated\022\016.io." +
-      "Pagination\032\t.io.Count\"\366\001\202\323\344\223\002\022\022\020/locatio" +
-      "ns/count\222A\332\001\n\tLocations\022\034Count Locations" +
-      " [DEPRECATED]\032k[DEPRECATED: OR operator " +
-      "is not supported] Retrieves a count of l" +
-      "ocations that match the supplied criteri" +
-      "a.J\"\n\003403\022\033\n\031User lacks authorization.J\036" +
-      "\n\003404\022\027\n\025Record was not found.\022\201\005\n\016count" +
-      "Locations\022\013.io.Filters\032\t.io.Count\"\326\004\202\323\344\223" +
-      "\002\025\"\020/locations/count:\001*\222A\267\004\n\tLocations\022\017" +
-      "Count Locations\032\324\003Retrieves a count of l" +
-      "ocations that match the supplied criteri" +
-      "a.\n\n<span style=\"font-weight:bold\">About" +
-      " filter field names, operators and sampl" +
-      "e payloads:</span> <a target=\"_blank\" hr" +
-      "ef=\"https://help.passkit.com/en/articles" +
-      "/4200250-pass-templates-locations-beacon" +
-      "s-links-filtering-listing-and-counting-b" +
-      "y-api#filter-locations\">https://help.pas" +
-      "skit.com/en/articles/4200250-pass-templa" +
-      "tes-locations-beacons-links-filtering-li" +
-      "sting-and-counting-by-api#filter-locatio" +
-      "ns</a>J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.\022\325\001\n\014c" +
-      "reateBeacon\022\n.io.Beacon\032\006.io.Id\"\260\001\202\323\344\223\002\014" +
-      "\"\007/beacon:\001*\222A\232\001\n\007Beacons\022\rCreate Beacon" +
-      "\032\030Creates a beacon object.J0\n\003400\022)\n\'The" +
-      "re is a problem with the input data.J4\n\003" +
-      "403\022-\n+Returned when the user lacks auth" +
-      "orization.\022\300\002\n\014updateBeacon\022\n.io.Beacon\032" +
-      "\n.io.Beacon\"\227\002\202\323\344\223\002\014\032\007/beacon:\001*\222A\201\002\n\007Be" +
-      "acons\022\rUpdate Beacon\032\030Updates a beacon o" +
-      "bject.J0\n\003400\022)\n\'There is a problem with" +
-      " the input data.J\"\n\003403\022\033\n\031User lacks au" +
-      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
-      "und.JW\n\003503\022P\nNServer is unavailable. Ba" +
-      "ck off for 250ms and repeat request unti" +
-      "l successful.\022\265\001\n\tgetBeacon\022\006.io.Id\032\n.io" +
-      ".Beacon\"\223\001\202\323\344\223\002\016\022\014/beacon/{id}\222A|\n\007Beaco" +
-      "ns\022\nGet Beacon\032!Retrieves a single beaco" +
-      "n object.J\"\n\003403\022\033\n\031User lacks authoriza" +
-      "tion.J\036\n\003404\022\027\n\025Record was not found.\022\233\002" +
-      "\n\025listBeaconsDeprecated\022\016.io.Pagination\032" +
-      "\n.io.Beacon\"\343\001\202\323\344\223\002\n\022\010/beacons\222A\317\001\n\007Beac" +
-      "ons\022\031List Beacons [DEPRECATED]\032e[DEPRECA" +
-      "TED: OR operator is not supported] Retri" +
-      "eves beacon objects that match the suppl" +
-      "ied criteria.J\"\n\003403\022\033\n\031User lacks autho" +
-      "rization.J\036\n\003404\022\027\n\025Record was not found" +
-      ".0\001\022\357\004\n\013listBeacons\022\013.io.Filters\032\n.io.Be" +
-      "acon\"\304\004\202\323\344\223\002\022\"\r/beacons/list:\001*\222A\250\004\n\007Bea" +
-      "cons\022\014List Beacons\032\312\003Retrieves beacon ob" +
-      "jects that match the supplied criteria.\n" +
-      "\n<span style=\"font-weight:bold\">About fi" +
-      "lter field names, operators and sample p" +
-      "ayloads:</span> <a target=\"_blank\" href=" +
-      "\"https://help.passkit.com/en/articles/42" +
-      "00250-pass-templates-locations-beacons-l" +
-      "inks-filtering-listing-and-counting-by-a" +
-      "pi#filter-beacons\">https://help.passkit." +
-      "com/en/articles/4200250-pass-templates-l" +
-      "ocations-beacons-links-filtering-listing" +
-      "-and-counting-by-api#filter-beacons</a>J" +
-      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
-      "04\022\027\n\025Record was not found.0\001\022\317\001\n\ncopyBe" +
-      "acon\022\023.io.CopyObjectInput\032\006.io.Id\"\243\001\202\323\344\223" +
-      "\002\021\"\014/beacon/copy:\001*\222A\210\001\n\007Beacons\022\013Copy B" +
-      "eacon\032,Copies a beacon record and return" +
-      "s a new id.J\"\n\003403\022\033\n\031User lacks authori" +
-      "zation.J\036\n\003404\022\027\n\025Record was not found.\022" +
-      "\275\001\n\014deleteBeacon\022\006.io.Id\032\026.google.protob" +
-      "uf.Empty\"\214\001\202\323\344\223\002\016*\014/beacon/{id}\222Au\n\007Beac" +
-      "ons\022\rDelete Beacon\032\027Deletes a beacon obj" +
-      "ectJ\"\n\003403\022\033\n\031User lacks authorization.J" +
-      "\036\n\003404\022\027\n\025Record was not found.\022\244\002\n\026coun" +
-      "tBeaconsDeprecated\022\016.io.Pagination\032\t.io." +
-      "Count\"\356\001\202\323\344\223\002\020\022\016/beacons/count\222A\324\001\n\007Beac" +
-      "ons\022\032Count Beacons [DEPRECATED]\032i[DEPREC" +
-      "ATED: OR operator is not supported] Retr" +
-      "ieves a count of beacons that match the " +
-      "supplied criteria.J\"\n\003403\022\033\n\031User lacks " +
-      "authorization.J\036\n\003404\022\027\n\025Record was not " +
-      "found.\022\363\004\n\014countBeacons\022\013.io.Filters\032\t.i" +
-      "o.Count\"\312\004\202\323\344\223\002\023\"\016/beacons/count:\001*\222A\255\004\n" +
-      "\007Beacons\022\rCount Beacons\032\316\003Retrieves a co" +
-      "unt of beacons that match the supplied c" +
-      "riteria.\n\n<span style=\"font-weight:bold\"" +
-      ">About filter field names, operators and" +
-      " sample payloads:</span> <a target=\"_bla" +
-      "nk\" href=\"https://help.passkit.com/en/ar" +
-      "ticles/4200250-pass-templates-locations-" +
-      "beacons-links-filtering-listing-and-coun" +
-      "ting-by-api#filter-beacons\">https://help" +
-      ".passkit.com/en/articles/4200250-pass-te" +
-      "mplates-locations-beacons-links-filterin" +
-      "g-listing-and-counting-by-api#filter-bea" +
-      "cons</a>J\"\n\003403\022\033\n\031User lacks authorizat" +
-      "ion.J\036\n\003404\022\027\n\025Record was not found.\022\311\001\n" +
-      "\ncreateLink\022\010.io.Link\032\006.io.Id\"\250\001\202\323\344\223\002\n\"\005" +
-      "/link:\001*\222A\224\001\n\005Links\022\013Create Link\032\026Create" +
-      "s a link object.J0\n\003400\022)\n\'There is a pr" +
-      "oblem with the input data.J4\n\003403\022-\n+Ret" +
-      "urned when the user lacks authorization." +
-      "\022\262\002\n\nupdateLink\022\010.io.Link\032\010.io.Link\"\217\002\202\323" +
-      "\344\223\002\n\032\005/link:\001*\222A\373\001\n\005Links\022\013Update Link\032\026" +
-      "Updates a link object.J0\n\003400\022)\n\'There i" +
-      "s a problem with the input data.J\"\n\003403\022" +
-      "\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025R" +
-      "ecord was not found.JW\n\003503\022P\nNServer is" +
-      " unavailable. Back off for 250ms and rep" +
-      "eat request until successful.\022\251\001\n\007getLin" +
-      "k\022\006.io.Id\032\010.io.Link\"\213\001\202\323\344\223\002\014\022\n/link/{id}" +
-      "\222Av\n\005Links\022\010Get Link\032\037Retrieves a single" +
-      " link object.J\"\n\003403\022\033\n\031User lacks autho" +
-      "rization.J\036\n\003404\022\027\n\025Record was not found" +
-      ".\022\220\002\n\023listLinksDeprecated\022\016.io.Paginatio" +
-      "n\032\010.io.Link\"\334\001\202\323\344\223\002\010\022\006/links\222A\312\001\n\005Links\022" +
-      "\027List Links [DEPRECATED]\032d[DEPRECATED: O" +
-      "R operator is not supported] Retrieves l" +
-      "inks objects that match the supplied cri" +
-      "teria.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.0\001\022\340\004\n" +
-      "\tlistLinks\022\013.io.Filters\032\010.io.Link\"\271\004\202\323\344\223" +
-      "\002\020\"\013/links/list:\001*\222A\237\004\n\005Links\022\nList Link" +
-      "s\032\305\003Retrieves links objects that match t" +
-      "he supplied criteria.\n\n<span style=\"font" +
+      "Record was not found.0\001\022\326\002\n\030countTemplat" +
+      "esDeprecated\022\016.io.Pagination\032\t.io.Count\"" +
+      "\236\002\202\323\344\223\002\022\022\020/templates/count\222A\202\002\n\016Pass Tem" +
+      "plates\022;Count All Pass Templates Availab" +
+      "le to The User [DEPRECATED]\032o[DEPRECATED" +
+      ": OR operator is not supported] Retrieve" +
+      "s a count of pass templates stored under" +
+      " the user\'s company.J\"\n\003403\022\033\n\031User lack" +
+      "s authorization.J\036\n\003404\022\027\n\025Record was no" +
+      "t found.\022\263\005\n\016countTemplates\022\013.io.Filters" +
+      "\032\t.io.Count\"\210\005\202\323\344\223\002\025\"\020/templates/count:\001" +
+      "*\222A\351\004\n\016Pass Templates\022.Count All Pass Te" +
+      "mplates Available to The User\032\342\003Retrieve" +
+      "s a count of pass templates stored under" +
+      " the user\'s company.\n\n<span style=\"font-" +
+      "weight:bold\">About filter field names, o" +
+      "perators and sample payloads:</span> <a " +
+      "target=\"_blank\" href=\"https://help.passk" +
+      "it.com/en/articles/4200250-pass-template" +
+      "s-locations-beacons-links-filtering-list" +
+      "ing-and-counting-by-api#filter-pass-temp" +
+      "lates\">https://help.passkit.com/en/artic" +
+      "les/4200250-pass-templates-locations-bea" +
+      "cons-links-filtering-listing-and-countin" +
+      "g-by-api#filter-pass-templates</a>J\"\n\00340" +
+      "3\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n" +
+      "\025Record was not found.\022\327\002\n\037countTemplate" +
+      "sForUserDeprecated\022\016.io.Pagination\032\t.io." +
+      "Count\"\230\002\202\323\344\223\002\027\022\025/templates/user/count\222A\367" +
+      "\001\n\016Pass Templates\0227Count All Pass Templa" +
+      "tes Owned by The User [DEPRECATED]\032h[DEP" +
+      "RECATED: OR operator is not supported] R" +
+      "etrieves all pass templates stored under" +
+      " the user\'s account.J\"\n\003403\022\033\n\031User lack" +
+      "s authorization.J\036\n\003404\022\027\n\025Record was no" +
+      "t found.\022\264\005\n\025countTemplatesForUser\022\013.io." +
+      "Filters\032\t.io.Count\"\202\005\202\323\344\223\002\032\"\025/templates/" +
+      "user/count:\001*\222A\336\004\n\016Pass Templates\022*Count" +
+      " All Pass Templates Owned by The User\032\333\003" +
+      "Retrieves all pass templates stored unde" +
+      "r the user\'s account.\n\n<span style=\"font" +
       "-weight:bold\">About filter field names, " +
       "operators and sample payloads:</span> <a" +
       " target=\"_blank\" href=\"https://help.pass" +
       "kit.com/en/articles/4200250-pass-templat" +
       "es-locations-beacons-links-filtering-lis" +
-      "ting-and-counting-by-api#filter-links\">h" +
-      "ttps://help.passkit.com/en/articles/4200" +
-      "250-pass-templates-locations-beacons-lin" +
-      "ks-filtering-listing-and-counting-by-api" +
-      "#filter-links</a>J\"\n\003403\022\033\n\031User lacks a" +
+      "ting-and-counting-by-api#filter-pass-tem" +
+      "plates\">https://help.passkit.com/en/arti" +
+      "cles/4200250-pass-templates-locations-be" +
+      "acons-links-filtering-listing-and-counti" +
+      "ng-by-api#filter-pass-templates</a>J\"\n\0034" +
+      "03\022\033\n\031User lacks authorization.J\036\n\003404\022\027" +
+      "\n\025Record was not found.\022\344\001\n\016createLocati" +
+      "on\022\017.io.GPSLocation\032\006.io.Id\"\270\001\202\323\344\223\002\016\"\t/l" +
+      "ocation:\001*\222A\240\001\n\tLocations\022\017Create Locati" +
+      "on\032\032Creates a location object.J0\n\003400\022)\n" +
+      "\'There is a problem with the input data." +
+      "J4\n\003403\022-\n+Returned when the user lacks " +
+      "authorization.\022\324\002\n\016updateLocation\022\017.io.G" +
+      "PSLocation\032\017.io.GPSLocation\"\237\002\202\323\344\223\002\016\032\t/l" +
+      "ocation:\001*\222A\207\002\n\tLocations\022\017Update Locati" +
+      "on\032\032Updates a location object.J0\n\003400\022)\n" +
+      "\'There is a problem with the input data." +
+      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
+      "404\022\027\n\025Record was not found.JW\n\003503\022P\nNS" +
+      "erver is unavailable. Back off for 250ms" +
+      " and repeat request until successful.\022\305\001" +
+      "\n\013getLocation\022\006.io.Id\032\017.io.GPSLocation\"\234" +
+      "\001\202\323\344\223\002\020\022\016/location/{id}\222A\202\001\n\tLocations\022\014" +
+      "Get Location\032#Retrieves a single locatio" +
+      "n object.J\"\n\003403\022\033\n\031User lacks authoriza" +
+      "tion.J\036\n\003404\022\027\n\025Record was not found.\022\253\002" +
+      "\n\027listLocationsDeprecated\022\016.io.Paginatio" +
+      "n\032\017.io.GPSLocation\"\354\001\202\323\344\223\002\014\022\n/locations\222" +
+      "A\326\001\n\tLocations\022\033List Locations [DEPRECAT" +
+      "ED]\032h[DEPRECATED: OR operator is not sup" +
+      "ported] Retrieves locations objects that" +
+      " match the supplied criteria.J\"\n\003403\022\033\n\031" +
+      "User lacks authorization.J\036\n\003404\022\027\n\025Reco" +
+      "rd was not found.0\001\022\203\005\n\rlistLocations\022\013." +
+      "io.Filters\032\017.io.GPSLocation\"\321\004\202\323\344\223\002\024\"\017/l" +
+      "ocations/list:\001*\222A\263\004\n\tLocations\022\016List Lo" +
+      "cations\032\321\003Retrieves locations objects th" +
+      "at match the supplied criteria.\n\n<span s" +
+      "tyle=\"font-weight:bold\">About filter fie" +
+      "ld names, operators and sample payloads:" +
+      "</span> <a target=\"_blank\" href=\"https:/" +
+      "/help.passkit.com/en/articles/4200250-pa" +
+      "ss-templates-locations-beacons-links-fil" +
+      "tering-listing-and-counting-by-api#filte" +
+      "r-locations\">https://help.passkit.com/en" +
+      "/articles/4200250-pass-templates-locatio" +
+      "ns-beacons-links-filtering-listing-and-c" +
+      "ounting-by-api#filter-locations</a>J\"\n\0034" +
+      "03\022\033\n\031User lacks authorization.J\036\n\003404\022\027" +
+      "\n\025Record was not found.0\001\022\331\001\n\014copyLocati" +
+      "on\022\023.io.CopyObjectInput\032\006.io.Id\"\253\001\202\323\344\223\002\023" +
+      "\"\016/location/copy:\001*\222A\216\001\n\tLocations\022\rCopy" +
+      " Location\032.Copies a location record and " +
+      "returns a new id.J\"\n\003403\022\033\n\031User lacks a" +
       "uthorization.J\036\n\003404\022\027\n\025Record was not f" +
-      "ound.0\001\022\305\001\n\010copyLink\022\023.io.CopyObjectInpu" +
-      "t\032\006.io.Id\"\233\001\202\323\344\223\002\017\"\n/link/copy:\001*\222A\202\001\n\005L" +
-      "inks\022\tCopy Link\032*Copies a link record an" +
-      "d returns a new id.J\"\n\003403\022\033\n\031User lacks" +
+      "ound.\022\307\001\n\016deleteLocation\022\006.io.Id\032\026.googl" +
+      "e.protobuf.Empty\"\224\001\202\323\344\223\002\020*\016/location/{id" +
+      "}\222A{\n\tLocations\022\017Delete Location\032\031Delete" +
+      "s a location objectJ\"\n\003403\022\033\n\031User lacks" +
       " authorization.J\036\n\003404\022\027\n\025Record was not" +
-      " found.\022\263\001\n\ndeleteLink\022\006.io.Id\032\026.google." +
-      "protobuf.Empty\"\204\001\202\323\344\223\002\014*\n/link/{id}\222Ao\n\005" +
-      "Links\022\013Delete Link\032\025Deletes a link objec" +
-      "tJ\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
-      "\003404\022\027\n\025Record was not found.\022\232\002\n\024countL" +
-      "inksDeprecated\022\016.io.Pagination\032\t.io.Coun" +
-      "t\"\346\001\202\323\344\223\002\016\022\014/links/count\222A\316\001\n\005Links\022\030Cou" +
-      "nt Links [DEPRECATED]\032g[DEPRECATED: OR o" +
-      "perator is not supported] Retrieves a co" +
-      "unt of links that match the supplied cri" +
-      "teria.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.\022\345\004\n\nc" +
-      "ountLinks\022\013.io.Filters\032\t.io.Count\"\276\004\202\323\344\223" +
-      "\002\021\"\014/links/count:\001*\222A\243\004\n\005Links\022\013Count Li" +
-      "nks\032\310\003Retrieves a count of links that ma" +
-      "tch the supplied criteria.\n\n<span style=" +
-      "\"font-weight:bold\">About filter field na" +
-      "mes, operators and sample payloads:</spa" +
-      "n> <a target=\"_blank\" href=\"https://help" +
-      ".passkit.com/en/articles/4200250-pass-te" +
-      "mplates-locations-beacons-links-filterin" +
-      "g-listing-and-counting-by-api#filter-lin" +
-      "ks\">https://help.passkit.com/en/articles" +
-      "/4200250-pass-templates-locations-beacon" +
-      "s-links-filtering-listing-and-counting-b" +
-      "y-api#filter-links</a>J\"\n\003403\022\033\n\031User la" +
-      "cks authorization.J\036\n\003404\022\027\n\025Record was " +
-      "not found.BG\n\020com.passkit.grpcZ$stash.pa" +
-      "sskit.com/io/model/sdk/go/io\252\002\014PassKit.G" +
-      "RPCb\006proto3"
+      " found.\022\256\002\n\030countLocationsDeprecated\022\016.i" +
+      "o.Pagination\032\t.io.Count\"\366\001\202\323\344\223\002\022\022\020/locat" +
+      "ions/count\222A\332\001\n\tLocations\022\034Count Locatio" +
+      "ns [DEPRECATED]\032k[DEPRECATED: OR operato" +
+      "r is not supported] Retrieves a count of" +
+      " locations that match the supplied crite" +
+      "ria.J\"\n\003403\022\033\n\031User lacks authorization." +
+      "J\036\n\003404\022\027\n\025Record was not found.\022\201\005\n\016cou" +
+      "ntLocations\022\013.io.Filters\032\t.io.Count\"\326\004\202\323" +
+      "\344\223\002\025\"\020/locations/count:\001*\222A\267\004\n\tLocations" +
+      "\022\017Count Locations\032\324\003Retrieves a count of" +
+      " locations that match the supplied crite" +
+      "ria.\n\n<span style=\"font-weight:bold\">Abo" +
+      "ut filter field names, operators and sam" +
+      "ple payloads:</span> <a target=\"_blank\" " +
+      "href=\"https://help.passkit.com/en/articl" +
+      "es/4200250-pass-templates-locations-beac" +
+      "ons-links-filtering-listing-and-counting" +
+      "-by-api#filter-locations\">https://help.p" +
+      "asskit.com/en/articles/4200250-pass-temp" +
+      "lates-locations-beacons-links-filtering-" +
+      "listing-and-counting-by-api#filter-locat" +
+      "ions</a>J\"\n\003403\022\033\n\031User lacks authorizat" +
+      "ion.J\036\n\003404\022\027\n\025Record was not found.\022\325\001\n" +
+      "\014createBeacon\022\n.io.Beacon\032\006.io.Id\"\260\001\202\323\344\223" +
+      "\002\014\"\007/beacon:\001*\222A\232\001\n\007Beacons\022\rCreate Beac" +
+      "on\032\030Creates a beacon object.J0\n\003400\022)\n\'T" +
+      "here is a problem with the input data.J4" +
+      "\n\003403\022-\n+Returned when the user lacks au" +
+      "thorization.\022\300\002\n\014updateBeacon\022\n.io.Beaco" +
+      "n\032\n.io.Beacon\"\227\002\202\323\344\223\002\014\032\007/beacon:\001*\222A\201\002\n\007" +
+      "Beacons\022\rUpdate Beacon\032\030Updates a beacon" +
+      " object.J0\n\003400\022)\n\'There is a problem wi" +
+      "th the input data.J\"\n\003403\022\033\n\031User lacks " +
+      "authorization.J\036\n\003404\022\027\n\025Record was not " +
+      "found.JW\n\003503\022P\nNServer is unavailable. " +
+      "Back off for 250ms and repeat request un" +
+      "til successful.\022\265\001\n\tgetBeacon\022\006.io.Id\032\n." +
+      "io.Beacon\"\223\001\202\323\344\223\002\016\022\014/beacon/{id}\222A|\n\007Bea" +
+      "cons\022\nGet Beacon\032!Retrieves a single bea" +
+      "con object.J\"\n\003403\022\033\n\031User lacks authori" +
+      "zation.J\036\n\003404\022\027\n\025Record was not found.\022" +
+      "\233\002\n\025listBeaconsDeprecated\022\016.io.Paginatio" +
+      "n\032\n.io.Beacon\"\343\001\202\323\344\223\002\n\022\010/beacons\222A\317\001\n\007Be" +
+      "acons\022\031List Beacons [DEPRECATED]\032e[DEPRE" +
+      "CATED: OR operator is not supported] Ret" +
+      "rieves beacon objects that match the sup" +
+      "plied criteria.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.0\001\022\357\004\n\013listBeacons\022\013.io.Filters\032\n.io." +
+      "Beacon\"\304\004\202\323\344\223\002\022\"\r/beacons/list:\001*\222A\250\004\n\007B" +
+      "eacons\022\014List Beacons\032\312\003Retrieves beacon " +
+      "objects that match the supplied criteria" +
+      ".\n\n<span style=\"font-weight:bold\">About " +
+      "filter field names, operators and sample" +
+      " payloads:</span> <a target=\"_blank\" hre" +
+      "f=\"https://help.passkit.com/en/articles/" +
+      "4200250-pass-templates-locations-beacons" +
+      "-links-filtering-listing-and-counting-by" +
+      "-api#filter-beacons\">https://help.passki" +
+      "t.com/en/articles/4200250-pass-templates" +
+      "-locations-beacons-links-filtering-listi" +
+      "ng-and-counting-by-api#filter-beacons</a" +
+      ">J\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
+      "\003404\022\027\n\025Record was not found.0\001\022\317\001\n\ncopy" +
+      "Beacon\022\023.io.CopyObjectInput\032\006.io.Id\"\243\001\202\323" +
+      "\344\223\002\021\"\014/beacon/copy:\001*\222A\210\001\n\007Beacons\022\013Copy" +
+      " Beacon\032,Copies a beacon record and retu" +
+      "rns a new id.J\"\n\003403\022\033\n\031User lacks autho" +
+      "rization.J\036\n\003404\022\027\n\025Record was not found" +
+      ".\022\275\001\n\014deleteBeacon\022\006.io.Id\032\026.google.prot" +
+      "obuf.Empty\"\214\001\202\323\344\223\002\016*\014/beacon/{id}\222Au\n\007Be" +
+      "acons\022\rDelete Beacon\032\027Deletes a beacon o" +
+      "bjectJ\"\n\003403\022\033\n\031User lacks authorization" +
+      ".J\036\n\003404\022\027\n\025Record was not found.\022\244\002\n\026co" +
+      "untBeaconsDeprecated\022\016.io.Pagination\032\t.i" +
+      "o.Count\"\356\001\202\323\344\223\002\020\022\016/beacons/count\222A\324\001\n\007Be" +
+      "acons\022\032Count Beacons [DEPRECATED]\032i[DEPR" +
+      "ECATED: OR operator is not supported] Re" +
+      "trieves a count of beacons that match th" +
+      "e supplied criteria.J\"\n\003403\022\033\n\031User lack" +
+      "s authorization.J\036\n\003404\022\027\n\025Record was no" +
+      "t found.\022\363\004\n\014countBeacons\022\013.io.Filters\032\t" +
+      ".io.Count\"\312\004\202\323\344\223\002\023\"\016/beacons/count:\001*\222A\255" +
+      "\004\n\007Beacons\022\rCount Beacons\032\316\003Retrieves a " +
+      "count of beacons that match the supplied" +
+      " criteria.\n\n<span style=\"font-weight:bol" +
+      "d\">About filter field names, operators a" +
+      "nd sample payloads:</span> <a target=\"_b" +
+      "lank\" href=\"https://help.passkit.com/en/" +
+      "articles/4200250-pass-templates-location" +
+      "s-beacons-links-filtering-listing-and-co" +
+      "unting-by-api#filter-beacons\">https://he" +
+      "lp.passkit.com/en/articles/4200250-pass-" +
+      "templates-locations-beacons-links-filter" +
+      "ing-listing-and-counting-by-api#filter-b" +
+      "eacons</a>J\"\n\003403\022\033\n\031User lacks authoriz" +
+      "ation.J\036\n\003404\022\027\n\025Record was not found.\022\311" +
+      "\001\n\ncreateLink\022\010.io.Link\032\006.io.Id\"\250\001\202\323\344\223\002\n" +
+      "\"\005/link:\001*\222A\224\001\n\005Links\022\013Create Link\032\026Crea" +
+      "tes a link object.J0\n\003400\022)\n\'There is a " +
+      "problem with the input data.J4\n\003403\022-\n+R" +
+      "eturned when the user lacks authorizatio" +
+      "n.\022\262\002\n\nupdateLink\022\010.io.Link\032\010.io.Link\"\217\002" +
+      "\202\323\344\223\002\n\032\005/link:\001*\222A\373\001\n\005Links\022\013Update Link" +
+      "\032\026Updates a link object.J0\n\003400\022)\n\'There" +
+      " is a problem with the input data.J\"\n\00340" +
+      "3\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n" +
+      "\025Record was not found.JW\n\003503\022P\nNServer " +
+      "is unavailable. Back off for 250ms and r" +
+      "epeat request until successful.\022\251\001\n\007getL" +
+      "ink\022\006.io.Id\032\010.io.Link\"\213\001\202\323\344\223\002\014\022\n/link/{i" +
+      "d}\222Av\n\005Links\022\010Get Link\032\037Retrieves a sing" +
+      "le link object.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.\022\220\002\n\023listLinksDeprecated\022\016.io.Paginat" +
+      "ion\032\010.io.Link\"\334\001\202\323\344\223\002\010\022\006/links\222A\312\001\n\005Link" +
+      "s\022\027List Links [DEPRECATED]\032d[DEPRECATED:" +
+      " OR operator is not supported] Retrieves" +
+      " links objects that match the supplied c" +
+      "riteria.J\"\n\003403\022\033\n\031User lacks authorizat" +
+      "ion.J\036\n\003404\022\027\n\025Record was not found.0\001\022\340" +
+      "\004\n\tlistLinks\022\013.io.Filters\032\010.io.Link\"\271\004\202\323" +
+      "\344\223\002\020\"\013/links/list:\001*\222A\237\004\n\005Links\022\nList Li" +
+      "nks\032\305\003Retrieves links objects that match" +
+      " the supplied criteria.\n\n<span style=\"fo" +
+      "nt-weight:bold\">About filter field names" +
+      ", operators and sample payloads:</span> " +
+      "<a target=\"_blank\" href=\"https://help.pa" +
+      "sskit.com/en/articles/4200250-pass-templ" +
+      "ates-locations-beacons-links-filtering-l" +
+      "isting-and-counting-by-api#filter-links\"" +
+      ">https://help.passkit.com/en/articles/42" +
+      "00250-pass-templates-locations-beacons-l" +
+      "inks-filtering-listing-and-counting-by-a" +
+      "pi#filter-links</a>J\"\n\003403\022\033\n\031User lacks" +
+      " authorization.J\036\n\003404\022\027\n\025Record was not" +
+      " found.0\001\022\305\001\n\010copyLink\022\023.io.CopyObjectIn" +
+      "put\032\006.io.Id\"\233\001\202\323\344\223\002\017\"\n/link/copy:\001*\222A\202\001\n" +
+      "\005Links\022\tCopy Link\032*Copies a link record " +
+      "and returns a new id.J\"\n\003403\022\033\n\031User lac" +
+      "ks authorization.J\036\n\003404\022\027\n\025Record was n" +
+      "ot found.\022\263\001\n\ndeleteLink\022\006.io.Id\032\026.googl" +
+      "e.protobuf.Empty\"\204\001\202\323\344\223\002\014*\n/link/{id}\222Ao" +
+      "\n\005Links\022\013Delete Link\032\025Deletes a link obj" +
+      "ectJ\"\n\003403\022\033\n\031User lacks authorization.J" +
+      "\036\n\003404\022\027\n\025Record was not found.\022\232\002\n\024coun" +
+      "tLinksDeprecated\022\016.io.Pagination\032\t.io.Co" +
+      "unt\"\346\001\202\323\344\223\002\016\022\014/links/count\222A\316\001\n\005Links\022\030C" +
+      "ount Links [DEPRECATED]\032g[DEPRECATED: OR" +
+      " operator is not supported] Retrieves a " +
+      "count of links that match the supplied c" +
+      "riteria.J\"\n\003403\022\033\n\031User lacks authorizat" +
+      "ion.J\036\n\003404\022\027\n\025Record was not found.\022\345\004\n" +
+      "\ncountLinks\022\013.io.Filters\032\t.io.Count\"\276\004\202\323" +
+      "\344\223\002\021\"\014/links/count:\001*\222A\243\004\n\005Links\022\013Count " +
+      "Links\032\310\003Retrieves a count of links that " +
+      "match the supplied criteria.\n\n<span styl" +
+      "e=\"font-weight:bold\">About filter field " +
+      "names, operators and sample payloads:</s" +
+      "pan> <a target=\"_blank\" href=\"https://he" +
+      "lp.passkit.com/en/articles/4200250-pass-" +
+      "templates-locations-beacons-links-filter" +
+      "ing-listing-and-counting-by-api#filter-l" +
+      "inks\">https://help.passkit.com/en/articl" +
+      "es/4200250-pass-templates-locations-beac" +
+      "ons-links-filtering-listing-and-counting" +
+      "-by-api#filter-links</a>J\"\n\003403\022\033\n\031User " +
+      "lacks authorization.J\036\n\003404\022\027\n\025Record wa" +
+      "s not found.BG\n\020com.passkit.grpcZ$stash." +
+      "passkit.com/io/model/sdk/go/io\252\002\014PassKit" +
+      ".Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Template.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
@@ -416,12 +416,12 @@ public final class ARpcTemplates {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Template.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();

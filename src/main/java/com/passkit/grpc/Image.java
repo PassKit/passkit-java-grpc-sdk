@@ -17586,82 +17586,82 @@ public final class Image {
   static {
     java.lang.String[] descriptorData = {
       "\n\024io/image/image.proto\022\002io\032\034io/common/lo" +
-      "calization.proto\032,protoc-gen-swagger/opt" +
-      "ions/annotations.proto\032\037google/protobuf/" +
-      "timestamp.proto\"\360\002\n\010ImageIds\022\014\n\004icon\030\001 \001" +
-      "(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleLogo\030\003 \001(\t\022\014\n\004h" +
-      "ero\030\004 \001(\t\022\022\n\neventStrip\030\005 \001(\t\022\r\n\005strip\030\006" +
-      " \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n\nbackground\030\010 " +
-      "\001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010security\030\n \001(\t\022\021\n" +
-      "\tprivilege\030\013 \001(\t\022\027\n\017airlineAlliance\030\014 \001(" +
-      "\t\022\027\n\017personalization\030\r \001(\t\022\016\n\006banner\030\016 \001" +
-      "(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007profile\030\020 \001(\t\022\020\n\010" +
-      "appImage\030\021 \001(\t:2\222A/\n-*\tImage Ids2\031This m" +
-      "anages images by id\322\001\004icon\"\346\010\n\tImageData" +
-      "\022\014\n\004icon\030\001 \001(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleLog" +
-      "o\030\003 \001(\t\022\014\n\004hero\030\004 \001(\t\022\022\n\neventStrip\030\005 \001(" +
-      "\t\022\r\n\005strip\030\006 \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n\nb" +
-      "ackground\030\010 \001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010secur" +
-      "ity\030\n \001(\t\022\021\n\tprivilege\030\013 \001(\t\022\027\n\017airlineA" +
-      "lliance\030\014 \001(\t\022\027\n\017personalization\030\r \001(\t\022\016" +
-      "\n\006banner\030\016 \001(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007profi" +
-      "le\030\020 \001(\t\022\020\n\010appImage\030\021 \001(\t\022*\n\rlocalizedI" +
-      "con\030\037 \001(\0132\023.io.LocalizedString\022*\n\rlocali" +
-      "zedLogo\030  \001(\0132\023.io.LocalizedString\022/\n\022lo" +
-      "calizedAppleLogo\030! \001(\0132\023.io.LocalizedStr" +
-      "ing\022*\n\rlocalizedHero\030\" \001(\0132\023.io.Localize" +
-      "dString\0220\n\023localizedEventStrip\030# \001(\0132\023.i" +
-      "o.LocalizedString\022+\n\016localizedStrip\030$ \001(" +
-      "\0132\023.io.LocalizedString\022/\n\022localizedThumb" +
-      "nail\030% \001(\0132\023.io.LocalizedString\0220\n\023local" +
-      "izedBackground\030& \001(\0132\023.io.LocalizedStrin" +
-      "g\022,\n\017localizedFooter\030\' \001(\0132\023.io.Localize" +
-      "dString\022.\n\021localizedSecurity\030( \001(\0132\023.io." +
-      "LocalizedString\022/\n\022localizedPrivilege\030) " +
-      "\001(\0132\023.io.LocalizedString\0225\n\030localizedAir" +
-      "lineAlliance\030* \001(\0132\023.io.LocalizedString\022" +
-      "5\n\030localizedPersonalization\030+ \001(\0132\023.io.L" +
-      "ocalizedString\022,\n\017localizedBanner\030, \001(\0132" +
-      "\023.io.LocalizedString\022-\n\020localizedMessage" +
-      "\030- \001(\0132\023.io.LocalizedString:V\222AS\nQ*\nImag" +
-      "e Data2CImage data can be provided as ei" +
-      "ther a url or base 64 encoded data.\"\351\001\n\013" +
-      "ImageRecord\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n" +
-      "\003url\030\003 \001(\t\022\031\n\003use\030\005 \001(\0162\014.io.ImageUse\022#\n" +
-      "\tlanguages\030\006 \003(\0162\020.io.LanguageCode\022\025\n\row" +
-      "nerUsername\030\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022-\n\tupdatedAt\030\t " +
-      "\001(\0132\032.google.protobuf.Timestamp\"&\n\021Profi" +
-      "leImageInput\022\021\n\timageData\030\001 \001(\t\"1\n\016Multi" +
-      "pleImages\022\037\n\006images\030\001 \003(\0132\017.io.ImageReco" +
-      "rd\"\214\001\n\020CreateImageInput\022\014\n\004name\030\001 \001(\t\022 \n" +
-      "\timageData\030\002 \001(\0132\r.io.ImageData:H\222AE\nC*\022" +
-      "Create Image Input2\032This creates image r" +
-      "ecord.\322\001\004name\322\001\timageData\"\302\001\n\020UpdateImag" +
-      "eInput\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\timag" +
-      "eData\030\003 \001(\t\022/\n\022localizedImageData\030\004 \001(\0132" +
-      "\023.io.LocalizedString:P\222AM\nK*\022Update Imag" +
-      "e Input20This manages images set for dif" +
-      "ferent languages.\322\001\002id\"\034\n\013ImageBundle\022\r\n" +
-      "\005image\030\001 \001(\014\"\233\001\n\023LocalizedImageInput\022\n\n\002" +
-      "id\030\001 \001(\t\022\024\n\014languageCode\030\002 \001(\t:b\222A_\n]*\025L" +
-      "ocalized Image Input20This manages image" +
-      "s set for different languages.\322\001\002id\322\001\014la" +
-      "nguageCode*\370\001\n\010ImageUse\022\010\n\004icon\020\000\022\010\n\004log" +
-      "o\020\001\022\r\n\tappleLogo\020\002\022\010\n\004hero\020\003\022\016\n\neventStr" +
-      "ip\020\004\022\t\n\005strip\020\005\022\r\n\tthumbnail\020\006\022\016\n\nbackgr" +
-      "ound\020\007\022\n\n\006footer\020\010\022\014\n\010security\020\t\022\r\n\tpriv" +
-      "ilege\020\n\022\023\n\017airlineAlliance\020\013\022\023\n\017personal" +
-      "ization\020\014\022\n\n\006banner\020\r\022\013\n\007message\020\016\022\013\n\007pr" +
-      "ofile\020\017\022\014\n\010appImage\020\020BG\n\020com.passkit.grp" +
-      "cZ$stash.passkit.com/io/model/sdk/go/io\252" +
-      "\002\014PassKit.GRPCb\006proto3"
+      "calization.proto\032.protoc-gen-openapiv2/o" +
+      "ptions/annotations.proto\032\037google/protobu" +
+      "f/timestamp.proto\"\360\002\n\010ImageIds\022\014\n\004icon\030\001" +
+      " \001(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleLogo\030\003 \001(\t\022\014\n" +
+      "\004hero\030\004 \001(\t\022\022\n\neventStrip\030\005 \001(\t\022\r\n\005strip" +
+      "\030\006 \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n\nbackground\030" +
+      "\010 \001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010security\030\n \001(\t\022" +
+      "\021\n\tprivilege\030\013 \001(\t\022\027\n\017airlineAlliance\030\014 " +
+      "\001(\t\022\027\n\017personalization\030\r \001(\t\022\016\n\006banner\030\016" +
+      " \001(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007profile\030\020 \001(\t\022\020" +
+      "\n\010appImage\030\021 \001(\t:2\222A/\n-*\tImage Ids2\031This" +
+      " manages images by id\322\001\004icon\"\346\010\n\tImageDa" +
+      "ta\022\014\n\004icon\030\001 \001(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleL" +
+      "ogo\030\003 \001(\t\022\014\n\004hero\030\004 \001(\t\022\022\n\neventStrip\030\005 " +
+      "\001(\t\022\r\n\005strip\030\006 \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n" +
+      "\nbackground\030\010 \001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010sec" +
+      "urity\030\n \001(\t\022\021\n\tprivilege\030\013 \001(\t\022\027\n\017airlin" +
+      "eAlliance\030\014 \001(\t\022\027\n\017personalization\030\r \001(\t" +
+      "\022\016\n\006banner\030\016 \001(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007pro" +
+      "file\030\020 \001(\t\022\020\n\010appImage\030\021 \001(\t\022*\n\rlocalize" +
+      "dIcon\030\037 \001(\0132\023.io.LocalizedString\022*\n\rloca" +
+      "lizedLogo\030  \001(\0132\023.io.LocalizedString\022/\n\022" +
+      "localizedAppleLogo\030! \001(\0132\023.io.LocalizedS" +
+      "tring\022*\n\rlocalizedHero\030\" \001(\0132\023.io.Locali" +
+      "zedString\0220\n\023localizedEventStrip\030# \001(\0132\023" +
+      ".io.LocalizedString\022+\n\016localizedStrip\030$ " +
+      "\001(\0132\023.io.LocalizedString\022/\n\022localizedThu" +
+      "mbnail\030% \001(\0132\023.io.LocalizedString\0220\n\023loc" +
+      "alizedBackground\030& \001(\0132\023.io.LocalizedStr" +
+      "ing\022,\n\017localizedFooter\030\' \001(\0132\023.io.Locali" +
+      "zedString\022.\n\021localizedSecurity\030( \001(\0132\023.i" +
+      "o.LocalizedString\022/\n\022localizedPrivilege\030" +
+      ") \001(\0132\023.io.LocalizedString\0225\n\030localizedA" +
+      "irlineAlliance\030* \001(\0132\023.io.LocalizedStrin" +
+      "g\0225\n\030localizedPersonalization\030+ \001(\0132\023.io" +
+      ".LocalizedString\022,\n\017localizedBanner\030, \001(" +
+      "\0132\023.io.LocalizedString\022-\n\020localizedMessa" +
+      "ge\030- \001(\0132\023.io.LocalizedString:V\222AS\nQ*\nIm" +
+      "age Data2CImage data can be provided as " +
+      "either a url or base 64 encoded data.\"\351\001" +
+      "\n\013ImageRecord\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022" +
+      "\013\n\003url\030\003 \001(\t\022\031\n\003use\030\005 \001(\0162\014.io.ImageUse\022" +
+      "#\n\tlanguages\030\006 \003(\0162\020.io.LanguageCode\022\025\n\r" +
+      "ownerUsername\030\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022-\n\tupdatedAt\030" +
+      "\t \001(\0132\032.google.protobuf.Timestamp\"&\n\021Pro" +
+      "fileImageInput\022\021\n\timageData\030\001 \001(\t\"1\n\016Mul" +
+      "tipleImages\022\037\n\006images\030\001 \003(\0132\017.io.ImageRe" +
+      "cord\"\214\001\n\020CreateImageInput\022\014\n\004name\030\001 \001(\t\022" +
+      " \n\timageData\030\002 \001(\0132\r.io.ImageData:H\222AE\nC" +
+      "*\022Create Image Input2\032This creates image" +
+      " record.\322\001\004name\322\001\timageData\"\302\001\n\020UpdateIm" +
+      "ageInput\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tim" +
+      "ageData\030\003 \001(\t\022/\n\022localizedImageData\030\004 \001(" +
+      "\0132\023.io.LocalizedString:P\222AM\nK*\022Update Im" +
+      "age Input20This manages images set for d" +
+      "ifferent languages.\322\001\002id\"\034\n\013ImageBundle\022" +
+      "\r\n\005image\030\001 \001(\014\"\233\001\n\023LocalizedImageInput\022\n" +
+      "\n\002id\030\001 \001(\t\022\024\n\014languageCode\030\002 \001(\t:b\222A_\n]*" +
+      "\025Localized Image Input20This manages ima" +
+      "ges set for different languages.\322\001\002id\322\001\014" +
+      "languageCode*\370\001\n\010ImageUse\022\010\n\004icon\020\000\022\010\n\004l" +
+      "ogo\020\001\022\r\n\tappleLogo\020\002\022\010\n\004hero\020\003\022\016\n\neventS" +
+      "trip\020\004\022\t\n\005strip\020\005\022\r\n\tthumbnail\020\006\022\016\n\nback" +
+      "ground\020\007\022\n\n\006footer\020\010\022\014\n\010security\020\t\022\r\n\tpr" +
+      "ivilege\020\n\022\023\n\017airlineAlliance\020\013\022\023\n\017person" +
+      "alization\020\014\022\n\n\006banner\020\r\022\013\n\007message\020\016\022\013\n\007" +
+      "profile\020\017\022\014\n\010appImage\020\020BG\n\020com.passkit.g" +
+      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
+      "o\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_io_ImageIds_descriptor =
@@ -17720,11 +17720,11 @@ public final class Image {
         new java.lang.String[] { "Id", "LanguageCode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Localization.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -4094,26 +4094,26 @@ public final class Project {
       "obuf/timestamp.proto\032\034io/common/distribu" +
       "tion.proto\032\034io/common/localization.proto" +
       "\032\027io/common/project.proto\032\027io/common/bil" +
-      "ling.proto\032,protoc-gen-swagger/options/a" +
-      "nnotations.proto\"\376\003\n\013PassProject\022\n\n\002id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rlocalizedName\030\003 \001(" +
-      "\0132\023.io.LocalizedString\022!\n\006status\030\004 \003(\0162\021" +
-      ".io.ProjectStatus\022\030\n\005quota\030\005 \001(\0132\t.io.Qu" +
-      "ota\022\032\n\022passTypeIdentifier\030\006 \001(\t\0226\n\024distr" +
-      "ibutionSettings\030\007 \001(\0132\030.io.DistributionS" +
-      "ettings\022+\n\007created\030\010 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022+\n\007updated\030\t \001(\0132\032.google.p" +
-      "rotobuf.Timestamp:\275\001\222A\271\001\n\266\001*\014Pass Projec" +
-      "t2\225\001Pass Project holds the basic busines" +
-      "s logic. Pass Project holds details on p" +
-      "ass distribution, quotas, Apple certific" +
-      "ate, integrations & hooks to use.\322\001\004name" +
-      "\322\001\006status\"q\n\026PassProjectCopyRequest\022\n\n\002i" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(\0162\021." +
-      "io.ProjectStatus\022\032\n\022passTypeIdentifier\030\004" +
-      " \001(\tBH\n\024com.passkit.grpc.RawZ(stash.pass" +
-      "kit.com/io/model/sdk/go/io/raw\252\002\005PKRawb\006" +
-      "proto3"
+      "ling.proto\032.protoc-gen-openapiv2/options" +
+      "/annotations.proto\"\376\003\n\013PassProject\022\n\n\002id" +
+      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rlocalizedName\030\003 " +
+      "\001(\0132\023.io.LocalizedString\022!\n\006status\030\004 \003(\016" +
+      "2\021.io.ProjectStatus\022\030\n\005quota\030\005 \001(\0132\t.io." +
+      "Quota\022\032\n\022passTypeIdentifier\030\006 \001(\t\0226\n\024dis" +
+      "tributionSettings\030\007 \001(\0132\030.io.Distributio" +
+      "nSettings\022+\n\007created\030\010 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022+\n\007updated\030\t \001(\0132\032.google" +
+      ".protobuf.Timestamp:\275\001\222A\271\001\n\266\001*\014Pass Proj" +
+      "ect2\225\001Pass Project holds the basic busin" +
+      "ess logic. Pass Project holds details on" +
+      " pass distribution, quotas, Apple certif" +
+      "icate, integrations & hooks to use.\322\001\004na" +
+      "me\322\001\006status\"q\n\026PassProjectCopyRequest\022\n\n" +
+      "\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(\0162" +
+      "\021.io.ProjectStatus\022\032\n\022passTypeIdentifier" +
+      "\030\004 \001(\tBS\n\024com.passkit.grpc.RawZ(stash.pa" +
+      "sskit.com/io/model/sdk/go/io/raw\252\002\020PassK" +
+      "it.Grpc.Rawb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4123,7 +4123,7 @@ public final class Project {
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Billing.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_raw_PassProject_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4139,7 +4139,7 @@ public final class Project {
         new java.lang.String[] { "Id", "Name", "Status", "PassTypeIdentifier", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -4147,7 +4147,7 @@ public final class Project {
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Billing.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

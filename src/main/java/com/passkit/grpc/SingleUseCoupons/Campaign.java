@@ -5554,32 +5554,32 @@ public final class Campaign {
       "single_use_coupons\032\037google/protobuf/time" +
       "stamp.proto\032\034io/common/localization.prot" +
       "o\032\027io/common/project.proto\032\031io/common/re" +
-      "porting.proto\032,protoc-gen-swagger/option" +
-      "s/annotations.proto\"\254\003\n\016CouponCampaign\022\n" +
-      "\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rlocalizedNam" +
-      "e\030\003 \001(\0132\023.io.LocalizedString\022!\n\006status\030\005" +
-      " \003(\0162\021.io.ProjectStatus\022\032\n\022passTypeIdent" +
-      "ifier\030\006 \001(\t\022\024\n\014ianaTimezone\030\007 \001(\t\022+\n\007cre" +
-      "ated\030\n \001(\0132\032.google.protobuf.Timestamp\022+" +
-      "\n\007updated\030\013 \001(\0132\032.google.protobuf.Timest" +
-      "amp:\222\001\222A\216\001\n\213\001*\017Coupon Campaign2HHolds th" +
-      "e business logic & distribution settings" +
-      " of the Coupon Campaign.\322\001\004name\322\001\007offerI" +
-      "d\322\001\006status\322\001\tstartDate\322\001\007endDateJ\004\010\004\020\005J\004" +
-      "\010\010\020\tJ\004\010\t\020\n\"\233\002\n\037CouponCampaignAnalyticsRe" +
-      "sponse\022\032\n\006period\030\001 \001(\0162\n.io.Period\022\020\n\010re" +
-      "deemed\030\002 \001(\r\022$\n\007devices\030\003 \001(\0132\023.io.Devic" +
-      "eBreakdown\022Q\n\007sources\030\004 \003(\0132@.single_use" +
-      "_coupons.CouponCampaignAnalyticsResponse" +
-      ".SourcesEntry\022!\n\004data\030\005 \003(\0132\023.io.ChartDa" +
-      "taPoints\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\r:\0028\001\"n\n\023CampaignCopyRequest\022" +
-      "\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(" +
-      "\0162\021.io.ProjectStatus\022\032\n\022passTypeIdentifi" +
-      "er\030\004 \001(\tBq\n!com.passkit.grpc.SingleUseCo" +
-      "uponsZ7stash.passkit.com/io/model/sdk/go" +
-      "/io/single_use_coupons\252\002\022PKSingleUseCoup" +
-      "onsb\006proto3"
+      "porting.proto\032.protoc-gen-openapiv2/opti" +
+      "ons/annotations.proto\"\254\003\n\016CouponCampaign" +
+      "\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rlocalizedN" +
+      "ame\030\003 \001(\0132\023.io.LocalizedString\022!\n\006status" +
+      "\030\005 \003(\0162\021.io.ProjectStatus\022\032\n\022passTypeIde" +
+      "ntifier\030\006 \001(\t\022\024\n\014ianaTimezone\030\007 \001(\t\022+\n\007c" +
+      "reated\030\n \001(\0132\032.google.protobuf.Timestamp" +
+      "\022+\n\007updated\030\013 \001(\0132\032.google.protobuf.Time" +
+      "stamp:\222\001\222A\216\001\n\213\001*\017Coupon Campaign2HHolds " +
+      "the business logic & distribution settin" +
+      "gs of the Coupon Campaign.\322\001\004name\322\001\007offe" +
+      "rId\322\001\006status\322\001\tstartDate\322\001\007endDateJ\004\010\004\020\005" +
+      "J\004\010\010\020\tJ\004\010\t\020\n\"\233\002\n\037CouponCampaignAnalytics" +
+      "Response\022\032\n\006period\030\001 \001(\0162\n.io.Period\022\020\n\010" +
+      "redeemed\030\002 \001(\r\022$\n\007devices\030\003 \001(\0132\023.io.Dev" +
+      "iceBreakdown\022Q\n\007sources\030\004 \003(\0132@.single_u" +
+      "se_coupons.CouponCampaignAnalyticsRespon" +
+      "se.SourcesEntry\022!\n\004data\030\005 \003(\0132\023.io.Chart" +
+      "DataPoints\032.\n\014SourcesEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\r:\0028\001\"n\n\023CampaignCopyReques" +
+      "t\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 " +
+      "\003(\0162\021.io.ProjectStatus\022\032\n\022passTypeIdenti" +
+      "fier\030\004 \001(\tB|\n!com.passkit.grpc.SingleUse" +
+      "CouponsZ7stash.passkit.com/io/model/sdk/" +
+      "go/io/single_use_coupons\252\002\035PassKit.Grpc." +
+      "SingleUseCouponsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5588,7 +5588,7 @@ public final class Campaign {
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Reporting.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_single_use_coupons_CouponCampaign_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5616,14 +5616,14 @@ public final class Campaign {
         new java.lang.String[] { "Id", "Name", "Status", "PassTypeIdentifier", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Reporting.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

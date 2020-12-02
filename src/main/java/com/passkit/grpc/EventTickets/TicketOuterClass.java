@@ -156,7 +156,7 @@ public final class TicketOuterClass {
      * PassKit generated ticket id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -165,7 +165,7 @@ public final class TicketOuterClass {
      * PassKit generated ticket id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -464,7 +464,7 @@ public final class TicketOuterClass {
      * Holds the ticket status.
      * </pre>
      *
-     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
@@ -473,7 +473,7 @@ public final class TicketOuterClass {
      * Holds the ticket status.
      * </pre>
      *
-     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The status.
      */
     com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus();
@@ -635,7 +635,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     boolean hasCreated();
@@ -644,7 +644,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     com.google.protobuf.Timestamp getCreated();
@@ -653,7 +653,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -662,7 +662,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     boolean hasUpdated();
@@ -671,7 +671,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     com.google.protobuf.Timestamp getUpdated();
@@ -680,7 +680,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
   }
@@ -1003,7 +1003,7 @@ public final class TicketOuterClass {
      * PassKit generated ticket id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1024,7 +1024,7 @@ public final class TicketOuterClass {
      * PassKit generated ticket id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -1547,7 +1547,7 @@ public final class TicketOuterClass {
      * Holds the ticket status.
      * </pre>
      *
-     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The enum numeric value on the wire for status.
      */
     @java.lang.Override public int getStatusValue() {
@@ -1558,7 +1558,7 @@ public final class TicketOuterClass {
      * Holds the ticket status.
      * </pre>
      *
-     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
@@ -1786,7 +1786,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     @java.lang.Override
@@ -1798,7 +1798,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     @java.lang.Override
@@ -1810,7 +1810,7 @@ public final class TicketOuterClass {
      * The date the ticket was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
@@ -1824,7 +1824,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     @java.lang.Override
@@ -1836,7 +1836,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     @java.lang.Override
@@ -1848,7 +1848,7 @@ public final class TicketOuterClass {
      * The date the ticket last updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
@@ -2703,7 +2703,7 @@ public final class TicketOuterClass {
        * PassKit generated ticket id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -2723,7 +2723,7 @@ public final class TicketOuterClass {
        * PassKit generated ticket id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -2744,7 +2744,7 @@ public final class TicketOuterClass {
        * PassKit generated ticket id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -2763,7 +2763,7 @@ public final class TicketOuterClass {
        * PassKit generated ticket id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -2777,7 +2777,7 @@ public final class TicketOuterClass {
        * PassKit generated ticket id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -4188,7 +4188,7 @@ public final class TicketOuterClass {
        * Holds the ticket status.
        * </pre>
        *
-       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The enum numeric value on the wire for status.
        */
       @java.lang.Override public int getStatusValue() {
@@ -4199,7 +4199,7 @@ public final class TicketOuterClass {
        * Holds the ticket status.
        * </pre>
        *
-       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
        */
@@ -4214,7 +4214,7 @@ public final class TicketOuterClass {
        * Holds the ticket status.
        * </pre>
        *
-       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The status.
        */
       @java.lang.Override
@@ -4228,7 +4228,7 @@ public final class TicketOuterClass {
        * Holds the ticket status.
        * </pre>
        *
-       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The status to set.
        * @return This builder for chaining.
        */
@@ -4246,7 +4246,7 @@ public final class TicketOuterClass {
        * Holds the ticket status.
        * </pre>
        *
-       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.event_tickets.TicketStatus status = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
@@ -5196,7 +5196,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
@@ -5207,7 +5207,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The created.
        */
       public com.google.protobuf.Timestamp getCreated() {
@@ -5222,7 +5222,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -5242,7 +5242,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -5260,7 +5260,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -5282,7 +5282,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -5300,7 +5300,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
         
@@ -5312,7 +5312,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -5327,7 +5327,7 @@ public final class TicketOuterClass {
        * The date the ticket was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -5351,7 +5351,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
@@ -5362,7 +5362,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The updated.
        */
       public com.google.protobuf.Timestamp getUpdated() {
@@ -5377,7 +5377,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -5397,7 +5397,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -5415,7 +5415,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -5437,7 +5437,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
         if (updatedBuilder_ == null) {
@@ -5455,7 +5455,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
         
@@ -5467,7 +5467,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
         if (updatedBuilder_ != null) {
@@ -5482,7 +5482,7 @@ public final class TicketOuterClass {
        * The date the ticket last updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -35343,154 +35343,154 @@ public final class TicketOuterClass {
       "to\032\026io/common/filter.proto\032\034io/event_tic" +
       "kets/venue.proto\032\034io/event_tickets/event" +
       ".proto\032\"io/event_tickets/ticket_type.pro" +
-      "to\032!io/event_tickets/production.proto\032,p" +
-      "rotoc-gen-swagger/options/annotations.pr" +
-      "oto\"\223\010\n\006Ticket\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\024\n\014tic" +
-      "ketNumber\030\002 \001(\t\022#\n\005event\030\003 \001(\0132\024.event_t" +
-      "ickets.Event\022-\n\nticketType\030\004 \001(\0132\031.event" +
-      "_tickets.TicketType\022\023\n\013orderNumber\030\005 \001(\t" +
-      "\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017barcodeContents\030" +
-      "\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023.event_tickets." +
-      "Seat\022+\n\tfaceValue\030\t \001(\0132\030.event_tickets." +
-      "FaceValue\022\032\n\006person\030\n \001(\0132\n.io.Person\0225\n" +
-      "\010metaData\030\013 \003(\0132#.event_tickets.Ticket.M" +
-      "etaDataEntry\022\032\n\006optOut\030\014 \001(\0162\n.io.Toggle" +
-      "\0222\n\006status\030\r \001(\0162\033.event_tickets.TicketS" +
-      "tatusB\005\222A\002@\001\022.\n\nexpiryDate\030\016 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022;\n\021redemptionDetail" +
-      "s\030\017 \001(\0132 .event_tickets.RedemptionDetail" +
-      "s\0227\n\017validateDetails\030\020 \003(\0132\036.event_ticke" +
-      "ts.ValidateDetails\022(\n\rpassOverrides\030\021 \001(" +
-      "\0132\021.io.PassOverrides\022\"\n\014passMetaData\030\022 \001" +
-      "(\0132\014.io.Metadata\0222\n\007created\030\023 \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030" +
-      "\024 \001(\0132\032.google.protobuf.TimestampB\005\222A\002@\001" +
-      "\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001:\305\001\222A\301\001\n\276\001*\006Ticket2\233\001Ticket is " +
-      "a unique ticket instance and holds detai" +
-      "ls about the event dates & times, venue," +
-      " ticket holder and other relevant detail" +
-      "s pertaining to a ticket.\322\001\005event\322\001\rtick" +
-      "etTypeUid\"\235\001\n\017ValidateDetails\0220\n\014validat" +
-      "eDate\030\001 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003alt\030\004 \001(\005\022\026" +
-      "\n\016validateSource\030\006 \001(\t\022\031\n\021validateRefere" +
-      "nce\030\007 \001(\t\"\245\001\n\021RedemptionDetails\0222\n\016redem" +
-      "ptionDate\030\001 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003alt\030\004 \001" +
-      "(\005\022\030\n\020redemptionSource\030\006 \001(\t\022\033\n\023redempti" +
-      "onReference\030\007 \001(\t\"-\n\tFaceValue\022\016\n\006amount" +
-      "\030\001 \001(\002\022\020\n\010currency\030\002 \001(\t\"\362\001\n\004Seat\022\014\n\004sea" +
-      "t\030\001 \001(\t\022*\n\rlocalizedSeat\030\002 \001(\0132\023.io.Loca" +
-      "lizedString\022\013\n\003row\030\003 \001(\t\022)\n\014localizedRow" +
-      "\030\004 \001(\0132\023.io.LocalizedString\022\017\n\007section\030\005" +
-      " \001(\t\022-\n\020localizedSection\030\006 \001(\0132\023.io.Loca" +
-      "lizedString\022\014\n\004gate\030\007 \001(\t\022*\n\rlocalizedGa" +
-      "te\030\010 \001(\0132\023.io.LocalizedString\"\372\002\n\021Ticket" +
-      "ListRequest\022\026\n\014productionId\030\001 \001(\tH\000\022\027\n\rp" +
-      "roductionUid\030\002 \001(\tH\000\022\021\n\007eventId\030\003 \001(\tH\001\022" +
-      "O\n\032eventFilterByVenueAndStart\030\004 \001(\0132).ev" +
-      "ent_tickets.EventFilterByVenueAndStartH\001" +
-      "\022\026\n\014ticketTypeId\030\005 \001(\tH\002\022\027\n\rticketTypeUi" +
-      "d\030\006 \001(\tH\002\022\034\n\007filters\030\007 \001(\0132\013.io.Filters:" +
-      "\\\222AY\nW*\014List Request2(Used to filter tic" +
-      "kets for a production.\322\001\014productionId\322\001\r" +
-      "productionUidB\014\n\nproductionB\007\n\005eventB\014\n\n" +
-      "ticketType\"\341\001\n\032EventFilterByVenueAndStar" +
-      "t\022\017\n\007venueId\030\001 \001(\t\022\020\n\010venueUid\030\002 \001(\t\0226\n\022" +
-      "scheduledStartDate\030\003 \001(\0132\032.google.protob" +
-      "uf.Timestamp:h\222Ae\nc*\022Event Filter By Id2" +
-      ",Used to filter tickets for a specific e" +
-      "vent.\322\001\007venueId\322\001\010venueUid\322\001\tstartDate\"X" +
-      "\n\023TicketNumberRequest\022\024\n\014productionId\030\001 " +
-      "\001(\t\022\025\n\rproductionUid\030\002 \001(\t\022\024\n\014ticketNumb" +
-      "er\030\003 \001(\t\"V\n\022OrderNumberRequest\022\024\n\014produc" +
-      "tionId\030\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t\022\023\n\013o" +
-      "rderNumber\030\003 \001(\t\"\224\001\n\023RedeemByOrderNumber" +
-      "\022\024\n\014productionId\030\001 \001(\t\022\025\n\rproductionUid\030" +
-      "\002 \001(\t\022\023\n\013orderNumber\030\003 \001(\t\022;\n\021redemption" +
-      "Details\030\004 \001(\0132 .event_tickets.Redemption" +
-      "Details\">\n\007Tickets\0223\n\007tickets\030\001 \003(\0132\".ev" +
-      "ent_tickets.TicketLimitedFields\"4\n\021Ticke" +
-      "tPassBundles\022\037\n\007tickets\030\001 \003(\0132\016.io.PassB" +
-      "undle\"\227\001\n\025ValidateTicketRequest\022\036\n\026maxNu" +
-      "mberOfValidations\030\001 \001(\r\022%\n\006ticket\030\002 \001(\0132" +
-      "\025.event_tickets.Ticket\0227\n\017validateDetail" +
-      "s\030\003 \001(\0132\036.event_tickets.ValidateDetails\"" +
-      "N\n\026ValidateTicketResponse\022\r\n\005valid\030\001 \001(\010" +
-      "\022%\n\006ticket\030\002 \001(\0132\025.event_tickets.Ticket\"" +
-      "\261\t\n\023TicketLimitedFields\022\n\n\002id\030\001 \001(\t\022\024\n\014t" +
-      "icketNumber\030\002 \001(\t\022B\n\nproduction\030\003 \001(\0132.." +
-      "event_tickets.ProductionLimitedFieldsRes" +
-      "ponse\0228\n\005event\030\004 \001(\0132).event_tickets.Eve" +
-      "ntLimitedFieldsResponse\0228\n\005venue\030\005 \001(\0132)" +
-      ".event_tickets.VenueLimitedFieldsRespons" +
-      "e\022:\n\nticketType\030\006 \001(\0132&.event_tickets.Ti" +
-      "cketTypeLimitedFields\022\023\n\013orderNumber\030\007 \001" +
-      "(\t\022\022\n\ngroupingId\030\010 \001(\t\022\027\n\017barcodeContent" +
-      "s\030\t \001(\t\022%\n\010seatInfo\030\n \001(\0132\023.event_ticket" +
-      "s.Seat\022+\n\tfaceValue\030\013 \001(\0132\030.event_ticket" +
-      "s.FaceValue\022\032\n\006person\030\014 \001(\0132\n.io.Person\022" +
-      "B\n\010metaData\030\r \003(\01320.event_tickets.Ticket" +
-      "LimitedFields.MetaDataEntry\022\016\n\006optOut\030\016 " +
-      "\001(\010\022+\n\006status\030\017 \001(\0162\033.event_tickets.Tick" +
-      "etStatus\022.\n\nexpiryDate\030\020 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022;\n\021redemptionDetails\030\021 " +
-      "\001(\0132 .event_tickets.RedemptionDetails\0227\n" +
-      "\017validateDetails\030\022 \003(\0132\036.event_tickets.V" +
-      "alidateDetails\022(\n\rpassOverrides\030\023 \001(\0132\021." +
-      "io.PassOverrides\022\"\n\014passMetaData\030\024 \001(\0132\014" +
-      ".io.Metadata\022+\n\007created\030\025 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\032/\n\rMetaDataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\321\001\222A\315\001\n\312" +
-      "\001*\022Ticket (Light ver)2\233\001Ticket is a uniq" +
-      "ue ticket instance and holds details abo" +
-      "ut the event dates & times, venue, ticke" +
-      "t holder and other relevant details pert" +
-      "aining to a ticket.\322\001\005event\322\001\rticketType" +
-      "Uid\"\326\007\n\022IssueTicketRequest\022\021\n\007eventId\030\001 " +
-      "\001(\tH\000\0229\n\005event\030\002 \001(\0132(.event_tickets.Eve" +
-      "ntLimitedFieldsRequestH\000\022\024\n\014ticketTypeId" +
-      "\030\003 \001(\t\022\024\n\014ticketNumber\030\004 \001(\t\022\023\n\013orderNum" +
-      "ber\030\005 \001(\t\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017barcode" +
-      "Contents\030\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023.event" +
-      "_tickets.Seat\022+\n\tfaceValue\030\t \001(\0132\030.event" +
-      "_tickets.FaceValue\022\032\n\006person\030\n \001(\0132\n.io." +
-      "Person\022A\n\010metaData\030\013 \003(\0132/.event_tickets" +
-      ".IssueTicketRequest.MetaDataEntry\022\016\n\006opt" +
-      "Out\030\014 \001(\010\022+\n\006status\030\r \001(\0162\033.event_ticket" +
-      "s.TicketStatus\022.\n\nexpiryDate\030\016 \001(\0132\032.goo" +
+      "to\032!io/event_tickets/production.proto\032.p" +
+      "rotoc-gen-openapiv2/options/annotations." +
+      "proto\"\223\010\n\006Ticket\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\024\n\014t" +
+      "icketNumber\030\002 \001(\t\022#\n\005event\030\003 \001(\0132\024.event" +
+      "_tickets.Event\022-\n\nticketType\030\004 \001(\0132\031.eve" +
+      "nt_tickets.TicketType\022\023\n\013orderNumber\030\005 \001" +
+      "(\t\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017barcodeContent" +
+      "s\030\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023.event_ticket" +
+      "s.Seat\022+\n\tfaceValue\030\t \001(\0132\030.event_ticket" +
+      "s.FaceValue\022\032\n\006person\030\n \001(\0132\n.io.Person\022" +
+      "5\n\010metaData\030\013 \003(\0132#.event_tickets.Ticket" +
+      ".MetaDataEntry\022\032\n\006optOut\030\014 \001(\0162\n.io.Togg" +
+      "le\0222\n\006status\030\r \001(\0162\033.event_tickets.Ticke" +
+      "tStatusB\005\222A\002@\001\022.\n\nexpiryDate\030\016 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\022;\n\021redemptionDeta" +
       "ils\030\017 \001(\0132 .event_tickets.RedemptionDeta" +
       "ils\0227\n\017validateDetails\030\020 \003(\0132\036.event_tic" +
       "kets.ValidateDetails\022(\n\rpassOverrides\030\021 " +
       "\001(\0132\021.io.PassOverrides\022\"\n\014passMetaData\030\022" +
-      " \001(\0132\014.io.Metadata\022+\n\007created\030\023 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022+\n\007updated\030\024 \001(\013" +
-      "2\032.google.protobuf.Timestamp\032/\n\rMetaData" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\207\001" +
-      "\222A\203\001\n\200\001*\024Issue Ticket Request2GIssue tic" +
-      "ket. Event is auto created if it does no" +
-      "t exist on the record.\322\001\007eventId\322\001\005event" +
-      "\322\001\014ticketTypeIdB\013\n\teventInfo\"\206\002\n\026IssueTi" +
-      "cketResponseIds\022\020\n\010ticketId\030\001 \001(\t\022\024\n\014pro" +
-      "ductionId\030\002 \001(\t\022\017\n\007venueId\030\003 \001(\t\022\024\n\014tick" +
-      "etTypeId\030\004 \001(\t\022\017\n\007eventId\030\005 \001(\t:\213\001\222A\207\001\n\204" +
-      "\001*\031Issue Ticket Response Ids2gList of Pa" +
-      "ssKit generated ids returned after issui" +
-      "ng a ticket with production, venue, tick" +
-      "et type UIDs.\"\333\001\n\026EventTicketPassRequest" +
-      "\022\032\n\010ticketId\030\001 \001(\0132\006.io.IdH\000\022:\n\014ticketNu" +
-      "mber\030\002 \001(\0132\".event_tickets.TicketNumberR" +
-      "equestH\000\0228\n\013orderNumber\030\003 \001(\0132!.event_ti" +
-      "ckets.OrderNumberRequestH\000\022$\n\006format\030\004 \003" +
-      "(\0162\024.io.PassBundleFormatB\t\n\007request*?\n\014T" +
-      "icketStatus\022\017\n\013STATUS_NONE\020\000\022\n\n\006ISSUED\020\001" +
-      "\022\014\n\010REDEEMED\020\002\"\004\010\003\020\003Bd\n\035com.passkit.grpc" +
-      ".EventTicketsZ2stash.passkit.com/io/mode" +
-      "l/sdk/go/io/event_tickets\252\002\016PKEventTicke" +
-      "tsb\006proto3"
+      " \001(\0132\014.io.Metadata\0222\n\007created\030\023 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\005\222A\002@\001\0222\n\007update" +
+      "d\030\024 \001(\0132\032.google.protobuf.TimestampB\005\222A\002" +
+      "@\001\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001:\305\001\222A\301\001\n\276\001*\006Ticket2\233\001Ticket i" +
+      "s a unique ticket instance and holds det" +
+      "ails about the event dates & times, venu" +
+      "e, ticket holder and other relevant deta" +
+      "ils pertaining to a ticket.\322\001\005event\322\001\rti" +
+      "cketTypeUid\"\235\001\n\017ValidateDetails\0220\n\014valid" +
+      "ateDate\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003alt\030\004 \001(\005" +
+      "\022\026\n\016validateSource\030\006 \001(\t\022\031\n\021validateRefe" +
+      "rence\030\007 \001(\t\"\245\001\n\021RedemptionDetails\0222\n\016red" +
+      "emptionDate\030\001 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003alt\030\004" +
+      " \001(\005\022\030\n\020redemptionSource\030\006 \001(\t\022\033\n\023redemp" +
+      "tionReference\030\007 \001(\t\"-\n\tFaceValue\022\016\n\006amou" +
+      "nt\030\001 \001(\002\022\020\n\010currency\030\002 \001(\t\"\362\001\n\004Seat\022\014\n\004s" +
+      "eat\030\001 \001(\t\022*\n\rlocalizedSeat\030\002 \001(\0132\023.io.Lo" +
+      "calizedString\022\013\n\003row\030\003 \001(\t\022)\n\014localizedR" +
+      "ow\030\004 \001(\0132\023.io.LocalizedString\022\017\n\007section" +
+      "\030\005 \001(\t\022-\n\020localizedSection\030\006 \001(\0132\023.io.Lo" +
+      "calizedString\022\014\n\004gate\030\007 \001(\t\022*\n\rlocalized" +
+      "Gate\030\010 \001(\0132\023.io.LocalizedString\"\372\002\n\021Tick" +
+      "etListRequest\022\026\n\014productionId\030\001 \001(\tH\000\022\027\n" +
+      "\rproductionUid\030\002 \001(\tH\000\022\021\n\007eventId\030\003 \001(\tH" +
+      "\001\022O\n\032eventFilterByVenueAndStart\030\004 \001(\0132)." +
+      "event_tickets.EventFilterByVenueAndStart" +
+      "H\001\022\026\n\014ticketTypeId\030\005 \001(\tH\002\022\027\n\rticketType" +
+      "Uid\030\006 \001(\tH\002\022\034\n\007filters\030\007 \001(\0132\013.io.Filter" +
+      "s:\\\222AY\nW*\014List Request2(Used to filter t" +
+      "ickets for a production.\322\001\014productionId\322" +
+      "\001\rproductionUidB\014\n\nproductionB\007\n\005eventB\014" +
+      "\n\nticketType\"\341\001\n\032EventFilterByVenueAndSt" +
+      "art\022\017\n\007venueId\030\001 \001(\t\022\020\n\010venueUid\030\002 \001(\t\0226" +
+      "\n\022scheduledStartDate\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp:h\222Ae\nc*\022Event Filter By I" +
+      "d2,Used to filter tickets for a specific" +
+      " event.\322\001\007venueId\322\001\010venueUid\322\001\tstartDate" +
+      "\"X\n\023TicketNumberRequest\022\024\n\014productionId\030" +
+      "\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t\022\024\n\014ticketNu" +
+      "mber\030\003 \001(\t\"V\n\022OrderNumberRequest\022\024\n\014prod" +
+      "uctionId\030\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t\022\023\n" +
+      "\013orderNumber\030\003 \001(\t\"\224\001\n\023RedeemByOrderNumb" +
+      "er\022\024\n\014productionId\030\001 \001(\t\022\025\n\rproductionUi" +
+      "d\030\002 \001(\t\022\023\n\013orderNumber\030\003 \001(\t\022;\n\021redempti" +
+      "onDetails\030\004 \001(\0132 .event_tickets.Redempti" +
+      "onDetails\">\n\007Tickets\0223\n\007tickets\030\001 \003(\0132\"." +
+      "event_tickets.TicketLimitedFields\"4\n\021Tic" +
+      "ketPassBundles\022\037\n\007tickets\030\001 \003(\0132\016.io.Pas" +
+      "sBundle\"\227\001\n\025ValidateTicketRequest\022\036\n\026max" +
+      "NumberOfValidations\030\001 \001(\r\022%\n\006ticket\030\002 \001(" +
+      "\0132\025.event_tickets.Ticket\0227\n\017validateDeta" +
+      "ils\030\003 \001(\0132\036.event_tickets.ValidateDetail" +
+      "s\"N\n\026ValidateTicketResponse\022\r\n\005valid\030\001 \001" +
+      "(\010\022%\n\006ticket\030\002 \001(\0132\025.event_tickets.Ticke" +
+      "t\"\261\t\n\023TicketLimitedFields\022\n\n\002id\030\001 \001(\t\022\024\n" +
+      "\014ticketNumber\030\002 \001(\t\022B\n\nproduction\030\003 \001(\0132" +
+      "..event_tickets.ProductionLimitedFieldsR" +
+      "esponse\0228\n\005event\030\004 \001(\0132).event_tickets.E" +
+      "ventLimitedFieldsResponse\0228\n\005venue\030\005 \001(\013" +
+      "2).event_tickets.VenueLimitedFieldsRespo" +
+      "nse\022:\n\nticketType\030\006 \001(\0132&.event_tickets." +
+      "TicketTypeLimitedFields\022\023\n\013orderNumber\030\007" +
+      " \001(\t\022\022\n\ngroupingId\030\010 \001(\t\022\027\n\017barcodeConte" +
+      "nts\030\t \001(\t\022%\n\010seatInfo\030\n \001(\0132\023.event_tick" +
+      "ets.Seat\022+\n\tfaceValue\030\013 \001(\0132\030.event_tick" +
+      "ets.FaceValue\022\032\n\006person\030\014 \001(\0132\n.io.Perso" +
+      "n\022B\n\010metaData\030\r \003(\01320.event_tickets.Tick" +
+      "etLimitedFields.MetaDataEntry\022\016\n\006optOut\030" +
+      "\016 \001(\010\022+\n\006status\030\017 \001(\0162\033.event_tickets.Ti" +
+      "cketStatus\022.\n\nexpiryDate\030\020 \001(\0132\032.google." +
+      "protobuf.Timestamp\022;\n\021redemptionDetails\030" +
+      "\021 \001(\0132 .event_tickets.RedemptionDetails\022" +
+      "7\n\017validateDetails\030\022 \003(\0132\036.event_tickets" +
+      ".ValidateDetails\022(\n\rpassOverrides\030\023 \001(\0132" +
+      "\021.io.PassOverrides\022\"\n\014passMetaData\030\024 \001(\013" +
+      "2\014.io.Metadata\022+\n\007created\030\025 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\032/\n\rMetaDataEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\321\001\222A\315\001" +
+      "\n\312\001*\022Ticket (Light ver)2\233\001Ticket is a un" +
+      "ique ticket instance and holds details a" +
+      "bout the event dates & times, venue, tic" +
+      "ket holder and other relevant details pe" +
+      "rtaining to a ticket.\322\001\005event\322\001\rticketTy" +
+      "peUid\"\326\007\n\022IssueTicketRequest\022\021\n\007eventId\030" +
+      "\001 \001(\tH\000\0229\n\005event\030\002 \001(\0132(.event_tickets.E" +
+      "ventLimitedFieldsRequestH\000\022\024\n\014ticketType" +
+      "Id\030\003 \001(\t\022\024\n\014ticketNumber\030\004 \001(\t\022\023\n\013orderN" +
+      "umber\030\005 \001(\t\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017barco" +
+      "deContents\030\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023.eve" +
+      "nt_tickets.Seat\022+\n\tfaceValue\030\t \001(\0132\030.eve" +
+      "nt_tickets.FaceValue\022\032\n\006person\030\n \001(\0132\n.i" +
+      "o.Person\022A\n\010metaData\030\013 \003(\0132/.event_ticke" +
+      "ts.IssueTicketRequest.MetaDataEntry\022\016\n\006o" +
+      "ptOut\030\014 \001(\010\022+\n\006status\030\r \001(\0162\033.event_tick" +
+      "ets.TicketStatus\022.\n\nexpiryDate\030\016 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022;\n\021redemptionDe" +
+      "tails\030\017 \001(\0132 .event_tickets.RedemptionDe" +
+      "tails\0227\n\017validateDetails\030\020 \003(\0132\036.event_t" +
+      "ickets.ValidateDetails\022(\n\rpassOverrides\030" +
+      "\021 \001(\0132\021.io.PassOverrides\022\"\n\014passMetaData" +
+      "\030\022 \001(\0132\014.io.Metadata\022+\n\007created\030\023 \001(\0132\032." +
+      "google.protobuf.Timestamp\022+\n\007updated\030\024 \001" +
+      "(\0132\032.google.protobuf.Timestamp\032/\n\rMetaDa" +
+      "taEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:" +
+      "\207\001\222A\203\001\n\200\001*\024Issue Ticket Request2GIssue t" +
+      "icket. Event is auto created if it does " +
+      "not exist on the record.\322\001\007eventId\322\001\005eve" +
+      "nt\322\001\014ticketTypeIdB\013\n\teventInfo\"\206\002\n\026Issue" +
+      "TicketResponseIds\022\020\n\010ticketId\030\001 \001(\t\022\024\n\014p" +
+      "roductionId\030\002 \001(\t\022\017\n\007venueId\030\003 \001(\t\022\024\n\014ti" +
+      "cketTypeId\030\004 \001(\t\022\017\n\007eventId\030\005 \001(\t:\213\001\222A\207\001" +
+      "\n\204\001*\031Issue Ticket Response Ids2gList of " +
+      "PassKit generated ids returned after iss" +
+      "uing a ticket with production, venue, ti" +
+      "cket type UIDs.\"\333\001\n\026EventTicketPassReque" +
+      "st\022\032\n\010ticketId\030\001 \001(\0132\006.io.IdH\000\022:\n\014ticket" +
+      "Number\030\002 \001(\0132\".event_tickets.TicketNumbe" +
+      "rRequestH\000\0228\n\013orderNumber\030\003 \001(\0132!.event_" +
+      "tickets.OrderNumberRequestH\000\022$\n\006format\030\004" +
+      " \003(\0162\024.io.PassBundleFormatB\t\n\007request*?\n" +
+      "\014TicketStatus\022\017\n\013STATUS_NONE\020\000\022\n\n\006ISSUED" +
+      "\020\001\022\014\n\010REDEEMED\020\002\"\004\010\003\020\003Bo\n\035com.passkit.gr" +
+      "pc.EventTicketsZ2stash.passkit.com/io/mo" +
+      "del/sdk/go/io/event_tickets\252\002\031PassKit.Gr" +
+      "pc.EventTicketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35507,7 +35507,7 @@ public final class TicketOuterClass {
           com.passkit.grpc.EventTickets.EventOuterClass.getDescriptor(),
           com.passkit.grpc.EventTickets.TicketTypeOuterClass.getDescriptor(),
           com.passkit.grpc.EventTickets.ProductionOuterClass.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_event_tickets_Ticket_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -35637,8 +35637,8 @@ public final class TicketOuterClass {
         new java.lang.String[] { "TicketId", "TicketNumber", "OrderNumber", "Format", "Request", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -35653,7 +35653,7 @@ public final class TicketOuterClass {
     com.passkit.grpc.EventTickets.EventOuterClass.getDescriptor();
     com.passkit.grpc.EventTickets.TicketTypeOuterClass.getDescriptor();
     com.passkit.grpc.EventTickets.ProductionOuterClass.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

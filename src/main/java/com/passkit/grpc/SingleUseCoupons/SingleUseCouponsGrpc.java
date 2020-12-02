@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/single_use_coupons/a_rpc.proto")
 public final class SingleUseCouponsGrpc {
 
@@ -41,22 +41,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCreateCouponCampaignMethod = SingleUseCouponsGrpc.getCreateCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCreateCouponCampaignMethod = SingleUseCouponsGrpc.getCreateCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getCreateCouponCampaignMethod = getCreateCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getCreateCouponCampaignMethod = getCreateCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "createCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCouponCampaign"))
+              .build();
         }
-     }
-     return getCreateCouponCampaignMethod;
+      }
+    }
+    return getCreateCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
@@ -73,22 +72,21 @@ public final class SingleUseCouponsGrpc {
     if ((getUpdateCouponCampaignMethod = SingleUseCouponsGrpc.getUpdateCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getUpdateCouponCampaignMethod = SingleUseCouponsGrpc.getUpdateCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getUpdateCouponCampaignMethod = getUpdateCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getUpdateCouponCampaignMethod = getUpdateCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign, com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "updateCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCouponCampaign"))
+              .build();
         }
-     }
-     return getUpdateCouponCampaignMethod;
+      }
+    }
+    return getUpdateCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,22 +103,21 @@ public final class SingleUseCouponsGrpc {
     if ((getGetCouponCampaignMethod = SingleUseCouponsGrpc.getGetCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetCouponCampaignMethod = SingleUseCouponsGrpc.getGetCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getGetCouponCampaignMethod = getGetCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getGetCouponCampaignMethod = getGetCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponCampaign"))
+              .build();
         }
-     }
-     return getGetCouponCampaignMethod;
+      }
+    }
+    return getGetCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -137,22 +134,21 @@ public final class SingleUseCouponsGrpc {
     if ((getDeleteCouponCampaignMethod = SingleUseCouponsGrpc.getDeleteCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getDeleteCouponCampaignMethod = SingleUseCouponsGrpc.getDeleteCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getDeleteCouponCampaignMethod = getDeleteCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getDeleteCouponCampaignMethod = getDeleteCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "deleteCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("deleteCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("deleteCouponCampaign"))
+              .build();
         }
-     }
-     return getDeleteCouponCampaignMethod;
+      }
+    }
+    return getDeleteCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -169,22 +165,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponCampaignsDeprecatedMethod = SingleUseCouponsGrpc.getListCouponCampaignsDeprecatedMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponCampaignsDeprecatedMethod = SingleUseCouponsGrpc.getListCouponCampaignsDeprecatedMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponCampaignsDeprecatedMethod = getListCouponCampaignsDeprecatedMethod = 
+          SingleUseCouponsGrpc.getListCouponCampaignsDeprecatedMethod = getListCouponCampaignsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponCampaignsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponCampaignsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponCampaignsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponCampaignsDeprecated"))
+              .build();
         }
-     }
-     return getListCouponCampaignsDeprecatedMethod;
+      }
+    }
+    return getListCouponCampaignsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -201,22 +196,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponCampaignsMethod = SingleUseCouponsGrpc.getListCouponCampaignsMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponCampaignsMethod = SingleUseCouponsGrpc.getListCouponCampaignsMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponCampaignsMethod = getListCouponCampaignsMethod = 
+          SingleUseCouponsGrpc.getListCouponCampaignsMethod = getListCouponCampaignsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponCampaigns"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponCampaigns"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponCampaigns"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponCampaigns"))
+              .build();
         }
-     }
-     return getListCouponCampaignsMethod;
+      }
+    }
+    return getListCouponCampaignsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Reporting.AnalyticsRequest,
@@ -233,22 +227,21 @@ public final class SingleUseCouponsGrpc {
     if ((getGetAnalyticsMethod = SingleUseCouponsGrpc.getGetAnalyticsMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetAnalyticsMethod = SingleUseCouponsGrpc.getGetAnalyticsMethod) == null) {
-          SingleUseCouponsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod = 
+          SingleUseCouponsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Reporting.AnalyticsRequest, com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getAnalytics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnalytics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Reporting.AnalyticsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getAnalytics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getAnalytics"))
+              .build();
         }
-     }
-     return getGetAnalyticsMethod;
+      }
+    }
+    return getGetAnalyticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
@@ -265,22 +258,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCreateCouponOfferMethod = SingleUseCouponsGrpc.getCreateCouponOfferMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCreateCouponOfferMethod = SingleUseCouponsGrpc.getCreateCouponOfferMethod) == null) {
-          SingleUseCouponsGrpc.getCreateCouponOfferMethod = getCreateCouponOfferMethod = 
+          SingleUseCouponsGrpc.getCreateCouponOfferMethod = getCreateCouponOfferMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "createCouponOffer"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createCouponOffer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCouponOffer"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCouponOffer"))
+              .build();
         }
-     }
-     return getCreateCouponOfferMethod;
+      }
+    }
+    return getCreateCouponOfferMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
@@ -297,22 +289,21 @@ public final class SingleUseCouponsGrpc {
     if ((getUpdateCouponOfferMethod = SingleUseCouponsGrpc.getUpdateCouponOfferMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getUpdateCouponOfferMethod = SingleUseCouponsGrpc.getUpdateCouponOfferMethod) == null) {
-          SingleUseCouponsGrpc.getUpdateCouponOfferMethod = getUpdateCouponOfferMethod = 
+          SingleUseCouponsGrpc.getUpdateCouponOfferMethod = getUpdateCouponOfferMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer, com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "updateCouponOffer"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateCouponOffer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCouponOffer"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCouponOffer"))
+              .build();
         }
-     }
-     return getUpdateCouponOfferMethod;
+      }
+    }
+    return getUpdateCouponOfferMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -329,22 +320,21 @@ public final class SingleUseCouponsGrpc {
     if ((getGetCouponOfferMethod = SingleUseCouponsGrpc.getGetCouponOfferMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetCouponOfferMethod = SingleUseCouponsGrpc.getGetCouponOfferMethod) == null) {
-          SingleUseCouponsGrpc.getGetCouponOfferMethod = getGetCouponOfferMethod = 
+          SingleUseCouponsGrpc.getGetCouponOfferMethod = getGetCouponOfferMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getCouponOffer"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCouponOffer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponOffer"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponOffer"))
+              .build();
         }
-     }
-     return getGetCouponOfferMethod;
+      }
+    }
+    return getGetCouponOfferMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -361,22 +351,21 @@ public final class SingleUseCouponsGrpc {
     if ((getDeleteCouponOfferMethod = SingleUseCouponsGrpc.getDeleteCouponOfferMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getDeleteCouponOfferMethod = SingleUseCouponsGrpc.getDeleteCouponOfferMethod) == null) {
-          SingleUseCouponsGrpc.getDeleteCouponOfferMethod = getDeleteCouponOfferMethod = 
+          SingleUseCouponsGrpc.getDeleteCouponOfferMethod = getDeleteCouponOfferMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "deleteCouponOffer"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteCouponOffer"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("deleteCouponOffer"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("deleteCouponOffer"))
+              .build();
         }
-     }
-     return getDeleteCouponOfferMethod;
+      }
+    }
+    return getDeleteCouponOfferMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated,
@@ -393,22 +382,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponOffersDeprecatedMethod = SingleUseCouponsGrpc.getListCouponOffersDeprecatedMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponOffersDeprecatedMethod = SingleUseCouponsGrpc.getListCouponOffersDeprecatedMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponOffersDeprecatedMethod = getListCouponOffersDeprecatedMethod = 
+          SingleUseCouponsGrpc.getListCouponOffersDeprecatedMethod = getListCouponOffersDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated, com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponOffersDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponOffersDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponOffersDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponOffersDeprecated"))
+              .build();
         }
-     }
-     return getListCouponOffersDeprecatedMethod;
+      }
+    }
+    return getListCouponOffersDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest,
@@ -425,22 +413,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponOffersMethod = SingleUseCouponsGrpc.getListCouponOffersMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponOffersMethod = SingleUseCouponsGrpc.getListCouponOffersMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponOffersMethod = getListCouponOffersMethod = 
+          SingleUseCouponsGrpc.getListCouponOffersMethod = getListCouponOffersMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest, com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponOffers"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponOffers"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponOffers"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponOffers"))
+              .build();
         }
-     }
-     return getListCouponOffersMethod;
+      }
+    }
+    return getListCouponOffersMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -457,22 +444,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCreateCouponMethod = SingleUseCouponsGrpc.getCreateCouponMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCreateCouponMethod = SingleUseCouponsGrpc.getCreateCouponMethod) == null) {
-          SingleUseCouponsGrpc.getCreateCouponMethod = getCreateCouponMethod = 
+          SingleUseCouponsGrpc.getCreateCouponMethod = getCreateCouponMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "createCoupon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createCoupon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCoupon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("createCoupon"))
+              .build();
         }
-     }
-     return getCreateCouponMethod;
+      }
+    }
+    return getCreateCouponMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -489,22 +475,21 @@ public final class SingleUseCouponsGrpc {
     if ((getUpdateCouponMethod = SingleUseCouponsGrpc.getUpdateCouponMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getUpdateCouponMethod = SingleUseCouponsGrpc.getUpdateCouponMethod) == null) {
-          SingleUseCouponsGrpc.getUpdateCouponMethod = getUpdateCouponMethod = 
+          SingleUseCouponsGrpc.getUpdateCouponMethod = getUpdateCouponMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "updateCoupon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateCoupon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCoupon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("updateCoupon"))
+              .build();
         }
-     }
-     return getUpdateCouponMethod;
+      }
+    }
+    return getUpdateCouponMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -521,22 +506,21 @@ public final class SingleUseCouponsGrpc {
     if ((getStreamCouponUpdatesMethod = SingleUseCouponsGrpc.getStreamCouponUpdatesMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getStreamCouponUpdatesMethod = SingleUseCouponsGrpc.getStreamCouponUpdatesMethod) == null) {
-          SingleUseCouponsGrpc.getStreamCouponUpdatesMethod = getStreamCouponUpdatesMethod = 
+          SingleUseCouponsGrpc.getStreamCouponUpdatesMethod = getStreamCouponUpdatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "streamCouponUpdates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "streamCouponUpdates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("streamCouponUpdates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("streamCouponUpdates"))
+              .build();
         }
-     }
-     return getStreamCouponUpdatesMethod;
+      }
+    }
+    return getStreamCouponUpdatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -553,22 +537,21 @@ public final class SingleUseCouponsGrpc {
     if ((getRedeemCouponMethod = SingleUseCouponsGrpc.getRedeemCouponMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getRedeemCouponMethod = SingleUseCouponsGrpc.getRedeemCouponMethod) == null) {
-          SingleUseCouponsGrpc.getRedeemCouponMethod = getRedeemCouponMethod = 
+          SingleUseCouponsGrpc.getRedeemCouponMethod = getRedeemCouponMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "redeemCoupon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "redeemCoupon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("redeemCoupon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("redeemCoupon"))
+              .build();
         }
-     }
-     return getRedeemCouponMethod;
+      }
+    }
+    return getRedeemCouponMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -585,22 +568,21 @@ public final class SingleUseCouponsGrpc {
     if ((getStreamCouponRedemptionsMethod = SingleUseCouponsGrpc.getStreamCouponRedemptionsMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getStreamCouponRedemptionsMethod = SingleUseCouponsGrpc.getStreamCouponRedemptionsMethod) == null) {
-          SingleUseCouponsGrpc.getStreamCouponRedemptionsMethod = getStreamCouponRedemptionsMethod = 
+          SingleUseCouponsGrpc.getStreamCouponRedemptionsMethod = getStreamCouponRedemptionsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "streamCouponRedemptions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "streamCouponRedemptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("streamCouponRedemptions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("streamCouponRedemptions"))
+              .build();
         }
-     }
-     return getStreamCouponRedemptionsMethod;
+      }
+    }
+    return getStreamCouponRedemptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -617,22 +599,21 @@ public final class SingleUseCouponsGrpc {
     if ((getGetCouponByIdMethod = SingleUseCouponsGrpc.getGetCouponByIdMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetCouponByIdMethod = SingleUseCouponsGrpc.getGetCouponByIdMethod) == null) {
-          SingleUseCouponsGrpc.getGetCouponByIdMethod = getGetCouponByIdMethod = 
+          SingleUseCouponsGrpc.getGetCouponByIdMethod = getGetCouponByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getCouponById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCouponById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponById"))
+              .build();
         }
-     }
-     return getGetCouponByIdMethod;
+      }
+    }
+    return getGetCouponByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest,
@@ -649,22 +630,21 @@ public final class SingleUseCouponsGrpc {
     if ((getGetCouponByExternalIdMethod = SingleUseCouponsGrpc.getGetCouponByExternalIdMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetCouponByExternalIdMethod = SingleUseCouponsGrpc.getGetCouponByExternalIdMethod) == null) {
-          SingleUseCouponsGrpc.getGetCouponByExternalIdMethod = getGetCouponByExternalIdMethod = 
+          SingleUseCouponsGrpc.getGetCouponByExternalIdMethod = getGetCouponByExternalIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getCouponByExternalId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCouponByExternalId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponByExternalId"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getCouponByExternalId"))
+              .build();
         }
-     }
-     return getGetCouponByExternalIdMethod;
+      }
+    }
+    return getGetCouponByExternalIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
@@ -681,22 +661,21 @@ public final class SingleUseCouponsGrpc {
     if ((getVoidCouponMethod = SingleUseCouponsGrpc.getVoidCouponMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getVoidCouponMethod = SingleUseCouponsGrpc.getVoidCouponMethod) == null) {
-          SingleUseCouponsGrpc.getVoidCouponMethod = getVoidCouponMethod = 
+          SingleUseCouponsGrpc.getVoidCouponMethod = getVoidCouponMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "voidCoupon"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "voidCoupon"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("voidCoupon"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("voidCoupon"))
+              .build();
         }
-     }
-     return getVoidCouponMethod;
+      }
+    }
+    return getVoidCouponMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
@@ -713,22 +692,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponsByCouponCampaignDeprecatedMethod = SingleUseCouponsGrpc.getListCouponsByCouponCampaignDeprecatedMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponsByCouponCampaignDeprecatedMethod = SingleUseCouponsGrpc.getListCouponsByCouponCampaignDeprecatedMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponsByCouponCampaignDeprecatedMethod = getListCouponsByCouponCampaignDeprecatedMethod = 
+          SingleUseCouponsGrpc.getListCouponsByCouponCampaignDeprecatedMethod = getListCouponsByCouponCampaignDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponsByCouponCampaignDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponsByCouponCampaignDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponsByCouponCampaignDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponsByCouponCampaignDeprecated"))
+              .build();
         }
-     }
-     return getListCouponsByCouponCampaignDeprecatedMethod;
+      }
+    }
+    return getListCouponsByCouponCampaignDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
@@ -745,22 +723,21 @@ public final class SingleUseCouponsGrpc {
     if ((getListCouponsByCouponCampaignMethod = SingleUseCouponsGrpc.getListCouponsByCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getListCouponsByCouponCampaignMethod = SingleUseCouponsGrpc.getListCouponsByCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getListCouponsByCouponCampaignMethod = getListCouponsByCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getListCouponsByCouponCampaignMethod = getListCouponsByCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "listCouponsByCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listCouponsByCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponsByCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("listCouponsByCouponCampaign"))
+              .build();
         }
-     }
-     return getListCouponsByCouponCampaignMethod;
+      }
+    }
+    return getListCouponsByCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
@@ -777,22 +754,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCountCouponsByCouponCampaignDeprecatedMethod = SingleUseCouponsGrpc.getCountCouponsByCouponCampaignDeprecatedMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCountCouponsByCouponCampaignDeprecatedMethod = SingleUseCouponsGrpc.getCountCouponsByCouponCampaignDeprecatedMethod) == null) {
-          SingleUseCouponsGrpc.getCountCouponsByCouponCampaignDeprecatedMethod = getCountCouponsByCouponCampaignDeprecatedMethod = 
+          SingleUseCouponsGrpc.getCountCouponsByCouponCampaignDeprecatedMethod = getCountCouponsByCouponCampaignDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "countCouponsByCouponCampaignDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countCouponsByCouponCampaignDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("countCouponsByCouponCampaignDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("countCouponsByCouponCampaignDeprecated"))
+              .build();
         }
-     }
-     return getCountCouponsByCouponCampaignDeprecatedMethod;
+      }
+    }
+    return getCountCouponsByCouponCampaignDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
@@ -809,22 +785,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCountCouponsByCouponCampaignMethod = SingleUseCouponsGrpc.getCountCouponsByCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCountCouponsByCouponCampaignMethod = SingleUseCouponsGrpc.getCountCouponsByCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getCountCouponsByCouponCampaignMethod = getCountCouponsByCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getCountCouponsByCouponCampaignMethod = getCountCouponsByCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "countCouponsByCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countCouponsByCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("countCouponsByCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("countCouponsByCouponCampaign"))
+              .build();
         }
-     }
-     return getCountCouponsByCouponCampaignMethod;
+      }
+    }
+    return getCountCouponsByCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest,
@@ -841,22 +816,21 @@ public final class SingleUseCouponsGrpc {
     if ((getCopyCouponCampaignMethod = SingleUseCouponsGrpc.getCopyCouponCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getCopyCouponCampaignMethod = SingleUseCouponsGrpc.getCopyCouponCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getCopyCouponCampaignMethod = getCopyCouponCampaignMethod = 
+          SingleUseCouponsGrpc.getCopyCouponCampaignMethod = getCopyCouponCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "copyCouponCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyCouponCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("copyCouponCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("copyCouponCampaign"))
+              .build();
         }
-     }
-     return getCopyCouponCampaignMethod;
+      }
+    }
+    return getCopyCouponCampaignMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -873,29 +847,35 @@ public final class SingleUseCouponsGrpc {
     if ((getGetMetaKeysForCampaignMethod = SingleUseCouponsGrpc.getGetMetaKeysForCampaignMethod) == null) {
       synchronized (SingleUseCouponsGrpc.class) {
         if ((getGetMetaKeysForCampaignMethod = SingleUseCouponsGrpc.getGetMetaKeysForCampaignMethod) == null) {
-          SingleUseCouponsGrpc.getGetMetaKeysForCampaignMethod = getGetMetaKeysForCampaignMethod = 
+          SingleUseCouponsGrpc.getGetMetaKeysForCampaignMethod = getGetMetaKeysForCampaignMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Strings>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "single_use_coupons.SingleUseCoupons", "getMetaKeysForCampaign"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMetaKeysForCampaign"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Strings.getDefaultInstance()))
-                  .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getMetaKeysForCampaign"))
-                  .build();
-          }
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("getMetaKeysForCampaign"))
+              .build();
         }
-     }
-     return getGetMetaKeysForCampaignMethod;
+      }
+    }
+    return getGetMetaKeysForCampaignMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static SingleUseCouponsStub newStub(io.grpc.Channel channel) {
-    return new SingleUseCouponsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsStub>() {
+        @java.lang.Override
+        public SingleUseCouponsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SingleUseCouponsStub(channel, callOptions);
+        }
+      };
+    return SingleUseCouponsStub.newStub(factory, channel);
   }
 
   /**
@@ -903,7 +883,14 @@ public final class SingleUseCouponsGrpc {
    */
   public static SingleUseCouponsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new SingleUseCouponsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsBlockingStub>() {
+        @java.lang.Override
+        public SingleUseCouponsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SingleUseCouponsBlockingStub(channel, callOptions);
+        }
+      };
+    return SingleUseCouponsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -911,7 +898,14 @@ public final class SingleUseCouponsGrpc {
    */
   public static SingleUseCouponsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new SingleUseCouponsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SingleUseCouponsFutureStub>() {
+        @java.lang.Override
+        public SingleUseCouponsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SingleUseCouponsFutureStub(channel, callOptions);
+        }
+      };
+    return SingleUseCouponsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -1304,19 +1298,15 @@ public final class SingleUseCouponsGrpc {
 
   /**
    */
-  public static final class SingleUseCouponsStub extends io.grpc.stub.AbstractStub<SingleUseCouponsStub> {
-    private SingleUseCouponsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SingleUseCouponsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SingleUseCouponsStub extends io.grpc.stub.AbstractAsyncStub<SingleUseCouponsStub> {
+    private SingleUseCouponsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SingleUseCouponsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SingleUseCouponsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SingleUseCouponsStub(channel, callOptions);
     }
 
@@ -1539,19 +1529,15 @@ public final class SingleUseCouponsGrpc {
 
   /**
    */
-  public static final class SingleUseCouponsBlockingStub extends io.grpc.stub.AbstractStub<SingleUseCouponsBlockingStub> {
-    private SingleUseCouponsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SingleUseCouponsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SingleUseCouponsBlockingStub extends io.grpc.stub.AbstractBlockingStub<SingleUseCouponsBlockingStub> {
+    private SingleUseCouponsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SingleUseCouponsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SingleUseCouponsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SingleUseCouponsBlockingStub(channel, callOptions);
     }
 
@@ -1739,19 +1725,15 @@ public final class SingleUseCouponsGrpc {
 
   /**
    */
-  public static final class SingleUseCouponsFutureStub extends io.grpc.stub.AbstractStub<SingleUseCouponsFutureStub> {
-    private SingleUseCouponsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private SingleUseCouponsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class SingleUseCouponsFutureStub extends io.grpc.stub.AbstractFutureStub<SingleUseCouponsFutureStub> {
+    private SingleUseCouponsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected SingleUseCouponsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected SingleUseCouponsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new SingleUseCouponsFutureStub(channel, callOptions);
     }
 

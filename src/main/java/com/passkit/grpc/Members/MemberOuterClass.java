@@ -17757,71 +17757,72 @@ public final class MemberOuterClass {
       "proto\032\032io/common/pagination.proto\032\026io/co" +
       "mmon/filter.proto\032\024io/common/pass.proto\032" +
       "\030io/common/personal.proto\032\026io/common/exp" +
-      "iry.proto\032,protoc-gen-swagger/options/an" +
-      "notations.proto\"\264\007\n\006Member\022\n\n\002id\030\001 \001(\t\022\022" +
-      "\n\nexternalId\030\002 \001(\t\022\032\n\022groupingIdentifier" +
-      "\030\003 \001(\t\022\016\n\006tierId\030\004 \001(\t\022\021\n\tprogramId\030\005 \001(" +
-      "\t\022\032\n\006person\030\006 \001(\0132\n.io.Person\022/\n\010metaDat" +
-      "a\030\007 \003(\0132\035.members.Member.MetaDataEntry\022\016" +
-      "\n\006optOut\030\r \001(\010\022\016\n\006points\030\016 \001(\002\022\027\n\017second" +
-      "aryPoints\030\017 \001(\002\022\022\n\ntierPoints\030\020 \001(\r\022.\n\ne" +
-      "xpiryDate\030\022 \001(\0132\032.google.protobuf.Timest" +
-      "amp\022%\n\006status\030\023 \001(\0162\025.members.MemberStat" +
-      "us\022(\n\rpassOverrides\030\024 \001(\0132\021.io.PassOverr" +
-      "ides\022\"\n\014passMetaData\030\025 \001(\0132\014.io.Metadata" +
-      "\022\027\n\005notes\030\032 \003(\0132\010.io.Note\0226\n\022currentTier" +
-      "Awarded\030\033 \001(\0132\032.google.protobuf.Timestam" +
-      "p\0226\n\022currentTierExpires\030\034 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022+\n\007created\030\035 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022+\n\007updated\030\036 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\024\n\014profileIm" +
-      "age\030\037 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001:\253\001\222A\247\001\n\244\001*\006Member2\204\001B" +
-      "asic member information needs to be prov" +
-      "ided. Member information is deleted or r" +
-      "endered unusable once the member record " +
-      "is deleted.\322\001\006tierId\322\001\tprogramIdJ\004\010\010\020\tJ\004" +
-      "\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014J\004\010\014\020\rJ\004\010\026\020\027J\004\010\027\020\030J\004\010\030\020\031" +
-      "J\004\010\031\020\032\"H\n\037MemberRecordByExternalIdReques" +
-      "t\022\021\n\tprogramId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t" +
-      "\"V\n\024MemberSegmentRequest\022\032\n\006filter\030\001 \001(\013" +
-      "2\n.io.Filter\022\"\n\tnewValues\030\002 \001(\0132\017.member" +
-      "s.Member\"v\n\023UpdateExpiryRequest\022\021\n\tprogr" +
-      "amId\030\001 \001(\t\022\016\n\006tierId\030\002 \001(\t\022*\n\016expirySett" +
-      "ings\030\003 \001(\0132\022.io.ExpirySettings\022\020\n\010timezo" +
-      "ne\030\004 \001(\t\"q\n\014MemberExpiry\022\n\n\002id\030\001 \001(\t\022\022\n\n" +
-      "externalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022.\n\ne" +
-      "xpiryDate\030\004 \001(\0132\032.google.protobuf.Timest" +
-      "amp\"~\n\014MemberPoints\022\n\n\002id\030\001 \001(\t\022\022\n\nexter" +
-      "nalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006points" +
-      "\030\004 \001(\002\022\027\n\017secondaryPoints\030\005 \001(\002\022\022\n\ntierP" +
-      "oints\030\006 \001(\r\"\207\001\n\025EarnBurnPointsRequest\022\n\n" +
-      "\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\tprogram" +
-      "Id\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n\017secondaryPoi" +
-      "nts\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001(\r\"\316\001\n\020SetPoi" +
-      "ntsRequest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001" +
-      "(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n" +
-      "\017secondaryPoints\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001" +
-      "(\r\022\023\n\013resetPoints\030\007 \001(\010\022\034\n\024resetSecondar" +
-      "yPoints\030\010 \001(\010\022\027\n\017resetTierPoints\030\t \001(\010\"\340" +
-      "\002\n\027MemberCheckInOutRequest\022\020\n\010memberId\030\001" +
-      " \001(\t\022\030\n\020externalMemberId\030\002 \001(\t\022\021\n\tprogra" +
-      "mId\030\003 \001(\t\022\017\n\007address\030\004 \001(\t\022\013\n\003lat\030\005 \001(\001\022" +
-      "\013\n\003lon\030\006 \001(\001\022\013\n\003alt\030\007 \001(\005\022\027\n\017externalEve" +
-      "ntId\030\010 \001(\t\022\030\n\020externalDeviceId\030\t \001(\t\022\031\n\021" +
-      "externalServiceId\030\n \001(\t\022@\n\010metaData\030\013 \003(" +
-      "\0132..members.MemberCheckInOutRequest.Meta" +
-      "DataEntry\022\r\n\005notes\030\014 \001(\t\032/\n\rMetaDataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"N\n\025Lis" +
-      "tRequestDeprecated\022\021\n\tprogramId\030\001 \001(\t\022\"\n" +
-      "\npagination\030\002 \001(\0132\016.io.Pagination\"R\n\013Lis" +
-      "tRequest\022\021\n\tprogramId\030\001 \001(\t\022\034\n\007filters\030\002" +
-      " \001(\0132\013.io.Filters\022\022\n\nemailAsCsv\030\003 \001(\010*c\n" +
-      "\014MemberStatus\022\014\n\010ENROLLED\020\000\022\n\n\006ACTIVE\020\001\022" +
-      "\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRED\020\003\022\017\n\013CHECKED_" +
-      "OUT\020\004\022\013\n\007DELETED\020\005BT\n\030com.passkit.grpc.M" +
-      "embersZ,stash.passkit.com/io/model/sdk/g" +
-      "o/io/members\252\002\tPKMembersb\006proto3"
+      "iry.proto\032.protoc-gen-openapiv2/options/" +
+      "annotations.proto\"\264\007\n\006Member\022\n\n\002id\030\001 \001(\t" +
+      "\022\022\n\nexternalId\030\002 \001(\t\022\032\n\022groupingIdentifi" +
+      "er\030\003 \001(\t\022\016\n\006tierId\030\004 \001(\t\022\021\n\tprogramId\030\005 " +
+      "\001(\t\022\032\n\006person\030\006 \001(\0132\n.io.Person\022/\n\010metaD" +
+      "ata\030\007 \003(\0132\035.members.Member.MetaDataEntry" +
+      "\022\016\n\006optOut\030\r \001(\010\022\016\n\006points\030\016 \001(\002\022\027\n\017seco" +
+      "ndaryPoints\030\017 \001(\002\022\022\n\ntierPoints\030\020 \001(\r\022.\n" +
+      "\nexpiryDate\030\022 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022%\n\006status\030\023 \001(\0162\025.members.MemberSt" +
+      "atus\022(\n\rpassOverrides\030\024 \001(\0132\021.io.PassOve" +
+      "rrides\022\"\n\014passMetaData\030\025 \001(\0132\014.io.Metada" +
+      "ta\022\027\n\005notes\030\032 \003(\0132\010.io.Note\0226\n\022currentTi" +
+      "erAwarded\030\033 \001(\0132\032.google.protobuf.Timest" +
+      "amp\0226\n\022currentTierExpires\030\034 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022+\n\007created\030\035 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\022+\n\007updated\030\036 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\024\n\014profile" +
+      "Image\030\037 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001:\253\001\222A\247\001\n\244\001*\006Member2\204" +
+      "\001Basic member information needs to be pr" +
+      "ovided. Member information is deleted or" +
+      " rendered unusable once the member recor" +
+      "d is deleted.\322\001\006tierId\322\001\tprogramIdJ\004\010\010\020\t" +
+      "J\004\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014J\004\010\014\020\rJ\004\010\026\020\027J\004\010\027\020\030J\004\010\030" +
+      "\020\031J\004\010\031\020\032\"H\n\037MemberRecordByExternalIdRequ" +
+      "est\022\021\n\tprogramId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001" +
+      "(\t\"V\n\024MemberSegmentRequest\022\032\n\006filter\030\001 \001" +
+      "(\0132\n.io.Filter\022\"\n\tnewValues\030\002 \001(\0132\017.memb" +
+      "ers.Member\"v\n\023UpdateExpiryRequest\022\021\n\tpro" +
+      "gramId\030\001 \001(\t\022\016\n\006tierId\030\002 \001(\t\022*\n\016expirySe" +
+      "ttings\030\003 \001(\0132\022.io.ExpirySettings\022\020\n\010time" +
+      "zone\030\004 \001(\t\"q\n\014MemberExpiry\022\n\n\002id\030\001 \001(\t\022\022" +
+      "\n\nexternalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022.\n" +
+      "\nexpiryDate\030\004 \001(\0132\032.google.protobuf.Time" +
+      "stamp\"~\n\014MemberPoints\022\n\n\002id\030\001 \001(\t\022\022\n\next" +
+      "ernalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006poin" +
+      "ts\030\004 \001(\002\022\027\n\017secondaryPoints\030\005 \001(\002\022\022\n\ntie" +
+      "rPoints\030\006 \001(\r\"\207\001\n\025EarnBurnPointsRequest\022" +
+      "\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\tprogr" +
+      "amId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n\017secondaryP" +
+      "oints\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001(\r\"\316\001\n\020SetP" +
+      "ointsRequest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002" +
+      " \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022" +
+      "\027\n\017secondaryPoints\030\005 \001(\002\022\022\n\ntierPoints\030\006" +
+      " \001(\r\022\023\n\013resetPoints\030\007 \001(\010\022\034\n\024resetSecond" +
+      "aryPoints\030\010 \001(\010\022\027\n\017resetTierPoints\030\t \001(\010" +
+      "\"\340\002\n\027MemberCheckInOutRequest\022\020\n\010memberId" +
+      "\030\001 \001(\t\022\030\n\020externalMemberId\030\002 \001(\t\022\021\n\tprog" +
+      "ramId\030\003 \001(\t\022\017\n\007address\030\004 \001(\t\022\013\n\003lat\030\005 \001(" +
+      "\001\022\013\n\003lon\030\006 \001(\001\022\013\n\003alt\030\007 \001(\005\022\027\n\017externalE" +
+      "ventId\030\010 \001(\t\022\030\n\020externalDeviceId\030\t \001(\t\022\031" +
+      "\n\021externalServiceId\030\n \001(\t\022@\n\010metaData\030\013 " +
+      "\003(\0132..members.MemberCheckInOutRequest.Me" +
+      "taDataEntry\022\r\n\005notes\030\014 \001(\t\032/\n\rMetaDataEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"N\n\025L" +
+      "istRequestDeprecated\022\021\n\tprogramId\030\001 \001(\t\022" +
+      "\"\n\npagination\030\002 \001(\0132\016.io.Pagination\"R\n\013L" +
+      "istRequest\022\021\n\tprogramId\030\001 \001(\t\022\034\n\007filters" +
+      "\030\002 \001(\0132\013.io.Filters\022\022\n\nemailAsCsv\030\003 \001(\010*" +
+      "c\n\014MemberStatus\022\014\n\010ENROLLED\020\000\022\n\n\006ACTIVE\020" +
+      "\001\022\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRED\020\003\022\017\n\013CHECKE" +
+      "D_OUT\020\004\022\013\n\007DELETED\020\005B_\n\030com.passkit.grpc" +
+      ".MembersZ,stash.passkit.com/io/model/sdk" +
+      "/go/io/members\252\002\024PassKit.Grpc.Membersb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17836,7 +17837,7 @@ public final class MemberOuterClass {
           com.passkit.grpc.PassOuterClass.getDescriptor(),
           com.passkit.grpc.Personal.getDescriptor(),
           com.passkit.grpc.Expiry.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_members_Member_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -17918,7 +17919,7 @@ public final class MemberOuterClass {
         new java.lang.String[] { "ProgramId", "Filters", "EmailAsCsv", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -17931,7 +17932,7 @@ public final class MemberOuterClass {
     com.passkit.grpc.PassOuterClass.getDescriptor();
     com.passkit.grpc.Personal.getDescriptor();
     com.passkit.grpc.Expiry.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -5294,35 +5294,35 @@ public final class TransactionOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033io/common/transaction.proto\022\002io\032,proto" +
-      "c-gen-swagger/options/annotations.proto\032" +
-      "\036io/common/common_objects.proto\032\031io/comm" +
-      "on/proximity.proto\"\224\004\n\013Transaction\022\023\n\013re" +
-      "ferenceId\030\001 \001(\t\022\022\n\ntotalPrice\030\002 \001(\002\022!\n\no" +
-      "rderItems\030\003 \003(\0132\r.io.OrderItem\022\020\n\010discou" +
-      "nt\030\004 \001(\002\022\'\n\rdiscountItems\030\005 \003(\0132\020.io.Dis" +
-      "countItem\022\025\n\rserviceCharge\030\006 \001(\002\022\020\n\010tota" +
-      "lTax\030\007 \001(\002\022\022\n\nfinalPrice\030\010 \001(\002\022\032\n\022roundi" +
-      "ngDifference\030\t \001(\002\022\022\n\nisRefunded\030\n \001(\010\022\033" +
-      "\n\ttimestamp\030\013 \001(\0132\010.io.Date\022\020\n\010currency\030" +
-      "\014 \001(\t\022!\n\010location\030\r \001(\0132\017.io.GPSLocation" +
-      "\022\031\n\021transactionSource\030\016 \001(\t:\243\001\222A\237\001\n\234\001*\013T" +
-      "ransaction2mTransaction information for " +
-      "member programs that want to show latest" +
-      " transactions on back of the member card" +
-      ".\322\001\ttimestamp\322\001\006amount\322\001\010currency\"a\n\014Dis" +
-      "countItem\022\024\n\014discountCode\030\001 \001(\t\022\023\n\013vouch" +
-      "erCode\030\002 \001(\t\022\016\n\006amount\030\004 \001(\002\022\020\n\010itemName" +
-      "\030\005 \001(\tJ\004\010\003\020\004\"Y\n\tOrderItem\022\016\n\006amount\030\001 \001(" +
-      "\002\022\013\n\003tax\030\002 \001(\002\022\020\n\010itemName\030\003 \001(\t\022\020\n\010quan" +
-      "tity\030\004 \001(\005\022\013\n\003sku\030\005 \001(\tBG\n\020com.passkit.g" +
-      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
-      "o\252\002\014PassKit.GRPCb\006proto3"
+      "\n\033io/common/transaction.proto\022\002io\032.proto" +
+      "c-gen-openapiv2/options/annotations.prot" +
+      "o\032\036io/common/common_objects.proto\032\031io/co" +
+      "mmon/proximity.proto\"\224\004\n\013Transaction\022\023\n\013" +
+      "referenceId\030\001 \001(\t\022\022\n\ntotalPrice\030\002 \001(\002\022!\n" +
+      "\norderItems\030\003 \003(\0132\r.io.OrderItem\022\020\n\010disc" +
+      "ount\030\004 \001(\002\022\'\n\rdiscountItems\030\005 \003(\0132\020.io.D" +
+      "iscountItem\022\025\n\rserviceCharge\030\006 \001(\002\022\020\n\010to" +
+      "talTax\030\007 \001(\002\022\022\n\nfinalPrice\030\010 \001(\002\022\032\n\022roun" +
+      "dingDifference\030\t \001(\002\022\022\n\nisRefunded\030\n \001(\010" +
+      "\022\033\n\ttimestamp\030\013 \001(\0132\010.io.Date\022\020\n\010currenc" +
+      "y\030\014 \001(\t\022!\n\010location\030\r \001(\0132\017.io.GPSLocati" +
+      "on\022\031\n\021transactionSource\030\016 \001(\t:\243\001\222A\237\001\n\234\001*" +
+      "\013Transaction2mTransaction information fo" +
+      "r member programs that want to show late" +
+      "st transactions on back of the member ca" +
+      "rd.\322\001\ttimestamp\322\001\006amount\322\001\010currency\"a\n\014D" +
+      "iscountItem\022\024\n\014discountCode\030\001 \001(\t\022\023\n\013vou" +
+      "cherCode\030\002 \001(\t\022\016\n\006amount\030\004 \001(\002\022\020\n\010itemNa" +
+      "me\030\005 \001(\tJ\004\010\003\020\004\"Y\n\tOrderItem\022\016\n\006amount\030\001 " +
+      "\001(\002\022\013\n\003tax\030\002 \001(\002\022\020\n\010itemName\030\003 \001(\t\022\020\n\010qu" +
+      "antity\030\004 \001(\005\022\013\n\003sku\030\005 \001(\tBG\n\020com.passkit" +
+      ".grpcZ$stash.passkit.com/io/model/sdk/go" +
+      "/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
         });
@@ -5346,10 +5346,10 @@ public final class TransactionOuterClass {
         new java.lang.String[] { "Amount", "Tax", "ItemName", "Quantity", "Sku", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
   }

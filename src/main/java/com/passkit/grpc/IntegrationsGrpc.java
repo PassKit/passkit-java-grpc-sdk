@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class IntegrationsGrpc {
 
@@ -41,22 +41,21 @@ public final class IntegrationsGrpc {
     if ((getCreateIntegrationsMethod = IntegrationsGrpc.getCreateIntegrationsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getCreateIntegrationsMethod = IntegrationsGrpc.getCreateIntegrationsMethod) == null) {
-          IntegrationsGrpc.getCreateIntegrationsMethod = getCreateIntegrationsMethod = 
+          IntegrationsGrpc.getCreateIntegrationsMethod = getCreateIntegrationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.IntegrationConfigs, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "createIntegrations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createIntegrations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.IntegrationConfigs.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("createIntegrations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("createIntegrations"))
+              .build();
         }
-     }
-     return getCreateIntegrationsMethod;
+      }
+    }
+    return getCreateIntegrationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.ProtocolIdInput,
@@ -73,22 +72,21 @@ public final class IntegrationsGrpc {
     if ((getGetIntegrationsMethod = IntegrationsGrpc.getGetIntegrationsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetIntegrationsMethod = IntegrationsGrpc.getGetIntegrationsMethod) == null) {
-          IntegrationsGrpc.getGetIntegrationsMethod = getGetIntegrationsMethod = 
+          IntegrationsGrpc.getGetIntegrationsMethod = getGetIntegrationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.ProtocolIdInput, com.passkit.grpc.Integration.IntegrationConfigs>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "getIntegrations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getIntegrations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.ProtocolIdInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.IntegrationConfigs.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getIntegrations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getIntegrations"))
+              .build();
         }
-     }
-     return getGetIntegrationsMethod;
+      }
+    }
+    return getGetIntegrationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.IntegrationConfigs,
@@ -105,22 +103,21 @@ public final class IntegrationsGrpc {
     if ((getUpdateIntegrationsMethod = IntegrationsGrpc.getUpdateIntegrationsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getUpdateIntegrationsMethod = IntegrationsGrpc.getUpdateIntegrationsMethod) == null) {
-          IntegrationsGrpc.getUpdateIntegrationsMethod = getUpdateIntegrationsMethod = 
+          IntegrationsGrpc.getUpdateIntegrationsMethod = getUpdateIntegrationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.IntegrationConfigs, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "updateIntegrations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateIntegrations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.IntegrationConfigs.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("updateIntegrations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("updateIntegrations"))
+              .build();
         }
-     }
-     return getUpdateIntegrationsMethod;
+      }
+    }
+    return getUpdateIntegrationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.ProtocolIdInput,
@@ -137,22 +134,21 @@ public final class IntegrationsGrpc {
     if ((getDeleteIntegrationsMethod = IntegrationsGrpc.getDeleteIntegrationsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getDeleteIntegrationsMethod = IntegrationsGrpc.getDeleteIntegrationsMethod) == null) {
-          IntegrationsGrpc.getDeleteIntegrationsMethod = getDeleteIntegrationsMethod = 
+          IntegrationsGrpc.getDeleteIntegrationsMethod = getDeleteIntegrationsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.ProtocolIdInput, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "deleteIntegrations"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteIntegrations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.ProtocolIdInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("deleteIntegrations"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("deleteIntegrations"))
+              .build();
         }
-     }
-     return getDeleteIntegrationsMethod;
+      }
+    }
+    return getDeleteIntegrationsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.SinkSubscription,
@@ -169,22 +165,21 @@ public final class IntegrationsGrpc {
     if ((getCreateSinkSubscriptionMethod = IntegrationsGrpc.getCreateSinkSubscriptionMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getCreateSinkSubscriptionMethod = IntegrationsGrpc.getCreateSinkSubscriptionMethod) == null) {
-          IntegrationsGrpc.getCreateSinkSubscriptionMethod = getCreateSinkSubscriptionMethod = 
+          IntegrationsGrpc.getCreateSinkSubscriptionMethod = getCreateSinkSubscriptionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.SinkSubscription, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "createSinkSubscription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createSinkSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("createSinkSubscription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("createSinkSubscription"))
+              .build();
         }
-     }
-     return getCreateSinkSubscriptionMethod;
+      }
+    }
+    return getCreateSinkSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.SubscriptionRequest,
@@ -201,22 +196,21 @@ public final class IntegrationsGrpc {
     if ((getGetSinkSubscriptionMethod = IntegrationsGrpc.getGetSinkSubscriptionMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetSinkSubscriptionMethod = IntegrationsGrpc.getGetSinkSubscriptionMethod) == null) {
-          IntegrationsGrpc.getGetSinkSubscriptionMethod = getGetSinkSubscriptionMethod = 
+          IntegrationsGrpc.getGetSinkSubscriptionMethod = getGetSinkSubscriptionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.SubscriptionRequest, com.passkit.grpc.Integration.SinkSubscription>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "getSinkSubscription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSinkSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getSinkSubscription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getSinkSubscription"))
+              .build();
         }
-     }
-     return getGetSinkSubscriptionMethod;
+      }
+    }
+    return getGetSinkSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.ListRequestDeprecated,
@@ -233,22 +227,21 @@ public final class IntegrationsGrpc {
     if ((getListSinkSubscriptionsDeprecatedMethod = IntegrationsGrpc.getListSinkSubscriptionsDeprecatedMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListSinkSubscriptionsDeprecatedMethod = IntegrationsGrpc.getListSinkSubscriptionsDeprecatedMethod) == null) {
-          IntegrationsGrpc.getListSinkSubscriptionsDeprecatedMethod = getListSinkSubscriptionsDeprecatedMethod = 
+          IntegrationsGrpc.getListSinkSubscriptionsDeprecatedMethod = getListSinkSubscriptionsDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.ListRequestDeprecated, com.passkit.grpc.Integration.SinkSubscription>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "listSinkSubscriptionsDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listSinkSubscriptionsDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.ListRequestDeprecated.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("listSinkSubscriptionsDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("listSinkSubscriptionsDeprecated"))
+              .build();
         }
-     }
-     return getListSinkSubscriptionsDeprecatedMethod;
+      }
+    }
+    return getListSinkSubscriptionsDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.ListRequest,
@@ -265,22 +258,21 @@ public final class IntegrationsGrpc {
     if ((getListSinkSubscriptionsMethod = IntegrationsGrpc.getListSinkSubscriptionsMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getListSinkSubscriptionsMethod = IntegrationsGrpc.getListSinkSubscriptionsMethod) == null) {
-          IntegrationsGrpc.getListSinkSubscriptionsMethod = getListSinkSubscriptionsMethod = 
+          IntegrationsGrpc.getListSinkSubscriptionsMethod = getListSinkSubscriptionsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.ListRequest, com.passkit.grpc.Integration.SinkSubscription>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "listSinkSubscriptions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listSinkSubscriptions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("listSinkSubscriptions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("listSinkSubscriptions"))
+              .build();
         }
-     }
-     return getListSinkSubscriptionsMethod;
+      }
+    }
+    return getListSinkSubscriptionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.SinkSubscription,
@@ -297,22 +289,21 @@ public final class IntegrationsGrpc {
     if ((getUpdateSinkSubscriptionMethod = IntegrationsGrpc.getUpdateSinkSubscriptionMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getUpdateSinkSubscriptionMethod = IntegrationsGrpc.getUpdateSinkSubscriptionMethod) == null) {
-          IntegrationsGrpc.getUpdateSinkSubscriptionMethod = getUpdateSinkSubscriptionMethod = 
+          IntegrationsGrpc.getUpdateSinkSubscriptionMethod = getUpdateSinkSubscriptionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.SinkSubscription, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "updateSinkSubscription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateSinkSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("updateSinkSubscription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("updateSinkSubscription"))
+              .build();
         }
-     }
-     return getUpdateSinkSubscriptionMethod;
+      }
+    }
+    return getUpdateSinkSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Integration.SubscriptionRequest,
@@ -329,22 +320,21 @@ public final class IntegrationsGrpc {
     if ((getDeleteSinkSubscriptionMethod = IntegrationsGrpc.getDeleteSinkSubscriptionMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getDeleteSinkSubscriptionMethod = IntegrationsGrpc.getDeleteSinkSubscriptionMethod) == null) {
-          IntegrationsGrpc.getDeleteSinkSubscriptionMethod = getDeleteSinkSubscriptionMethod = 
+          IntegrationsGrpc.getDeleteSinkSubscriptionMethod = getDeleteSinkSubscriptionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Integration.SubscriptionRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "deleteSinkSubscription"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteSinkSubscription"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SubscriptionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("deleteSinkSubscription"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("deleteSinkSubscription"))
+              .build();
         }
-     }
-     return getDeleteSinkSubscriptionMethod;
+      }
+    }
+    return getDeleteSinkSubscriptionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -361,29 +351,35 @@ public final class IntegrationsGrpc {
     if ((getGetSampleSubscriptionEventMethod = IntegrationsGrpc.getGetSampleSubscriptionEventMethod) == null) {
       synchronized (IntegrationsGrpc.class) {
         if ((getGetSampleSubscriptionEventMethod = IntegrationsGrpc.getGetSampleSubscriptionEventMethod) == null) {
-          IntegrationsGrpc.getGetSampleSubscriptionEventMethod = getGetSampleSubscriptionEventMethod = 
+          IntegrationsGrpc.getGetSampleSubscriptionEventMethod = getGetSampleSubscriptionEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Integration.SinkSubscription>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Integrations", "getSampleSubscriptionEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSampleSubscriptionEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Integration.SinkSubscription.getDefaultInstance()))
-                  .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getSampleSubscriptionEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new IntegrationsMethodDescriptorSupplier("getSampleSubscriptionEvent"))
+              .build();
         }
-     }
-     return getGetSampleSubscriptionEventMethod;
+      }
+    }
+    return getGetSampleSubscriptionEventMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static IntegrationsStub newStub(io.grpc.Channel channel) {
-    return new IntegrationsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IntegrationsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsStub>() {
+        @java.lang.Override
+        public IntegrationsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IntegrationsStub(channel, callOptions);
+        }
+      };
+    return IntegrationsStub.newStub(factory, channel);
   }
 
   /**
@@ -391,7 +387,14 @@ public final class IntegrationsGrpc {
    */
   public static IntegrationsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new IntegrationsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IntegrationsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsBlockingStub>() {
+        @java.lang.Override
+        public IntegrationsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IntegrationsBlockingStub(channel, callOptions);
+        }
+      };
+    return IntegrationsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -399,7 +402,14 @@ public final class IntegrationsGrpc {
    */
   public static IntegrationsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new IntegrationsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<IntegrationsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<IntegrationsFutureStub>() {
+        @java.lang.Override
+        public IntegrationsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new IntegrationsFutureStub(channel, callOptions);
+        }
+      };
+    return IntegrationsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -568,19 +578,15 @@ public final class IntegrationsGrpc {
 
   /**
    */
-  public static final class IntegrationsStub extends io.grpc.stub.AbstractStub<IntegrationsStub> {
-    private IntegrationsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IntegrationsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsStub extends io.grpc.stub.AbstractAsyncStub<IntegrationsStub> {
+    private IntegrationsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IntegrationsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IntegrationsStub(channel, callOptions);
     }
 
@@ -675,19 +681,15 @@ public final class IntegrationsGrpc {
 
   /**
    */
-  public static final class IntegrationsBlockingStub extends io.grpc.stub.AbstractStub<IntegrationsBlockingStub> {
-    private IntegrationsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IntegrationsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsBlockingStub extends io.grpc.stub.AbstractBlockingStub<IntegrationsBlockingStub> {
+    private IntegrationsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IntegrationsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IntegrationsBlockingStub(channel, callOptions);
     }
 
@@ -773,19 +775,15 @@ public final class IntegrationsGrpc {
 
   /**
    */
-  public static final class IntegrationsFutureStub extends io.grpc.stub.AbstractStub<IntegrationsFutureStub> {
-    private IntegrationsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private IntegrationsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class IntegrationsFutureStub extends io.grpc.stub.AbstractFutureStub<IntegrationsFutureStub> {
+    private IntegrationsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected IntegrationsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected IntegrationsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new IntegrationsFutureStub(channel, callOptions);
     }
 

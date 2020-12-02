@@ -23,7 +23,7 @@ public final class TicketTypeOuterClass {
      * PassKit generated ticket type id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -32,7 +32,7 @@ public final class TicketTypeOuterClass {
      * PassKit generated ticket type id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -217,7 +217,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     boolean hasCreated();
@@ -226,7 +226,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     com.google.protobuf.Timestamp getCreated();
@@ -235,7 +235,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -244,7 +244,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     boolean hasUpdated();
@@ -253,7 +253,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     com.google.protobuf.Timestamp getUpdated();
@@ -262,7 +262,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
   }
@@ -455,7 +455,7 @@ public final class TicketTypeOuterClass {
      * PassKit generated ticket type id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class TicketTypeOuterClass {
      * PassKit generated ticket type id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -853,7 +853,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     @java.lang.Override
@@ -865,7 +865,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     @java.lang.Override
@@ -877,7 +877,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type was created. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
@@ -891,7 +891,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     @java.lang.Override
@@ -903,7 +903,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     @java.lang.Override
@@ -915,7 +915,7 @@ public final class TicketTypeOuterClass {
      * The date the ticket type updated. Cannot be set via the API.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
@@ -1456,7 +1456,7 @@ public final class TicketTypeOuterClass {
        * PassKit generated ticket type id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1476,7 +1476,7 @@ public final class TicketTypeOuterClass {
        * PassKit generated ticket type id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1497,7 +1497,7 @@ public final class TicketTypeOuterClass {
        * PassKit generated ticket type id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1516,7 +1516,7 @@ public final class TicketTypeOuterClass {
        * PassKit generated ticket type id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1530,7 +1530,7 @@ public final class TicketTypeOuterClass {
        * PassKit generated ticket type id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -2440,7 +2440,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
@@ -2451,7 +2451,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The created.
        */
       public com.google.protobuf.Timestamp getCreated() {
@@ -2466,7 +2466,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -2486,7 +2486,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2504,7 +2504,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -2526,7 +2526,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -2544,7 +2544,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
         
@@ -2556,7 +2556,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -2571,7 +2571,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type was created. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2595,7 +2595,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
@@ -2606,7 +2606,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The updated.
        */
       public com.google.protobuf.Timestamp getUpdated() {
@@ -2621,7 +2621,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -2641,7 +2641,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2659,7 +2659,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -2681,7 +2681,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
         if (updatedBuilder_ == null) {
@@ -2699,7 +2699,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
         
@@ -2711,7 +2711,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
         if (updatedBuilder_ != null) {
@@ -2726,7 +2726,7 @@ public final class TicketTypeOuterClass {
        * The date the ticket type updated. Cannot be set via the API.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -5363,34 +5363,34 @@ public final class TicketTypeOuterClass {
       "\n\"io/event_tickets/ticket_type.proto\022\rev" +
       "ent_tickets\032\037google/protobuf/timestamp.p" +
       "roto\032\034io/common/localization.proto\032\026io/c" +
-      "ommon/filter.proto\032,protoc-gen-swagger/o" +
-      "ptions/annotations.proto\"\277\004\n\nTicketType\022" +
-      "\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t\022\024\n\014produ" +
-      "ctionId\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022*\n\rlocalized" +
-      "Name\030\005 \001(\0132\023.io.LocalizedString\022\034\n\024ticke" +
-      "tTypeConditions\030\006 \001(\t\022:\n\035localizedTicket" +
-      "TypeConditions\030\007 \001(\0132\023.io.LocalizedStrin" +
-      "g\022\"\n\032beforeRedeemPassTemplateId\030\010 \001(\t\022!\n" +
-      "\031afterRedeemPassTemplateId\030\t \001(\t\0222\n\007crea" +
-      "ted\030\n \001(\0132\032.google.protobuf.TimestampB\005\222" +
-      "A\002@\001\0222\n\007updated\030\013 \001(\0132\032.google.protobuf." +
-      "TimestampB\005\222A\002@\001:\267\001\222A\263\001\n\260\001*\013Ticket Type2" +
-      "nTicket Type holds details about the tic" +
-      "ket type, and links to the before & afte" +
-      "r redeem Pass Template Designs.\322\001\014produc" +
-      "tionId\322\001\004name\322\001\032beforeRedeemPassTemplate" +
-      "Id\"4\n\017GetByUidRequest\022\024\n\014productionId\030\001 " +
-      "\001(\t\022\013\n\003uid\030\002 \001(\t\"\323\001\n\027TicketTypeLimitedFi" +
-      "elds\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030\003 " +
-      "\001(\t:\220\001\222A\214\001\n\211\001*\027Ticket Type (Light ver)2n" +
-      "Ticket Type holds details about the tick" +
-      "et type, and links to the before & after" +
-      " redeem Pass Template Designs.\"K\n\025Ticket" +
-      "TypeListRequest\022\024\n\014productionId\030\001 \001(\t\022\034\n" +
-      "\007filters\030\002 \001(\0132\013.io.FiltersBd\n\035com.passk" +
-      "it.grpc.EventTicketsZ2stash.passkit.com/" +
-      "io/model/sdk/go/io/event_tickets\252\002\016PKEve" +
-      "ntTicketsb\006proto3"
+      "ommon/filter.proto\032.protoc-gen-openapiv2" +
+      "/options/annotations.proto\"\277\004\n\nTicketTyp" +
+      "e\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t\022\024\n\014pro" +
+      "ductionId\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022*\n\rlocaliz" +
+      "edName\030\005 \001(\0132\023.io.LocalizedString\022\034\n\024tic" +
+      "ketTypeConditions\030\006 \001(\t\022:\n\035localizedTick" +
+      "etTypeConditions\030\007 \001(\0132\023.io.LocalizedStr" +
+      "ing\022\"\n\032beforeRedeemPassTemplateId\030\010 \001(\t\022" +
+      "!\n\031afterRedeemPassTemplateId\030\t \001(\t\0222\n\007cr" +
+      "eated\030\n \001(\0132\032.google.protobuf.TimestampB" +
+      "\005\222A\002@\001\0222\n\007updated\030\013 \001(\0132\032.google.protobu" +
+      "f.TimestampB\005\222A\002@\001:\267\001\222A\263\001\n\260\001*\013Ticket Typ" +
+      "e2nTicket Type holds details about the t" +
+      "icket type, and links to the before & af" +
+      "ter redeem Pass Template Designs.\322\001\014prod" +
+      "uctionId\322\001\004name\322\001\032beforeRedeemPassTempla" +
+      "teId\"4\n\017GetByUidRequest\022\024\n\014productionId\030" +
+      "\001 \001(\t\022\013\n\003uid\030\002 \001(\t\"\323\001\n\027TicketTypeLimited" +
+      "Fields\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030" +
+      "\003 \001(\t:\220\001\222A\214\001\n\211\001*\027Ticket Type (Light ver)" +
+      "2nTicket Type holds details about the ti" +
+      "cket type, and links to the before & aft" +
+      "er redeem Pass Template Designs.\"K\n\025Tick" +
+      "etTypeListRequest\022\024\n\014productionId\030\001 \001(\t\022" +
+      "\034\n\007filters\030\002 \001(\0132\013.io.FiltersBo\n\035com.pas" +
+      "skit.grpc.EventTicketsZ2stash.passkit.co" +
+      "m/io/model/sdk/go/io/event_tickets\252\002\031Pas" +
+      "sKit.Grpc.EventTicketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5398,7 +5398,7 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_event_tickets_TicketType_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5426,14 +5426,14 @@ public final class TicketTypeOuterClass {
         new java.lang.String[] { "ProductionId", "Filters", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

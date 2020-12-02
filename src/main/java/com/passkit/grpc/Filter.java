@@ -3436,26 +3436,26 @@ public final class Filter {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026io/common/filter.proto\022\002io\032,protoc-gen" +
-      "-swagger/options/annotations.proto\"\316\001\n\007F" +
-      "ilters\022\r\n\005limit\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005\022%\n" +
-      "\014filterGroups\030\003 \003(\0132\017.io.FilterGroup\022\017\n\007" +
-      "orderBy\030\004 \001(\t\022\020\n\010orderAsc\030\005 \001(\010:Z\222AW\nU*\n" +
-      "Pagination2GFilters applies multiple fil" +
-      "ter conditions to retrieve matched recor" +
-      "ds.\"O\n\013FieldFilter\022\023\n\013filterField\030\001 \001(\t\022" +
-      "\023\n\013filterValue\030\002 \001(\t\022\026\n\016filterOperator\030\003" +
-      " \001(\t\"U\n\013FilterGroup\022\037\n\tcondition\030\001 \001(\0162\014" +
-      ".io.Operator\022%\n\014fieldFilters\030\002 \003(\0132\017.io." +
-      "FieldFilter*\033\n\010Operator\022\007\n\003AND\020\000\022\006\n\002OR\020\001" +
-      "BG\n\020com.passkit.grpcZ$stash.passkit.com/" +
-      "io/model/sdk/go/io\252\002\014PassKit.GRPCb\006proto" +
-      "3"
+      "\n\026io/common/filter.proto\022\002io\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\"\316\001\n" +
+      "\007Filters\022\r\n\005limit\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005\022" +
+      "%\n\014filterGroups\030\003 \003(\0132\017.io.FilterGroup\022\017" +
+      "\n\007orderBy\030\004 \001(\t\022\020\n\010orderAsc\030\005 \001(\010:Z\222AW\nU" +
+      "*\nPagination2GFilters applies multiple f" +
+      "ilter conditions to retrieve matched rec" +
+      "ords.\"O\n\013FieldFilter\022\023\n\013filterField\030\001 \001(" +
+      "\t\022\023\n\013filterValue\030\002 \001(\t\022\026\n\016filterOperator" +
+      "\030\003 \001(\t\"U\n\013FilterGroup\022\037\n\tcondition\030\001 \001(\016" +
+      "2\014.io.Operator\022%\n\014fieldFilters\030\002 \003(\0132\017.i" +
+      "o.FieldFilter*\033\n\010Operator\022\007\n\003AND\020\000\022\006\n\002OR" +
+      "\020\001BG\n\020com.passkit.grpcZ$stash.passkit.co" +
+      "m/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_Filters_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3477,10 +3477,10 @@ public final class Filter {
         new java.lang.String[] { "Condition", "FieldFilters", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -23,7 +23,7 @@ public final class ProductionOuterClass {
      * PassKit generated production id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -32,7 +32,7 @@ public final class ProductionOuterClass {
      * PassKit generated production id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -310,7 +310,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     boolean hasCreated();
@@ -319,7 +319,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     com.google.protobuf.Timestamp getCreated();
@@ -328,7 +328,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -337,7 +337,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     boolean hasUpdated();
@@ -346,7 +346,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     com.google.protobuf.Timestamp getUpdated();
@@ -355,7 +355,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
   }
@@ -592,7 +592,7 @@ public final class ProductionOuterClass {
      * PassKit generated production id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -613,7 +613,7 @@ public final class ProductionOuterClass {
      * PassKit generated production id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -1095,7 +1095,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     @java.lang.Override
@@ -1107,7 +1107,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     @java.lang.Override
@@ -1119,7 +1119,7 @@ public final class ProductionOuterClass {
      * The date the event was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
@@ -1133,7 +1133,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     @java.lang.Override
@@ -1145,7 +1145,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     @java.lang.Override
@@ -1157,7 +1157,7 @@ public final class ProductionOuterClass {
      * The date the event updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
@@ -1782,7 +1782,7 @@ public final class ProductionOuterClass {
        * PassKit generated production id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1802,7 +1802,7 @@ public final class ProductionOuterClass {
        * PassKit generated production id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1823,7 +1823,7 @@ public final class ProductionOuterClass {
        * PassKit generated production id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1842,7 +1842,7 @@ public final class ProductionOuterClass {
        * PassKit generated production id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1856,7 +1856,7 @@ public final class ProductionOuterClass {
        * PassKit generated production id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -3139,7 +3139,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
@@ -3150,7 +3150,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The created.
        */
       public com.google.protobuf.Timestamp getCreated() {
@@ -3165,7 +3165,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -3185,7 +3185,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3203,7 +3203,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -3225,7 +3225,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -3243,7 +3243,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
         
@@ -3255,7 +3255,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -3270,7 +3270,7 @@ public final class ProductionOuterClass {
        * The date the event was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 13 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3294,7 +3294,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
@@ -3305,7 +3305,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The updated.
        */
       public com.google.protobuf.Timestamp getUpdated() {
@@ -3320,7 +3320,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -3340,7 +3340,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -3358,7 +3358,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -3380,7 +3380,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
         if (updatedBuilder_ == null) {
@@ -3398,7 +3398,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
         
@@ -3410,7 +3410,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
         if (updatedBuilder_ != null) {
@@ -3425,7 +3425,7 @@ public final class ProductionOuterClass {
        * The date the event updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 14 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -7847,46 +7847,46 @@ public final class ProductionOuterClass {
       "oto\032\034io/common/distribution.proto\032\034io/co" +
       "mmon/localization.proto\032\027io/common/proje" +
       "ct.proto\032\031io/common/reporting.proto\032\036io/" +
-      "common/common_objects.proto\032,protoc-gen-" +
-      "swagger/options/annotations.proto\"\327\005\n\nPr" +
-      "oduction\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t" +
-      "\022\014\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023." +
-      "io.LocalizedString\022\021\n\tfinePrint\030\005 \001(\t\022/\n" +
-      "\022localizedFinePrint\030\006 \001(\0132\023.io.Localized" +
-      "String\0227\n#autoInvalidateTicketsUponRedem" +
-      "ption\030\007 \001(\0162\n.io.Toggle\0225\n!autoInvalidat" +
-      "eTicketsUponEventEnd\030\010 \001(\0162\n.io.Toggle\0223" +
-      "\n\037autoInvalidateTicketsUponExpiry\030\t \001(\0162" +
-      "\n.io.Toggle\022!\n\006status\030\n \003(\0162\021.io.Project" +
-      "Status\022\032\n\022passTypeIdentifier\030\013 \001(\t\0226\n\024di" +
-      "stributionSettings\030\014 \001(\0132\030.io.Distributi" +
-      "onSettings\0222\n\007created\030\r \001(\0132\032.google.pro" +
-      "tobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030\016 \001(\0132" +
-      "\032.google.protobuf.TimestampB\005\222A\002@\001:\246\001\222A\242" +
-      "\001\n\237\001*\nProduction2\211\001Production contains d" +
-      "ata that is shared by events: common eve" +
-      "nt properties / settings, distribution s" +
-      "ettings and Apple Pass Type details.\322\001\004n" +
-      "ame\"\216\002\n\033ProductionAnalyticsResponse\022\032\n\006p" +
-      "eriod\030\001 \001(\0162\n.io.Period\022\020\n\010redeemed\030\002 \001(" +
-      "\r\022$\n\007devices\030\003 \001(\0132\023.io.DeviceBreakdown\022" +
-      "H\n\007sources\030\004 \003(\01327.event_tickets.Product" +
-      "ionAnalyticsResponse.SourcesEntry\022!\n\004dat" +
-      "a\030\005 \003(\0132\023.io.ChartDataPoints\032.\n\014SourcesE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\"}\n\025" +
-      "ProductionCopyRequest\022\n\n\002id\030\001 \001(\t\022\013\n\003uid" +
-      "\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022!\n\006status\030\004 \003(\0162\021.i" +
-      "o.ProjectStatus\022\032\n\022passTypeIdentifier\030\005 " +
-      "\001(\t\"\366\001\n\037ProductionLimitedFieldsResponse\022" +
-      "\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t:\253" +
-      "\001\222A\247\001\n\244\001*\026Production (Light ver)2\211\001Produ" +
-      "ction contains data that is shared by ev" +
-      "ents: common event properties / settings" +
-      ", distribution settings and Apple Pass T" +
-      "ype details.Bd\n\035com.passkit.grpc.EventTi" +
-      "cketsZ2stash.passkit.com/io/model/sdk/go" +
-      "/io/event_tickets\252\002\016PKEventTicketsb\006prot" +
-      "o3"
+      "common/common_objects.proto\032.protoc-gen-" +
+      "openapiv2/options/annotations.proto\"\327\005\n\n" +
+      "Production\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001" +
+      "(\t\022\014\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132" +
+      "\023.io.LocalizedString\022\021\n\tfinePrint\030\005 \001(\t\022" +
+      "/\n\022localizedFinePrint\030\006 \001(\0132\023.io.Localiz" +
+      "edString\0227\n#autoInvalidateTicketsUponRed" +
+      "emption\030\007 \001(\0162\n.io.Toggle\0225\n!autoInvalid" +
+      "ateTicketsUponEventEnd\030\010 \001(\0162\n.io.Toggle" +
+      "\0223\n\037autoInvalidateTicketsUponExpiry\030\t \001(" +
+      "\0162\n.io.Toggle\022!\n\006status\030\n \003(\0162\021.io.Proje" +
+      "ctStatus\022\032\n\022passTypeIdentifier\030\013 \001(\t\0226\n\024" +
+      "distributionSettings\030\014 \001(\0132\030.io.Distribu" +
+      "tionSettings\0222\n\007created\030\r \001(\0132\032.google.p" +
+      "rotobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030\016 \001(" +
+      "\0132\032.google.protobuf.TimestampB\005\222A\002@\001:\246\001\222" +
+      "A\242\001\n\237\001*\nProduction2\211\001Production contains" +
+      " data that is shared by events: common e" +
+      "vent properties / settings, distribution" +
+      " settings and Apple Pass Type details.\322\001" +
+      "\004name\"\216\002\n\033ProductionAnalyticsResponse\022\032\n" +
+      "\006period\030\001 \001(\0162\n.io.Period\022\020\n\010redeemed\030\002 " +
+      "\001(\r\022$\n\007devices\030\003 \001(\0132\023.io.DeviceBreakdow" +
+      "n\022H\n\007sources\030\004 \003(\01327.event_tickets.Produ" +
+      "ctionAnalyticsResponse.SourcesEntry\022!\n\004d" +
+      "ata\030\005 \003(\0132\023.io.ChartDataPoints\032.\n\014Source" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\r:\0028\001\"}" +
+      "\n\025ProductionCopyRequest\022\n\n\002id\030\001 \001(\t\022\013\n\003u" +
+      "id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022!\n\006status\030\004 \003(\0162\021" +
+      ".io.ProjectStatus\022\032\n\022passTypeIdentifier\030" +
+      "\005 \001(\t\"\366\001\n\037ProductionLimitedFieldsRespons" +
+      "e\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t" +
+      ":\253\001\222A\247\001\n\244\001*\026Production (Light ver)2\211\001Pro" +
+      "duction contains data that is shared by " +
+      "events: common event properties / settin" +
+      "gs, distribution settings and Apple Pass" +
+      " Type details.Bo\n\035com.passkit.grpc.Event" +
+      "TicketsZ2stash.passkit.com/io/model/sdk/" +
+      "go/io/event_tickets\252\002\031PassKit.Grpc.Event" +
+      "Ticketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7897,7 +7897,7 @@ public final class ProductionOuterClass {
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Reporting.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_event_tickets_Production_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7931,8 +7931,8 @@ public final class ProductionOuterClass {
         new java.lang.String[] { "Id", "Uid", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -7941,7 +7941,7 @@ public final class ProductionOuterClass {
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Reporting.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

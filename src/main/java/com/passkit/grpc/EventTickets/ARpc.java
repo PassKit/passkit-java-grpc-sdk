@@ -31,309 +31,309 @@ public final class ARpc {
       "ckets/event.proto\032!io/event_tickets/prod" +
       "uction.proto\032\"io/event_tickets/ticket_ty" +
       "pe.proto\032\035io/event_tickets/ticket.proto\032" +
-      "\034io/event_tickets/venue.proto\032,protoc-ge" +
-      "n-swagger/options/annotations.proto2\361V\n\014" +
-      "EventTickets\022\230\001\n\020createProduction\022\031.even" +
-      "t_tickets.Production\032\006.io.Id\"a\202\323\344\223\002\035\"\030/e" +
-      "ventTickets/production:\001*\222A;\n\013Production" +
-      "s\022\021Create Production\032\031Creates a new Prod" +
-      "uction.\022\311\002\n\017patchProduction\022\031.event_tick" +
-      "ets.Production\032\031.event_tickets.Productio" +
-      "n\"\377\001\202\323\344\223\002\0352\030/eventTickets/production:\001*\222" +
-      "A\330\001\n\013Productions\022\020Patch Production\032\266\001Par" +
-      "tially updates an existing Production. O" +
-      "nly id/uid and updating fields are requi" +
+      "\034io/event_tickets/venue.proto\032.protoc-ge" +
+      "n-openapiv2/options/annotations.proto2\361V" +
+      "\n\014EventTickets\022\230\001\n\020createProduction\022\031.ev" +
+      "ent_tickets.Production\032\006.io.Id\"a\202\323\344\223\002\035\"\030" +
+      "/eventTickets/production:\001*\222A;\n\013Producti" +
+      "ons\022\021Create Production\032\031Creates a new Pr" +
+      "oduction.\022\311\002\n\017patchProduction\022\031.event_ti" +
+      "ckets.Production\032\031.event_tickets.Product" +
+      "ion\"\377\001\202\323\344\223\002\0352\030/eventTickets/production:\001" +
+      "*\222A\330\001\n\013Productions\022\020Patch Production\032\266\001P" +
+      "artially updates an existing Production." +
+      " Only id/uid and updating fields are req" +
+      "uired. Note: changes will update and aff" +
+      "ect all existing Events & Tickets relate" +
+      "d to this Production.\022\273\002\n\020updateProducti" +
+      "on\022\031.event_tickets.Production\032\031.event_ti" +
+      "ckets.Production\"\360\001\202\323\344\223\002\035\032\030/eventTickets" +
+      "/production:\001*\222A\311\001\n\013Productions\022\021Update " +
+      "Production\032\246\001Fully updates an existing P" +
+      "roduction. All required fields are requi" +
       "red. Note: changes will update and affec" +
       "t all existing Events & Tickets related " +
-      "to this Production.\022\273\002\n\020updateProduction" +
-      "\022\031.event_tickets.Production\032\031.event_tick" +
-      "ets.Production\"\360\001\202\323\344\223\002\035\032\030/eventTickets/p" +
-      "roduction:\001*\222A\311\001\n\013Productions\022\021Update Pr" +
-      "oduction\032\246\001Fully updates an existing Pro" +
-      "duction. All required fields are require" +
-      "d. Note: changes will update and affect " +
-      "all existing Events & Tickets related to" +
-      " this Production.\022\227\001\n\rgetProduction\022\006.io" +
-      ".Id\032\031.event_tickets.Production\"c\202\323\344\223\002\037\022\035" +
-      "/eventTickets/production/{id}\222A;\n\013Produc" +
-      "tions\022\016Get Production\032\034Gets an existing " +
-      "Production.\022\231\003\n\020deleteProduction\022\031.event" +
-      "_tickets.Production\032\026.google.protobuf.Em" +
-      "pty\"\321\002\202\323\344\223\002\035*\030/eventTickets/production:\001" +
-      "*\222A\252\002\n\013Productions\022\021Delete Production\032\207\002" +
-      "Deletes an existing Production. Deleting" +
-      " a Production results in all Ticket Type" +
-      "s, Events & Tickets for the Production b" +
-      "eing deleted and invalidated in the cust" +
-      "omers Mobile Wallet; rendering them unus" +
-      "able. This method is irreversible and sh" +
-      "ould be used with care.\022\262\001\n\017listProducti" +
-      "ons\022\013.io.Filters\032\031.event_tickets.Product" +
-      "ion\"u\202\323\344\223\002\036\"\031/eventTickets/productions:\001" +
-      "*\222AN\n\013Productions\022\020List Productions\032-Lis" +
-      "ts all Productions for the logged in use" +
-      "r.0\001\022\340\001\n\014getAnalytics\022\024.io.AnalyticsRequ" +
-      "est\032*.event_tickets.ProductionAnalyticsR" +
-      "esponse\"\215\001\202\323\344\223\002.\022,/eventTickets/producti" +
-      "on/{classId}/analytics\222AV\n\013Productions\022\030" +
-      "Get Production Analytics\032-Retrieves Prod" +
-      "uction specific analytics data.\022\251\001\n\016copy" +
-      "Production\022$.event_tickets.ProductionCop" +
-      "yRequest\032\006.io.Id\"i\202\323\344\223\002\"\"\035/eventTickets/" +
-      "production/copy:\001*\222A>\n\013Productions\022\017Copy" +
-      " Production\032\036Copies an existing Producti" +
-      "on.\022z\n\013createVenue\022\024.event_tickets.Venue" +
-      "\032\006.io.Id\"M\202\323\344\223\002\030\"\023/eventTickets/venue:\001*" +
-      "\222A,\n\006Venues\022\014Create Venue\032\024Creates a new" +
-      " Venue.\022\225\002\n\013updateVenue\022\024.event_tickets." +
-      "Venue\032\024.event_tickets.Venue\"\331\001\202\323\344\223\002\030\032\023/e" +
-      "ventTickets/venue:\001*\222A\267\001\n\006Venues\022\014Update" +
-      " Venue\032\236\001Updates an existing Venue. Requ" +
-      "ires ID or User Defined ID to be set. No" +
-      "te: changes will update and affect all e" +
-      "xisting Events & Tickets related to this" +
-      " Venue.\022\235\002\n\npatchVenue\022\024.event_tickets.V" +
-      "enue\032\024.event_tickets.Venue\"\342\001\202\323\344\223\002\0302\023/ev" +
-      "entTickets/venue:\001*\222A\300\001\n\006Venues\022\013Patch V" +
-      "enue\032\250\001Partially updates an existing Ven" +
-      "ue. Requires ID or User Defined ID to be" +
-      " set. Note: changes will update and affe" +
-      "ct all existing Events & Tickets related" +
-      " to this Venue.\022\236\001\n\014getVenueById\022\006.io.Id" +
-      "\032\024.event_tickets.Venue\"p\202\323\344\223\002\032\022\030/eventTi" +
-      "ckets/venue/{id}\222AM\n\006Venues\022\tGet Venue\0328" +
-      "Gets an existing Venue by PassKit ID or " +
-      "User Defined ID.\022\325\002\n\013deleteVenue\022\024.event" +
-      "_tickets.Venue\032\026.google.protobuf.Empty\"\227" +
-      "\002\202\323\344\223\002\030*\023/eventTickets/venue:\001*\222A\365\001\n\006Ven" +
-      "ues\022\014Delete Venue\032\334\001Deletes an existing " +
-      "Venue. Deleting a Venue, Events & Ticket" +
-      "s for the Venue being deleted and invali" +
-      "dated in the customers Mobile Wallet; re" +
-      "ndering them unusable. This method is ir" +
-      "reversible and should be used with care." +
-      "\022\224\001\n\nlistVenues\022\013.io.Filters\032\024.event_tic" +
-      "kets.Venue\"a\202\323\344\223\002\031\"\024/eventTickets/venues" +
-      ":\001*\222A?\n\006Venues\022\013List Venues\032(Lists all V" +
-      "enues for the logged in user.0\001\022\241\002\n\013crea" +
-      "teEvent\022\024.event_tickets.Event\032\006.io.Id\"\363\001" +
-      "\202\323\344\223\002\030\"\023/eventTickets/event:\001*\222A\321\001\n\006Even" +
-      "ts\022\014Create Event\032\270\001Creates a new Event i" +
-      "nstance for a Production. You don\'t need" +
-      " to pass in the full Production and Venu" +
-      "e objects if they already exist, you can" +
-      " provide just the id and it will work fi" +
-      "ne.\022\300\002\n\013updateEvent\022\024.event_tickets.Even" +
-      "t\032\024.event_tickets.Event\"\204\002\202\323\344\223\002\030\032\023/event" +
-      "Tickets/event:\001*\222A\342\001\n\006Events\022\014Update Eve" +
-      "nt\032\311\001Fully updates an existing Event. Re" +
-      "quires ID to be set. Note1: changes will" +
-      " update & affect all existing tickets re" +
-      "lated to this event. Note2: Production a" +
-      "nd Venue cannot be changed from this end" +
-      "point.\022\377\001\n\npatchEvent\022\024.event_tickets.Ev" +
-      "ent\032\024.event_tickets.Event\"\304\001\202\323\344\223\002\0302\023/eve" +
-      "ntTickets/event:\001*\222A\242\001\n\006Events\022\013Patch Ev" +
-      "ent\032\212\001Partially updates an existing Even" +
-      "t. Requires ID to be set. Note: changes " +
-      "will update & affect all existing ticket" +
-      "s related to this event.\022\214\001\n\014getEventByI" +
-      "d\022\006.io.Id\032\024.event_tickets.Event\"^\202\323\344\223\002\035\022" +
-      "\033/eventTickets/event/id/{id}\222A8\n\006Events\022" +
-      "\017Get Event by ID\032\035Gets an existing Event" +
-      " by ID.\022\316\001\n\033getEventByStartDateAndVenue\022" +
-      "\036.event_tickets.GetEventRequest\032\024.event_" +
-      "tickets.Event\"y\202\323\344\223\002\035\022\033/eventTickets/eve" +
-      "nt/details\222AS\n\006Events\022\037Get Event by Star" +
-      "t Date & Venue\032(Gets an existing Event b" +
-      "y event details.\022\362\002\n\013deleteEvent\022\024.event" +
-      "_tickets.Event\032\026.google.protobuf.Empty\"\264" +
-      "\002\202\323\344\223\002\030*\023/eventTickets/event:\001*\222A\222\002\n\006Eve" +
-      "nts\022\014Delete Event\032\371\001Deletes an existing " +
-      "Event. Requires ID to be set. Deleting a" +
-      "n Event results in all tickets for the E" +
-      "vent being deleted and invalidated in th" +
-      "e customers Mobile Wallet; rendering the" +
-      "m unusable. This method is irreversible " +
-      "and should be used with care.\022\263\001\n\nlistEv" +
-      "ents\022\037.event_tickets.EventListRequest\032 ." +
-      "event_tickets.EventListResponse\"`\202\323\344\223\002\036\"" +
-      "\031/eventTickets/events/list:\001*\222A9\n\006Events" +
-      "\022\013List Events\032\"Lists all Events for a Pr" +
-      "oduction.0\001\022\224\001\n\020createTicketType\022\031.event" +
-      "_tickets.TicketType\032\006.io.Id\"]\202\323\344\223\002\035\"\030/ev" +
-      "entTickets/ticketType:\001*\222A7\n\014Ticket Type" +
-      "s\022\013Ticket Type\032\032Creates a new Ticket Typ" +
-      "e.\022\213\002\n\020updateTicketType\022\031.event_tickets." +
-      "TicketType\032\031.event_tickets.TicketType\"\300\001" +
-      "\202\323\344\223\002\035\032\030/eventTickets/ticketType:\001*\222A\231\001\n" +
-      "\014Ticket Types\022\022Update Ticket Type\032uUpdat" +
+      "to this Production.\022\227\001\n\rgetProduction\022\006." +
+      "io.Id\032\031.event_tickets.Production\"c\202\323\344\223\002\037" +
+      "\022\035/eventTickets/production/{id}\222A;\n\013Prod" +
+      "uctions\022\016Get Production\032\034Gets an existin" +
+      "g Production.\022\231\003\n\020deleteProduction\022\031.eve" +
+      "nt_tickets.Production\032\026.google.protobuf." +
+      "Empty\"\321\002\202\323\344\223\002\035*\030/eventTickets/production" +
+      ":\001*\222A\252\002\n\013Productions\022\021Delete Production\032" +
+      "\207\002Deletes an existing Production. Deleti" +
+      "ng a Production results in all Ticket Ty" +
+      "pes, Events & Tickets for the Production" +
+      " being deleted and invalidated in the cu" +
+      "stomers Mobile Wallet; rendering them un" +
+      "usable. This method is irreversible and " +
+      "should be used with care.\022\262\001\n\017listProduc" +
+      "tions\022\013.io.Filters\032\031.event_tickets.Produ" +
+      "ction\"u\202\323\344\223\002\036\"\031/eventTickets/productions" +
+      ":\001*\222AN\n\013Productions\022\020List Productions\032-L" +
+      "ists all Productions for the logged in u" +
+      "ser.0\001\022\340\001\n\014getAnalytics\022\024.io.AnalyticsRe" +
+      "quest\032*.event_tickets.ProductionAnalytic" +
+      "sResponse\"\215\001\202\323\344\223\002.\022,/eventTickets/produc" +
+      "tion/{classId}/analytics\222AV\n\013Productions" +
+      "\022\030Get Production Analytics\032-Retrieves Pr" +
+      "oduction specific analytics data.\022\251\001\n\016co" +
+      "pyProduction\022$.event_tickets.ProductionC" +
+      "opyRequest\032\006.io.Id\"i\202\323\344\223\002\"\"\035/eventTicket" +
+      "s/production/copy:\001*\222A>\n\013Productions\022\017Co" +
+      "py Production\032\036Copies an existing Produc" +
+      "tion.\022z\n\013createVenue\022\024.event_tickets.Ven" +
+      "ue\032\006.io.Id\"M\202\323\344\223\002\030\"\023/eventTickets/venue:" +
+      "\001*\222A,\n\006Venues\022\014Create Venue\032\024Creates a n" +
+      "ew Venue.\022\225\002\n\013updateVenue\022\024.event_ticket" +
+      "s.Venue\032\024.event_tickets.Venue\"\331\001\202\323\344\223\002\030\032\023" +
+      "/eventTickets/venue:\001*\222A\267\001\n\006Venues\022\014Upda" +
+      "te Venue\032\236\001Updates an existing Venue. Re" +
+      "quires ID or User Defined ID to be set. " +
+      "Note: changes will update and affect all" +
+      " existing Events & Tickets related to th" +
+      "is Venue.\022\235\002\n\npatchVenue\022\024.event_tickets" +
+      ".Venue\032\024.event_tickets.Venue\"\342\001\202\323\344\223\002\0302\023/" +
+      "eventTickets/venue:\001*\222A\300\001\n\006Venues\022\013Patch" +
+      " Venue\032\250\001Partially updates an existing V" +
+      "enue. Requires ID or User Defined ID to " +
+      "be set. Note: changes will update and af" +
+      "fect all existing Events & Tickets relat" +
+      "ed to this Venue.\022\236\001\n\014getVenueById\022\006.io." +
+      "Id\032\024.event_tickets.Venue\"p\202\323\344\223\002\032\022\030/event" +
+      "Tickets/venue/{id}\222AM\n\006Venues\022\tGet Venue" +
+      "\0328Gets an existing Venue by PassKit ID o" +
+      "r User Defined ID.\022\325\002\n\013deleteVenue\022\024.eve" +
+      "nt_tickets.Venue\032\026.google.protobuf.Empty" +
+      "\"\227\002\202\323\344\223\002\030*\023/eventTickets/venue:\001*\222A\365\001\n\006V" +
+      "enues\022\014Delete Venue\032\334\001Deletes an existin" +
+      "g Venue. Deleting a Venue, Events & Tick" +
+      "ets for the Venue being deleted and inva" +
+      "lidated in the customers Mobile Wallet; " +
+      "rendering them unusable. This method is " +
+      "irreversible and should be used with car" +
+      "e.\022\224\001\n\nlistVenues\022\013.io.Filters\032\024.event_t" +
+      "ickets.Venue\"a\202\323\344\223\002\031\"\024/eventTickets/venu" +
+      "es:\001*\222A?\n\006Venues\022\013List Venues\032(Lists all" +
+      " Venues for the logged in user.0\001\022\241\002\n\013cr" +
+      "eateEvent\022\024.event_tickets.Event\032\006.io.Id\"" +
+      "\363\001\202\323\344\223\002\030\"\023/eventTickets/event:\001*\222A\321\001\n\006Ev" +
+      "ents\022\014Create Event\032\270\001Creates a new Event" +
+      " instance for a Production. You don\'t ne" +
+      "ed to pass in the full Production and Ve" +
+      "nue objects if they already exist, you c" +
+      "an provide just the id and it will work " +
+      "fine.\022\300\002\n\013updateEvent\022\024.event_tickets.Ev" +
+      "ent\032\024.event_tickets.Event\"\204\002\202\323\344\223\002\030\032\023/eve" +
+      "ntTickets/event:\001*\222A\342\001\n\006Events\022\014Update E" +
+      "vent\032\311\001Fully updates an existing Event. " +
+      "Requires ID to be set. Note1: changes wi" +
+      "ll update & affect all existing tickets " +
+      "related to this event. Note2: Production" +
+      " and Venue cannot be changed from this e" +
+      "ndpoint.\022\377\001\n\npatchEvent\022\024.event_tickets." +
+      "Event\032\024.event_tickets.Event\"\304\001\202\323\344\223\002\0302\023/e" +
+      "ventTickets/event:\001*\222A\242\001\n\006Events\022\013Patch " +
+      "Event\032\212\001Partially updates an existing Ev" +
+      "ent. Requires ID to be set. Note: change" +
+      "s will update & affect all existing tick" +
+      "ets related to this event.\022\214\001\n\014getEventB" +
+      "yId\022\006.io.Id\032\024.event_tickets.Event\"^\202\323\344\223\002" +
+      "\035\022\033/eventTickets/event/id/{id}\222A8\n\006Event" +
+      "s\022\017Get Event by ID\032\035Gets an existing Eve" +
+      "nt by ID.\022\316\001\n\033getEventByStartDateAndVenu" +
+      "e\022\036.event_tickets.GetEventRequest\032\024.even" +
+      "t_tickets.Event\"y\202\323\344\223\002\035\022\033/eventTickets/e" +
+      "vent/details\222AS\n\006Events\022\037Get Event by St" +
+      "art Date & Venue\032(Gets an existing Event" +
+      " by event details.\022\362\002\n\013deleteEvent\022\024.eve" +
+      "nt_tickets.Event\032\026.google.protobuf.Empty" +
+      "\"\264\002\202\323\344\223\002\030*\023/eventTickets/event:\001*\222A\222\002\n\006E" +
+      "vents\022\014Delete Event\032\371\001Deletes an existin" +
+      "g Event. Requires ID to be set. Deleting" +
+      " an Event results in all tickets for the" +
+      " Event being deleted and invalidated in " +
+      "the customers Mobile Wallet; rendering t" +
+      "hem unusable. This method is irreversibl" +
+      "e and should be used with care.\022\263\001\n\nlist" +
+      "Events\022\037.event_tickets.EventListRequest\032" +
+      " .event_tickets.EventListResponse\"`\202\323\344\223\002" +
+      "\036\"\031/eventTickets/events/list:\001*\222A9\n\006Even" +
+      "ts\022\013List Events\032\"Lists all Events for a " +
+      "Production.0\001\022\224\001\n\020createTicketType\022\031.eve" +
+      "nt_tickets.TicketType\032\006.io.Id\"]\202\323\344\223\002\035\"\030/" +
+      "eventTickets/ticketType:\001*\222A7\n\014Ticket Ty" +
+      "pes\022\013Ticket Type\032\032Creates a new Ticket T" +
+      "ype.\022\213\002\n\020updateTicketType\022\031.event_ticket" +
+      "s.TicketType\032\031.event_tickets.TicketType\"" +
+      "\300\001\202\323\344\223\002\035\032\030/eventTickets/ticketType:\001*\222A\231" +
+      "\001\n\014Ticket Types\022\022Update Ticket Type\032uUpd" +
+      "ates an existing Ticket Type. Note: chan" +
+      "ges will update & affect all existing Ti" +
+      "ckets related to this Ticket Type.\022\223\002\n\017p" +
+      "atchTicketType\022\031.event_tickets.TicketTyp" +
+      "e\032\031.event_tickets.TicketType\"\311\001\202\323\344\223\002\0352\030/" +
+      "eventTickets/ticketType:\001*\222A\242\001\n\014Ticket T" +
+      "ypes\022\021Patch Ticket Type\032\177Partially updat" +
       "es an existing Ticket Type. Note: change" +
       "s will update & affect all existing Tick" +
-      "ets related to this Ticket Type.\022\223\002\n\017pat" +
-      "chTicketType\022\031.event_tickets.TicketType\032" +
-      "\031.event_tickets.TicketType\"\311\001\202\323\344\223\002\0352\030/ev" +
-      "entTickets/ticketType:\001*\222A\242\001\n\014Ticket Typ" +
-      "es\022\021Patch Ticket Type\032\177Partially updates" +
-      " an existing Ticket Type. Note: changes " +
-      "will update & affect all existing Ticket" +
-      "s related to this Ticket Type.\022\265\001\n\021getTi" +
-      "cketTypeById\022\006.io.Id\032\031.event_tickets.Tic" +
-      "ketType\"}\202\323\344\223\002\"\022 /eventTickets/ticketTyp" +
-      "e/id/{id}\222AR\n\014Ticket Types\022\035Get Ticket T" +
-      "ype by PassKit ID\032#Gets an existing Tick" +
-      "et Type by ID.\022\220\002\n\034getTicketTypeByUserDe" +
-      "finedId\022\036.event_tickets.GetByUidRequest\032" +
-      "\031.event_tickets.TicketType\"\264\001\202\323\344\223\0023\0221/ev" +
-      "entTickets/ticketType/uid/{productionId}" +
-      "/{uid}\222Ax\n\014Ticket Types\022\"Get Ticket Type" +
-      " by User Defined ID\032DGets an existing Ti" +
-      "cket Type by User Defined ID (and Produc" +
-      "tion ID).\022\265\003\n\020deleteTicketType\022\031.event_t" +
-      "ickets.TicketType\032\026.google.protobuf.Empt" +
-      "y\"\355\002\202\323\344\223\002\035*\030/eventTickets/ticketType:\001*\222" +
-      "A\306\002\n\014Ticket Types\022\022Delete Ticket Type\032\241\002" +
-      "Deletes an existing Ticket Type by ID, o" +
-      "r User Defined ID (and Production ID). D" +
-      "eleting a Ticket Type results in the tic" +
-      "kets for the Ticket Type being deleted a" +
-      "nd invalidated in the customers Mobile W" +
-      "allet; rendering them unusable. This met" +
-      "hod is irreversible and should be used w" +
-      "ith care.\022\330\001\n\017listTicketTypes\022$.event_ti" +
-      "ckets.TicketTypeListRequest\032\031.event_tick" +
-      "ets.TicketType\"\201\001\202\323\344\223\002-\"(/eventTickets/t" +
-      "icketTypes/{productionId}:\001*\222AK\n\014Ticket " +
-      "Types\022\021List Ticket Types\032(Lists all Tick" +
-      "et Types for a Production.0\001\022\356\002\n\013issueTi" +
-      "cket\022!.event_tickets.IssueTicketRequest\032" +
-      "\006.io.Id\"\263\002\202\323\344\223\002\031\"\024/eventTickets/ticket:\001" +
-      "*\222A\220\002\n\007Tickets\022\014Issue Ticket\032\366\001Creates a" +
-      " new unique Ticket record by PassKit IDs" +
-      ". If the Event does not yet exist, it wi" +
-      "ll automatically be created. The combina" +
-      "tion of event.production.id, event.start" +
-      "Date, event.venue.id & ticket.ticketType" +
-      "Uid is enforced as unique for Events.\022\321\003" +
-      "\n\017issueTicketById\022\025.event_tickets.Ticket" +
-      "\032%.event_tickets.IssueTicketResponseIds\"" +
-      "\377\002\202\323\344\223\002\034\"\027/eventTickets/ticket/id:\001*\222A\331\002" +
-      "\n\007Tickets\022\014Issue Ticket\032\277\002Creates a new " +
-      "unique Ticket record by User Defined IDs" +
-      ". User Defined IDs for Production, Venue" +
-      " and TicketType are required. If the Eve" +
-      "nt does not yet exist, it will automatic" +
-      "ally be created. The combination of even" +
-      "t.production.id, event.startDate, event." +
-      "venue.id & ticket.ticketTypeUid is enfor" +
-      "ced as unique for Events.\022\345\001\n\014updateTick" +
-      "et\022\025.event_tickets.Ticket\032\006.io.Id\"\265\001\202\323\344\223" +
-      "\002\031\032\024/eventTickets/ticket:\001*\222A\222\001\n\007Tickets" +
-      "\022\rUpdate Ticket\032xUpdates an existing Tic" +
-      "ket. Requires ticket.ID to be set, or ti" +
+      "ets related to this Ticket Type.\022\265\001\n\021get" +
+      "TicketTypeById\022\006.io.Id\032\031.event_tickets.T" +
+      "icketType\"}\202\323\344\223\002\"\022 /eventTickets/ticketT" +
+      "ype/id/{id}\222AR\n\014Ticket Types\022\035Get Ticket" +
+      " Type by PassKit ID\032#Gets an existing Ti" +
+      "cket Type by ID.\022\220\002\n\034getTicketTypeByUser" +
+      "DefinedId\022\036.event_tickets.GetByUidReques" +
+      "t\032\031.event_tickets.TicketType\"\264\001\202\323\344\223\0023\0221/" +
+      "eventTickets/ticketType/uid/{productionI" +
+      "d}/{uid}\222Ax\n\014Ticket Types\022\"Get Ticket Ty" +
+      "pe by User Defined ID\032DGets an existing " +
+      "Ticket Type by User Defined ID (and Prod" +
+      "uction ID).\022\265\003\n\020deleteTicketType\022\031.event" +
+      "_tickets.TicketType\032\026.google.protobuf.Em" +
+      "pty\"\355\002\202\323\344\223\002\035*\030/eventTickets/ticketType:\001" +
+      "*\222A\306\002\n\014Ticket Types\022\022Delete Ticket Type\032" +
+      "\241\002Deletes an existing Ticket Type by ID," +
+      " or User Defined ID (and Production ID)." +
+      " Deleting a Ticket Type results in the t" +
+      "ickets for the Ticket Type being deleted" +
+      " and invalidated in the customers Mobile" +
+      " Wallet; rendering them unusable. This m" +
+      "ethod is irreversible and should be used" +
+      " with care.\022\330\001\n\017listTicketTypes\022$.event_" +
+      "tickets.TicketTypeListRequest\032\031.event_ti" +
+      "ckets.TicketType\"\201\001\202\323\344\223\002-\"(/eventTickets" +
+      "/ticketTypes/{productionId}:\001*\222AK\n\014Ticke" +
+      "t Types\022\021List Ticket Types\032(Lists all Ti" +
+      "cket Types for a Production.0\001\022\356\002\n\013issue" +
+      "Ticket\022!.event_tickets.IssueTicketReques" +
+      "t\032\006.io.Id\"\263\002\202\323\344\223\002\031\"\024/eventTickets/ticket" +
+      ":\001*\222A\220\002\n\007Tickets\022\014Issue Ticket\032\366\001Creates" +
+      " a new unique Ticket record by PassKit I" +
+      "Ds. If the Event does not yet exist, it " +
+      "will automatically be created. The combi" +
+      "nation of event.production.id, event.sta" +
+      "rtDate, event.venue.id & ticket.ticketTy" +
+      "peUid is enforced as unique for Events.\022" +
+      "\321\003\n\017issueTicketById\022\025.event_tickets.Tick" +
+      "et\032%.event_tickets.IssueTicketResponseId" +
+      "s\"\377\002\202\323\344\223\002\034\"\027/eventTickets/ticket/id:\001*\222A" +
+      "\331\002\n\007Tickets\022\014Issue Ticket\032\277\002Creates a ne" +
+      "w unique Ticket record by User Defined I" +
+      "Ds. User Defined IDs for Production, Ven" +
+      "ue and TicketType are required. If the E" +
+      "vent does not yet exist, it will automat" +
+      "ically be created. The combination of ev" +
+      "ent.production.id, event.startDate, even" +
+      "t.venue.id & ticket.ticketTypeUid is enf" +
+      "orced as unique for Events.\022\345\001\n\014updateTi" +
+      "cket\022\025.event_tickets.Ticket\032\006.io.Id\"\265\001\202\323" +
+      "\344\223\002\031\032\024/eventTickets/ticket:\001*\222A\222\001\n\007Ticke" +
+      "ts\022\rUpdate Ticket\032xUpdates an existing T" +
+      "icket. Requires ticket.ID to be set, or " +
+      "ticket.ticketNumber + ticket.event.produ" +
+      "ction.id to be set.\022\213\003\n\016validateTicket\022$" +
+      ".event_tickets.ValidateTicketRequest\032%.e" +
+      "vent_tickets.ValidateTicketResponse\"\253\002\202\323" +
+      "\344\223\002\"\032\035/eventTickets/ticket/validate:\001*\222A" +
+      "\377\001\n\007Tickets\022\017Validate Ticket\032\342\001Validates" +
+      " an existing Ticket. Use this endpoint w" +
+      "hen you want to check validity of a tick" +
+      "et. Tickets can be validated multiple ti" +
+      "mes. Requires ticket.id to be set, or ti" +
       "cket.ticketNumber + ticket.event.product" +
-      "ion.id to be set.\022\213\003\n\016validateTicket\022$.e" +
-      "vent_tickets.ValidateTicketRequest\032%.eve" +
-      "nt_tickets.ValidateTicketResponse\"\253\002\202\323\344\223" +
-      "\002\"\032\035/eventTickets/ticket/validate:\001*\222A\377\001" +
-      "\n\007Tickets\022\017Validate Ticket\032\342\001Validates a" +
-      "n existing Ticket. Use this endpoint whe" +
-      "n you want to check validity of a ticket" +
-      ". Tickets can be validated multiple time" +
-      "s. Requires ticket.id to be set, or tick" +
-      "et.ticketNumber + ticket.event.productio" +
-      "n.id to be set.\022\345\002\n\014redeemTicket\022\025.event" +
-      "_tickets.Ticket\032\006.io.Id\"\265\002\202\323\344\223\002 \032\033/event" +
-      "Tickets/ticket/redeem:\001*\222A\213\002\n\007Tickets\022\rR" +
-      "edeem Ticket\032\360\001Redeems an existing Ticke" +
-      "t. Use this endpoint when you want to ca" +
-      "pture redemption data and trigger the sw" +
-      "itch to the redeemed design of the Ticke" +
-      "t. Requires ticket.id to be set, or tick" +
-      "et.ticketNumber + ticket.event.productio" +
-      "n.id to be set.\022\320\002\n\032redeemTicketsByOrder" +
-      "Number\022\".event_tickets.RedeemByOrderNumb" +
-      "er\032\007.io.Ids\"\204\002\202\323\344\223\002-\032(/eventTickets/tick" +
-      "ets/orderNumber/redeem:\001*\222A\315\001\n\007Tickets\022\036" +
-      "Redeem Tickets by Order Number\032\241\001Redeems" +
-      " existing Tickets by Order Number. Use t" +
-      "his endpoint when you want to capture re" +
-      "demption data and trigger the switch to " +
-      "the redeemed design of the Ticket.\022\217\001\n\rg" +
-      "etTicketById\022\006.io.Id\032\025.event_tickets.Tic" +
-      "ket\"_\202\323\344\223\002\036\022\034/eventTickets/ticket/id/{id" +
-      "}\222A8\n\007Tickets\022\020Get Ticket by ID\032\033Gets a " +
-      "Ticket record by ID.\022\320\001\n\027getTicketByTick" +
-      "etNumber\022\".event_tickets.TicketNumberReq" +
-      "uest\032\025.event_tickets.Ticket\"z\202\323\344\223\002#\022!/ev" +
-      "entTickets/ticket/ticketNumber\222AN\n\007Ticke" +
-      "ts\022\033Get Ticket by Ticket Number\032&Gets a " +
-      "Ticket record by Ticket Number.\022\316\001\n\027getT" +
-      "icketsByOrderNumber\022!.event_tickets.Orde" +
-      "rNumberRequest\032\026.event_tickets.Tickets\"x" +
-      "\202\323\344\223\002#\022!/eventTickets/tickets/orderNumbe" +
-      "r\222AL\n\007Tickets\022\033Get Tickets by Order Numb" +
-      "er\032$Gets Ticket records by Order Number." +
-      "\022\256\002\n\022getEventTicketPass\022%.event_tickets." +
-      "EventTicketPassRequest\032\017.io.PassBundles\"" +
-      "\337\001\202\323\344\223\002\027\"\022/eventTickets/pass:\001*\222A\276\001\n\007Tic" +
-      "kets\022\025Get Event Ticket Pass\032\233\001Retrieves " +
-      "digital event ticket pass(es) in the req" +
-      "uested format based on the index provide" +
-      "d. Only one of ticketId, ticketNumber or" +
-      " orderNumber is required.\022\223\003\n\014deleteTick" +
-      "et\022\025.event_tickets.Ticket\032\026.google.proto" +
-      "buf.Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/ticket" +
-      ":\001*\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Delete" +
-      " an existing Ticket by Id or Ticket Numb" +
-      "er. Invalidates the ticket in the custom" +
-      "ers Mobile Wallet; rendering it useless." +
-      " This method is irreversible and should " +
-      "be used with care. Requires ticket.ID to" +
-      " be set, or ticket.ticketNumber + ticket" +
-      ".event.production.id to be set.\022\335\002\n\032dele" +
-      "teTicketsByOrderNumber\022!.event_tickets.O" +
-      "rderNumberRequest\032\026.google.protobuf.Empt" +
-      "y\"\203\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:\001*" +
-      "\222A\333\001\n\007Tickets\022\036Delete Tickets by Order N" +
-      "umber\032\257\001Delete existing Ticketd by Order" +
-      " Number. Invalidates the ticket in the c" +
-      "ustomers Mobile Wallet; rendering it use" +
-      "less. This method is irreversible and sh" +
-      "ould be used with care.\022\317\001\n\013listTickets\022" +
-      " .event_tickets.TicketListRequest\032\".even" +
-      "t_tickets.TicketLimitedFields\"x\202\323\344\223\002\037\"\032/" +
-      "eventTickets/tickets/list:\001*\222AP\n\007Tickets" +
-      "\022\014List Tickets\0327List all tickets for a P" +
-      "roduction. Supports pagination.0\001\022\313\001\n\014co" +
-      "untTickets\022 .event_tickets.TicketListReq" +
-      "uest\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTickets/" +
-      "tickets/count:\001*\222Ad\n\007Tickets\022\rCount Tick" +
-      "ets\032JCount all tickets for a Production," +
-      " Event, Ticket Type and / or Start DateB" +
-      "\377\006\n\035com.passkit.grpc.EventTicketsZ2stash" +
-      ".passkit.com/io/model/sdk/go/io/event_ti" +
-      "ckets\252\002\016PKEventTickets\222A\227\006\022\264\002\n\031PassKit E" +
-      "vent Tickets API\022\221\001This API enables you " +
-      "to get all your Digital Event Tickets in" +
-      "to Apple Wallet & Google Pay, from theat" +
-      "re and cinema, to sport events and conce" +
-      "rts.\0328https://passkit.com/legal/terms-of" +
-      "-subscription-service/\"?\n\017PassKit Suppor" +
-      "t\022\027https://docs.passkit.io\032\023support@pass" +
-      "kit.com2\0100.1-spec*\001\0022\020application/json:\020" +
-      "application/jsonR9\n\003200\0222\n(Returned when" +
-      " the request is successful.\022\006\n\004\232\002\001\007RP\n\0034" +
-      "03\022I\nGReturned when the user does not ha" +
-      "ve permission to access the resource.R;\n" +
-      "\003404\0224\n*Returned when the resource does " +
-      "not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned wh" +
-      "en there is an unexpected error.\022\006\n\004\232\002\001\007" +
-      "R]\n\003503\022V\nTReturned when the user is bei" +
-      "ng throttled. Back off for a few ms and " +
-      "then try again.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT" +
-      " Authentication token.\032\rAuthorization \002b" +
-      "\020\n\016\n\napiKeyAuth\022\000b\006proto3"
+      "ion.id to be set.\022\345\002\n\014redeemTicket\022\025.eve" +
+      "nt_tickets.Ticket\032\006.io.Id\"\265\002\202\323\344\223\002 \032\033/eve" +
+      "ntTickets/ticket/redeem:\001*\222A\213\002\n\007Tickets\022" +
+      "\rRedeem Ticket\032\360\001Redeems an existing Tic" +
+      "ket. Use this endpoint when you want to " +
+      "capture redemption data and trigger the " +
+      "switch to the redeemed design of the Tic" +
+      "ket. Requires ticket.id to be set, or ti" +
+      "cket.ticketNumber + ticket.event.product" +
+      "ion.id to be set.\022\320\002\n\032redeemTicketsByOrd" +
+      "erNumber\022\".event_tickets.RedeemByOrderNu" +
+      "mber\032\007.io.Ids\"\204\002\202\323\344\223\002-\032(/eventTickets/ti" +
+      "ckets/orderNumber/redeem:\001*\222A\315\001\n\007Tickets" +
+      "\022\036Redeem Tickets by Order Number\032\241\001Redee" +
+      "ms existing Tickets by Order Number. Use" +
+      " this endpoint when you want to capture " +
+      "redemption data and trigger the switch t" +
+      "o the redeemed design of the Ticket.\022\217\001\n" +
+      "\rgetTicketById\022\006.io.Id\032\025.event_tickets.T" +
+      "icket\"_\202\323\344\223\002\036\022\034/eventTickets/ticket/id/{" +
+      "id}\222A8\n\007Tickets\022\020Get Ticket by ID\032\033Gets " +
+      "a Ticket record by ID.\022\320\001\n\027getTicketByTi" +
+      "cketNumber\022\".event_tickets.TicketNumberR" +
+      "equest\032\025.event_tickets.Ticket\"z\202\323\344\223\002#\022!/" +
+      "eventTickets/ticket/ticketNumber\222AN\n\007Tic" +
+      "kets\022\033Get Ticket by Ticket Number\032&Gets " +
+      "a Ticket record by Ticket Number.\022\316\001\n\027ge" +
+      "tTicketsByOrderNumber\022!.event_tickets.Or" +
+      "derNumberRequest\032\026.event_tickets.Tickets" +
+      "\"x\202\323\344\223\002#\022!/eventTickets/tickets/orderNum" +
+      "ber\222AL\n\007Tickets\022\033Get Tickets by Order Nu" +
+      "mber\032$Gets Ticket records by Order Numbe" +
+      "r.\022\256\002\n\022getEventTicketPass\022%.event_ticket" +
+      "s.EventTicketPassRequest\032\017.io.PassBundle" +
+      "s\"\337\001\202\323\344\223\002\027\"\022/eventTickets/pass:\001*\222A\276\001\n\007T" +
+      "ickets\022\025Get Event Ticket Pass\032\233\001Retrieve" +
+      "s digital event ticket pass(es) in the r" +
+      "equested format based on the index provi" +
+      "ded. Only one of ticketId, ticketNumber " +
+      "or orderNumber is required.\022\223\003\n\014deleteTi" +
+      "cket\022\025.event_tickets.Ticket\032\026.google.pro" +
+      "tobuf.Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/tick" +
+      "et:\001*\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Dele" +
+      "te an existing Ticket by Id or Ticket Nu" +
+      "mber. Invalidates the ticket in the cust" +
+      "omers Mobile Wallet; rendering it useles" +
+      "s. This method is irreversible and shoul" +
+      "d be used with care. Requires ticket.ID " +
+      "to be set, or ticket.ticketNumber + tick" +
+      "et.event.production.id to be set.\022\335\002\n\032de" +
+      "leteTicketsByOrderNumber\022!.event_tickets" +
+      ".OrderNumberRequest\032\026.google.protobuf.Em" +
+      "pty\"\203\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:" +
+      "\001*\222A\333\001\n\007Tickets\022\036Delete Tickets by Order" +
+      " Number\032\257\001Delete existing Ticketd by Ord" +
+      "er Number. Invalidates the ticket in the" +
+      " customers Mobile Wallet; rendering it u" +
+      "seless. This method is irreversible and " +
+      "should be used with care.\022\317\001\n\013listTicket" +
+      "s\022 .event_tickets.TicketListRequest\032\".ev" +
+      "ent_tickets.TicketLimitedFields\"x\202\323\344\223\002\037\"" +
+      "\032/eventTickets/tickets/list:\001*\222AP\n\007Ticke" +
+      "ts\022\014List Tickets\0327List all tickets for a" +
+      " Production. Supports pagination.0\001\022\313\001\n\014" +
+      "countTickets\022 .event_tickets.TicketListR" +
+      "equest\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTicket" +
+      "s/tickets/count:\001*\222Ad\n\007Tickets\022\rCount Ti" +
+      "ckets\032JCount all tickets for a Productio" +
+      "n, Event, Ticket Type and / or Start Dat" +
+      "eB\212\007\n\035com.passkit.grpc.EventTicketsZ2sta" +
+      "sh.passkit.com/io/model/sdk/go/io/event_" +
+      "tickets\252\002\031PassKit.Grpc.EventTickets\222A\227\006\022" +
+      "\264\002\n\031PassKit Event Tickets API\022\221\001This API" +
+      " enables you to get all your Digital Eve" +
+      "nt Tickets into Apple Wallet & Google Pa" +
+      "y, from theatre and cinema, to sport eve" +
+      "nts and concerts.\0328https://passkit.com/l" +
+      "egal/terms-of-subscription-service/\"?\n\017P" +
+      "assKit Support\022\027https://docs.passkit.io\032" +
+      "\023support@passkit.com2\0100.1-spec*\001\0022\020appli" +
+      "cation/json:\020application/jsonR9\n\003200\0222\n(" +
+      "Returned when the request is successful." +
+      "\022\006\n\004\232\002\001\007RP\n\003403\022I\nGReturned when the use" +
+      "r does not have permission to access the" +
+      " resource.R;\n\003404\0224\n*Returned when the r" +
+      "esource does not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225" +
+      "\n+Returned when there is an unexpected e" +
+      "rror.\022\006\n\004\232\002\001\007R]\n\003503\022V\nTReturned when th" +
+      "e user is being throttled. Back off for " +
+      "a few ms and then try again.Z>\n<\n\napiKey" +
+      "Auth\022.\010\002\022\031JWT Authentication token.\032\rAut" +
+      "horization \002b\020\n\016\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -348,13 +348,13 @@ public final class ARpc {
           com.passkit.grpc.EventTickets.TicketTypeOuterClass.getDescriptor(),
           com.passkit.grpc.EventTickets.TicketOuterClass.getDescriptor(),
           com.passkit.grpc.EventTickets.VenueOuterClass.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.EmptyProto.getDescriptor();
@@ -367,7 +367,7 @@ public final class ARpc {
     com.passkit.grpc.EventTickets.TicketTypeOuterClass.getDescriptor();
     com.passkit.grpc.EventTickets.TicketOuterClass.getDescriptor();
     com.passkit.grpc.EventTickets.VenueOuterClass.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

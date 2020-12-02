@@ -474,7 +474,7 @@ public final class Protocols {
       "INSTALLED\020\006\022\032\n\026EVENT_PASS_UNINSTALLED\020\007\022" +
       "\032\n\026EVENT_PASS_INVALIDATED\020\010BG\n\020com.passk" +
       "it.grpcZ$stash.passkit.com/io/model/sdk/" +
-      "go/io\252\002\014PassKit.GRPCb\006proto3"
+      "go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

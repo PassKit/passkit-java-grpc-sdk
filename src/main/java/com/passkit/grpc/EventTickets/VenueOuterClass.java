@@ -23,7 +23,7 @@ public final class VenueOuterClass {
      * PassKit generated venue id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -32,7 +32,7 @@ public final class VenueOuterClass {
      * PassKit generated venue id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -221,7 +221,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     boolean hasCreated();
@@ -230,7 +230,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     com.google.protobuf.Timestamp getCreated();
@@ -239,7 +239,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
 
@@ -248,7 +248,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     boolean hasUpdated();
@@ -257,7 +257,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     com.google.protobuf.Timestamp getUpdated();
@@ -266,7 +266,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
   }
@@ -455,7 +455,7 @@ public final class VenueOuterClass {
      * PassKit generated venue id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -476,7 +476,7 @@ public final class VenueOuterClass {
      * PassKit generated venue id (22 characters).
      * </pre>
      *
-     * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -821,7 +821,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the created field is set.
      */
     @java.lang.Override
@@ -833,7 +833,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The created.
      */
     @java.lang.Override
@@ -845,7 +845,7 @@ public final class VenueOuterClass {
      * The date the venue was created. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
@@ -859,7 +859,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return Whether the updated field is set.
      */
     @java.lang.Override
@@ -871,7 +871,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      * @return The updated.
      */
     @java.lang.Override
@@ -883,7 +883,7 @@ public final class VenueOuterClass {
      * The date the venue updated. Not writable.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
@@ -1443,7 +1443,7 @@ public final class VenueOuterClass {
        * PassKit generated venue id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1463,7 +1463,7 @@ public final class VenueOuterClass {
        * PassKit generated venue id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1484,7 +1484,7 @@ public final class VenueOuterClass {
        * PassKit generated venue id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1503,7 +1503,7 @@ public final class VenueOuterClass {
        * PassKit generated venue id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1517,7 +1517,7 @@ public final class VenueOuterClass {
        * PassKit generated venue id (22 characters).
        * </pre>
        *
-       * <code>string id = 1 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>string id = 1 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -2547,7 +2547,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
@@ -2558,7 +2558,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The created.
        */
       public com.google.protobuf.Timestamp getCreated() {
@@ -2573,7 +2573,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -2593,7 +2593,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setCreated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2611,7 +2611,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
@@ -2633,7 +2633,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
         if (createdBuilder_ == null) {
@@ -2651,7 +2651,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
         
@@ -2663,7 +2663,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
         if (createdBuilder_ != null) {
@@ -2678,7 +2678,7 @@ public final class VenueOuterClass {
        * The date the venue was created. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -2702,7 +2702,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
@@ -2713,7 +2713,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        * @return The updated.
        */
       public com.google.protobuf.Timestamp getUpdated() {
@@ -2728,7 +2728,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -2748,7 +2748,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setUpdated(
           com.google.protobuf.Timestamp.Builder builderForValue) {
@@ -2766,7 +2766,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
@@ -2788,7 +2788,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
         if (updatedBuilder_ == null) {
@@ -2806,7 +2806,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
         
@@ -2818,7 +2818,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
         if (updatedBuilder_ != null) {
@@ -2833,7 +2833,7 @@ public final class VenueOuterClass {
        * The date the venue updated. Not writable.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
@@ -3900,25 +3900,26 @@ public final class VenueOuterClass {
       "ckets\032\037google/protobuf/timestamp.proto\032\034" +
       "io/common/distribution.proto\032\034io/common/" +
       "localization.proto\032\027io/common/project.pr" +
-      "oto\032\031io/common/proximity.proto\032,protoc-g" +
-      "en-swagger/options/annotations.proto\"\244\003\n" +
-      "\005Venue\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t\022\014" +
-      "\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023.io" +
-      ".LocalizedString\022\017\n\007address\030\005 \001(\t\022-\n\020loc" +
-      "alizedAddress\030\006 \001(\0132\023.io.LocalizedString" +
-      "\022\020\n\010timezone\030\007 \001(\t\022\"\n\tgpsCoords\030\010 \003(\0132\017." +
-      "io.GPSLocation\0222\n\007created\030\t \001(\0132\032.google" +
-      ".protobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030\n " +
-      "\001(\0132\032.google.protobuf.TimestampB\005\222A\002@\001:c" +
-      "\222A`\n^*\005Venue25Venue holds details about " +
-      "where the event takes place\322\001\004name\322\001\007add" +
-      "ress\322\001\014ianaTimezone\"\224\001\n\032VenueLimitedFiel" +
-      "dsResponse\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004n" +
-      "ame\030\003 \001(\t:O\222AL\nJ*\021Venue (Light ver)25Ven" +
-      "ue holds details about where the event t" +
-      "akes placeBd\n\035com.passkit.grpc.EventTick" +
-      "etsZ2stash.passkit.com/io/model/sdk/go/i" +
-      "o/event_tickets\252\002\016PKEventTicketsb\006proto3"
+      "oto\032\031io/common/proximity.proto\032.protoc-g" +
+      "en-openapiv2/options/annotations.proto\"\244" +
+      "\003\n\005Venue\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t" +
+      "\022\014\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023." +
+      "io.LocalizedString\022\017\n\007address\030\005 \001(\t\022-\n\020l" +
+      "ocalizedAddress\030\006 \001(\0132\023.io.LocalizedStri" +
+      "ng\022\020\n\010timezone\030\007 \001(\t\022\"\n\tgpsCoords\030\010 \003(\0132" +
+      "\017.io.GPSLocation\0222\n\007created\030\t \001(\0132\032.goog" +
+      "le.protobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030" +
+      "\n \001(\0132\032.google.protobuf.TimestampB\005\222A\002@\001" +
+      ":c\222A`\n^*\005Venue25Venue holds details abou" +
+      "t where the event takes place\322\001\004name\322\001\007a" +
+      "ddress\322\001\014ianaTimezone\"\224\001\n\032VenueLimitedFi" +
+      "eldsResponse\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n" +
+      "\004name\030\003 \001(\t:O\222AL\nJ*\021Venue (Light ver)25V" +
+      "enue holds details about where the event" +
+      " takes placeBo\n\035com.passkit.grpc.EventTi" +
+      "cketsZ2stash.passkit.com/io/model/sdk/go" +
+      "/io/event_tickets\252\002\031PassKit.Grpc.EventTi" +
+      "cketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3928,7 +3929,7 @@ public final class VenueOuterClass {
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_event_tickets_Venue_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3944,8 +3945,8 @@ public final class VenueOuterClass {
         new java.lang.String[] { "Id", "Uid", "Name", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
@@ -3953,7 +3954,7 @@ public final class VenueOuterClass {
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

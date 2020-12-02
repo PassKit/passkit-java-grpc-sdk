@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/raw/a_rpc.proto")
 public final class RawGrpc {
 
@@ -41,22 +41,21 @@ public final class RawGrpc {
     if ((getCreatePassProjectMethod = RawGrpc.getCreatePassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getCreatePassProjectMethod = RawGrpc.getCreatePassProjectMethod) == null) {
-          RawGrpc.getCreatePassProjectMethod = getCreatePassProjectMethod = 
+          RawGrpc.getCreatePassProjectMethod = getCreatePassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "createPassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createPassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPassProject"))
+              .build();
         }
-     }
-     return getCreatePassProjectMethod;
+      }
+    }
+    return getCreatePassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProject,
@@ -73,22 +72,21 @@ public final class RawGrpc {
     if ((getUpdatePassProjectMethod = RawGrpc.getUpdatePassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getUpdatePassProjectMethod = RawGrpc.getUpdatePassProjectMethod) == null) {
-          RawGrpc.getUpdatePassProjectMethod = getUpdatePassProjectMethod = 
+          RawGrpc.getUpdatePassProjectMethod = getUpdatePassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProject, com.passkit.grpc.Raw.Project.PassProject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "updatePassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updatePassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePassProject"))
+              .build();
         }
-     }
-     return getUpdatePassProjectMethod;
+      }
+    }
+    return getUpdatePassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,22 +103,21 @@ public final class RawGrpc {
     if ((getGetPassProjectMethod = RawGrpc.getGetPassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getGetPassProjectMethod = RawGrpc.getGetPassProjectMethod) == null) {
-          RawGrpc.getGetPassProjectMethod = getGetPassProjectMethod = 
+          RawGrpc.getGetPassProjectMethod = getGetPassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.Project.PassProject>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "getPassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassProject"))
+              .build();
         }
-     }
-     return getGetPassProjectMethod;
+      }
+    }
+    return getGetPassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.Project.PassProjectCopyRequest,
@@ -137,22 +134,21 @@ public final class RawGrpc {
     if ((getCopyPassProjectMethod = RawGrpc.getCopyPassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getCopyPassProjectMethod = RawGrpc.getCopyPassProjectMethod) == null) {
-          RawGrpc.getCopyPassProjectMethod = getCopyPassProjectMethod = 
+          RawGrpc.getCopyPassProjectMethod = getCopyPassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.Project.PassProjectCopyRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "copyPassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyPassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.Project.PassProjectCopyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("copyPassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("copyPassProject"))
+              .build();
         }
-     }
-     return getCopyPassProjectMethod;
+      }
+    }
+    return getCopyPassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -169,22 +165,21 @@ public final class RawGrpc {
     if ((getDeletePassProjectMethod = RawGrpc.getDeletePassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getDeletePassProjectMethod = RawGrpc.getDeletePassProjectMethod) == null) {
-          RawGrpc.getDeletePassProjectMethod = getDeletePassProjectMethod = 
+          RawGrpc.getDeletePassProjectMethod = getDeletePassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "deletePassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deletePassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePassProject"))
+              .build();
         }
-     }
-     return getDeletePassProjectMethod;
+      }
+    }
+    return getDeletePassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
@@ -201,22 +196,21 @@ public final class RawGrpc {
     if ((getCreatePassMethod = RawGrpc.getCreatePassMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getCreatePassMethod = RawGrpc.getCreatePassMethod) == null) {
-          RawGrpc.getCreatePassMethod = getCreatePassMethod = 
+          RawGrpc.getCreatePassMethod = getCreatePassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "createPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("createPass"))
+              .build();
         }
-     }
-     return getCreatePassMethod;
+      }
+    }
+    return getCreatePassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
@@ -233,22 +227,21 @@ public final class RawGrpc {
     if ((getUpdatePassMethod = RawGrpc.getUpdatePassMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getUpdatePassMethod = RawGrpc.getUpdatePassMethod) == null) {
-          RawGrpc.getUpdatePassMethod = getUpdatePassMethod = 
+          RawGrpc.getUpdatePassMethod = getUpdatePassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "updatePass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updatePass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("updatePass"))
+              .build();
         }
-     }
-     return getUpdatePassMethod;
+      }
+    }
+    return getUpdatePassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
@@ -265,22 +258,21 @@ public final class RawGrpc {
     if ((getStreamPassUpdatesMethod = RawGrpc.getStreamPassUpdatesMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getStreamPassUpdatesMethod = RawGrpc.getStreamPassUpdatesMethod) == null) {
-          RawGrpc.getStreamPassUpdatesMethod = getStreamPassUpdatesMethod = 
+          RawGrpc.getStreamPassUpdatesMethod = getStreamPassUpdatesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "streamPassUpdates"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "streamPassUpdates"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("streamPassUpdates"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("streamPassUpdates"))
+              .build();
         }
-     }
-     return getStreamPassUpdatesMethod;
+      }
+    }
+    return getStreamPassUpdatesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -297,22 +289,21 @@ public final class RawGrpc {
     if ((getGetPassByIdMethod = RawGrpc.getGetPassByIdMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getGetPassByIdMethod = RawGrpc.getGetPassByIdMethod) == null) {
-          RawGrpc.getGetPassByIdMethod = getGetPassByIdMethod = 
+          RawGrpc.getGetPassByIdMethod = getGetPassByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "getPassById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPassById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassById"))
+              .build();
         }
-     }
-     return getGetPassByIdMethod;
+      }
+    }
+    return getGetPassByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest,
@@ -329,22 +320,21 @@ public final class RawGrpc {
     if ((getGetPassByExternalIdMethod = RawGrpc.getGetPassByExternalIdMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getGetPassByExternalIdMethod = RawGrpc.getGetPassByExternalIdMethod) == null) {
-          RawGrpc.getGetPassByExternalIdMethod = getGetPassByExternalIdMethod = 
+          RawGrpc.getGetPassByExternalIdMethod = getGetPassByExternalIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "getPassByExternalId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPassByExternalId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassByExternalId"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("getPassByExternalId"))
+              .build();
         }
-     }
-     return getGetPassByExternalIdMethod;
+      }
+    }
+    return getGetPassByExternalIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.Pass,
@@ -361,22 +351,21 @@ public final class RawGrpc {
     if ((getDeletePassMethod = RawGrpc.getDeletePassMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getDeletePassMethod = RawGrpc.getDeletePassMethod) == null) {
-          RawGrpc.getDeletePassMethod = getDeletePassMethod = 
+          RawGrpc.getDeletePassMethod = getDeletePassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.Pass, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "deletePass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deletePass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("deletePass"))
+              .build();
         }
-     }
-     return getDeletePassMethod;
+      }
+    }
+    return getDeletePassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest,
@@ -393,22 +382,21 @@ public final class RawGrpc {
     if ((getListPassesByPassProjectMethod = RawGrpc.getListPassesByPassProjectMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getListPassesByPassProjectMethod = RawGrpc.getListPassesByPassProjectMethod) == null) {
-          RawGrpc.getListPassesByPassProjectMethod = getListPassesByPassProjectMethod = 
+          RawGrpc.getListPassesByPassProjectMethod = getListPassesByPassProjectMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "listPassesByPassProject"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listPassesByPassProject"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassProject"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassProject"))
+              .build();
         }
-     }
-     return getListPassesByPassProjectMethod;
+      }
+    }
+    return getListPassesByPassProjectMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest,
@@ -425,29 +413,35 @@ public final class RawGrpc {
     if ((getListPassesByPassTemplateMethod = RawGrpc.getListPassesByPassTemplateMethod) == null) {
       synchronized (RawGrpc.class) {
         if ((getListPassesByPassTemplateMethod = RawGrpc.getListPassesByPassTemplateMethod) == null) {
-          RawGrpc.getListPassesByPassTemplateMethod = getListPassesByPassTemplateMethod = 
+          RawGrpc.getListPassesByPassTemplateMethod = getListPassesByPassTemplateMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest, com.passkit.grpc.Raw.PassOuterClass.Pass>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "raw.Raw", "listPassesByPassTemplate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listPassesByPassTemplate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Raw.PassOuterClass.Pass.getDefaultInstance()))
-                  .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassTemplate"))
-                  .build();
-          }
+              .setSchemaDescriptor(new RawMethodDescriptorSupplier("listPassesByPassTemplate"))
+              .build();
         }
-     }
-     return getListPassesByPassTemplateMethod;
+      }
+    }
+    return getListPassesByPassTemplateMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static RawStub newStub(io.grpc.Channel channel) {
-    return new RawStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawStub>() {
+        @java.lang.Override
+        public RawStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawStub(channel, callOptions);
+        }
+      };
+    return RawStub.newStub(factory, channel);
   }
 
   /**
@@ -455,7 +449,14 @@ public final class RawGrpc {
    */
   public static RawBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new RawBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawBlockingStub>() {
+        @java.lang.Override
+        public RawBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawBlockingStub(channel, callOptions);
+        }
+      };
+    return RawBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -463,7 +464,14 @@ public final class RawGrpc {
    */
   public static RawFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new RawFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<RawFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<RawFutureStub>() {
+        @java.lang.Override
+        public RawFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new RawFutureStub(channel, callOptions);
+        }
+      };
+    return RawFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -660,19 +668,15 @@ public final class RawGrpc {
 
   /**
    */
-  public static final class RawStub extends io.grpc.stub.AbstractStub<RawStub> {
-    private RawStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawStub extends io.grpc.stub.AbstractAsyncStub<RawStub> {
+    private RawStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawStub(channel, callOptions);
     }
 
@@ -783,19 +787,15 @@ public final class RawGrpc {
 
   /**
    */
-  public static final class RawBlockingStub extends io.grpc.stub.AbstractStub<RawBlockingStub> {
-    private RawBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawBlockingStub extends io.grpc.stub.AbstractBlockingStub<RawBlockingStub> {
+    private RawBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawBlockingStub(channel, callOptions);
     }
 
@@ -888,19 +888,15 @@ public final class RawGrpc {
 
   /**
    */
-  public static final class RawFutureStub extends io.grpc.stub.AbstractStub<RawFutureStub> {
-    private RawFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private RawFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class RawFutureStub extends io.grpc.stub.AbstractFutureStub<RawFutureStub> {
+    private RawFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected RawFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected RawFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new RawFutureStub(channel, callOptions);
     }
 

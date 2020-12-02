@@ -50,7 +50,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.GPSLocation> 
         getLocationsList();
@@ -59,7 +59,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocation getLocations(int index);
     /**
@@ -67,7 +67,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getLocationsCount();
     /**
@@ -75,7 +75,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
         getLocationsOrBuilderList();
@@ -84,7 +84,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
         int index);
@@ -94,7 +94,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Proximity.Beacon> 
         getBeaconsList();
@@ -103,7 +103,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.Beacon getBeacons(int index);
     /**
@@ -111,7 +111,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getBeaconsCount();
     /**
@@ -119,7 +119,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
         getBeaconsOrBuilderList();
@@ -128,7 +128,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
         int index);
@@ -138,7 +138,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<com.passkit.grpc.Links.Link> 
         getLinksList();
@@ -147,7 +147,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Links.Link getLinks(int index);
     /**
@@ -155,7 +155,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     int getLinksCount();
     /**
@@ -163,7 +163,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
         getLinksOrBuilderList();
@@ -172,7 +172,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
         int index);
@@ -396,7 +396,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationsList() {
@@ -407,7 +407,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
@@ -419,7 +419,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getLocationsCount() {
@@ -430,7 +430,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocation getLocations(int index) {
@@ -441,7 +441,7 @@ public final class PassOuterClass {
      * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
@@ -456,7 +456,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconsList() {
@@ -467,7 +467,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
@@ -479,7 +479,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getBeaconsCount() {
@@ -490,7 +490,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.Beacon getBeacons(int index) {
@@ -501,7 +501,7 @@ public final class PassOuterClass {
      * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
@@ -516,7 +516,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<com.passkit.grpc.Links.Link> getLinksList() {
@@ -527,7 +527,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
@@ -539,7 +539,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public int getLinksCount() {
@@ -550,7 +550,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Links.Link getLinks(int index) {
@@ -561,7 +561,7 @@ public final class PassOuterClass {
      * A list of (personalized) links to be shown on the pass. Overrides any template level values.
      * </pre>
      *
-     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+     * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
@@ -1295,7 +1295,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation> getLocationsList() {
         if (locationsBuilder_ == null) {
@@ -1309,7 +1309,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getLocationsCount() {
         if (locationsBuilder_ == null) {
@@ -1323,7 +1323,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation getLocations(int index) {
         if (locationsBuilder_ == null) {
@@ -1337,7 +1337,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -1358,7 +1358,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -1376,7 +1376,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(com.passkit.grpc.Proximity.GPSLocation value) {
         if (locationsBuilder_ == null) {
@@ -1396,7 +1396,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation value) {
@@ -1417,7 +1417,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -1435,7 +1435,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLocations(
           int index, com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
@@ -1453,7 +1453,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllLocations(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.GPSLocation> values) {
@@ -1472,7 +1472,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearLocations() {
         if (locationsBuilder_ == null) {
@@ -1489,7 +1489,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeLocations(int index) {
         if (locationsBuilder_ == null) {
@@ -1506,7 +1506,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder getLocationsBuilder(
           int index) {
@@ -1517,7 +1517,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationsOrBuilder(
           int index) {
@@ -1531,7 +1531,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.GPSLocationOrBuilder> 
            getLocationsOrBuilderList() {
@@ -1546,7 +1546,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationsBuilder() {
         return getLocationsFieldBuilder().addBuilder(
@@ -1557,7 +1557,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder addLocationsBuilder(
           int index) {
@@ -1569,7 +1569,7 @@ public final class PassOuterClass {
        * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.GPSLocation.Builder> 
            getLocationsBuilderList() {
@@ -1607,7 +1607,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon> getBeaconsList() {
         if (beaconsBuilder_ == null) {
@@ -1621,7 +1621,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getBeaconsCount() {
         if (beaconsBuilder_ == null) {
@@ -1635,7 +1635,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon getBeacons(int index) {
         if (beaconsBuilder_ == null) {
@@ -1649,7 +1649,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeacons(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -1670,7 +1670,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setBeacons(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -1688,7 +1688,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(com.passkit.grpc.Proximity.Beacon value) {
         if (beaconsBuilder_ == null) {
@@ -1708,7 +1708,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           int index, com.passkit.grpc.Proximity.Beacon value) {
@@ -1729,7 +1729,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -1747,7 +1747,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addBeacons(
           int index, com.passkit.grpc.Proximity.Beacon.Builder builderForValue) {
@@ -1765,7 +1765,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllBeacons(
           java.lang.Iterable<? extends com.passkit.grpc.Proximity.Beacon> values) {
@@ -1784,7 +1784,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearBeacons() {
         if (beaconsBuilder_ == null) {
@@ -1801,7 +1801,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeBeacons(int index) {
         if (beaconsBuilder_ == null) {
@@ -1818,7 +1818,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder getBeaconsBuilder(
           int index) {
@@ -1829,7 +1829,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.BeaconOrBuilder getBeaconsOrBuilder(
           int index) {
@@ -1843,7 +1843,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Proximity.BeaconOrBuilder> 
            getBeaconsOrBuilderList() {
@@ -1858,7 +1858,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconsBuilder() {
         return getBeaconsFieldBuilder().addBuilder(
@@ -1869,7 +1869,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Proximity.Beacon.Builder addBeaconsBuilder(
           int index) {
@@ -1881,7 +1881,7 @@ public final class PassOuterClass {
        * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Proximity.Beacon.Builder> 
            getBeaconsBuilderList() {
@@ -1919,7 +1919,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Links.Link> getLinksList() {
         if (linksBuilder_ == null) {
@@ -1933,7 +1933,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public int getLinksCount() {
         if (linksBuilder_ == null) {
@@ -1947,7 +1947,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Links.Link getLinks(int index) {
         if (linksBuilder_ == null) {
@@ -1961,7 +1961,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLinks(
           int index, com.passkit.grpc.Links.Link value) {
@@ -1982,7 +1982,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder setLinks(
           int index, com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -2000,7 +2000,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLinks(com.passkit.grpc.Links.Link value) {
         if (linksBuilder_ == null) {
@@ -2020,7 +2020,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLinks(
           int index, com.passkit.grpc.Links.Link value) {
@@ -2041,7 +2041,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLinks(
           com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -2059,7 +2059,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addLinks(
           int index, com.passkit.grpc.Links.Link.Builder builderForValue) {
@@ -2077,7 +2077,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder addAllLinks(
           java.lang.Iterable<? extends com.passkit.grpc.Links.Link> values) {
@@ -2096,7 +2096,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
@@ -2113,7 +2113,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder removeLinks(int index) {
         if (linksBuilder_ == null) {
@@ -2130,7 +2130,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Links.Link.Builder getLinksBuilder(
           int index) {
@@ -2141,7 +2141,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Links.LinkOrBuilder getLinksOrBuilder(
           int index) {
@@ -2155,7 +2155,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<? extends com.passkit.grpc.Links.LinkOrBuilder> 
            getLinksOrBuilderList() {
@@ -2170,7 +2170,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Links.Link.Builder addLinksBuilder() {
         return getLinksFieldBuilder().addBuilder(
@@ -2181,7 +2181,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.passkit.grpc.Links.Link.Builder addLinksBuilder(
           int index) {
@@ -2193,7 +2193,7 @@ public final class PassOuterClass {
        * A list of (personalized) links to be shown on the pass. Overrides any template level values.
        * </pre>
        *
-       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_swagger.options.openapiv2_field) = { ... }</code>
+       * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public java.util.List<com.passkit.grpc.Links.Link.Builder> 
            getLinksBuilderList() {
@@ -5316,23 +5316,24 @@ public final class PassOuterClass {
       "on/metrics.proto\032\030io/common/personal.pro" +
       "to\032\031io/common/protocols.proto\032\031io/common" +
       "/proximity.proto\032\030io/common/template.pro" +
-      "to\032,protoc-gen-swagger/options/annotatio" +
-      "ns.proto\"\303\001\n\rPassOverrides\022\036\n\010imageIds\030\001" +
-      " \001(\0132\014.io.ImageIds\022*\n\tlocations\030\003 \003(\0132\017." +
-      "io.GPSLocationB\006\222A\003\240\001\n\022#\n\007beacons\030\004 \003(\0132" +
-      "\n.io.BeaconB\006\222A\003\240\001\n\022\037\n\005links\030\005 \003(\0132\010.io." +
-      "LinkB\006\222A\003\240\001\n\022\032\n\006colors\030\006 \001(\0132\n.io.Colors" +
-      "J\004\010\002\020\003\"\\\n\013PassOptions\022&\n\005apple\030\001 \001(\0132\027.i" +
-      "o.AppleWalletSettings\022%\n\006google\030\002 \001(\0132\025." +
-      "io.GooglePaySettings\"\377\001\n\004Pass\022\n\n\002id\030\001 \001(" +
-      "\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020.i" +
-      "o.PassProtocol\022!\n\rpersonDetails\030\004 \001(\0132\n." +
-      "io.Person\022\036\n\010metadata\030\005 \001(\0132\014.io.Metadat" +
-      "a\022,\n\nrecordData\030\006 \003(\0132\030.io.Pass.RecordDa" +
-      "taEntry\022\022\n\nexternalId\030\007 \001(\t\0321\n\017RecordDat" +
-      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BG" +
-      "\n\020com.passkit.grpcZ$stash.passkit.com/io" +
-      "/model/sdk/go/io\252\002\014PassKit.GRPCb\006proto3"
+      "to\032.protoc-gen-openapiv2/options/annotat" +
+      "ions.proto\"\303\001\n\rPassOverrides\022\036\n\010imageIds" +
+      "\030\001 \001(\0132\014.io.ImageIds\022*\n\tlocations\030\003 \003(\0132" +
+      "\017.io.GPSLocationB\006\222A\003\240\001\n\022#\n\007beacons\030\004 \003(" +
+      "\0132\n.io.BeaconB\006\222A\003\240\001\n\022\037\n\005links\030\005 \003(\0132\010.i" +
+      "o.LinkB\006\222A\003\240\001\n\022\032\n\006colors\030\006 \001(\0132\n.io.Colo" +
+      "rsJ\004\010\002\020\003\"\\\n\013PassOptions\022&\n\005apple\030\001 \001(\0132\027" +
+      ".io.AppleWalletSettings\022%\n\006google\030\002 \001(\0132" +
+      "\025.io.GooglePaySettings\"\377\001\n\004Pass\022\n\n\002id\030\001 " +
+      "\001(\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020" +
+      ".io.PassProtocol\022!\n\rpersonDetails\030\004 \001(\0132" +
+      "\n.io.Person\022\036\n\010metadata\030\005 \001(\0132\014.io.Metad" +
+      "ata\022,\n\nrecordData\030\006 \003(\0132\030.io.Pass.Record" +
+      "DataEntry\022\022\n\nexternalId\030\007 \001(\t\0321\n\017RecordD" +
+      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "BG\n\020com.passkit.grpcZ$stash.passkit.com/" +
+      "io/model/sdk/go/io\252\002\014PassKit.Grpcb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5344,7 +5345,7 @@ public final class PassOuterClass {
           com.passkit.grpc.Protocols.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
           com.passkit.grpc.Template.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_PassOverrides_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5372,7 +5373,7 @@ public final class PassOuterClass {
         new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Field);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.passkit.grpc.Image.getDescriptor();
@@ -5382,7 +5383,7 @@ public final class PassOuterClass {
     com.passkit.grpc.Protocols.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
     com.passkit.grpc.Template.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

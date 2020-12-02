@@ -8226,7 +8226,7 @@ public final class JobOuterClass {
       "\035\n\031JOB_COMPLETED_WITH_ERRORS\020\004*1\n\007JobTyp" +
       "e\022\022\n\016JOB_CSV_IMPORT\020\000\022\022\n\016JOB_CSV_EXPORT\020" +
       "\001BG\n\020com.passkit.grpcZ$stash.passkit.com" +
-      "/io/model/sdk/go/io\252\002\014PassKit.GRPCb\006prot" +
+      "/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

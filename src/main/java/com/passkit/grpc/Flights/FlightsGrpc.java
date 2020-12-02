@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/flights/a_rpc.proto")
 public final class FlightsGrpc {
 
@@ -41,22 +41,21 @@ public final class FlightsGrpc {
     if ((getCreatePortMethod = FlightsGrpc.getCreatePortMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getCreatePortMethod = FlightsGrpc.getCreatePortMethod) == null) {
-          FlightsGrpc.getCreatePortMethod = getCreatePortMethod = 
+          FlightsGrpc.getCreatePortMethod = getCreatePortMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.Airport.Port, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "createPort"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createPort"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.Port.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createPort"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createPort"))
+              .build();
         }
-     }
-     return getCreatePortMethod;
+      }
+    }
+    return getCreatePortMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.Airport.AirportCode,
@@ -73,22 +72,21 @@ public final class FlightsGrpc {
     if ((getGetPortMethod = FlightsGrpc.getGetPortMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetPortMethod = FlightsGrpc.getGetPortMethod) == null) {
-          FlightsGrpc.getGetPortMethod = getGetPortMethod = 
+          FlightsGrpc.getGetPortMethod = getGetPortMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.Airport.AirportCode, com.passkit.grpc.Flights.Airport.Port>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getPort"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getPort"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.AirportCode.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.Port.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getPort"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getPort"))
+              .build();
         }
-     }
-     return getGetPortMethod;
+      }
+    }
+    return getGetPortMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.Airport.Port,
@@ -105,22 +103,21 @@ public final class FlightsGrpc {
     if ((getUpdatePortMethod = FlightsGrpc.getUpdatePortMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getUpdatePortMethod = FlightsGrpc.getUpdatePortMethod) == null) {
-          FlightsGrpc.getUpdatePortMethod = getUpdatePortMethod = 
+          FlightsGrpc.getUpdatePortMethod = getUpdatePortMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.Airport.Port, com.passkit.grpc.Flights.Airport.Port>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "updatePort"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updatePort"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.Port.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.Port.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updatePort"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updatePort"))
+              .build();
         }
-     }
-     return getUpdatePortMethod;
+      }
+    }
+    return getUpdatePortMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.Airport.AirportCode,
@@ -137,22 +134,21 @@ public final class FlightsGrpc {
     if ((getDeletePortMethod = FlightsGrpc.getDeletePortMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getDeletePortMethod = FlightsGrpc.getDeletePortMethod) == null) {
-          FlightsGrpc.getDeletePortMethod = getDeletePortMethod = 
+          FlightsGrpc.getDeletePortMethod = getDeletePortMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.Airport.AirportCode, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "deletePort"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deletePort"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.Airport.AirportCode.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deletePort"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deletePort"))
+              .build();
         }
-     }
-     return getDeletePortMethod;
+      }
+    }
+    return getDeletePortMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.CarrierOuterClass.Carrier,
@@ -169,22 +165,21 @@ public final class FlightsGrpc {
     if ((getCreateCarrierMethod = FlightsGrpc.getCreateCarrierMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getCreateCarrierMethod = FlightsGrpc.getCreateCarrierMethod) == null) {
-          FlightsGrpc.getCreateCarrierMethod = getCreateCarrierMethod = 
+          FlightsGrpc.getCreateCarrierMethod = getCreateCarrierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.CarrierOuterClass.Carrier, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "createCarrier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createCarrier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.Carrier.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createCarrier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createCarrier"))
+              .build();
         }
-     }
-     return getCreateCarrierMethod;
+      }
+    }
+    return getCreateCarrierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode,
@@ -201,22 +196,21 @@ public final class FlightsGrpc {
     if ((getGetCarrierMethod = FlightsGrpc.getGetCarrierMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetCarrierMethod = FlightsGrpc.getGetCarrierMethod) == null) {
-          FlightsGrpc.getGetCarrierMethod = getGetCarrierMethod = 
+          FlightsGrpc.getGetCarrierMethod = getGetCarrierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode, com.passkit.grpc.Flights.CarrierOuterClass.Carrier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getCarrier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getCarrier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.Carrier.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getCarrier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getCarrier"))
+              .build();
         }
-     }
-     return getGetCarrierMethod;
+      }
+    }
+    return getGetCarrierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.CarrierOuterClass.Carrier,
@@ -233,22 +227,21 @@ public final class FlightsGrpc {
     if ((getUpdateCarrierMethod = FlightsGrpc.getUpdateCarrierMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getUpdateCarrierMethod = FlightsGrpc.getUpdateCarrierMethod) == null) {
-          FlightsGrpc.getUpdateCarrierMethod = getUpdateCarrierMethod = 
+          FlightsGrpc.getUpdateCarrierMethod = getUpdateCarrierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.CarrierOuterClass.Carrier, com.passkit.grpc.Flights.CarrierOuterClass.Carrier>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "updateCarrier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateCarrier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.Carrier.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.Carrier.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateCarrier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateCarrier"))
+              .build();
         }
-     }
-     return getUpdateCarrierMethod;
+      }
+    }
+    return getUpdateCarrierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode,
@@ -265,22 +258,21 @@ public final class FlightsGrpc {
     if ((getDeleteCarrierMethod = FlightsGrpc.getDeleteCarrierMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getDeleteCarrierMethod = FlightsGrpc.getDeleteCarrierMethod) == null) {
-          FlightsGrpc.getDeleteCarrierMethod = getDeleteCarrierMethod = 
+          FlightsGrpc.getDeleteCarrierMethod = getDeleteCarrierMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "deleteCarrier"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteCarrier"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteCarrier"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteCarrier"))
+              .build();
         }
-     }
-     return getDeleteCarrierMethod;
+      }
+    }
+    return getDeleteCarrierMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator,
@@ -297,22 +289,21 @@ public final class FlightsGrpc {
     if ((getCreateFlightDesignatorMethod = FlightsGrpc.getCreateFlightDesignatorMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getCreateFlightDesignatorMethod = FlightsGrpc.getCreateFlightDesignatorMethod) == null) {
-          FlightsGrpc.getCreateFlightDesignatorMethod = getCreateFlightDesignatorMethod = 
+          FlightsGrpc.getCreateFlightDesignatorMethod = getCreateFlightDesignatorMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "createFlightDesignator"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createFlightDesignator"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createFlightDesignator"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createFlightDesignator"))
+              .build();
         }
-     }
-     return getCreateFlightDesignatorMethod;
+      }
+    }
+    return getCreateFlightDesignatorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest,
@@ -329,22 +320,21 @@ public final class FlightsGrpc {
     if ((getGetFlightDesignatorMethod = FlightsGrpc.getGetFlightDesignatorMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetFlightDesignatorMethod = FlightsGrpc.getGetFlightDesignatorMethod) == null) {
-          FlightsGrpc.getGetFlightDesignatorMethod = getGetFlightDesignatorMethod = 
+          FlightsGrpc.getGetFlightDesignatorMethod = getGetFlightDesignatorMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest, com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getFlightDesignator"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getFlightDesignator"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getFlightDesignator"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getFlightDesignator"))
+              .build();
         }
-     }
-     return getGetFlightDesignatorMethod;
+      }
+    }
+    return getGetFlightDesignatorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator,
@@ -361,22 +351,21 @@ public final class FlightsGrpc {
     if ((getUpdateFlightDesignatorMethod = FlightsGrpc.getUpdateFlightDesignatorMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getUpdateFlightDesignatorMethod = FlightsGrpc.getUpdateFlightDesignatorMethod) == null) {
-          FlightsGrpc.getUpdateFlightDesignatorMethod = getUpdateFlightDesignatorMethod = 
+          FlightsGrpc.getUpdateFlightDesignatorMethod = getUpdateFlightDesignatorMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator, com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "updateFlightDesignator"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateFlightDesignator"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateFlightDesignator"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateFlightDesignator"))
+              .build();
         }
-     }
-     return getUpdateFlightDesignatorMethod;
+      }
+    }
+    return getUpdateFlightDesignatorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest,
@@ -393,22 +382,21 @@ public final class FlightsGrpc {
     if ((getDeleteFlightDesignatorMethod = FlightsGrpc.getDeleteFlightDesignatorMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getDeleteFlightDesignatorMethod = FlightsGrpc.getDeleteFlightDesignatorMethod) == null) {
-          FlightsGrpc.getDeleteFlightDesignatorMethod = getDeleteFlightDesignatorMethod = 
+          FlightsGrpc.getDeleteFlightDesignatorMethod = getDeleteFlightDesignatorMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "deleteFlightDesignator"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteFlightDesignator"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteFlightDesignator"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteFlightDesignator"))
+              .build();
         }
-     }
-     return getDeleteFlightDesignatorMethod;
+      }
+    }
+    return getDeleteFlightDesignatorMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightOuterClass.Flight,
@@ -425,22 +413,21 @@ public final class FlightsGrpc {
     if ((getCreateFlightMethod = FlightsGrpc.getCreateFlightMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getCreateFlightMethod = FlightsGrpc.getCreateFlightMethod) == null) {
-          FlightsGrpc.getCreateFlightMethod = getCreateFlightMethod = 
+          FlightsGrpc.getCreateFlightMethod = getCreateFlightMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightOuterClass.Flight, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "createFlight"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createFlight"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.Flight.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createFlight"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createFlight"))
+              .build();
         }
-     }
-     return getCreateFlightMethod;
+      }
+    }
+    return getCreateFlightMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightOuterClass.FlightRequest,
@@ -457,22 +444,21 @@ public final class FlightsGrpc {
     if ((getGetFlightMethod = FlightsGrpc.getGetFlightMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetFlightMethod = FlightsGrpc.getGetFlightMethod) == null) {
-          FlightsGrpc.getGetFlightMethod = getGetFlightMethod = 
+          FlightsGrpc.getGetFlightMethod = getGetFlightMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightOuterClass.FlightRequest, com.passkit.grpc.Flights.FlightOuterClass.Flight>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getFlight"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getFlight"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.FlightRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.Flight.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getFlight"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getFlight"))
+              .build();
         }
-     }
-     return getGetFlightMethod;
+      }
+    }
+    return getGetFlightMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightOuterClass.Flight,
@@ -489,22 +475,21 @@ public final class FlightsGrpc {
     if ((getUpdateFlightMethod = FlightsGrpc.getUpdateFlightMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getUpdateFlightMethod = FlightsGrpc.getUpdateFlightMethod) == null) {
-          FlightsGrpc.getUpdateFlightMethod = getUpdateFlightMethod = 
+          FlightsGrpc.getUpdateFlightMethod = getUpdateFlightMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightOuterClass.Flight, com.passkit.grpc.Flights.FlightOuterClass.Flight>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "updateFlight"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateFlight"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.Flight.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.Flight.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateFlight"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateFlight"))
+              .build();
         }
-     }
-     return getUpdateFlightMethod;
+      }
+    }
+    return getUpdateFlightMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.FlightOuterClass.FlightRequest,
@@ -521,22 +506,21 @@ public final class FlightsGrpc {
     if ((getDeleteFlightMethod = FlightsGrpc.getDeleteFlightMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getDeleteFlightMethod = FlightsGrpc.getDeleteFlightMethod) == null) {
-          FlightsGrpc.getDeleteFlightMethod = getDeleteFlightMethod = 
+          FlightsGrpc.getDeleteFlightMethod = getDeleteFlightMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.FlightOuterClass.FlightRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "deleteFlight"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteFlight"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.FlightOuterClass.FlightRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteFlight"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteFlight"))
+              .build();
         }
-     }
-     return getDeleteFlightMethod;
+      }
+    }
+    return getDeleteFlightMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord,
@@ -553,22 +537,21 @@ public final class FlightsGrpc {
     if ((getCreateBoardingPassMethod = FlightsGrpc.getCreateBoardingPassMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getCreateBoardingPassMethod = FlightsGrpc.getCreateBoardingPassMethod) == null) {
-          FlightsGrpc.getCreateBoardingPassMethod = getCreateBoardingPassMethod = 
+          FlightsGrpc.getCreateBoardingPassMethod = getCreateBoardingPassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord, com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "createBoardingPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createBoardingPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createBoardingPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("createBoardingPass"))
+              .build();
         }
-     }
-     return getCreateBoardingPassMethod;
+      }
+    }
+    return getCreateBoardingPassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest,
@@ -585,22 +568,21 @@ public final class FlightsGrpc {
     if ((getGetBoardingPassRecordMethod = FlightsGrpc.getGetBoardingPassRecordMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetBoardingPassRecordMethod = FlightsGrpc.getGetBoardingPassRecordMethod) == null) {
-          FlightsGrpc.getGetBoardingPassRecordMethod = getGetBoardingPassRecordMethod = 
+          FlightsGrpc.getGetBoardingPassRecordMethod = getGetBoardingPassRecordMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest, com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getBoardingPassRecord"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBoardingPassRecord"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getBoardingPassRecord"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getBoardingPassRecord"))
+              .build();
         }
-     }
-     return getGetBoardingPassRecordMethod;
+      }
+    }
+    return getGetBoardingPassRecordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest,
@@ -617,22 +599,21 @@ public final class FlightsGrpc {
     if ((getGetBoardingPassMethod = FlightsGrpc.getGetBoardingPassMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getGetBoardingPassMethod = FlightsGrpc.getGetBoardingPassMethod) == null) {
-          FlightsGrpc.getGetBoardingPassMethod = getGetBoardingPassMethod = 
+          FlightsGrpc.getGetBoardingPassMethod = getGetBoardingPassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest, com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "getBoardingPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getBoardingPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getBoardingPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("getBoardingPass"))
+              .build();
         }
-     }
-     return getGetBoardingPassMethod;
+      }
+    }
+    return getGetBoardingPassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord,
@@ -649,22 +630,21 @@ public final class FlightsGrpc {
     if ((getUpdateBoardingPassMethod = FlightsGrpc.getUpdateBoardingPassMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getUpdateBoardingPassMethod = FlightsGrpc.getUpdateBoardingPassMethod) == null) {
-          FlightsGrpc.getUpdateBoardingPassMethod = getUpdateBoardingPassMethod = 
+          FlightsGrpc.getUpdateBoardingPassMethod = getUpdateBoardingPassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord, com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "updateBoardingPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateBoardingPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateBoardingPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("updateBoardingPass"))
+              .build();
         }
-     }
-     return getUpdateBoardingPassMethod;
+      }
+    }
+    return getUpdateBoardingPassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest,
@@ -681,29 +661,35 @@ public final class FlightsGrpc {
     if ((getDeleteBoardingPassMethod = FlightsGrpc.getDeleteBoardingPassMethod) == null) {
       synchronized (FlightsGrpc.class) {
         if ((getDeleteBoardingPassMethod = FlightsGrpc.getDeleteBoardingPassMethod) == null) {
-          FlightsGrpc.getDeleteBoardingPassMethod = getDeleteBoardingPassMethod = 
+          FlightsGrpc.getDeleteBoardingPassMethod = getDeleteBoardingPassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "flights.Flights", "deleteBoardingPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteBoardingPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteBoardingPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new FlightsMethodDescriptorSupplier("deleteBoardingPass"))
+              .build();
         }
-     }
-     return getDeleteBoardingPassMethod;
+      }
+    }
+    return getDeleteBoardingPassMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static FlightsStub newStub(io.grpc.Channel channel) {
-    return new FlightsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlightsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlightsStub>() {
+        @java.lang.Override
+        public FlightsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlightsStub(channel, callOptions);
+        }
+      };
+    return FlightsStub.newStub(factory, channel);
   }
 
   /**
@@ -711,7 +697,14 @@ public final class FlightsGrpc {
    */
   public static FlightsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new FlightsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlightsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlightsBlockingStub>() {
+        @java.lang.Override
+        public FlightsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlightsBlockingStub(channel, callOptions);
+        }
+      };
+    return FlightsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -719,7 +712,14 @@ public final class FlightsGrpc {
    */
   public static FlightsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new FlightsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<FlightsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<FlightsFutureStub>() {
+        @java.lang.Override
+        public FlightsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new FlightsFutureStub(channel, callOptions);
+        }
+      };
+    return FlightsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -1091,19 +1091,15 @@ public final class FlightsGrpc {
 
   /**
    */
-  public static final class FlightsStub extends io.grpc.stub.AbstractStub<FlightsStub> {
-    private FlightsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlightsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlightsStub extends io.grpc.stub.AbstractAsyncStub<FlightsStub> {
+    private FlightsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlightsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlightsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlightsStub(channel, callOptions);
     }
 
@@ -1341,19 +1337,15 @@ public final class FlightsGrpc {
 
   /**
    */
-  public static final class FlightsBlockingStub extends io.grpc.stub.AbstractStub<FlightsBlockingStub> {
-    private FlightsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlightsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlightsBlockingStub extends io.grpc.stub.AbstractBlockingStub<FlightsBlockingStub> {
+    private FlightsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlightsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlightsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlightsBlockingStub(channel, callOptions);
     }
 
@@ -1570,19 +1562,15 @@ public final class FlightsGrpc {
 
   /**
    */
-  public static final class FlightsFutureStub extends io.grpc.stub.AbstractStub<FlightsFutureStub> {
-    private FlightsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private FlightsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class FlightsFutureStub extends io.grpc.stub.AbstractFutureStub<FlightsFutureStub> {
+    private FlightsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected FlightsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected FlightsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new FlightsFutureStub(channel, callOptions);
     }
 

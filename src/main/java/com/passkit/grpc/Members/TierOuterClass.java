@@ -5308,40 +5308,41 @@ public final class TierOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024io/member/tier.proto\022\007members\032\037google/" +
-      "protobuf/timestamp.proto\032,protoc-gen-swa" +
-      "gger/options/annotations.proto\032\034io/commo" +
-      "n/localization.proto\032\036io/common/common_o" +
-      "bjects.proto\032\026io/common/expiry.proto\"\243\006\n" +
-      "\004Tier\022\n\n\002id\030\001 \001(\t\022\021\n\ttierIndex\030\002 \001(\r\022\014\n\004" +
-      "name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023.io.L" +
-      "ocalizedString\022\031\n\021secondaryTierName\030\005 \001(" +
-      "\t\0227\n\032localizedSecondaryTierName\030\006 \001(\0132\023." +
-      "io.LocalizedString\022\021\n\tprogramId\030\007 \001(\t\022\026\n" +
-      "\016passTemplateId\030\010 \001(\t\022\032\n\022tierUpgradeMess" +
-      "age\030\t \001(\t\0228\n\033localizedTierUpgradeMessage" +
-      "\030\n \001(\0132\023.io.LocalizedString\022\034\n\024tierDowng" +
-      "radeMessage\030\013 \001(\t\022:\n\035localizedTierDowngr" +
-      "adeMessage\030\014 \001(\0132\023.io.LocalizedString\022+\n" +
-      "\007created\030\r \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022+\n\007updated\030\016 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022\027\n\017pointsOverdrawn\030\017 \001(\010\022 \n\030seco" +
-      "ndaryPointsOverdrawn\030\020 \001(\010\022*\n\016expirySett" +
-      "ings\030\021 \001(\0132\022.io.ExpirySettings\022\020\n\010timezo" +
-      "ne\030\022 \001(\t\022&\n\022allowTierEnrolment\030\023 \001(\0132\n.i" +
-      "o.PkBool\022\021\n\tshortCode\030\024 \001(\t:\204\001\222A\200\001\n~*\004Ti" +
-      "er2ATier allows a company to override ce" +
-      "rtain details in the program.\322\001\002id\322\001\ttie" +
-      "rIndex\322\001\tprogramId\322\001\004name\322\001\016passTemplate" +
-      "Id\"5\n\020TierRequestInput\022\021\n\tprogramId\030\001 \001(" +
-      "\t\022\016\n\006tierId\030\002 \001(\tBT\n\030com.passkit.grpc.Me" +
-      "mbersZ,stash.passkit.com/io/model/sdk/go" +
-      "/io/members\252\002\tPKMembersb\006proto3"
+      "protobuf/timestamp.proto\032.protoc-gen-ope" +
+      "napiv2/options/annotations.proto\032\034io/com" +
+      "mon/localization.proto\032\036io/common/common" +
+      "_objects.proto\032\026io/common/expiry.proto\"\243" +
+      "\006\n\004Tier\022\n\n\002id\030\001 \001(\t\022\021\n\ttierIndex\030\002 \001(\r\022\014" +
+      "\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023.io" +
+      ".LocalizedString\022\031\n\021secondaryTierName\030\005 " +
+      "\001(\t\0227\n\032localizedSecondaryTierName\030\006 \001(\0132" +
+      "\023.io.LocalizedString\022\021\n\tprogramId\030\007 \001(\t\022" +
+      "\026\n\016passTemplateId\030\010 \001(\t\022\032\n\022tierUpgradeMe" +
+      "ssage\030\t \001(\t\0228\n\033localizedTierUpgradeMessa" +
+      "ge\030\n \001(\0132\023.io.LocalizedString\022\034\n\024tierDow" +
+      "ngradeMessage\030\013 \001(\t\022:\n\035localizedTierDown" +
+      "gradeMessage\030\014 \001(\0132\023.io.LocalizedString\022" +
+      "+\n\007created\030\r \001(\0132\032.google.protobuf.Times" +
+      "tamp\022+\n\007updated\030\016 \001(\0132\032.google.protobuf." +
+      "Timestamp\022\027\n\017pointsOverdrawn\030\017 \001(\010\022 \n\030se" +
+      "condaryPointsOverdrawn\030\020 \001(\010\022*\n\016expirySe" +
+      "ttings\030\021 \001(\0132\022.io.ExpirySettings\022\020\n\010time" +
+      "zone\030\022 \001(\t\022&\n\022allowTierEnrolment\030\023 \001(\0132\n" +
+      ".io.PkBool\022\021\n\tshortCode\030\024 \001(\t:\204\001\222A\200\001\n~*\004" +
+      "Tier2ATier allows a company to override " +
+      "certain details in the program.\322\001\002id\322\001\tt" +
+      "ierIndex\322\001\tprogramId\322\001\004name\322\001\016passTempla" +
+      "teId\"5\n\020TierRequestInput\022\021\n\tprogramId\030\001 " +
+      "\001(\t\022\016\n\006tierId\030\002 \001(\tB_\n\030com.passkit.grpc." +
+      "MembersZ,stash.passkit.com/io/model/sdk/" +
+      "go/io/members\252\002\024PassKit.Grpc.Membersb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Expiry.getDescriptor(),
@@ -5360,11 +5361,11 @@ public final class TierOuterClass {
         new java.lang.String[] { "ProgramId", "TierId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Schema);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Expiry.getDescriptor();

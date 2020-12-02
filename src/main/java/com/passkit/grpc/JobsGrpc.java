@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class JobsGrpc {
 
@@ -41,22 +41,21 @@ public final class JobsGrpc {
     if ((getImportCsvMethod = JobsGrpc.getImportCsvMethod) == null) {
       synchronized (JobsGrpc.class) {
         if ((getImportCsvMethod = JobsGrpc.getImportCsvMethod) == null) {
-          JobsGrpc.getImportCsvMethod = getImportCsvMethod = 
+          JobsGrpc.getImportCsvMethod = getImportCsvMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.JobOuterClass.CsvImportRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Jobs", "importCsv"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "importCsv"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.JobOuterClass.CsvImportRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new JobsMethodDescriptorSupplier("importCsv"))
-                  .build();
-          }
+              .setSchemaDescriptor(new JobsMethodDescriptorSupplier("importCsv"))
+              .build();
         }
-     }
-     return getImportCsvMethod;
+      }
+    }
+    return getImportCsvMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -73,22 +72,21 @@ public final class JobsGrpc {
     if ((getGetJobsMethod = JobsGrpc.getGetJobsMethod) == null) {
       synchronized (JobsGrpc.class) {
         if ((getGetJobsMethod = JobsGrpc.getGetJobsMethod) == null) {
-          JobsGrpc.getGetJobsMethod = getGetJobsMethod = 
+          JobsGrpc.getGetJobsMethod = getGetJobsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.JobOuterClass.Job>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Jobs", "getJobs"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getJobs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.JobOuterClass.Job.getDefaultInstance()))
-                  .setSchemaDescriptor(new JobsMethodDescriptorSupplier("getJobs"))
-                  .build();
-          }
+              .setSchemaDescriptor(new JobsMethodDescriptorSupplier("getJobs"))
+              .build();
         }
-     }
-     return getGetJobsMethod;
+      }
+    }
+    return getGetJobsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,29 +103,35 @@ public final class JobsGrpc {
     if ((getGetJobMethod = JobsGrpc.getGetJobMethod) == null) {
       synchronized (JobsGrpc.class) {
         if ((getGetJobMethod = JobsGrpc.getGetJobMethod) == null) {
-          JobsGrpc.getGetJobMethod = getGetJobMethod = 
+          JobsGrpc.getGetJobMethod = getGetJobMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.JobOuterClass.Job>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Jobs", "getJob"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.JobOuterClass.Job.getDefaultInstance()))
-                  .setSchemaDescriptor(new JobsMethodDescriptorSupplier("getJob"))
-                  .build();
-          }
+              .setSchemaDescriptor(new JobsMethodDescriptorSupplier("getJob"))
+              .build();
         }
-     }
-     return getGetJobMethod;
+      }
+    }
+    return getGetJobMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static JobsStub newStub(io.grpc.Channel channel) {
-    return new JobsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobsStub>() {
+        @java.lang.Override
+        public JobsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobsStub(channel, callOptions);
+        }
+      };
+    return JobsStub.newStub(factory, channel);
   }
 
   /**
@@ -135,7 +139,14 @@ public final class JobsGrpc {
    */
   public static JobsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new JobsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobsBlockingStub>() {
+        @java.lang.Override
+        public JobsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobsBlockingStub(channel, callOptions);
+        }
+      };
+    return JobsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -143,7 +154,14 @@ public final class JobsGrpc {
    */
   public static JobsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new JobsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<JobsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JobsFutureStub>() {
+        @java.lang.Override
+        public JobsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JobsFutureStub(channel, callOptions);
+        }
+      };
+    return JobsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -200,19 +218,15 @@ public final class JobsGrpc {
 
   /**
    */
-  public static final class JobsStub extends io.grpc.stub.AbstractStub<JobsStub> {
-    private JobsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobsStub extends io.grpc.stub.AbstractAsyncStub<JobsStub> {
+    private JobsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobsStub(channel, callOptions);
     }
 
@@ -243,19 +257,15 @@ public final class JobsGrpc {
 
   /**
    */
-  public static final class JobsBlockingStub extends io.grpc.stub.AbstractStub<JobsBlockingStub> {
-    private JobsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobsBlockingStub extends io.grpc.stub.AbstractBlockingStub<JobsBlockingStub> {
+    private JobsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobsBlockingStub(channel, callOptions);
     }
 
@@ -284,19 +294,15 @@ public final class JobsGrpc {
 
   /**
    */
-  public static final class JobsFutureStub extends io.grpc.stub.AbstractStub<JobsFutureStub> {
-    private JobsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private JobsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class JobsFutureStub extends io.grpc.stub.AbstractFutureStub<JobsFutureStub> {
+    private JobsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected JobsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected JobsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new JobsFutureStub(channel, callOptions);
     }
 

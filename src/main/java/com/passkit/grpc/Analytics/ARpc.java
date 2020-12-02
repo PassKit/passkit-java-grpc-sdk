@@ -24,42 +24,42 @@ public final class ARpc {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/analytics/a_rpc.proto\022\tanalytics\032\034g" +
-      "oogle/api/annotations.proto\032,protoc-gen-" +
-      "swagger/options/annotations.proto\032\031io/co" +
-      "mmon/reporting.proto2\346\001\n\tAnalytics\022\330\001\n\014g" +
-      "etAnalytics\022\024.io.AnalyticsRequest\032\025.io.A" +
-      "nalyticsResponse\"\232\001\202\323\344\223\002\026\022\024/analytics/{c" +
-      "lassId}\222A{\n\tAnalytics\022\rGet Analytics\032\033Re" +
-      "trieves an analytics dataJ\"\n\003403\022\033\n\031User" +
-      " lacks authorization.J\036\n\003404\022\027\n\025Record w" +
-      "as not found.B\200\003\n\032com.passkit.grpc.Analy" +
-      "ticsZ.stash.passkit.com/io/model/sdk/go/" +
-      "io/analytics\252\002\013PKAnalytics\222A\242\002\022\370\001\n\025PassK" +
-      "it Analytics API\022_The PassKit Analytics " +
-      "API lets you track the performance of Ap" +
-      "ple Wallet and Google Pay passes.\0328https" +
-      "://passkit.com/legal/terms-of-subscripti" +
-      "on-service/\"?\n\017PassKit Support\022\027https://" +
-      "docs.passkit.io\032\023support@passkit.com2\0030." +
-      "1*\001\0022\020application/json:\020application/json" +
-      "b\006proto3"
+      "oogle/api/annotations.proto\032.protoc-gen-" +
+      "openapiv2/options/annotations.proto\032\031io/" +
+      "common/reporting.proto2\346\001\n\tAnalytics\022\330\001\n" +
+      "\014getAnalytics\022\024.io.AnalyticsRequest\032\025.io" +
+      ".AnalyticsResponse\"\232\001\202\323\344\223\002\026\022\024/analytics/" +
+      "{classId}\222A{\n\tAnalytics\022\rGet Analytics\032\033" +
+      "Retrieves an analytics dataJ\"\n\003403\022\033\n\031Us" +
+      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
+      " was not found.B\213\003\n\032com.passkit.grpc.Ana" +
+      "lyticsZ.stash.passkit.com/io/model/sdk/g" +
+      "o/io/analytics\252\002\026PassKit.Grpc.Analytics\222" +
+      "A\242\002\022\370\001\n\025PassKit Analytics API\022_The PassK" +
+      "it Analytics API lets you track the perf" +
+      "ormance of Apple Wallet and Google Pay p" +
+      "asses.\0328https://passkit.com/legal/terms-" +
+      "of-subscription-service/\"?\n\017PassKit Supp" +
+      "ort\022\027https://docs.passkit.io\032\023support@pa" +
+      "sskit.com2\0030.1*\001\0022\020application/json:\020app" +
+      "lication/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
-          grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.Reporting.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Operation);
-    registry.add(grpc.gateway.protoc_gen_swagger.options.Annotations.openapiv2Swagger);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
-    grpc.gateway.protoc_gen_swagger.options.Annotations.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.Reporting.getDescriptor();
   }
 

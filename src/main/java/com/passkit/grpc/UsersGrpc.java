@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class UsersGrpc {
 
@@ -41,22 +41,21 @@ public final class UsersGrpc {
     if ((getCreateUserMethod = UsersGrpc.getCreateUserMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getCreateUserMethod = UsersGrpc.getCreateUserMethod) == null) {
-          UsersGrpc.getCreateUserMethod = getCreateUserMethod = 
+          UsersGrpc.getCreateUserMethod = getCreateUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.NewUser, com.passkit.grpc.User.NewUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "createUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.NewUser.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.NewUserResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("createUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("createUser"))
+              .build();
         }
-     }
-     return getCreateUserMethod;
+      }
+    }
+    return getCreateUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.NewUser,
@@ -73,22 +72,21 @@ public final class UsersGrpc {
     if ((getNewUserMethod = UsersGrpc.getNewUserMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getNewUserMethod = UsersGrpc.getNewUserMethod) == null) {
-          UsersGrpc.getNewUserMethod = getNewUserMethod = 
+          UsersGrpc.getNewUserMethod = getNewUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.NewUser, com.passkit.grpc.User.JWT>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "newUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "newUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.NewUser.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.JWT.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("newUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("newUser"))
+              .build();
         }
-     }
-     return getNewUserMethod;
+      }
+    }
+    return getNewUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -105,22 +103,21 @@ public final class UsersGrpc {
     if ((getVerifyMethod = UsersGrpc.getVerifyMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getVerifyMethod = UsersGrpc.getVerifyMethod) == null) {
-          UsersGrpc.getVerifyMethod = getVerifyMethod = 
+          UsersGrpc.getVerifyMethod = getVerifyMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Boolean>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "verify"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "verify"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Boolean.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("verify"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("verify"))
+              .build();
         }
-     }
-     return getVerifyMethod;
+      }
+    }
+    return getVerifyMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -137,22 +134,21 @@ public final class UsersGrpc {
     if ((getResendVerificationEmailMethod = UsersGrpc.getResendVerificationEmailMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getResendVerificationEmailMethod = UsersGrpc.getResendVerificationEmailMethod) == null) {
-          UsersGrpc.getResendVerificationEmailMethod = getResendVerificationEmailMethod = 
+          UsersGrpc.getResendVerificationEmailMethod = getResendVerificationEmailMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.CommonObjects.Boolean>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "resendVerificationEmail"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "resendVerificationEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Boolean.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("resendVerificationEmail"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("resendVerificationEmail"))
+              .build();
         }
-     }
-     return getResendVerificationEmailMethod;
+      }
+    }
+    return getResendVerificationEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
@@ -169,22 +165,21 @@ public final class UsersGrpc {
     if ((getGetUserMethod = UsersGrpc.getGetUserMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetUserMethod = UsersGrpc.getGetUserMethod) == null) {
-          UsersGrpc.getGetUserMethod = getGetUserMethod = 
+          UsersGrpc.getGetUserMethod = getGetUserMethod =
               io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.User.GetUserResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.GetUserResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getUser"))
+              .build();
         }
-     }
-     return getGetUserMethod;
+      }
+    }
+    return getGetUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.Credentials,
@@ -201,22 +196,21 @@ public final class UsersGrpc {
     if ((getLoginMethod = UsersGrpc.getLoginMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getLoginMethod = UsersGrpc.getLoginMethod) == null) {
-          UsersGrpc.getLoginMethod = getLoginMethod = 
+          UsersGrpc.getLoginMethod = getLoginMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.Credentials, com.passkit.grpc.User.JWT>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "login"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "login"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.Credentials.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.JWT.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("login"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("login"))
+              .build();
         }
-     }
-     return getLoginMethod;
+      }
+    }
+    return getLoginMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.Credentials,
@@ -233,22 +227,21 @@ public final class UsersGrpc {
     if ((getResetPasswordMethod = UsersGrpc.getResetPasswordMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getResetPasswordMethod = UsersGrpc.getResetPasswordMethod) == null) {
-          UsersGrpc.getResetPasswordMethod = getResetPasswordMethod = 
+          UsersGrpc.getResetPasswordMethod = getResetPasswordMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.Credentials, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "resetPassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "resetPassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.Credentials.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("resetPassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("resetPassword"))
+              .build();
         }
-     }
-     return getResetPasswordMethod;
+      }
+    }
+    return getResetPasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.Username,
@@ -265,22 +258,21 @@ public final class UsersGrpc {
     if ((getSendPasswordResetLinkMethod = UsersGrpc.getSendPasswordResetLinkMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getSendPasswordResetLinkMethod = UsersGrpc.getSendPasswordResetLinkMethod) == null) {
-          UsersGrpc.getSendPasswordResetLinkMethod = getSendPasswordResetLinkMethod = 
+          UsersGrpc.getSendPasswordResetLinkMethod = getSendPasswordResetLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.Username, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "sendPasswordResetLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendPasswordResetLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.Username.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("sendPasswordResetLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("sendPasswordResetLink"))
+              .build();
         }
-     }
-     return getSendPasswordResetLinkMethod;
+      }
+    }
+    return getSendPasswordResetLinkMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.PasswordResetInput,
@@ -297,22 +289,21 @@ public final class UsersGrpc {
     if ((getChangePasswordMethod = UsersGrpc.getChangePasswordMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getChangePasswordMethod = UsersGrpc.getChangePasswordMethod) == null) {
-          UsersGrpc.getChangePasswordMethod = getChangePasswordMethod = 
+          UsersGrpc.getChangePasswordMethod = getChangePasswordMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.User.PasswordResetInput, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "changePassword"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "changePassword"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.User.PasswordResetInput.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("changePassword"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("changePassword"))
+              .build();
         }
-     }
-     return getChangePasswordMethod;
+      }
+    }
+    return getChangePasswordMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -329,22 +320,21 @@ public final class UsersGrpc {
     if ((getGetProjectsForUserQueryDeprecatedMethod = UsersGrpc.getGetProjectsForUserQueryDeprecatedMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsForUserQueryDeprecatedMethod = UsersGrpc.getGetProjectsForUserQueryDeprecatedMethod) == null) {
-          UsersGrpc.getGetProjectsForUserQueryDeprecatedMethod = getGetProjectsForUserQueryDeprecatedMethod = 
+          UsersGrpc.getGetProjectsForUserQueryDeprecatedMethod = getGetProjectsForUserQueryDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectsForUserQueryDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectsForUserQueryDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUserQueryDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUserQueryDeprecated"))
+              .build();
         }
-     }
-     return getGetProjectsForUserQueryDeprecatedMethod;
+      }
+    }
+    return getGetProjectsForUserQueryDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.PaginationOuterClass.Pagination,
@@ -361,22 +351,21 @@ public final class UsersGrpc {
     if ((getGetProjectsQueryDeprecatedMethod = UsersGrpc.getGetProjectsQueryDeprecatedMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsQueryDeprecatedMethod = UsersGrpc.getGetProjectsQueryDeprecatedMethod) == null) {
-          UsersGrpc.getGetProjectsQueryDeprecatedMethod = getGetProjectsQueryDeprecatedMethod = 
+          UsersGrpc.getGetProjectsQueryDeprecatedMethod = getGetProjectsQueryDeprecatedMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectsQueryDeprecated"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectsQueryDeprecated"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsQueryDeprecated"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsQueryDeprecated"))
+              .build();
         }
-     }
-     return getGetProjectsQueryDeprecatedMethod;
+      }
+    }
+    return getGetProjectsQueryDeprecatedMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -393,22 +382,21 @@ public final class UsersGrpc {
     if ((getGetProjectsForUserQueryMethod = UsersGrpc.getGetProjectsForUserQueryMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsForUserQueryMethod = UsersGrpc.getGetProjectsForUserQueryMethod) == null) {
-          UsersGrpc.getGetProjectsForUserQueryMethod = getGetProjectsForUserQueryMethod = 
+          UsersGrpc.getGetProjectsForUserQueryMethod = getGetProjectsForUserQueryMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectsForUserQuery"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectsForUserQuery"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUserQuery"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUserQuery"))
+              .build();
         }
-     }
-     return getGetProjectsForUserQueryMethod;
+      }
+    }
+    return getGetProjectsForUserQueryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -425,22 +413,21 @@ public final class UsersGrpc {
     if ((getGetProjectsQueryMethod = UsersGrpc.getGetProjectsQueryMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsQueryMethod = UsersGrpc.getGetProjectsQueryMethod) == null) {
-          UsersGrpc.getGetProjectsQueryMethod = getGetProjectsQueryMethod = 
+          UsersGrpc.getGetProjectsQueryMethod = getGetProjectsQueryMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectsQuery"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectsQuery"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsQuery"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsQuery"))
+              .build();
         }
-     }
-     return getGetProjectsQueryMethod;
+      }
+    }
+    return getGetProjectsQueryMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -457,22 +444,21 @@ public final class UsersGrpc {
     if ((getGetProjectByUuidMethod = UsersGrpc.getGetProjectByUuidMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectByUuidMethod = UsersGrpc.getGetProjectByUuidMethod) == null) {
-          UsersGrpc.getGetProjectByUuidMethod = getGetProjectByUuidMethod = 
+          UsersGrpc.getGetProjectByUuidMethod = getGetProjectByUuidMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectByUuid"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectByUuid"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectByUuid"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectByUuid"))
+              .build();
         }
-     }
-     return getGetProjectByUuidMethod;
+      }
+    }
+    return getGetProjectByUuidMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -489,22 +475,21 @@ public final class UsersGrpc {
     if ((getGetProjectAndTemplateByShortCodeMethod = UsersGrpc.getGetProjectAndTemplateByShortCodeMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectAndTemplateByShortCodeMethod = UsersGrpc.getGetProjectAndTemplateByShortCodeMethod) == null) {
-          UsersGrpc.getGetProjectAndTemplateByShortCodeMethod = getGetProjectAndTemplateByShortCodeMethod = 
+          UsersGrpc.getGetProjectAndTemplateByShortCodeMethod = getGetProjectAndTemplateByShortCodeMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectAndTemplateByShortCode"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectAndTemplateByShortCode"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectAndTemplateByShortCode"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectAndTemplateByShortCode"))
+              .build();
         }
-     }
-     return getGetProjectAndTemplateByShortCodeMethod;
+      }
+    }
+    return getGetProjectAndTemplateByShortCodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
@@ -521,22 +506,21 @@ public final class UsersGrpc {
     if ((getGetProjectsForUserMethod = UsersGrpc.getGetProjectsForUserMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsForUserMethod = UsersGrpc.getGetProjectsForUserMethod) == null) {
-          UsersGrpc.getGetProjectsForUserMethod = getGetProjectsForUserMethod = 
+          UsersGrpc.getGetProjectsForUserMethod = getGetProjectsForUserMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjectsForUser"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjectsForUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUser"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjectsForUser"))
+              .build();
         }
-     }
-     return getGetProjectsForUserMethod;
+      }
+    }
+    return getGetProjectsForUserMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
@@ -553,29 +537,35 @@ public final class UsersGrpc {
     if ((getGetProjectsMethod = UsersGrpc.getGetProjectsMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getGetProjectsMethod = UsersGrpc.getGetProjectsMethod) == null) {
-          UsersGrpc.getGetProjectsMethod = getGetProjectsMethod = 
+          UsersGrpc.getGetProjectsMethod = getGetProjectsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter, com.passkit.grpc.ProjectOuterClass.Project>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Users", "getProjects"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProjects"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()))
-                  .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjects"))
-                  .build();
-          }
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getProjects"))
+              .build();
         }
-     }
-     return getGetProjectsMethod;
+      }
+    }
+    return getGetProjectsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static UsersStub newStub(io.grpc.Channel channel) {
-    return new UsersStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UsersStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UsersStub>() {
+        @java.lang.Override
+        public UsersStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UsersStub(channel, callOptions);
+        }
+      };
+    return UsersStub.newStub(factory, channel);
   }
 
   /**
@@ -583,7 +573,14 @@ public final class UsersGrpc {
    */
   public static UsersBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new UsersBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UsersBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UsersBlockingStub>() {
+        @java.lang.Override
+        public UsersBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UsersBlockingStub(channel, callOptions);
+        }
+      };
+    return UsersBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -591,7 +588,14 @@ public final class UsersGrpc {
    */
   public static UsersFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new UsersFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<UsersFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<UsersFutureStub>() {
+        @java.lang.Override
+        public UsersFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new UsersFutureStub(channel, callOptions);
+        }
+      };
+    return UsersFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -844,19 +848,15 @@ public final class UsersGrpc {
 
   /**
    */
-  public static final class UsersStub extends io.grpc.stub.AbstractStub<UsersStub> {
-    private UsersStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UsersStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UsersStub extends io.grpc.stub.AbstractAsyncStub<UsersStub> {
+    private UsersStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UsersStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UsersStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UsersStub(channel, callOptions);
     }
 
@@ -999,19 +999,15 @@ public final class UsersGrpc {
 
   /**
    */
-  public static final class UsersBlockingStub extends io.grpc.stub.AbstractStub<UsersBlockingStub> {
-    private UsersBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UsersBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UsersBlockingStub extends io.grpc.stub.AbstractBlockingStub<UsersBlockingStub> {
+    private UsersBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UsersBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UsersBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UsersBlockingStub(channel, callOptions);
     }
 
@@ -1143,19 +1139,15 @@ public final class UsersGrpc {
 
   /**
    */
-  public static final class UsersFutureStub extends io.grpc.stub.AbstractStub<UsersFutureStub> {
-    private UsersFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private UsersFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class UsersFutureStub extends io.grpc.stub.AbstractFutureStub<UsersFutureStub> {
+    private UsersFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected UsersFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected UsersFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new UsersFutureStub(channel, callOptions);
     }
 

@@ -1234,7 +1234,7 @@ public final class Expiry {
       "\n\034EXPIRE_ON_VARIABLE_DATE_TIME\020\003\022\026\n\022EXPI" +
       "RE_SET_TO_NULL\020\004BG\n\020com.passkit.grpcZ$st" +
       "ash.passkit.com/io/model/sdk/go/io\252\002\014Pas" +
-      "sKit.GRPCb\006proto3"
+      "sKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

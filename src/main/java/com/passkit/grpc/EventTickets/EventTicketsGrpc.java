@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/event_tickets/a_rpc.proto")
 public final class EventTicketsGrpc {
 
@@ -41,22 +41,21 @@ public final class EventTicketsGrpc {
     if ((getCreateProductionMethod = EventTicketsGrpc.getCreateProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCreateProductionMethod = EventTicketsGrpc.getCreateProductionMethod) == null) {
-          EventTicketsGrpc.getCreateProductionMethod = getCreateProductionMethod = 
+          EventTicketsGrpc.getCreateProductionMethod = getCreateProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.ProductionOuterClass.Production, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "createProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createProduction"))
+              .build();
         }
-     }
-     return getCreateProductionMethod;
+      }
+    }
+    return getCreateProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
@@ -73,22 +72,21 @@ public final class EventTicketsGrpc {
     if ((getPatchProductionMethod = EventTicketsGrpc.getPatchProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getPatchProductionMethod = EventTicketsGrpc.getPatchProductionMethod) == null) {
-          EventTicketsGrpc.getPatchProductionMethod = getPatchProductionMethod = 
+          EventTicketsGrpc.getPatchProductionMethod = getPatchProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.ProductionOuterClass.Production, com.passkit.grpc.EventTickets.ProductionOuterClass.Production>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "patchProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchProduction"))
+              .build();
         }
-     }
-     return getPatchProductionMethod;
+      }
+    }
+    return getPatchProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
@@ -105,22 +103,21 @@ public final class EventTicketsGrpc {
     if ((getUpdateProductionMethod = EventTicketsGrpc.getUpdateProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getUpdateProductionMethod = EventTicketsGrpc.getUpdateProductionMethod) == null) {
-          EventTicketsGrpc.getUpdateProductionMethod = getUpdateProductionMethod = 
+          EventTicketsGrpc.getUpdateProductionMethod = getUpdateProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.ProductionOuterClass.Production, com.passkit.grpc.EventTickets.ProductionOuterClass.Production>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "updateProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateProduction"))
+              .build();
         }
-     }
-     return getUpdateProductionMethod;
+      }
+    }
+    return getUpdateProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -137,22 +134,21 @@ public final class EventTicketsGrpc {
     if ((getGetProductionMethod = EventTicketsGrpc.getGetProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetProductionMethod = EventTicketsGrpc.getGetProductionMethod) == null) {
-          EventTicketsGrpc.getGetProductionMethod = getGetProductionMethod = 
+          EventTicketsGrpc.getGetProductionMethod = getGetProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.EventTickets.ProductionOuterClass.Production>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getProduction"))
+              .build();
         }
-     }
-     return getGetProductionMethod;
+      }
+    }
+    return getGetProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
@@ -169,22 +165,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteProductionMethod = EventTicketsGrpc.getDeleteProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteProductionMethod = EventTicketsGrpc.getDeleteProductionMethod) == null) {
-          EventTicketsGrpc.getDeleteProductionMethod = getDeleteProductionMethod = 
+          EventTicketsGrpc.getDeleteProductionMethod = getDeleteProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.ProductionOuterClass.Production, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteProduction"))
+              .build();
         }
-     }
-     return getDeleteProductionMethod;
+      }
+    }
+    return getDeleteProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -201,22 +196,21 @@ public final class EventTicketsGrpc {
     if ((getListProductionsMethod = EventTicketsGrpc.getListProductionsMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getListProductionsMethod = EventTicketsGrpc.getListProductionsMethod) == null) {
-          EventTicketsGrpc.getListProductionsMethod = getListProductionsMethod = 
+          EventTicketsGrpc.getListProductionsMethod = getListProductionsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.EventTickets.ProductionOuterClass.Production>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "listProductions"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listProductions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.Production.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listProductions"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listProductions"))
+              .build();
         }
-     }
-     return getListProductionsMethod;
+      }
+    }
+    return getListProductionsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Reporting.AnalyticsRequest,
@@ -233,22 +227,21 @@ public final class EventTicketsGrpc {
     if ((getGetAnalyticsMethod = EventTicketsGrpc.getGetAnalyticsMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetAnalyticsMethod = EventTicketsGrpc.getGetAnalyticsMethod) == null) {
-          EventTicketsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod = 
+          EventTicketsGrpc.getGetAnalyticsMethod = getGetAnalyticsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Reporting.AnalyticsRequest, com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getAnalytics"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAnalytics"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Reporting.AnalyticsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getAnalytics"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getAnalytics"))
+              .build();
         }
-     }
-     return getGetAnalyticsMethod;
+      }
+    }
+    return getGetAnalyticsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest,
@@ -265,22 +258,21 @@ public final class EventTicketsGrpc {
     if ((getCopyProductionMethod = EventTicketsGrpc.getCopyProductionMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCopyProductionMethod = EventTicketsGrpc.getCopyProductionMethod) == null) {
-          EventTicketsGrpc.getCopyProductionMethod = getCopyProductionMethod = 
+          EventTicketsGrpc.getCopyProductionMethod = getCopyProductionMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "copyProduction"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "copyProduction"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("copyProduction"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("copyProduction"))
+              .build();
         }
-     }
-     return getCopyProductionMethod;
+      }
+    }
+    return getCopyProductionMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
@@ -297,22 +289,21 @@ public final class EventTicketsGrpc {
     if ((getCreateVenueMethod = EventTicketsGrpc.getCreateVenueMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCreateVenueMethod = EventTicketsGrpc.getCreateVenueMethod) == null) {
-          EventTicketsGrpc.getCreateVenueMethod = getCreateVenueMethod = 
+          EventTicketsGrpc.getCreateVenueMethod = getCreateVenueMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.VenueOuterClass.Venue, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "createVenue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createVenue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createVenue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createVenue"))
+              .build();
         }
-     }
-     return getCreateVenueMethod;
+      }
+    }
+    return getCreateVenueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
@@ -329,22 +320,21 @@ public final class EventTicketsGrpc {
     if ((getUpdateVenueMethod = EventTicketsGrpc.getUpdateVenueMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getUpdateVenueMethod = EventTicketsGrpc.getUpdateVenueMethod) == null) {
-          EventTicketsGrpc.getUpdateVenueMethod = getUpdateVenueMethod = 
+          EventTicketsGrpc.getUpdateVenueMethod = getUpdateVenueMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.VenueOuterClass.Venue, com.passkit.grpc.EventTickets.VenueOuterClass.Venue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "updateVenue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateVenue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateVenue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateVenue"))
+              .build();
         }
-     }
-     return getUpdateVenueMethod;
+      }
+    }
+    return getUpdateVenueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
@@ -361,22 +351,21 @@ public final class EventTicketsGrpc {
     if ((getPatchVenueMethod = EventTicketsGrpc.getPatchVenueMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getPatchVenueMethod = EventTicketsGrpc.getPatchVenueMethod) == null) {
-          EventTicketsGrpc.getPatchVenueMethod = getPatchVenueMethod = 
+          EventTicketsGrpc.getPatchVenueMethod = getPatchVenueMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.VenueOuterClass.Venue, com.passkit.grpc.EventTickets.VenueOuterClass.Venue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "patchVenue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchVenue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchVenue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchVenue"))
+              .build();
         }
-     }
-     return getPatchVenueMethod;
+      }
+    }
+    return getPatchVenueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -393,22 +382,21 @@ public final class EventTicketsGrpc {
     if ((getGetVenueByIdMethod = EventTicketsGrpc.getGetVenueByIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetVenueByIdMethod = EventTicketsGrpc.getGetVenueByIdMethod) == null) {
-          EventTicketsGrpc.getGetVenueByIdMethod = getGetVenueByIdMethod = 
+          EventTicketsGrpc.getGetVenueByIdMethod = getGetVenueByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.EventTickets.VenueOuterClass.Venue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getVenueById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getVenueById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getVenueById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getVenueById"))
+              .build();
         }
-     }
-     return getGetVenueByIdMethod;
+      }
+    }
+    return getGetVenueByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
@@ -425,22 +413,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteVenueMethod = EventTicketsGrpc.getDeleteVenueMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteVenueMethod = EventTicketsGrpc.getDeleteVenueMethod) == null) {
-          EventTicketsGrpc.getDeleteVenueMethod = getDeleteVenueMethod = 
+          EventTicketsGrpc.getDeleteVenueMethod = getDeleteVenueMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.VenueOuterClass.Venue, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteVenue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteVenue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteVenue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteVenue"))
+              .build();
         }
-     }
-     return getDeleteVenueMethod;
+      }
+    }
+    return getDeleteVenueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Filter.Filters,
@@ -457,22 +444,21 @@ public final class EventTicketsGrpc {
     if ((getListVenuesMethod = EventTicketsGrpc.getListVenuesMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getListVenuesMethod = EventTicketsGrpc.getListVenuesMethod) == null) {
-          EventTicketsGrpc.getListVenuesMethod = getListVenuesMethod = 
+          EventTicketsGrpc.getListVenuesMethod = getListVenuesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Filter.Filters, com.passkit.grpc.EventTickets.VenueOuterClass.Venue>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "listVenues"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listVenues"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Filter.Filters.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listVenues"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listVenues"))
+              .build();
         }
-     }
-     return getListVenuesMethod;
+      }
+    }
+    return getListVenuesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.Event,
@@ -489,22 +475,21 @@ public final class EventTicketsGrpc {
     if ((getCreateEventMethod = EventTicketsGrpc.getCreateEventMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCreateEventMethod = EventTicketsGrpc.getCreateEventMethod) == null) {
-          EventTicketsGrpc.getCreateEventMethod = getCreateEventMethod = 
+          EventTicketsGrpc.getCreateEventMethod = getCreateEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.Event, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "createEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createEvent"))
+              .build();
         }
-     }
-     return getCreateEventMethod;
+      }
+    }
+    return getCreateEventMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.Event,
@@ -521,22 +506,21 @@ public final class EventTicketsGrpc {
     if ((getUpdateEventMethod = EventTicketsGrpc.getUpdateEventMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getUpdateEventMethod = EventTicketsGrpc.getUpdateEventMethod) == null) {
-          EventTicketsGrpc.getUpdateEventMethod = getUpdateEventMethod = 
+          EventTicketsGrpc.getUpdateEventMethod = getUpdateEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.Event, com.passkit.grpc.EventTickets.EventOuterClass.Event>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "updateEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateEvent"))
+              .build();
         }
-     }
-     return getUpdateEventMethod;
+      }
+    }
+    return getUpdateEventMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.Event,
@@ -553,22 +537,21 @@ public final class EventTicketsGrpc {
     if ((getPatchEventMethod = EventTicketsGrpc.getPatchEventMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getPatchEventMethod = EventTicketsGrpc.getPatchEventMethod) == null) {
-          EventTicketsGrpc.getPatchEventMethod = getPatchEventMethod = 
+          EventTicketsGrpc.getPatchEventMethod = getPatchEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.Event, com.passkit.grpc.EventTickets.EventOuterClass.Event>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "patchEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchEvent"))
+              .build();
         }
-     }
-     return getPatchEventMethod;
+      }
+    }
+    return getPatchEventMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -585,22 +568,21 @@ public final class EventTicketsGrpc {
     if ((getGetEventByIdMethod = EventTicketsGrpc.getGetEventByIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetEventByIdMethod = EventTicketsGrpc.getGetEventByIdMethod) == null) {
-          EventTicketsGrpc.getGetEventByIdMethod = getGetEventByIdMethod = 
+          EventTicketsGrpc.getGetEventByIdMethod = getGetEventByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.EventTickets.EventOuterClass.Event>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getEventById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getEventById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventById"))
+              .build();
         }
-     }
-     return getGetEventByIdMethod;
+      }
+    }
+    return getGetEventByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest,
@@ -617,22 +599,21 @@ public final class EventTicketsGrpc {
     if ((getGetEventByStartDateAndVenueMethod = EventTicketsGrpc.getGetEventByStartDateAndVenueMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetEventByStartDateAndVenueMethod = EventTicketsGrpc.getGetEventByStartDateAndVenueMethod) == null) {
-          EventTicketsGrpc.getGetEventByStartDateAndVenueMethod = getGetEventByStartDateAndVenueMethod = 
+          EventTicketsGrpc.getGetEventByStartDateAndVenueMethod = getGetEventByStartDateAndVenueMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest, com.passkit.grpc.EventTickets.EventOuterClass.Event>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getEventByStartDateAndVenue"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getEventByStartDateAndVenue"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventByStartDateAndVenue"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventByStartDateAndVenue"))
+              .build();
         }
-     }
-     return getGetEventByStartDateAndVenueMethod;
+      }
+    }
+    return getGetEventByStartDateAndVenueMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.Event,
@@ -649,22 +630,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteEventMethod = EventTicketsGrpc.getDeleteEventMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteEventMethod = EventTicketsGrpc.getDeleteEventMethod) == null) {
-          EventTicketsGrpc.getDeleteEventMethod = getDeleteEventMethod = 
+          EventTicketsGrpc.getDeleteEventMethod = getDeleteEventMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.Event, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteEvent"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteEvent"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteEvent"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteEvent"))
+              .build();
         }
-     }
-     return getDeleteEventMethod;
+      }
+    }
+    return getDeleteEventMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest,
@@ -681,22 +661,21 @@ public final class EventTicketsGrpc {
     if ((getListEventsMethod = EventTicketsGrpc.getListEventsMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getListEventsMethod = EventTicketsGrpc.getListEventsMethod) == null) {
-          EventTicketsGrpc.getListEventsMethod = getListEventsMethod = 
+          EventTicketsGrpc.getListEventsMethod = getListEventsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest, com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "listEvents"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listEvents"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listEvents"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listEvents"))
+              .build();
         }
-     }
-     return getListEventsMethod;
+      }
+    }
+    return getListEventsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
@@ -713,22 +692,21 @@ public final class EventTicketsGrpc {
     if ((getCreateTicketTypeMethod = EventTicketsGrpc.getCreateTicketTypeMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCreateTicketTypeMethod = EventTicketsGrpc.getCreateTicketTypeMethod) == null) {
-          EventTicketsGrpc.getCreateTicketTypeMethod = getCreateTicketTypeMethod = 
+          EventTicketsGrpc.getCreateTicketTypeMethod = getCreateTicketTypeMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "createTicketType"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createTicketType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createTicketType"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("createTicketType"))
+              .build();
         }
-     }
-     return getCreateTicketTypeMethod;
+      }
+    }
+    return getCreateTicketTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
@@ -745,22 +723,21 @@ public final class EventTicketsGrpc {
     if ((getUpdateTicketTypeMethod = EventTicketsGrpc.getUpdateTicketTypeMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getUpdateTicketTypeMethod = EventTicketsGrpc.getUpdateTicketTypeMethod) == null) {
-          EventTicketsGrpc.getUpdateTicketTypeMethod = getUpdateTicketTypeMethod = 
+          EventTicketsGrpc.getUpdateTicketTypeMethod = getUpdateTicketTypeMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType, com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "updateTicketType"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateTicketType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateTicketType"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateTicketType"))
+              .build();
         }
-     }
-     return getUpdateTicketTypeMethod;
+      }
+    }
+    return getUpdateTicketTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
@@ -777,22 +754,21 @@ public final class EventTicketsGrpc {
     if ((getPatchTicketTypeMethod = EventTicketsGrpc.getPatchTicketTypeMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getPatchTicketTypeMethod = EventTicketsGrpc.getPatchTicketTypeMethod) == null) {
-          EventTicketsGrpc.getPatchTicketTypeMethod = getPatchTicketTypeMethod = 
+          EventTicketsGrpc.getPatchTicketTypeMethod = getPatchTicketTypeMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType, com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "patchTicketType"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchTicketType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchTicketType"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchTicketType"))
+              .build();
         }
-     }
-     return getPatchTicketTypeMethod;
+      }
+    }
+    return getPatchTicketTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -809,22 +785,21 @@ public final class EventTicketsGrpc {
     if ((getGetTicketTypeByIdMethod = EventTicketsGrpc.getGetTicketTypeByIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetTicketTypeByIdMethod = EventTicketsGrpc.getGetTicketTypeByIdMethod) == null) {
-          EventTicketsGrpc.getGetTicketTypeByIdMethod = getGetTicketTypeByIdMethod = 
+          EventTicketsGrpc.getGetTicketTypeByIdMethod = getGetTicketTypeByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getTicketTypeById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTicketTypeById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketTypeById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketTypeById"))
+              .build();
         }
-     }
-     return getGetTicketTypeByIdMethod;
+      }
+    }
+    return getGetTicketTypeByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest,
@@ -841,22 +816,21 @@ public final class EventTicketsGrpc {
     if ((getGetTicketTypeByUserDefinedIdMethod = EventTicketsGrpc.getGetTicketTypeByUserDefinedIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetTicketTypeByUserDefinedIdMethod = EventTicketsGrpc.getGetTicketTypeByUserDefinedIdMethod) == null) {
-          EventTicketsGrpc.getGetTicketTypeByUserDefinedIdMethod = getGetTicketTypeByUserDefinedIdMethod = 
+          EventTicketsGrpc.getGetTicketTypeByUserDefinedIdMethod = getGetTicketTypeByUserDefinedIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest, com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getTicketTypeByUserDefinedId"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTicketTypeByUserDefinedId"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketTypeByUserDefinedId"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketTypeByUserDefinedId"))
+              .build();
         }
-     }
-     return getGetTicketTypeByUserDefinedIdMethod;
+      }
+    }
+    return getGetTicketTypeByUserDefinedIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
@@ -873,22 +847,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteTicketTypeMethod = EventTicketsGrpc.getDeleteTicketTypeMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteTicketTypeMethod = EventTicketsGrpc.getDeleteTicketTypeMethod) == null) {
-          EventTicketsGrpc.getDeleteTicketTypeMethod = getDeleteTicketTypeMethod = 
+          EventTicketsGrpc.getDeleteTicketTypeMethod = getDeleteTicketTypeMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteTicketType"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTicketType"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicketType"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicketType"))
+              .build();
         }
-     }
-     return getDeleteTicketTypeMethod;
+      }
+    }
+    return getDeleteTicketTypeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest,
@@ -905,22 +878,21 @@ public final class EventTicketsGrpc {
     if ((getListTicketTypesMethod = EventTicketsGrpc.getListTicketTypesMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getListTicketTypesMethod = EventTicketsGrpc.getListTicketTypesMethod) == null) {
-          EventTicketsGrpc.getListTicketTypesMethod = getListTicketTypesMethod = 
+          EventTicketsGrpc.getListTicketTypesMethod = getListTicketTypesMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest, com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "listTicketTypes"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTicketTypes"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listTicketTypes"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listTicketTypes"))
+              .build();
         }
-     }
-     return getListTicketTypesMethod;
+      }
+    }
+    return getListTicketTypesMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest,
@@ -937,22 +909,21 @@ public final class EventTicketsGrpc {
     if ((getIssueTicketMethod = EventTicketsGrpc.getIssueTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getIssueTicketMethod = EventTicketsGrpc.getIssueTicketMethod) == null) {
-          EventTicketsGrpc.getIssueTicketMethod = getIssueTicketMethod = 
+          EventTicketsGrpc.getIssueTicketMethod = getIssueTicketMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "issueTicket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "issueTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("issueTicket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("issueTicket"))
+              .build();
         }
-     }
-     return getIssueTicketMethod;
+      }
+    }
+    return getIssueTicketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
@@ -969,22 +940,21 @@ public final class EventTicketsGrpc {
     if ((getIssueTicketByIdMethod = EventTicketsGrpc.getIssueTicketByIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getIssueTicketByIdMethod = EventTicketsGrpc.getIssueTicketByIdMethod) == null) {
-          EventTicketsGrpc.getIssueTicketByIdMethod = getIssueTicketByIdMethod = 
+          EventTicketsGrpc.getIssueTicketByIdMethod = getIssueTicketByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "issueTicketById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "issueTicketById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("issueTicketById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("issueTicketById"))
+              .build();
         }
-     }
-     return getIssueTicketByIdMethod;
+      }
+    }
+    return getIssueTicketByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
@@ -1001,22 +971,21 @@ public final class EventTicketsGrpc {
     if ((getUpdateTicketMethod = EventTicketsGrpc.getUpdateTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getUpdateTicketMethod = EventTicketsGrpc.getUpdateTicketMethod) == null) {
-          EventTicketsGrpc.getUpdateTicketMethod = getUpdateTicketMethod = 
+          EventTicketsGrpc.getUpdateTicketMethod = getUpdateTicketMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "updateTicket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateTicket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("updateTicket"))
+              .build();
         }
-     }
-     return getUpdateTicketMethod;
+      }
+    }
+    return getUpdateTicketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest,
@@ -1033,22 +1002,21 @@ public final class EventTicketsGrpc {
     if ((getValidateTicketMethod = EventTicketsGrpc.getValidateTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getValidateTicketMethod = EventTicketsGrpc.getValidateTicketMethod) == null) {
-          EventTicketsGrpc.getValidateTicketMethod = getValidateTicketMethod = 
+          EventTicketsGrpc.getValidateTicketMethod = getValidateTicketMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "validateTicket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "validateTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("validateTicket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("validateTicket"))
+              .build();
         }
-     }
-     return getValidateTicketMethod;
+      }
+    }
+    return getValidateTicketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
@@ -1065,22 +1033,21 @@ public final class EventTicketsGrpc {
     if ((getRedeemTicketMethod = EventTicketsGrpc.getRedeemTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getRedeemTicketMethod = EventTicketsGrpc.getRedeemTicketMethod) == null) {
-          EventTicketsGrpc.getRedeemTicketMethod = getRedeemTicketMethod = 
+          EventTicketsGrpc.getRedeemTicketMethod = getRedeemTicketMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "redeemTicket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "redeemTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("redeemTicket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("redeemTicket"))
+              .build();
         }
-     }
-     return getRedeemTicketMethod;
+      }
+    }
+    return getRedeemTicketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber,
@@ -1097,22 +1064,21 @@ public final class EventTicketsGrpc {
     if ((getRedeemTicketsByOrderNumberMethod = EventTicketsGrpc.getRedeemTicketsByOrderNumberMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getRedeemTicketsByOrderNumberMethod = EventTicketsGrpc.getRedeemTicketsByOrderNumberMethod) == null) {
-          EventTicketsGrpc.getRedeemTicketsByOrderNumberMethod = getRedeemTicketsByOrderNumberMethod = 
+          EventTicketsGrpc.getRedeemTicketsByOrderNumberMethod = getRedeemTicketsByOrderNumberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber, com.passkit.grpc.CommonObjects.Ids>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "redeemTicketsByOrderNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "redeemTicketsByOrderNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Ids.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("redeemTicketsByOrderNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("redeemTicketsByOrderNumber"))
+              .build();
         }
-     }
-     return getRedeemTicketsByOrderNumberMethod;
+      }
+    }
+    return getRedeemTicketsByOrderNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -1129,22 +1095,21 @@ public final class EventTicketsGrpc {
     if ((getGetTicketByIdMethod = EventTicketsGrpc.getGetTicketByIdMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetTicketByIdMethod = EventTicketsGrpc.getGetTicketByIdMethod) == null) {
-          EventTicketsGrpc.getGetTicketByIdMethod = getGetTicketByIdMethod = 
+          EventTicketsGrpc.getGetTicketByIdMethod = getGetTicketByIdMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.EventTickets.TicketOuterClass.Ticket>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getTicketById"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTicketById"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketById"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketById"))
+              .build();
         }
-     }
-     return getGetTicketByIdMethod;
+      }
+    }
+    return getGetTicketByIdMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest,
@@ -1161,22 +1126,21 @@ public final class EventTicketsGrpc {
     if ((getGetTicketByTicketNumberMethod = EventTicketsGrpc.getGetTicketByTicketNumberMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetTicketByTicketNumberMethod = EventTicketsGrpc.getGetTicketByTicketNumberMethod) == null) {
-          EventTicketsGrpc.getGetTicketByTicketNumberMethod = getGetTicketByTicketNumberMethod = 
+          EventTicketsGrpc.getGetTicketByTicketNumberMethod = getGetTicketByTicketNumberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest, com.passkit.grpc.EventTickets.TicketOuterClass.Ticket>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getTicketByTicketNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTicketByTicketNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketByTicketNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketByTicketNumber"))
+              .build();
         }
-     }
-     return getGetTicketByTicketNumberMethod;
+      }
+    }
+    return getGetTicketByTicketNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest,
@@ -1193,22 +1157,21 @@ public final class EventTicketsGrpc {
     if ((getGetTicketsByOrderNumberMethod = EventTicketsGrpc.getGetTicketsByOrderNumberMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetTicketsByOrderNumberMethod = EventTicketsGrpc.getGetTicketsByOrderNumberMethod) == null) {
-          EventTicketsGrpc.getGetTicketsByOrderNumberMethod = getGetTicketsByOrderNumberMethod = 
+          EventTicketsGrpc.getGetTicketsByOrderNumberMethod = getGetTicketsByOrderNumberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest, com.passkit.grpc.EventTickets.TicketOuterClass.Tickets>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getTicketsByOrderNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTicketsByOrderNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Tickets.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketsByOrderNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getTicketsByOrderNumber"))
+              .build();
         }
-     }
-     return getGetTicketsByOrderNumberMethod;
+      }
+    }
+    return getGetTicketsByOrderNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest,
@@ -1225,22 +1188,21 @@ public final class EventTicketsGrpc {
     if ((getGetEventTicketPassMethod = EventTicketsGrpc.getGetEventTicketPassMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getGetEventTicketPassMethod = EventTicketsGrpc.getGetEventTicketPassMethod) == null) {
-          EventTicketsGrpc.getGetEventTicketPassMethod = getGetEventTicketPassMethod = 
+          EventTicketsGrpc.getGetEventTicketPassMethod = getGetEventTicketPassMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest, com.passkit.grpc.CommonObjects.PassBundles>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "getEventTicketPass"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getEventTicketPass"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.PassBundles.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventTicketPass"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("getEventTicketPass"))
+              .build();
         }
-     }
-     return getGetEventTicketPassMethod;
+      }
+    }
+    return getGetEventTicketPassMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
@@ -1257,22 +1219,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteTicketMethod = EventTicketsGrpc.getDeleteTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteTicketMethod = EventTicketsGrpc.getDeleteTicketMethod) == null) {
-          EventTicketsGrpc.getDeleteTicketMethod = getDeleteTicketMethod = 
+          EventTicketsGrpc.getDeleteTicketMethod = getDeleteTicketMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteTicket"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicket"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicket"))
+              .build();
         }
-     }
-     return getDeleteTicketMethod;
+      }
+    }
+    return getDeleteTicketMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest,
@@ -1289,22 +1250,21 @@ public final class EventTicketsGrpc {
     if ((getDeleteTicketsByOrderNumberMethod = EventTicketsGrpc.getDeleteTicketsByOrderNumberMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteTicketsByOrderNumberMethod = EventTicketsGrpc.getDeleteTicketsByOrderNumberMethod) == null) {
-          EventTicketsGrpc.getDeleteTicketsByOrderNumberMethod = getDeleteTicketsByOrderNumberMethod = 
+          EventTicketsGrpc.getDeleteTicketsByOrderNumberMethod = getDeleteTicketsByOrderNumberMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "deleteTicketsByOrderNumber"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTicketsByOrderNumber"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicketsByOrderNumber"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicketsByOrderNumber"))
+              .build();
         }
-     }
-     return getDeleteTicketsByOrderNumberMethod;
+      }
+    }
+    return getDeleteTicketsByOrderNumberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest,
@@ -1321,22 +1281,21 @@ public final class EventTicketsGrpc {
     if ((getListTicketsMethod = EventTicketsGrpc.getListTicketsMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getListTicketsMethod = EventTicketsGrpc.getListTicketsMethod) == null) {
-          EventTicketsGrpc.getListTicketsMethod = getListTicketsMethod = 
+          EventTicketsGrpc.getListTicketsMethod = getListTicketsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest, com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "listTickets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listTickets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listTickets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("listTickets"))
+              .build();
         }
-     }
-     return getListTicketsMethod;
+      }
+    }
+    return getListTicketsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest,
@@ -1353,29 +1312,35 @@ public final class EventTicketsGrpc {
     if ((getCountTicketsMethod = EventTicketsGrpc.getCountTicketsMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getCountTicketsMethod = EventTicketsGrpc.getCountTicketsMethod) == null) {
-          EventTicketsGrpc.getCountTicketsMethod = getCountTicketsMethod = 
+          EventTicketsGrpc.getCountTicketsMethod = getCountTicketsMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest, com.passkit.grpc.CommonObjects.Count>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "event_tickets.EventTickets", "countTickets"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "countTickets"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Count.getDefaultInstance()))
-                  .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("countTickets"))
-                  .build();
-          }
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("countTickets"))
+              .build();
         }
-     }
-     return getCountTicketsMethod;
+      }
+    }
+    return getCountTicketsMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static EventTicketsStub newStub(io.grpc.Channel channel) {
-    return new EventTicketsStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<EventTicketsStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EventTicketsStub>() {
+        @java.lang.Override
+        public EventTicketsStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EventTicketsStub(channel, callOptions);
+        }
+      };
+    return EventTicketsStub.newStub(factory, channel);
   }
 
   /**
@@ -1383,7 +1348,14 @@ public final class EventTicketsGrpc {
    */
   public static EventTicketsBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new EventTicketsBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<EventTicketsBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EventTicketsBlockingStub>() {
+        @java.lang.Override
+        public EventTicketsBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EventTicketsBlockingStub(channel, callOptions);
+        }
+      };
+    return EventTicketsBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -1391,7 +1363,14 @@ public final class EventTicketsGrpc {
    */
   public static EventTicketsFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new EventTicketsFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<EventTicketsFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<EventTicketsFutureStub>() {
+        @java.lang.Override
+        public EventTicketsFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new EventTicketsFutureStub(channel, callOptions);
+        }
+      };
+    return EventTicketsFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -1994,19 +1973,15 @@ public final class EventTicketsGrpc {
 
   /**
    */
-  public static final class EventTicketsStub extends io.grpc.stub.AbstractStub<EventTicketsStub> {
-    private EventTicketsStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private EventTicketsStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class EventTicketsStub extends io.grpc.stub.AbstractAsyncStub<EventTicketsStub> {
+    private EventTicketsStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EventTicketsStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected EventTicketsStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new EventTicketsStub(channel, callOptions);
     }
 
@@ -2349,19 +2324,15 @@ public final class EventTicketsGrpc {
 
   /**
    */
-  public static final class EventTicketsBlockingStub extends io.grpc.stub.AbstractStub<EventTicketsBlockingStub> {
-    private EventTicketsBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private EventTicketsBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class EventTicketsBlockingStub extends io.grpc.stub.AbstractBlockingStub<EventTicketsBlockingStub> {
+    private EventTicketsBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EventTicketsBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected EventTicketsBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new EventTicketsBlockingStub(channel, callOptions);
     }
 
@@ -2667,19 +2638,15 @@ public final class EventTicketsGrpc {
 
   /**
    */
-  public static final class EventTicketsFutureStub extends io.grpc.stub.AbstractStub<EventTicketsFutureStub> {
-    private EventTicketsFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private EventTicketsFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class EventTicketsFutureStub extends io.grpc.stub.AbstractFutureStub<EventTicketsFutureStub> {
+    private EventTicketsFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected EventTicketsFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected EventTicketsFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new EventTicketsFutureStub(channel, callOptions);
     }
 

@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.19.0)",
+    value = "by gRPC proto compiler (version 1.33.1)",
     comments = "Source: io/core/a_rpc_distribution.proto")
 public final class DistributionGrpc {
 
@@ -41,22 +41,21 @@ public final class DistributionGrpc {
     if ((getSendWelcomeEmailMethod = DistributionGrpc.getSendWelcomeEmailMethod) == null) {
       synchronized (DistributionGrpc.class) {
         if ((getSendWelcomeEmailMethod = DistributionGrpc.getSendWelcomeEmailMethod) == null) {
-          DistributionGrpc.getSendWelcomeEmailMethod = getSendWelcomeEmailMethod = 
+          DistributionGrpc.getSendWelcomeEmailMethod = getSendWelcomeEmailMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Distribution.EmailDistributionRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Distribution", "sendWelcomeEmail"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "sendWelcomeEmail"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Distribution.EmailDistributionRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-                  .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("sendWelcomeEmail"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("sendWelcomeEmail"))
+              .build();
         }
-     }
-     return getSendWelcomeEmailMethod;
+      }
+    }
+    return getSendWelcomeEmailMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassLinkRequest,
@@ -73,29 +72,35 @@ public final class DistributionGrpc {
     if ((getGetSmartPasssLinkMethod = DistributionGrpc.getGetSmartPasssLinkMethod) == null) {
       synchronized (DistributionGrpc.class) {
         if ((getGetSmartPasssLinkMethod = DistributionGrpc.getGetSmartPasssLinkMethod) == null) {
-          DistributionGrpc.getGetSmartPasssLinkMethod = getGetSmartPasssLinkMethod = 
+          DistributionGrpc.getGetSmartPasssLinkMethod = getGetSmartPasssLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Distribution.SmartPassLinkRequest, com.passkit.grpc.CommonObjects.Url>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.Distribution", "getSmartPasssLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSmartPasssLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Distribution.SmartPassLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-                  .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getSmartPasssLink"))
-                  .build();
-          }
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getSmartPasssLink"))
+              .build();
         }
-     }
-     return getGetSmartPasssLinkMethod;
+      }
+    }
+    return getGetSmartPasssLinkMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static DistributionStub newStub(io.grpc.Channel channel) {
-    return new DistributionStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistributionStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistributionStub>() {
+        @java.lang.Override
+        public DistributionStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistributionStub(channel, callOptions);
+        }
+      };
+    return DistributionStub.newStub(factory, channel);
   }
 
   /**
@@ -103,7 +108,14 @@ public final class DistributionGrpc {
    */
   public static DistributionBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new DistributionBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistributionBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistributionBlockingStub>() {
+        @java.lang.Override
+        public DistributionBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistributionBlockingStub(channel, callOptions);
+        }
+      };
+    return DistributionBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -111,7 +123,14 @@ public final class DistributionGrpc {
    */
   public static DistributionFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new DistributionFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<DistributionFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DistributionFutureStub>() {
+        @java.lang.Override
+        public DistributionFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DistributionFutureStub(channel, callOptions);
+        }
+      };
+    return DistributionFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -154,19 +173,15 @@ public final class DistributionGrpc {
 
   /**
    */
-  public static final class DistributionStub extends io.grpc.stub.AbstractStub<DistributionStub> {
-    private DistributionStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistributionStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistributionStub extends io.grpc.stub.AbstractAsyncStub<DistributionStub> {
+    private DistributionStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistributionStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistributionStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistributionStub(channel, callOptions);
     }
 
@@ -189,19 +204,15 @@ public final class DistributionGrpc {
 
   /**
    */
-  public static final class DistributionBlockingStub extends io.grpc.stub.AbstractStub<DistributionBlockingStub> {
-    private DistributionBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistributionBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistributionBlockingStub extends io.grpc.stub.AbstractBlockingStub<DistributionBlockingStub> {
+    private DistributionBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistributionBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistributionBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistributionBlockingStub(channel, callOptions);
     }
 
@@ -222,19 +233,15 @@ public final class DistributionGrpc {
 
   /**
    */
-  public static final class DistributionFutureStub extends io.grpc.stub.AbstractStub<DistributionFutureStub> {
-    private DistributionFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private DistributionFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class DistributionFutureStub extends io.grpc.stub.AbstractFutureStub<DistributionFutureStub> {
+    private DistributionFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected DistributionFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected DistributionFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new DistributionFutureStub(channel, callOptions);
     }
 
