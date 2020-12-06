@@ -1299,28 +1299,28 @@ public final class MembersGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Distribution.DataCollectionPageUrls> getGetProgramEnrolmentMethod;
+      com.passkit.grpc.Distribution.EnrolmentUrls> getGetProgramEnrolmentMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getProgramEnrolment",
       requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = com.passkit.grpc.Distribution.DataCollectionPageUrls.class,
+      responseType = com.passkit.grpc.Distribution.EnrolmentUrls.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      com.passkit.grpc.Distribution.DataCollectionPageUrls> getGetProgramEnrolmentMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Distribution.DataCollectionPageUrls> getGetProgramEnrolmentMethod;
+      com.passkit.grpc.Distribution.EnrolmentUrls> getGetProgramEnrolmentMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Distribution.EnrolmentUrls> getGetProgramEnrolmentMethod;
     if ((getGetProgramEnrolmentMethod = MembersGrpc.getGetProgramEnrolmentMethod) == null) {
       synchronized (MembersGrpc.class) {
         if ((getGetProgramEnrolmentMethod = MembersGrpc.getGetProgramEnrolmentMethod) == null) {
           MembersGrpc.getGetProgramEnrolmentMethod = getGetProgramEnrolmentMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Distribution.DataCollectionPageUrls>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Distribution.EnrolmentUrls>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getProgramEnrolment"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.Distribution.DataCollectionPageUrls.getDefaultInstance()))
+                  com.passkit.grpc.Distribution.EnrolmentUrls.getDefaultInstance()))
               .setSchemaDescriptor(new MembersMethodDescriptorSupplier("getProgramEnrolment"))
               .build();
         }
@@ -1718,7 +1718,7 @@ public final class MembersGrpc {
     /**
      */
     public void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionPageUrls> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
       asyncUnimplementedUnaryCall(getGetProgramEnrolmentMethod(), responseObserver);
     }
 
@@ -2016,7 +2016,7 @@ public final class MembersGrpc {
             asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.Distribution.DataCollectionPageUrls>(
+                com.passkit.grpc.Distribution.EnrolmentUrls>(
                   this, METHODID_GET_PROGRAM_ENROLMENT)))
           .build();
     }
@@ -2418,7 +2418,7 @@ public final class MembersGrpc {
     /**
      */
     public void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionPageUrls> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request, responseObserver);
     }
@@ -2787,7 +2787,7 @@ public final class MembersGrpc {
 
     /**
      */
-    public com.passkit.grpc.Distribution.DataCollectionPageUrls getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request) {
+    public com.passkit.grpc.Distribution.EnrolmentUrls getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request) {
       return blockingUnaryCall(
           getChannel(), getGetProgramEnrolmentMethod(), getCallOptions(), request);
     }
@@ -3104,7 +3104,7 @@ public final class MembersGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.DataCollectionPageUrls> getProgramEnrolment(
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.EnrolmentUrls> getProgramEnrolment(
         com.passkit.grpc.CommonObjects.Id request) {
       return futureUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request);
@@ -3337,7 +3337,7 @@ public final class MembersGrpc {
           break;
         case METHODID_GET_PROGRAM_ENROLMENT:
           serviceImpl.getProgramEnrolment((com.passkit.grpc.CommonObjects.Id) request,
-              (io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionPageUrls>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls>) responseObserver);
           break;
         default:
           throw new AssertionError();

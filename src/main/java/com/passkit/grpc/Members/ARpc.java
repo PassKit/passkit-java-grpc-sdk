@@ -32,7 +32,7 @@ public final class ARpc {
       "r/member_events.proto\032\026io/member/member." +
       "proto\032\027io/member/program.proto\032\024io/membe" +
       "r/tier.proto\032.protoc-gen-openapiv2/optio" +
-      "ns/annotations.proto2\277K\n\007Members\022}\n\rcrea" +
+      "ns/annotations.proto2\265K\n\007Members\022}\n\rcrea" +
       "teProgram\022\020.members.Program\032\006.io.Id\"R\202\323\344" +
       "\223\002\025\"\020/members/program:\001*\222A4\n\010Programs\022\016C" +
       "reate Program\032\030Creates a program record\022" +
@@ -268,34 +268,34 @@ public final class ARpc {
       "ty\"}\202\323\344\223\002#*\036/members/member/events/id/{i" +
       "d}:\001*\222AQ\n\007Members\022\"Deletes an individual" +
       " member event\032\"Deletes an individual mem" +
-      "ber event\022\352\001\n\023getProgramEnrolment\022\006.io.I" +
-      "d\032\032.io.DataCollectionPageUrls\"\256\001\202\323\344\223\002!\022\037" +
-      "/members/enrol/url/program/{id}\222A\203\001\n\016Enr" +
-      "olment Page\022\036Get Program Enrolment Page " +
-      "URL\032QRetrieves a enrolment page URL of t" +
-      "he base tier (the tier with the lowest i" +
-      "ndex).B\314\006\n\030com.passkit.grpc.MembersZ,sta" +
-      "sh.passkit.com/io/model/sdk/go/io/member" +
-      "s\252\002\024PassKit.Grpc.Members\222A\351\005\022\206\002\n\023PassKit" +
-      " Members API\022lThe PassKit Members API le" +
-      "ts you manage your membership programs a" +
-      "nd passes for Apple Wallet and Google Pa" +
-      "y.\0328https://passkit.com/legal/terms-of-s" +
-      "ubscription-service/\"?\n\017PassKit Support\022" +
-      "\027https://docs.passkit.io\032\023support@passki" +
-      "t.com2\0061.0-rc*\001\0022\020application/json:\020appl" +
-      "ication/jsonR9\n\003200\0222\n(Returned when the" +
-      " request is successful.\022\006\n\004\232\002\001\007RP\n\003403\022I" +
-      "\nGReturned when the user does not have p" +
-      "ermission to access the resource.R;\n\003404" +
-      "\0224\n*Returned when the resource does not " +
-      "exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when t" +
-      "here is an unexpected error.\022\006\n\004\232\002\001\007R]\n\003" +
-      "503\022V\nTReturned when the user is being t" +
-      "hrottled. Back off for a few ms and then" +
-      " try again.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Aut" +
-      "hentication token.\032\rAuthorization \002b\020\n\016\n" +
-      "\napiKeyAuth\022\000b\006proto3"
+      "ber event\022\340\001\n\023getProgramEnrolment\022\006.io.I" +
+      "d\032\021.io.EnrolmentUrls\"\255\001\202\323\344\223\002!\022\037/members/" +
+      "enrol/url/program/{id}\222A\202\001\n\016Enrolment Ur" +
+      "ls\022\036Get Program Enrolment Page URL\032PRetr" +
+      "ieves enrolment page URL of the base tie" +
+      "r and enrolment URLs for each tier .B\314\006\n" +
+      "\030com.passkit.grpc.MembersZ,stash.passkit" +
+      ".com/io/model/sdk/go/io/members\252\002\024PassKi" +
+      "t.Grpc.Members\222A\351\005\022\206\002\n\023PassKit Members A" +
+      "PI\022lThe PassKit Members API lets you man" +
+      "age your membership programs and passes " +
+      "for Apple Wallet and Google Pay.\0328https:" +
+      "//passkit.com/legal/terms-of-subscriptio" +
+      "n-service/\"?\n\017PassKit Support\022\027https://d" +
+      "ocs.passkit.io\032\023support@passkit.com2\0061.0" +
+      "-rc*\001\0022\020application/json:\020application/js" +
+      "onR9\n\003200\0222\n(Returned when the request i" +
+      "s successful.\022\006\n\004\232\002\001\007RP\n\003403\022I\nGReturned" +
+      " when the user does not have permission " +
+      "to access the resource.R;\n\003404\0224\n*Return" +
+      "ed when the resource does not exist.\022\006\n\004" +
+      "\232\002\001\007R<\n\003500\0225\n+Returned when there is an" +
+      " unexpected error.\022\006\n\004\232\002\001\007R]\n\003503\022V\nTRet" +
+      "urned when the user is being throttled. " +
+      "Back off for a few ms and then try again" +
+      ".Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticatio" +
+      "n token.\032\rAuthorization \002b\020\n\016\n\napiKeyAut" +
+      "h\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

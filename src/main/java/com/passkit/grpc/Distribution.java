@@ -9098,13 +9098,13 @@ public final class Distribution {
 
   }
 
-  public interface DataCollectionPageUrlsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:io.DataCollectionPageUrls)
+  public interface EnrolmentUrlsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.EnrolmentUrls)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * URL of the data collection page.
+     * Enrolment page of the base tier (tier with the lowest tier index).
      * </pre>
      *
      * <code>string pageUrl = 1;</code>
@@ -9113,7 +9113,7 @@ public final class Distribution {
     java.lang.String getPageUrl();
     /**
      * <pre>
-     * URL of the data collection page.
+     * Enrolment page of the base tier (tier with the lowest tier index).
      * </pre>
      *
      * <code>string pageUrl = 1;</code>
@@ -9124,7 +9124,7 @@ public final class Distribution {
 
     /**
      * <pre>
-     * QR code image url of the data collection page.
+     * QR code image url of the the base tier.
      * </pre>
      *
      * <code>string qrCodeUrl = 2;</code>
@@ -9133,7 +9133,7 @@ public final class Distribution {
     java.lang.String getQrCodeUrl();
     /**
      * <pre>
-     * QR code image url of the data collection page.
+     * QR code image url of the the base tier.
      * </pre>
      *
      * <code>string qrCodeUrl = 2;</code>
@@ -9141,20 +9141,128 @@ public final class Distribution {
      */
     com.google.protobuf.ByteString
         getQrCodeUrlBytes();
+
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    int getTierEnrolmentUrlsCount();
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    boolean containsTierEnrolmentUrls(
+        java.lang.String key);
+    /**
+     * Use {@link #getTierEnrolmentUrlsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getTierEnrolmentUrls();
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getTierEnrolmentUrlsMap();
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+
+    java.lang.String getTierEnrolmentUrlsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+
+    java.lang.String getTierEnrolmentUrlsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    int getTierEnrolmentQRsCount();
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    boolean containsTierEnrolmentQRs(
+        java.lang.String key);
+    /**
+     * Use {@link #getTierEnrolmentQRsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getTierEnrolmentQRs();
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getTierEnrolmentQRsMap();
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+
+    java.lang.String getTierEnrolmentQRsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+
+    java.lang.String getTierEnrolmentQRsOrThrow(
+        java.lang.String key);
   }
   /**
-   * Protobuf type {@code io.DataCollectionPageUrls}
+   * Protobuf type {@code io.EnrolmentUrls}
    */
-  public static final class DataCollectionPageUrls extends
+  public static final class EnrolmentUrls extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:io.DataCollectionPageUrls)
-      DataCollectionPageUrlsOrBuilder {
+      // @@protoc_insertion_point(message_implements:io.EnrolmentUrls)
+      EnrolmentUrlsOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DataCollectionPageUrls.newBuilder() to construct.
-    private DataCollectionPageUrls(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use EnrolmentUrls.newBuilder() to construct.
+    private EnrolmentUrls(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DataCollectionPageUrls() {
+    private EnrolmentUrls() {
       pageUrl_ = "";
       qrCodeUrl_ = "";
     }
@@ -9163,7 +9271,7 @@ public final class Distribution {
     @SuppressWarnings({"unused"})
     protected java.lang.Object newInstance(
         UnusedPrivateParameter unused) {
-      return new DataCollectionPageUrls();
+      return new EnrolmentUrls();
     }
 
     @java.lang.Override
@@ -9171,7 +9279,7 @@ public final class Distribution {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DataCollectionPageUrls(
+    private EnrolmentUrls(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9179,6 +9287,7 @@ public final class Distribution {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -9199,6 +9308,32 @@ public final class Distribution {
               java.lang.String s = input.readStringRequireUtf8();
 
               qrCodeUrl_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tierEnrolmentUrls_ = com.google.protobuf.MapField.newMapField(
+                    TierEnrolmentUrlsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              tierEnrolmentUrls__ = input.readMessage(
+                  TierEnrolmentUrlsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              tierEnrolmentUrls_.getMutableMap().put(
+                  tierEnrolmentUrls__.getKey(), tierEnrolmentUrls__.getValue());
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                tierEnrolmentQRs_ = com.google.protobuf.MapField.newMapField(
+                    TierEnrolmentQRsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              tierEnrolmentQRs__ = input.readMessage(
+                  TierEnrolmentQRsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              tierEnrolmentQRs_.getMutableMap().put(
+                  tierEnrolmentQRs__.getKey(), tierEnrolmentQRs__.getValue());
               break;
             }
             default: {
@@ -9222,22 +9357,36 @@ public final class Distribution {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionPageUrls_descriptor;
+      return com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetTierEnrolmentUrls();
+        case 4:
+          return internalGetTierEnrolmentQRs();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionPageUrls_fieldAccessorTable
+      return com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.passkit.grpc.Distribution.DataCollectionPageUrls.class, com.passkit.grpc.Distribution.DataCollectionPageUrls.Builder.class);
+              com.passkit.grpc.Distribution.EnrolmentUrls.class, com.passkit.grpc.Distribution.EnrolmentUrls.Builder.class);
     }
 
     public static final int PAGEURL_FIELD_NUMBER = 1;
     private volatile java.lang.Object pageUrl_;
     /**
      * <pre>
-     * URL of the data collection page.
+     * Enrolment page of the base tier (tier with the lowest tier index).
      * </pre>
      *
      * <code>string pageUrl = 1;</code>
@@ -9258,7 +9407,7 @@ public final class Distribution {
     }
     /**
      * <pre>
-     * URL of the data collection page.
+     * Enrolment page of the base tier (tier with the lowest tier index).
      * </pre>
      *
      * <code>string pageUrl = 1;</code>
@@ -9283,7 +9432,7 @@ public final class Distribution {
     private volatile java.lang.Object qrCodeUrl_;
     /**
      * <pre>
-     * QR code image url of the data collection page.
+     * QR code image url of the the base tier.
      * </pre>
      *
      * <code>string qrCodeUrl = 2;</code>
@@ -9304,7 +9453,7 @@ public final class Distribution {
     }
     /**
      * <pre>
-     * QR code image url of the data collection page.
+     * QR code image url of the the base tier.
      * </pre>
      *
      * <code>string qrCodeUrl = 2;</code>
@@ -9323,6 +9472,200 @@ public final class Distribution {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int TIERENROLMENTURLS_FIELD_NUMBER = 3;
+    private static final class TierEnrolmentUrlsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> tierEnrolmentUrls_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetTierEnrolmentUrls() {
+      if (tierEnrolmentUrls_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TierEnrolmentUrlsDefaultEntryHolder.defaultEntry);
+      }
+      return tierEnrolmentUrls_;
+    }
+
+    public int getTierEnrolmentUrlsCount() {
+      return internalGetTierEnrolmentUrls().getMap().size();
+    }
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsTierEnrolmentUrls(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTierEnrolmentUrls().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTierEnrolmentUrlsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentUrls() {
+      return getTierEnrolmentUrlsMap();
+    }
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentUrlsMap() {
+      return internalGetTierEnrolmentUrls().getMap();
+    }
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTierEnrolmentUrlsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTierEnrolmentUrls().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Enrolment page for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTierEnrolmentUrlsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTierEnrolmentUrls().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int TIERENROLMENTQRS_FIELD_NUMBER = 4;
+    private static final class TierEnrolmentQRsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> tierEnrolmentQRs_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetTierEnrolmentQRs() {
+      if (tierEnrolmentQRs_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TierEnrolmentQRsDefaultEntryHolder.defaultEntry);
+      }
+      return tierEnrolmentQRs_;
+    }
+
+    public int getTierEnrolmentQRsCount() {
+      return internalGetTierEnrolmentQRs().getMap().size();
+    }
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsTierEnrolmentQRs(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTierEnrolmentQRs().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTierEnrolmentQRsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentQRs() {
+      return getTierEnrolmentQRsMap();
+    }
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentQRsMap() {
+      return internalGetTierEnrolmentQRs().getMap();
+    }
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTierEnrolmentQRsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTierEnrolmentQRs().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * QR code for each tier.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getTierEnrolmentQRsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTierEnrolmentQRs().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9345,6 +9688,18 @@ public final class Distribution {
       if (!getQrCodeUrlBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, qrCodeUrl_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTierEnrolmentUrls(),
+          TierEnrolmentUrlsDefaultEntryHolder.defaultEntry,
+          3);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTierEnrolmentQRs(),
+          TierEnrolmentQRsDefaultEntryHolder.defaultEntry,
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -9360,6 +9715,26 @@ public final class Distribution {
       if (!getQrCodeUrlBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, qrCodeUrl_);
       }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetTierEnrolmentUrls().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        tierEnrolmentUrls__ = TierEnrolmentUrlsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, tierEnrolmentUrls__);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetTierEnrolmentQRs().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        tierEnrolmentQRs__ = TierEnrolmentQRsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, tierEnrolmentQRs__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9370,15 +9745,19 @@ public final class Distribution {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.passkit.grpc.Distribution.DataCollectionPageUrls)) {
+      if (!(obj instanceof com.passkit.grpc.Distribution.EnrolmentUrls)) {
         return super.equals(obj);
       }
-      com.passkit.grpc.Distribution.DataCollectionPageUrls other = (com.passkit.grpc.Distribution.DataCollectionPageUrls) obj;
+      com.passkit.grpc.Distribution.EnrolmentUrls other = (com.passkit.grpc.Distribution.EnrolmentUrls) obj;
 
       if (!getPageUrl()
           .equals(other.getPageUrl())) return false;
       if (!getQrCodeUrl()
           .equals(other.getQrCodeUrl())) return false;
+      if (!internalGetTierEnrolmentUrls().equals(
+          other.internalGetTierEnrolmentUrls())) return false;
+      if (!internalGetTierEnrolmentQRs().equals(
+          other.internalGetTierEnrolmentQRs())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9394,74 +9773,82 @@ public final class Distribution {
       hash = (53 * hash) + getPageUrl().hashCode();
       hash = (37 * hash) + QRCODEURL_FIELD_NUMBER;
       hash = (53 * hash) + getQrCodeUrl().hashCode();
+      if (!internalGetTierEnrolmentUrls().getMap().isEmpty()) {
+        hash = (37 * hash) + TIERENROLMENTURLS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTierEnrolmentUrls().hashCode();
+      }
+      if (!internalGetTierEnrolmentQRs().getMap().isEmpty()) {
+        hash = (37 * hash) + TIERENROLMENTQRS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetTierEnrolmentQRs().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(byte[] data)
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(java.io.InputStream input)
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseDelimitedFrom(java.io.InputStream input)
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseDelimitedFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls parseFrom(
+    public static com.passkit.grpc.Distribution.EnrolmentUrls parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9474,7 +9861,7 @@ public final class Distribution {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.passkit.grpc.Distribution.DataCollectionPageUrls prototype) {
+    public static Builder newBuilder(com.passkit.grpc.Distribution.EnrolmentUrls prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9490,26 +9877,52 @@ public final class Distribution {
       return builder;
     }
     /**
-     * Protobuf type {@code io.DataCollectionPageUrls}
+     * Protobuf type {@code io.EnrolmentUrls}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:io.DataCollectionPageUrls)
-        com.passkit.grpc.Distribution.DataCollectionPageUrlsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:io.EnrolmentUrls)
+        com.passkit.grpc.Distribution.EnrolmentUrlsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionPageUrls_descriptor;
+        return com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetTierEnrolmentUrls();
+          case 4:
+            return internalGetTierEnrolmentQRs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableTierEnrolmentUrls();
+          case 4:
+            return internalGetMutableTierEnrolmentQRs();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionPageUrls_fieldAccessorTable
+        return com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.passkit.grpc.Distribution.DataCollectionPageUrls.class, com.passkit.grpc.Distribution.DataCollectionPageUrls.Builder.class);
+                com.passkit.grpc.Distribution.EnrolmentUrls.class, com.passkit.grpc.Distribution.EnrolmentUrls.Builder.class);
       }
 
-      // Construct using com.passkit.grpc.Distribution.DataCollectionPageUrls.newBuilder()
+      // Construct using com.passkit.grpc.Distribution.EnrolmentUrls.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9531,23 +9944,25 @@ public final class Distribution {
 
         qrCodeUrl_ = "";
 
+        internalGetMutableTierEnrolmentUrls().clear();
+        internalGetMutableTierEnrolmentQRs().clear();
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionPageUrls_descriptor;
+        return com.passkit.grpc.Distribution.internal_static_io_EnrolmentUrls_descriptor;
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Distribution.DataCollectionPageUrls getDefaultInstanceForType() {
-        return com.passkit.grpc.Distribution.DataCollectionPageUrls.getDefaultInstance();
+      public com.passkit.grpc.Distribution.EnrolmentUrls getDefaultInstanceForType() {
+        return com.passkit.grpc.Distribution.EnrolmentUrls.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Distribution.DataCollectionPageUrls build() {
-        com.passkit.grpc.Distribution.DataCollectionPageUrls result = buildPartial();
+      public com.passkit.grpc.Distribution.EnrolmentUrls build() {
+        com.passkit.grpc.Distribution.EnrolmentUrls result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9555,10 +9970,15 @@ public final class Distribution {
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Distribution.DataCollectionPageUrls buildPartial() {
-        com.passkit.grpc.Distribution.DataCollectionPageUrls result = new com.passkit.grpc.Distribution.DataCollectionPageUrls(this);
+      public com.passkit.grpc.Distribution.EnrolmentUrls buildPartial() {
+        com.passkit.grpc.Distribution.EnrolmentUrls result = new com.passkit.grpc.Distribution.EnrolmentUrls(this);
+        int from_bitField0_ = bitField0_;
         result.pageUrl_ = pageUrl_;
         result.qrCodeUrl_ = qrCodeUrl_;
+        result.tierEnrolmentUrls_ = internalGetTierEnrolmentUrls();
+        result.tierEnrolmentUrls_.makeImmutable();
+        result.tierEnrolmentQRs_ = internalGetTierEnrolmentQRs();
+        result.tierEnrolmentQRs_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -9597,16 +10017,16 @@ public final class Distribution {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.passkit.grpc.Distribution.DataCollectionPageUrls) {
-          return mergeFrom((com.passkit.grpc.Distribution.DataCollectionPageUrls)other);
+        if (other instanceof com.passkit.grpc.Distribution.EnrolmentUrls) {
+          return mergeFrom((com.passkit.grpc.Distribution.EnrolmentUrls)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.passkit.grpc.Distribution.DataCollectionPageUrls other) {
-        if (other == com.passkit.grpc.Distribution.DataCollectionPageUrls.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.passkit.grpc.Distribution.EnrolmentUrls other) {
+        if (other == com.passkit.grpc.Distribution.EnrolmentUrls.getDefaultInstance()) return this;
         if (!other.getPageUrl().isEmpty()) {
           pageUrl_ = other.pageUrl_;
           onChanged();
@@ -9615,6 +10035,10 @@ public final class Distribution {
           qrCodeUrl_ = other.qrCodeUrl_;
           onChanged();
         }
+        internalGetMutableTierEnrolmentUrls().mergeFrom(
+            other.internalGetTierEnrolmentUrls());
+        internalGetMutableTierEnrolmentQRs().mergeFrom(
+            other.internalGetTierEnrolmentQRs());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -9630,11 +10054,11 @@ public final class Distribution {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Distribution.DataCollectionPageUrls parsedMessage = null;
+        com.passkit.grpc.Distribution.EnrolmentUrls parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Distribution.DataCollectionPageUrls) e.getUnfinishedMessage();
+          parsedMessage = (com.passkit.grpc.Distribution.EnrolmentUrls) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9643,11 +10067,12 @@ public final class Distribution {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object pageUrl_ = "";
       /**
        * <pre>
-       * URL of the data collection page.
+       * Enrolment page of the base tier (tier with the lowest tier index).
        * </pre>
        *
        * <code>string pageUrl = 1;</code>
@@ -9667,7 +10092,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * URL of the data collection page.
+       * Enrolment page of the base tier (tier with the lowest tier index).
        * </pre>
        *
        * <code>string pageUrl = 1;</code>
@@ -9688,7 +10113,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * URL of the data collection page.
+       * Enrolment page of the base tier (tier with the lowest tier index).
        * </pre>
        *
        * <code>string pageUrl = 1;</code>
@@ -9707,7 +10132,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * URL of the data collection page.
+       * Enrolment page of the base tier (tier with the lowest tier index).
        * </pre>
        *
        * <code>string pageUrl = 1;</code>
@@ -9721,7 +10146,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * URL of the data collection page.
+       * Enrolment page of the base tier (tier with the lowest tier index).
        * </pre>
        *
        * <code>string pageUrl = 1;</code>
@@ -9743,7 +10168,7 @@ public final class Distribution {
       private java.lang.Object qrCodeUrl_ = "";
       /**
        * <pre>
-       * QR code image url of the data collection page.
+       * QR code image url of the the base tier.
        * </pre>
        *
        * <code>string qrCodeUrl = 2;</code>
@@ -9763,7 +10188,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * QR code image url of the data collection page.
+       * QR code image url of the the base tier.
        * </pre>
        *
        * <code>string qrCodeUrl = 2;</code>
@@ -9784,7 +10209,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * QR code image url of the data collection page.
+       * QR code image url of the the base tier.
        * </pre>
        *
        * <code>string qrCodeUrl = 2;</code>
@@ -9803,7 +10228,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * QR code image url of the data collection page.
+       * QR code image url of the the base tier.
        * </pre>
        *
        * <code>string qrCodeUrl = 2;</code>
@@ -9817,7 +10242,7 @@ public final class Distribution {
       }
       /**
        * <pre>
-       * QR code image url of the data collection page.
+       * QR code image url of the the base tier.
        * </pre>
        *
        * <code>string qrCodeUrl = 2;</code>
@@ -9835,6 +10260,318 @@ public final class Distribution {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> tierEnrolmentUrls_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTierEnrolmentUrls() {
+        if (tierEnrolmentUrls_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TierEnrolmentUrlsDefaultEntryHolder.defaultEntry);
+        }
+        return tierEnrolmentUrls_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableTierEnrolmentUrls() {
+        onChanged();;
+        if (tierEnrolmentUrls_ == null) {
+          tierEnrolmentUrls_ = com.google.protobuf.MapField.newMapField(
+              TierEnrolmentUrlsDefaultEntryHolder.defaultEntry);
+        }
+        if (!tierEnrolmentUrls_.isMutable()) {
+          tierEnrolmentUrls_ = tierEnrolmentUrls_.copy();
+        }
+        return tierEnrolmentUrls_;
+      }
+
+      public int getTierEnrolmentUrlsCount() {
+        return internalGetTierEnrolmentUrls().getMap().size();
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsTierEnrolmentUrls(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTierEnrolmentUrls().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTierEnrolmentUrlsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentUrls() {
+        return getTierEnrolmentUrlsMap();
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentUrlsMap() {
+        return internalGetTierEnrolmentUrls().getMap();
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTierEnrolmentUrlsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTierEnrolmentUrls().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTierEnrolmentUrlsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTierEnrolmentUrls().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearTierEnrolmentUrls() {
+        internalGetMutableTierEnrolmentUrls().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+
+      public Builder removeTierEnrolmentUrls(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTierEnrolmentUrls().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableTierEnrolmentUrls() {
+        return internalGetMutableTierEnrolmentUrls().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+      public Builder putTierEnrolmentUrls(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTierEnrolmentUrls().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Enrolment page for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentUrls = 3;</code>
+       */
+
+      public Builder putAllTierEnrolmentUrls(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableTierEnrolmentUrls().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> tierEnrolmentQRs_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTierEnrolmentQRs() {
+        if (tierEnrolmentQRs_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TierEnrolmentQRsDefaultEntryHolder.defaultEntry);
+        }
+        return tierEnrolmentQRs_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableTierEnrolmentQRs() {
+        onChanged();;
+        if (tierEnrolmentQRs_ == null) {
+          tierEnrolmentQRs_ = com.google.protobuf.MapField.newMapField(
+              TierEnrolmentQRsDefaultEntryHolder.defaultEntry);
+        }
+        if (!tierEnrolmentQRs_.isMutable()) {
+          tierEnrolmentQRs_ = tierEnrolmentQRs_.copy();
+        }
+        return tierEnrolmentQRs_;
+      }
+
+      public int getTierEnrolmentQRsCount() {
+        return internalGetTierEnrolmentQRs().getMap().size();
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsTierEnrolmentQRs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTierEnrolmentQRs().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getTierEnrolmentQRsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentQRs() {
+        return getTierEnrolmentQRsMap();
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getTierEnrolmentQRsMap() {
+        return internalGetTierEnrolmentQRs().getMap();
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTierEnrolmentQRsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTierEnrolmentQRs().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getTierEnrolmentQRsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTierEnrolmentQRs().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearTierEnrolmentQRs() {
+        internalGetMutableTierEnrolmentQRs().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+
+      public Builder removeTierEnrolmentQRs(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTierEnrolmentQRs().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableTierEnrolmentQRs() {
+        return internalGetMutableTierEnrolmentQRs().getMutableMap();
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+      public Builder putTierEnrolmentQRs(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTierEnrolmentQRs().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * QR code for each tier.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; tierEnrolmentQRs = 4;</code>
+       */
+
+      public Builder putAllTierEnrolmentQRs(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableTierEnrolmentQRs().getMutableMap()
+            .putAll(values);
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9848,41 +10585,41 @@ public final class Distribution {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:io.DataCollectionPageUrls)
+      // @@protoc_insertion_point(builder_scope:io.EnrolmentUrls)
     }
 
-    // @@protoc_insertion_point(class_scope:io.DataCollectionPageUrls)
-    private static final com.passkit.grpc.Distribution.DataCollectionPageUrls DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:io.EnrolmentUrls)
+    private static final com.passkit.grpc.Distribution.EnrolmentUrls DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.DataCollectionPageUrls();
+      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.EnrolmentUrls();
     }
 
-    public static com.passkit.grpc.Distribution.DataCollectionPageUrls getDefaultInstance() {
+    public static com.passkit.grpc.Distribution.EnrolmentUrls getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DataCollectionPageUrls>
-        PARSER = new com.google.protobuf.AbstractParser<DataCollectionPageUrls>() {
+    private static final com.google.protobuf.Parser<EnrolmentUrls>
+        PARSER = new com.google.protobuf.AbstractParser<EnrolmentUrls>() {
       @java.lang.Override
-      public DataCollectionPageUrls parsePartialFrom(
+      public EnrolmentUrls parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DataCollectionPageUrls(input, extensionRegistry);
+        return new EnrolmentUrls(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<DataCollectionPageUrls> parser() {
+    public static com.google.protobuf.Parser<EnrolmentUrls> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DataCollectionPageUrls> getParserForType() {
+    public com.google.protobuf.Parser<EnrolmentUrls> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.passkit.grpc.Distribution.DataCollectionPageUrls getDefaultInstanceForType() {
+    public com.passkit.grpc.Distribution.EnrolmentUrls getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9924,10 +10661,20 @@ public final class Distribution {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_SmsTemplate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_io_DataCollectionPageUrls_descriptor;
+    internal_static_io_EnrolmentUrls_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_io_DataCollectionPageUrls_fieldAccessorTable;
+      internal_static_io_EnrolmentUrls_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -9972,13 +10719,19 @@ public final class Distribution {
       " \001(\t\022#\n\033EmailFromVerifiedForSending\030\003 \001(" +
       "\010\"a\n\013SmsTemplate\022\026\n\007content\030\001 \001(\tB\005\222A\002xF" +
       "\0224\n\020localizedContent\030\002 \001(\0132\023.io.Localize" +
-      "dStringB\005\222A\002xFJ\004\010\003\020\004\"<\n\026DataCollectionPa" +
-      "geUrls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001" +
-      "(\t*N\n\023DistributionChannel\022\023\n\017NO_DISTRIBU" +
-      "TION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS" +
-      "\020\002BG\n\020com.passkit.grpcZ$stash.passkit.co" +
-      "m/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pro" +
-      "to3"
+      "dStringB\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolmentUrls\022\017" +
+      "\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001(\t\022C\n\021ti" +
+      "erEnrolmentUrls\030\003 \003(\0132(.io.EnrolmentUrls" +
+      ".TierEnrolmentUrlsEntry\022A\n\020tierEnrolment" +
+      "QRs\030\004 \003(\0132\'.io.EnrolmentUrls.TierEnrolme" +
+      "ntQRsEntry\0328\n\026TierEnrolmentUrlsEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025TierEnro" +
+      "lmentQRsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001*N\n\023DistributionChannel\022\023\n\017NO_DISTR" +
+      "IBUTION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_" +
+      "SMS\020\002BG\n\020com.passkit.grpcZ$stash.passkit" +
+      ".com/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10030,12 +10783,24 @@ public final class Distribution {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_SmsTemplate_descriptor,
         new java.lang.String[] { "Content", "LocalizedContent", });
-    internal_static_io_DataCollectionPageUrls_descriptor =
+    internal_static_io_EnrolmentUrls_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_io_DataCollectionPageUrls_fieldAccessorTable = new
+    internal_static_io_EnrolmentUrls_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_io_DataCollectionPageUrls_descriptor,
-        new java.lang.String[] { "PageUrl", "QrCodeUrl", });
+        internal_static_io_EnrolmentUrls_descriptor,
+        new java.lang.String[] { "PageUrl", "QrCodeUrl", "TierEnrolmentUrls", "TierEnrolmentQRs", });
+    internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_descriptor =
+      internal_static_io_EnrolmentUrls_descriptor.getNestedTypes().get(0);
+    internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_EnrolmentUrls_TierEnrolmentUrlsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_descriptor =
+      internal_static_io_EnrolmentUrls_descriptor.getNestedTypes().get(1);
+    internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
