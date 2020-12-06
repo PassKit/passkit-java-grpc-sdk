@@ -31,7 +31,7 @@
         <connection>scm:git:git://github.com/PassKit/passkit-java-grpc-sdk.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/PassKit/passkit-java-grpc-sdk.git</developerConnection>
         <url>https://github.com/PassKit/passkit-java-grpc-sdk/tree/main</url>
-        <tag>sdk-1.1.1</tag>
+        <tag>sdk-1.1.2</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
