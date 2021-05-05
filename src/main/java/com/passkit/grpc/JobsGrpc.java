@@ -1,24 +1,11 @@
 package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class JobsGrpc {
 
@@ -172,42 +159,42 @@ public final class JobsGrpc {
      */
     public void importCsv(com.passkit.grpc.JobOuterClass.CsvImportRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getImportCsvMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportCsvMethod(), responseObserver);
     }
 
     /**
      */
     public void getJobs(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.JobOuterClass.Job> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetJobsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetJobsMethod(), responseObserver);
     }
 
     /**
      */
     public void getJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.JobOuterClass.Job> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetJobMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetJobMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getImportCsvMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.JobOuterClass.CsvImportRequest,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_IMPORT_CSV)))
           .addMethod(
             getGetJobsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.JobOuterClass.Job>(
                   this, METHODID_GET_JOBS)))
           .addMethod(
             getGetJobMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.JobOuterClass.Job>(
@@ -234,7 +221,7 @@ public final class JobsGrpc {
      */
     public void importCsv(com.passkit.grpc.JobOuterClass.CsvImportRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getImportCsvMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -242,7 +229,7 @@ public final class JobsGrpc {
      */
     public void getJobs(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.JobOuterClass.Job> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetJobsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -250,7 +237,7 @@ public final class JobsGrpc {
      */
     public void getJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.JobOuterClass.Job> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetJobMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -272,7 +259,7 @@ public final class JobsGrpc {
     /**
      */
     public com.passkit.grpc.CommonObjects.Id importCsv(com.passkit.grpc.JobOuterClass.CsvImportRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getImportCsvMethod(), getCallOptions(), request);
     }
 
@@ -280,14 +267,14 @@ public final class JobsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.JobOuterClass.Job> getJobs(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetJobsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.JobOuterClass.Job getJob(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetJobMethod(), getCallOptions(), request);
     }
   }
@@ -310,7 +297,7 @@ public final class JobsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> importCsv(
         com.passkit.grpc.JobOuterClass.CsvImportRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getImportCsvMethod(), getCallOptions()), request);
     }
 
@@ -318,7 +305,7 @@ public final class JobsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.JobOuterClass.Job> getJob(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetJobMethod(), getCallOptions()), request);
     }
   }

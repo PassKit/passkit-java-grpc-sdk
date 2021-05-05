@@ -28,212 +28,217 @@ public final class ARpc {
       "empty.proto\032\036io/common/common_objects.pr" +
       "oto\032\034io/common/distribution.proto\032\027io/co" +
       "mmon/message.proto\032\032io/common/pagination" +
-      ".proto\032\026io/common/filter.proto\032\035io/membe" +
-      "r/member_events.proto\032\026io/member/member." +
-      "proto\032\027io/member/program.proto\032\024io/membe" +
-      "r/tier.proto\032.protoc-gen-openapiv2/optio" +
-      "ns/annotations.proto2\265K\n\007Members\022}\n\rcrea" +
-      "teProgram\022\020.members.Program\032\006.io.Id\"R\202\323\344" +
-      "\223\002\025\"\020/members/program:\001*\222A4\n\010Programs\022\016C" +
-      "reate Program\032\030Creates a program record\022" +
-      "\221\001\n\rupdateProgram\022\020.members.Program\032\020.me" +
-      "mbers.Program\"\\\202\323\344\223\002\025\032\020/members/program:" +
-      "\001*\222A>\n\010Programs\022\016Update Program\032\"Updates" +
-      " an existing program record\022\200\001\n\ngetProgr" +
-      "am\022\006.io.Id\032\020.members.Program\"X\202\323\344\223\002\027\022\025/m" +
-      "embers/program/{id}\222A8\n\010Programs\022\013Get Pr" +
-      "ogram\032\037Gets an existing program record\022\222" +
-      "\001\n\013copyProgram\022\033.members.ProgramCopyRequ" +
-      "est\032\006.io.Id\"^\202\323\344\223\002\032\"\025/members/program/co" +
-      "py:\001*\222A;\n\010Programs\022\014Copy Program\032!Copies" +
-      " an existing program record\022\224\002\n\rdeletePr" +
-      "ogram\022\006.io.Id\032\026.google.protobuf.Empty\"\342\001" +
-      "\202\323\344\223\002\032*\025/members/program/{id}:\001*\222A\276\001\n\010Pr" +
-      "ograms\022\016Delete Program\032\241\001Deletes an exis" +
-      "ting program record. Deleting a program " +
-      "results in all tiers, and members undern" +
-      "eath it being invalidated and removed. N" +
-      "eeds to be used with care.\022\300\001\n\026listProgr" +
-      "amsDeprecated\022\016.io.Pagination\032\020.members." +
-      "Program\"\201\001\202\323\344\223\002\023\022\021/members/programs\222Ae\n\010" +
-      "Programs\022\032List Programs [DEPRECATED]\032=[D" +
-      "EPRECATED: OR operator is not supported]" +
-      " Lists all programs0\001\022\361\003\n\014listPrograms\022\013" +
-      ".io.Filters\032\020.members.Program\"\277\003\202\323\344\223\002\033\"\026" +
-      "/members/programs/list:\001*\222A\232\003\n\010Programs\022" +
-      "\rList Programs\032\376\002Lists all programs\n\n<sp" +
-      "an style=\"font-weight:bold\">About filter" +
-      " field names, operators and sample paylo" +
-      "ads:</span> <a target=\"_blank\" href=\"htt" +
-      "ps://help.passkit.com/en/articles/413375" +
-      "7-membership-protocol-filtering-listing-" +
-      "and-counting-by-api#filter-programs\">htt" +
-      "ps://help.passkit.com/en/articles/413375" +
-      "7-membership-protocol-filtering-listing-" +
-      "and-counting-by-api#filter-programs</a>0" +
-      "\001\022h\n\ncreateTier\022\r.members.Tier\032\006.io.Id\"C" +
-      "\202\323\344\223\002\022\"\r/members/tier:\001*\222A(\n\005Tiers\022\013Crea" +
-      "te Tier\032\022Creates a new tier\022v\n\nupdateTie" +
-      "r\022\r.members.Tier\032\r.members.Tier\"J\202\323\344\223\002\022\032" +
-      "\r/members/tier:\001*\222A/\n\005Tiers\022\013Update Tier" +
-      "\032\031Updates a tier by tier id\022\227\001\n\007getTier\022" +
-      "\031.members.TierRequestInput\032\r.members.Tie" +
-      "r\"b\202\323\344\223\002$\022\"/members/tier/{programId}/{ti" +
-      "erId}\222A5\n\005Tiers\022\010Get Tier\032\"Get a tier by" +
-      " program and tier ids\022\326\001\n\ndeleteTier\022\031.m" +
-      "embers.TierRequestInput\032\026.google.protobu" +
-      "f.Empty\"\224\001\202\323\344\223\002\'*\"/members/tier/{program" +
-      "Id}/{tierId}:\001*\222Ad\n\005Tiers\022\013Delete Tier\032N" +
-      "Deletes a tier and members who belong to" +
-      " the tier. Needs to be used with care.\022\275" +
-      "\001\n\023listTiersDeprecated\022\036.members.ListReq" +
-      "uestDeprecated\032\r.members.Tier\"u\202\323\344\223\002\020\022\016/" +
-      "members/tiers\222A\\\n\005Tiers\022\027List Tiers [DEP" +
-      "RECATED]\032:[DEPRECATED: OR operator is no" +
-      "t supported] Lists all tiers0\001\022\342\003\n\tlistT" +
-      "iers\022\024.members.ListRequest\032\r.members.Tie" +
-      "r\"\255\003\202\323\344\223\002\030\"\023/members/tiers/list:\001*\222A\213\003\n\005" +
-      "Tiers\022\nList Tiers\032\365\002Lists all tiers\n\n<sp" +
-      "an style=\"font-weight:bold\">About filter" +
-      " field names, operators and sample paylo" +
-      "ads:</span> <a target=\"_blank\" href=\"htt" +
-      "ps://help.passkit.com/en/articles/413375" +
-      "7-membership-protocol-filtering-listing-" +
-      "and-counting-by-api#filter-tiers\">https:" +
-      "//help.passkit.com/en/articles/4133757-m" +
-      "embership-protocol-filtering-listing-and" +
-      "-counting-by-api#filter-tiers</a>0\001\022u\n\013e" +
-      "nrolMember\022\017.members.Member\032\006.io.Id\"M\202\323\344" +
-      "\223\002\024\"\017/members/member:\001*\222A0\n\007Members\022\020Enr" +
-      "ol new Member\032\023Enrols a new member\022\276\001\n\021e" +
-      "nrolMemberPublic\022\017.members.Member\032\006.io.I" +
-      "d\"\217\001\202\323\344\223\002\033\"\026/members/member/public:\001*\222Ak" +
-      "\n\007Members\022\031Enrol new Member (public)\032EEn" +
-      "rols a new member into the default tier " +
-      "of a program that is public\022\236\001\n\023getMembe" +
-      "rRecordById\022\006.io.Id\032\017.members.Member\"n\202\323" +
-      "\344\223\002\031\022\027/members/member/id/{id}\222AL\n\007Member" +
-      "s\022\037Get member record by PassKit ID\032 Gets" +
-      " member record by PassKit ID\022\347\001\n\033getMemb" +
-      "erRecordByExternalId\022(.members.MemberRec" +
-      "ordByExternalIdRequest\032\017.members.Member\"" +
-      "\214\001\202\323\344\223\0025\0223/members/member/externalId/{pr" +
-      "ogramId}/{externalId}\222AN\n\007Members\022 Get m" +
-      "ember record by External ID\032!Gets member" +
-      " record by External ID\022\360\001\n\rcheckInMember" +
-      "\022 .members.MemberCheckInOutRequest\032\024.mem" +
-      "bers.MemberEvent\"\246\001\202\323\344\223\002\034\"\027/members/memb" +
-      "er/checkIn:\001*\222A\200\001\n\007Members\022\017Check in mem" +
-      "ber\032dChecks in a member by either intern" +
-      "al PassKit ID or External ID. Returns th" +
-      "e latest 5 member events.\022\364\001\n\016checkOutMe" +
-      "mber\022 .members.MemberCheckInOutRequest\032\024" +
-      ".members.MemberEvent\"\251\001\202\323\344\223\002\035\"\030/members/" +
-      "member/checkOut:\001*\222A\202\001\n\007Members\022\020Check o" +
-      "ut member\032eChecks out a member by either" +
-      " internal PassKit ID or External ID. Ret" +
-      "urns the latest 5 member events.\022\204\002\n\025lis" +
-      "tMembersDeprecated\022\036.members.ListRequest" +
-      "Deprecated\032\017.members.Member\"\267\001\202\323\344\223\002\"\022 /m" +
-      "embers/member/list/{programId}\222A\213\001\n\007Memb" +
-      "ers\022\031List members [DEPRECATED]\032e[DEPRECA" +
-      "TED: OR operator is not supported] List " +
-      "all members for a given segment. Support" +
-      "s pagination.0\001\022\246\004\n\013listMembers\022\024.member" +
-      "s.ListRequest\032\017.members.Member\"\355\003\202\323\344\223\002%\"" +
-      " /members/member/list/{programId}:\001*\222A\276\003" +
-      "\n\007Members\022\014List members\032\244\003List all membe" +
-      "rs for a given segment. Supports paginat" +
-      "ion.\n\n<span style=\"font-weight:bold\">Abo" +
-      "ut filter field names, operators and sam" +
-      "ple payloads:</span> <a target=\"_blank\" " +
-      "href=\"https://help.passkit.com/en/articl" +
-      "es/4133757-membership-protocol-filtering" +
-      "-listing-and-counting-by-api#filter-memb" +
-      "ers\">https://help.passkit.com/en/article" +
-      "s/4133757-membership-protocol-filtering-" +
-      "listing-and-counting-by-api#filter-membe" +
-      "rs</a>0\001\022\233\001\n\014updateMember\022\017.members.Memb" +
-      "er\032\006.io.Id\"r\202\323\344\223\002\024\032\017/members/member:\001*\222A" +
-      "U\n\007Members\022\rUpdate member\032;Updates membe" +
-      "r by either internal PassKit ID or Exter" +
-      "nal ID\022\346\001\n\nearnPoints\022\036.members.EarnBurn" +
-      "PointsRequest\032\025.members.MemberPoints\"\240\001\202" +
-      "\323\344\223\002 \032\033/members/member/points/earn:\001*\222Aw" +
-      "\n\007Members\022\013Earn points\032_Earns points for" +
-      " a member (identified by PassKit ID or E" +
-      "xternal ID). Adds the amounts provided.\022" +
-      "\350\001\n\nburnPoints\022\036.members.EarnBurnPointsR" +
-      "equest\032\025.members.MemberPoints\"\242\001\202\323\344\223\002 \032\033" +
-      "/members/member/points/burn:\001*\222Ay\n\007Membe" +
-      "rs\022\013Burn points\032aBurn points for a membe" +
-      "r (identified by PassKit ID or External " +
-      "ID). Deducts the amounts provided.\022\334\001\n\ts" +
-      "etPoints\022\031.members.SetPointsRequest\032\025.me" +
-      "mbers.MemberPoints\"\234\001\202\323\344\223\002\037\032\032/members/me" +
-      "mber/points/set:\001*\222At\n\007Members\022\nSet poin" +
-      "ts\032]Set points for a member (identified " +
-      "by PassKit ID or External ID). Sets the " +
-      "amounts provided.\022\266\001\n\026updateMembersBySeg" +
-      "ment\022\035.members.MemberSegmentRequest\032\026.go" +
-      "ogle.protobuf.Empty\"e\202\323\344\223\002\034\032\027/members/me" +
-      "mber/segment:\001*\222A@\n\007Members\022\031Update memb" +
-      "ers by segment\032\032Updates members by segme" +
-      "nt\022\266\001\n\026deleteMembersBySegment\022\035.members." +
-      "MemberSegmentRequest\032\026.google.protobuf.E" +
-      "mpty\"e\202\323\344\223\002\034*\027/members/member/segment:\001*" +
-      "\222A@\n\007Members\022\031Delete members by segment\032" +
-      "\032Deletes members by segment\022\253\001\n\014deleteMe" +
-      "mber\022\017.members.Member\032\026.google.protobuf." +
-      "Empty\"r\202\323\344\223\002\024*\017/members/member:\001*\222AU\n\007Me" +
-      "mbers\022\rDelete member\032;Deletes member by " +
-      "either internal PassKit ID or External I" +
-      "D\022\261\002\n\026countMembersDeprecated\022\036.members.L" +
-      "istRequestDeprecated\032\t.io.Count\"\353\001\202\323\344\223\002\034" +
-      "\022\032/members/count/{programId}\222A\305\001\n\007Member" +
-      "s\022#Count Filtered Members [DEPRECATED]\032Q" +
-      "[DEPRECATED: OR operator is not supporte" +
-      "d] Retrieves a count of filtered members" +
-      ".J\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
-      "\003404\022\027\n\025Record was not found.\022\323\004\n\014countM" +
-      "embers\022\024.members.ListRequest\032\t.io.Count\"" +
-      "\241\004\202\323\344\223\002\037\"\032/members/count/{programId}:\001*\222" +
-      "A\370\003\n\007Members\022\026Count Filtered Members\032\220\003R" +
-      "etrieves a count of filtered members.\n\n<" +
-      "span style=\"font-weight:bold\">About filt" +
-      "er field names, operators and sample pay" +
-      "loads:</span> <a target=\"_blank\" href=\"h" +
-      "ttps://help.passkit.com/en/articles/4133" +
-      "757-membership-protocol-filtering-listin" +
-      "g-and-counting-by-api#filter-members\">ht" +
-      "tps://help.passkit.com/en/articles/41337" +
-      "57-membership-protocol-filtering-listing" +
-      "-and-counting-by-api#filter-members</a>J" +
-      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
-      "04\022\027\n\025Record was not found.\022\322\001\n\032getMessa" +
-      "geHistoryForMember\022\016.io.Pagination\032\013.io." +
-      "Message\"\224\001\202\323\344\223\002\032\022\030/members/member/messag" +
-      "es\222Aq\n\007Members\022\033Get members message hist" +
-      "ory\032IGet all the message that have been " +
-      "sent to a member. Supports pagination.0\001" +
-      "\022\332\001\n\025getMetaKeysForProgram\022\006.io.Id\032\013.io." +
-      "Strings\"\253\001\202\323\344\223\002\033\022\031/members/member/meta/{" +
-      "id}\222A\206\001\n\007Members\022\033Get Meta Keys for a Pr" +
-      "ogram\032^Returns a list of distinct meta f" +
-      "ield keys. Can be used for building filt" +
-      "ers / table headings.\022\263\002\n\022renewMembersEx" +
-      "piry\022\034.members.UpdateExpiryRequest\032\t.io." +
-      "Count\"\363\001\202\323\344\223\002\033\032\026/members/member/expiry:\001" +
-      "*\222A\316\001\n\007Members\022\032Batch update member expi" +
-      "ry\032\246\001Batch updates expiry of ALL active " +
-      "members belong to the tier. Should only " +
-      "be used when you want to update ALL the " +
-      "expiry date for all member records in a " +
-      "given tier.\022\242\001\n\022updateMemberExpiry\022\025.mem" +
-      "bers.MemberExpiry\032\006.io.Id\"m\202\323\344\223\002!\032\034/memb" +
-      "ers/member/updateExpiry:\001*\222AC\n\007Members\022\024" +
-      "Update member expiry\032\"Updates expiry of " +
-      "a single member.\022\265\001\n\021countMemberEvents\022\024" +
+      ".proto\032\026io/common/filter.proto\032\030io/commo" +
+      "n/personal.proto\032\035io/member/member_event" +
+      "s.proto\032\026io/member/member.proto\032\027io/memb" +
+      "er/program.proto\032\024io/member/tier.proto\032." +
+      "protoc-gen-openapiv2/options/annotations" +
+      ".proto2\343L\n\007Members\022}\n\rcreateProgram\022\020.me" +
+      "mbers.Program\032\006.io.Id\"R\202\323\344\223\002\025\"\020/members/" +
+      "program:\001*\222A4\n\010Programs\022\016Create Program\032" +
+      "\030Creates a program record\022\221\001\n\rupdateProg" +
+      "ram\022\020.members.Program\032\020.members.Program\"" +
+      "\\\202\323\344\223\002\025\032\020/members/program:\001*\222A>\n\010Program" +
+      "s\022\016Update Program\032\"Updates an existing p" +
+      "rogram record\022\200\001\n\ngetProgram\022\006.io.Id\032\020.m" +
+      "embers.Program\"X\202\323\344\223\002\027\022\025/members/program" +
+      "/{id}\222A8\n\010Programs\022\013Get Program\032\037Gets an" +
+      " existing program record\022\222\001\n\013copyProgram" +
+      "\022\033.members.ProgramCopyRequest\032\006.io.Id\"^\202" +
+      "\323\344\223\002\032\"\025/members/program/copy:\001*\222A;\n\010Prog" +
+      "rams\022\014Copy Program\032!Copies an existing p" +
+      "rogram record\022\224\002\n\rdeleteProgram\022\006.io.Id\032" +
+      "\026.google.protobuf.Empty\"\342\001\202\323\344\223\002\032*\025/membe" +
+      "rs/program/{id}:\001*\222A\276\001\n\010Programs\022\016Delete" +
+      " Program\032\241\001Deletes an existing program r" +
+      "ecord. Deleting a program results in all" +
+      " tiers, and members underneath it being " +
+      "invalidated and removed. Needs to be use" +
+      "d with care.\022\300\001\n\026listProgramsDeprecated\022" +
+      "\016.io.Pagination\032\020.members.Program\"\201\001\202\323\344\223" +
+      "\002\023\022\021/members/programs\222Ae\n\010Programs\022\032List" +
+      " Programs [DEPRECATED]\032=[DEPRECATED: OR " +
+      "operator is not supported] Lists all pro" +
+      "grams0\001\022\361\003\n\014listPrograms\022\013.io.Filters\032\020." +
+      "members.Program\"\277\003\202\323\344\223\002\033\"\026/members/progr" +
+      "ams/list:\001*\222A\232\003\n\010Programs\022\rList Programs" +
+      "\032\376\002Lists all programs\n\n<span style=\"font" +
+      "-weight:bold\">About filter field names, " +
+      "operators and sample payloads:</span> <a" +
+      " target=\"_blank\" href=\"https://help.pass" +
+      "kit.com/en/articles/4133757-membership-p" +
+      "rotocol-filtering-listing-and-counting-b" +
+      "y-api#filter-programs\">https://help.pass" +
+      "kit.com/en/articles/4133757-membership-p" +
+      "rotocol-filtering-listing-and-counting-b" +
+      "y-api#filter-programs</a>0\001\022h\n\ncreateTie" +
+      "r\022\r.members.Tier\032\006.io.Id\"C\202\323\344\223\002\022\"\r/membe" +
+      "rs/tier:\001*\222A(\n\005Tiers\022\013Create Tier\032\022Creat" +
+      "es a new tier\022v\n\nupdateTier\022\r.members.Ti" +
+      "er\032\r.members.Tier\"J\202\323\344\223\002\022\032\r/members/tier" +
+      ":\001*\222A/\n\005Tiers\022\013Update Tier\032\031Updates a ti" +
+      "er by tier id\022\227\001\n\007getTier\022\031.members.Tier" +
+      "RequestInput\032\r.members.Tier\"b\202\323\344\223\002$\022\"/me" +
+      "mbers/tier/{programId}/{tierId}\222A5\n\005Tier" +
+      "s\022\010Get Tier\032\"Get a tier by program and t" +
+      "ier ids\022\326\001\n\ndeleteTier\022\031.members.TierReq" +
+      "uestInput\032\026.google.protobuf.Empty\"\224\001\202\323\344\223" +
+      "\002\'*\"/members/tier/{programId}/{tierId}:\001" +
+      "*\222Ad\n\005Tiers\022\013Delete Tier\032NDeletes a tier" +
+      " and members who belong to the tier. Nee" +
+      "ds to be used with care.\022\275\001\n\023listTiersDe" +
+      "precated\022\036.members.ListRequestDeprecated" +
+      "\032\r.members.Tier\"u\202\323\344\223\002\020\022\016/members/tiers\222" +
+      "A\\\n\005Tiers\022\027List Tiers [DEPRECATED]\032:[DEP" +
+      "RECATED: OR operator is not supported] L" +
+      "ists all tiers0\001\022\342\003\n\tlistTiers\022\024.members" +
+      ".ListRequest\032\r.members.Tier\"\255\003\202\323\344\223\002\030\"\023/m" +
+      "embers/tiers/list:\001*\222A\213\003\n\005Tiers\022\nList Ti" +
+      "ers\032\365\002Lists all tiers\n\n<span style=\"font" +
+      "-weight:bold\">About filter field names, " +
+      "operators and sample payloads:</span> <a" +
+      " target=\"_blank\" href=\"https://help.pass" +
+      "kit.com/en/articles/4133757-membership-p" +
+      "rotocol-filtering-listing-and-counting-b" +
+      "y-api#filter-tiers\">https://help.passkit" +
+      ".com/en/articles/4133757-membership-prot" +
+      "ocol-filtering-listing-and-counting-by-a" +
+      "pi#filter-tiers</a>0\001\022u\n\013enrolMember\022\017.m" +
+      "embers.Member\032\006.io.Id\"M\202\323\344\223\002\024\"\017/members/" +
+      "member:\001*\222A0\n\007Members\022\020Enrol new Member\032" +
+      "\023Enrols a new member\022\276\001\n\021enrolMemberPubl" +
+      "ic\022\017.members.Member\032\006.io.Id\"\217\001\202\323\344\223\002\033\"\026/m" +
+      "embers/member/public:\001*\222Ak\n\007Members\022\031Enr" +
+      "ol new Member (public)\032EEnrols a new mem" +
+      "ber into the default tier of a program t" +
+      "hat is public\022\236\001\n\023getMemberRecordById\022\006." +
+      "io.Id\032\017.members.Member\"n\202\323\344\223\002\031\022\027/members" +
+      "/member/id/{id}\222AL\n\007Members\022\037Get member " +
+      "record by PassKit ID\032 Gets member record" +
+      " by PassKit ID\022\347\001\n\033getMemberRecordByExte" +
+      "rnalId\022(.members.MemberRecordByExternalI" +
+      "dRequest\032\017.members.Member\"\214\001\202\323\344\223\0025\0223/mem" +
+      "bers/member/externalId/{programId}/{exte" +
+      "rnalId}\222AN\n\007Members\022 Get member record b" +
+      "y External ID\032!Gets member record by Ext" +
+      "ernal ID\022\360\001\n\rcheckInMember\022 .members.Mem" +
+      "berCheckInOutRequest\032\024.members.MemberEve" +
+      "nt\"\246\001\202\323\344\223\002\034\"\027/members/member/checkIn:\001*\222" +
+      "A\200\001\n\007Members\022\017Check in member\032dChecks in" +
+      " a member by either internal PassKit ID " +
+      "or External ID. Returns the latest 5 mem" +
+      "ber events.\022\364\001\n\016checkOutMember\022 .members" +
+      ".MemberCheckInOutRequest\032\024.members.Membe" +
+      "rEvent\"\251\001\202\323\344\223\002\035\"\030/members/member/checkOu" +
+      "t:\001*\222A\202\001\n\007Members\022\020Check out member\032eChe" +
+      "cks out a member by either internal Pass" +
+      "Kit ID or External ID. Returns the lates" +
+      "t 5 member events.\022\204\002\n\025listMembersDeprec" +
+      "ated\022\036.members.ListRequestDeprecated\032\017.m" +
+      "embers.Member\"\267\001\202\323\344\223\002\"\022 /members/member/" +
+      "list/{programId}\222A\213\001\n\007Members\022\031List memb" +
+      "ers [DEPRECATED]\032e[DEPRECATED: OR operat" +
+      "or is not supported] List all members fo" +
+      "r a given segment. Supports pagination.0" +
+      "\001\022\246\004\n\013listMembers\022\024.members.ListRequest\032" +
+      "\017.members.Member\"\355\003\202\323\344\223\002%\" /members/memb" +
+      "er/list/{programId}:\001*\222A\276\003\n\007Members\022\014Lis" +
+      "t members\032\244\003List all members for a given" +
+      " segment. Supports pagination.\n\n<span st" +
+      "yle=\"font-weight:bold\">About filter fiel" +
+      "d names, operators and sample payloads:<" +
+      "/span> <a target=\"_blank\" href=\"https://" +
+      "help.passkit.com/en/articles/4133757-mem" +
+      "bership-protocol-filtering-listing-and-c" +
+      "ounting-by-api#filter-members\">https://h" +
+      "elp.passkit.com/en/articles/4133757-memb" +
+      "ership-protocol-filtering-listing-and-co" +
+      "unting-by-api#filter-members</a>0\001\022\233\001\n\014u" +
+      "pdateMember\022\017.members.Member\032\006.io.Id\"r\202\323" +
+      "\344\223\002\024\032\017/members/member:\001*\222AU\n\007Members\022\rUp" +
+      "date member\032;Updates member by either in" +
+      "ternal PassKit ID or External ID\022\346\001\n\near" +
+      "nPoints\022\036.members.EarnBurnPointsRequest\032" +
+      "\025.members.MemberPoints\"\240\001\202\323\344\223\002 \032\033/member" +
+      "s/member/points/earn:\001*\222Aw\n\007Members\022\013Ear" +
+      "n points\032_Earns points for a member (ide" +
+      "ntified by PassKit ID or External ID). A" +
+      "dds the amounts provided.\022\350\001\n\nburnPoints" +
+      "\022\036.members.EarnBurnPointsRequest\032\025.membe" +
+      "rs.MemberPoints\"\242\001\202\323\344\223\002 \032\033/members/membe" +
+      "r/points/burn:\001*\222Ay\n\007Members\022\013Burn point" +
+      "s\032aBurn points for a member (identified " +
+      "by PassKit ID or External ID). Deducts t" +
+      "he amounts provided.\022\334\001\n\tsetPoints\022\031.mem" +
+      "bers.SetPointsRequest\032\025.members.MemberPo" +
+      "ints\"\234\001\202\323\344\223\002\037\032\032/members/member/points/se" +
+      "t:\001*\222At\n\007Members\022\nSet points\032]Set points" +
+      " for a member (identified by PassKit ID " +
+      "or External ID). Sets the amounts provid" +
+      "ed.\022\266\001\n\026updateMembersBySegment\022\035.members" +
+      ".MemberSegmentRequest\032\026.google.protobuf." +
+      "Empty\"e\202\323\344\223\002\034\032\027/members/member/segment:\001" +
+      "*\222A@\n\007Members\022\031Update members by segment" +
+      "\032\032Updates members by segment\022\266\001\n\026deleteM" +
+      "embersBySegment\022\035.members.MemberSegmentR" +
+      "equest\032\026.google.protobuf.Empty\"e\202\323\344\223\002\034*\027" +
+      "/members/member/segment:\001*\222A@\n\007Members\022\031" +
+      "Delete members by segment\032\032Deletes membe" +
+      "rs by segment\022\253\001\n\014deleteMember\022\017.members" +
+      ".Member\032\026.google.protobuf.Empty\"r\202\323\344\223\002\024*" +
+      "\017/members/member:\001*\222AU\n\007Members\022\rDelete " +
+      "member\032;Deletes member by either interna" +
+      "l PassKit ID or External ID\022\261\002\n\026countMem" +
+      "bersDeprecated\022\036.members.ListRequestDepr" +
+      "ecated\032\t.io.Count\"\353\001\202\323\344\223\002\034\022\032/members/cou" +
+      "nt/{programId}\222A\305\001\n\007Members\022#Count Filte" +
+      "red Members [DEPRECATED]\032Q[DEPRECATED: O" +
+      "R operator is not supported] Retrieves a" +
+      " count of filtered members.J\"\n\003403\022\033\n\031Us" +
+      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
+      " was not found.\022\323\004\n\014countMembers\022\024.membe" +
+      "rs.ListRequest\032\t.io.Count\"\241\004\202\323\344\223\002\037\"\032/mem" +
+      "bers/count/{programId}:\001*\222A\370\003\n\007Members\022\026" +
+      "Count Filtered Members\032\220\003Retrieves a cou" +
+      "nt of filtered members.\n\n<span style=\"fo" +
+      "nt-weight:bold\">About filter field names" +
+      ", operators and sample payloads:</span> " +
+      "<a target=\"_blank\" href=\"https://help.pa" +
+      "sskit.com/en/articles/4133757-membership" +
+      "-protocol-filtering-listing-and-counting" +
+      "-by-api#filter-members\">https://help.pas" +
+      "skit.com/en/articles/4133757-membership-" +
+      "protocol-filtering-listing-and-counting-" +
+      "by-api#filter-members</a>J\"\n\003403\022\033\n\031User" +
+      " lacks authorization.J\036\n\003404\022\027\n\025Record w" +
+      "as not found.\022\322\001\n\032getMessageHistoryForMe" +
+      "mber\022\016.io.Pagination\032\013.io.Message\"\224\001\202\323\344\223" +
+      "\002\032\022\030/members/member/messages\222Aq\n\007Members" +
+      "\022\033Get members message history\032IGet all t" +
+      "he message that have been sent to a memb" +
+      "er. Supports pagination.0\001\022\332\001\n\025getMetaKe" +
+      "ysForProgram\022\006.io.Id\032\013.io.Strings\"\253\001\202\323\344\223" +
+      "\002\033\022\031/members/member/meta/{id}\222A\206\001\n\007Membe" +
+      "rs\022\033Get Meta Keys for a Program\032^Returns" +
+      " a list of distinct meta field keys. Can" +
+      " be used for building filters / table he" +
+      "adings.\022\263\002\n\022renewMembersExpiry\022\034.members" +
+      ".UpdateExpiryRequest\032\t.io.Count\"\363\001\202\323\344\223\002\033" +
+      "\032\026/members/member/expiry:\001*\222A\316\001\n\007Members" +
+      "\022\032Batch update member expiry\032\246\001Batch upd" +
+      "ates expiry of ALL active members belong" +
+      " to the tier. Should only be used when y" +
+      "ou want to update ALL the expiry date fo" +
+      "r all member records in a given tier.\022\242\001" +
+      "\n\022updateMemberExpiry\022\025.members.MemberExp" +
+      "iry\032\006.io.Id\"m\202\323\344\223\002!\032\034/members/member/upd" +
+      "ateExpiry:\001*\222AC\n\007Members\022\024Update member " +
+      "expiry\032\"Updates expiry of a single membe" +
+      "r.\022\253\001\n\013patchPerson\022\021.io.PersonRequest\032\006." +
+      "io.Id\"\200\001\202\323\344\223\002\0332\026/members/member/person:\001" +
+      "*\222A\\\n\007Members\022\033Update Personal Informati" +
+      "on\0324Updates personal information of a me" +
+      "mber pass holder\022\265\001\n\021countMemberEvents\022\024" +
       ".members.ListRequest\032\t.io.Count\"\177\202\323\344\223\002.\"" +
       ")/members/program/count/events/{programI" +
       "d}:\001*\222AH\n\010Programs\022\023Count member events\032" +
@@ -273,10 +278,10 @@ public final class ARpc {
       "enrol/url/program/{id}\222A\202\001\n\016Enrolment Ur" +
       "ls\022\036Get Program Enrolment Page URL\032PRetr" +
       "ieves enrolment page URL of the base tie" +
-      "r and enrolment URLs for each tier .B\314\006\n" +
+      "r and enrolment URLs for each tier .B\256\007\n" +
       "\030com.passkit.grpc.MembersZ,stash.passkit" +
       ".com/io/model/sdk/go/io/members\252\002\024PassKi" +
-      "t.Grpc.Members\222A\351\005\022\206\002\n\023PassKit Members A" +
+      "t.Grpc.Members\222A\313\006\022\206\002\n\023PassKit Members A" +
       "PI\022lThe PassKit Members API lets you man" +
       "age your membership programs and passes " +
       "for Apple Wallet and Google Pay.\0328https:" +
@@ -285,17 +290,19 @@ public final class ARpc {
       "ocs.passkit.io\032\023support@passkit.com2\0061.0" +
       "-rc*\001\0022\020application/json:\020application/js" +
       "onR9\n\003200\0222\n(Returned when the request i" +
-      "s successful.\022\006\n\004\232\002\001\007RP\n\003403\022I\nGReturned" +
-      " when the user does not have permission " +
-      "to access the resource.R;\n\003404\0224\n*Return" +
-      "ed when the resource does not exist.\022\006\n\004" +
-      "\232\002\001\007R<\n\003500\0225\n+Returned when there is an" +
-      " unexpected error.\022\006\n\004\232\002\001\007R]\n\003503\022V\nTRet" +
-      "urned when the user is being throttled. " +
-      "Back off for a few ms and then try again" +
-      ".Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticatio" +
-      "n token.\032\rAuthorization \002b\020\n\016\n\napiKeyAut" +
-      "h\022\000b\006proto3"
+      "s successful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned" +
+      " when wrong user input is provided.R0\n\0034" +
+      "01\022)\n\'Returned when the user is unauthor" +
+      "ized.RP\n\003403\022I\nGReturned when the user d" +
+      "oes not have permission to access the re" +
+      "source.R;\n\003404\0224\n*Returned when the reso" +
+      "urce does not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+R" +
+      "eturned when there is an unexpected erro" +
+      "r.\022\006\n\004\232\002\001\007RW\n\003503\022P\nNServer is unavailab" +
+      "le. Back off for 250ms and repeat reques" +
+      "t until successful.Z>\n<\n\napiKeyAuth\022.\010\002\022" +
+      "\031JWT Authentication token.\032\rAuthorizatio" +
+      "n \002b\020\n\016\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -307,6 +314,7 @@ public final class ARpc {
           com.passkit.grpc.MessageOuterClass.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
+          com.passkit.grpc.Personal.getDescriptor(),
           com.passkit.grpc.Members.MemberEventsOuterClass.getDescriptor(),
           com.passkit.grpc.Members.MemberOuterClass.getDescriptor(),
           com.passkit.grpc.Members.ProgramOuterClass.getDescriptor(),
@@ -327,6 +335,7 @@ public final class ARpc {
     com.passkit.grpc.MessageOuterClass.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
+    com.passkit.grpc.Personal.getDescriptor();
     com.passkit.grpc.Members.MemberEventsOuterClass.getDescriptor();
     com.passkit.grpc.Members.MemberOuterClass.getDescriptor();
     com.passkit.grpc.Members.ProgramOuterClass.getDescriptor();

@@ -415,6 +415,151 @@ public final class ProgramOuterClass {
     // @@protoc_insertion_point(enum_scope:members.ProfileImageSetting)
   }
 
+  /**
+   * <pre>
+   * Defines what medium we deliver the recovered pass.
+   * </pre>
+   *
+   * Protobuf enum {@code members.RecoverPassDelivery}
+   */
+  public enum RecoverPassDelivery
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * redirect to pass url.
+     * </pre>
+     *
+     * <code>DELIVERY_REDIRECT = 0;</code>
+     */
+    DELIVERY_REDIRECT(0),
+    /**
+     * <pre>
+     * email user (resend welcome email)
+     * </pre>
+     *
+     * <code>DELIVERY_EMAIL = 1;</code>
+     */
+    DELIVERY_EMAIL(1),
+    /**
+     * <pre>
+     * sms to users phone
+     * </pre>
+     *
+     * <code>DELIVERY_SMS = 2;</code>
+     */
+    DELIVERY_SMS(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * redirect to pass url.
+     * </pre>
+     *
+     * <code>DELIVERY_REDIRECT = 0;</code>
+     */
+    public static final int DELIVERY_REDIRECT_VALUE = 0;
+    /**
+     * <pre>
+     * email user (resend welcome email)
+     * </pre>
+     *
+     * <code>DELIVERY_EMAIL = 1;</code>
+     */
+    public static final int DELIVERY_EMAIL_VALUE = 1;
+    /**
+     * <pre>
+     * sms to users phone
+     * </pre>
+     *
+     * <code>DELIVERY_SMS = 2;</code>
+     */
+    public static final int DELIVERY_SMS_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RecoverPassDelivery valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static RecoverPassDelivery forNumber(int value) {
+      switch (value) {
+        case 0: return DELIVERY_REDIRECT;
+        case 1: return DELIVERY_EMAIL;
+        case 2: return DELIVERY_SMS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RecoverPassDelivery>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RecoverPassDelivery> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RecoverPassDelivery>() {
+            public RecoverPassDelivery findValueByNumber(int number) {
+              return RecoverPassDelivery.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Members.ProgramOuterClass.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final RecoverPassDelivery[] VALUES = values();
+
+    public static RecoverPassDelivery valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RecoverPassDelivery(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:members.RecoverPassDelivery)
+  }
+
   public interface PointsTypeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:members.PointsType)
       com.google.protobuf.MessageOrBuilder {
@@ -1435,60 +1580,6 @@ public final class ProgramOuterClass {
 
     /**
      * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    int getCallbacksCount();
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    boolean containsCallbacks(
-        int key);
-    /**
-     * Use {@link #getCallbacksMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-    getCallbacks();
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-    getCallbacksMap();
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-
-    com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrDefault(
-        int key,
-        com.passkit.grpc.CallbackOuterClass.Callback defaultValue);
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-
-    com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrThrow(
-        int key);
-
-    /**
-     * <pre>
      * Points format for primary points.
      * </pre>
      *
@@ -1735,6 +1826,33 @@ public final class ProgramOuterClass {
      * <code>.members.EventCaptureSettings eventCaptureSettings = 25;</code>
      */
     com.passkit.grpc.Members.ProgramOuterClass.EventCaptureSettingsOrBuilder getEventCaptureSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @return Whether the passRecoverySettings field is set.
+     */
+    boolean hasPassRecoverySettings();
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @return The passRecoverySettings.
+     */
+    com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getPassRecoverySettings();
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     */
+    com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder getPassRecoverySettingsOrBuilder();
   }
   /**
    * <pre>
@@ -1907,19 +2025,6 @@ public final class ProgramOuterClass {
               autoDeleteDaysAfterNotInstalling_ = input.readUInt32();
               break;
             }
-            case 114: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                callbacks_ = com.google.protobuf.MapField.newMapField(
-                    CallbacksDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-              callbacks__ = input.readMessage(
-                  CallbacksDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              callbacks_.getMutableMap().put(
-                  callbacks__.getKey(), callbacks__.getValue());
-              break;
-            }
             case 130: {
               com.passkit.grpc.Members.ProgramOuterClass.PointsType.Builder subBuilder = null;
               if (pointsType_ != null) {
@@ -1961,9 +2066,9 @@ public final class ProgramOuterClass {
             }
             case 162: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 metaFieldsList_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000002;
               }
               metaFieldsList_.add(s);
               break;
@@ -2026,6 +2131,19 @@ public final class ProgramOuterClass {
 
               break;
             }
+            case 210: {
+              com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder subBuilder = null;
+              if (passRecoverySettings_ != null) {
+                subBuilder = passRecoverySettings_.toBuilder();
+              }
+              passRecoverySettings_ = input.readMessage(com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(passRecoverySettings_);
+                passRecoverySettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2044,7 +2162,7 @@ public final class ProgramOuterClass {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           status_ = java.util.Collections.unmodifiableList(status_);
         }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           metaFieldsList_ = metaFieldsList_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -2056,18 +2174,6 @@ public final class ProgramOuterClass {
       return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_Program_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapField internalGetMapField(
-        int number) {
-      switch (number) {
-        case 14:
-          return internalGetCallbacks();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -2535,103 +2641,6 @@ public final class ProgramOuterClass {
       return autoDeleteDaysAfterNotInstalling_;
     }
 
-    public static final int CALLBACKS_FIELD_NUMBER = 14;
-    private static final class CallbacksDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>newDefaultInstance(
-                  com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_Program_CallbacksEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.UINT32,
-                  0,
-                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  com.passkit.grpc.CallbackOuterClass.Callback.getDefaultInstance());
-    }
-    private com.google.protobuf.MapField<
-        java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> callbacks_;
-    private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-    internalGetCallbacks() {
-      if (callbacks_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            CallbacksDefaultEntryHolder.defaultEntry);
-      }
-      return callbacks_;
-    }
-
-    public int getCallbacksCount() {
-      return internalGetCallbacks().getMap().size();
-    }
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-
-    @java.lang.Override
-    public boolean containsCallbacks(
-        int key) {
-      
-      return internalGetCallbacks().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getCallbacksMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> getCallbacks() {
-      return getCallbacksMap();
-    }
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    @java.lang.Override
-
-    public java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> getCallbacksMap() {
-      return internalGetCallbacks().getMap();
-    }
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    @java.lang.Override
-
-    public com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrDefault(
-        int key,
-        com.passkit.grpc.CallbackOuterClass.Callback defaultValue) {
-      
-      java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> map =
-          internalGetCallbacks().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <pre>
-     * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-     * </pre>
-     *
-     * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-     */
-    @java.lang.Override
-
-    public com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrThrow(
-        int key) {
-      
-      java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> map =
-          internalGetCallbacks().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
     public static final int POINTSTYPE_FIELD_NUMBER = 16;
     private com.passkit.grpc.Members.ProgramOuterClass.PointsType pointsType_;
     /**
@@ -2976,6 +2985,44 @@ public final class ProgramOuterClass {
       return getEventCaptureSettings();
     }
 
+    public static final int PASSRECOVERYSETTINGS_FIELD_NUMBER = 26;
+    private com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings passRecoverySettings_;
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @return Whether the passRecoverySettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasPassRecoverySettings() {
+      return passRecoverySettings_ != null;
+    }
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     * @return The passRecoverySettings.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getPassRecoverySettings() {
+      return passRecoverySettings_ == null ? com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.getDefaultInstance() : passRecoverySettings_;
+    }
+    /**
+     * <pre>
+     * Settings for how users can recover passes.
+     * </pre>
+     *
+     * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder getPassRecoverySettingsOrBuilder() {
+      return getPassRecoverySettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3031,12 +3078,6 @@ public final class ProgramOuterClass {
       if (autoDeleteDaysAfterNotInstalling_ != 0) {
         output.writeUInt32(12, autoDeleteDaysAfterNotInstalling_);
       }
-      com.google.protobuf.GeneratedMessageV3
-        .serializeIntegerMapTo(
-          output,
-          internalGetCallbacks(),
-          CallbacksDefaultEntryHolder.defaultEntry,
-          14);
       if (pointsType_ != null) {
         output.writeMessage(16, getPointsType());
       }
@@ -3063,6 +3104,9 @@ public final class ProgramOuterClass {
       }
       if (eventCaptureSettings_ != null) {
         output.writeMessage(25, getEventCaptureSettings());
+      }
+      if (passRecoverySettings_ != null) {
+        output.writeMessage(26, getPassRecoverySettings());
       }
       unknownFields.writeTo(output);
     }
@@ -3125,16 +3169,6 @@ public final class ProgramOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(12, autoDeleteDaysAfterNotInstalling_);
       }
-      for (java.util.Map.Entry<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> entry
-           : internalGetCallbacks().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-        callbacks__ = CallbacksDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(14, callbacks__);
-      }
       if (pointsType_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getPointsType());
@@ -3174,6 +3208,10 @@ public final class ProgramOuterClass {
       if (eventCaptureSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, getEventCaptureSettings());
+      }
+      if (passRecoverySettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, getPassRecoverySettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3225,8 +3263,6 @@ public final class ProgramOuterClass {
       }
       if (getAutoDeleteDaysAfterNotInstalling()
           != other.getAutoDeleteDaysAfterNotInstalling()) return false;
-      if (!internalGetCallbacks().equals(
-          other.internalGetCallbacks())) return false;
       if (hasPointsType() != other.hasPointsType()) return false;
       if (hasPointsType()) {
         if (!getPointsType()
@@ -3264,6 +3300,11 @@ public final class ProgramOuterClass {
       if (hasEventCaptureSettings()) {
         if (!getEventCaptureSettings()
             .equals(other.getEventCaptureSettings())) return false;
+      }
+      if (hasPassRecoverySettings() != other.hasPassRecoverySettings()) return false;
+      if (hasPassRecoverySettings()) {
+        if (!getPassRecoverySettings()
+            .equals(other.getPassRecoverySettings())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -3310,10 +3351,6 @@ public final class ProgramOuterClass {
       }
       hash = (37 * hash) + AUTODELETEDAYSAFTERNOTINSTALLING_FIELD_NUMBER;
       hash = (53 * hash) + getAutoDeleteDaysAfterNotInstalling();
-      if (!internalGetCallbacks().getMap().isEmpty()) {
-        hash = (37 * hash) + CALLBACKS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetCallbacks().hashCode();
-      }
       if (hasPointsType()) {
         hash = (37 * hash) + POINTSTYPE_FIELD_NUMBER;
         hash = (53 * hash) + getPointsType().hashCode();
@@ -3347,6 +3384,10 @@ public final class ProgramOuterClass {
       if (hasEventCaptureSettings()) {
         hash = (37 * hash) + EVENTCAPTURESETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getEventCaptureSettings().hashCode();
+      }
+      if (hasPassRecoverySettings()) {
+        hash = (37 * hash) + PASSRECOVERYSETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getPassRecoverySettings().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3459,28 +3500,6 @@ public final class ProgramOuterClass {
         return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_Program_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMapField(
-          int number) {
-        switch (number) {
-          case 14:
-            return internalGetCallbacks();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapField internalGetMutableMapField(
-          int number) {
-        switch (number) {
-          case 14:
-            return internalGetMutableCallbacks();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3547,7 +3566,6 @@ public final class ProgramOuterClass {
         }
         autoDeleteDaysAfterNotInstalling_ = 0;
 
-        internalGetMutableCallbacks().clear();
         if (pointsTypeBuilder_ == null) {
           pointsType_ = null;
         } else {
@@ -3567,7 +3585,7 @@ public final class ProgramOuterClass {
           metricsBuilder_ = null;
         }
         metaFieldsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (createdBuilder_ == null) {
           created_ = null;
         } else {
@@ -3593,6 +3611,12 @@ public final class ProgramOuterClass {
         } else {
           eventCaptureSettings_ = null;
           eventCaptureSettingsBuilder_ = null;
+        }
+        if (passRecoverySettingsBuilder_ == null) {
+          passRecoverySettings_ = null;
+        } else {
+          passRecoverySettings_ = null;
+          passRecoverySettingsBuilder_ = null;
         }
         return this;
       }
@@ -3653,8 +3677,6 @@ public final class ProgramOuterClass {
           result.localizedExpiryMessage_ = localizedExpiryMessageBuilder_.build();
         }
         result.autoDeleteDaysAfterNotInstalling_ = autoDeleteDaysAfterNotInstalling_;
-        result.callbacks_ = internalGetCallbacks();
-        result.callbacks_.makeImmutable();
         if (pointsTypeBuilder_ == null) {
           result.pointsType_ = pointsType_;
         } else {
@@ -3670,9 +3692,9 @@ public final class ProgramOuterClass {
         } else {
           result.metrics_ = metricsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           metaFieldsList_ = metaFieldsList_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.metaFieldsList_ = metaFieldsList_;
         if (createdBuilder_ == null) {
@@ -3695,6 +3717,11 @@ public final class ProgramOuterClass {
           result.eventCaptureSettings_ = eventCaptureSettings_;
         } else {
           result.eventCaptureSettings_ = eventCaptureSettingsBuilder_.build();
+        }
+        if (passRecoverySettingsBuilder_ == null) {
+          result.passRecoverySettings_ = passRecoverySettings_;
+        } else {
+          result.passRecoverySettings_ = passRecoverySettingsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3791,8 +3818,6 @@ public final class ProgramOuterClass {
         if (other.getAutoDeleteDaysAfterNotInstalling() != 0) {
           setAutoDeleteDaysAfterNotInstalling(other.getAutoDeleteDaysAfterNotInstalling());
         }
-        internalGetMutableCallbacks().mergeFrom(
-            other.internalGetCallbacks());
         if (other.hasPointsType()) {
           mergePointsType(other.getPointsType());
         }
@@ -3805,7 +3830,7 @@ public final class ProgramOuterClass {
         if (!other.metaFieldsList_.isEmpty()) {
           if (metaFieldsList_.isEmpty()) {
             metaFieldsList_ = other.metaFieldsList_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureMetaFieldsListIsMutable();
             metaFieldsList_.addAll(other.metaFieldsList_);
@@ -3826,6 +3851,9 @@ public final class ProgramOuterClass {
         }
         if (other.hasEventCaptureSettings()) {
           mergeEventCaptureSettings(other.getEventCaptureSettings());
+        }
+        if (other.hasPassRecoverySettings()) {
+          mergePassRecoverySettings(other.getPassRecoverySettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5178,162 +5206,6 @@ public final class ProgramOuterClass {
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> callbacks_;
-      private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-      internalGetCallbacks() {
-        if (callbacks_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              CallbacksDefaultEntryHolder.defaultEntry);
-        }
-        return callbacks_;
-      }
-      private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-      internalGetMutableCallbacks() {
-        onChanged();;
-        if (callbacks_ == null) {
-          callbacks_ = com.google.protobuf.MapField.newMapField(
-              CallbacksDefaultEntryHolder.defaultEntry);
-        }
-        if (!callbacks_.isMutable()) {
-          callbacks_ = callbacks_.copy();
-        }
-        return callbacks_;
-      }
-
-      public int getCallbacksCount() {
-        return internalGetCallbacks().getMap().size();
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-
-      @java.lang.Override
-      public boolean containsCallbacks(
-          int key) {
-        
-        return internalGetCallbacks().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getCallbacksMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> getCallbacks() {
-        return getCallbacksMap();
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-      @java.lang.Override
-
-      public java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> getCallbacksMap() {
-        return internalGetCallbacks().getMap();
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-      @java.lang.Override
-
-      public com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrDefault(
-          int key,
-          com.passkit.grpc.CallbackOuterClass.Callback defaultValue) {
-        
-        java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> map =
-            internalGetCallbacks().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-      @java.lang.Override
-
-      public com.passkit.grpc.CallbackOuterClass.Callback getCallbacksOrThrow(
-          int key) {
-        
-        java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> map =
-            internalGetCallbacks().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearCallbacks() {
-        internalGetMutableCallbacks().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-
-      public Builder removeCallbacks(
-          int key) {
-        
-        internalGetMutableCallbacks().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback>
-      getMutableCallbacks() {
-        return internalGetMutableCallbacks().getMutableMap();
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-      public Builder putCallbacks(
-          int key,
-          com.passkit.grpc.CallbackOuterClass.Callback value) {
-        
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableCallbacks().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * Callbacks that are defined on program events. The key is the CallbackEvent ENUM.
-       * </pre>
-       *
-       * <code>map&lt;uint32, .io.Callback&gt; callbacks = 14;</code>
-       */
-
-      public Builder putAllCallbacks(
-          java.util.Map<java.lang.Integer, com.passkit.grpc.CallbackOuterClass.Callback> values) {
-        internalGetMutableCallbacks().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
       private com.passkit.grpc.Members.ProgramOuterClass.PointsType pointsType_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.passkit.grpc.Members.ProgramOuterClass.PointsType, com.passkit.grpc.Members.ProgramOuterClass.PointsType.Builder, com.passkit.grpc.Members.ProgramOuterClass.PointsTypeOrBuilder> pointsTypeBuilder_;
@@ -5801,9 +5673,9 @@ public final class ProgramOuterClass {
 
       private com.google.protobuf.LazyStringList metaFieldsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureMetaFieldsListIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           metaFieldsList_ = new com.google.protobuf.LazyStringArrayList(metaFieldsList_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -5920,7 +5792,7 @@ public final class ProgramOuterClass {
        */
       public Builder clearMetaFieldsList() {
         metaFieldsList_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6637,6 +6509,161 @@ public final class ProgramOuterClass {
           eventCaptureSettings_ = null;
         }
         return eventCaptureSettingsBuilder_;
+      }
+
+      private com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings passRecoverySettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder> passRecoverySettingsBuilder_;
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       * @return Whether the passRecoverySettings field is set.
+       */
+      public boolean hasPassRecoverySettings() {
+        return passRecoverySettingsBuilder_ != null || passRecoverySettings_ != null;
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       * @return The passRecoverySettings.
+       */
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getPassRecoverySettings() {
+        if (passRecoverySettingsBuilder_ == null) {
+          return passRecoverySettings_ == null ? com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.getDefaultInstance() : passRecoverySettings_;
+        } else {
+          return passRecoverySettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public Builder setPassRecoverySettings(com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings value) {
+        if (passRecoverySettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          passRecoverySettings_ = value;
+          onChanged();
+        } else {
+          passRecoverySettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public Builder setPassRecoverySettings(
+          com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder builderForValue) {
+        if (passRecoverySettingsBuilder_ == null) {
+          passRecoverySettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          passRecoverySettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public Builder mergePassRecoverySettings(com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings value) {
+        if (passRecoverySettingsBuilder_ == null) {
+          if (passRecoverySettings_ != null) {
+            passRecoverySettings_ =
+              com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.newBuilder(passRecoverySettings_).mergeFrom(value).buildPartial();
+          } else {
+            passRecoverySettings_ = value;
+          }
+          onChanged();
+        } else {
+          passRecoverySettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public Builder clearPassRecoverySettings() {
+        if (passRecoverySettingsBuilder_ == null) {
+          passRecoverySettings_ = null;
+          onChanged();
+        } else {
+          passRecoverySettings_ = null;
+          passRecoverySettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder getPassRecoverySettingsBuilder() {
+        
+        onChanged();
+        return getPassRecoverySettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder getPassRecoverySettingsOrBuilder() {
+        if (passRecoverySettingsBuilder_ != null) {
+          return passRecoverySettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return passRecoverySettings_ == null ?
+              com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.getDefaultInstance() : passRecoverySettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Settings for how users can recover passes.
+       * </pre>
+       *
+       * <code>.members.PassRecoverySettings passRecoverySettings = 26;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder> 
+          getPassRecoverySettingsFieldBuilder() {
+        if (passRecoverySettingsBuilder_ == null) {
+          passRecoverySettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder>(
+                  getPassRecoverySettings(),
+                  getParentForChildren(),
+                  isClean());
+          passRecoverySettings_ = null;
+        }
+        return passRecoverySettingsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11455,6 +11482,1038 @@ public final class ProgramOuterClass {
 
   }
 
+  public interface PassRecoverySettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:members.PassRecoverySettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Determines if users can recover passes.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    boolean getEnabled();
+
+    /**
+     * <pre>
+     * Determines the medium that the pass is delivered to the user.
+     * </pre>
+     *
+     * <code>.members.RecoverPassDelivery delivery = 2;</code>
+     * @return The enum numeric value on the wire for delivery.
+     */
+    int getDeliveryValue();
+    /**
+     * <pre>
+     * Determines the medium that the pass is delivered to the user.
+     * </pre>
+     *
+     * <code>.members.RecoverPassDelivery delivery = 2;</code>
+     * @return The delivery.
+     */
+    com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery getDelivery();
+
+    /**
+     * <pre>
+     * The header text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageHeader = 3;</code>
+     * @return The errorPageHeader.
+     */
+    java.lang.String getErrorPageHeader();
+    /**
+     * <pre>
+     * The header text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageHeader = 3;</code>
+     * @return The bytes for errorPageHeader.
+     */
+    com.google.protobuf.ByteString
+        getErrorPageHeaderBytes();
+
+    /**
+     * <pre>
+     * The body text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageBody = 4;</code>
+     * @return The errorPageBody.
+     */
+    java.lang.String getErrorPageBody();
+    /**
+     * <pre>
+     * The body text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageBody = 4;</code>
+     * @return The bytes for errorPageBody.
+     */
+    com.google.protobuf.ByteString
+        getErrorPageBodyBytes();
+  }
+  /**
+   * <pre>
+   * PassRecoverySettings details the logic for recovering a pass.
+   * </pre>
+   *
+   * Protobuf type {@code members.PassRecoverySettings}
+   */
+  public static final class PassRecoverySettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:members.PassRecoverySettings)
+      PassRecoverySettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PassRecoverySettings.newBuilder() to construct.
+    private PassRecoverySettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PassRecoverySettings() {
+      delivery_ = 0;
+      errorPageHeader_ = "";
+      errorPageBody_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PassRecoverySettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PassRecoverySettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enabled_ = input.readBool();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              delivery_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errorPageHeader_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errorPageBody_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_PassRecoverySettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_PassRecoverySettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.class, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder.class);
+    }
+
+    public static final int ENABLED_FIELD_NUMBER = 1;
+    private boolean enabled_;
+    /**
+     * <pre>
+     * Determines if users can recover passes.
+     * </pre>
+     *
+     * <code>bool enabled = 1;</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+
+    public static final int DELIVERY_FIELD_NUMBER = 2;
+    private int delivery_;
+    /**
+     * <pre>
+     * Determines the medium that the pass is delivered to the user.
+     * </pre>
+     *
+     * <code>.members.RecoverPassDelivery delivery = 2;</code>
+     * @return The enum numeric value on the wire for delivery.
+     */
+    @java.lang.Override public int getDeliveryValue() {
+      return delivery_;
+    }
+    /**
+     * <pre>
+     * Determines the medium that the pass is delivered to the user.
+     * </pre>
+     *
+     * <code>.members.RecoverPassDelivery delivery = 2;</code>
+     * @return The delivery.
+     */
+    @java.lang.Override public com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery getDelivery() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery result = com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.valueOf(delivery_);
+      return result == null ? com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.UNRECOGNIZED : result;
+    }
+
+    public static final int ERRORPAGEHEADER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object errorPageHeader_;
+    /**
+     * <pre>
+     * The header text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageHeader = 3;</code>
+     * @return The errorPageHeader.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorPageHeader() {
+      java.lang.Object ref = errorPageHeader_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errorPageHeader_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The header text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageHeader = 3;</code>
+     * @return The bytes for errorPageHeader.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorPageHeaderBytes() {
+      java.lang.Object ref = errorPageHeader_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorPageHeader_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERRORPAGEBODY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object errorPageBody_;
+    /**
+     * <pre>
+     * The body text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageBody = 4;</code>
+     * @return The errorPageBody.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorPageBody() {
+      java.lang.Object ref = errorPageBody_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errorPageBody_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The body text for the error page.
+     * </pre>
+     *
+     * <code>string errorPageBody = 4;</code>
+     * @return The bytes for errorPageBody.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorPageBodyBytes() {
+      java.lang.Object ref = errorPageBody_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorPageBody_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enabled_ != false) {
+        output.writeBool(1, enabled_);
+      }
+      if (delivery_ != com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.DELIVERY_REDIRECT.getNumber()) {
+        output.writeEnum(2, delivery_);
+      }
+      if (!getErrorPageHeaderBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errorPageHeader_);
+      }
+      if (!getErrorPageBodyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errorPageBody_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enabled_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enabled_);
+      }
+      if (delivery_ != com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.DELIVERY_REDIRECT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, delivery_);
+      }
+      if (!getErrorPageHeaderBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errorPageHeader_);
+      }
+      if (!getErrorPageBodyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errorPageBody_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings other = (com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings) obj;
+
+      if (getEnabled()
+          != other.getEnabled()) return false;
+      if (delivery_ != other.delivery_) return false;
+      if (!getErrorPageHeader()
+          .equals(other.getErrorPageHeader())) return false;
+      if (!getErrorPageBody()
+          .equals(other.getErrorPageBody())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
+      hash = (37 * hash) + DELIVERY_FIELD_NUMBER;
+      hash = (53 * hash) + delivery_;
+      hash = (37 * hash) + ERRORPAGEHEADER_FIELD_NUMBER;
+      hash = (53 * hash) + getErrorPageHeader().hashCode();
+      hash = (37 * hash) + ERRORPAGEBODY_FIELD_NUMBER;
+      hash = (53 * hash) + getErrorPageBody().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PassRecoverySettings details the logic for recovering a pass.
+     * </pre>
+     *
+     * Protobuf type {@code members.PassRecoverySettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:members.PassRecoverySettings)
+        com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_PassRecoverySettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_PassRecoverySettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.class, com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enabled_ = false;
+
+        delivery_ = 0;
+
+        errorPageHeader_ = "";
+
+        errorPageBody_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Members.ProgramOuterClass.internal_static_members_PassRecoverySettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getDefaultInstanceForType() {
+        return com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings build() {
+        com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings buildPartial() {
+        com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings result = new com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings(this);
+        result.enabled_ = enabled_;
+        result.delivery_ = delivery_;
+        result.errorPageHeader_ = errorPageHeader_;
+        result.errorPageBody_ = errorPageBody_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings) {
+          return mergeFrom((com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings other) {
+        if (other == com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings.getDefaultInstance()) return this;
+        if (other.getEnabled() != false) {
+          setEnabled(other.getEnabled());
+        }
+        if (other.delivery_ != 0) {
+          setDeliveryValue(other.getDeliveryValue());
+        }
+        if (!other.getErrorPageHeader().isEmpty()) {
+          errorPageHeader_ = other.errorPageHeader_;
+          onChanged();
+        }
+        if (!other.getErrorPageBody().isEmpty()) {
+          errorPageBody_ = other.errorPageBody_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean enabled_ ;
+      /**
+       * <pre>
+       * Determines if users can recover passes.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+      /**
+       * <pre>
+       * Determines if users can recover passes.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @param value The enabled to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnabled(boolean value) {
+        
+        enabled_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines if users can recover passes.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnabled() {
+        
+        enabled_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int delivery_ = 0;
+      /**
+       * <pre>
+       * Determines the medium that the pass is delivered to the user.
+       * </pre>
+       *
+       * <code>.members.RecoverPassDelivery delivery = 2;</code>
+       * @return The enum numeric value on the wire for delivery.
+       */
+      @java.lang.Override public int getDeliveryValue() {
+        return delivery_;
+      }
+      /**
+       * <pre>
+       * Determines the medium that the pass is delivered to the user.
+       * </pre>
+       *
+       * <code>.members.RecoverPassDelivery delivery = 2;</code>
+       * @param value The enum numeric value on the wire for delivery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeliveryValue(int value) {
+        
+        delivery_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines the medium that the pass is delivered to the user.
+       * </pre>
+       *
+       * <code>.members.RecoverPassDelivery delivery = 2;</code>
+       * @return The delivery.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery getDelivery() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery result = com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.valueOf(delivery_);
+        return result == null ? com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Determines the medium that the pass is delivered to the user.
+       * </pre>
+       *
+       * <code>.members.RecoverPassDelivery delivery = 2;</code>
+       * @param value The delivery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDelivery(com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        delivery_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Determines the medium that the pass is delivered to the user.
+       * </pre>
+       *
+       * <code>.members.RecoverPassDelivery delivery = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDelivery() {
+        
+        delivery_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errorPageHeader_ = "";
+      /**
+       * <pre>
+       * The header text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageHeader = 3;</code>
+       * @return The errorPageHeader.
+       */
+      public java.lang.String getErrorPageHeader() {
+        java.lang.Object ref = errorPageHeader_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errorPageHeader_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The header text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageHeader = 3;</code>
+       * @return The bytes for errorPageHeader.
+       */
+      public com.google.protobuf.ByteString
+          getErrorPageHeaderBytes() {
+        java.lang.Object ref = errorPageHeader_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorPageHeader_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The header text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageHeader = 3;</code>
+       * @param value The errorPageHeader to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorPageHeader(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errorPageHeader_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The header text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageHeader = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorPageHeader() {
+        
+        errorPageHeader_ = getDefaultInstance().getErrorPageHeader();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The header text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageHeader = 3;</code>
+       * @param value The bytes for errorPageHeader to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorPageHeaderBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errorPageHeader_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object errorPageBody_ = "";
+      /**
+       * <pre>
+       * The body text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageBody = 4;</code>
+       * @return The errorPageBody.
+       */
+      public java.lang.String getErrorPageBody() {
+        java.lang.Object ref = errorPageBody_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errorPageBody_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The body text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageBody = 4;</code>
+       * @return The bytes for errorPageBody.
+       */
+      public com.google.protobuf.ByteString
+          getErrorPageBodyBytes() {
+        java.lang.Object ref = errorPageBody_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorPageBody_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The body text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageBody = 4;</code>
+       * @param value The errorPageBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorPageBody(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errorPageBody_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The body text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageBody = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorPageBody() {
+        
+        errorPageBody_ = getDefaultInstance().getErrorPageBody();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The body text for the error page.
+       * </pre>
+       *
+       * <code>string errorPageBody = 4;</code>
+       * @param value The bytes for errorPageBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorPageBodyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errorPageBody_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:members.PassRecoverySettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:members.PassRecoverySettings)
+    private static final com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings();
+    }
+
+    public static com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PassRecoverySettings>
+        PARSER = new com.google.protobuf.AbstractParser<PassRecoverySettings>() {
+      @java.lang.Override
+      public PassRecoverySettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PassRecoverySettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PassRecoverySettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PassRecoverySettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_members_PointsType_descriptor;
   private static final 
@@ -11465,11 +12524,6 @@ public final class ProgramOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_members_Program_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_members_Program_CallbacksEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_members_Program_CallbacksEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_members_EventCaptureSettings_descriptor;
   private static final 
@@ -11500,6 +12554,11 @@ public final class ProgramOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_members_CustomExternalId_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_members_PassRecoverySettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_members_PassRecoverySettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11510,72 +12569,75 @@ public final class ProgramOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027io/member/program.proto\022\007members\032\037goog" +
-      "le/protobuf/timestamp.proto\032\030io/common/c" +
-      "allback.proto\032\034io/common/distribution.pr" +
-      "oto\032\034io/common/localization.proto\032\027io/co" +
-      "mmon/metrics.proto\032\027io/common/project.pr" +
-      "oto\032\027io/common/billing.proto\032.protoc-gen" +
-      "-openapiv2/options/annotations.proto\"M\n\n" +
-      "PointsType\022)\n\013balanceType\030\001 \001(\0162\024.member" +
-      "s.BalanceType\022\024\n\014currencyCode\030\002 \001(\t\"\272\010\n\007" +
-      "Program\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022*\n\rloc" +
-      "alizedName\030\003 \001(\0132\023.io.LocalizedString\022!\n" +
-      "\006status\030\004 \003(\0162\021.io.ProjectStatus\022\030\n\005quot" +
-      "a\030\005 \001(\0132\t.io.Quota\022\032\n\022passTypeIdentifier" +
-      "\030\006 \001(\t\0226\n\024distributionSettings\030\007 \001(\0132\030.i" +
-      "o.DistributionSettings\022!\n\031autoDeleteDays" +
-      "AfterExpiry\030\010 \001(\r\022$\n\034autoReminderDaysBef" +
-      "oreExpiry\030\t \001(\r\022\025\n\rexpiryMessage\030\n \001(\t\0223" +
-      "\n\026localizedExpiryMessage\030\013 \001(\0132\023.io.Loca" +
-      "lizedString\022(\n autoDeleteDaysAfterNotIns" +
-      "talling\030\014 \001(\r\0222\n\tcallbacks\030\016 \003(\0132\037.membe" +
-      "rs.Program.CallbacksEntry\022\'\n\npointsType\030" +
-      "\020 \001(\0132\023.members.PointsType\0220\n\023secondaryP" +
-      "ointsType\030\021 \001(\0132\023.members.PointsType\022\034\n\007" +
-      "metrics\030\023 \001(\0132\013.io.Metrics\022\026\n\016metaFields" +
-      "List\030\024 \003(\t\022+\n\007created\030\025 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\022:\n\024profileImageSett" +
-      "ings\030\027 \001(\0162\034.members.ProfileImageSetting" +
-      "\022@\n\035applyFieldToExternalIdOnEnrol\030\030 \001(\0132" +
-      "\031.members.CustomExternalId\022;\n\024eventCaptu" +
-      "reSettings\030\031 \001(\0132\035.members.EventCaptureS" +
-      "ettings\032>\n\016CallbacksEntry\022\013\n\003key\030\001 \001(\r\022\033" +
-      "\n\005value\030\002 \001(\0132\014.io.Callback:\0028\001:s\222Ap\nn*\007" +
-      "Program2SMembership Programs allow a com" +
-      "pany to control the business logic of th" +
-      "eir program.\322\001\004name\322\001\006statusJ\004\010\r\020\016J\004\010\022\020\023" +
-      "\"\374\001\n\024EventCaptureSettings\022a\n\032eventDataRe" +
-      "tentionSettings\030\001 \003(\0132=.members.EventCap" +
-      "tureSettings.EventDataRetentionSettingsE" +
-      "ntry\022\035\n\025smsConfirmUponCheckIn\030\002 \001(\010\022\037\n\027e" +
-      "mailConfirmUponCheckIn\030\003 \001(\010\032A\n\037EventDat" +
-      "aRetentionSettingsEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005" +
-      "value\030\002 \001(\r:\0028\001\"m\n\022ProgramCopyRequest\022\n\n" +
-      "\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003 \003(\0162" +
-      "\021.io.ProjectStatus\022\032\n\022passTypeIdentifier" +
-      "\030\004 \001(\t\":\n\024ListProgramsResponse\022\"\n\010progra" +
-      "ms\030\001 \003(\0132\020.members.Program\"#\n\023GetMetaKey" +
-      "sResponse\022\014\n\004keys\030\001 \003(\t\"A\n\020CustomExterna" +
-      "lId\022\027\n\017fieldUniqueName\030\001 \001(\t\022\024\n\014errorMes" +
-      "sage\030\002 \001(\t*\217\001\n\036ProgramAutoUpDownGradeTie" +
-      "rType\022\026\n\022UPDOWNGRADE_POINTS\020\000\022 \n\034UPDOWNG" +
-      "RADE_SECONDARY_POINTS\020\001\022\033\n\027UPDOWNGRADE_T" +
-      "IER_POINTS\020\002\022\026\n\022UPDOWNGRADE_VISITS\020\003*m\n\013" +
-      "BalanceType\022\027\n\023BALANCE_TYPE_STRING\020\000\022\024\n\020" +
-      "BALANCE_TYPE_INT\020\001\022\027\n\023BALANCE_TYPE_DOUBL" +
-      "E\020\002\022\026\n\022BALANCE_TYPE_MONEY\020\003*e\n\023ProfileIm" +
-      "ageSetting\022\026\n\022PROFILE_IMAGE_NONE\020\000\022\032\n\026PR" +
-      "OFILE_IMAGE_OPTIONAL\020\001\022\032\n\026PROFILE_IMAGE_" +
-      "REQUIRED\020\002B_\n\030com.passkit.grpc.MembersZ," +
-      "stash.passkit.com/io/model/sdk/go/io/mem" +
-      "bers\252\002\024PassKit.Grpc.Membersb\006proto3"
+      "le/protobuf/timestamp.proto\032\034io/common/d" +
+      "istribution.proto\032\034io/common/localizatio" +
+      "n.proto\032\027io/common/metrics.proto\032\027io/com" +
+      "mon/project.proto\032\027io/common/billing.pro" +
+      "to\032.protoc-gen-openapiv2/options/annotat" +
+      "ions.proto\"M\n\nPointsType\022)\n\013balanceType\030" +
+      "\001 \001(\0162\024.members.BalanceType\022\024\n\014currencyC" +
+      "ode\030\002 \001(\t\"\211\010\n\007Program\022\n\n\002id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\022*\n\rlocalizedName\030\003 \001(\0132\023.io.Loca" +
+      "lizedString\022!\n\006status\030\004 \003(\0162\021.io.Project" +
+      "Status\022\030\n\005quota\030\005 \001(\0132\t.io.Quota\022\032\n\022pass" +
+      "TypeIdentifier\030\006 \001(\t\0226\n\024distributionSett" +
+      "ings\030\007 \001(\0132\030.io.DistributionSettings\022!\n\031" +
+      "autoDeleteDaysAfterExpiry\030\010 \001(\r\022$\n\034autoR" +
+      "eminderDaysBeforeExpiry\030\t \001(\r\022\025\n\rexpiryM" +
+      "essage\030\n \001(\t\0223\n\026localizedExpiryMessage\030\013" +
+      " \001(\0132\023.io.LocalizedString\022(\n autoDeleteD" +
+      "aysAfterNotInstalling\030\014 \001(\r\022\'\n\npointsTyp" +
+      "e\030\020 \001(\0132\023.members.PointsType\0220\n\023secondar" +
+      "yPointsType\030\021 \001(\0132\023.members.PointsType\022\034" +
+      "\n\007metrics\030\023 \001(\0132\013.io.Metrics\022\026\n\016metaFiel" +
+      "dsList\030\024 \003(\t\022+\n\007created\030\025 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022+\n\007updated\030\026 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022:\n\024profileImageSe" +
+      "ttings\030\027 \001(\0162\034.members.ProfileImageSetti" +
+      "ng\022@\n\035applyFieldToExternalIdOnEnrol\030\030 \001(" +
+      "\0132\031.members.CustomExternalId\022;\n\024eventCap" +
+      "tureSettings\030\031 \001(\0132\035.members.EventCaptur" +
+      "eSettings\022;\n\024passRecoverySettings\030\032 \001(\0132" +
+      "\035.members.PassRecoverySettings:s\222Ap\nn*\007P" +
+      "rogram2SMembership Programs allow a comp" +
+      "any to control the business logic of the" +
+      "ir program.\322\001\004name\322\001\006statusJ\004\010\r\020\016J\004\010\016\020\017J" +
+      "\004\010\022\020\023\"\374\001\n\024EventCaptureSettings\022a\n\032eventD" +
+      "ataRetentionSettings\030\001 \003(\0132=.members.Eve" +
+      "ntCaptureSettings.EventDataRetentionSett" +
+      "ingsEntry\022\035\n\025smsConfirmUponCheckIn\030\002 \001(\010" +
+      "\022\037\n\027emailConfirmUponCheckIn\030\003 \001(\010\032A\n\037Eve" +
+      "ntDataRetentionSettingsEntry\022\013\n\003key\030\001 \001(" +
+      "\r\022\r\n\005value\030\002 \001(\r:\0028\001\"m\n\022ProgramCopyReque" +
+      "st\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022!\n\006status\030\003" +
+      " \003(\0162\021.io.ProjectStatus\022\032\n\022passTypeIdent" +
+      "ifier\030\004 \001(\t\":\n\024ListProgramsResponse\022\"\n\010p" +
+      "rograms\030\001 \003(\0132\020.members.Program\"#\n\023GetMe" +
+      "taKeysResponse\022\014\n\004keys\030\001 \003(\t\"A\n\020CustomEx" +
+      "ternalId\022\027\n\017fieldUniqueName\030\001 \001(\t\022\024\n\014err" +
+      "orMessage\030\002 \001(\t\"\207\001\n\024PassRecoverySettings" +
+      "\022\017\n\007enabled\030\001 \001(\010\022.\n\010delivery\030\002 \001(\0162\034.me" +
+      "mbers.RecoverPassDelivery\022\027\n\017errorPageHe" +
+      "ader\030\003 \001(\t\022\025\n\rerrorPageBody\030\004 \001(\t*\217\001\n\036Pr" +
+      "ogramAutoUpDownGradeTierType\022\026\n\022UPDOWNGR" +
+      "ADE_POINTS\020\000\022 \n\034UPDOWNGRADE_SECONDARY_PO" +
+      "INTS\020\001\022\033\n\027UPDOWNGRADE_TIER_POINTS\020\002\022\026\n\022U" +
+      "PDOWNGRADE_VISITS\020\003*m\n\013BalanceType\022\027\n\023BA" +
+      "LANCE_TYPE_STRING\020\000\022\024\n\020BALANCE_TYPE_INT\020" +
+      "\001\022\027\n\023BALANCE_TYPE_DOUBLE\020\002\022\026\n\022BALANCE_TY" +
+      "PE_MONEY\020\003*e\n\023ProfileImageSetting\022\026\n\022PRO" +
+      "FILE_IMAGE_NONE\020\000\022\032\n\026PROFILE_IMAGE_OPTIO" +
+      "NAL\020\001\022\032\n\026PROFILE_IMAGE_REQUIRED\020\002*R\n\023Rec" +
+      "overPassDelivery\022\025\n\021DELIVERY_REDIRECT\020\000\022" +
+      "\022\n\016DELIVERY_EMAIL\020\001\022\020\n\014DELIVERY_SMS\020\002B_\n" +
+      "\030com.passkit.grpc.MembersZ,stash.passkit" +
+      ".com/io/model/sdk/go/io/members\252\002\024PassKi" +
+      "t.Grpc.Membersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.passkit.grpc.CallbackOuterClass.getDescriptor(),
           com.passkit.grpc.Distribution.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
@@ -11594,13 +12656,7 @@ public final class ProgramOuterClass {
     internal_static_members_Program_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_Program_descriptor,
-        new java.lang.String[] { "Id", "Name", "LocalizedName", "Status", "Quota", "PassTypeIdentifier", "DistributionSettings", "AutoDeleteDaysAfterExpiry", "AutoReminderDaysBeforeExpiry", "ExpiryMessage", "LocalizedExpiryMessage", "AutoDeleteDaysAfterNotInstalling", "Callbacks", "PointsType", "SecondaryPointsType", "Metrics", "MetaFieldsList", "Created", "Updated", "ProfileImageSettings", "ApplyFieldToExternalIdOnEnrol", "EventCaptureSettings", });
-    internal_static_members_Program_CallbacksEntry_descriptor =
-      internal_static_members_Program_descriptor.getNestedTypes().get(0);
-    internal_static_members_Program_CallbacksEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_members_Program_CallbacksEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "Id", "Name", "LocalizedName", "Status", "Quota", "PassTypeIdentifier", "DistributionSettings", "AutoDeleteDaysAfterExpiry", "AutoReminderDaysBeforeExpiry", "ExpiryMessage", "LocalizedExpiryMessage", "AutoDeleteDaysAfterNotInstalling", "PointsType", "SecondaryPointsType", "Metrics", "MetaFieldsList", "Created", "Updated", "ProfileImageSettings", "ApplyFieldToExternalIdOnEnrol", "EventCaptureSettings", "PassRecoverySettings", });
     internal_static_members_EventCaptureSettings_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_members_EventCaptureSettings_fieldAccessorTable = new
@@ -11637,13 +12693,18 @@ public final class ProgramOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_CustomExternalId_descriptor,
         new java.lang.String[] { "FieldUniqueName", "ErrorMessage", });
+    internal_static_members_PassRecoverySettings_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_members_PassRecoverySettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_members_PassRecoverySettings_descriptor,
+        new java.lang.String[] { "Enabled", "Delivery", "ErrorPageHeader", "ErrorPageBody", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.passkit.grpc.CallbackOuterClass.getDescriptor();
     com.passkit.grpc.Distribution.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.MetricsOuterClass.getDescriptor();

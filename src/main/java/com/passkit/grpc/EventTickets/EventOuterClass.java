@@ -3521,6 +3521,15 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string productionId = 1;</code>
+     * @return Whether the productionId field is set.
+     */
+    boolean hasProductionId();
+    /**
+     * <pre>
+     * Production ID. Required if productionUid is not provided.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
      * @return The productionId.
      */
     java.lang.String getProductionId();
@@ -3535,6 +3544,15 @@ public final class EventOuterClass {
     com.google.protobuf.ByteString
         getProductionIdBytes();
 
+    /**
+     * <pre>
+     * Production UID. Required if productionId is not provided.
+     * </pre>
+     *
+     * <code>string productionUid = 2;</code>
+     * @return Whether the productionUid field is set.
+     */
+    boolean hasProductionUid();
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -3741,6 +3759,17 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string productionId = 1;</code>
+     * @return Whether the productionId field is set.
+     */
+    public boolean hasProductionId() {
+      return productionCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Production ID. Required if productionUid is not provided.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
      * @return The productionId.
      */
     public java.lang.String getProductionId() {
@@ -3788,6 +3817,17 @@ public final class EventOuterClass {
     }
 
     public static final int PRODUCTIONUID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Production UID. Required if productionId is not provided.
+     * </pre>
+     *
+     * <code>string productionUid = 2;</code>
+     * @return Whether the productionUid field is set.
+     */
+    public boolean hasProductionUid() {
+      return productionCase_ == 2;
+    }
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -4320,6 +4360,18 @@ public final class EventOuterClass {
        * </pre>
        *
        * <code>string productionId = 1;</code>
+       * @return Whether the productionId field is set.
+       */
+      @java.lang.Override
+      public boolean hasProductionId() {
+        return productionCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Production ID. Required if productionUid is not provided.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
        * @return The productionId.
        */
       @java.lang.Override
@@ -4423,6 +4475,18 @@ public final class EventOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Production UID. Required if productionId is not provided.
+       * </pre>
+       *
+       * <code>string productionUid = 2;</code>
+       * @return Whether the productionUid field is set.
+       */
+      @java.lang.Override
+      public boolean hasProductionUid() {
+        return productionCase_ == 2;
+      }
       /**
        * <pre>
        * Production UID. Required if productionId is not provided.
@@ -4789,6 +4853,15 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string productionId = 1;</code>
+     * @return Whether the productionId field is set.
+     */
+    boolean hasProductionId();
+    /**
+     * <pre>
+     * Production ID. Required if productionUid is not provided.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
      * @return The productionId.
      */
     java.lang.String getProductionId();
@@ -4803,6 +4876,15 @@ public final class EventOuterClass {
     com.google.protobuf.ByteString
         getProductionIdBytes();
 
+    /**
+     * <pre>
+     * Production UID. Required if productionId is not provided.
+     * </pre>
+     *
+     * <code>string productionUid = 2;</code>
+     * @return Whether the productionUid field is set.
+     */
+    boolean hasProductionUid();
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -4829,6 +4911,15 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string venueId = 3;</code>
+     * @return Whether the venueId field is set.
+     */
+    boolean hasVenueId();
+    /**
+     * <pre>
+     * Venue ID. Required if venueUid is not provided.
+     * </pre>
+     *
+     * <code>string venueId = 3;</code>
      * @return The venueId.
      */
     java.lang.String getVenueId();
@@ -4843,6 +4934,15 @@ public final class EventOuterClass {
     com.google.protobuf.ByteString
         getVenueIdBytes();
 
+    /**
+     * <pre>
+     * Venue UID. Required if venueId is not provided.
+     * </pre>
+     *
+     * <code>string venueUid = 4;</code>
+     * @return Whether the venueUid field is set.
+     */
+    boolean hasVenueUid();
     /**
      * <pre>
      * Venue UID. Required if venueId is not provided.
@@ -5097,6 +5197,17 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string productionId = 1;</code>
+     * @return Whether the productionId field is set.
+     */
+    public boolean hasProductionId() {
+      return productionCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Production ID. Required if productionUid is not provided.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
      * @return The productionId.
      */
     public java.lang.String getProductionId() {
@@ -5144,6 +5255,17 @@ public final class EventOuterClass {
     }
 
     public static final int PRODUCTIONUID_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * Production UID. Required if productionId is not provided.
+     * </pre>
+     *
+     * <code>string productionUid = 2;</code>
+     * @return Whether the productionUid field is set.
+     */
+    public boolean hasProductionUid() {
+      return productionCase_ == 2;
+    }
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -5203,6 +5325,17 @@ public final class EventOuterClass {
      * </pre>
      *
      * <code>string venueId = 3;</code>
+     * @return Whether the venueId field is set.
+     */
+    public boolean hasVenueId() {
+      return venueCase_ == 3;
+    }
+    /**
+     * <pre>
+     * Venue ID. Required if venueUid is not provided.
+     * </pre>
+     *
+     * <code>string venueId = 3;</code>
      * @return The venueId.
      */
     public java.lang.String getVenueId() {
@@ -5250,6 +5383,17 @@ public final class EventOuterClass {
     }
 
     public static final int VENUEUID_FIELD_NUMBER = 4;
+    /**
+     * <pre>
+     * Venue UID. Required if venueId is not provided.
+     * </pre>
+     *
+     * <code>string venueUid = 4;</code>
+     * @return Whether the venueUid field is set.
+     */
+    public boolean hasVenueUid() {
+      return venueCase_ == 4;
+    }
     /**
      * <pre>
      * Venue UID. Required if venueId is not provided.
@@ -5817,6 +5961,18 @@ public final class EventOuterClass {
        * </pre>
        *
        * <code>string productionId = 1;</code>
+       * @return Whether the productionId field is set.
+       */
+      @java.lang.Override
+      public boolean hasProductionId() {
+        return productionCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Production ID. Required if productionUid is not provided.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
        * @return The productionId.
        */
       @java.lang.Override
@@ -5920,6 +6076,18 @@ public final class EventOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Production UID. Required if productionId is not provided.
+       * </pre>
+       *
+       * <code>string productionUid = 2;</code>
+       * @return Whether the productionUid field is set.
+       */
+      @java.lang.Override
+      public boolean hasProductionUid() {
+        return productionCase_ == 2;
+      }
       /**
        * <pre>
        * Production UID. Required if productionId is not provided.
@@ -6035,6 +6203,18 @@ public final class EventOuterClass {
        * </pre>
        *
        * <code>string venueId = 3;</code>
+       * @return Whether the venueId field is set.
+       */
+      @java.lang.Override
+      public boolean hasVenueId() {
+        return venueCase_ == 3;
+      }
+      /**
+       * <pre>
+       * Venue ID. Required if venueUid is not provided.
+       * </pre>
+       *
+       * <code>string venueId = 3;</code>
        * @return The venueId.
        */
       @java.lang.Override
@@ -6138,6 +6318,18 @@ public final class EventOuterClass {
         return this;
       }
 
+      /**
+       * <pre>
+       * Venue UID. Required if venueId is not provided.
+       * </pre>
+       *
+       * <code>string venueUid = 4;</code>
+       * @return Whether the venueUid field is set.
+       */
+      @java.lang.Override
+      public boolean hasVenueUid() {
+        return venueCase_ == 4;
+      }
       /**
        * <pre>
        * Venue UID. Required if venueId is not provided.
@@ -14542,93 +14734,92 @@ public final class EventOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034io/event_tickets/event.proto\022\revent_ti" +
       "ckets\032\037google/protobuf/timestamp.proto\032\027" +
-      "io/common/billing.proto\032\034io/common/local" +
-      "ization.proto\032\027io/common/metrics.proto\032\026" +
-      "io/common/filter.proto\032!io/event_tickets" +
-      "/production.proto\032\034io/event_tickets/venu" +
-      "e.proto\032.protoc-gen-openapiv2/options/an" +
-      "notations.proto\"\263\005\n\005Event\022\n\n\002id\030\001 \001(\t\022-\n" +
-      "\nproduction\030\002 \001(\0132\031.event_tickets.Produc" +
-      "tion\022#\n\005venue\030\003 \001(\0132\024.event_tickets.Venu" +
-      "e\022-\n\tdoorsOpen\030\004 \001(\0132\032.google.protobuf.T" +
-      "imestamp\0226\n\022scheduledStartDate\030\005 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\0223\n\017actualStartD" +
-      "ate\030\006 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
-      "\007endDate\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\0220\n\014relevantDate\030\010 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022\030\n\005quota\030\t \001(\0132\t.io.Quota\022#" +
-      "\n\007metrics\030\n \001(\0132\013.io.MetricsB\005\222A\002@\001\0222\n\007c" +
-      "reated\030\013 \001(\0132\032.google.protobuf.Timestamp" +
-      "B\005\222A\002@\001\0222\n\007updated\030\014 \001(\0132\032.google.protob" +
-      "uf.TimestampB\005\222A\002@\001:\247\001\222A\243\001\n\240\001*\005Event2vEv" +
-      "ent is an instance of a Production; an e" +
-      "vent is showing; it holds the event star" +
-      "t & end date/time and venue details.\322\001\np" +
-      "roduction\322\001\005venue\322\001\tstartDate\"\320\001\n\020EventL" +
-      "istRequest\022\026\n\014productionId\030\001 \001(\tH\000\022\027\n\rpr" +
-      "oductionUid\030\002 \001(\tH\000\022\017\n\007venueId\030\003 \001(\t\022\034\n\007" +
-      "filters\030\004 \001(\0132\013.io.Filters:N\222AK\nI*\022Event" +
-      " List Request2&Used to list events in th" +
-      "e production.\322\001\nproductionB\014\n\nproduction" +
-      "\"\226\002\n\017GetEventRequest\022\026\n\014productionId\030\001 \001" +
-      "(\tH\000\022\027\n\rproductionUid\030\002 \001(\tH\000\022\021\n\007venueId" +
-      "\030\003 \001(\tH\001\022\022\n\010venueUid\030\004 \001(\tH\001\0226\n\022schedule" +
-      "dStartDate\030\005 \001(\0132\032.google.protobuf.Times" +
-      "tamp:\\\222AY\nW*\021Get Event Request2!Used to " +
-      "retrieve an event record.\322\001\nproduction\322\001" +
-      "\005venue\322\001\tstartDateB\014\n\nproductionB\007\n\005venu" +
-      "e\"\327\002\n\032EventLimitedFieldsResponse\022\n\n\002id\030\001" +
-      " \001(\t\0226\n\022scheduledStartDate\030\002 \001(\0132\032.googl" +
-      "e.protobuf.Timestamp\0223\n\017actualStartDate\030" +
-      "\003 \001(\0132\032.google.protobuf.Timestamp\022+\n\007end" +
-      "Date\030\004 \001(\0132\032.google.protobuf.Timestamp:\222" +
-      "\001\222A\216\001\n\213\001*\021Event (Light ver)2vEvent is an" +
-      " instance of a Production; an event is s" +
-      "howing; it holds the event start & end d" +
-      "ate/time and venue details.\"\222\005\n\031EventLim" +
-      "itedFieldsRequest\022\024\n\014productionId\030\001 \001(\t\022" +
-      "\017\n\007venueId\030\002 \001(\t\022-\n\tdoorsOpen\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\0226\n\022scheduledStar" +
-      "tDate\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "3\n\017actualStartDate\030\005 \001(\0132\032.google.protob" +
-      "uf.Timestamp\022+\n\007endDate\030\006 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\0220\n\014relevantDate\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\030\n\005quota\030\010 \001" +
-      "(\0132\t.io.Quota\022\034\n\007metrics\030\t \001(\0132\013.io.Metr" +
-      "ics\022+\n\007created\030\n \001(\0132\032.google.protobuf.T" +
-      "imestamp\022+\n\007updated\030\013 \001(\0132\032.google.proto" +
-      "buf.Timestamp:\300\001\222A\274\001\n\271\001*\021Event (Light ve" +
-      "r)2vEvent is an instance of a Production" +
-      "; an event is showing; it holds the even" +
-      "t start & end date/time and venue detail" +
-      "s.\322\001\014productionId\322\001\007venueId\322\001\022scheduledS" +
-      "tartDate\"\227\005\n\021EventListResponse\022\n\n\002id\030\001 \001" +
-      "(\t\022B\n\nproduction\030\002 \001(\0132..event_tickets.P" +
-      "roductionLimitedFieldsResponse\0228\n\005venue\030" +
-      "\003 \001(\0132).event_tickets.VenueLimitedFields" +
-      "Response\022-\n\tdoorsOpen\030\004 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\0226\n\022scheduledStartDate\030\005 " +
-      "\001(\0132\032.google.protobuf.Timestamp\0223\n\017actua" +
-      "lStartDate\030\006 \001(\0132\032.google.protobuf.Times" +
-      "tamp\022+\n\007endDate\030\007 \001(\0132\032.google.protobuf." +
-      "Timestamp\0220\n\014relevantDate\030\010 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022\030\n\005quota\030\t \001(\0132\t.io." +
-      "Quota\022\034\n\007metrics\030\n \001(\0132\013.io.Metrics\022+\n\007c" +
-      "reated\030\013 \001(\0132\032.google.protobuf.Timestamp" +
-      "\022+\n\007updated\030\014 \001(\0132\032.google.protobuf.Time" +
-      "stamp:k\222Ah\nf*\023Event List Response2OConta" +
-      "ins event search result. Production and " +
-      "venue objects have limited fields.Bo\n\035co" +
-      "m.passkit.grpc.EventTicketsZ2stash.passk" +
-      "it.com/io/model/sdk/go/io/event_tickets\252" +
-      "\002\031PassKit.Grpc.EventTicketsb\006proto3"
+      "io/common/billing.proto\032\027io/common/metri" +
+      "cs.proto\032\026io/common/filter.proto\032!io/eve" +
+      "nt_tickets/production.proto\032\034io/event_ti" +
+      "ckets/venue.proto\032.protoc-gen-openapiv2/" +
+      "options/annotations.proto\"\263\005\n\005Event\022\n\n\002i" +
+      "d\030\001 \001(\t\022-\n\nproduction\030\002 \001(\0132\031.event_tick" +
+      "ets.Production\022#\n\005venue\030\003 \001(\0132\024.event_ti" +
+      "ckets.Venue\022-\n\tdoorsOpen\030\004 \001(\0132\032.google." +
+      "protobuf.Timestamp\0226\n\022scheduledStartDate" +
+      "\030\005 \001(\0132\032.google.protobuf.Timestamp\0223\n\017ac" +
+      "tualStartDate\030\006 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022+\n\007endDate\030\007 \001(\0132\032.google.protob" +
+      "uf.Timestamp\0220\n\014relevantDate\030\010 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022\030\n\005quota\030\t \001(\0132\t." +
+      "io.Quota\022#\n\007metrics\030\n \001(\0132\013.io.MetricsB\005" +
+      "\222A\002@\001\0222\n\007created\030\013 \001(\0132\032.google.protobuf" +
+      ".TimestampB\005\222A\002@\001\0222\n\007updated\030\014 \001(\0132\032.goo" +
+      "gle.protobuf.TimestampB\005\222A\002@\001:\247\001\222A\243\001\n\240\001*" +
+      "\005Event2vEvent is an instance of a Produc" +
+      "tion; an event is showing; it holds the " +
+      "event start & end date/time and venue de" +
+      "tails.\322\001\nproduction\322\001\005venue\322\001\tstartDate\"" +
+      "\320\001\n\020EventListRequest\022\026\n\014productionId\030\001 \001" +
+      "(\tH\000\022\027\n\rproductionUid\030\002 \001(\tH\000\022\017\n\007venueId" +
+      "\030\003 \001(\t\022\034\n\007filters\030\004 \001(\0132\013.io.Filters:N\222A" +
+      "K\nI*\022Event List Request2&Used to list ev" +
+      "ents in the production.\322\001\nproductionB\014\n\n" +
+      "production\"\226\002\n\017GetEventRequest\022\026\n\014produc" +
+      "tionId\030\001 \001(\tH\000\022\027\n\rproductionUid\030\002 \001(\tH\000\022" +
+      "\021\n\007venueId\030\003 \001(\tH\001\022\022\n\010venueUid\030\004 \001(\tH\001\0226" +
+      "\n\022scheduledStartDate\030\005 \001(\0132\032.google.prot" +
+      "obuf.Timestamp:\\\222AY\nW*\021Get Event Request" +
+      "2!Used to retrieve an event record.\322\001\npr" +
+      "oduction\322\001\005venue\322\001\tstartDateB\014\n\nproducti" +
+      "onB\007\n\005venue\"\327\002\n\032EventLimitedFieldsRespon" +
+      "se\022\n\n\002id\030\001 \001(\t\0226\n\022scheduledStartDate\030\002 \001" +
+      "(\0132\032.google.protobuf.Timestamp\0223\n\017actual" +
+      "StartDate\030\003 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022+\n\007endDate\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestamp:\222\001\222A\216\001\n\213\001*\021Event (Light ver)2vE" +
+      "vent is an instance of a Production; an " +
+      "event is showing; it holds the event sta" +
+      "rt & end date/time and venue details.\"\222\005" +
+      "\n\031EventLimitedFieldsRequest\022\024\n\014productio" +
+      "nId\030\001 \001(\t\022\017\n\007venueId\030\002 \001(\t\022-\n\tdoorsOpen\030" +
+      "\003 \001(\0132\032.google.protobuf.Timestamp\0226\n\022sch" +
+      "eduledStartDate\030\004 \001(\0132\032.google.protobuf." +
+      "Timestamp\0223\n\017actualStartDate\030\005 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022+\n\007endDate\030\006 \001(\0132" +
+      "\032.google.protobuf.Timestamp\0220\n\014relevantD" +
+      "ate\030\007 \001(\0132\032.google.protobuf.Timestamp\022\030\n" +
+      "\005quota\030\010 \001(\0132\t.io.Quota\022\034\n\007metrics\030\t \001(\013" +
+      "2\013.io.Metrics\022+\n\007created\030\n \001(\0132\032.google." +
+      "protobuf.Timestamp\022+\n\007updated\030\013 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp:\300\001\222A\274\001\n\271\001*\021Event" +
+      " (Light ver)2vEvent is an instance of a " +
+      "Production; an event is showing; it hold" +
+      "s the event start & end date/time and ve" +
+      "nue details.\322\001\014productionId\322\001\007venueId\322\001\022" +
+      "scheduledStartDate\"\227\005\n\021EventListResponse" +
+      "\022\n\n\002id\030\001 \001(\t\022B\n\nproduction\030\002 \001(\0132..event" +
+      "_tickets.ProductionLimitedFieldsResponse" +
+      "\0228\n\005venue\030\003 \001(\0132).event_tickets.VenueLim" +
+      "itedFieldsResponse\022-\n\tdoorsOpen\030\004 \001(\0132\032." +
+      "google.protobuf.Timestamp\0226\n\022scheduledSt" +
+      "artDate\030\005 \001(\0132\032.google.protobuf.Timestam" +
+      "p\0223\n\017actualStartDate\030\006 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022+\n\007endDate\030\007 \001(\0132\032.google" +
+      ".protobuf.Timestamp\0220\n\014relevantDate\030\010 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022\030\n\005quota\030\t" +
+      " \001(\0132\t.io.Quota\022\034\n\007metrics\030\n \001(\0132\013.io.Me" +
+      "trics\022+\n\007created\030\013 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022+\n\007updated\030\014 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp:k\222Ah\nf*\023Event List Respo" +
+      "nse2OContains event search result. Produ" +
+      "ction and venue objects have limited fie" +
+      "lds.Bo\n\035com.passkit.grpc.EventTicketsZ2s" +
+      "tash.passkit.com/io/model/sdk/go/io/even" +
+      "t_tickets\252\002\031PassKit.Grpc.EventTicketsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.passkit.grpc.Billing.getDescriptor(),
-          com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
           com.passkit.grpc.EventTickets.ProductionOuterClass.getDescriptor(),
@@ -14679,7 +14870,6 @@ public final class EventOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.passkit.grpc.Billing.getDescriptor();
-    com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.MetricsOuterClass.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
     com.passkit.grpc.EventTickets.ProductionOuterClass.getDescriptor();

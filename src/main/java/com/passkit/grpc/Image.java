@@ -162,6 +162,30 @@ public final class Image {
      * <code>appImage = 16;</code>
      */
     appImage(16),
+    /**
+     * <pre>
+     * used for custom stamped images.
+     * </pre>
+     *
+     * <code>stampedImage = 18;</code>
+     */
+    stampedImage(18),
+    /**
+     * <pre>
+     * used for custom unstamped images.
+     * </pre>
+     *
+     * <code>unstampedImage = 19;</code>
+     */
+    unstampedImage(19),
+    /**
+     * <pre>
+     * used for stamp / punch card type images. Indicates that the image has a stamp image config record.
+     * </pre>
+     *
+     * <code>stampImage = 20;</code>
+     */
+    stampImage(20),
     UNRECOGNIZED(-1),
     ;
 
@@ -308,6 +332,30 @@ public final class Image {
      * <code>appImage = 16;</code>
      */
     public static final int appImage_VALUE = 16;
+    /**
+     * <pre>
+     * used for custom stamped images.
+     * </pre>
+     *
+     * <code>stampedImage = 18;</code>
+     */
+    public static final int stampedImage_VALUE = 18;
+    /**
+     * <pre>
+     * used for custom unstamped images.
+     * </pre>
+     *
+     * <code>unstampedImage = 19;</code>
+     */
+    public static final int unstampedImage_VALUE = 19;
+    /**
+     * <pre>
+     * used for stamp / punch card type images. Indicates that the image has a stamp image config record.
+     * </pre>
+     *
+     * <code>stampImage = 20;</code>
+     */
+    public static final int stampImage_VALUE = 20;
 
 
     public final int getNumber() {
@@ -351,6 +399,9 @@ public final class Image {
         case 14: return message;
         case 15: return profile;
         case 16: return appImage;
+        case 18: return stampedImage;
+        case 19: return unstampedImage;
+        case 20: return stampImage;
         default: return null;
       }
     }
@@ -614,6 +665,42 @@ public final class Image {
      */
     com.google.protobuf.ByteString
         getAppImageBytes();
+
+    /**
+     * <code>string stampedImage = 18;</code>
+     * @return The stampedImage.
+     */
+    java.lang.String getStampedImage();
+    /**
+     * <code>string stampedImage = 18;</code>
+     * @return The bytes for stampedImage.
+     */
+    com.google.protobuf.ByteString
+        getStampedImageBytes();
+
+    /**
+     * <code>string unstampedImage = 19;</code>
+     * @return The unstampedImage.
+     */
+    java.lang.String getUnstampedImage();
+    /**
+     * <code>string unstampedImage = 19;</code>
+     * @return The bytes for unstampedImage.
+     */
+    com.google.protobuf.ByteString
+        getUnstampedImageBytes();
+
+    /**
+     * <code>string stampImage = 20;</code>
+     * @return The stampImage.
+     */
+    java.lang.String getStampImage();
+    /**
+     * <code>string stampImage = 20;</code>
+     * @return The bytes for stampImage.
+     */
+    com.google.protobuf.ByteString
+        getStampImageBytes();
   }
   /**
    * <pre>
@@ -649,6 +736,9 @@ public final class Image {
       message_ = "";
       profile_ = "";
       appImage_ = "";
+      stampedImage_ = "";
+      unstampedImage_ = "";
+      stampImage_ = "";
     }
 
     @java.lang.Override
@@ -781,6 +871,24 @@ public final class Image {
               java.lang.String s = input.readStringRequireUtf8();
 
               appImage_ = s;
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stampedImage_ = s;
+              break;
+            }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              unstampedImage_ = s;
+              break;
+            }
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stampImage_ = s;
               break;
             }
             default: {
@@ -1461,6 +1569,120 @@ public final class Image {
       }
     }
 
+    public static final int STAMPEDIMAGE_FIELD_NUMBER = 18;
+    private volatile java.lang.Object stampedImage_;
+    /**
+     * <code>string stampedImage = 18;</code>
+     * @return The stampedImage.
+     */
+    @java.lang.Override
+    public java.lang.String getStampedImage() {
+      java.lang.Object ref = stampedImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stampedImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stampedImage = 18;</code>
+     * @return The bytes for stampedImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStampedImageBytes() {
+      java.lang.Object ref = stampedImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stampedImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNSTAMPEDIMAGE_FIELD_NUMBER = 19;
+    private volatile java.lang.Object unstampedImage_;
+    /**
+     * <code>string unstampedImage = 19;</code>
+     * @return The unstampedImage.
+     */
+    @java.lang.Override
+    public java.lang.String getUnstampedImage() {
+      java.lang.Object ref = unstampedImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unstampedImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unstampedImage = 19;</code>
+     * @return The bytes for unstampedImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnstampedImageBytes() {
+      java.lang.Object ref = unstampedImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unstampedImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAMPIMAGE_FIELD_NUMBER = 20;
+    private volatile java.lang.Object stampImage_;
+    /**
+     * <code>string stampImage = 20;</code>
+     * @return The stampImage.
+     */
+    @java.lang.Override
+    public java.lang.String getStampImage() {
+      java.lang.Object ref = stampImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stampImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stampImage = 20;</code>
+     * @return The bytes for stampImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStampImageBytes() {
+      java.lang.Object ref = stampImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stampImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1526,6 +1748,15 @@ public final class Image {
       if (!getAppImageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, appImage_);
       }
+      if (!getStampedImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, stampedImage_);
+      }
+      if (!getUnstampedImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, unstampedImage_);
+      }
+      if (!getStampImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, stampImage_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1586,6 +1817,15 @@ public final class Image {
       if (!getAppImageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, appImage_);
       }
+      if (!getStampedImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, stampedImage_);
+      }
+      if (!getUnstampedImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, unstampedImage_);
+      }
+      if (!getStampImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, stampImage_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1635,6 +1875,12 @@ public final class Image {
           .equals(other.getProfile())) return false;
       if (!getAppImage()
           .equals(other.getAppImage())) return false;
+      if (!getStampedImage()
+          .equals(other.getStampedImage())) return false;
+      if (!getUnstampedImage()
+          .equals(other.getUnstampedImage())) return false;
+      if (!getStampImage()
+          .equals(other.getStampImage())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1680,6 +1926,12 @@ public final class Image {
       hash = (53 * hash) + getProfile().hashCode();
       hash = (37 * hash) + APPIMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getAppImage().hashCode();
+      hash = (37 * hash) + STAMPEDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getStampedImage().hashCode();
+      hash = (37 * hash) + UNSTAMPEDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getUnstampedImage().hashCode();
+      hash = (37 * hash) + STAMPIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getStampImage().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1851,6 +2103,12 @@ public final class Image {
 
         appImage_ = "";
 
+        stampedImage_ = "";
+
+        unstampedImage_ = "";
+
+        stampImage_ = "";
+
         return this;
       }
 
@@ -1894,6 +2152,9 @@ public final class Image {
         result.message_ = message_;
         result.profile_ = profile_;
         result.appImage_ = appImage_;
+        result.stampedImage_ = stampedImage_;
+        result.unstampedImage_ = unstampedImage_;
+        result.stampImage_ = stampImage_;
         onBuilt();
         return result;
       }
@@ -2008,6 +2269,18 @@ public final class Image {
         }
         if (!other.getAppImage().isEmpty()) {
           appImage_ = other.appImage_;
+          onChanged();
+        }
+        if (!other.getStampedImage().isEmpty()) {
+          stampedImage_ = other.stampedImage_;
+          onChanged();
+        }
+        if (!other.getUnstampedImage().isEmpty()) {
+          unstampedImage_ = other.unstampedImage_;
+          onChanged();
+        }
+        if (!other.getStampImage().isEmpty()) {
+          stampImage_ = other.stampImage_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3330,6 +3603,234 @@ public final class Image {
         onChanged();
         return this;
       }
+
+      private java.lang.Object stampedImage_ = "";
+      /**
+       * <code>string stampedImage = 18;</code>
+       * @return The stampedImage.
+       */
+      public java.lang.String getStampedImage() {
+        java.lang.Object ref = stampedImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stampedImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stampedImage = 18;</code>
+       * @return The bytes for stampedImage.
+       */
+      public com.google.protobuf.ByteString
+          getStampedImageBytes() {
+        java.lang.Object ref = stampedImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stampedImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stampedImage = 18;</code>
+       * @param value The stampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampedImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stampedImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampedImage = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampedImage() {
+        
+        stampedImage_ = getDefaultInstance().getStampedImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampedImage = 18;</code>
+       * @param value The bytes for stampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampedImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stampedImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unstampedImage_ = "";
+      /**
+       * <code>string unstampedImage = 19;</code>
+       * @return The unstampedImage.
+       */
+      public java.lang.String getUnstampedImage() {
+        java.lang.Object ref = unstampedImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unstampedImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unstampedImage = 19;</code>
+       * @return The bytes for unstampedImage.
+       */
+      public com.google.protobuf.ByteString
+          getUnstampedImageBytes() {
+        java.lang.Object ref = unstampedImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unstampedImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unstampedImage = 19;</code>
+       * @param value The unstampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampedImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        unstampedImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampedImage = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstampedImage() {
+        
+        unstampedImage_ = getDefaultInstance().getUnstampedImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampedImage = 19;</code>
+       * @param value The bytes for unstampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampedImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        unstampedImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stampImage_ = "";
+      /**
+       * <code>string stampImage = 20;</code>
+       * @return The stampImage.
+       */
+      public java.lang.String getStampImage() {
+        java.lang.Object ref = stampImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stampImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stampImage = 20;</code>
+       * @return The bytes for stampImage.
+       */
+      public com.google.protobuf.ByteString
+          getStampImageBytes() {
+        java.lang.Object ref = stampImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stampImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stampImage = 20;</code>
+       * @param value The stampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stampImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampImage = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampImage() {
+        
+        stampImage_ = getDefaultInstance().getStampImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampImage = 20;</code>
+       * @param value The bytes for stampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stampImage_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3726,6 +4227,73 @@ public final class Image {
      */
     com.google.protobuf.ByteString
         getAppImageBytes();
+
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string stampedImage = 18;</code>
+     * @return The stampedImage.
+     */
+    java.lang.String getStampedImage();
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string stampedImage = 18;</code>
+     * @return The bytes for stampedImage.
+     */
+    com.google.protobuf.ByteString
+        getStampedImageBytes();
+
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string unstampedImage = 19;</code>
+     * @return The unstampedImage.
+     */
+    java.lang.String getUnstampedImage();
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string unstampedImage = 19;</code>
+     * @return The bytes for unstampedImage.
+     */
+    com.google.protobuf.ByteString
+        getUnstampedImageBytes();
+
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @return Whether the stampConfig field is set.
+     */
+    boolean hasStampConfig();
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @return The stampConfig.
+     */
+    com.passkit.grpc.Image.StampImageConfig getStampConfig();
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     */
+    com.passkit.grpc.Image.StampImageConfigOrBuilder getStampConfigOrBuilder();
 
     /**
      * <pre>
@@ -4166,6 +4734,8 @@ public final class Image {
       message_ = "";
       profile_ = "";
       appImage_ = "";
+      stampedImage_ = "";
+      unstampedImage_ = "";
     }
 
     @java.lang.Override
@@ -4298,6 +4868,31 @@ public final class Image {
               java.lang.String s = input.readStringRequireUtf8();
 
               appImage_ = s;
+              break;
+            }
+            case 146: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stampedImage_ = s;
+              break;
+            }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              unstampedImage_ = s;
+              break;
+            }
+            case 162: {
+              com.passkit.grpc.Image.StampImageConfig.Builder subBuilder = null;
+              if (stampConfig_ != null) {
+                subBuilder = stampConfig_.toBuilder();
+              }
+              stampConfig_ = input.readMessage(com.passkit.grpc.Image.StampImageConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(stampConfig_);
+                stampConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 250: {
@@ -5309,6 +5904,136 @@ public final class Image {
       }
     }
 
+    public static final int STAMPEDIMAGE_FIELD_NUMBER = 18;
+    private volatile java.lang.Object stampedImage_;
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string stampedImage = 18;</code>
+     * @return The stampedImage.
+     */
+    @java.lang.Override
+    public java.lang.String getStampedImage() {
+      java.lang.Object ref = stampedImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stampedImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string stampedImage = 18;</code>
+     * @return The bytes for stampedImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStampedImageBytes() {
+      java.lang.Object ref = stampedImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stampedImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNSTAMPEDIMAGE_FIELD_NUMBER = 19;
+    private volatile java.lang.Object unstampedImage_;
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string unstampedImage = 19;</code>
+     * @return The unstampedImage.
+     */
+    @java.lang.Override
+    public java.lang.String getUnstampedImage() {
+      java.lang.Object ref = unstampedImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unstampedImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+     * </pre>
+     *
+     * <code>string unstampedImage = 19;</code>
+     * @return The bytes for unstampedImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnstampedImageBytes() {
+      java.lang.Object ref = unstampedImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unstampedImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAMPCONFIG_FIELD_NUMBER = 20;
+    private com.passkit.grpc.Image.StampImageConfig stampConfig_;
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @return Whether the stampConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasStampConfig() {
+      return stampConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     * @return The stampConfig.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Image.StampImageConfig getStampConfig() {
+      return stampConfig_ == null ? com.passkit.grpc.Image.StampImageConfig.getDefaultInstance() : stampConfig_;
+    }
+    /**
+     * <pre>
+     * Spec for a stamp image. Cannot be localized.
+     * </pre>
+     *
+     * <code>.io.StampImageConfig stampConfig = 20;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Image.StampImageConfigOrBuilder getStampConfigOrBuilder() {
+      return getStampConfig();
+    }
+
     public static final int LOCALIZEDICON_FIELD_NUMBER = 31;
     private com.passkit.grpc.Localization.LocalizedString localizedIcon_;
     /**
@@ -5944,6 +6669,15 @@ public final class Image {
       if (!getAppImageBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, appImage_);
       }
+      if (!getStampedImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 18, stampedImage_);
+      }
+      if (!getUnstampedImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, unstampedImage_);
+      }
+      if (stampConfig_ != null) {
+        output.writeMessage(20, getStampConfig());
+      }
       if (localizedIcon_ != null) {
         output.writeMessage(31, getLocalizedIcon());
       }
@@ -6048,6 +6782,16 @@ public final class Image {
       }
       if (!getAppImageBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, appImage_);
+      }
+      if (!getStampedImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, stampedImage_);
+      }
+      if (!getUnstampedImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, unstampedImage_);
+      }
+      if (stampConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getStampConfig());
       }
       if (localizedIcon_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -6158,6 +6902,15 @@ public final class Image {
           .equals(other.getProfile())) return false;
       if (!getAppImage()
           .equals(other.getAppImage())) return false;
+      if (!getStampedImage()
+          .equals(other.getStampedImage())) return false;
+      if (!getUnstampedImage()
+          .equals(other.getUnstampedImage())) return false;
+      if (hasStampConfig() != other.hasStampConfig()) return false;
+      if (hasStampConfig()) {
+        if (!getStampConfig()
+            .equals(other.getStampConfig())) return false;
+      }
       if (hasLocalizedIcon() != other.hasLocalizedIcon()) return false;
       if (hasLocalizedIcon()) {
         if (!getLocalizedIcon()
@@ -6278,6 +7031,14 @@ public final class Image {
       hash = (53 * hash) + getProfile().hashCode();
       hash = (37 * hash) + APPIMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getAppImage().hashCode();
+      hash = (37 * hash) + STAMPEDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getStampedImage().hashCode();
+      hash = (37 * hash) + UNSTAMPEDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getUnstampedImage().hashCode();
+      if (hasStampConfig()) {
+        hash = (37 * hash) + STAMPCONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getStampConfig().hashCode();
+      }
       if (hasLocalizedIcon()) {
         hash = (37 * hash) + LOCALIZEDICON_FIELD_NUMBER;
         hash = (53 * hash) + getLocalizedIcon().hashCode();
@@ -6509,6 +7270,16 @@ public final class Image {
 
         appImage_ = "";
 
+        stampedImage_ = "";
+
+        unstampedImage_ = "";
+
+        if (stampConfigBuilder_ == null) {
+          stampConfig_ = null;
+        } else {
+          stampConfig_ = null;
+          stampConfigBuilder_ = null;
+        }
         if (localizedIconBuilder_ == null) {
           localizedIcon_ = null;
         } else {
@@ -6642,6 +7413,13 @@ public final class Image {
         result.message_ = message_;
         result.profile_ = profile_;
         result.appImage_ = appImage_;
+        result.stampedImage_ = stampedImage_;
+        result.unstampedImage_ = unstampedImage_;
+        if (stampConfigBuilder_ == null) {
+          result.stampConfig_ = stampConfig_;
+        } else {
+          result.stampConfig_ = stampConfigBuilder_.build();
+        }
         if (localizedIconBuilder_ == null) {
           result.localizedIcon_ = localizedIcon_;
         } else {
@@ -6832,6 +7610,17 @@ public final class Image {
         if (!other.getAppImage().isEmpty()) {
           appImage_ = other.appImage_;
           onChanged();
+        }
+        if (!other.getStampedImage().isEmpty()) {
+          stampedImage_ = other.stampedImage_;
+          onChanged();
+        }
+        if (!other.getUnstampedImage().isEmpty()) {
+          unstampedImage_ = other.unstampedImage_;
+          onChanged();
+        }
+        if (other.hasStampConfig()) {
+          mergeStampConfig(other.getStampConfig());
         }
         if (other.hasLocalizedIcon()) {
           mergeLocalizedIcon(other.getLocalizedIcon());
@@ -8537,6 +9326,353 @@ public final class Image {
         appImage_ = value;
         onChanged();
         return this;
+      }
+
+      private java.lang.Object stampedImage_ = "";
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string stampedImage = 18;</code>
+       * @return The stampedImage.
+       */
+      public java.lang.String getStampedImage() {
+        java.lang.Object ref = stampedImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stampedImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string stampedImage = 18;</code>
+       * @return The bytes for stampedImage.
+       */
+      public com.google.protobuf.ByteString
+          getStampedImageBytes() {
+        java.lang.Object ref = stampedImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stampedImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string stampedImage = 18;</code>
+       * @param value The stampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampedImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stampedImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string stampedImage = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampedImage() {
+        
+        stampedImage_ = getDefaultInstance().getStampedImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string stampedImage = 18;</code>
+       * @param value The bytes for stampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampedImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stampedImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unstampedImage_ = "";
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string unstampedImage = 19;</code>
+       * @return The unstampedImage.
+       */
+      public java.lang.String getUnstampedImage() {
+        java.lang.Object ref = unstampedImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unstampedImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string unstampedImage = 19;</code>
+       * @return The bytes for unstampedImage.
+       */
+      public com.google.protobuf.ByteString
+          getUnstampedImageBytes() {
+        java.lang.Object ref = unstampedImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unstampedImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string unstampedImage = 19;</code>
+       * @param value The unstampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampedImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        unstampedImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string unstampedImage = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstampedImage() {
+        
+        unstampedImage_ = getDefaultInstance().getUnstampedImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
+       * </pre>
+       *
+       * <code>string unstampedImage = 19;</code>
+       * @param value The bytes for unstampedImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampedImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        unstampedImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Image.StampImageConfig stampConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Image.StampImageConfig, com.passkit.grpc.Image.StampImageConfig.Builder, com.passkit.grpc.Image.StampImageConfigOrBuilder> stampConfigBuilder_;
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       * @return Whether the stampConfig field is set.
+       */
+      public boolean hasStampConfig() {
+        return stampConfigBuilder_ != null || stampConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       * @return The stampConfig.
+       */
+      public com.passkit.grpc.Image.StampImageConfig getStampConfig() {
+        if (stampConfigBuilder_ == null) {
+          return stampConfig_ == null ? com.passkit.grpc.Image.StampImageConfig.getDefaultInstance() : stampConfig_;
+        } else {
+          return stampConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public Builder setStampConfig(com.passkit.grpc.Image.StampImageConfig value) {
+        if (stampConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          stampConfig_ = value;
+          onChanged();
+        } else {
+          stampConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public Builder setStampConfig(
+          com.passkit.grpc.Image.StampImageConfig.Builder builderForValue) {
+        if (stampConfigBuilder_ == null) {
+          stampConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          stampConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public Builder mergeStampConfig(com.passkit.grpc.Image.StampImageConfig value) {
+        if (stampConfigBuilder_ == null) {
+          if (stampConfig_ != null) {
+            stampConfig_ =
+              com.passkit.grpc.Image.StampImageConfig.newBuilder(stampConfig_).mergeFrom(value).buildPartial();
+          } else {
+            stampConfig_ = value;
+          }
+          onChanged();
+        } else {
+          stampConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public Builder clearStampConfig() {
+        if (stampConfigBuilder_ == null) {
+          stampConfig_ = null;
+          onChanged();
+        } else {
+          stampConfig_ = null;
+          stampConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public com.passkit.grpc.Image.StampImageConfig.Builder getStampConfigBuilder() {
+        
+        onChanged();
+        return getStampConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      public com.passkit.grpc.Image.StampImageConfigOrBuilder getStampConfigOrBuilder() {
+        if (stampConfigBuilder_ != null) {
+          return stampConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return stampConfig_ == null ?
+              com.passkit.grpc.Image.StampImageConfig.getDefaultInstance() : stampConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Spec for a stamp image. Cannot be localized.
+       * </pre>
+       *
+       * <code>.io.StampImageConfig stampConfig = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Image.StampImageConfig, com.passkit.grpc.Image.StampImageConfig.Builder, com.passkit.grpc.Image.StampImageConfigOrBuilder> 
+          getStampConfigFieldBuilder() {
+        if (stampConfigBuilder_ == null) {
+          stampConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Image.StampImageConfig, com.passkit.grpc.Image.StampImageConfig.Builder, com.passkit.grpc.Image.StampImageConfigOrBuilder>(
+                  getStampConfig(),
+                  getParentForChildren(),
+                  isClean());
+          stampConfig_ = null;
+        }
+        return stampConfigBuilder_;
       }
 
       private com.passkit.grpc.Localization.LocalizedString localizedIcon_;
@@ -14143,6 +15279,701 @@ public final class Image {
 
   }
 
+  public interface StampImageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.StampImageRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * PassKit Image Id.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * PassKit Image Id.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
+     * </pre>
+     *
+     * <code>uint64 status = 2;</code>
+     * @return The status.
+     */
+    long getStatus();
+  }
+  /**
+   * Protobuf type {@code io.StampImageRequest}
+   */
+  public static final class StampImageRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.StampImageRequest)
+      StampImageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StampImageRequest.newBuilder() to construct.
+    private StampImageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StampImageRequest() {
+      id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StampImageRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StampImageRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 16: {
+
+              status_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Image.internal_static_io_StampImageRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Image.internal_static_io_StampImageRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Image.StampImageRequest.class, com.passkit.grpc.Image.StampImageRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * PassKit Image Id.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PassKit Image Id.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private long status_;
+    /**
+     * <pre>
+     * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
+     * </pre>
+     *
+     * <code>uint64 status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public long getStatus() {
+      return status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (status_ != 0L) {
+        output.writeUInt64(2, status_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (status_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, status_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Image.StampImageRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Image.StampImageRequest other = (com.passkit.grpc.Image.StampImageRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStatus());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Image.StampImageRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.StampImageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.StampImageRequest)
+        com.passkit.grpc.Image.StampImageRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Image.StampImageRequest.class, com.passkit.grpc.Image.StampImageRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Image.StampImageRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        status_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Image.StampImageRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageRequest build() {
+        com.passkit.grpc.Image.StampImageRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageRequest buildPartial() {
+        com.passkit.grpc.Image.StampImageRequest result = new com.passkit.grpc.Image.StampImageRequest(this);
+        result.id_ = id_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Image.StampImageRequest) {
+          return mergeFrom((com.passkit.grpc.Image.StampImageRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Image.StampImageRequest other) {
+        if (other == com.passkit.grpc.Image.StampImageRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getStatus() != 0L) {
+          setStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Image.StampImageRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Image.StampImageRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * PassKit Image Id.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit Image Id.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit Image Id.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit Image Id.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit Image Id.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long status_ ;
+      /**
+       * <pre>
+       * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
+       * </pre>
+       *
+       * <code>uint64 status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public long getStatus() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
+       * </pre>
+       *
+       * <code>uint64 status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(long value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
+       * </pre>
+       *
+       * <code>uint64 status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.StampImageRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.StampImageRequest)
+    private static final com.passkit.grpc.Image.StampImageRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Image.StampImageRequest();
+    }
+
+    public static com.passkit.grpc.Image.StampImageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StampImageRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StampImageRequest>() {
+      @java.lang.Override
+      public StampImageRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StampImageRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StampImageRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StampImageRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Image.StampImageRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateImageInputOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.CreateImageInput)
       com.google.protobuf.MessageOrBuilder {
@@ -15036,7 +16867,7 @@ public final class Image {
 
     /**
      * <pre>
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -15045,7 +16876,7 @@ public final class Image {
     java.lang.String getName();
     /**
      * <pre>
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -15056,7 +16887,7 @@ public final class Image {
 
     /**
      * <pre>
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      * </pre>
      *
      * <code>string imageData = 3;</code>
@@ -15065,7 +16896,7 @@ public final class Image {
     java.lang.String getImageData();
     /**
      * <pre>
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      * </pre>
      *
      * <code>string imageData = 3;</code>
@@ -15076,7 +16907,7 @@ public final class Image {
 
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15085,7 +16916,7 @@ public final class Image {
     boolean hasLocalizedImageData();
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15094,7 +16925,7 @@ public final class Image {
     com.passkit.grpc.Localization.LocalizedString getLocalizedImageData();
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15262,7 +17093,7 @@ public final class Image {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -15283,7 +17114,7 @@ public final class Image {
     }
     /**
      * <pre>
-     * Optional, if ommitted, the original name will remain the same.
+     * Optional, if omitted, the original name will remain the same.
      * </pre>
      *
      * <code>string name = 2;</code>
@@ -15308,7 +17139,7 @@ public final class Image {
     private volatile java.lang.Object imageData_;
     /**
      * <pre>
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      * </pre>
      *
      * <code>string imageData = 3;</code>
@@ -15329,7 +17160,7 @@ public final class Image {
     }
     /**
      * <pre>
-     * Optional, if ommitted, the original image will remain the same.
+     * Optional, if omitted, the original image will remain the same.
      * </pre>
      *
      * <code>string imageData = 3;</code>
@@ -15354,7 +17185,7 @@ public final class Image {
     private com.passkit.grpc.Localization.LocalizedString localizedImageData_;
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15366,7 +17197,7 @@ public final class Image {
     }
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15378,7 +17209,7 @@ public final class Image {
     }
     /**
      * <pre>
-     * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+     * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
      * </pre>
      *
      * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -15853,7 +17684,7 @@ public final class Image {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Optional, if ommitted, the original name will remain the same.
+       * Optional, if omitted, the original name will remain the same.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -15873,7 +17704,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original name will remain the same.
+       * Optional, if omitted, the original name will remain the same.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -15894,7 +17725,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original name will remain the same.
+       * Optional, if omitted, the original name will remain the same.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -15913,7 +17744,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original name will remain the same.
+       * Optional, if omitted, the original name will remain the same.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -15927,7 +17758,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original name will remain the same.
+       * Optional, if omitted, the original name will remain the same.
        * </pre>
        *
        * <code>string name = 2;</code>
@@ -15949,7 +17780,7 @@ public final class Image {
       private java.lang.Object imageData_ = "";
       /**
        * <pre>
-       * Optional, if ommitted, the original image will remain the same.
+       * Optional, if omitted, the original image will remain the same.
        * </pre>
        *
        * <code>string imageData = 3;</code>
@@ -15969,7 +17800,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original image will remain the same.
+       * Optional, if omitted, the original image will remain the same.
        * </pre>
        *
        * <code>string imageData = 3;</code>
@@ -15990,7 +17821,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original image will remain the same.
+       * Optional, if omitted, the original image will remain the same.
        * </pre>
        *
        * <code>string imageData = 3;</code>
@@ -16009,7 +17840,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original image will remain the same.
+       * Optional, if omitted, the original image will remain the same.
        * </pre>
        *
        * <code>string imageData = 3;</code>
@@ -16023,7 +17854,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, if ommitted, the original image will remain the same.
+       * Optional, if omitted, the original image will remain the same.
        * </pre>
        *
        * <code>string imageData = 3;</code>
@@ -16047,7 +17878,7 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedImageDataBuilder_;
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16058,7 +17889,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16073,7 +17904,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16093,7 +17924,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16111,7 +17942,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16133,7 +17964,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16151,7 +17982,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16163,7 +17994,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -16178,7 +18009,7 @@ public final class Image {
       }
       /**
        * <pre>
-       * Optional, provided localizations will be added/replaced, existing ommitted localizations will remain in place.
+       * Optional, provided localizations will be added/replaced, existing omitted localizations will remain in place.
        * </pre>
        *
        * <code>.io.LocalizedString localizedImageData = 4;</code>
@@ -17531,6 +19362,2953 @@ public final class Image {
 
   }
 
+  public interface StampImageConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.StampImageConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>float padding = 2;</code>
+     * @return The padding.
+     */
+    float getPadding();
+
+    /**
+     * <code>uint32 totalStamps = 3;</code>
+     * @return The totalStamps.
+     */
+    int getTotalStamps();
+
+    /**
+     * <code>string stampImage = 4;</code>
+     * @return The stampImage.
+     */
+    java.lang.String getStampImage();
+    /**
+     * <code>string stampImage = 4;</code>
+     * @return The bytes for stampImage.
+     */
+    com.google.protobuf.ByteString
+        getStampImageBytes();
+
+    /**
+     * <code>string unstampImage = 5;</code>
+     * @return The unstampImage.
+     */
+    java.lang.String getUnstampImage();
+    /**
+     * <code>string unstampImage = 5;</code>
+     * @return The bytes for unstampImage.
+     */
+    com.google.protobuf.ByteString
+        getUnstampImageBytes();
+
+    /**
+     * <code>string backgroundImage = 6;</code>
+     * @return The backgroundImage.
+     */
+    java.lang.String getBackgroundImage();
+    /**
+     * <code>string backgroundImage = 6;</code>
+     * @return The bytes for backgroundImage.
+     */
+    com.google.protobuf.ByteString
+        getBackgroundImageBytes();
+
+    /**
+     * <code>string backgroundColor = 7;</code>
+     * @return The backgroundColor.
+     */
+    java.lang.String getBackgroundColor();
+    /**
+     * <code>string backgroundColor = 7;</code>
+     * @return The bytes for backgroundColor.
+     */
+    com.google.protobuf.ByteString
+        getBackgroundColorBytes();
+
+    /**
+     * <code>float backgroundOpacity = 8;</code>
+     * @return The backgroundOpacity.
+     */
+    float getBackgroundOpacity();
+
+    /**
+     * <code>string stampColor = 9;</code>
+     * @return The stampColor.
+     */
+    java.lang.String getStampColor();
+    /**
+     * <code>string stampColor = 9;</code>
+     * @return The bytes for stampColor.
+     */
+    com.google.protobuf.ByteString
+        getStampColorBytes();
+
+    /**
+     * <code>float stampOpacity = 10;</code>
+     * @return The stampOpacity.
+     */
+    float getStampOpacity();
+
+    /**
+     * <code>string unstampColor = 11;</code>
+     * @return The unstampColor.
+     */
+    java.lang.String getUnstampColor();
+    /**
+     * <code>string unstampColor = 11;</code>
+     * @return The bytes for unstampColor.
+     */
+    com.google.protobuf.ByteString
+        getUnstampColorBytes();
+
+    /**
+     * <code>float unstampOpacity = 12;</code>
+     * @return The unstampOpacity.
+     */
+    float getUnstampOpacity();
+
+    /**
+     * <code>bool placeholders = 13;</code>
+     * @return The placeholders.
+     */
+    boolean getPlaceholders();
+
+    /**
+     * <code>string placeholderColor = 14;</code>
+     * @return The placeholderColor.
+     */
+    java.lang.String getPlaceholderColor();
+    /**
+     * <code>string placeholderColor = 14;</code>
+     * @return The bytes for placeholderColor.
+     */
+    com.google.protobuf.ByteString
+        getPlaceholderColorBytes();
+
+    /**
+     * <code>float placeholderOpacity = 15;</code>
+     * @return The placeholderOpacity.
+     */
+    float getPlaceholderOpacity();
+
+    /**
+     * <code>string placeholderBorderColor = 16;</code>
+     * @return The placeholderBorderColor.
+     */
+    java.lang.String getPlaceholderBorderColor();
+    /**
+     * <code>string placeholderBorderColor = 16;</code>
+     * @return The bytes for placeholderBorderColor.
+     */
+    com.google.protobuf.ByteString
+        getPlaceholderBorderColorBytes();
+
+    /**
+     * <code>float placeholderBorderOpacity = 17;</code>
+     * @return The placeholderBorderOpacity.
+     */
+    float getPlaceholderBorderOpacity();
+
+    /**
+     * <code>bool rewardPlaceholders = 18;</code>
+     * @return The rewardPlaceholders.
+     */
+    boolean getRewardPlaceholders();
+
+    /**
+     * <code>string rewardBorderColor = 19;</code>
+     * @return The rewardBorderColor.
+     */
+    java.lang.String getRewardBorderColor();
+    /**
+     * <code>string rewardBorderColor = 19;</code>
+     * @return The bytes for rewardBorderColor.
+     */
+    com.google.protobuf.ByteString
+        getRewardBorderColorBytes();
+
+    /**
+     * <code>float rewardBorderOpacity = 20;</code>
+     * @return The rewardBorderOpacity.
+     */
+    float getRewardBorderOpacity();
+
+    /**
+     * <code>string rewardBackgroundColor = 21;</code>
+     * @return The rewardBackgroundColor.
+     */
+    java.lang.String getRewardBackgroundColor();
+    /**
+     * <code>string rewardBackgroundColor = 21;</code>
+     * @return The bytes for rewardBackgroundColor.
+     */
+    com.google.protobuf.ByteString
+        getRewardBackgroundColorBytes();
+
+    /**
+     * <code>float rewardBackgroundOpacity = 22;</code>
+     * @return The rewardBackgroundOpacity.
+     */
+    float getRewardBackgroundOpacity();
+
+    /**
+     * <pre>
+     * takes a bitmask of rewards positions.
+     * </pre>
+     *
+     * <code>uint64 rewardPositions = 23;</code>
+     * @return The rewardPositions.
+     */
+    long getRewardPositions();
+  }
+  /**
+   * Protobuf type {@code io.StampImageConfig}
+   */
+  public static final class StampImageConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.StampImageConfig)
+      StampImageConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StampImageConfig.newBuilder() to construct.
+    private StampImageConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StampImageConfig() {
+      id_ = "";
+      stampImage_ = "";
+      unstampImage_ = "";
+      backgroundImage_ = "";
+      backgroundColor_ = "";
+      stampColor_ = "";
+      unstampColor_ = "";
+      placeholderColor_ = "";
+      placeholderBorderColor_ = "";
+      rewardBorderColor_ = "";
+      rewardBackgroundColor_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StampImageConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StampImageConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 21: {
+
+              padding_ = input.readFloat();
+              break;
+            }
+            case 24: {
+
+              totalStamps_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stampImage_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              unstampImage_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backgroundImage_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              backgroundColor_ = s;
+              break;
+            }
+            case 69: {
+
+              backgroundOpacity_ = input.readFloat();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              stampColor_ = s;
+              break;
+            }
+            case 85: {
+
+              stampOpacity_ = input.readFloat();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              unstampColor_ = s;
+              break;
+            }
+            case 101: {
+
+              unstampOpacity_ = input.readFloat();
+              break;
+            }
+            case 104: {
+
+              placeholders_ = input.readBool();
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              placeholderColor_ = s;
+              break;
+            }
+            case 125: {
+
+              placeholderOpacity_ = input.readFloat();
+              break;
+            }
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              placeholderBorderColor_ = s;
+              break;
+            }
+            case 141: {
+
+              placeholderBorderOpacity_ = input.readFloat();
+              break;
+            }
+            case 144: {
+
+              rewardPlaceholders_ = input.readBool();
+              break;
+            }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rewardBorderColor_ = s;
+              break;
+            }
+            case 165: {
+
+              rewardBorderOpacity_ = input.readFloat();
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rewardBackgroundColor_ = s;
+              break;
+            }
+            case 181: {
+
+              rewardBackgroundOpacity_ = input.readFloat();
+              break;
+            }
+            case 184: {
+
+              rewardPositions_ = input.readUInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Image.internal_static_io_StampImageConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Image.internal_static_io_StampImageConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Image.StampImageConfig.class, com.passkit.grpc.Image.StampImageConfig.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PADDING_FIELD_NUMBER = 2;
+    private float padding_;
+    /**
+     * <code>float padding = 2;</code>
+     * @return The padding.
+     */
+    @java.lang.Override
+    public float getPadding() {
+      return padding_;
+    }
+
+    public static final int TOTALSTAMPS_FIELD_NUMBER = 3;
+    private int totalStamps_;
+    /**
+     * <code>uint32 totalStamps = 3;</code>
+     * @return The totalStamps.
+     */
+    @java.lang.Override
+    public int getTotalStamps() {
+      return totalStamps_;
+    }
+
+    public static final int STAMPIMAGE_FIELD_NUMBER = 4;
+    private volatile java.lang.Object stampImage_;
+    /**
+     * <code>string stampImage = 4;</code>
+     * @return The stampImage.
+     */
+    @java.lang.Override
+    public java.lang.String getStampImage() {
+      java.lang.Object ref = stampImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stampImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stampImage = 4;</code>
+     * @return The bytes for stampImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStampImageBytes() {
+      java.lang.Object ref = stampImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stampImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNSTAMPIMAGE_FIELD_NUMBER = 5;
+    private volatile java.lang.Object unstampImage_;
+    /**
+     * <code>string unstampImage = 5;</code>
+     * @return The unstampImage.
+     */
+    @java.lang.Override
+    public java.lang.String getUnstampImage() {
+      java.lang.Object ref = unstampImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unstampImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unstampImage = 5;</code>
+     * @return The bytes for unstampImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnstampImageBytes() {
+      java.lang.Object ref = unstampImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unstampImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKGROUNDIMAGE_FIELD_NUMBER = 6;
+    private volatile java.lang.Object backgroundImage_;
+    /**
+     * <code>string backgroundImage = 6;</code>
+     * @return The backgroundImage.
+     */
+    @java.lang.Override
+    public java.lang.String getBackgroundImage() {
+      java.lang.Object ref = backgroundImage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backgroundImage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string backgroundImage = 6;</code>
+     * @return The bytes for backgroundImage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackgroundImageBytes() {
+      java.lang.Object ref = backgroundImage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backgroundImage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKGROUNDCOLOR_FIELD_NUMBER = 7;
+    private volatile java.lang.Object backgroundColor_;
+    /**
+     * <code>string backgroundColor = 7;</code>
+     * @return The backgroundColor.
+     */
+    @java.lang.Override
+    public java.lang.String getBackgroundColor() {
+      java.lang.Object ref = backgroundColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        backgroundColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string backgroundColor = 7;</code>
+     * @return The bytes for backgroundColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBackgroundColorBytes() {
+      java.lang.Object ref = backgroundColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        backgroundColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BACKGROUNDOPACITY_FIELD_NUMBER = 8;
+    private float backgroundOpacity_;
+    /**
+     * <code>float backgroundOpacity = 8;</code>
+     * @return The backgroundOpacity.
+     */
+    @java.lang.Override
+    public float getBackgroundOpacity() {
+      return backgroundOpacity_;
+    }
+
+    public static final int STAMPCOLOR_FIELD_NUMBER = 9;
+    private volatile java.lang.Object stampColor_;
+    /**
+     * <code>string stampColor = 9;</code>
+     * @return The stampColor.
+     */
+    @java.lang.Override
+    public java.lang.String getStampColor() {
+      java.lang.Object ref = stampColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stampColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string stampColor = 9;</code>
+     * @return The bytes for stampColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStampColorBytes() {
+      java.lang.Object ref = stampColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stampColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAMPOPACITY_FIELD_NUMBER = 10;
+    private float stampOpacity_;
+    /**
+     * <code>float stampOpacity = 10;</code>
+     * @return The stampOpacity.
+     */
+    @java.lang.Override
+    public float getStampOpacity() {
+      return stampOpacity_;
+    }
+
+    public static final int UNSTAMPCOLOR_FIELD_NUMBER = 11;
+    private volatile java.lang.Object unstampColor_;
+    /**
+     * <code>string unstampColor = 11;</code>
+     * @return The unstampColor.
+     */
+    @java.lang.Override
+    public java.lang.String getUnstampColor() {
+      java.lang.Object ref = unstampColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        unstampColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string unstampColor = 11;</code>
+     * @return The bytes for unstampColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUnstampColorBytes() {
+      java.lang.Object ref = unstampColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        unstampColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNSTAMPOPACITY_FIELD_NUMBER = 12;
+    private float unstampOpacity_;
+    /**
+     * <code>float unstampOpacity = 12;</code>
+     * @return The unstampOpacity.
+     */
+    @java.lang.Override
+    public float getUnstampOpacity() {
+      return unstampOpacity_;
+    }
+
+    public static final int PLACEHOLDERS_FIELD_NUMBER = 13;
+    private boolean placeholders_;
+    /**
+     * <code>bool placeholders = 13;</code>
+     * @return The placeholders.
+     */
+    @java.lang.Override
+    public boolean getPlaceholders() {
+      return placeholders_;
+    }
+
+    public static final int PLACEHOLDERCOLOR_FIELD_NUMBER = 14;
+    private volatile java.lang.Object placeholderColor_;
+    /**
+     * <code>string placeholderColor = 14;</code>
+     * @return The placeholderColor.
+     */
+    @java.lang.Override
+    public java.lang.String getPlaceholderColor() {
+      java.lang.Object ref = placeholderColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        placeholderColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string placeholderColor = 14;</code>
+     * @return The bytes for placeholderColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlaceholderColorBytes() {
+      java.lang.Object ref = placeholderColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        placeholderColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLACEHOLDEROPACITY_FIELD_NUMBER = 15;
+    private float placeholderOpacity_;
+    /**
+     * <code>float placeholderOpacity = 15;</code>
+     * @return The placeholderOpacity.
+     */
+    @java.lang.Override
+    public float getPlaceholderOpacity() {
+      return placeholderOpacity_;
+    }
+
+    public static final int PLACEHOLDERBORDERCOLOR_FIELD_NUMBER = 16;
+    private volatile java.lang.Object placeholderBorderColor_;
+    /**
+     * <code>string placeholderBorderColor = 16;</code>
+     * @return The placeholderBorderColor.
+     */
+    @java.lang.Override
+    public java.lang.String getPlaceholderBorderColor() {
+      java.lang.Object ref = placeholderBorderColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        placeholderBorderColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string placeholderBorderColor = 16;</code>
+     * @return The bytes for placeholderBorderColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPlaceholderBorderColorBytes() {
+      java.lang.Object ref = placeholderBorderColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        placeholderBorderColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLACEHOLDERBORDEROPACITY_FIELD_NUMBER = 17;
+    private float placeholderBorderOpacity_;
+    /**
+     * <code>float placeholderBorderOpacity = 17;</code>
+     * @return The placeholderBorderOpacity.
+     */
+    @java.lang.Override
+    public float getPlaceholderBorderOpacity() {
+      return placeholderBorderOpacity_;
+    }
+
+    public static final int REWARDPLACEHOLDERS_FIELD_NUMBER = 18;
+    private boolean rewardPlaceholders_;
+    /**
+     * <code>bool rewardPlaceholders = 18;</code>
+     * @return The rewardPlaceholders.
+     */
+    @java.lang.Override
+    public boolean getRewardPlaceholders() {
+      return rewardPlaceholders_;
+    }
+
+    public static final int REWARDBORDERCOLOR_FIELD_NUMBER = 19;
+    private volatile java.lang.Object rewardBorderColor_;
+    /**
+     * <code>string rewardBorderColor = 19;</code>
+     * @return The rewardBorderColor.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardBorderColor() {
+      java.lang.Object ref = rewardBorderColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardBorderColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardBorderColor = 19;</code>
+     * @return The bytes for rewardBorderColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardBorderColorBytes() {
+      java.lang.Object ref = rewardBorderColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardBorderColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDBORDEROPACITY_FIELD_NUMBER = 20;
+    private float rewardBorderOpacity_;
+    /**
+     * <code>float rewardBorderOpacity = 20;</code>
+     * @return The rewardBorderOpacity.
+     */
+    @java.lang.Override
+    public float getRewardBorderOpacity() {
+      return rewardBorderOpacity_;
+    }
+
+    public static final int REWARDBACKGROUNDCOLOR_FIELD_NUMBER = 21;
+    private volatile java.lang.Object rewardBackgroundColor_;
+    /**
+     * <code>string rewardBackgroundColor = 21;</code>
+     * @return The rewardBackgroundColor.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardBackgroundColor() {
+      java.lang.Object ref = rewardBackgroundColor_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardBackgroundColor_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rewardBackgroundColor = 21;</code>
+     * @return The bytes for rewardBackgroundColor.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardBackgroundColorBytes() {
+      java.lang.Object ref = rewardBackgroundColor_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardBackgroundColor_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REWARDBACKGROUNDOPACITY_FIELD_NUMBER = 22;
+    private float rewardBackgroundOpacity_;
+    /**
+     * <code>float rewardBackgroundOpacity = 22;</code>
+     * @return The rewardBackgroundOpacity.
+     */
+    @java.lang.Override
+    public float getRewardBackgroundOpacity() {
+      return rewardBackgroundOpacity_;
+    }
+
+    public static final int REWARDPOSITIONS_FIELD_NUMBER = 23;
+    private long rewardPositions_;
+    /**
+     * <pre>
+     * takes a bitmask of rewards positions.
+     * </pre>
+     *
+     * <code>uint64 rewardPositions = 23;</code>
+     * @return The rewardPositions.
+     */
+    @java.lang.Override
+    public long getRewardPositions() {
+      return rewardPositions_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (padding_ != 0F) {
+        output.writeFloat(2, padding_);
+      }
+      if (totalStamps_ != 0) {
+        output.writeUInt32(3, totalStamps_);
+      }
+      if (!getStampImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, stampImage_);
+      }
+      if (!getUnstampImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, unstampImage_);
+      }
+      if (!getBackgroundImageBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, backgroundImage_);
+      }
+      if (!getBackgroundColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, backgroundColor_);
+      }
+      if (backgroundOpacity_ != 0F) {
+        output.writeFloat(8, backgroundOpacity_);
+      }
+      if (!getStampColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, stampColor_);
+      }
+      if (stampOpacity_ != 0F) {
+        output.writeFloat(10, stampOpacity_);
+      }
+      if (!getUnstampColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, unstampColor_);
+      }
+      if (unstampOpacity_ != 0F) {
+        output.writeFloat(12, unstampOpacity_);
+      }
+      if (placeholders_ != false) {
+        output.writeBool(13, placeholders_);
+      }
+      if (!getPlaceholderColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, placeholderColor_);
+      }
+      if (placeholderOpacity_ != 0F) {
+        output.writeFloat(15, placeholderOpacity_);
+      }
+      if (!getPlaceholderBorderColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 16, placeholderBorderColor_);
+      }
+      if (placeholderBorderOpacity_ != 0F) {
+        output.writeFloat(17, placeholderBorderOpacity_);
+      }
+      if (rewardPlaceholders_ != false) {
+        output.writeBool(18, rewardPlaceholders_);
+      }
+      if (!getRewardBorderColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, rewardBorderColor_);
+      }
+      if (rewardBorderOpacity_ != 0F) {
+        output.writeFloat(20, rewardBorderOpacity_);
+      }
+      if (!getRewardBackgroundColorBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, rewardBackgroundColor_);
+      }
+      if (rewardBackgroundOpacity_ != 0F) {
+        output.writeFloat(22, rewardBackgroundOpacity_);
+      }
+      if (rewardPositions_ != 0L) {
+        output.writeUInt64(23, rewardPositions_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (padding_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, padding_);
+      }
+      if (totalStamps_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, totalStamps_);
+      }
+      if (!getStampImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, stampImage_);
+      }
+      if (!getUnstampImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, unstampImage_);
+      }
+      if (!getBackgroundImageBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, backgroundImage_);
+      }
+      if (!getBackgroundColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, backgroundColor_);
+      }
+      if (backgroundOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(8, backgroundOpacity_);
+      }
+      if (!getStampColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, stampColor_);
+      }
+      if (stampOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(10, stampOpacity_);
+      }
+      if (!getUnstampColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, unstampColor_);
+      }
+      if (unstampOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(12, unstampOpacity_);
+      }
+      if (placeholders_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(13, placeholders_);
+      }
+      if (!getPlaceholderColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, placeholderColor_);
+      }
+      if (placeholderOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(15, placeholderOpacity_);
+      }
+      if (!getPlaceholderBorderColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, placeholderBorderColor_);
+      }
+      if (placeholderBorderOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(17, placeholderBorderOpacity_);
+      }
+      if (rewardPlaceholders_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, rewardPlaceholders_);
+      }
+      if (!getRewardBorderColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, rewardBorderColor_);
+      }
+      if (rewardBorderOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(20, rewardBorderOpacity_);
+      }
+      if (!getRewardBackgroundColorBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, rewardBackgroundColor_);
+      }
+      if (rewardBackgroundOpacity_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(22, rewardBackgroundOpacity_);
+      }
+      if (rewardPositions_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(23, rewardPositions_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Image.StampImageConfig)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Image.StampImageConfig other = (com.passkit.grpc.Image.StampImageConfig) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (java.lang.Float.floatToIntBits(getPadding())
+          != java.lang.Float.floatToIntBits(
+              other.getPadding())) return false;
+      if (getTotalStamps()
+          != other.getTotalStamps()) return false;
+      if (!getStampImage()
+          .equals(other.getStampImage())) return false;
+      if (!getUnstampImage()
+          .equals(other.getUnstampImage())) return false;
+      if (!getBackgroundImage()
+          .equals(other.getBackgroundImage())) return false;
+      if (!getBackgroundColor()
+          .equals(other.getBackgroundColor())) return false;
+      if (java.lang.Float.floatToIntBits(getBackgroundOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getBackgroundOpacity())) return false;
+      if (!getStampColor()
+          .equals(other.getStampColor())) return false;
+      if (java.lang.Float.floatToIntBits(getStampOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getStampOpacity())) return false;
+      if (!getUnstampColor()
+          .equals(other.getUnstampColor())) return false;
+      if (java.lang.Float.floatToIntBits(getUnstampOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getUnstampOpacity())) return false;
+      if (getPlaceholders()
+          != other.getPlaceholders()) return false;
+      if (!getPlaceholderColor()
+          .equals(other.getPlaceholderColor())) return false;
+      if (java.lang.Float.floatToIntBits(getPlaceholderOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getPlaceholderOpacity())) return false;
+      if (!getPlaceholderBorderColor()
+          .equals(other.getPlaceholderBorderColor())) return false;
+      if (java.lang.Float.floatToIntBits(getPlaceholderBorderOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getPlaceholderBorderOpacity())) return false;
+      if (getRewardPlaceholders()
+          != other.getRewardPlaceholders()) return false;
+      if (!getRewardBorderColor()
+          .equals(other.getRewardBorderColor())) return false;
+      if (java.lang.Float.floatToIntBits(getRewardBorderOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getRewardBorderOpacity())) return false;
+      if (!getRewardBackgroundColor()
+          .equals(other.getRewardBackgroundColor())) return false;
+      if (java.lang.Float.floatToIntBits(getRewardBackgroundOpacity())
+          != java.lang.Float.floatToIntBits(
+              other.getRewardBackgroundOpacity())) return false;
+      if (getRewardPositions()
+          != other.getRewardPositions()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + PADDING_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPadding());
+      hash = (37 * hash) + TOTALSTAMPS_FIELD_NUMBER;
+      hash = (53 * hash) + getTotalStamps();
+      hash = (37 * hash) + STAMPIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getStampImage().hashCode();
+      hash = (37 * hash) + UNSTAMPIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getUnstampImage().hashCode();
+      hash = (37 * hash) + BACKGROUNDIMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getBackgroundImage().hashCode();
+      hash = (37 * hash) + BACKGROUNDCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getBackgroundColor().hashCode();
+      hash = (37 * hash) + BACKGROUNDOPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getBackgroundOpacity());
+      hash = (37 * hash) + STAMPCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getStampColor().hashCode();
+      hash = (37 * hash) + STAMPOPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getStampOpacity());
+      hash = (37 * hash) + UNSTAMPCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getUnstampColor().hashCode();
+      hash = (37 * hash) + UNSTAMPOPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getUnstampOpacity());
+      hash = (37 * hash) + PLACEHOLDERS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPlaceholders());
+      hash = (37 * hash) + PLACEHOLDERCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getPlaceholderColor().hashCode();
+      hash = (37 * hash) + PLACEHOLDEROPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPlaceholderOpacity());
+      hash = (37 * hash) + PLACEHOLDERBORDERCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getPlaceholderBorderColor().hashCode();
+      hash = (37 * hash) + PLACEHOLDERBORDEROPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getPlaceholderBorderOpacity());
+      hash = (37 * hash) + REWARDPLACEHOLDERS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRewardPlaceholders());
+      hash = (37 * hash) + REWARDBORDERCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardBorderColor().hashCode();
+      hash = (37 * hash) + REWARDBORDEROPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getRewardBorderOpacity());
+      hash = (37 * hash) + REWARDBACKGROUNDCOLOR_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardBackgroundColor().hashCode();
+      hash = (37 * hash) + REWARDBACKGROUNDOPACITY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getRewardBackgroundOpacity());
+      hash = (37 * hash) + REWARDPOSITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardPositions());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Image.StampImageConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Image.StampImageConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.StampImageConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.StampImageConfig)
+        com.passkit.grpc.Image.StampImageConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Image.StampImageConfig.class, com.passkit.grpc.Image.StampImageConfig.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Image.StampImageConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        padding_ = 0F;
+
+        totalStamps_ = 0;
+
+        stampImage_ = "";
+
+        unstampImage_ = "";
+
+        backgroundImage_ = "";
+
+        backgroundColor_ = "";
+
+        backgroundOpacity_ = 0F;
+
+        stampColor_ = "";
+
+        stampOpacity_ = 0F;
+
+        unstampColor_ = "";
+
+        unstampOpacity_ = 0F;
+
+        placeholders_ = false;
+
+        placeholderColor_ = "";
+
+        placeholderOpacity_ = 0F;
+
+        placeholderBorderColor_ = "";
+
+        placeholderBorderOpacity_ = 0F;
+
+        rewardPlaceholders_ = false;
+
+        rewardBorderColor_ = "";
+
+        rewardBorderOpacity_ = 0F;
+
+        rewardBackgroundColor_ = "";
+
+        rewardBackgroundOpacity_ = 0F;
+
+        rewardPositions_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Image.internal_static_io_StampImageConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageConfig getDefaultInstanceForType() {
+        return com.passkit.grpc.Image.StampImageConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageConfig build() {
+        com.passkit.grpc.Image.StampImageConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Image.StampImageConfig buildPartial() {
+        com.passkit.grpc.Image.StampImageConfig result = new com.passkit.grpc.Image.StampImageConfig(this);
+        result.id_ = id_;
+        result.padding_ = padding_;
+        result.totalStamps_ = totalStamps_;
+        result.stampImage_ = stampImage_;
+        result.unstampImage_ = unstampImage_;
+        result.backgroundImage_ = backgroundImage_;
+        result.backgroundColor_ = backgroundColor_;
+        result.backgroundOpacity_ = backgroundOpacity_;
+        result.stampColor_ = stampColor_;
+        result.stampOpacity_ = stampOpacity_;
+        result.unstampColor_ = unstampColor_;
+        result.unstampOpacity_ = unstampOpacity_;
+        result.placeholders_ = placeholders_;
+        result.placeholderColor_ = placeholderColor_;
+        result.placeholderOpacity_ = placeholderOpacity_;
+        result.placeholderBorderColor_ = placeholderBorderColor_;
+        result.placeholderBorderOpacity_ = placeholderBorderOpacity_;
+        result.rewardPlaceholders_ = rewardPlaceholders_;
+        result.rewardBorderColor_ = rewardBorderColor_;
+        result.rewardBorderOpacity_ = rewardBorderOpacity_;
+        result.rewardBackgroundColor_ = rewardBackgroundColor_;
+        result.rewardBackgroundOpacity_ = rewardBackgroundOpacity_;
+        result.rewardPositions_ = rewardPositions_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Image.StampImageConfig) {
+          return mergeFrom((com.passkit.grpc.Image.StampImageConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Image.StampImageConfig other) {
+        if (other == com.passkit.grpc.Image.StampImageConfig.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (other.getPadding() != 0F) {
+          setPadding(other.getPadding());
+        }
+        if (other.getTotalStamps() != 0) {
+          setTotalStamps(other.getTotalStamps());
+        }
+        if (!other.getStampImage().isEmpty()) {
+          stampImage_ = other.stampImage_;
+          onChanged();
+        }
+        if (!other.getUnstampImage().isEmpty()) {
+          unstampImage_ = other.unstampImage_;
+          onChanged();
+        }
+        if (!other.getBackgroundImage().isEmpty()) {
+          backgroundImage_ = other.backgroundImage_;
+          onChanged();
+        }
+        if (!other.getBackgroundColor().isEmpty()) {
+          backgroundColor_ = other.backgroundColor_;
+          onChanged();
+        }
+        if (other.getBackgroundOpacity() != 0F) {
+          setBackgroundOpacity(other.getBackgroundOpacity());
+        }
+        if (!other.getStampColor().isEmpty()) {
+          stampColor_ = other.stampColor_;
+          onChanged();
+        }
+        if (other.getStampOpacity() != 0F) {
+          setStampOpacity(other.getStampOpacity());
+        }
+        if (!other.getUnstampColor().isEmpty()) {
+          unstampColor_ = other.unstampColor_;
+          onChanged();
+        }
+        if (other.getUnstampOpacity() != 0F) {
+          setUnstampOpacity(other.getUnstampOpacity());
+        }
+        if (other.getPlaceholders() != false) {
+          setPlaceholders(other.getPlaceholders());
+        }
+        if (!other.getPlaceholderColor().isEmpty()) {
+          placeholderColor_ = other.placeholderColor_;
+          onChanged();
+        }
+        if (other.getPlaceholderOpacity() != 0F) {
+          setPlaceholderOpacity(other.getPlaceholderOpacity());
+        }
+        if (!other.getPlaceholderBorderColor().isEmpty()) {
+          placeholderBorderColor_ = other.placeholderBorderColor_;
+          onChanged();
+        }
+        if (other.getPlaceholderBorderOpacity() != 0F) {
+          setPlaceholderBorderOpacity(other.getPlaceholderBorderOpacity());
+        }
+        if (other.getRewardPlaceholders() != false) {
+          setRewardPlaceholders(other.getRewardPlaceholders());
+        }
+        if (!other.getRewardBorderColor().isEmpty()) {
+          rewardBorderColor_ = other.rewardBorderColor_;
+          onChanged();
+        }
+        if (other.getRewardBorderOpacity() != 0F) {
+          setRewardBorderOpacity(other.getRewardBorderOpacity());
+        }
+        if (!other.getRewardBackgroundColor().isEmpty()) {
+          rewardBackgroundColor_ = other.rewardBackgroundColor_;
+          onChanged();
+        }
+        if (other.getRewardBackgroundOpacity() != 0F) {
+          setRewardBackgroundOpacity(other.getRewardBackgroundOpacity());
+        }
+        if (other.getRewardPositions() != 0L) {
+          setRewardPositions(other.getRewardPositions());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Image.StampImageConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Image.StampImageConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float padding_ ;
+      /**
+       * <code>float padding = 2;</code>
+       * @return The padding.
+       */
+      @java.lang.Override
+      public float getPadding() {
+        return padding_;
+      }
+      /**
+       * <code>float padding = 2;</code>
+       * @param value The padding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPadding(float value) {
+        
+        padding_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float padding = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPadding() {
+        
+        padding_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int totalStamps_ ;
+      /**
+       * <code>uint32 totalStamps = 3;</code>
+       * @return The totalStamps.
+       */
+      @java.lang.Override
+      public int getTotalStamps() {
+        return totalStamps_;
+      }
+      /**
+       * <code>uint32 totalStamps = 3;</code>
+       * @param value The totalStamps to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalStamps(int value) {
+        
+        totalStamps_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 totalStamps = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalStamps() {
+        
+        totalStamps_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stampImage_ = "";
+      /**
+       * <code>string stampImage = 4;</code>
+       * @return The stampImage.
+       */
+      public java.lang.String getStampImage() {
+        java.lang.Object ref = stampImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stampImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stampImage = 4;</code>
+       * @return The bytes for stampImage.
+       */
+      public com.google.protobuf.ByteString
+          getStampImageBytes() {
+        java.lang.Object ref = stampImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stampImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stampImage = 4;</code>
+       * @param value The stampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stampImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampImage = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampImage() {
+        
+        stampImage_ = getDefaultInstance().getStampImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampImage = 4;</code>
+       * @param value The bytes for stampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stampImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unstampImage_ = "";
+      /**
+       * <code>string unstampImage = 5;</code>
+       * @return The unstampImage.
+       */
+      public java.lang.String getUnstampImage() {
+        java.lang.Object ref = unstampImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unstampImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unstampImage = 5;</code>
+       * @return The bytes for unstampImage.
+       */
+      public com.google.protobuf.ByteString
+          getUnstampImageBytes() {
+        java.lang.Object ref = unstampImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unstampImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unstampImage = 5;</code>
+       * @param value The unstampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        unstampImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampImage = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstampImage() {
+        
+        unstampImage_ = getDefaultInstance().getUnstampImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampImage = 5;</code>
+       * @param value The bytes for unstampImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        unstampImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backgroundImage_ = "";
+      /**
+       * <code>string backgroundImage = 6;</code>
+       * @return The backgroundImage.
+       */
+      public java.lang.String getBackgroundImage() {
+        java.lang.Object ref = backgroundImage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backgroundImage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string backgroundImage = 6;</code>
+       * @return The bytes for backgroundImage.
+       */
+      public com.google.protobuf.ByteString
+          getBackgroundImageBytes() {
+        java.lang.Object ref = backgroundImage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backgroundImage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string backgroundImage = 6;</code>
+       * @param value The backgroundImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackgroundImage(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backgroundImage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backgroundImage = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackgroundImage() {
+        
+        backgroundImage_ = getDefaultInstance().getBackgroundImage();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backgroundImage = 6;</code>
+       * @param value The bytes for backgroundImage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackgroundImageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backgroundImage_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object backgroundColor_ = "";
+      /**
+       * <code>string backgroundColor = 7;</code>
+       * @return The backgroundColor.
+       */
+      public java.lang.String getBackgroundColor() {
+        java.lang.Object ref = backgroundColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          backgroundColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string backgroundColor = 7;</code>
+       * @return The bytes for backgroundColor.
+       */
+      public com.google.protobuf.ByteString
+          getBackgroundColorBytes() {
+        java.lang.Object ref = backgroundColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          backgroundColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string backgroundColor = 7;</code>
+       * @param value The backgroundColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackgroundColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        backgroundColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backgroundColor = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackgroundColor() {
+        
+        backgroundColor_ = getDefaultInstance().getBackgroundColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string backgroundColor = 7;</code>
+       * @param value The bytes for backgroundColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackgroundColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        backgroundColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float backgroundOpacity_ ;
+      /**
+       * <code>float backgroundOpacity = 8;</code>
+       * @return The backgroundOpacity.
+       */
+      @java.lang.Override
+      public float getBackgroundOpacity() {
+        return backgroundOpacity_;
+      }
+      /**
+       * <code>float backgroundOpacity = 8;</code>
+       * @param value The backgroundOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBackgroundOpacity(float value) {
+        
+        backgroundOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float backgroundOpacity = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBackgroundOpacity() {
+        
+        backgroundOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object stampColor_ = "";
+      /**
+       * <code>string stampColor = 9;</code>
+       * @return The stampColor.
+       */
+      public java.lang.String getStampColor() {
+        java.lang.Object ref = stampColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stampColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string stampColor = 9;</code>
+       * @return The bytes for stampColor.
+       */
+      public com.google.protobuf.ByteString
+          getStampColorBytes() {
+        java.lang.Object ref = stampColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stampColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string stampColor = 9;</code>
+       * @param value The stampColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        stampColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampColor = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampColor() {
+        
+        stampColor_ = getDefaultInstance().getStampColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string stampColor = 9;</code>
+       * @param value The bytes for stampColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        stampColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float stampOpacity_ ;
+      /**
+       * <code>float stampOpacity = 10;</code>
+       * @return The stampOpacity.
+       */
+      @java.lang.Override
+      public float getStampOpacity() {
+        return stampOpacity_;
+      }
+      /**
+       * <code>float stampOpacity = 10;</code>
+       * @param value The stampOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStampOpacity(float value) {
+        
+        stampOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float stampOpacity = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStampOpacity() {
+        
+        stampOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object unstampColor_ = "";
+      /**
+       * <code>string unstampColor = 11;</code>
+       * @return The unstampColor.
+       */
+      public java.lang.String getUnstampColor() {
+        java.lang.Object ref = unstampColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          unstampColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string unstampColor = 11;</code>
+       * @return The bytes for unstampColor.
+       */
+      public com.google.protobuf.ByteString
+          getUnstampColorBytes() {
+        java.lang.Object ref = unstampColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          unstampColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string unstampColor = 11;</code>
+       * @param value The unstampColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        unstampColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampColor = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstampColor() {
+        
+        unstampColor_ = getDefaultInstance().getUnstampColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string unstampColor = 11;</code>
+       * @param value The bytes for unstampColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        unstampColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float unstampOpacity_ ;
+      /**
+       * <code>float unstampOpacity = 12;</code>
+       * @return The unstampOpacity.
+       */
+      @java.lang.Override
+      public float getUnstampOpacity() {
+        return unstampOpacity_;
+      }
+      /**
+       * <code>float unstampOpacity = 12;</code>
+       * @param value The unstampOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnstampOpacity(float value) {
+        
+        unstampOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float unstampOpacity = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnstampOpacity() {
+        
+        unstampOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean placeholders_ ;
+      /**
+       * <code>bool placeholders = 13;</code>
+       * @return The placeholders.
+       */
+      @java.lang.Override
+      public boolean getPlaceholders() {
+        return placeholders_;
+      }
+      /**
+       * <code>bool placeholders = 13;</code>
+       * @param value The placeholders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholders(boolean value) {
+        
+        placeholders_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool placeholders = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlaceholders() {
+        
+        placeholders_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object placeholderColor_ = "";
+      /**
+       * <code>string placeholderColor = 14;</code>
+       * @return The placeholderColor.
+       */
+      public java.lang.String getPlaceholderColor() {
+        java.lang.Object ref = placeholderColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          placeholderColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string placeholderColor = 14;</code>
+       * @return The bytes for placeholderColor.
+       */
+      public com.google.protobuf.ByteString
+          getPlaceholderColorBytes() {
+        java.lang.Object ref = placeholderColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          placeholderColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string placeholderColor = 14;</code>
+       * @param value The placeholderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        placeholderColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string placeholderColor = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlaceholderColor() {
+        
+        placeholderColor_ = getDefaultInstance().getPlaceholderColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string placeholderColor = 14;</code>
+       * @param value The bytes for placeholderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        placeholderColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float placeholderOpacity_ ;
+      /**
+       * <code>float placeholderOpacity = 15;</code>
+       * @return The placeholderOpacity.
+       */
+      @java.lang.Override
+      public float getPlaceholderOpacity() {
+        return placeholderOpacity_;
+      }
+      /**
+       * <code>float placeholderOpacity = 15;</code>
+       * @param value The placeholderOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderOpacity(float value) {
+        
+        placeholderOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float placeholderOpacity = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlaceholderOpacity() {
+        
+        placeholderOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object placeholderBorderColor_ = "";
+      /**
+       * <code>string placeholderBorderColor = 16;</code>
+       * @return The placeholderBorderColor.
+       */
+      public java.lang.String getPlaceholderBorderColor() {
+        java.lang.Object ref = placeholderBorderColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          placeholderBorderColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string placeholderBorderColor = 16;</code>
+       * @return The bytes for placeholderBorderColor.
+       */
+      public com.google.protobuf.ByteString
+          getPlaceholderBorderColorBytes() {
+        java.lang.Object ref = placeholderBorderColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          placeholderBorderColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string placeholderBorderColor = 16;</code>
+       * @param value The placeholderBorderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderBorderColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        placeholderBorderColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string placeholderBorderColor = 16;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlaceholderBorderColor() {
+        
+        placeholderBorderColor_ = getDefaultInstance().getPlaceholderBorderColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string placeholderBorderColor = 16;</code>
+       * @param value The bytes for placeholderBorderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderBorderColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        placeholderBorderColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float placeholderBorderOpacity_ ;
+      /**
+       * <code>float placeholderBorderOpacity = 17;</code>
+       * @return The placeholderBorderOpacity.
+       */
+      @java.lang.Override
+      public float getPlaceholderBorderOpacity() {
+        return placeholderBorderOpacity_;
+      }
+      /**
+       * <code>float placeholderBorderOpacity = 17;</code>
+       * @param value The placeholderBorderOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlaceholderBorderOpacity(float value) {
+        
+        placeholderBorderOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float placeholderBorderOpacity = 17;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlaceholderBorderOpacity() {
+        
+        placeholderBorderOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean rewardPlaceholders_ ;
+      /**
+       * <code>bool rewardPlaceholders = 18;</code>
+       * @return The rewardPlaceholders.
+       */
+      @java.lang.Override
+      public boolean getRewardPlaceholders() {
+        return rewardPlaceholders_;
+      }
+      /**
+       * <code>bool rewardPlaceholders = 18;</code>
+       * @param value The rewardPlaceholders to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPlaceholders(boolean value) {
+        
+        rewardPlaceholders_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool rewardPlaceholders = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardPlaceholders() {
+        
+        rewardPlaceholders_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardBorderColor_ = "";
+      /**
+       * <code>string rewardBorderColor = 19;</code>
+       * @return The rewardBorderColor.
+       */
+      public java.lang.String getRewardBorderColor() {
+        java.lang.Object ref = rewardBorderColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardBorderColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardBorderColor = 19;</code>
+       * @return The bytes for rewardBorderColor.
+       */
+      public com.google.protobuf.ByteString
+          getRewardBorderColorBytes() {
+        java.lang.Object ref = rewardBorderColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardBorderColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardBorderColor = 19;</code>
+       * @param value The rewardBorderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBorderColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rewardBorderColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardBorderColor = 19;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardBorderColor() {
+        
+        rewardBorderColor_ = getDefaultInstance().getRewardBorderColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardBorderColor = 19;</code>
+       * @param value The bytes for rewardBorderColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBorderColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rewardBorderColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float rewardBorderOpacity_ ;
+      /**
+       * <code>float rewardBorderOpacity = 20;</code>
+       * @return The rewardBorderOpacity.
+       */
+      @java.lang.Override
+      public float getRewardBorderOpacity() {
+        return rewardBorderOpacity_;
+      }
+      /**
+       * <code>float rewardBorderOpacity = 20;</code>
+       * @param value The rewardBorderOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBorderOpacity(float value) {
+        
+        rewardBorderOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float rewardBorderOpacity = 20;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardBorderOpacity() {
+        
+        rewardBorderOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardBackgroundColor_ = "";
+      /**
+       * <code>string rewardBackgroundColor = 21;</code>
+       * @return The rewardBackgroundColor.
+       */
+      public java.lang.String getRewardBackgroundColor() {
+        java.lang.Object ref = rewardBackgroundColor_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardBackgroundColor_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rewardBackgroundColor = 21;</code>
+       * @return The bytes for rewardBackgroundColor.
+       */
+      public com.google.protobuf.ByteString
+          getRewardBackgroundColorBytes() {
+        java.lang.Object ref = rewardBackgroundColor_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardBackgroundColor_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rewardBackgroundColor = 21;</code>
+       * @param value The rewardBackgroundColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBackgroundColor(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rewardBackgroundColor_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardBackgroundColor = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardBackgroundColor() {
+        
+        rewardBackgroundColor_ = getDefaultInstance().getRewardBackgroundColor();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rewardBackgroundColor = 21;</code>
+       * @param value The bytes for rewardBackgroundColor to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBackgroundColorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rewardBackgroundColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float rewardBackgroundOpacity_ ;
+      /**
+       * <code>float rewardBackgroundOpacity = 22;</code>
+       * @return The rewardBackgroundOpacity.
+       */
+      @java.lang.Override
+      public float getRewardBackgroundOpacity() {
+        return rewardBackgroundOpacity_;
+      }
+      /**
+       * <code>float rewardBackgroundOpacity = 22;</code>
+       * @param value The rewardBackgroundOpacity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardBackgroundOpacity(float value) {
+        
+        rewardBackgroundOpacity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float rewardBackgroundOpacity = 22;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardBackgroundOpacity() {
+        
+        rewardBackgroundOpacity_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private long rewardPositions_ ;
+      /**
+       * <pre>
+       * takes a bitmask of rewards positions.
+       * </pre>
+       *
+       * <code>uint64 rewardPositions = 23;</code>
+       * @return The rewardPositions.
+       */
+      @java.lang.Override
+      public long getRewardPositions() {
+        return rewardPositions_;
+      }
+      /**
+       * <pre>
+       * takes a bitmask of rewards positions.
+       * </pre>
+       *
+       * <code>uint64 rewardPositions = 23;</code>
+       * @param value The rewardPositions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardPositions(long value) {
+        
+        rewardPositions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * takes a bitmask of rewards positions.
+       * </pre>
+       *
+       * <code>uint64 rewardPositions = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardPositions() {
+        
+        rewardPositions_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.StampImageConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.StampImageConfig)
+    private static final com.passkit.grpc.Image.StampImageConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Image.StampImageConfig();
+    }
+
+    public static com.passkit.grpc.Image.StampImageConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StampImageConfig>
+        PARSER = new com.google.protobuf.AbstractParser<StampImageConfig>() {
+      @java.lang.Override
+      public StampImageConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StampImageConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StampImageConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StampImageConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Image.StampImageConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_ImageIds_descriptor;
   private static final 
@@ -17557,6 +22335,11 @@ public final class Image {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_MultipleImages_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_StampImageRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_StampImageRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_CreateImageInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17576,6 +22359,11 @@ public final class Image {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_LocalizedImageInput_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_StampImageConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_StampImageConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17588,7 +22376,7 @@ public final class Image {
       "\n\024io/image/image.proto\022\002io\032\034io/common/lo" +
       "calization.proto\032.protoc-gen-openapiv2/o" +
       "ptions/annotations.proto\032\037google/protobu" +
-      "f/timestamp.proto\"\360\002\n\010ImageIds\022\014\n\004icon\030\001" +
+      "f/timestamp.proto\"\262\003\n\010ImageIds\022\014\n\004icon\030\001" +
       " \001(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleLogo\030\003 \001(\t\022\014\n" +
       "\004hero\030\004 \001(\t\022\022\n\neventStrip\030\005 \001(\t\022\r\n\005strip" +
       "\030\006 \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n\nbackground\030" +
@@ -17596,66 +22384,87 @@ public final class Image {
       "\021\n\tprivilege\030\013 \001(\t\022\027\n\017airlineAlliance\030\014 " +
       "\001(\t\022\027\n\017personalization\030\r \001(\t\022\016\n\006banner\030\016" +
       " \001(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007profile\030\020 \001(\t\022\020" +
-      "\n\010appImage\030\021 \001(\t:2\222A/\n-*\tImage Ids2\031This" +
-      " manages images by id\322\001\004icon\"\346\010\n\tImageDa" +
-      "ta\022\014\n\004icon\030\001 \001(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleL" +
-      "ogo\030\003 \001(\t\022\014\n\004hero\030\004 \001(\t\022\022\n\neventStrip\030\005 " +
-      "\001(\t\022\r\n\005strip\030\006 \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n" +
-      "\nbackground\030\010 \001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010sec" +
-      "urity\030\n \001(\t\022\021\n\tprivilege\030\013 \001(\t\022\027\n\017airlin" +
-      "eAlliance\030\014 \001(\t\022\027\n\017personalization\030\r \001(\t" +
-      "\022\016\n\006banner\030\016 \001(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007pro" +
-      "file\030\020 \001(\t\022\020\n\010appImage\030\021 \001(\t\022*\n\rlocalize" +
-      "dIcon\030\037 \001(\0132\023.io.LocalizedString\022*\n\rloca" +
-      "lizedLogo\030  \001(\0132\023.io.LocalizedString\022/\n\022" +
-      "localizedAppleLogo\030! \001(\0132\023.io.LocalizedS" +
-      "tring\022*\n\rlocalizedHero\030\" \001(\0132\023.io.Locali" +
-      "zedString\0220\n\023localizedEventStrip\030# \001(\0132\023" +
-      ".io.LocalizedString\022+\n\016localizedStrip\030$ " +
-      "\001(\0132\023.io.LocalizedString\022/\n\022localizedThu" +
-      "mbnail\030% \001(\0132\023.io.LocalizedString\0220\n\023loc" +
-      "alizedBackground\030& \001(\0132\023.io.LocalizedStr" +
-      "ing\022,\n\017localizedFooter\030\' \001(\0132\023.io.Locali" +
-      "zedString\022.\n\021localizedSecurity\030( \001(\0132\023.i" +
-      "o.LocalizedString\022/\n\022localizedPrivilege\030" +
-      ") \001(\0132\023.io.LocalizedString\0225\n\030localizedA" +
-      "irlineAlliance\030* \001(\0132\023.io.LocalizedStrin" +
-      "g\0225\n\030localizedPersonalization\030+ \001(\0132\023.io" +
-      ".LocalizedString\022,\n\017localizedBanner\030, \001(" +
-      "\0132\023.io.LocalizedString\022-\n\020localizedMessa" +
-      "ge\030- \001(\0132\023.io.LocalizedString:V\222AS\nQ*\nIm" +
-      "age Data2CImage data can be provided as " +
-      "either a url or base 64 encoded data.\"\351\001" +
-      "\n\013ImageRecord\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022" +
-      "\013\n\003url\030\003 \001(\t\022\031\n\003use\030\005 \001(\0162\014.io.ImageUse\022" +
-      "#\n\tlanguages\030\006 \003(\0162\020.io.LanguageCode\022\025\n\r" +
-      "ownerUsername\030\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022-\n\tupdatedAt\030" +
-      "\t \001(\0132\032.google.protobuf.Timestamp\"&\n\021Pro" +
-      "fileImageInput\022\021\n\timageData\030\001 \001(\t\"1\n\016Mul" +
-      "tipleImages\022\037\n\006images\030\001 \003(\0132\017.io.ImageRe" +
-      "cord\"\214\001\n\020CreateImageInput\022\014\n\004name\030\001 \001(\t\022" +
-      " \n\timageData\030\002 \001(\0132\r.io.ImageData:H\222AE\nC" +
-      "*\022Create Image Input2\032This creates image" +
-      " record.\322\001\004name\322\001\timageData\"\302\001\n\020UpdateIm" +
-      "ageInput\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tim" +
-      "ageData\030\003 \001(\t\022/\n\022localizedImageData\030\004 \001(" +
-      "\0132\023.io.LocalizedString:P\222AM\nK*\022Update Im" +
-      "age Input20This manages images set for d" +
-      "ifferent languages.\322\001\002id\"\034\n\013ImageBundle\022" +
-      "\r\n\005image\030\001 \001(\014\"\233\001\n\023LocalizedImageInput\022\n" +
-      "\n\002id\030\001 \001(\t\022\024\n\014languageCode\030\002 \001(\t:b\222A_\n]*" +
-      "\025Localized Image Input20This manages ima" +
-      "ges set for different languages.\322\001\002id\322\001\014" +
-      "languageCode*\370\001\n\010ImageUse\022\010\n\004icon\020\000\022\010\n\004l" +
-      "ogo\020\001\022\r\n\tappleLogo\020\002\022\010\n\004hero\020\003\022\016\n\neventS" +
-      "trip\020\004\022\t\n\005strip\020\005\022\r\n\tthumbnail\020\006\022\016\n\nback" +
-      "ground\020\007\022\n\n\006footer\020\010\022\014\n\010security\020\t\022\r\n\tpr" +
-      "ivilege\020\n\022\023\n\017airlineAlliance\020\013\022\023\n\017person" +
-      "alization\020\014\022\n\n\006banner\020\r\022\013\n\007message\020\016\022\013\n\007" +
-      "profile\020\017\022\014\n\010appImage\020\020BG\n\020com.passkit.g" +
-      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
-      "o\252\002\014PassKit.Grpcb\006proto3"
+      "\n\010appImage\030\021 \001(\t\022\024\n\014stampedImage\030\022 \001(\t\022\026" +
+      "\n\016unstampedImage\030\023 \001(\t\022\022\n\nstampImage\030\024 \001" +
+      "(\t:2\222A/\n-*\tImage Ids2\031This manages image" +
+      "s by id\322\001\004icon\"\277\t\n\tImageData\022\014\n\004icon\030\001 \001" +
+      "(\t\022\014\n\004logo\030\002 \001(\t\022\021\n\tappleLogo\030\003 \001(\t\022\014\n\004h" +
+      "ero\030\004 \001(\t\022\022\n\neventStrip\030\005 \001(\t\022\r\n\005strip\030\006" +
+      " \001(\t\022\021\n\tthumbnail\030\007 \001(\t\022\022\n\nbackground\030\010 " +
+      "\001(\t\022\016\n\006footer\030\t \001(\t\022\020\n\010security\030\n \001(\t\022\021\n" +
+      "\tprivilege\030\013 \001(\t\022\027\n\017airlineAlliance\030\014 \001(" +
+      "\t\022\027\n\017personalization\030\r \001(\t\022\016\n\006banner\030\016 \001" +
+      "(\t\022\017\n\007message\030\017 \001(\t\022\017\n\007profile\030\020 \001(\t\022\020\n\010" +
+      "appImage\030\021 \001(\t\022\024\n\014stampedImage\030\022 \001(\t\022\026\n\016" +
+      "unstampedImage\030\023 \001(\t\022)\n\013stampConfig\030\024 \001(" +
+      "\0132\024.io.StampImageConfig\022*\n\rlocalizedIcon" +
+      "\030\037 \001(\0132\023.io.LocalizedString\022*\n\rlocalized" +
+      "Logo\030  \001(\0132\023.io.LocalizedString\022/\n\022local" +
+      "izedAppleLogo\030! \001(\0132\023.io.LocalizedString" +
+      "\022*\n\rlocalizedHero\030\" \001(\0132\023.io.LocalizedSt" +
+      "ring\0220\n\023localizedEventStrip\030# \001(\0132\023.io.L" +
+      "ocalizedString\022+\n\016localizedStrip\030$ \001(\0132\023" +
+      ".io.LocalizedString\022/\n\022localizedThumbnai" +
+      "l\030% \001(\0132\023.io.LocalizedString\0220\n\023localize" +
+      "dBackground\030& \001(\0132\023.io.LocalizedString\022," +
+      "\n\017localizedFooter\030\' \001(\0132\023.io.LocalizedSt" +
+      "ring\022.\n\021localizedSecurity\030( \001(\0132\023.io.Loc" +
+      "alizedString\022/\n\022localizedPrivilege\030) \001(\013" +
+      "2\023.io.LocalizedString\0225\n\030localizedAirlin" +
+      "eAlliance\030* \001(\0132\023.io.LocalizedString\0225\n\030" +
+      "localizedPersonalization\030+ \001(\0132\023.io.Loca" +
+      "lizedString\022,\n\017localizedBanner\030, \001(\0132\023.i" +
+      "o.LocalizedString\022-\n\020localizedMessage\030- " +
+      "\001(\0132\023.io.LocalizedString:V\222AS\nQ*\nImage D" +
+      "ata2CImage data can be provided as eithe" +
+      "r a url or base 64 encoded data.\"\351\001\n\013Ima" +
+      "geRecord\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\013\n\003ur" +
+      "l\030\003 \001(\t\022\031\n\003use\030\005 \001(\0162\014.io.ImageUse\022#\n\tla" +
+      "nguages\030\006 \003(\0162\020.io.LanguageCode\022\025\n\rowner" +
+      "Username\030\007 \001(\t\022-\n\tcreatedAt\030\010 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022-\n\tupdatedAt\030\t \001(\013" +
+      "2\032.google.protobuf.Timestamp\"&\n\021ProfileI" +
+      "mageInput\022\021\n\timageData\030\001 \001(\t\"1\n\016Multiple" +
+      "Images\022\037\n\006images\030\001 \003(\0132\017.io.ImageRecord\"" +
+      "/\n\021StampImageRequest\022\n\n\002id\030\001 \001(\t\022\016\n\006stat" +
+      "us\030\002 \001(\004\"\214\001\n\020CreateImageInput\022\014\n\004name\030\001 " +
+      "\001(\t\022 \n\timageData\030\002 \001(\0132\r.io.ImageData:H\222" +
+      "AE\nC*\022Create Image Input2\032This creates i" +
+      "mage record.\322\001\004name\322\001\timageData\"\302\001\n\020Upda" +
+      "teImageInput\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021" +
+      "\n\timageData\030\003 \001(\t\022/\n\022localizedImageData\030" +
+      "\004 \001(\0132\023.io.LocalizedString:P\222AM\nK*\022Updat" +
+      "e Image Input20This manages images set f" +
+      "or different languages.\322\001\002id\"\034\n\013ImageBun" +
+      "dle\022\r\n\005image\030\001 \001(\014\"\233\001\n\023LocalizedImageInp" +
+      "ut\022\n\n\002id\030\001 \001(\t\022\024\n\014languageCode\030\002 \001(\t:b\222A" +
+      "_\n]*\025Localized Image Input20This manages" +
+      " images set for different languages.\322\001\002i" +
+      "d\322\001\014languageCode\"\316\004\n\020StampImageConfig\022\n\n" +
+      "\002id\030\001 \001(\t\022\017\n\007padding\030\002 \001(\002\022\023\n\013totalStamp" +
+      "s\030\003 \001(\r\022\022\n\nstampImage\030\004 \001(\t\022\024\n\014unstampIm" +
+      "age\030\005 \001(\t\022\027\n\017backgroundImage\030\006 \001(\t\022\027\n\017ba" +
+      "ckgroundColor\030\007 \001(\t\022\031\n\021backgroundOpacity" +
+      "\030\010 \001(\002\022\022\n\nstampColor\030\t \001(\t\022\024\n\014stampOpaci" +
+      "ty\030\n \001(\002\022\024\n\014unstampColor\030\013 \001(\t\022\026\n\016unstam" +
+      "pOpacity\030\014 \001(\002\022\024\n\014placeholders\030\r \001(\010\022\030\n\020" +
+      "placeholderColor\030\016 \001(\t\022\032\n\022placeholderOpa" +
+      "city\030\017 \001(\002\022\036\n\026placeholderBorderColor\030\020 \001" +
+      "(\t\022 \n\030placeholderBorderOpacity\030\021 \001(\002\022\032\n\022" +
+      "rewardPlaceholders\030\022 \001(\010\022\031\n\021rewardBorder" +
+      "Color\030\023 \001(\t\022\033\n\023rewardBorderOpacity\030\024 \001(\002" +
+      "\022\035\n\025rewardBackgroundColor\030\025 \001(\t\022\037\n\027rewar" +
+      "dBackgroundOpacity\030\026 \001(\002\022\027\n\017rewardPositi" +
+      "ons\030\027 \001(\004*\256\002\n\010ImageUse\022\010\n\004icon\020\000\022\010\n\004logo" +
+      "\020\001\022\r\n\tappleLogo\020\002\022\010\n\004hero\020\003\022\016\n\neventStri" +
+      "p\020\004\022\t\n\005strip\020\005\022\r\n\tthumbnail\020\006\022\016\n\nbackgro" +
+      "und\020\007\022\n\n\006footer\020\010\022\014\n\010security\020\t\022\r\n\tprivi" +
+      "lege\020\n\022\023\n\017airlineAlliance\020\013\022\023\n\017personali" +
+      "zation\020\014\022\n\n\006banner\020\r\022\013\n\007message\020\016\022\013\n\007pro" +
+      "file\020\017\022\014\n\010appImage\020\020\022\020\n\014stampedImage\020\022\022\022" +
+      "\n\016unstampedImage\020\023\022\016\n\nstampImage\020\024BG\n\020co" +
+      "m.passkit.grpcZ$stash.passkit.com/io/mod" +
+      "el/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17669,13 +22478,13 @@ public final class Image {
     internal_static_io_ImageIds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ImageIds_descriptor,
-        new java.lang.String[] { "Icon", "Logo", "AppleLogo", "Hero", "EventStrip", "Strip", "Thumbnail", "Background", "Footer", "Security", "Privilege", "AirlineAlliance", "Personalization", "Banner", "Message", "Profile", "AppImage", });
+        new java.lang.String[] { "Icon", "Logo", "AppleLogo", "Hero", "EventStrip", "Strip", "Thumbnail", "Background", "Footer", "Security", "Privilege", "AirlineAlliance", "Personalization", "Banner", "Message", "Profile", "AppImage", "StampedImage", "UnstampedImage", "StampImage", });
     internal_static_io_ImageData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_ImageData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ImageData_descriptor,
-        new java.lang.String[] { "Icon", "Logo", "AppleLogo", "Hero", "EventStrip", "Strip", "Thumbnail", "Background", "Footer", "Security", "Privilege", "AirlineAlliance", "Personalization", "Banner", "Message", "Profile", "AppImage", "LocalizedIcon", "LocalizedLogo", "LocalizedAppleLogo", "LocalizedHero", "LocalizedEventStrip", "LocalizedStrip", "LocalizedThumbnail", "LocalizedBackground", "LocalizedFooter", "LocalizedSecurity", "LocalizedPrivilege", "LocalizedAirlineAlliance", "LocalizedPersonalization", "LocalizedBanner", "LocalizedMessage", });
+        new java.lang.String[] { "Icon", "Logo", "AppleLogo", "Hero", "EventStrip", "Strip", "Thumbnail", "Background", "Footer", "Security", "Privilege", "AirlineAlliance", "Personalization", "Banner", "Message", "Profile", "AppImage", "StampedImage", "UnstampedImage", "StampConfig", "LocalizedIcon", "LocalizedLogo", "LocalizedAppleLogo", "LocalizedHero", "LocalizedEventStrip", "LocalizedStrip", "LocalizedThumbnail", "LocalizedBackground", "LocalizedFooter", "LocalizedSecurity", "LocalizedPrivilege", "LocalizedAirlineAlliance", "LocalizedPersonalization", "LocalizedBanner", "LocalizedMessage", });
     internal_static_io_ImageRecord_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_io_ImageRecord_fieldAccessorTable = new
@@ -17694,30 +22503,42 @@ public final class Image {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_MultipleImages_descriptor,
         new java.lang.String[] { "Images", });
-    internal_static_io_CreateImageInput_descriptor =
+    internal_static_io_StampImageRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_io_StampImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_StampImageRequest_descriptor,
+        new java.lang.String[] { "Id", "Status", });
+    internal_static_io_CreateImageInput_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_io_CreateImageInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_CreateImageInput_descriptor,
         new java.lang.String[] { "Name", "ImageData", });
     internal_static_io_UpdateImageInput_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_io_UpdateImageInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_UpdateImageInput_descriptor,
         new java.lang.String[] { "Id", "Name", "ImageData", "LocalizedImageData", });
     internal_static_io_ImageBundle_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_io_ImageBundle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ImageBundle_descriptor,
         new java.lang.String[] { "Image", });
     internal_static_io_LocalizedImageInput_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_io_LocalizedImageInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_LocalizedImageInput_descriptor,
         new java.lang.String[] { "Id", "LanguageCode", });
+    internal_static_io_StampImageConfig_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_io_StampImageConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_StampImageConfig_descriptor,
+        new java.lang.String[] { "Id", "Padding", "TotalStamps", "StampImage", "UnstampImage", "BackgroundImage", "BackgroundColor", "BackgroundOpacity", "StampColor", "StampOpacity", "UnstampColor", "UnstampOpacity", "Placeholders", "PlaceholderColor", "PlaceholderOpacity", "PlaceholderBorderColor", "PlaceholderBorderOpacity", "RewardPlaceholders", "RewardBorderColor", "RewardBorderOpacity", "RewardBackgroundColor", "RewardBackgroundOpacity", "RewardPositions", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);

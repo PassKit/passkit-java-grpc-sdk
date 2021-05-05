@@ -8723,6 +8723,1168 @@ public final class CouponOuterClass {
 
   }
 
+  public interface CouponNewExternalIdRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:single_use_coupons.CouponNewExternalIdRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Coupon Campaign ID. Required if external id is used.
+     * </pre>
+     *
+     * <code>string couponCampaignId = 2;</code>
+     * @return The couponCampaignId.
+     */
+    java.lang.String getCouponCampaignId();
+    /**
+     * <pre>
+     * Coupon Campaign ID. Required if external id is used.
+     * </pre>
+     *
+     * <code>string couponCampaignId = 2;</code>
+     * @return The bytes for couponCampaignId.
+     */
+    com.google.protobuf.ByteString
+        getCouponCampaignIdBytes();
+
+    /**
+     * <pre>
+     * Current external ID. Required if coupon id is not provided.
+     * </pre>
+     *
+     * <code>string externalId = 3;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * Current external ID. Required if coupon id is not provided.
+     * </pre>
+     *
+     * <code>string externalId = 3;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * New external ID.
+     * </pre>
+     *
+     * <code>string newExternalId = 4;</code>
+     * @return The newExternalId.
+     */
+    java.lang.String getNewExternalId();
+    /**
+     * <pre>
+     * New external ID.
+     * </pre>
+     *
+     * <code>string newExternalId = 4;</code>
+     * @return The bytes for newExternalId.
+     */
+    com.google.protobuf.ByteString
+        getNewExternalIdBytes();
+  }
+  /**
+   * Protobuf type {@code single_use_coupons.CouponNewExternalIdRequest}
+   */
+  public static final class CouponNewExternalIdRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:single_use_coupons.CouponNewExternalIdRequest)
+      CouponNewExternalIdRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CouponNewExternalIdRequest.newBuilder() to construct.
+    private CouponNewExternalIdRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CouponNewExternalIdRequest() {
+      id_ = "";
+      couponCampaignId_ = "";
+      externalId_ = "";
+      newExternalId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CouponNewExternalIdRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CouponNewExternalIdRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              couponCampaignId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              newExternalId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.class, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUPONCAMPAIGNID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object couponCampaignId_;
+    /**
+     * <pre>
+     * Coupon Campaign ID. Required if external id is used.
+     * </pre>
+     *
+     * <code>string couponCampaignId = 2;</code>
+     * @return The couponCampaignId.
+     */
+    @java.lang.Override
+    public java.lang.String getCouponCampaignId() {
+      java.lang.Object ref = couponCampaignId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        couponCampaignId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Coupon Campaign ID. Required if external id is used.
+     * </pre>
+     *
+     * <code>string couponCampaignId = 2;</code>
+     * @return The bytes for couponCampaignId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCouponCampaignIdBytes() {
+      java.lang.Object ref = couponCampaignId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        couponCampaignId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNALID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * Current external ID. Required if coupon id is not provided.
+     * </pre>
+     *
+     * <code>string externalId = 3;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Current external ID. Required if coupon id is not provided.
+     * </pre>
+     *
+     * <code>string externalId = 3;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEWEXTERNALID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object newExternalId_;
+    /**
+     * <pre>
+     * New external ID.
+     * </pre>
+     *
+     * <code>string newExternalId = 4;</code>
+     * @return The newExternalId.
+     */
+    @java.lang.Override
+    public java.lang.String getNewExternalId() {
+      java.lang.Object ref = newExternalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newExternalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New external ID.
+     * </pre>
+     *
+     * <code>string newExternalId = 4;</code>
+     * @return The bytes for newExternalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewExternalIdBytes() {
+      java.lang.Object ref = newExternalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newExternalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getCouponCampaignIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, couponCampaignId_);
+      }
+      if (!getExternalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalId_);
+      }
+      if (!getNewExternalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newExternalId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getCouponCampaignIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, couponCampaignId_);
+      }
+      if (!getExternalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalId_);
+      }
+      if (!getNewExternalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newExternalId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest other = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getCouponCampaignId()
+          .equals(other.getCouponCampaignId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (!getNewExternalId()
+          .equals(other.getNewExternalId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + COUPONCAMPAIGNID_FIELD_NUMBER;
+      hash = (53 * hash) + getCouponCampaignId().hashCode();
+      hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + NEWEXTERNALID_FIELD_NUMBER;
+      hash = (53 * hash) + getNewExternalId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code single_use_coupons.CouponNewExternalIdRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:single_use_coupons.CouponNewExternalIdRequest)
+        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.class, com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        couponCampaignId_ = "";
+
+        externalId_ = "";
+
+        newExternalId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest build() {
+        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest buildPartial() {
+        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest(this);
+        result.id_ = id_;
+        result.couponCampaignId_ = couponCampaignId_;
+        result.externalId_ = externalId_;
+        result.newExternalId_ = newExternalId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest) {
+          return mergeFrom((com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest other) {
+        if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getCouponCampaignId().isEmpty()) {
+          couponCampaignId_ = other.couponCampaignId_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (!other.getNewExternalId().isEmpty()) {
+          newExternalId_ = other.newExternalId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object couponCampaignId_ = "";
+      /**
+       * <pre>
+       * Coupon Campaign ID. Required if external id is used.
+       * </pre>
+       *
+       * <code>string couponCampaignId = 2;</code>
+       * @return The couponCampaignId.
+       */
+      public java.lang.String getCouponCampaignId() {
+        java.lang.Object ref = couponCampaignId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          couponCampaignId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Coupon Campaign ID. Required if external id is used.
+       * </pre>
+       *
+       * <code>string couponCampaignId = 2;</code>
+       * @return The bytes for couponCampaignId.
+       */
+      public com.google.protobuf.ByteString
+          getCouponCampaignIdBytes() {
+        java.lang.Object ref = couponCampaignId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          couponCampaignId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Coupon Campaign ID. Required if external id is used.
+       * </pre>
+       *
+       * <code>string couponCampaignId = 2;</code>
+       * @param value The couponCampaignId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCouponCampaignId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        couponCampaignId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Coupon Campaign ID. Required if external id is used.
+       * </pre>
+       *
+       * <code>string couponCampaignId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCouponCampaignId() {
+        
+        couponCampaignId_ = getDefaultInstance().getCouponCampaignId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Coupon Campaign ID. Required if external id is used.
+       * </pre>
+       *
+       * <code>string couponCampaignId = 2;</code>
+       * @param value The bytes for couponCampaignId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCouponCampaignIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        couponCampaignId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * Current external ID. Required if coupon id is not provided.
+       * </pre>
+       *
+       * <code>string externalId = 3;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Current external ID. Required if coupon id is not provided.
+       * </pre>
+       *
+       * <code>string externalId = 3;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Current external ID. Required if coupon id is not provided.
+       * </pre>
+       *
+       * <code>string externalId = 3;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current external ID. Required if coupon id is not provided.
+       * </pre>
+       *
+       * <code>string externalId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Current external ID. Required if coupon id is not provided.
+       * </pre>
+       *
+       * <code>string externalId = 3;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newExternalId_ = "";
+      /**
+       * <pre>
+       * New external ID.
+       * </pre>
+       *
+       * <code>string newExternalId = 4;</code>
+       * @return The newExternalId.
+       */
+      public java.lang.String getNewExternalId() {
+        java.lang.Object ref = newExternalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newExternalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New external ID.
+       * </pre>
+       *
+       * <code>string newExternalId = 4;</code>
+       * @return The bytes for newExternalId.
+       */
+      public com.google.protobuf.ByteString
+          getNewExternalIdBytes() {
+        java.lang.Object ref = newExternalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newExternalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New external ID.
+       * </pre>
+       *
+       * <code>string newExternalId = 4;</code>
+       * @param value The newExternalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        newExternalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New external ID.
+       * </pre>
+       *
+       * <code>string newExternalId = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewExternalId() {
+        
+        newExternalId_ = getDefaultInstance().getNewExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New external ID.
+       * </pre>
+       *
+       * <code>string newExternalId = 4;</code>
+       * @param value The bytes for newExternalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        newExternalId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:single_use_coupons.CouponNewExternalIdRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:single_use_coupons.CouponNewExternalIdRequest)
+    private static final com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest();
+    }
+
+    public static com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CouponNewExternalIdRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CouponNewExternalIdRequest>() {
+      @java.lang.Override
+      public CouponNewExternalIdRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CouponNewExternalIdRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CouponNewExternalIdRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CouponNewExternalIdRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_single_use_coupons_Coupon_descriptor;
   private static final 
@@ -8758,6 +9920,11 @@ public final class CouponOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_single_use_coupons_ListRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_single_use_coupons_CouponNewExternalIdRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8806,11 +9973,14 @@ public final class CouponOuterClass {
       "aignId\030\001 \001(\t\022\"\n\npagination\030\002 \001(\0132\016.io.Pa" +
       "gination\"Y\n\013ListRequest\022\030\n\020couponCampaig" +
       "nId\030\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\022" +
-      "\022\n\nemailAsCsv\030\003 \001(\010*,\n\014CouponStatus\022\016\n\nU" +
-      "NREDEEMED\020\000\022\014\n\010REDEEMED\020\001B|\n!com.passkit" +
-      ".grpc.SingleUseCouponsZ7stash.passkit.co" +
-      "m/io/model/sdk/go/io/single_use_coupons\252" +
-      "\002\035PassKit.Grpc.SingleUseCouponsb\006proto3"
+      "\022\n\nemailAsCsv\030\003 \001(\010\"m\n\032CouponNewExternal" +
+      "IdRequest\022\n\n\002id\030\001 \001(\t\022\030\n\020couponCampaignI" +
+      "d\030\002 \001(\t\022\022\n\nexternalId\030\003 \001(\t\022\025\n\rnewExtern" +
+      "alId\030\004 \001(\t*,\n\014CouponStatus\022\016\n\nUNREDEEMED" +
+      "\020\000\022\014\n\010REDEEMED\020\001B|\n!com.passkit.grpc.Sin" +
+      "gleUseCouponsZ7stash.passkit.com/io/mode" +
+      "l/sdk/go/io/single_use_coupons\252\002\035PassKit" +
+      ".Grpc.SingleUseCouponsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8865,6 +10035,12 @@ public final class CouponOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_single_use_coupons_ListRequest_descriptor,
         new java.lang.String[] { "CouponCampaignId", "Filters", "EmailAsCsv", });
+    internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_single_use_coupons_CouponNewExternalIdRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor,
+        new java.lang.String[] { "Id", "CouponCampaignId", "ExternalId", "NewExternalId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);

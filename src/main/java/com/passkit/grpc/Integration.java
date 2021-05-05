@@ -206,6 +206,18 @@ public final class Integration {
      */
     ZAPIER(6),
     /**
+     * <code>MAILCHIMP = 7;</code>
+     */
+    MAILCHIMP(7),
+    /**
+     * <code>SPROUT = 8;</code>
+     */
+    SPROUT(8),
+    /**
+     * <code>TESSITURA = 9;</code>
+     */
+    TESSITURA(9),
+    /**
      * <code>_CONFIG_TYPE_1 = 100;</code>
      */
     _CONFIG_TYPE_1(100),
@@ -240,6 +252,18 @@ public final class Integration {
      * <code>ZAPIER = 6;</code>
      */
     public static final int ZAPIER_VALUE = 6;
+    /**
+     * <code>MAILCHIMP = 7;</code>
+     */
+    public static final int MAILCHIMP_VALUE = 7;
+    /**
+     * <code>SPROUT = 8;</code>
+     */
+    public static final int SPROUT_VALUE = 8;
+    /**
+     * <code>TESSITURA = 9;</code>
+     */
+    public static final int TESSITURA_VALUE = 9;
     /**
      * <code>_CONFIG_TYPE_1 = 100;</code>
      */
@@ -277,6 +301,9 @@ public final class Integration {
         case 4: return BRAZE;
         case 5: return CODEREADR;
         case 6: return ZAPIER;
+        case 7: return MAILCHIMP;
+        case 8: return SPROUT;
+        case 9: return TESSITURA;
         case 100: return _CONFIG_TYPE_1;
         default: return null;
       }
@@ -694,6 +721,277 @@ public final class Integration {
 
   /**
    * <pre>
+   * ProtocolIntgType contains hooks for protocol methods.
+   * </pre>
+   *
+   * Protobuf enum {@code io.ProtocolIntgType}
+   */
+  public enum ProtocolIntgType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PROTOCOL_INTG_TYPE_NONE = 0;</code>
+     */
+    PROTOCOL_INTG_TYPE_NONE(0),
+    /**
+     * <pre>
+     * Member 0x1 - 0x400
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_MEMBER_UPDATE_POINTS = 1;</code>
+     */
+    HOOK_BEFORE_MEMBER_UPDATE_POINTS(1),
+    /**
+     * <code>HOOK_AFTER_MEMBER_UPDATE_POINTS = 4;</code>
+     */
+    HOOK_AFTER_MEMBER_UPDATE_POINTS(4),
+    /**
+     * <code>HOOK_BEFORE_MEMBER_TIER_UPDATE = 8;</code>
+     */
+    HOOK_BEFORE_MEMBER_TIER_UPDATE(8),
+    /**
+     * <code>HOOK_AFTER_MEMBER_TIER_UPDATE = 16;</code>
+     */
+    HOOK_AFTER_MEMBER_TIER_UPDATE(16),
+    /**
+     * <code>HOOK_BEFORE_MEMBER_CHECK_IN = 32;</code>
+     */
+    HOOK_BEFORE_MEMBER_CHECK_IN(32),
+    /**
+     * <code>HOOK_AFTER_MEMBER_CHECK_IN = 64;</code>
+     */
+    HOOK_AFTER_MEMBER_CHECK_IN(64),
+    /**
+     * <code>HOOK_BEFORE_MEMBER_CHECK_OUT = 128;</code>
+     */
+    HOOK_BEFORE_MEMBER_CHECK_OUT(128),
+    /**
+     * <code>HOOK_AFTER_MEMBER_CHECK_OUT = 256;</code>
+     */
+    HOOK_AFTER_MEMBER_CHECK_OUT(256),
+    /**
+     * <pre>
+     * Coupon 0x800 - 0x100000
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_COUPON_REDEEM = 2048;</code>
+     */
+    HOOK_BEFORE_COUPON_REDEEM(2048),
+    /**
+     * <code>HOOK_AFTER_COUPON_REDEEM = 4096;</code>
+     */
+    HOOK_AFTER_COUPON_REDEEM(4096),
+    /**
+     * <code>HOOK_BEFORE_UPDATE_COUPON_OFFER = 8192;</code>
+     */
+    HOOK_BEFORE_UPDATE_COUPON_OFFER(8192),
+    /**
+     * <code>HOOK_AFTER_UPDATE_COUPON_OFFER = 16384;</code>
+     */
+    HOOK_AFTER_UPDATE_COUPON_OFFER(16384),
+    /**
+     * <code>HOOK_BEFORE_CREATE_COUPON_OFFER = 32768;</code>
+     */
+    HOOK_BEFORE_CREATE_COUPON_OFFER(32768),
+    /**
+     * <code>HOOK_AFTER_CREATE_COUPON_OFFER = 65536;</code>
+     */
+    HOOK_AFTER_CREATE_COUPON_OFFER(65536),
+    /**
+     * <pre>
+     * Generic 0x200000 - 0x40000000
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_UPDATE_PII = 2097152;</code>
+     */
+    HOOK_BEFORE_UPDATE_PII(2097152),
+    /**
+     * <code>HOOK_AFTER_UPDATE_PII = 4194304;</code>
+     */
+    HOOK_AFTER_UPDATE_PII(4194304),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PROTOCOL_INTG_TYPE_NONE = 0;</code>
+     */
+    public static final int PROTOCOL_INTG_TYPE_NONE_VALUE = 0;
+    /**
+     * <pre>
+     * Member 0x1 - 0x400
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_MEMBER_UPDATE_POINTS = 1;</code>
+     */
+    public static final int HOOK_BEFORE_MEMBER_UPDATE_POINTS_VALUE = 1;
+    /**
+     * <code>HOOK_AFTER_MEMBER_UPDATE_POINTS = 4;</code>
+     */
+    public static final int HOOK_AFTER_MEMBER_UPDATE_POINTS_VALUE = 4;
+    /**
+     * <code>HOOK_BEFORE_MEMBER_TIER_UPDATE = 8;</code>
+     */
+    public static final int HOOK_BEFORE_MEMBER_TIER_UPDATE_VALUE = 8;
+    /**
+     * <code>HOOK_AFTER_MEMBER_TIER_UPDATE = 16;</code>
+     */
+    public static final int HOOK_AFTER_MEMBER_TIER_UPDATE_VALUE = 16;
+    /**
+     * <code>HOOK_BEFORE_MEMBER_CHECK_IN = 32;</code>
+     */
+    public static final int HOOK_BEFORE_MEMBER_CHECK_IN_VALUE = 32;
+    /**
+     * <code>HOOK_AFTER_MEMBER_CHECK_IN = 64;</code>
+     */
+    public static final int HOOK_AFTER_MEMBER_CHECK_IN_VALUE = 64;
+    /**
+     * <code>HOOK_BEFORE_MEMBER_CHECK_OUT = 128;</code>
+     */
+    public static final int HOOK_BEFORE_MEMBER_CHECK_OUT_VALUE = 128;
+    /**
+     * <code>HOOK_AFTER_MEMBER_CHECK_OUT = 256;</code>
+     */
+    public static final int HOOK_AFTER_MEMBER_CHECK_OUT_VALUE = 256;
+    /**
+     * <pre>
+     * Coupon 0x800 - 0x100000
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_COUPON_REDEEM = 2048;</code>
+     */
+    public static final int HOOK_BEFORE_COUPON_REDEEM_VALUE = 2048;
+    /**
+     * <code>HOOK_AFTER_COUPON_REDEEM = 4096;</code>
+     */
+    public static final int HOOK_AFTER_COUPON_REDEEM_VALUE = 4096;
+    /**
+     * <code>HOOK_BEFORE_UPDATE_COUPON_OFFER = 8192;</code>
+     */
+    public static final int HOOK_BEFORE_UPDATE_COUPON_OFFER_VALUE = 8192;
+    /**
+     * <code>HOOK_AFTER_UPDATE_COUPON_OFFER = 16384;</code>
+     */
+    public static final int HOOK_AFTER_UPDATE_COUPON_OFFER_VALUE = 16384;
+    /**
+     * <code>HOOK_BEFORE_CREATE_COUPON_OFFER = 32768;</code>
+     */
+    public static final int HOOK_BEFORE_CREATE_COUPON_OFFER_VALUE = 32768;
+    /**
+     * <code>HOOK_AFTER_CREATE_COUPON_OFFER = 65536;</code>
+     */
+    public static final int HOOK_AFTER_CREATE_COUPON_OFFER_VALUE = 65536;
+    /**
+     * <pre>
+     * Generic 0x200000 - 0x40000000
+     * </pre>
+     *
+     * <code>HOOK_BEFORE_UPDATE_PII = 2097152;</code>
+     */
+    public static final int HOOK_BEFORE_UPDATE_PII_VALUE = 2097152;
+    /**
+     * <code>HOOK_AFTER_UPDATE_PII = 4194304;</code>
+     */
+    public static final int HOOK_AFTER_UPDATE_PII_VALUE = 4194304;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ProtocolIntgType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ProtocolIntgType forNumber(int value) {
+      switch (value) {
+        case 0: return PROTOCOL_INTG_TYPE_NONE;
+        case 1: return HOOK_BEFORE_MEMBER_UPDATE_POINTS;
+        case 4: return HOOK_AFTER_MEMBER_UPDATE_POINTS;
+        case 8: return HOOK_BEFORE_MEMBER_TIER_UPDATE;
+        case 16: return HOOK_AFTER_MEMBER_TIER_UPDATE;
+        case 32: return HOOK_BEFORE_MEMBER_CHECK_IN;
+        case 64: return HOOK_AFTER_MEMBER_CHECK_IN;
+        case 128: return HOOK_BEFORE_MEMBER_CHECK_OUT;
+        case 256: return HOOK_AFTER_MEMBER_CHECK_OUT;
+        case 2048: return HOOK_BEFORE_COUPON_REDEEM;
+        case 4096: return HOOK_AFTER_COUPON_REDEEM;
+        case 8192: return HOOK_BEFORE_UPDATE_COUPON_OFFER;
+        case 16384: return HOOK_AFTER_UPDATE_COUPON_OFFER;
+        case 32768: return HOOK_BEFORE_CREATE_COUPON_OFFER;
+        case 65536: return HOOK_AFTER_CREATE_COUPON_OFFER;
+        case 2097152: return HOOK_BEFORE_UPDATE_PII;
+        case 4194304: return HOOK_AFTER_UPDATE_PII;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ProtocolIntgType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ProtocolIntgType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ProtocolIntgType>() {
+            public ProtocolIntgType findValueByNumber(int number) {
+              return ProtocolIntgType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final ProtocolIntgType[] VALUES = values();
+
+    public static ProtocolIntgType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ProtocolIntgType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.ProtocolIntgType)
+  }
+
+  /**
+   * <pre>
    * Name of pass event the third part app can subscribe to.
    * </pre>
    *
@@ -879,7 +1177,7 @@ public final class Integration {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(3);
+      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final PassEventId[] VALUES = values();
@@ -1016,7 +1314,7 @@ public final class Integration {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(4);
+      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final MembershipEventId[] VALUES = values();
@@ -1187,7 +1485,7 @@ public final class Integration {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(5);
+      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(6);
     }
 
     private static final CouponEventId[] VALUES = values();
@@ -1342,7 +1640,7 @@ public final class Integration {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(6);
+      return com.passkit.grpc.Integration.getDescriptor().getEnumTypes().get(7);
     }
 
     private static final ActionMethod[] VALUES = values();
@@ -5368,6 +5666,15 @@ public final class Integration {
      * </pre>
      *
      * <code>.io.PassEventId passEventId = 4;</code>
+     * @return Whether the passEventId field is set.
+     */
+    boolean hasPassEventId();
+    /**
+     * <pre>
+     * Identifies pass event type.
+     * </pre>
+     *
+     * <code>.io.PassEventId passEventId = 4;</code>
      * @return The enum numeric value on the wire for passEventId.
      */
     int getPassEventIdValue();
@@ -5387,6 +5694,15 @@ public final class Integration {
      * </pre>
      *
      * <code>.io.MembershipEventId membershipEventId = 5;</code>
+     * @return Whether the membershipEventId field is set.
+     */
+    boolean hasMembershipEventId();
+    /**
+     * <pre>
+     * For membership protocol subscription.
+     * </pre>
+     *
+     * <code>.io.MembershipEventId membershipEventId = 5;</code>
      * @return The enum numeric value on the wire for membershipEventId.
      */
     int getMembershipEventIdValue();
@@ -5400,6 +5716,15 @@ public final class Integration {
      */
     com.passkit.grpc.Integration.MembershipEventId getMembershipEventId();
 
+    /**
+     * <pre>
+     * For coupon protocol subscription.
+     * </pre>
+     *
+     * <code>.io.CouponEventId couponEventId = 6;</code>
+     * @return Whether the couponEventId field is set.
+     */
+    boolean hasCouponEventId();
     /**
      * <pre>
      * For coupon protocol subscription.
@@ -5679,6 +6004,17 @@ public final class Integration {
      * </pre>
      *
      * <code>.io.PassEventId passEventId = 4;</code>
+     * @return Whether the passEventId field is set.
+     */
+    public boolean hasPassEventId() {
+      return eventIdCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Identifies pass event type.
+     * </pre>
+     *
+     * <code>.io.PassEventId passEventId = 4;</code>
      * @return The enum numeric value on the wire for passEventId.
      */
     public int getPassEventIdValue() {
@@ -5712,6 +6048,17 @@ public final class Integration {
      * </pre>
      *
      * <code>.io.MembershipEventId membershipEventId = 5;</code>
+     * @return Whether the membershipEventId field is set.
+     */
+    public boolean hasMembershipEventId() {
+      return eventIdCase_ == 5;
+    }
+    /**
+     * <pre>
+     * For membership protocol subscription.
+     * </pre>
+     *
+     * <code>.io.MembershipEventId membershipEventId = 5;</code>
      * @return The enum numeric value on the wire for membershipEventId.
      */
     public int getMembershipEventIdValue() {
@@ -5739,6 +6086,17 @@ public final class Integration {
     }
 
     public static final int COUPONEVENTID_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * For coupon protocol subscription.
+     * </pre>
+     *
+     * <code>.io.CouponEventId couponEventId = 6;</code>
+     * @return Whether the couponEventId field is set.
+     */
+    public boolean hasCouponEventId() {
+      return eventIdCase_ == 6;
+    }
     /**
      * <pre>
      * For coupon protocol subscription.
@@ -6433,6 +6791,18 @@ public final class Integration {
        * </pre>
        *
        * <code>.io.PassEventId passEventId = 4;</code>
+       * @return Whether the passEventId field is set.
+       */
+      @java.lang.Override
+      public boolean hasPassEventId() {
+        return eventIdCase_ == 4;
+      }
+      /**
+       * <pre>
+       * Identifies pass event type.
+       * </pre>
+       *
+       * <code>.io.PassEventId passEventId = 4;</code>
        * @return The enum numeric value on the wire for passEventId.
        */
       @java.lang.Override
@@ -6516,6 +6886,18 @@ public final class Integration {
        * </pre>
        *
        * <code>.io.MembershipEventId membershipEventId = 5;</code>
+       * @return Whether the membershipEventId field is set.
+       */
+      @java.lang.Override
+      public boolean hasMembershipEventId() {
+        return eventIdCase_ == 5;
+      }
+      /**
+       * <pre>
+       * For membership protocol subscription.
+       * </pre>
+       *
+       * <code>.io.MembershipEventId membershipEventId = 5;</code>
        * @return The enum numeric value on the wire for membershipEventId.
        */
       @java.lang.Override
@@ -6593,6 +6975,18 @@ public final class Integration {
         return this;
       }
 
+      /**
+       * <pre>
+       * For coupon protocol subscription.
+       * </pre>
+       *
+       * <code>.io.CouponEventId couponEventId = 6;</code>
+       * @return Whether the couponEventId field is set.
+       */
+      @java.lang.Override
+      public boolean hasCouponEventId() {
+        return eventIdCase_ == 6;
+      }
       /**
        * <pre>
        * For coupon protocol subscription.
@@ -12316,6 +12710,2589 @@ public final class Integration {
 
   }
 
+  public interface DynamicApiInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.DynamicApiInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The uuid for the class object.
+     * </pre>
+     *
+     * <code>string classId = 1;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * The uuid for the class object.
+     * </pre>
+     *
+     * <code>string classId = 1;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     * @return Whether the request field is set.
+     */
+    boolean hasRequest();
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     * @return The request.
+     */
+    com.passkit.grpc.Integration.DynamicApiRequest getRequest();
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     */
+    com.passkit.grpc.Integration.DynamicApiRequestOrBuilder getRequestOrBuilder();
+  }
+  /**
+   * Protobuf type {@code io.DynamicApiInput}
+   */
+  public static final class DynamicApiInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.DynamicApiInput)
+      DynamicApiInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicApiInput.newBuilder() to construct.
+    private DynamicApiInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicApiInput() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicApiInput();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicApiInput(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 18: {
+              com.passkit.grpc.Integration.DynamicApiRequest.Builder subBuilder = null;
+              if (request_ != null) {
+                subBuilder = request_.toBuilder();
+              }
+              request_ = input.readMessage(com.passkit.grpc.Integration.DynamicApiRequest.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(request_);
+                request_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Integration.DynamicApiInput.class, com.passkit.grpc.Integration.DynamicApiInput.Builder.class);
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object classId_;
+    /**
+     * <pre>
+     * The uuid for the class object.
+     * </pre>
+     *
+     * <code>string classId = 1;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The uuid for the class object.
+     * </pre>
+     *
+     * <code>string classId = 1;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUEST_FIELD_NUMBER = 2;
+    private com.passkit.grpc.Integration.DynamicApiRequest request_;
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     * @return Whether the request field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequest() {
+      return request_ != null;
+    }
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     * @return The request.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Integration.DynamicApiRequest getRequest() {
+      return request_ == null ? com.passkit.grpc.Integration.DynamicApiRequest.getDefaultInstance() : request_;
+    }
+    /**
+     * <code>.io.DynamicApiRequest request = 2;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Integration.DynamicApiRequestOrBuilder getRequestOrBuilder() {
+      return getRequest();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getClassIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
+      }
+      if (request_ != null) {
+        output.writeMessage(2, getRequest());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getClassIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
+      }
+      if (request_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRequest());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Integration.DynamicApiInput)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Integration.DynamicApiInput other = (com.passkit.grpc.Integration.DynamicApiInput) obj;
+
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (hasRequest() != other.hasRequest()) return false;
+      if (hasRequest()) {
+        if (!getRequest()
+            .equals(other.getRequest())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      if (hasRequest()) {
+        hash = (37 * hash) + REQUEST_FIELD_NUMBER;
+        hash = (53 * hash) + getRequest().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Integration.DynamicApiInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.DynamicApiInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.DynamicApiInput)
+        com.passkit.grpc.Integration.DynamicApiInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Integration.DynamicApiInput.class, com.passkit.grpc.Integration.DynamicApiInput.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Integration.DynamicApiInput.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        classId_ = "";
+
+        if (requestBuilder_ == null) {
+          request_ = null;
+        } else {
+          request_ = null;
+          requestBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiInput getDefaultInstanceForType() {
+        return com.passkit.grpc.Integration.DynamicApiInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiInput build() {
+        com.passkit.grpc.Integration.DynamicApiInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiInput buildPartial() {
+        com.passkit.grpc.Integration.DynamicApiInput result = new com.passkit.grpc.Integration.DynamicApiInput(this);
+        result.classId_ = classId_;
+        if (requestBuilder_ == null) {
+          result.request_ = request_;
+        } else {
+          result.request_ = requestBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Integration.DynamicApiInput) {
+          return mergeFrom((com.passkit.grpc.Integration.DynamicApiInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Integration.DynamicApiInput other) {
+        if (other == com.passkit.grpc.Integration.DynamicApiInput.getDefaultInstance()) return this;
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        if (other.hasRequest()) {
+          mergeRequest(other.getRequest());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Integration.DynamicApiInput parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Integration.DynamicApiInput) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * The uuid for the class object.
+       * </pre>
+       *
+       * <code>string classId = 1;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The uuid for the class object.
+       * </pre>
+       *
+       * <code>string classId = 1;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The uuid for the class object.
+       * </pre>
+       *
+       * <code>string classId = 1;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The uuid for the class object.
+       * </pre>
+       *
+       * <code>string classId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The uuid for the class object.
+       * </pre>
+       *
+       * <code>string classId = 1;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Integration.DynamicApiRequest request_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Integration.DynamicApiRequest, com.passkit.grpc.Integration.DynamicApiRequest.Builder, com.passkit.grpc.Integration.DynamicApiRequestOrBuilder> requestBuilder_;
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       * @return Whether the request field is set.
+       */
+      public boolean hasRequest() {
+        return requestBuilder_ != null || request_ != null;
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       * @return The request.
+       */
+      public com.passkit.grpc.Integration.DynamicApiRequest getRequest() {
+        if (requestBuilder_ == null) {
+          return request_ == null ? com.passkit.grpc.Integration.DynamicApiRequest.getDefaultInstance() : request_;
+        } else {
+          return requestBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public Builder setRequest(com.passkit.grpc.Integration.DynamicApiRequest value) {
+        if (requestBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          request_ = value;
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public Builder setRequest(
+          com.passkit.grpc.Integration.DynamicApiRequest.Builder builderForValue) {
+        if (requestBuilder_ == null) {
+          request_ = builderForValue.build();
+          onChanged();
+        } else {
+          requestBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public Builder mergeRequest(com.passkit.grpc.Integration.DynamicApiRequest value) {
+        if (requestBuilder_ == null) {
+          if (request_ != null) {
+            request_ =
+              com.passkit.grpc.Integration.DynamicApiRequest.newBuilder(request_).mergeFrom(value).buildPartial();
+          } else {
+            request_ = value;
+          }
+          onChanged();
+        } else {
+          requestBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public Builder clearRequest() {
+        if (requestBuilder_ == null) {
+          request_ = null;
+          onChanged();
+        } else {
+          request_ = null;
+          requestBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public com.passkit.grpc.Integration.DynamicApiRequest.Builder getRequestBuilder() {
+        
+        onChanged();
+        return getRequestFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      public com.passkit.grpc.Integration.DynamicApiRequestOrBuilder getRequestOrBuilder() {
+        if (requestBuilder_ != null) {
+          return requestBuilder_.getMessageOrBuilder();
+        } else {
+          return request_ == null ?
+              com.passkit.grpc.Integration.DynamicApiRequest.getDefaultInstance() : request_;
+        }
+      }
+      /**
+       * <code>.io.DynamicApiRequest request = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Integration.DynamicApiRequest, com.passkit.grpc.Integration.DynamicApiRequest.Builder, com.passkit.grpc.Integration.DynamicApiRequestOrBuilder> 
+          getRequestFieldBuilder() {
+        if (requestBuilder_ == null) {
+          requestBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Integration.DynamicApiRequest, com.passkit.grpc.Integration.DynamicApiRequest.Builder, com.passkit.grpc.Integration.DynamicApiRequestOrBuilder>(
+                  getRequest(),
+                  getParentForChildren(),
+                  isClean());
+          request_ = null;
+        }
+        return requestBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.DynamicApiInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.DynamicApiInput)
+    private static final com.passkit.grpc.Integration.DynamicApiInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Integration.DynamicApiInput();
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicApiInput>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicApiInput>() {
+      @java.lang.Override
+      public DynamicApiInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicApiInput(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicApiInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicApiInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Integration.DynamicApiInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DynamicApiRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.DynamicApiRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of an api call.
+     * </pre>
+     *
+     * <code>string requestName = 1;</code>
+     * @return The requestName.
+     */
+    java.lang.String getRequestName();
+    /**
+     * <pre>
+     * The name of an api call.
+     * </pre>
+     *
+     * <code>string requestName = 1;</code>
+     * @return The bytes for requestName.
+     */
+    com.google.protobuf.ByteString
+        getRequestNameBytes();
+
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    int getParamsCount();
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    boolean containsParams(
+        java.lang.String key);
+    /**
+     * Use {@link #getParamsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getParams();
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getParamsMap();
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+
+    java.lang.String getParamsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+
+    java.lang.String getParamsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Json string of payload data for the request body.
+     * </pre>
+     *
+     * <code>string payload = 3;</code>
+     * @return The payload.
+     */
+    java.lang.String getPayload();
+    /**
+     * <pre>
+     * Json string of payload data for the request body.
+     * </pre>
+     *
+     * <code>string payload = 3;</code>
+     * @return The bytes for payload.
+     */
+    com.google.protobuf.ByteString
+        getPayloadBytes();
+  }
+  /**
+   * Protobuf type {@code io.DynamicApiRequest}
+   */
+  public static final class DynamicApiRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.DynamicApiRequest)
+      DynamicApiRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicApiRequest.newBuilder() to construct.
+    private DynamicApiRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicApiRequest() {
+      requestName_ = "";
+      payload_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicApiRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicApiRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              requestName_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                params_ = com.google.protobuf.MapField.newMapField(
+                    ParamsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              params__ = input.readMessage(
+                  ParamsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              params_.getMutableMap().put(
+                  params__.getKey(), params__.getValue());
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              payload_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetParams();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Integration.DynamicApiRequest.class, com.passkit.grpc.Integration.DynamicApiRequest.Builder.class);
+    }
+
+    public static final int REQUESTNAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object requestName_;
+    /**
+     * <pre>
+     * The name of an api call.
+     * </pre>
+     *
+     * <code>string requestName = 1;</code>
+     * @return The requestName.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestName() {
+      java.lang.Object ref = requestName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of an api call.
+     * </pre>
+     *
+     * <code>string requestName = 1;</code>
+     * @return The bytes for requestName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestNameBytes() {
+      java.lang.Object ref = requestName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private static final class ParamsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_ParamsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> params_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetParams() {
+      if (params_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ParamsDefaultEntryHolder.defaultEntry);
+      }
+      return params_;
+    }
+
+    public int getParamsCount() {
+      return internalGetParams().getMap().size();
+    }
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsParams(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetParams().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getParamsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getParams() {
+      return getParamsMap();
+    }
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getParamsMap() {
+      return internalGetParams().getMap();
+    }
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getParamsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParams().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Variables placed within the path of an endpoint.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; params = 2;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getParamsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetParams().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 3;
+    private volatile java.lang.Object payload_;
+    /**
+     * <pre>
+     * Json string of payload data for the request body.
+     * </pre>
+     *
+     * <code>string payload = 3;</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public java.lang.String getPayload() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        payload_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Json string of payload data for the request body.
+     * </pre>
+     *
+     * <code>string payload = 3;</code>
+     * @return The bytes for payload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPayloadBytes() {
+      java.lang.Object ref = payload_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        payload_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getRequestNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestName_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetParams(),
+          ParamsDefaultEntryHolder.defaultEntry,
+          2);
+      if (!getPayloadBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payload_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getRequestNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestName_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetParams().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        params__ = ParamsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, params__);
+      }
+      if (!getPayloadBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payload_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Integration.DynamicApiRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Integration.DynamicApiRequest other = (com.passkit.grpc.Integration.DynamicApiRequest) obj;
+
+      if (!getRequestName()
+          .equals(other.getRequestName())) return false;
+      if (!internalGetParams().equals(
+          other.internalGetParams())) return false;
+      if (!getPayload()
+          .equals(other.getPayload())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUESTNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestName().hashCode();
+      if (!internalGetParams().getMap().isEmpty()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetParams().hashCode();
+      }
+      hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+      hash = (53 * hash) + getPayload().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Integration.DynamicApiRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.DynamicApiRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.DynamicApiRequest)
+        com.passkit.grpc.Integration.DynamicApiRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetParams();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableParams();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Integration.DynamicApiRequest.class, com.passkit.grpc.Integration.DynamicApiRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Integration.DynamicApiRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        requestName_ = "";
+
+        internalGetMutableParams().clear();
+        payload_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Integration.DynamicApiRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiRequest build() {
+        com.passkit.grpc.Integration.DynamicApiRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiRequest buildPartial() {
+        com.passkit.grpc.Integration.DynamicApiRequest result = new com.passkit.grpc.Integration.DynamicApiRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.requestName_ = requestName_;
+        result.params_ = internalGetParams();
+        result.params_.makeImmutable();
+        result.payload_ = payload_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Integration.DynamicApiRequest) {
+          return mergeFrom((com.passkit.grpc.Integration.DynamicApiRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Integration.DynamicApiRequest other) {
+        if (other == com.passkit.grpc.Integration.DynamicApiRequest.getDefaultInstance()) return this;
+        if (!other.getRequestName().isEmpty()) {
+          requestName_ = other.requestName_;
+          onChanged();
+        }
+        internalGetMutableParams().mergeFrom(
+            other.internalGetParams());
+        if (!other.getPayload().isEmpty()) {
+          payload_ = other.payload_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Integration.DynamicApiRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Integration.DynamicApiRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestName_ = "";
+      /**
+       * <pre>
+       * The name of an api call.
+       * </pre>
+       *
+       * <code>string requestName = 1;</code>
+       * @return The requestName.
+       */
+      public java.lang.String getRequestName() {
+        java.lang.Object ref = requestName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of an api call.
+       * </pre>
+       *
+       * <code>string requestName = 1;</code>
+       * @return The bytes for requestName.
+       */
+      public com.google.protobuf.ByteString
+          getRequestNameBytes() {
+        java.lang.Object ref = requestName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of an api call.
+       * </pre>
+       *
+       * <code>string requestName = 1;</code>
+       * @param value The requestName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        requestName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of an api call.
+       * </pre>
+       *
+       * <code>string requestName = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestName() {
+        
+        requestName_ = getDefaultInstance().getRequestName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of an api call.
+       * </pre>
+       *
+       * <code>string requestName = 1;</code>
+       * @param value The bytes for requestName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        requestName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> params_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetParams() {
+        if (params_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ParamsDefaultEntryHolder.defaultEntry);
+        }
+        return params_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableParams() {
+        onChanged();;
+        if (params_ == null) {
+          params_ = com.google.protobuf.MapField.newMapField(
+              ParamsDefaultEntryHolder.defaultEntry);
+        }
+        if (!params_.isMutable()) {
+          params_ = params_.copy();
+        }
+        return params_;
+      }
+
+      public int getParamsCount() {
+        return internalGetParams().getMap().size();
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsParams(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetParams().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getParamsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getParams() {
+        return getParamsMap();
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getParamsMap() {
+        return internalGetParams().getMap();
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParamsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParams().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getParamsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetParams().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearParams() {
+        internalGetMutableParams().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+
+      public Builder removeParams(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableParams().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableParams() {
+        return internalGetMutableParams().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+      public Builder putParams(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableParams().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Variables placed within the path of an endpoint.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; params = 2;</code>
+       */
+
+      public Builder putAllParams(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableParams().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object payload_ = "";
+      /**
+       * <pre>
+       * Json string of payload data for the request body.
+       * </pre>
+       *
+       * <code>string payload = 3;</code>
+       * @return The payload.
+       */
+      public java.lang.String getPayload() {
+        java.lang.Object ref = payload_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          payload_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Json string of payload data for the request body.
+       * </pre>
+       *
+       * <code>string payload = 3;</code>
+       * @return The bytes for payload.
+       */
+      public com.google.protobuf.ByteString
+          getPayloadBytes() {
+        java.lang.Object ref = payload_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          payload_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Json string of payload data for the request body.
+       * </pre>
+       *
+       * <code>string payload = 3;</code>
+       * @param value The payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayload(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Json string of payload data for the request body.
+       * </pre>
+       *
+       * <code>string payload = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayload() {
+        
+        payload_ = getDefaultInstance().getPayload();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Json string of payload data for the request body.
+       * </pre>
+       *
+       * <code>string payload = 3;</code>
+       * @param value The bytes for payload to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayloadBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        payload_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.DynamicApiRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.DynamicApiRequest)
+    private static final com.passkit.grpc.Integration.DynamicApiRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Integration.DynamicApiRequest();
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicApiRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicApiRequest>() {
+      @java.lang.Override
+      public DynamicApiRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicApiRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicApiRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicApiRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Integration.DynamicApiRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DynamicApiResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.DynamicApiResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Raw response body.
+     * </pre>
+     *
+     * <code>bytes responseBody = 1;</code>
+     * @return The responseBody.
+     */
+    com.google.protobuf.ByteString getResponseBody();
+
+    /**
+     * <pre>
+     * Http status code.
+     * </pre>
+     *
+     * <code>int32 status = 2;</code>
+     * @return The status.
+     */
+    int getStatus();
+  }
+  /**
+   * Protobuf type {@code io.DynamicApiResponse}
+   */
+  public static final class DynamicApiResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.DynamicApiResponse)
+      DynamicApiResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DynamicApiResponse.newBuilder() to construct.
+    private DynamicApiResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DynamicApiResponse() {
+      responseBody_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DynamicApiResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DynamicApiResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              responseBody_ = input.readBytes();
+              break;
+            }
+            case 16: {
+
+              status_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Integration.internal_static_io_DynamicApiResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Integration.DynamicApiResponse.class, com.passkit.grpc.Integration.DynamicApiResponse.Builder.class);
+    }
+
+    public static final int RESPONSEBODY_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString responseBody_;
+    /**
+     * <pre>
+     * Raw response body.
+     * </pre>
+     *
+     * <code>bytes responseBody = 1;</code>
+     * @return The responseBody.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getResponseBody() {
+      return responseBody_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <pre>
+     * Http status code.
+     * </pre>
+     *
+     * <code>int32 status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public int getStatus() {
+      return status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!responseBody_.isEmpty()) {
+        output.writeBytes(1, responseBody_);
+      }
+      if (status_ != 0) {
+        output.writeInt32(2, status_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!responseBody_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, responseBody_);
+      }
+      if (status_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, status_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Integration.DynamicApiResponse)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Integration.DynamicApiResponse other = (com.passkit.grpc.Integration.DynamicApiResponse) obj;
+
+      if (!getResponseBody()
+          .equals(other.getResponseBody())) return false;
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSEBODY_FIELD_NUMBER;
+      hash = (53 * hash) + getResponseBody().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Integration.DynamicApiResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Integration.DynamicApiResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.DynamicApiResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.DynamicApiResponse)
+        com.passkit.grpc.Integration.DynamicApiResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Integration.DynamicApiResponse.class, com.passkit.grpc.Integration.DynamicApiResponse.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Integration.DynamicApiResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        responseBody_ = com.google.protobuf.ByteString.EMPTY;
+
+        status_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Integration.internal_static_io_DynamicApiResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiResponse getDefaultInstanceForType() {
+        return com.passkit.grpc.Integration.DynamicApiResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiResponse build() {
+        com.passkit.grpc.Integration.DynamicApiResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Integration.DynamicApiResponse buildPartial() {
+        com.passkit.grpc.Integration.DynamicApiResponse result = new com.passkit.grpc.Integration.DynamicApiResponse(this);
+        result.responseBody_ = responseBody_;
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Integration.DynamicApiResponse) {
+          return mergeFrom((com.passkit.grpc.Integration.DynamicApiResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Integration.DynamicApiResponse other) {
+        if (other == com.passkit.grpc.Integration.DynamicApiResponse.getDefaultInstance()) return this;
+        if (other.getResponseBody() != com.google.protobuf.ByteString.EMPTY) {
+          setResponseBody(other.getResponseBody());
+        }
+        if (other.getStatus() != 0) {
+          setStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Integration.DynamicApiResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Integration.DynamicApiResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString responseBody_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * Raw response body.
+       * </pre>
+       *
+       * <code>bytes responseBody = 1;</code>
+       * @return The responseBody.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getResponseBody() {
+        return responseBody_;
+      }
+      /**
+       * <pre>
+       * Raw response body.
+       * </pre>
+       *
+       * <code>bytes responseBody = 1;</code>
+       * @param value The responseBody to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseBody(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        responseBody_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Raw response body.
+       * </pre>
+       *
+       * <code>bytes responseBody = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseBody() {
+        
+        responseBody_ = getDefaultInstance().getResponseBody();
+        onChanged();
+        return this;
+      }
+
+      private int status_ ;
+      /**
+       * <pre>
+       * Http status code.
+       * </pre>
+       *
+       * <code>int32 status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public int getStatus() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Http status code.
+       * </pre>
+       *
+       * <code>int32 status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Http status code.
+       * </pre>
+       *
+       * <code>int32 status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.DynamicApiResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.DynamicApiResponse)
+    private static final com.passkit.grpc.Integration.DynamicApiResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Integration.DynamicApiResponse();
+    }
+
+    public static com.passkit.grpc.Integration.DynamicApiResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DynamicApiResponse>
+        PARSER = new com.google.protobuf.AbstractParser<DynamicApiResponse>() {
+      @java.lang.Override
+      public DynamicApiResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DynamicApiResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DynamicApiResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DynamicApiResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Integration.DynamicApiResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_MembershipEventIds_descriptor;
   private static final 
@@ -12371,6 +15348,26 @@ public final class Integration {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_SinkSubscription_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DynamicApiInput_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DynamicApiInput_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DynamicApiRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DynamicApiRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DynamicApiRequest_ParamsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DynamicApiRequest_ParamsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DynamicApiResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DynamicApiResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12428,43 +15425,73 @@ public final class Integration {
       "Create a pass holder record and issue a " +
       "pass, then create a record on a third pa" +
       "rty platform.\322\001\017defaultLanguageB\021\n\017proto" +
-      "colEventId*}\n\021IntegrationStatus\022\033\n\027INTEG" +
+      "colEventId\"\243\001\n\017DynamicApiInput\022\017\n\007classI" +
+      "d\030\001 \001(\t\022&\n\007request\030\002 \001(\0132\025.io.DynamicApi" +
+      "Request:W\222AT\nR*\021Dynamic API Input23Used " +
+      "to make an api call to a third party pla" +
+      "tform.\322\001\007classId\"\357\001\n\021DynamicApiRequest\022\023" +
+      "\n\013requestName\030\001 \001(\t\0221\n\006params\030\002 \003(\0132!.io" +
+      ".DynamicApiRequest.ParamsEntry\022\017\n\007payloa" +
+      "d\030\003 \001(\t\032-\n\013ParamsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001:R\222AO\nM*\023Dynamic Api Reque" +
+      "st2(Specifies your request type and payl" +
+      "oad.\322\001\013requestName\"\225\001\n\022DynamicApiRespons" +
+      "e\022\024\n\014responseBody\030\001 \001(\014\022\016\n\006status\030\002 \001(\005:" +
+      "Y\222AV\nT*\024Dynamic API Response2<Returns th" +
+      "e api response object from a third party" +
+      " platform.*}\n\021IntegrationStatus\022\033\n\027INTEG" +
       "RATION_STATUS_NONE\020\000\022\030\n\024INTEGRATION_DISA" +
       "BLED\020\001\022\026\n\022INTEGRATION_ACTIVE\020\002\022\031\n\025INTEGR" +
-      "ATION_SUSPENDED\020\003*\212\001\n\021ConfigurationType\022" +
+      "ATION_SUSPENDED\020\003*\264\001\n\021ConfigurationType\022" +
       "\026\n\022CONFIGURATION_NONE\020\000\022\013\n\007WEBHOOK\020\001\022\014\n\010" +
       "DB_MYSQL\020\002\022\010\n\004ZOHO\020\003\022\t\n\005BRAZE\020\004\022\r\n\tCODER" +
-      "EADR\020\005\022\n\n\006ZAPIER\020\006\022\022\n\016_CONFIG_TYPE_1\020d*\243" +
-      "\004\n\017IntegrationType\022\031\n\025INTEGRATION_TYPE_N" +
-      "ONE\020\000\022\026\n\022SOURCE_INTEGRATION\020\001\022&\n\"HOOK_BE" +
-      "FORE_OBJECT_RECORD_CREATION\020\004\022%\n!HOOK_AF" +
-      "TER_OBJECT_RECORD_CREATION\020\010\022\032\n\026HOOK_BEF" +
-      "ORE_PASS_ISSUE\020\020\022\031\n\025HOOK_AFTER_PASS_ISSU" +
-      "E\020 \022\033\n\027HOOK_AFTER_PASS_INSTALL\020@\022\036\n\031HOOK" +
-      "_AFTER_PASS_UNINSTALL\020\200\001\022%\n HOOK_BEFORE_" +
-      "OBJECT_RECORD_UPDATE\020\200\002\022$\n\037HOOK_AFTER_OB" +
-      "JECT_RECORD_UPDATE\020\200\004\022#\n\036HOOK_BEFORE_PAS" +
-      "S_RECORD_UPDATE\020\200\010\022\"\n\035HOOK_AFTER_PASS_RE" +
-      "CORD_UPDATE\020\200\020\022\034\n\027HOOK_BEFORE_PASS_UPDAT" +
-      "E\020\200 \022\033\n\026HOOK_AFTER_PASS_UPDATE\020\200@\022$\n\036HOO" +
-      "K_BEFORE_PASS_RECORD_DELETE\020\200\200\001\022#\n\035HOOK_" +
-      "AFTER_PASS_RECORD_DELETE\020\200\200\002*\321\001\n\013PassEve" +
-      "ntId\022\023\n\017PASS_EVENT_NONE\020\000\022\035\n\031PASS_EVENT_" +
-      "RECORD_CREATED\020\001\022\030\n\024PASS_EVENT_INSTALLED" +
-      "\020\002\022\035\n\031PASS_EVENT_RECORD_UPDATED\020\004\022\032\n\026PAS" +
-      "S_EVENT_UNINSTALLED\020\010\022\032\n\026PASS_EVENT_INVA" +
-      "LIDATED\020\020\022\035\n\031PASS_EVENT_RECORD_DELETED\020 " +
-      "*_\n\021MembershipEventId\022\025\n\021MEMBER_EVENT_NO" +
-      "NE\020\000\022\031\n\025MEMBER_EVENT_ENROLLED\020\001\022\030\n\024MEMBE" +
-      "R_EVENT_UPDATED\020\002*\217\001\n\rCouponEventId\022\025\n\021C" +
-      "OUPON_EVENT_NONE\020\000\022\030\n\024COUPON_EVENT_CREAT" +
-      "ED\020\001\022\031\n\025COUPON_EVENT_REDEEMED\020\002\022\030\n\024COUPO" +
-      "N_EVENT_UPDATED\020\004\022\030\n\024COUPON_EVENT_DELETE" +
-      "D\020\010*S\n\014ActionMethod\022\017\n\013METHOD_NONE\020\000\022\017\n\013" +
-      "METHOD_POST\020\001\022\016\n\nMETHOD_PUT\020\002\022\021\n\rMETHOD_" +
-      "DELETE\020\003BG\n\020com.passkit.grpcZ$stash.pass" +
-      "kit.com/io/model/sdk/go/io\252\002\014PassKit.Grp" +
-      "cb\006proto3"
+      "EADR\020\005\022\n\n\006ZAPIER\020\006\022\r\n\tMAILCHIMP\020\007\022\n\n\006SPR" +
+      "OUT\020\010\022\r\n\tTESSITURA\020\t\022\022\n\016_CONFIG_TYPE_1\020d" +
+      "*\243\004\n\017IntegrationType\022\031\n\025INTEGRATION_TYPE" +
+      "_NONE\020\000\022\026\n\022SOURCE_INTEGRATION\020\001\022&\n\"HOOK_" +
+      "BEFORE_OBJECT_RECORD_CREATION\020\004\022%\n!HOOK_" +
+      "AFTER_OBJECT_RECORD_CREATION\020\010\022\032\n\026HOOK_B" +
+      "EFORE_PASS_ISSUE\020\020\022\031\n\025HOOK_AFTER_PASS_IS" +
+      "SUE\020 \022\033\n\027HOOK_AFTER_PASS_INSTALL\020@\022\036\n\031HO" +
+      "OK_AFTER_PASS_UNINSTALL\020\200\001\022%\n HOOK_BEFOR" +
+      "E_OBJECT_RECORD_UPDATE\020\200\002\022$\n\037HOOK_AFTER_" +
+      "OBJECT_RECORD_UPDATE\020\200\004\022#\n\036HOOK_BEFORE_P" +
+      "ASS_RECORD_UPDATE\020\200\010\022\"\n\035HOOK_AFTER_PASS_" +
+      "RECORD_UPDATE\020\200\020\022\034\n\027HOOK_BEFORE_PASS_UPD" +
+      "ATE\020\200 \022\033\n\026HOOK_AFTER_PASS_UPDATE\020\200@\022$\n\036H" +
+      "OOK_BEFORE_PASS_RECORD_DELETE\020\200\200\001\022#\n\035HOO" +
+      "K_AFTER_PASS_RECORD_DELETE\020\200\200\002*\334\004\n\020Proto" +
+      "colIntgType\022\033\n\027PROTOCOL_INTG_TYPE_NONE\020\000" +
+      "\022$\n HOOK_BEFORE_MEMBER_UPDATE_POINTS\020\001\022#" +
+      "\n\037HOOK_AFTER_MEMBER_UPDATE_POINTS\020\004\022\"\n\036H" +
+      "OOK_BEFORE_MEMBER_TIER_UPDATE\020\010\022!\n\035HOOK_" +
+      "AFTER_MEMBER_TIER_UPDATE\020\020\022\037\n\033HOOK_BEFOR" +
+      "E_MEMBER_CHECK_IN\020 \022\036\n\032HOOK_AFTER_MEMBER" +
+      "_CHECK_IN\020@\022!\n\034HOOK_BEFORE_MEMBER_CHECK_" +
+      "OUT\020\200\001\022 \n\033HOOK_AFTER_MEMBER_CHECK_OUT\020\200\002" +
+      "\022\036\n\031HOOK_BEFORE_COUPON_REDEEM\020\200\020\022\035\n\030HOOK" +
+      "_AFTER_COUPON_REDEEM\020\200 \022$\n\037HOOK_BEFORE_U" +
+      "PDATE_COUPON_OFFER\020\200@\022$\n\036HOOK_AFTER_UPDA" +
+      "TE_COUPON_OFFER\020\200\200\001\022%\n\037HOOK_BEFORE_CREAT" +
+      "E_COUPON_OFFER\020\200\200\002\022$\n\036HOOK_AFTER_CREATE_" +
+      "COUPON_OFFER\020\200\200\004\022\035\n\026HOOK_BEFORE_UPDATE_P" +
+      "II\020\200\200\200\001\022\034\n\025HOOK_AFTER_UPDATE_PII\020\200\200\200\002*\321\001" +
+      "\n\013PassEventId\022\023\n\017PASS_EVENT_NONE\020\000\022\035\n\031PA" +
+      "SS_EVENT_RECORD_CREATED\020\001\022\030\n\024PASS_EVENT_" +
+      "INSTALLED\020\002\022\035\n\031PASS_EVENT_RECORD_UPDATED" +
+      "\020\004\022\032\n\026PASS_EVENT_UNINSTALLED\020\010\022\032\n\026PASS_E" +
+      "VENT_INVALIDATED\020\020\022\035\n\031PASS_EVENT_RECORD_" +
+      "DELETED\020 *_\n\021MembershipEventId\022\025\n\021MEMBER" +
+      "_EVENT_NONE\020\000\022\031\n\025MEMBER_EVENT_ENROLLED\020\001" +
+      "\022\030\n\024MEMBER_EVENT_UPDATED\020\002*\217\001\n\rCouponEve" +
+      "ntId\022\025\n\021COUPON_EVENT_NONE\020\000\022\030\n\024COUPON_EV" +
+      "ENT_CREATED\020\001\022\031\n\025COUPON_EVENT_REDEEMED\020\002" +
+      "\022\030\n\024COUPON_EVENT_UPDATED\020\004\022\030\n\024COUPON_EVE" +
+      "NT_DELETED\020\010*S\n\014ActionMethod\022\017\n\013METHOD_N" +
+      "ONE\020\000\022\017\n\013METHOD_POST\020\001\022\016\n\nMETHOD_PUT\020\002\022\021" +
+      "\n\rMETHOD_DELETE\020\003BG\n\020com.passkit.grpcZ$s" +
+      "tash.passkit.com/io/model/sdk/go/io\252\002\014Pa" +
+      "ssKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12541,6 +15568,30 @@ public final class Integration {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_SinkSubscription_descriptor,
         new java.lang.String[] { "Id", "ClassId", "Protocol", "PassEventId", "Status", "ConfigType", "Configuration", "CreatedAt", "UpdatedAt", "MembershipEvents", "CouponEvents", "ProtocolEventId", });
+    internal_static_io_DynamicApiInput_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_io_DynamicApiInput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DynamicApiInput_descriptor,
+        new java.lang.String[] { "ClassId", "Request", });
+    internal_static_io_DynamicApiRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_io_DynamicApiRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DynamicApiRequest_descriptor,
+        new java.lang.String[] { "RequestName", "Params", "Payload", });
+    internal_static_io_DynamicApiRequest_ParamsEntry_descriptor =
+      internal_static_io_DynamicApiRequest_descriptor.getNestedTypes().get(0);
+    internal_static_io_DynamicApiRequest_ParamsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DynamicApiRequest_ParamsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_io_DynamicApiResponse_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_io_DynamicApiResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DynamicApiResponse_descriptor,
+        new java.lang.String[] { "ResponseBody", "Status", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);

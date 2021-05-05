@@ -1,24 +1,11 @@
 package com.passkit.grpc.EventTickets;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/event_tickets/a_rpc.proto")
 public final class EventTicketsGrpc {
 
@@ -988,6 +975,37 @@ public final class EventTicketsGrpc {
     return getUpdateTicketMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson,
+      com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "patchPerson",
+      requestType = com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson,
+      com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson, com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod;
+    if ((getPatchPersonMethod = EventTicketsGrpc.getPatchPersonMethod) == null) {
+      synchronized (EventTicketsGrpc.class) {
+        if ((getPatchPersonMethod = EventTicketsGrpc.getPatchPersonMethod) == null) {
+          EventTicketsGrpc.getPatchPersonMethod = getPatchPersonMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchPerson"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("patchPerson"))
+              .build();
+        }
+      }
+    }
+    return getPatchPersonMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest,
       com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> getValidateTicketMethod;
 
@@ -1381,588 +1399,602 @@ public final class EventTicketsGrpc {
      */
     public void createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnimplementedUnaryCall(getPatchProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void getProduction(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void listProductions(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnimplementedUnaryCall(getListProductionsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProductionsMethod(), responseObserver);
     }
 
     /**
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
     }
 
     /**
      */
     public void copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyProductionMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyProductionMethod(), responseObserver);
     }
 
     /**
      */
     public void createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateVenueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateVenueMethod(), responseObserver);
     }
 
     /**
      */
     public void updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateVenueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateVenueMethod(), responseObserver);
     }
 
     /**
      */
     public void patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnimplementedUnaryCall(getPatchVenueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchVenueMethod(), responseObserver);
     }
 
     /**
      */
     public void getVenueById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetVenueByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVenueByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteVenueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVenueMethod(), responseObserver);
     }
 
     /**
      */
     public void listVenues(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnimplementedUnaryCall(getListVenuesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListVenuesMethod(), responseObserver);
     }
 
     /**
      */
     public void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateEventMethod(), responseObserver);
     }
 
     /**
      */
     public void updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateEventMethod(), responseObserver);
     }
 
     /**
      */
     public void patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnimplementedUnaryCall(getPatchEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchEventMethod(), responseObserver);
     }
 
     /**
      */
     public void getEventById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetEventByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetEventByStartDateAndVenueMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventByStartDateAndVenueMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEventMethod(), responseObserver);
     }
 
     /**
      */
     public void listEvents(com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListEventsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEventsMethod(), responseObserver);
     }
 
     /**
      */
     public void createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateTicketTypeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTicketTypeMethod(), responseObserver);
     }
 
     /**
      */
     public void updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateTicketTypeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTicketTypeMethod(), responseObserver);
     }
 
     /**
      */
     public void patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnimplementedUnaryCall(getPatchTicketTypeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchTicketTypeMethod(), responseObserver);
     }
 
     /**
      */
     public void getTicketTypeById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTicketTypeByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTicketTypeByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTicketTypeByUserDefinedIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTicketTypeByUserDefinedIdMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTicketTypeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTicketTypeMethod(), responseObserver);
     }
 
     /**
      */
     public void listTicketTypes(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTicketTypesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTicketTypesMethod(), responseObserver);
     }
 
     /**
      */
     public void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getIssueTicketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIssueTicketMethod(), responseObserver);
     }
 
     /**
      */
     public void issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> responseObserver) {
-      asyncUnimplementedUnaryCall(getIssueTicketByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getIssueTicketByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateTicketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTicketMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchPersonMethod(), responseObserver);
     }
 
     /**
      */
     public void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getValidateTicketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateTicketMethod(), responseObserver);
     }
 
     /**
      */
     public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getRedeemTicketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRedeemTicketMethod(), responseObserver);
     }
 
     /**
      */
     public void redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Ids> responseObserver) {
-      asyncUnimplementedUnaryCall(getRedeemTicketsByOrderNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRedeemTicketsByOrderNumberMethod(), responseObserver);
     }
 
     /**
      */
     public void getTicketById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTicketByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTicketByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTicketByTicketNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTicketByTicketNumberMethod(), responseObserver);
     }
 
     /**
      */
     public void getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTicketsByOrderNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTicketsByOrderNumberMethod(), responseObserver);
     }
 
     /**
      */
     public void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.PassBundles> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetEventTicketPassMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetEventTicketPassMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTicketMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTicketMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTicketsByOrderNumberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTicketsByOrderNumberMethod(), responseObserver);
     }
 
     /**
      */
     public void listTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTicketsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTicketsMethod(), responseObserver);
     }
 
     /**
      */
     public void countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountTicketsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountTicketsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_PRODUCTION)))
           .addMethod(
             getPatchProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production>(
                   this, METHODID_PATCH_PRODUCTION)))
           .addMethod(
             getUpdateProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production>(
                   this, METHODID_UPDATE_PRODUCTION)))
           .addMethod(
             getGetProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production>(
                   this, METHODID_GET_PRODUCTION)))
           .addMethod(
             getDeleteProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_PRODUCTION)))
           .addMethod(
             getListProductionsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.EventTickets.ProductionOuterClass.Production>(
                   this, METHODID_LIST_PRODUCTIONS)))
           .addMethod(
             getGetAnalyticsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Reporting.AnalyticsRequest,
                 com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse>(
                   this, METHODID_GET_ANALYTICS)))
           .addMethod(
             getCopyProductionMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_PRODUCTION)))
           .addMethod(
             getCreateVenueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_VENUE)))
           .addMethod(
             getUpdateVenueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue>(
                   this, METHODID_UPDATE_VENUE)))
           .addMethod(
             getPatchVenueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue>(
                   this, METHODID_PATCH_VENUE)))
           .addMethod(
             getGetVenueByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue>(
                   this, METHODID_GET_VENUE_BY_ID)))
           .addMethod(
             getDeleteVenueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_VENUE)))
           .addMethod(
             getListVenuesMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.EventTickets.VenueOuterClass.Venue>(
                   this, METHODID_LIST_VENUES)))
           .addMethod(
             getCreateEventMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.Event,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_EVENT)))
           .addMethod(
             getUpdateEventMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.Event,
                 com.passkit.grpc.EventTickets.EventOuterClass.Event>(
                   this, METHODID_UPDATE_EVENT)))
           .addMethod(
             getPatchEventMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.Event,
                 com.passkit.grpc.EventTickets.EventOuterClass.Event>(
                   this, METHODID_PATCH_EVENT)))
           .addMethod(
             getGetEventByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.EventTickets.EventOuterClass.Event>(
                   this, METHODID_GET_EVENT_BY_ID)))
           .addMethod(
             getGetEventByStartDateAndVenueMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest,
                 com.passkit.grpc.EventTickets.EventOuterClass.Event>(
                   this, METHODID_GET_EVENT_BY_START_DATE_AND_VENUE)))
           .addMethod(
             getDeleteEventMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.Event,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_EVENT)))
           .addMethod(
             getListEventsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest,
                 com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse>(
                   this, METHODID_LIST_EVENTS)))
           .addMethod(
             getCreateTicketTypeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_TICKET_TYPE)))
           .addMethod(
             getUpdateTicketTypeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>(
                   this, METHODID_UPDATE_TICKET_TYPE)))
           .addMethod(
             getPatchTicketTypeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>(
                   this, METHODID_PATCH_TICKET_TYPE)))
           .addMethod(
             getGetTicketTypeByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>(
                   this, METHODID_GET_TICKET_TYPE_BY_ID)))
           .addMethod(
             getGetTicketTypeByUserDefinedIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest,
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>(
                   this, METHODID_GET_TICKET_TYPE_BY_USER_DEFINED_ID)))
           .addMethod(
             getDeleteTicketTypeMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TICKET_TYPE)))
           .addMethod(
             getListTicketTypesMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest,
                 com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType>(
                   this, METHODID_LIST_TICKET_TYPES)))
           .addMethod(
             getIssueTicketMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_ISSUE_TICKET)))
           .addMethod(
             getIssueTicketByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
                 com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds>(
                   this, METHODID_ISSUE_TICKET_BY_ID)))
           .addMethod(
             getUpdateTicketMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_UPDATE_TICKET)))
           .addMethod(
+            getPatchPersonMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_PATCH_PERSON)))
+          .addMethod(
             getValidateTicketMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest,
                 com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse>(
                   this, METHODID_VALIDATE_TICKET)))
           .addMethod(
             getRedeemTicketMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_REDEEM_TICKET)))
           .addMethod(
             getRedeemTicketsByOrderNumberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber,
                 com.passkit.grpc.CommonObjects.Ids>(
                   this, METHODID_REDEEM_TICKETS_BY_ORDER_NUMBER)))
           .addMethod(
             getGetTicketByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket>(
                   this, METHODID_GET_TICKET_BY_ID)))
           .addMethod(
             getGetTicketByTicketNumberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest,
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket>(
                   this, METHODID_GET_TICKET_BY_TICKET_NUMBER)))
           .addMethod(
             getGetTicketsByOrderNumberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest,
                 com.passkit.grpc.EventTickets.TicketOuterClass.Tickets>(
                   this, METHODID_GET_TICKETS_BY_ORDER_NUMBER)))
           .addMethod(
             getGetEventTicketPassMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest,
                 com.passkit.grpc.CommonObjects.PassBundles>(
                   this, METHODID_GET_EVENT_TICKET_PASS)))
           .addMethod(
             getDeleteTicketMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TICKET)))
           .addMethod(
             getDeleteTicketsByOrderNumberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TICKETS_BY_ORDER_NUMBER)))
           .addMethod(
             getListTicketsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest,
                 com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields>(
                   this, METHODID_LIST_TICKETS)))
           .addMethod(
             getCountTicketsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest,
                 com.passkit.grpc.CommonObjects.Count>(
@@ -1989,7 +2021,7 @@ public final class EventTicketsGrpc {
      */
     public void createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1997,7 +2029,7 @@ public final class EventTicketsGrpc {
      */
     public void patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPatchProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2005,7 +2037,7 @@ public final class EventTicketsGrpc {
      */
     public void updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2013,7 +2045,7 @@ public final class EventTicketsGrpc {
      */
     public void getProduction(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2021,7 +2053,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2029,7 +2061,7 @@ public final class EventTicketsGrpc {
      */
     public void listProductions(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListProductionsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2037,7 +2069,7 @@ public final class EventTicketsGrpc {
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnalyticsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2045,7 +2077,7 @@ public final class EventTicketsGrpc {
      */
     public void copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyProductionMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2053,7 +2085,7 @@ public final class EventTicketsGrpc {
      */
     public void createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateVenueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2061,7 +2093,7 @@ public final class EventTicketsGrpc {
      */
     public void updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateVenueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2069,7 +2101,7 @@ public final class EventTicketsGrpc {
      */
     public void patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPatchVenueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2077,7 +2109,7 @@ public final class EventTicketsGrpc {
      */
     public void getVenueById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVenueByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2085,7 +2117,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteVenueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2093,7 +2125,7 @@ public final class EventTicketsGrpc {
      */
     public void listVenues(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListVenuesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2101,7 +2133,7 @@ public final class EventTicketsGrpc {
      */
     public void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateEventMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2109,7 +2141,7 @@ public final class EventTicketsGrpc {
      */
     public void updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateEventMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2117,7 +2149,7 @@ public final class EventTicketsGrpc {
      */
     public void patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPatchEventMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2125,7 +2157,7 @@ public final class EventTicketsGrpc {
      */
     public void getEventById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEventByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2133,7 +2165,7 @@ public final class EventTicketsGrpc {
      */
     public void getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEventByStartDateAndVenueMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2141,7 +2173,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteEventMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2149,7 +2181,7 @@ public final class EventTicketsGrpc {
      */
     public void listEvents(com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2157,7 +2189,7 @@ public final class EventTicketsGrpc {
      */
     public void createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTicketTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2165,7 +2197,7 @@ public final class EventTicketsGrpc {
      */
     public void updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateTicketTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2173,7 +2205,7 @@ public final class EventTicketsGrpc {
      */
     public void patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPatchTicketTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2181,7 +2213,7 @@ public final class EventTicketsGrpc {
      */
     public void getTicketTypeById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTicketTypeByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2189,7 +2221,7 @@ public final class EventTicketsGrpc {
      */
     public void getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTicketTypeByUserDefinedIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2197,7 +2229,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTicketTypeMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2205,7 +2237,7 @@ public final class EventTicketsGrpc {
      */
     public void listTicketTypes(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTicketTypesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2213,7 +2245,7 @@ public final class EventTicketsGrpc {
      */
     public void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIssueTicketMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2221,7 +2253,7 @@ public final class EventTicketsGrpc {
      */
     public void issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getIssueTicketByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2229,15 +2261,23 @@ public final class EventTicketsGrpc {
      */
     public void updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateTicketMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPatchPersonMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
     public void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getValidateTicketMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2245,7 +2285,7 @@ public final class EventTicketsGrpc {
      */
     public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRedeemTicketMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2253,7 +2293,7 @@ public final class EventTicketsGrpc {
      */
     public void redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Ids> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRedeemTicketsByOrderNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2261,7 +2301,7 @@ public final class EventTicketsGrpc {
      */
     public void getTicketById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTicketByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2269,7 +2309,7 @@ public final class EventTicketsGrpc {
      */
     public void getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTicketByTicketNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2277,7 +2317,7 @@ public final class EventTicketsGrpc {
      */
     public void getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTicketsByOrderNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2285,7 +2325,7 @@ public final class EventTicketsGrpc {
      */
     public void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.PassBundles> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetEventTicketPassMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2293,7 +2333,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTicketMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2301,7 +2341,7 @@ public final class EventTicketsGrpc {
      */
     public void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTicketsByOrderNumberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2309,7 +2349,7 @@ public final class EventTicketsGrpc {
      */
     public void listTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTicketsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2317,7 +2357,7 @@ public final class EventTicketsGrpc {
      */
     public void countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountTicketsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -2339,35 +2379,35 @@ public final class EventTicketsGrpc {
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPatchProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production getProduction(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteProductionMethod(), getCallOptions(), request);
     }
 
@@ -2375,56 +2415,56 @@ public final class EventTicketsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> listProductions(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListProductionsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnalyticsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyProductionMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateVenueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateVenueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPatchVenueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue getVenueById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVenueByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteVenueMethod(), getCallOptions(), request);
     }
 
@@ -2432,49 +2472,49 @@ public final class EventTicketsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> listVenues(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListVenuesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateEventMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateEventMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPatchEventMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event getEventById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEventByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEventByStartDateAndVenueMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteEventMethod(), getCallOptions(), request);
     }
 
@@ -2482,49 +2522,49 @@ public final class EventTicketsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> listEvents(
         com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListEventsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTicketTypeMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateTicketTypeMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPatchTicketTypeMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType getTicketTypeById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTicketTypeByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTicketTypeByUserDefinedIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTicketTypeMethod(), getCallOptions(), request);
     }
 
@@ -2532,91 +2572,98 @@ public final class EventTicketsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> listTicketTypes(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTicketTypesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIssueTicketMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getIssueTicketByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateTicketMethod(), getCallOptions(), request);
     }
 
     /**
      */
+    public com.passkit.grpc.CommonObjects.Id patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPatchPersonMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getValidateTicketMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRedeemTicketMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Ids redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRedeemTicketsByOrderNumberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicketById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTicketByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTicketByTicketNumberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Tickets getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTicketsByOrderNumberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.PassBundles getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetEventTicketPassMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTicketMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTicketsByOrderNumberMethod(), getCallOptions(), request);
     }
 
@@ -2624,14 +2671,14 @@ public final class EventTicketsGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> listTickets(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTicketsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountTicketsMethod(), getCallOptions(), request);
     }
   }
@@ -2654,7 +2701,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateProductionMethod(), getCallOptions()), request);
     }
 
@@ -2662,7 +2709,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> patchProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPatchProductionMethod(), getCallOptions()), request);
     }
 
@@ -2670,7 +2717,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> updateProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProductionMethod(), getCallOptions()), request);
     }
 
@@ -2678,7 +2725,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> getProduction(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProductionMethod(), getCallOptions()), request);
     }
 
@@ -2686,7 +2733,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteProductionMethod(), getCallOptions()), request);
     }
 
@@ -2694,7 +2741,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> getAnalytics(
         com.passkit.grpc.Reporting.AnalyticsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnalyticsMethod(), getCallOptions()), request);
     }
 
@@ -2702,7 +2749,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyProductionMethod(), getCallOptions()), request);
     }
 
@@ -2710,7 +2757,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateVenueMethod(), getCallOptions()), request);
     }
 
@@ -2718,7 +2765,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> updateVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateVenueMethod(), getCallOptions()), request);
     }
 
@@ -2726,7 +2773,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> patchVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPatchVenueMethod(), getCallOptions()), request);
     }
 
@@ -2734,7 +2781,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> getVenueById(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVenueByIdMethod(), getCallOptions()), request);
     }
 
@@ -2742,7 +2789,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteVenueMethod(), getCallOptions()), request);
     }
 
@@ -2750,7 +2797,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateEventMethod(), getCallOptions()), request);
     }
 
@@ -2758,7 +2805,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> updateEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateEventMethod(), getCallOptions()), request);
     }
 
@@ -2766,7 +2813,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> patchEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPatchEventMethod(), getCallOptions()), request);
     }
 
@@ -2774,7 +2821,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> getEventById(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEventByIdMethod(), getCallOptions()), request);
     }
 
@@ -2782,7 +2829,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> getEventByStartDateAndVenue(
         com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEventByStartDateAndVenueMethod(), getCallOptions()), request);
     }
 
@@ -2790,7 +2837,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteEventMethod(), getCallOptions()), request);
     }
 
@@ -2798,7 +2845,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTicketTypeMethod(), getCallOptions()), request);
     }
 
@@ -2806,7 +2853,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> updateTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateTicketTypeMethod(), getCallOptions()), request);
     }
 
@@ -2814,7 +2861,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> patchTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPatchTicketTypeMethod(), getCallOptions()), request);
     }
 
@@ -2822,7 +2869,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> getTicketTypeById(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTicketTypeByIdMethod(), getCallOptions()), request);
     }
 
@@ -2830,7 +2877,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> getTicketTypeByUserDefinedId(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTicketTypeByUserDefinedIdMethod(), getCallOptions()), request);
     }
 
@@ -2838,7 +2885,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTicketTypeMethod(), getCallOptions()), request);
     }
 
@@ -2846,7 +2893,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> issueTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIssueTicketMethod(), getCallOptions()), request);
     }
 
@@ -2854,7 +2901,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> issueTicketById(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getIssueTicketByIdMethod(), getCallOptions()), request);
     }
 
@@ -2862,15 +2909,23 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateTicketMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> patchPerson(
+        com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPatchPersonMethod(), getCallOptions()), request);
     }
 
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> validateTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getValidateTicketMethod(), getCallOptions()), request);
     }
 
@@ -2878,7 +2933,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRedeemTicketMethod(), getCallOptions()), request);
     }
 
@@ -2886,7 +2941,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Ids> redeemTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRedeemTicketsByOrderNumberMethod(), getCallOptions()), request);
     }
 
@@ -2894,7 +2949,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> getTicketById(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTicketByIdMethod(), getCallOptions()), request);
     }
 
@@ -2902,7 +2957,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> getTicketByTicketNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTicketByTicketNumberMethod(), getCallOptions()), request);
     }
 
@@ -2910,7 +2965,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> getTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTicketsByOrderNumberMethod(), getCallOptions()), request);
     }
 
@@ -2918,7 +2973,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.PassBundles> getEventTicketPass(
         com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetEventTicketPassMethod(), getCallOptions()), request);
     }
 
@@ -2926,7 +2981,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTicketMethod(), getCallOptions()), request);
     }
 
@@ -2934,7 +2989,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTicketsByOrderNumberMethod(), getCallOptions()), request);
     }
 
@@ -2942,7 +2997,7 @@ public final class EventTicketsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTickets(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountTicketsMethod(), getCallOptions()), request);
     }
   }
@@ -2978,17 +3033,18 @@ public final class EventTicketsGrpc {
   private static final int METHODID_ISSUE_TICKET = 28;
   private static final int METHODID_ISSUE_TICKET_BY_ID = 29;
   private static final int METHODID_UPDATE_TICKET = 30;
-  private static final int METHODID_VALIDATE_TICKET = 31;
-  private static final int METHODID_REDEEM_TICKET = 32;
-  private static final int METHODID_REDEEM_TICKETS_BY_ORDER_NUMBER = 33;
-  private static final int METHODID_GET_TICKET_BY_ID = 34;
-  private static final int METHODID_GET_TICKET_BY_TICKET_NUMBER = 35;
-  private static final int METHODID_GET_TICKETS_BY_ORDER_NUMBER = 36;
-  private static final int METHODID_GET_EVENT_TICKET_PASS = 37;
-  private static final int METHODID_DELETE_TICKET = 38;
-  private static final int METHODID_DELETE_TICKETS_BY_ORDER_NUMBER = 39;
-  private static final int METHODID_LIST_TICKETS = 40;
-  private static final int METHODID_COUNT_TICKETS = 41;
+  private static final int METHODID_PATCH_PERSON = 31;
+  private static final int METHODID_VALIDATE_TICKET = 32;
+  private static final int METHODID_REDEEM_TICKET = 33;
+  private static final int METHODID_REDEEM_TICKETS_BY_ORDER_NUMBER = 34;
+  private static final int METHODID_GET_TICKET_BY_ID = 35;
+  private static final int METHODID_GET_TICKET_BY_TICKET_NUMBER = 36;
+  private static final int METHODID_GET_TICKETS_BY_ORDER_NUMBER = 37;
+  private static final int METHODID_GET_EVENT_TICKET_PASS = 38;
+  private static final int METHODID_DELETE_TICKET = 39;
+  private static final int METHODID_DELETE_TICKETS_BY_ORDER_NUMBER = 40;
+  private static final int METHODID_LIST_TICKETS = 41;
+  private static final int METHODID_COUNT_TICKETS = 42;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3131,6 +3187,10 @@ public final class EventTicketsGrpc {
           serviceImpl.updateTicket((com.passkit.grpc.EventTickets.TicketOuterClass.Ticket) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
           break;
+        case METHODID_PATCH_PERSON:
+          serviceImpl.patchPerson((com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
         case METHODID_VALIDATE_TICKET:
           serviceImpl.validateTicket((com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse>) responseObserver);
@@ -3267,6 +3327,7 @@ public final class EventTicketsGrpc {
               .addMethod(getIssueTicketMethod())
               .addMethod(getIssueTicketByIdMethod())
               .addMethod(getUpdateTicketMethod())
+              .addMethod(getPatchPersonMethod())
               .addMethod(getValidateTicketMethod())
               .addMethod(getRedeemTicketMethod())
               .addMethod(getRedeemTicketsByOrderNumberMethod())

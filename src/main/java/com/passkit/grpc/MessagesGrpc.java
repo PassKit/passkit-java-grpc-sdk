@@ -1,24 +1,11 @@
 package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/core/a_rpc_others.proto")
 public final class MessagesGrpc {
 
@@ -141,28 +128,28 @@ public final class MessagesGrpc {
      */
     public void sendMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
     }
 
     /**
      */
     public void getMessages(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMessagesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessagesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getSendMessageMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.MessageOuterClass.Message,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_SEND_MESSAGE)))
           .addMethod(
             getGetMessagesMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.MessageOuterClass.Message>(
@@ -189,7 +176,7 @@ public final class MessagesGrpc {
      */
     public void sendMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendMessageMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -197,7 +184,7 @@ public final class MessagesGrpc {
      */
     public void getMessages(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetMessagesMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -219,7 +206,7 @@ public final class MessagesGrpc {
     /**
      */
     public com.passkit.grpc.CommonObjects.Id sendMessage(com.passkit.grpc.MessageOuterClass.Message request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendMessageMethod(), getCallOptions(), request);
     }
 
@@ -227,7 +214,7 @@ public final class MessagesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.MessageOuterClass.Message> getMessages(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetMessagesMethod(), getCallOptions(), request);
     }
   }
@@ -250,7 +237,7 @@ public final class MessagesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> sendMessage(
         com.passkit.grpc.MessageOuterClass.Message request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendMessageMethod(), getCallOptions()), request);
     }
   }

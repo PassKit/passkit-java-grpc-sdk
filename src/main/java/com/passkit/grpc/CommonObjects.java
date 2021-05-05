@@ -13324,6 +13324,903 @@ public final class CommonObjects {
 
   }
 
+  public interface ClassObjectInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.ClassObjectInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.io.PassProtocol protocol = 1;</code>
+     * @return The enum numeric value on the wire for protocol.
+     */
+    int getProtocolValue();
+    /**
+     * <code>.io.PassProtocol protocol = 1;</code>
+     * @return The protocol.
+     */
+    com.passkit.grpc.Protocols.PassProtocol getProtocol();
+
+    /**
+     * <pre>
+     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * </pre>
+     *
+     * <code>string objectId = 2;</code>
+     * @return The objectId.
+     */
+    java.lang.String getObjectId();
+    /**
+     * <pre>
+     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * </pre>
+     *
+     * <code>string objectId = 2;</code>
+     * @return The bytes for objectId.
+     */
+    com.google.protobuf.ByteString
+        getObjectIdBytes();
+
+    /**
+     * <pre>
+     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+  }
+  /**
+   * Protobuf type {@code io.ClassObjectInput}
+   */
+  public static final class ClassObjectInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.ClassObjectInput)
+      ClassObjectInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClassObjectInput.newBuilder() to construct.
+    private ClassObjectInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClassObjectInput() {
+      protocol_ = 0;
+      objectId_ = "";
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClassObjectInput();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ClassObjectInput(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              protocol_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              objectId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_ClassObjectInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_ClassObjectInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.ClassObjectInput.class, com.passkit.grpc.CommonObjects.ClassObjectInput.Builder.class);
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 1;
+    private int protocol_;
+    /**
+     * <code>.io.PassProtocol protocol = 1;</code>
+     * @return The enum numeric value on the wire for protocol.
+     */
+    @java.lang.Override public int getProtocolValue() {
+      return protocol_;
+    }
+    /**
+     * <code>.io.PassProtocol protocol = 1;</code>
+     * @return The protocol.
+     */
+    @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+      return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
+    }
+
+    public static final int OBJECTID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object objectId_;
+    /**
+     * <pre>
+     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * </pre>
+     *
+     * <code>string objectId = 2;</code>
+     * @return The objectId.
+     */
+    @java.lang.Override
+    public java.lang.String getObjectId() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        objectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+     * </pre>
+     *
+     * <code>string objectId = 2;</code>
+     * @return The bytes for objectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getObjectIdBytes() {
+      java.lang.Object ref = objectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        objectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object classId_;
+    /**
+     * <pre>
+     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
+        output.writeEnum(1, protocol_);
+      }
+      if (!getObjectIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, objectId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, protocol_);
+      }
+      if (!getObjectIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, objectId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.ClassObjectInput)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.ClassObjectInput other = (com.passkit.grpc.CommonObjects.ClassObjectInput) obj;
+
+      if (protocol_ != other.protocol_) return false;
+      if (!getObjectId()
+          .equals(other.getObjectId())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+      hash = (53 * hash) + protocol_;
+      hash = (37 * hash) + OBJECTID_FIELD_NUMBER;
+      hash = (53 * hash) + getObjectId().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.ClassObjectInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.ClassObjectInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.ClassObjectInput)
+        com.passkit.grpc.CommonObjects.ClassObjectInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_ClassObjectInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_ClassObjectInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.ClassObjectInput.class, com.passkit.grpc.CommonObjects.ClassObjectInput.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.ClassObjectInput.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        protocol_ = 0;
+
+        objectId_ = "";
+
+        classId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_ClassObjectInput_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.ClassObjectInput getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.ClassObjectInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.ClassObjectInput build() {
+        com.passkit.grpc.CommonObjects.ClassObjectInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.ClassObjectInput buildPartial() {
+        com.passkit.grpc.CommonObjects.ClassObjectInput result = new com.passkit.grpc.CommonObjects.ClassObjectInput(this);
+        result.protocol_ = protocol_;
+        result.objectId_ = objectId_;
+        result.classId_ = classId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.ClassObjectInput) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.ClassObjectInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.ClassObjectInput other) {
+        if (other == com.passkit.grpc.CommonObjects.ClassObjectInput.getDefaultInstance()) return this;
+        if (other.protocol_ != 0) {
+          setProtocolValue(other.getProtocolValue());
+        }
+        if (!other.getObjectId().isEmpty()) {
+          objectId_ = other.objectId_;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.ClassObjectInput parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.ClassObjectInput) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int protocol_ = 0;
+      /**
+       * <code>.io.PassProtocol protocol = 1;</code>
+       * @return The enum numeric value on the wire for protocol.
+       */
+      @java.lang.Override public int getProtocolValue() {
+        return protocol_;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 1;</code>
+       * @param value The enum numeric value on the wire for protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolValue(int value) {
+        
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 1;</code>
+       * @return The protocol.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+        return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 1;</code>
+       * @param value The protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocol(com.passkit.grpc.Protocols.PassProtocol value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        protocol_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocol() {
+        
+        protocol_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object objectId_ = "";
+      /**
+       * <pre>
+       * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+       * </pre>
+       *
+       * <code>string objectId = 2;</code>
+       * @return The objectId.
+       */
+      public java.lang.String getObjectId() {
+        java.lang.Object ref = objectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          objectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+       * </pre>
+       *
+       * <code>string objectId = 2;</code>
+       * @return The bytes for objectId.
+       */
+      public com.google.protobuf.ByteString
+          getObjectIdBytes() {
+        java.lang.Object ref = objectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          objectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+       * </pre>
+       *
+       * <code>string objectId = 2;</code>
+       * @param value The objectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        objectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+       * </pre>
+       *
+       * <code>string objectId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearObjectId() {
+        
+        objectId_ = getDefaultInstance().getObjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The object ID (objects belong to the class object; i.e. member tier id, coupon offer id, etc).
+       * </pre>
+       *
+       * <code>string objectId = 2;</code>
+       * @param value The bytes for objectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setObjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        objectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID (highest level protocol object; i.e. member program id, etc). Required only for the Member protocol.
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.ClassObjectInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.ClassObjectInput)
+    private static final com.passkit.grpc.CommonObjects.ClassObjectInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.ClassObjectInput();
+    }
+
+    public static com.passkit.grpc.CommonObjects.ClassObjectInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClassObjectInput>
+        PARSER = new com.google.protobuf.AbstractParser<ClassObjectInput>() {
+      @java.lang.Override
+      public ClassObjectInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ClassObjectInput(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClassObjectInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClassObjectInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.ClassObjectInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Id_descriptor;
   private static final 
@@ -13419,6 +14316,11 @@ public final class CommonObjects {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_PkBool_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_ClassObjectInput_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_ClassObjectInput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13459,16 +14361,18 @@ public final class CommonObjects {
       "\013.io.Filters\"b\n\tDataItems\022\'\n\005items\030\001 \003(\013" +
       "2\030.io.DataItems.ItemsEntry\032,\n\nItemsEntry" +
       "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\024\n\006PkBo" +
-      "ol\022\n\n\002ok\030\001 \001(\010*4\n\014ListPosition\022\n\n\006APPEND" +
-      "\020\000\022\013\n\007PREPEND\020\001\022\013\n\007REPLACE\020\002*)\n\006Toggle\022\016" +
-      "\n\nDO_NOT_USE\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002*W\n\020PassB" +
-      "undleFormat\022\014\n\010PASS_URL\020\000\022\016\n\nGOOGLE_URL\020" +
-      "\002\022\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nMULTI_LINK\020\020" +
-      "*g\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026\n\022USAGE_APP" +
-      "LE_WALLET\020\001\022\024\n\020USAGE_GOOGLE_PAY\020\002\022\036\n\032USA" +
-      "GE_DATA_COLLECTION_PAGE\020\004BG\n\020com.passkit" +
-      ".grpcZ$stash.passkit.com/io/model/sdk/go" +
-      "/io\252\002\014PassKit.Grpcb\006proto3"
+      "ol\022\n\n\002ok\030\001 \001(\010\"Y\n\020ClassObjectInput\022\"\n\010pr" +
+      "otocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n\010object" +
+      "Id\030\002 \001(\t\022\017\n\007classId\030\003 \001(\t*4\n\014ListPositio" +
+      "n\022\n\n\006APPEND\020\000\022\013\n\007PREPEND\020\001\022\013\n\007REPLACE\020\002*" +
+      ")\n\006Toggle\022\016\n\nDO_NOT_USE\020\000\022\006\n\002ON\020\001\022\007\n\003OFF" +
+      "\020\002*W\n\020PassBundleFormat\022\014\n\010PASS_URL\020\000\022\016\n\n" +
+      "GOOGLE_URL\020\002\022\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nM" +
+      "ULTI_LINK\020\020*g\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026" +
+      "\n\022USAGE_APPLE_WALLET\020\001\022\024\n\020USAGE_GOOGLE_P" +
+      "AY\020\002\022\036\n\032USAGE_DATA_COLLECTION_PAGE\020\004BG\n\020" +
+      "com.passkit.grpcZ$stash.passkit.com/io/m" +
+      "odel/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13592,6 +14496,12 @@ public final class CommonObjects {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PkBool_descriptor,
         new java.lang.String[] { "Ok", });
+    internal_static_io_ClassObjectInput_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_io_ClassObjectInput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_ClassObjectInput_descriptor,
+        new java.lang.String[] { "Protocol", "ObjectId", "ClassId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);

@@ -1,24 +1,11 @@
 package com.passkit.grpc.Analytics;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/analytics/a_rpc.proto")
 public final class AnalyticsGrpc {
 
@@ -113,14 +100,14 @@ public final class AnalyticsGrpc {
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Reporting.AnalyticsResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetAnalyticsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Reporting.AnalyticsRequest,
                 com.passkit.grpc.Reporting.AnalyticsResponse>(
@@ -150,7 +137,7 @@ public final class AnalyticsGrpc {
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Reporting.AnalyticsResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAnalyticsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -175,7 +162,7 @@ public final class AnalyticsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Reporting.AnalyticsResponse getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAnalyticsMethod(), getCallOptions(), request);
     }
   }
@@ -201,7 +188,7 @@ public final class AnalyticsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Reporting.AnalyticsResponse> getAnalytics(
         com.passkit.grpc.Reporting.AnalyticsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAnalyticsMethod(), getCallOptions()), request);
     }
   }

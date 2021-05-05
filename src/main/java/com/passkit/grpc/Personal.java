@@ -409,6 +409,60 @@ public final class Personal {
      */
     com.google.protobuf.ByteString
         getExternalIdBytes();
+
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    int getExternalIdsCount();
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    boolean containsExternalIds(
+        int key);
+    /**
+     * Use {@link #getExternalIdsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Integer, java.lang.String>
+    getExternalIds();
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    java.util.Map<java.lang.Integer, java.lang.String>
+    getExternalIdsMap();
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+
+    java.lang.String getExternalIdsOrDefault(
+        int key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+
+    java.lang.String getExternalIdsOrThrow(
+        int key);
   }
   /**
    * <pre>
@@ -546,6 +600,19 @@ public final class Personal {
               externalId_ = s;
               break;
             }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                externalIds_ = com.google.protobuf.MapField.newMapField(
+                    ExternalIdsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
+              externalIds__ = input.readMessage(
+                  ExternalIdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              externalIds_.getMutableMap().put(
+                  externalIds__.getKey(), externalIds__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -573,6 +640,18 @@ public final class Personal {
       return com.passkit.grpc.Personal.internal_static_io_Person_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 12:
+          return internalGetExternalIds();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -1065,6 +1144,103 @@ public final class Personal {
       }
     }
 
+    public static final int EXTERNALIDS_FIELD_NUMBER = 12;
+    private static final class ExternalIdsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Integer, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Integer, java.lang.String>newDefaultInstance(
+                  com.passkit.grpc.Personal.internal_static_io_Person_ExternalIdsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0,
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.Integer, java.lang.String> externalIds_;
+    private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
+    internalGetExternalIds() {
+      if (externalIds_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            ExternalIdsDefaultEntryHolder.defaultEntry);
+      }
+      return externalIds_;
+    }
+
+    public int getExternalIdsCount() {
+      return internalGetExternalIds().getMap().size();
+    }
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsExternalIds(
+        int key) {
+      
+      return internalGetExternalIds().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getExternalIdsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Integer, java.lang.String> getExternalIds() {
+      return getExternalIdsMap();
+    }
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.Integer, java.lang.String> getExternalIdsMap() {
+      return internalGetExternalIds().getMap();
+    }
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getExternalIdsOrDefault(
+        int key,
+        java.lang.String defaultValue) {
+      
+      java.util.Map<java.lang.Integer, java.lang.String> map =
+          internalGetExternalIds().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+     * </pre>
+     *
+     * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getExternalIdsOrThrow(
+        int key) {
+      
+      java.util.Map<java.lang.Integer, java.lang.String> map =
+          internalGetExternalIds().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1112,6 +1288,12 @@ public final class Personal {
       if (!getExternalIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, externalId_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeIntegerMapTo(
+          output,
+          internalGetExternalIds(),
+          ExternalIdsDefaultEntryHolder.defaultEntry,
+          12);
       unknownFields.writeTo(output);
     }
 
@@ -1161,6 +1343,16 @@ public final class Personal {
       if (!getExternalIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, externalId_);
       }
+      for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
+           : internalGetExternalIds().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Integer, java.lang.String>
+        externalIds__ = ExternalIdsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, externalIds__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1200,6 +1392,8 @@ public final class Personal {
           .equals(other.getMobileNumber())) return false;
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
+      if (!internalGetExternalIds().equals(
+          other.internalGetExternalIds())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1237,6 +1431,10 @@ public final class Personal {
       hash = (53 * hash) + getMobileNumber().hashCode();
       hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
+      if (!internalGetExternalIds().getMap().isEmpty()) {
+        hash = (37 * hash) + EXTERNALIDS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetExternalIds().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1348,6 +1546,28 @@ public final class Personal {
         return com.passkit.grpc.Personal.internal_static_io_Person_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetExternalIds();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetMutableExternalIds();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -1400,6 +1620,7 @@ public final class Personal {
 
         externalId_ = "";
 
+        internalGetMutableExternalIds().clear();
         return this;
       }
 
@@ -1446,6 +1667,8 @@ public final class Personal {
         result.emailAddress_ = emailAddress_;
         result.mobileNumber_ = mobileNumber_;
         result.externalId_ = externalId_;
+        result.externalIds_ = internalGetExternalIds();
+        result.externalIds_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -1542,6 +1765,8 @@ public final class Personal {
           externalId_ = other.externalId_;
           onChanged();
         }
+        internalGetMutableExternalIds().mergeFrom(
+            other.internalGetExternalIds());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2712,6 +2937,162 @@ public final class Personal {
         
         externalId_ = value;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Integer, java.lang.String> externalIds_;
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
+      internalGetExternalIds() {
+        if (externalIds_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ExternalIdsDefaultEntryHolder.defaultEntry);
+        }
+        return externalIds_;
+      }
+      private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
+      internalGetMutableExternalIds() {
+        onChanged();;
+        if (externalIds_ == null) {
+          externalIds_ = com.google.protobuf.MapField.newMapField(
+              ExternalIdsDefaultEntryHolder.defaultEntry);
+        }
+        if (!externalIds_.isMutable()) {
+          externalIds_ = externalIds_.copy();
+        }
+        return externalIds_;
+      }
+
+      public int getExternalIdsCount() {
+        return internalGetExternalIds().getMap().size();
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsExternalIds(
+          int key) {
+        
+        return internalGetExternalIds().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getExternalIdsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.String> getExternalIds() {
+        return getExternalIdsMap();
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.Integer, java.lang.String> getExternalIdsMap() {
+        return internalGetExternalIds().getMap();
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getExternalIdsOrDefault(
+          int key,
+          java.lang.String defaultValue) {
+        
+        java.util.Map<java.lang.Integer, java.lang.String> map =
+            internalGetExternalIds().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getExternalIdsOrThrow(
+          int key) {
+        
+        java.util.Map<java.lang.Integer, java.lang.String> map =
+            internalGetExternalIds().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearExternalIds() {
+        internalGetMutableExternalIds().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+
+      public Builder removeExternalIds(
+          int key) {
+        
+        internalGetMutableExternalIds().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Integer, java.lang.String>
+      getMutableExternalIds() {
+        return internalGetMutableExternalIds().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+      public Builder putExternalIds(
+          int key,
+          java.lang.String value) {
+        
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableExternalIds().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Ids used for integration purpose. Key is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Not Writable.
+       * </pre>
+       *
+       * <code>map&lt;int32, string&gt; externalIds = 12;</code>
+       */
+
+      public Builder putAllExternalIds(
+          java.util.Map<java.lang.Integer, java.lang.String> values) {
+        internalGetMutableExternalIds().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -4235,16 +4616,1205 @@ public final class Personal {
 
   }
 
+  public interface PersonRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.PersonRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>.io.Person person = 4;</code>
+     * @return Whether the person field is set.
+     */
+    boolean hasPerson();
+    /**
+     * <code>.io.Person person = 4;</code>
+     * @return The person.
+     */
+    com.passkit.grpc.Personal.Person getPerson();
+    /**
+     * <code>.io.Person person = 4;</code>
+     */
+    com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder();
+  }
+  /**
+   * Protobuf type {@code io.PersonRequest}
+   */
+  public static final class PersonRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.PersonRequest)
+      PersonRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PersonRequest.newBuilder() to construct.
+    private PersonRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PersonRequest() {
+      id_ = "";
+      externalId_ = "";
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PersonRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PersonRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 34: {
+              com.passkit.grpc.Personal.Person.Builder subBuilder = null;
+              if (person_ != null) {
+                subBuilder = person_.toBuilder();
+              }
+              person_ = input.readMessage(com.passkit.grpc.Personal.Person.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(person_);
+                person_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Personal.internal_static_io_PersonRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Personal.internal_static_io_PersonRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Personal.PersonRequest.class, com.passkit.grpc.Personal.PersonRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNALID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object classId_;
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERSON_FIELD_NUMBER = 4;
+    private com.passkit.grpc.Personal.Person person_;
+    /**
+     * <code>.io.Person person = 4;</code>
+     * @return Whether the person field is set.
+     */
+    @java.lang.Override
+    public boolean hasPerson() {
+      return person_ != null;
+    }
+    /**
+     * <code>.io.Person person = 4;</code>
+     * @return The person.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Personal.Person getPerson() {
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
+    }
+    /**
+     * <code>.io.Person person = 4;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
+      return getPerson();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getExternalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
+      }
+      if (person_ != null) {
+        output.writeMessage(4, getPerson());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getExternalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
+      }
+      if (person_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPerson());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Personal.PersonRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Personal.PersonRequest other = (com.passkit.grpc.Personal.PersonRequest) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (hasPerson() != other.hasPerson()) return false;
+      if (hasPerson()) {
+        if (!getPerson()
+            .equals(other.getPerson())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      if (hasPerson()) {
+        hash = (37 * hash) + PERSON_FIELD_NUMBER;
+        hash = (53 * hash) + getPerson().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Personal.PersonRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Personal.PersonRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.PersonRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.PersonRequest)
+        com.passkit.grpc.Personal.PersonRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Personal.internal_static_io_PersonRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Personal.internal_static_io_PersonRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Personal.PersonRequest.class, com.passkit.grpc.Personal.PersonRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Personal.PersonRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        externalId_ = "";
+
+        classId_ = "";
+
+        if (personBuilder_ == null) {
+          person_ = null;
+        } else {
+          person_ = null;
+          personBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Personal.internal_static_io_PersonRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Personal.PersonRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Personal.PersonRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Personal.PersonRequest build() {
+        com.passkit.grpc.Personal.PersonRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Personal.PersonRequest buildPartial() {
+        com.passkit.grpc.Personal.PersonRequest result = new com.passkit.grpc.Personal.PersonRequest(this);
+        result.id_ = id_;
+        result.externalId_ = externalId_;
+        result.classId_ = classId_;
+        if (personBuilder_ == null) {
+          result.person_ = person_;
+        } else {
+          result.person_ = personBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Personal.PersonRequest) {
+          return mergeFrom((com.passkit.grpc.Personal.PersonRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Personal.PersonRequest other) {
+        if (other == com.passkit.grpc.Personal.PersonRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        if (other.hasPerson()) {
+          mergePerson(other.getPerson());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Personal.PersonRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Personal.PersonRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Personal.Person person_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Personal.Person, com.passkit.grpc.Personal.Person.Builder, com.passkit.grpc.Personal.PersonOrBuilder> personBuilder_;
+      /**
+       * <code>.io.Person person = 4;</code>
+       * @return Whether the person field is set.
+       */
+      public boolean hasPerson() {
+        return personBuilder_ != null || person_ != null;
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       * @return The person.
+       */
+      public com.passkit.grpc.Personal.Person getPerson() {
+        if (personBuilder_ == null) {
+          return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
+        } else {
+          return personBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public Builder setPerson(com.passkit.grpc.Personal.Person value) {
+        if (personBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          person_ = value;
+          onChanged();
+        } else {
+          personBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public Builder setPerson(
+          com.passkit.grpc.Personal.Person.Builder builderForValue) {
+        if (personBuilder_ == null) {
+          person_ = builderForValue.build();
+          onChanged();
+        } else {
+          personBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
+        if (personBuilder_ == null) {
+          if (person_ != null) {
+            person_ =
+              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          } else {
+            person_ = value;
+          }
+          onChanged();
+        } else {
+          personBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public Builder clearPerson() {
+        if (personBuilder_ == null) {
+          person_ = null;
+          onChanged();
+        } else {
+          person_ = null;
+          personBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
+        
+        onChanged();
+        return getPersonFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
+        if (personBuilder_ != null) {
+          return personBuilder_.getMessageOrBuilder();
+        } else {
+          return person_ == null ?
+              com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
+        }
+      }
+      /**
+       * <code>.io.Person person = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Personal.Person, com.passkit.grpc.Personal.Person.Builder, com.passkit.grpc.Personal.PersonOrBuilder> 
+          getPersonFieldBuilder() {
+        if (personBuilder_ == null) {
+          personBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Personal.Person, com.passkit.grpc.Personal.Person.Builder, com.passkit.grpc.Personal.PersonOrBuilder>(
+                  getPerson(),
+                  getParentForChildren(),
+                  isClean());
+          person_ = null;
+        }
+        return personBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.PersonRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.PersonRequest)
+    private static final com.passkit.grpc.Personal.PersonRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Personal.PersonRequest();
+    }
+
+    public static com.passkit.grpc.Personal.PersonRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PersonRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PersonRequest>() {
+      @java.lang.Override
+      public PersonRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PersonRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PersonRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PersonRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Personal.PersonRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Person_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_Person_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_Person_ExternalIdsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_Person_ExternalIdsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Address_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_Address_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_PersonRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_PersonRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4255,20 +5825,25 @@ public final class Personal {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/common/personal.proto\022\002io\032\036io/commo" +
-      "n/common_objects.proto\"\363\001\n\006Person\022\017\n\007sur" +
+      "n/common_objects.proto\"\331\002\n\006Person\022\017\n\007sur" +
       "name\030\001 \001(\t\022\020\n\010forename\030\002 \001(\t\022\022\n\notherNam" +
       "es\030\003 \003(\t\022\022\n\nsalutation\030\004 \001(\t\022\016\n\006suffix\030\005" +
       " \001(\t\022\023\n\013displayName\030\006 \001(\t\022\032\n\006gender\030\007 \001(" +
       "\0162\n.io.Gender\022\035\n\013dateOfBirth\030\010 \001(\0132\010.io." +
       "Date\022\024\n\014emailAddress\030\t \001(\t\022\024\n\014mobileNumb" +
-      "er\030\n \001(\t\022\022\n\nexternalId\030\013 \001(\t\"\216\001\n\007Address" +
-      "\022\024\n\014addressLine1\030\001 \001(\t\022\024\n\014addressLine2\030\002" +
-      " \001(\t\022\024\n\014addressLine3\030\003 \001(\t\022\014\n\004city\030\004 \001(\t" +
-      "\022\r\n\005state\030\005 \001(\t\022\017\n\007zipCode\030\006 \001(\t\022\023\n\013coun" +
-      "tryCode\030\007 \001(\t*-\n\006Gender\022\r\n\tNOT_KNOWN\020\000\022\010" +
-      "\n\004MALE\020\001\022\n\n\006FEMALE\020\002BG\n\020com.passkit.grpc" +
-      "Z$stash.passkit.com/io/model/sdk/go/io\252\002" +
-      "\014PassKit.Grpcb\006proto3"
+      "er\030\n \001(\t\022\022\n\nexternalId\030\013 \001(\t\0220\n\013external" +
+      "Ids\030\014 \003(\0132\033.io.Person.ExternalIdsEntry\0322" +
+      "\n\020ExternalIdsEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\"\216\001\n\007Address\022\024\n\014addressLine1\030\001" +
+      " \001(\t\022\024\n\014addressLine2\030\002 \001(\t\022\024\n\014addressLin" +
+      "e3\030\003 \001(\t\022\014\n\004city\030\004 \001(\t\022\r\n\005state\030\005 \001(\t\022\017\n" +
+      "\007zipCode\030\006 \001(\t\022\023\n\013countryCode\030\007 \001(\t\"\\\n\rP" +
+      "ersonRequest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002" +
+      " \001(\t\022\017\n\007classId\030\003 \001(\t\022\032\n\006person\030\004 \001(\0132\n." +
+      "io.Person*-\n\006Gender\022\r\n\tNOT_KNOWN\020\000\022\010\n\004MA" +
+      "LE\020\001\022\n\n\006FEMALE\020\002BG\n\020com.passkit.grpcZ$st" +
+      "ash.passkit.com/io/model/sdk/go/io\252\002\014Pas" +
+      "sKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4280,13 +5855,25 @@ public final class Personal {
     internal_static_io_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Person_descriptor,
-        new java.lang.String[] { "Surname", "Forename", "OtherNames", "Salutation", "Suffix", "DisplayName", "Gender", "DateOfBirth", "EmailAddress", "MobileNumber", "ExternalId", });
+        new java.lang.String[] { "Surname", "Forename", "OtherNames", "Salutation", "Suffix", "DisplayName", "Gender", "DateOfBirth", "EmailAddress", "MobileNumber", "ExternalId", "ExternalIds", });
+    internal_static_io_Person_ExternalIdsEntry_descriptor =
+      internal_static_io_Person_descriptor.getNestedTypes().get(0);
+    internal_static_io_Person_ExternalIdsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_Person_ExternalIdsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_io_Address_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_Address_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Address_descriptor,
         new java.lang.String[] { "AddressLine1", "AddressLine2", "AddressLine3", "City", "State", "ZipCode", "CountryCode", });
+    internal_static_io_PersonRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_io_PersonRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_PersonRequest_descriptor,
+        new java.lang.String[] { "Id", "ExternalId", "ClassId", "Person", });
     com.passkit.grpc.CommonObjects.getDescriptor();
   }
 

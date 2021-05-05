@@ -1,24 +1,11 @@
 package com.passkit.grpc.Flights;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/flights/a_rpc.proto")
 public final class FlightsGrpc {
 
@@ -733,7 +720,7 @@ public final class FlightsGrpc {
      */
     public void createPort(com.passkit.grpc.Flights.Airport.Port request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreatePortMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePortMethod(), responseObserver);
     }
 
     /**
@@ -743,7 +730,7 @@ public final class FlightsGrpc {
      */
     public void getPort(com.passkit.grpc.Flights.Airport.AirportCode request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.Airport.Port> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetPortMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortMethod(), responseObserver);
     }
 
     /**
@@ -753,7 +740,7 @@ public final class FlightsGrpc {
      */
     public void updatePort(com.passkit.grpc.Flights.Airport.Port request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.Airport.Port> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdatePortMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdatePortMethod(), responseObserver);
     }
 
     /**
@@ -763,7 +750,7 @@ public final class FlightsGrpc {
      */
     public void deletePort(com.passkit.grpc.Flights.Airport.AirportCode request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeletePortMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePortMethod(), responseObserver);
     }
 
     /**
@@ -773,7 +760,7 @@ public final class FlightsGrpc {
      */
     public void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateCarrierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCarrierMethod(), responseObserver);
     }
 
     /**
@@ -783,7 +770,7 @@ public final class FlightsGrpc {
      */
     public void getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCarrierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCarrierMethod(), responseObserver);
     }
 
     /**
@@ -793,7 +780,7 @@ public final class FlightsGrpc {
      */
     public void updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateCarrierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCarrierMethod(), responseObserver);
     }
 
     /**
@@ -803,7 +790,7 @@ public final class FlightsGrpc {
      */
     public void deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteCarrierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCarrierMethod(), responseObserver);
     }
 
     /**
@@ -813,7 +800,7 @@ public final class FlightsGrpc {
      */
     public void createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateFlightDesignatorMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlightDesignatorMethod(), responseObserver);
     }
 
     /**
@@ -823,7 +810,7 @@ public final class FlightsGrpc {
      */
     public void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFlightDesignatorMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFlightDesignatorMethod(), responseObserver);
     }
 
     /**
@@ -833,7 +820,7 @@ public final class FlightsGrpc {
      */
     public void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateFlightDesignatorMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFlightDesignatorMethod(), responseObserver);
     }
 
     /**
@@ -843,7 +830,7 @@ public final class FlightsGrpc {
      */
     public void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteFlightDesignatorMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlightDesignatorMethod(), responseObserver);
     }
 
     /**
@@ -853,7 +840,7 @@ public final class FlightsGrpc {
      */
     public void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateFlightMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateFlightMethod(), responseObserver);
     }
 
     /**
@@ -863,7 +850,7 @@ public final class FlightsGrpc {
      */
     public void getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightOuterClass.Flight> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetFlightMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetFlightMethod(), responseObserver);
     }
 
     /**
@@ -873,7 +860,7 @@ public final class FlightsGrpc {
      */
     public void updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightOuterClass.Flight> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateFlightMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateFlightMethod(), responseObserver);
     }
 
     /**
@@ -883,7 +870,7 @@ public final class FlightsGrpc {
      */
     public void deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteFlightMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteFlightMethod(), responseObserver);
     }
 
     /**
@@ -893,7 +880,7 @@ public final class FlightsGrpc {
      */
     public void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateBoardingPassMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBoardingPassMethod(), responseObserver);
     }
 
     /**
@@ -903,7 +890,7 @@ public final class FlightsGrpc {
      */
     public void getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBoardingPassRecordMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBoardingPassRecordMethod(), responseObserver);
     }
 
     /**
@@ -913,7 +900,7 @@ public final class FlightsGrpc {
      */
     public void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBoardingPassMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBoardingPassMethod(), responseObserver);
     }
 
     /**
@@ -923,7 +910,7 @@ public final class FlightsGrpc {
      */
     public void updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateBoardingPassMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBoardingPassMethod(), responseObserver);
     }
 
     /**
@@ -933,154 +920,154 @@ public final class FlightsGrpc {
      */
     public void deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteBoardingPassMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBoardingPassMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreatePortMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.Airport.Port,
                 com.google.protobuf.Empty>(
                   this, METHODID_CREATE_PORT)))
           .addMethod(
             getGetPortMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.Airport.AirportCode,
                 com.passkit.grpc.Flights.Airport.Port>(
                   this, METHODID_GET_PORT)))
           .addMethod(
             getUpdatePortMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.Airport.Port,
                 com.passkit.grpc.Flights.Airport.Port>(
                   this, METHODID_UPDATE_PORT)))
           .addMethod(
             getDeletePortMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.Airport.AirportCode,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_PORT)))
           .addMethod(
             getCreateCarrierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.CarrierOuterClass.Carrier,
                 com.google.protobuf.Empty>(
                   this, METHODID_CREATE_CARRIER)))
           .addMethod(
             getGetCarrierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode,
                 com.passkit.grpc.Flights.CarrierOuterClass.Carrier>(
                   this, METHODID_GET_CARRIER)))
           .addMethod(
             getUpdateCarrierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.CarrierOuterClass.Carrier,
                 com.passkit.grpc.Flights.CarrierOuterClass.Carrier>(
                   this, METHODID_UPDATE_CARRIER)))
           .addMethod(
             getDeleteCarrierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_CARRIER)))
           .addMethod(
             getCreateFlightDesignatorMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator,
                 com.google.protobuf.Empty>(
                   this, METHODID_CREATE_FLIGHT_DESIGNATOR)))
           .addMethod(
             getGetFlightDesignatorMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest,
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator>(
                   this, METHODID_GET_FLIGHT_DESIGNATOR)))
           .addMethod(
             getUpdateFlightDesignatorMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator,
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator>(
                   this, METHODID_UPDATE_FLIGHT_DESIGNATOR)))
           .addMethod(
             getDeleteFlightDesignatorMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_FLIGHT_DESIGNATOR)))
           .addMethod(
             getCreateFlightMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightOuterClass.Flight,
                 com.google.protobuf.Empty>(
                   this, METHODID_CREATE_FLIGHT)))
           .addMethod(
             getGetFlightMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightOuterClass.FlightRequest,
                 com.passkit.grpc.Flights.FlightOuterClass.Flight>(
                   this, METHODID_GET_FLIGHT)))
           .addMethod(
             getUpdateFlightMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightOuterClass.Flight,
                 com.passkit.grpc.Flights.FlightOuterClass.Flight>(
                   this, METHODID_UPDATE_FLIGHT)))
           .addMethod(
             getDeleteFlightMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.FlightOuterClass.FlightRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_FLIGHT)))
           .addMethod(
             getCreateBoardingPassMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord,
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse>(
                   this, METHODID_CREATE_BOARDING_PASS)))
           .addMethod(
             getGetBoardingPassRecordMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest,
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord>(
                   this, METHODID_GET_BOARDING_PASS_RECORD)))
           .addMethod(
             getGetBoardingPassMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest,
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse>(
                   this, METHODID_GET_BOARDING_PASS)))
           .addMethod(
             getUpdateBoardingPassMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord,
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord>(
                   this, METHODID_UPDATE_BOARDING_PASS)))
           .addMethod(
             getDeleteBoardingPassMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest,
                 com.google.protobuf.Empty>(
@@ -1110,7 +1097,7 @@ public final class FlightsGrpc {
      */
     public void createPort(com.passkit.grpc.Flights.Airport.Port request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreatePortMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1121,7 +1108,7 @@ public final class FlightsGrpc {
      */
     public void getPort(com.passkit.grpc.Flights.Airport.AirportCode request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.Airport.Port> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1132,7 +1119,7 @@ public final class FlightsGrpc {
      */
     public void updatePort(com.passkit.grpc.Flights.Airport.Port request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.Airport.Port> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdatePortMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1143,7 +1130,7 @@ public final class FlightsGrpc {
      */
     public void deletePort(com.passkit.grpc.Flights.Airport.AirportCode request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePortMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1154,7 +1141,7 @@ public final class FlightsGrpc {
      */
     public void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateCarrierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1165,7 +1152,7 @@ public final class FlightsGrpc {
      */
     public void getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCarrierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1176,7 +1163,7 @@ public final class FlightsGrpc {
      */
     public void updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateCarrierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1187,7 +1174,7 @@ public final class FlightsGrpc {
      */
     public void deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteCarrierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1198,7 +1185,7 @@ public final class FlightsGrpc {
      */
     public void createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateFlightDesignatorMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1209,7 +1196,7 @@ public final class FlightsGrpc {
      */
     public void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetFlightDesignatorMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1220,7 +1207,7 @@ public final class FlightsGrpc {
      */
     public void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateFlightDesignatorMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1231,7 +1218,7 @@ public final class FlightsGrpc {
      */
     public void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteFlightDesignatorMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1242,7 +1229,7 @@ public final class FlightsGrpc {
      */
     public void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateFlightMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1253,7 +1240,7 @@ public final class FlightsGrpc {
      */
     public void getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightOuterClass.Flight> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetFlightMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1264,7 +1251,7 @@ public final class FlightsGrpc {
      */
     public void updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.FlightOuterClass.Flight> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateFlightMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1275,7 +1262,7 @@ public final class FlightsGrpc {
      */
     public void deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteFlightMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1286,7 +1273,7 @@ public final class FlightsGrpc {
      */
     public void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateBoardingPassMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1297,7 +1284,7 @@ public final class FlightsGrpc {
      */
     public void getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetBoardingPassRecordMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1308,7 +1295,7 @@ public final class FlightsGrpc {
      */
     public void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetBoardingPassMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1319,7 +1306,7 @@ public final class FlightsGrpc {
      */
     public void updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBoardingPassMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1330,7 +1317,7 @@ public final class FlightsGrpc {
      */
     public void deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteBoardingPassMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -1355,7 +1342,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty createPort(com.passkit.grpc.Flights.Airport.Port request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreatePortMethod(), getCallOptions(), request);
     }
 
@@ -1365,7 +1352,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.Airport.Port getPort(com.passkit.grpc.Flights.Airport.AirportCode request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortMethod(), getCallOptions(), request);
     }
 
@@ -1375,7 +1362,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.Airport.Port updatePort(com.passkit.grpc.Flights.Airport.Port request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdatePortMethod(), getCallOptions(), request);
     }
 
@@ -1385,7 +1372,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deletePort(com.passkit.grpc.Flights.Airport.AirportCode request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePortMethod(), getCallOptions(), request);
     }
 
@@ -1395,7 +1382,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateCarrierMethod(), getCallOptions(), request);
     }
 
@@ -1405,7 +1392,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.CarrierOuterClass.Carrier getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCarrierMethod(), getCallOptions(), request);
     }
 
@@ -1415,7 +1402,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.CarrierOuterClass.Carrier updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateCarrierMethod(), getCallOptions(), request);
     }
 
@@ -1425,7 +1412,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteCarrierMethod(), getCallOptions(), request);
     }
 
@@ -1435,7 +1422,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateFlightDesignatorMethod(), getCallOptions(), request);
     }
 
@@ -1445,7 +1432,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetFlightDesignatorMethod(), getCallOptions(), request);
     }
 
@@ -1455,7 +1442,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateFlightDesignatorMethod(), getCallOptions(), request);
     }
 
@@ -1465,7 +1452,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteFlightDesignatorMethod(), getCallOptions(), request);
     }
 
@@ -1475,7 +1462,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateFlightMethod(), getCallOptions(), request);
     }
 
@@ -1485,7 +1472,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightOuterClass.Flight getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetFlightMethod(), getCallOptions(), request);
     }
 
@@ -1495,7 +1482,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightOuterClass.Flight updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateFlightMethod(), getCallOptions(), request);
     }
 
@@ -1505,7 +1492,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteFlightMethod(), getCallOptions(), request);
     }
 
@@ -1515,7 +1502,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBoardingPassMethod(), getCallOptions(), request);
     }
 
@@ -1525,7 +1512,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBoardingPassRecordMethod(), getCallOptions(), request);
     }
 
@@ -1535,7 +1522,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBoardingPassMethod(), getCallOptions(), request);
     }
 
@@ -1545,7 +1532,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBoardingPassMethod(), getCallOptions(), request);
     }
 
@@ -1555,7 +1542,7 @@ public final class FlightsGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteBoardingPassMethod(), getCallOptions(), request);
     }
   }
@@ -1581,7 +1568,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createPort(
         com.passkit.grpc.Flights.Airport.Port request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreatePortMethod(), getCallOptions()), request);
     }
 
@@ -1592,7 +1579,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.Airport.Port> getPort(
         com.passkit.grpc.Flights.Airport.AirportCode request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortMethod(), getCallOptions()), request);
     }
 
@@ -1603,7 +1590,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.Airport.Port> updatePort(
         com.passkit.grpc.Flights.Airport.Port request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdatePortMethod(), getCallOptions()), request);
     }
 
@@ -1614,7 +1601,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePort(
         com.passkit.grpc.Flights.Airport.AirportCode request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePortMethod(), getCallOptions()), request);
     }
 
@@ -1625,7 +1612,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createCarrier(
         com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateCarrierMethod(), getCallOptions()), request);
     }
 
@@ -1636,7 +1623,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> getCarrier(
         com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCarrierMethod(), getCallOptions()), request);
     }
 
@@ -1647,7 +1634,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> updateCarrier(
         com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateCarrierMethod(), getCallOptions()), request);
     }
 
@@ -1658,7 +1645,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCarrier(
         com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteCarrierMethod(), getCallOptions()), request);
     }
 
@@ -1669,7 +1656,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlightDesignator(
         com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateFlightDesignatorMethod(), getCallOptions()), request);
     }
 
@@ -1680,7 +1667,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> getFlightDesignator(
         com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetFlightDesignatorMethod(), getCallOptions()), request);
     }
 
@@ -1691,7 +1678,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> updateFlightDesignator(
         com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateFlightDesignatorMethod(), getCallOptions()), request);
     }
 
@@ -1702,7 +1689,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFlightDesignator(
         com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteFlightDesignatorMethod(), getCallOptions()), request);
     }
 
@@ -1713,7 +1700,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlight(
         com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateFlightMethod(), getCallOptions()), request);
     }
 
@@ -1724,7 +1711,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightOuterClass.Flight> getFlight(
         com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetFlightMethod(), getCallOptions()), request);
     }
 
@@ -1735,7 +1722,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightOuterClass.Flight> updateFlight(
         com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateFlightMethod(), getCallOptions()), request);
     }
 
@@ -1746,7 +1733,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFlight(
         com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteFlightMethod(), getCallOptions()), request);
     }
 
@@ -1757,7 +1744,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> createBoardingPass(
         com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateBoardingPassMethod(), getCallOptions()), request);
     }
 
@@ -1768,7 +1755,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> getBoardingPassRecord(
         com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetBoardingPassRecordMethod(), getCallOptions()), request);
     }
 
@@ -1779,7 +1766,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> getBoardingPass(
         com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetBoardingPassMethod(), getCallOptions()), request);
     }
 
@@ -1790,7 +1777,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> updateBoardingPass(
         com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBoardingPassMethod(), getCallOptions()), request);
     }
 
@@ -1801,7 +1788,7 @@ public final class FlightsGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteBoardingPass(
         com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteBoardingPassMethod(), getCallOptions()), request);
     }
   }

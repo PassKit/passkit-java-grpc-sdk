@@ -78,9 +78,9 @@ public final class ARpc {
       "quest\032\t.raw.Pass\"w\202\323\344\223\002!\"\034/raw/pass/list" +
       "ByPassTemplate:\001*\222AM\n\003Raw\022\013List Passes\0329" +
       "List all passes for a pass template. Sup" +
-      "ports pagination.0\001B\250\006\n\024com.passkit.grpc" +
+      "ports pagination.0\001B\212\007\n\024com.passkit.grpc" +
       ".RawZ(stash.passkit.com/io/model/sdk/go/" +
-      "io/raw\252\002\020PassKit.Grpc.Raw\222A\321\005\022\300\002\n\026PassKi" +
+      "io/raw\252\002\020PassKit.Grpc.Raw\222A\263\006\022\300\002\n\026PassKi" +
       "t Raw Passes API\022\245\001This protocol is suit" +
       " for cases where the business logic is h" +
       "andled elsewhere, and the purpose is pur" +
@@ -91,14 +91,17 @@ public final class ARpc {
       "kit.io\032\023support@passkit.com2\0030.1*\001\0022\020app" +
       "lication/json:\020application/jsonR9\n\003200\0222" +
       "\n(Returned when the request is successfu" +
-      "l.\022\006\n\004\232\002\001\007RP\n\003403\022I\nGReturned when the u" +
-      "ser does not have permission to access t" +
-      "he resource.R;\n\003404\0224\n*Returned when the" +
-      " resource does not exist.\022\006\n\004\232\002\001\007R<\n\003500" +
-      "\0225\n+Returned when there is an unexpected" +
-      " error.\022\006\n\004\232\002\001\007R]\n\003503\022V\nTReturned when " +
-      "the user is being throttled. Back off fo" +
-      "r a few ms and then try again.b\006proto3"
+      "l.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when wrong" +
+      " user input is provided.R0\n\003401\022)\n\'Retur" +
+      "ned when the user is unauthorized.RP\n\00340" +
+      "3\022I\nGReturned when the user does not hav" +
+      "e permission to access the resource.R;\n\003" +
+      "404\0224\n*Returned when the resource does n" +
+      "ot exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned whe" +
+      "n there is an unexpected error.\022\006\n\004\232\002\001\007R" +
+      "W\n\003503\022P\nNServer is unavailable. Back of" +
+      "f for 250ms and repeat request until suc" +
+      "cessful.b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

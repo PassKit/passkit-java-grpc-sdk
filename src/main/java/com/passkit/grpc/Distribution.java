@@ -147,16 +147,157 @@ public final class Distribution {
     // @@protoc_insertion_point(enum_scope:io.DistributionChannel)
   }
 
+  /**
+   * Protobuf enum {@code io.EmailTemplateOptions}
+   */
+  public enum EmailTemplateOptions
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>EMAIL_TEMP_OPT_NONE = 0;</code>
+     */
+    EMAIL_TEMP_OPT_NONE(0),
+    /**
+     * <pre>
+     * Hide default external Id field on top right of the template.
+     * </pre>
+     *
+     * <code>EMAIL_TEMP_OPT_HIDE_EXT_ID = 1;</code>
+     */
+    EMAIL_TEMP_OPT_HIDE_EXT_ID(1),
+    /**
+     * <pre>
+     * Hide default full name field on top left of the template.
+     * </pre>
+     *
+     * <code>EMAIL_TEMP_OPT_HIDE_FULL_NAME = 2;</code>
+     */
+    EMAIL_TEMP_OPT_HIDE_FULL_NAME(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>EMAIL_TEMP_OPT_NONE = 0;</code>
+     */
+    public static final int EMAIL_TEMP_OPT_NONE_VALUE = 0;
+    /**
+     * <pre>
+     * Hide default external Id field on top right of the template.
+     * </pre>
+     *
+     * <code>EMAIL_TEMP_OPT_HIDE_EXT_ID = 1;</code>
+     */
+    public static final int EMAIL_TEMP_OPT_HIDE_EXT_ID_VALUE = 1;
+    /**
+     * <pre>
+     * Hide default full name field on top left of the template.
+     * </pre>
+     *
+     * <code>EMAIL_TEMP_OPT_HIDE_FULL_NAME = 2;</code>
+     */
+    public static final int EMAIL_TEMP_OPT_HIDE_FULL_NAME_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EmailTemplateOptions valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static EmailTemplateOptions forNumber(int value) {
+      switch (value) {
+        case 0: return EMAIL_TEMP_OPT_NONE;
+        case 1: return EMAIL_TEMP_OPT_HIDE_EXT_ID;
+        case 2: return EMAIL_TEMP_OPT_HIDE_FULL_NAME;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EmailTemplateOptions>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        EmailTemplateOptions> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EmailTemplateOptions>() {
+            public EmailTemplateOptions findValueByNumber(int number) {
+              return EmailTemplateOptions.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Distribution.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final EmailTemplateOptions[] VALUES = values();
+
+    public static EmailTemplateOptions valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private EmailTemplateOptions(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.EmailTemplateOptions)
+  }
+
   public interface EmailDistributionRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.EmailDistributionRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -164,23 +305,63 @@ public final class Distribution {
         getIdBytes();
 
     /**
-     * <code>.io.PassProtocol protocol = 2;</code>
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The externalId.
+     */
+    java.lang.String getExternalId();
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The bytes for externalId.
+     */
+    com.google.protobuf.ByteString
+        getExternalIdBytes();
+
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>.io.PassProtocol protocol = 4;</code>
      * @return The enum numeric value on the wire for protocol.
      */
     int getProtocolValue();
     /**
-     * <code>.io.PassProtocol protocol = 2;</code>
+     * <code>.io.PassProtocol protocol = 4;</code>
      * @return The protocol.
      */
     com.passkit.grpc.Protocols.PassProtocol getProtocol();
 
     /**
-     * <code>string alternativeEmail = 3;</code>
+     * <code>string alternativeEmail = 5;</code>
      * @return The alternativeEmail.
      */
     java.lang.String getAlternativeEmail();
     /**
-     * <code>string alternativeEmail = 3;</code>
+     * <code>string alternativeEmail = 5;</code>
      * @return The bytes for alternativeEmail.
      */
     com.google.protobuf.ByteString
@@ -200,6 +381,8 @@ public final class Distribution {
     }
     private EmailDistributionRequest() {
       id_ = "";
+      externalId_ = "";
+      classId_ = "";
       protocol_ = 0;
       alternativeEmail_ = "";
     }
@@ -240,13 +423,25 @@ public final class Distribution {
               id_ = s;
               break;
             }
-            case 16: {
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 32: {
               int rawValue = input.readEnum();
 
               protocol_ = rawValue;
               break;
             }
-            case 26: {
+            case 42: {
               java.lang.String s = input.readStringRequireUtf8();
 
               alternativeEmail_ = s;
@@ -287,6 +482,10 @@ public final class Distribution {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -304,6 +503,10 @@ public final class Distribution {
       }
     }
     /**
+     * <pre>
+     * Pass Id (22 characters).
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -322,17 +525,109 @@ public final class Distribution {
       }
     }
 
-    public static final int PROTOCOL_FIELD_NUMBER = 2;
+    public static final int EXTERNALID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object externalId_;
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The externalId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalId() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * External Id of the pass holder. Needs to provide Class Id as well.
+     * </pre>
+     *
+     * <code>string externalId = 2;</code>
+     * @return The bytes for externalId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalIdBytes() {
+      java.lang.Object ref = externalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object classId_;
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+     * </pre>
+     *
+     * <code>string classId = 3;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 4;
     private int protocol_;
     /**
-     * <code>.io.PassProtocol protocol = 2;</code>
+     * <code>.io.PassProtocol protocol = 4;</code>
      * @return The enum numeric value on the wire for protocol.
      */
     @java.lang.Override public int getProtocolValue() {
       return protocol_;
     }
     /**
-     * <code>.io.PassProtocol protocol = 2;</code>
+     * <code>.io.PassProtocol protocol = 4;</code>
      * @return The protocol.
      */
     @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
@@ -341,10 +636,10 @@ public final class Distribution {
       return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
     }
 
-    public static final int ALTERNATIVEEMAIL_FIELD_NUMBER = 3;
+    public static final int ALTERNATIVEEMAIL_FIELD_NUMBER = 5;
     private volatile java.lang.Object alternativeEmail_;
     /**
-     * <code>string alternativeEmail = 3;</code>
+     * <code>string alternativeEmail = 5;</code>
      * @return The alternativeEmail.
      */
     @java.lang.Override
@@ -361,7 +656,7 @@ public final class Distribution {
       }
     }
     /**
-     * <code>string alternativeEmail = 3;</code>
+     * <code>string alternativeEmail = 5;</code>
      * @return The bytes for alternativeEmail.
      */
     @java.lang.Override
@@ -396,11 +691,17 @@ public final class Distribution {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
+      if (!getExternalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
+      }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
-        output.writeEnum(2, protocol_);
+        output.writeEnum(4, protocol_);
       }
       if (!getAlternativeEmailBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, alternativeEmail_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, alternativeEmail_);
       }
       unknownFields.writeTo(output);
     }
@@ -414,12 +715,18 @@ public final class Distribution {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
+      if (!getExternalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
+      }
+      if (!getClassIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
+      }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, protocol_);
+          .computeEnumSize(4, protocol_);
       }
       if (!getAlternativeEmailBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, alternativeEmail_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, alternativeEmail_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -438,6 +745,10 @@ public final class Distribution {
 
       if (!getId()
           .equals(other.getId())) return false;
+      if (!getExternalId()
+          .equals(other.getExternalId())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
       if (protocol_ != other.protocol_) return false;
       if (!getAlternativeEmail()
           .equals(other.getAlternativeEmail())) return false;
@@ -454,6 +765,10 @@ public final class Distribution {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalId().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
       hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
       hash = (53 * hash) + protocol_;
       hash = (37 * hash) + ALTERNATIVEEMAIL_FIELD_NUMBER;
@@ -593,6 +908,10 @@ public final class Distribution {
         super.clear();
         id_ = "";
 
+        externalId_ = "";
+
+        classId_ = "";
+
         protocol_ = 0;
 
         alternativeEmail_ = "";
@@ -624,6 +943,8 @@ public final class Distribution {
       public com.passkit.grpc.Distribution.EmailDistributionRequest buildPartial() {
         com.passkit.grpc.Distribution.EmailDistributionRequest result = new com.passkit.grpc.Distribution.EmailDistributionRequest(this);
         result.id_ = id_;
+        result.externalId_ = externalId_;
+        result.classId_ = classId_;
         result.protocol_ = protocol_;
         result.alternativeEmail_ = alternativeEmail_;
         onBuilt();
@@ -678,6 +999,14 @@ public final class Distribution {
           id_ = other.id_;
           onChanged();
         }
+        if (!other.getExternalId().isEmpty()) {
+          externalId_ = other.externalId_;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
         if (other.protocol_ != 0) {
           setProtocolValue(other.getProtocolValue());
         }
@@ -716,6 +1045,10 @@ public final class Distribution {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -732,6 +1065,10 @@ public final class Distribution {
         }
       }
       /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -749,6 +1086,10 @@ public final class Distribution {
         }
       }
       /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -764,6 +1105,10 @@ public final class Distribution {
         return this;
       }
       /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -774,6 +1119,10 @@ public final class Distribution {
         return this;
       }
       /**
+       * <pre>
+       * Pass Id (22 characters).
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -790,16 +1139,208 @@ public final class Distribution {
         return this;
       }
 
+      private java.lang.Object externalId_ = "";
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return The externalId.
+       */
+      public java.lang.String getExternalId() {
+        java.lang.Object ref = externalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return The bytes for externalId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalIdBytes() {
+        java.lang.Object ref = externalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @param value The externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalId() {
+        
+        externalId_ = getDefaultInstance().getExternalId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External Id of the pass holder. Needs to provide Class Id as well.
+       * </pre>
+       *
+       * <code>string externalId = 2;</code>
+       * @param value The bytes for externalId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
+       * </pre>
+       *
+       * <code>string classId = 3;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
       private int protocol_ = 0;
       /**
-       * <code>.io.PassProtocol protocol = 2;</code>
+       * <code>.io.PassProtocol protocol = 4;</code>
        * @return The enum numeric value on the wire for protocol.
        */
       @java.lang.Override public int getProtocolValue() {
         return protocol_;
       }
       /**
-       * <code>.io.PassProtocol protocol = 2;</code>
+       * <code>.io.PassProtocol protocol = 4;</code>
        * @param value The enum numeric value on the wire for protocol to set.
        * @return This builder for chaining.
        */
@@ -810,7 +1351,7 @@ public final class Distribution {
         return this;
       }
       /**
-       * <code>.io.PassProtocol protocol = 2;</code>
+       * <code>.io.PassProtocol protocol = 4;</code>
        * @return The protocol.
        */
       @java.lang.Override
@@ -820,7 +1361,7 @@ public final class Distribution {
         return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
       }
       /**
-       * <code>.io.PassProtocol protocol = 2;</code>
+       * <code>.io.PassProtocol protocol = 4;</code>
        * @param value The protocol to set.
        * @return This builder for chaining.
        */
@@ -834,7 +1375,7 @@ public final class Distribution {
         return this;
       }
       /**
-       * <code>.io.PassProtocol protocol = 2;</code>
+       * <code>.io.PassProtocol protocol = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
@@ -846,7 +1387,7 @@ public final class Distribution {
 
       private java.lang.Object alternativeEmail_ = "";
       /**
-       * <code>string alternativeEmail = 3;</code>
+       * <code>string alternativeEmail = 5;</code>
        * @return The alternativeEmail.
        */
       public java.lang.String getAlternativeEmail() {
@@ -862,7 +1403,7 @@ public final class Distribution {
         }
       }
       /**
-       * <code>string alternativeEmail = 3;</code>
+       * <code>string alternativeEmail = 5;</code>
        * @return The bytes for alternativeEmail.
        */
       public com.google.protobuf.ByteString
@@ -879,7 +1420,7 @@ public final class Distribution {
         }
       }
       /**
-       * <code>string alternativeEmail = 3;</code>
+       * <code>string alternativeEmail = 5;</code>
        * @param value The alternativeEmail to set.
        * @return This builder for chaining.
        */
@@ -894,7 +1435,7 @@ public final class Distribution {
         return this;
       }
       /**
-       * <code>string alternativeEmail = 3;</code>
+       * <code>string alternativeEmail = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearAlternativeEmail() {
@@ -904,7 +1445,7 @@ public final class Distribution {
         return this;
       }
       /**
-       * <code>string alternativeEmail = 3;</code>
+       * <code>string alternativeEmail = 5;</code>
        * @param value The bytes for alternativeEmail to set.
        * @return This builder for chaining.
        */
@@ -3673,6 +4214,16 @@ public final class Distribution {
      */
     com.google.protobuf.ByteString
         getPageBackgroundColorBytes();
+
+    /**
+     * <pre>
+     * Holds additional template options for rendering the email template.
+     * </pre>
+     *
+     * <code>int32 templateOptions = 18;</code>
+     * @return The templateOptions.
+     */
+    int getTemplateOptions();
   }
   /**
    * <pre>
@@ -3877,6 +4428,11 @@ public final class Distribution {
               java.lang.String s = input.readStringRequireUtf8();
 
               pageBackgroundColor_ = s;
+              break;
+            }
+            case 144: {
+
+              templateOptions_ = input.readInt32();
               break;
             }
             default: {
@@ -4645,6 +5201,21 @@ public final class Distribution {
       }
     }
 
+    public static final int TEMPLATEOPTIONS_FIELD_NUMBER = 18;
+    private int templateOptions_;
+    /**
+     * <pre>
+     * Holds additional template options for rendering the email template.
+     * </pre>
+     *
+     * <code>int32 templateOptions = 18;</code>
+     * @return The templateOptions.
+     */
+    @java.lang.Override
+    public int getTemplateOptions() {
+      return templateOptions_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4709,6 +5280,9 @@ public final class Distribution {
       }
       if (!getPageBackgroundColorBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pageBackgroundColor_);
+      }
+      if (templateOptions_ != 0) {
+        output.writeInt32(18, templateOptions_);
       }
       unknownFields.writeTo(output);
     }
@@ -4775,6 +5349,10 @@ public final class Distribution {
       }
       if (!getPageBackgroundColorBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, pageBackgroundColor_);
+      }
+      if (templateOptions_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(18, templateOptions_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4843,6 +5421,8 @@ public final class Distribution {
           .equals(other.getMessageBackgroundColor())) return false;
       if (!getPageBackgroundColor()
           .equals(other.getPageBackgroundColor())) return false;
+      if (getTemplateOptions()
+          != other.getTemplateOptions()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4900,6 +5480,8 @@ public final class Distribution {
       hash = (53 * hash) + getMessageBackgroundColor().hashCode();
       hash = (37 * hash) + PAGEBACKGROUNDCOLOR_FIELD_NUMBER;
       hash = (53 * hash) + getPageBackgroundColor().hashCode();
+      hash = (37 * hash) + TEMPLATEOPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateOptions();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5096,6 +5678,8 @@ public final class Distribution {
 
         pageBackgroundColor_ = "";
 
+        templateOptions_ = 0;
+
         return this;
       }
 
@@ -5163,6 +5747,7 @@ public final class Distribution {
         }
         result.messageBackgroundColor_ = messageBackgroundColor_;
         result.pageBackgroundColor_ = pageBackgroundColor_;
+        result.templateOptions_ = templateOptions_;
         onBuilt();
         return result;
       }
@@ -5272,6 +5857,9 @@ public final class Distribution {
         if (!other.getPageBackgroundColor().isEmpty()) {
           pageBackgroundColor_ = other.pageBackgroundColor_;
           onChanged();
+        }
+        if (other.getTemplateOptions() != 0) {
+          setTemplateOptions(other.getTemplateOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7284,6 +7872,49 @@ public final class Distribution {
   checkByteStringIsUtf8(value);
         
         pageBackgroundColor_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int templateOptions_ ;
+      /**
+       * <pre>
+       * Holds additional template options for rendering the email template.
+       * </pre>
+       *
+       * <code>int32 templateOptions = 18;</code>
+       * @return The templateOptions.
+       */
+      @java.lang.Override
+      public int getTemplateOptions() {
+        return templateOptions_;
+      }
+      /**
+       * <pre>
+       * Holds additional template options for rendering the email template.
+       * </pre>
+       *
+       * <code>int32 templateOptions = 18;</code>
+       * @param value The templateOptions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateOptions(int value) {
+        
+        templateOptions_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Holds additional template options for rendering the email template.
+       * </pre>
+       *
+       * <code>int32 templateOptions = 18;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateOptions() {
+        
+        templateOptions_ = 0;
         onChanged();
         return this;
       }
@@ -10625,6 +11256,3300 @@ public final class Distribution {
 
   }
 
+  public interface DataCollectionFieldsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.DataCollectionFields)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    java.util.List<com.passkit.grpc.Distribution.DataCollectionField> 
+        getFieldsList();
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    com.passkit.grpc.Distribution.DataCollectionField getFields(int index);
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    int getFieldsCount();
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    java.util.List<? extends com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder> 
+        getFieldsOrBuilderList();
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder getFieldsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code io.DataCollectionFields}
+   */
+  public static final class DataCollectionFields extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.DataCollectionFields)
+      DataCollectionFieldsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataCollectionFields.newBuilder() to construct.
+    private DataCollectionFields(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataCollectionFields() {
+      fields_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataCollectionFields();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataCollectionFields(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fields_ = new java.util.ArrayList<com.passkit.grpc.Distribution.DataCollectionField>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fields_.add(
+                  input.readMessage(com.passkit.grpc.Distribution.DataCollectionField.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fields_ = java.util.Collections.unmodifiableList(fields_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionFields_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionFields_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Distribution.DataCollectionFields.class, com.passkit.grpc.Distribution.DataCollectionFields.Builder.class);
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 1;
+    private java.util.List<com.passkit.grpc.Distribution.DataCollectionField> fields_;
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.passkit.grpc.Distribution.DataCollectionField> getFieldsList() {
+      return fields_;
+    }
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder> 
+        getFieldsOrBuilderList() {
+      return fields_;
+    }
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    @java.lang.Override
+    public int getFieldsCount() {
+      return fields_.size();
+    }
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.DataCollectionField getFields(int index) {
+      return fields_.get(index);
+    }
+    /**
+     * <code>repeated .io.DataCollectionField fields = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder getFieldsOrBuilder(
+        int index) {
+      return fields_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < fields_.size(); i++) {
+        output.writeMessage(1, fields_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < fields_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, fields_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Distribution.DataCollectionFields)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Distribution.DataCollectionFields other = (com.passkit.grpc.Distribution.DataCollectionFields) obj;
+
+      if (!getFieldsList()
+          .equals(other.getFieldsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getFieldsCount() > 0) {
+        hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionFields parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Distribution.DataCollectionFields prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.DataCollectionFields}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.DataCollectionFields)
+        com.passkit.grpc.Distribution.DataCollectionFieldsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionFields_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionFields_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Distribution.DataCollectionFields.class, com.passkit.grpc.Distribution.DataCollectionFields.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Distribution.DataCollectionFields.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFieldsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (fieldsBuilder_ == null) {
+          fields_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          fieldsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionFields_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionFields getDefaultInstanceForType() {
+        return com.passkit.grpc.Distribution.DataCollectionFields.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionFields build() {
+        com.passkit.grpc.Distribution.DataCollectionFields result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionFields buildPartial() {
+        com.passkit.grpc.Distribution.DataCollectionFields result = new com.passkit.grpc.Distribution.DataCollectionFields(this);
+        int from_bitField0_ = bitField0_;
+        if (fieldsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            fields_ = java.util.Collections.unmodifiableList(fields_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.fields_ = fields_;
+        } else {
+          result.fields_ = fieldsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Distribution.DataCollectionFields) {
+          return mergeFrom((com.passkit.grpc.Distribution.DataCollectionFields)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Distribution.DataCollectionFields other) {
+        if (other == com.passkit.grpc.Distribution.DataCollectionFields.getDefaultInstance()) return this;
+        if (fieldsBuilder_ == null) {
+          if (!other.fields_.isEmpty()) {
+            if (fields_.isEmpty()) {
+              fields_ = other.fields_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureFieldsIsMutable();
+              fields_.addAll(other.fields_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fields_.isEmpty()) {
+            if (fieldsBuilder_.isEmpty()) {
+              fieldsBuilder_.dispose();
+              fieldsBuilder_ = null;
+              fields_ = other.fields_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              fieldsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFieldsFieldBuilder() : null;
+            } else {
+              fieldsBuilder_.addAllMessages(other.fields_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Distribution.DataCollectionFields parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Distribution.DataCollectionFields) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.passkit.grpc.Distribution.DataCollectionField> fields_ =
+        java.util.Collections.emptyList();
+      private void ensureFieldsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fields_ = new java.util.ArrayList<com.passkit.grpc.Distribution.DataCollectionField>(fields_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.Distribution.DataCollectionField, com.passkit.grpc.Distribution.DataCollectionField.Builder, com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder> fieldsBuilder_;
+
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public java.util.List<com.passkit.grpc.Distribution.DataCollectionField> getFieldsList() {
+        if (fieldsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fields_);
+        } else {
+          return fieldsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public int getFieldsCount() {
+        if (fieldsBuilder_ == null) {
+          return fields_.size();
+        } else {
+          return fieldsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public com.passkit.grpc.Distribution.DataCollectionField getFields(int index) {
+        if (fieldsBuilder_ == null) {
+          return fields_.get(index);
+        } else {
+          return fieldsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder setFields(
+          int index, com.passkit.grpc.Distribution.DataCollectionField value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.set(index, value);
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder setFields(
+          int index, com.passkit.grpc.Distribution.DataCollectionField.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder addFields(com.passkit.grpc.Distribution.DataCollectionField value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.add(value);
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder addFields(
+          int index, com.passkit.grpc.Distribution.DataCollectionField value) {
+        if (fieldsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldsIsMutable();
+          fields_.add(index, value);
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder addFields(
+          com.passkit.grpc.Distribution.DataCollectionField.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder addFields(
+          int index, com.passkit.grpc.Distribution.DataCollectionField.Builder builderForValue) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder addAllFields(
+          java.lang.Iterable<? extends com.passkit.grpc.Distribution.DataCollectionField> values) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fields_);
+          onChanged();
+        } else {
+          fieldsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder clearFields() {
+        if (fieldsBuilder_ == null) {
+          fields_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          fieldsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public Builder removeFields(int index) {
+        if (fieldsBuilder_ == null) {
+          ensureFieldsIsMutable();
+          fields_.remove(index);
+          onChanged();
+        } else {
+          fieldsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public com.passkit.grpc.Distribution.DataCollectionField.Builder getFieldsBuilder(
+          int index) {
+        return getFieldsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder getFieldsOrBuilder(
+          int index) {
+        if (fieldsBuilder_ == null) {
+          return fields_.get(index);  } else {
+          return fieldsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public java.util.List<? extends com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder> 
+           getFieldsOrBuilderList() {
+        if (fieldsBuilder_ != null) {
+          return fieldsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fields_);
+        }
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public com.passkit.grpc.Distribution.DataCollectionField.Builder addFieldsBuilder() {
+        return getFieldsFieldBuilder().addBuilder(
+            com.passkit.grpc.Distribution.DataCollectionField.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public com.passkit.grpc.Distribution.DataCollectionField.Builder addFieldsBuilder(
+          int index) {
+        return getFieldsFieldBuilder().addBuilder(
+            index, com.passkit.grpc.Distribution.DataCollectionField.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .io.DataCollectionField fields = 1;</code>
+       */
+      public java.util.List<com.passkit.grpc.Distribution.DataCollectionField.Builder> 
+           getFieldsBuilderList() {
+        return getFieldsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.Distribution.DataCollectionField, com.passkit.grpc.Distribution.DataCollectionField.Builder, com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder> 
+          getFieldsFieldBuilder() {
+        if (fieldsBuilder_ == null) {
+          fieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.passkit.grpc.Distribution.DataCollectionField, com.passkit.grpc.Distribution.DataCollectionField.Builder, com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder>(
+                  fields_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          fields_ = null;
+        }
+        return fieldsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.DataCollectionFields)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.DataCollectionFields)
+    private static final com.passkit.grpc.Distribution.DataCollectionFields DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.DataCollectionFields();
+    }
+
+    public static com.passkit.grpc.Distribution.DataCollectionFields getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataCollectionFields>
+        PARSER = new com.google.protobuf.AbstractParser<DataCollectionFields>() {
+      @java.lang.Override
+      public DataCollectionFields parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataCollectionFields(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataCollectionFields> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataCollectionFields> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.DataCollectionFields getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataCollectionFieldOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.DataCollectionField)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+     * Else, uniqueName (key) and value are stored under meta object.
+     * </pre>
+     *
+     * <code>string uniqueName = 1;</code>
+     * @return The uniqueName.
+     */
+    java.lang.String getUniqueName();
+    /**
+     * <pre>
+     * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+     * Else, uniqueName (key) and value are stored under meta object.
+     * </pre>
+     *
+     * <code>string uniqueName = 1;</code>
+     * @return The bytes for uniqueName.
+     */
+    com.google.protobuf.ByteString
+        getUniqueNameBytes();
+
+    /**
+     * <code>.io.FieldType fieldType = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    int getFieldTypeValue();
+    /**
+     * <code>.io.FieldType fieldType = 2;</code>
+     * @return The fieldType.
+     */
+    com.passkit.grpc.Template.FieldType getFieldType();
+
+    /**
+     * <pre>
+     * If set true, the field is mandatory. If set false, the field is optional.
+     * </pre>
+     *
+     * <code>bool isRequired = 3;</code>
+     * @return The isRequired.
+     */
+    boolean getIsRequired();
+
+    /**
+     * <pre>
+     * A text used for the data collection field label and pass field title.
+     * </pre>
+     *
+     * <code>string label = 4;</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <pre>
+     * A text used for the data collection field label and pass field title.
+     * </pre>
+     *
+     * <code>string label = 4;</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     * @return Whether the localizedLabel field is set.
+     */
+    boolean hasLocalizedLabel();
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     * @return The localizedLabel.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedLabel();
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLabelOrBuilder();
+
+    /**
+     * <pre>
+     * Data type you want to receive from your users.
+     * </pre>
+     *
+     * <code>.io.DataType dataType = 6;</code>
+     * @return The enum numeric value on the wire for dataType.
+     */
+    int getDataTypeValue();
+    /**
+     * <pre>
+     * Data type you want to receive from your users.
+     * </pre>
+     *
+     * <code>.io.DataType dataType = 6;</code>
+     * @return The dataType.
+     */
+    com.passkit.grpc.Template.DataType getDataType();
+
+    /**
+     * <pre>
+     * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+     * </pre>
+     *
+     * <code>string defaultValue = 7;</code>
+     * @return The defaultValue.
+     */
+    java.lang.String getDefaultValue();
+    /**
+     * <pre>
+     * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+     * </pre>
+     *
+     * <code>string defaultValue = 7;</code>
+     * @return The bytes for defaultValue.
+     */
+    com.google.protobuf.ByteString
+        getDefaultValueBytes();
+
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     * @return Whether the localizedDefaultValue field is set.
+     */
+    boolean hasLocalizedDefaultValue();
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     * @return The localizedDefaultValue.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedDefaultValue();
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedDefaultValueOrBuilder();
+
+    /**
+     * <pre>
+     * A regex which allows you to set set custom validation rules for the data stored.
+     * </pre>
+     *
+     * <code>string validation = 9;</code>
+     * @return The validation.
+     */
+    java.lang.String getValidation();
+    /**
+     * <pre>
+     * A regex which allows you to set set custom validation rules for the data stored.
+     * </pre>
+     *
+     * <code>string validation = 9;</code>
+     * @return The bytes for validation.
+     */
+    com.google.protobuf.ByteString
+        getValidationBytes();
+
+    /**
+     * <pre>
+     * If false, a defaultValue or listOptions[0] will be used.
+     * </pre>
+     *
+     * <code>bool userCanSetValue = 10;</code>
+     * @return The userCanSetValue.
+     */
+    boolean getUserCanSetValue();
+
+    /**
+     * <pre>
+     * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+     * </pre>
+     *
+     * <code>string currencyCode = 11;</code>
+     * @return The currencyCode.
+     */
+    java.lang.String getCurrencyCode();
+    /**
+     * <pre>
+     * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+     * </pre>
+     *
+     * <code>string currencyCode = 11;</code>
+     * @return The bytes for currencyCode.
+     */
+    com.google.protobuf.ByteString
+        getCurrencyCodeBytes();
+
+    /**
+     * <pre>
+     * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+     * </pre>
+     *
+     * <code>string defaultTelCountryCode = 12;</code>
+     * @return The defaultTelCountryCode.
+     */
+    java.lang.String getDefaultTelCountryCode();
+    /**
+     * <pre>
+     * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+     * </pre>
+     *
+     * <code>string defaultTelCountryCode = 12;</code>
+     * @return The bytes for defaultTelCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getDefaultTelCountryCodeBytes();
+  }
+  /**
+   * Protobuf type {@code io.DataCollectionField}
+   */
+  public static final class DataCollectionField extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.DataCollectionField)
+      DataCollectionFieldOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataCollectionField.newBuilder() to construct.
+    private DataCollectionField(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataCollectionField() {
+      uniqueName_ = "";
+      fieldType_ = 0;
+      label_ = "";
+      dataType_ = 0;
+      defaultValue_ = "";
+      validation_ = "";
+      currencyCode_ = "";
+      defaultTelCountryCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataCollectionField();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DataCollectionField(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uniqueName_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              fieldType_ = rawValue;
+              break;
+            }
+            case 24: {
+
+              isRequired_ = input.readBool();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              label_ = s;
+              break;
+            }
+            case 42: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedLabel_ != null) {
+                subBuilder = localizedLabel_.toBuilder();
+              }
+              localizedLabel_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedLabel_);
+                localizedLabel_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              dataType_ = rawValue;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultValue_ = s;
+              break;
+            }
+            case 66: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedDefaultValue_ != null) {
+                subBuilder = localizedDefaultValue_.toBuilder();
+              }
+              localizedDefaultValue_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedDefaultValue_);
+                localizedDefaultValue_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              validation_ = s;
+              break;
+            }
+            case 80: {
+
+              userCanSetValue_ = input.readBool();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              currencyCode_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultTelCountryCode_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionField_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Distribution.internal_static_io_DataCollectionField_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Distribution.DataCollectionField.class, com.passkit.grpc.Distribution.DataCollectionField.Builder.class);
+    }
+
+    public static final int UNIQUENAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uniqueName_;
+    /**
+     * <pre>
+     * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+     * Else, uniqueName (key) and value are stored under meta object.
+     * </pre>
+     *
+     * <code>string uniqueName = 1;</code>
+     * @return The uniqueName.
+     */
+    @java.lang.Override
+    public java.lang.String getUniqueName() {
+      java.lang.Object ref = uniqueName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uniqueName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+     * Else, uniqueName (key) and value are stored under meta object.
+     * </pre>
+     *
+     * <code>string uniqueName = 1;</code>
+     * @return The bytes for uniqueName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUniqueNameBytes() {
+      java.lang.Object ref = uniqueName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uniqueName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FIELDTYPE_FIELD_NUMBER = 2;
+    private int fieldType_;
+    /**
+     * <code>.io.FieldType fieldType = 2;</code>
+     * @return The enum numeric value on the wire for fieldType.
+     */
+    @java.lang.Override public int getFieldTypeValue() {
+      return fieldType_;
+    }
+    /**
+     * <code>.io.FieldType fieldType = 2;</code>
+     * @return The fieldType.
+     */
+    @java.lang.Override public com.passkit.grpc.Template.FieldType getFieldType() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Template.FieldType result = com.passkit.grpc.Template.FieldType.valueOf(fieldType_);
+      return result == null ? com.passkit.grpc.Template.FieldType.UNRECOGNIZED : result;
+    }
+
+    public static final int ISREQUIRED_FIELD_NUMBER = 3;
+    private boolean isRequired_;
+    /**
+     * <pre>
+     * If set true, the field is mandatory. If set false, the field is optional.
+     * </pre>
+     *
+     * <code>bool isRequired = 3;</code>
+     * @return The isRequired.
+     */
+    @java.lang.Override
+    public boolean getIsRequired() {
+      return isRequired_;
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 4;
+    private volatile java.lang.Object label_;
+    /**
+     * <pre>
+     * A text used for the data collection field label and pass field title.
+     * </pre>
+     *
+     * <code>string label = 4;</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A text used for the data collection field label and pass field title.
+     * </pre>
+     *
+     * <code>string label = 4;</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDLABEL_FIELD_NUMBER = 5;
+    private com.passkit.grpc.Localization.LocalizedString localizedLabel_;
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     * @return Whether the localizedLabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedLabel() {
+      return localizedLabel_ != null;
+    }
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     * @return The localizedLabel.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedLabel() {
+      return localizedLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLabel_;
+    }
+    /**
+     * <pre>
+     * This translates label text into different language.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedLabel = 5;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLabelOrBuilder() {
+      return getLocalizedLabel();
+    }
+
+    public static final int DATATYPE_FIELD_NUMBER = 6;
+    private int dataType_;
+    /**
+     * <pre>
+     * Data type you want to receive from your users.
+     * </pre>
+     *
+     * <code>.io.DataType dataType = 6;</code>
+     * @return The enum numeric value on the wire for dataType.
+     */
+    @java.lang.Override public int getDataTypeValue() {
+      return dataType_;
+    }
+    /**
+     * <pre>
+     * Data type you want to receive from your users.
+     * </pre>
+     *
+     * <code>.io.DataType dataType = 6;</code>
+     * @return The dataType.
+     */
+    @java.lang.Override public com.passkit.grpc.Template.DataType getDataType() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Template.DataType result = com.passkit.grpc.Template.DataType.valueOf(dataType_);
+      return result == null ? com.passkit.grpc.Template.DataType.UNRECOGNIZED : result;
+    }
+
+    public static final int DEFAULTVALUE_FIELD_NUMBER = 7;
+    private volatile java.lang.Object defaultValue_;
+    /**
+     * <pre>
+     * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+     * </pre>
+     *
+     * <code>string defaultValue = 7;</code>
+     * @return The defaultValue.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultValue() {
+      java.lang.Object ref = defaultValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultValue_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+     * </pre>
+     *
+     * <code>string defaultValue = 7;</code>
+     * @return The bytes for defaultValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultValueBytes() {
+      java.lang.Object ref = defaultValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDDEFAULTVALUE_FIELD_NUMBER = 8;
+    private com.passkit.grpc.Localization.LocalizedString localizedDefaultValue_;
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     * @return Whether the localizedDefaultValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedDefaultValue() {
+      return localizedDefaultValue_ != null;
+    }
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     * @return The localizedDefaultValue.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedDefaultValue() {
+      return localizedDefaultValue_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedDefaultValue_;
+    }
+    /**
+     * <pre>
+     * This translates default value of the field into different languages.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedDefaultValueOrBuilder() {
+      return getLocalizedDefaultValue();
+    }
+
+    public static final int VALIDATION_FIELD_NUMBER = 9;
+    private volatile java.lang.Object validation_;
+    /**
+     * <pre>
+     * A regex which allows you to set set custom validation rules for the data stored.
+     * </pre>
+     *
+     * <code>string validation = 9;</code>
+     * @return The validation.
+     */
+    @java.lang.Override
+    public java.lang.String getValidation() {
+      java.lang.Object ref = validation_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        validation_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A regex which allows you to set set custom validation rules for the data stored.
+     * </pre>
+     *
+     * <code>string validation = 9;</code>
+     * @return The bytes for validation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValidationBytes() {
+      java.lang.Object ref = validation_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        validation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERCANSETVALUE_FIELD_NUMBER = 10;
+    private boolean userCanSetValue_;
+    /**
+     * <pre>
+     * If false, a defaultValue or listOptions[0] will be used.
+     * </pre>
+     *
+     * <code>bool userCanSetValue = 10;</code>
+     * @return The userCanSetValue.
+     */
+    @java.lang.Override
+    public boolean getUserCanSetValue() {
+      return userCanSetValue_;
+    }
+
+    public static final int CURRENCYCODE_FIELD_NUMBER = 11;
+    private volatile java.lang.Object currencyCode_;
+    /**
+     * <pre>
+     * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+     * </pre>
+     *
+     * <code>string currencyCode = 11;</code>
+     * @return The currencyCode.
+     */
+    @java.lang.Override
+    public java.lang.String getCurrencyCode() {
+      java.lang.Object ref = currencyCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currencyCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+     * </pre>
+     *
+     * <code>string currencyCode = 11;</code>
+     * @return The bytes for currencyCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCurrencyCodeBytes() {
+      java.lang.Object ref = currencyCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currencyCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULTTELCOUNTRYCODE_FIELD_NUMBER = 12;
+    private volatile java.lang.Object defaultTelCountryCode_;
+    /**
+     * <pre>
+     * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+     * </pre>
+     *
+     * <code>string defaultTelCountryCode = 12;</code>
+     * @return The defaultTelCountryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultTelCountryCode() {
+      java.lang.Object ref = defaultTelCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultTelCountryCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+     * </pre>
+     *
+     * <code>string defaultTelCountryCode = 12;</code>
+     * @return The bytes for defaultTelCountryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultTelCountryCodeBytes() {
+      java.lang.Object ref = defaultTelCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultTelCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUniqueNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueName_);
+      }
+      if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
+        output.writeEnum(2, fieldType_);
+      }
+      if (isRequired_ != false) {
+        output.writeBool(3, isRequired_);
+      }
+      if (!getLabelBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
+      }
+      if (localizedLabel_ != null) {
+        output.writeMessage(5, getLocalizedLabel());
+      }
+      if (dataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
+        output.writeEnum(6, dataType_);
+      }
+      if (!getDefaultValueBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, defaultValue_);
+      }
+      if (localizedDefaultValue_ != null) {
+        output.writeMessage(8, getLocalizedDefaultValue());
+      }
+      if (!getValidationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, validation_);
+      }
+      if (userCanSetValue_ != false) {
+        output.writeBool(10, userCanSetValue_);
+      }
+      if (!getCurrencyCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, currencyCode_);
+      }
+      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, defaultTelCountryCode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUniqueNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueName_);
+      }
+      if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, fieldType_);
+      }
+      if (isRequired_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, isRequired_);
+      }
+      if (!getLabelBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
+      }
+      if (localizedLabel_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getLocalizedLabel());
+      }
+      if (dataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, dataType_);
+      }
+      if (!getDefaultValueBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, defaultValue_);
+      }
+      if (localizedDefaultValue_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLocalizedDefaultValue());
+      }
+      if (!getValidationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, validation_);
+      }
+      if (userCanSetValue_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, userCanSetValue_);
+      }
+      if (!getCurrencyCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, currencyCode_);
+      }
+      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, defaultTelCountryCode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Distribution.DataCollectionField)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Distribution.DataCollectionField other = (com.passkit.grpc.Distribution.DataCollectionField) obj;
+
+      if (!getUniqueName()
+          .equals(other.getUniqueName())) return false;
+      if (fieldType_ != other.fieldType_) return false;
+      if (getIsRequired()
+          != other.getIsRequired()) return false;
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (hasLocalizedLabel() != other.hasLocalizedLabel()) return false;
+      if (hasLocalizedLabel()) {
+        if (!getLocalizedLabel()
+            .equals(other.getLocalizedLabel())) return false;
+      }
+      if (dataType_ != other.dataType_) return false;
+      if (!getDefaultValue()
+          .equals(other.getDefaultValue())) return false;
+      if (hasLocalizedDefaultValue() != other.hasLocalizedDefaultValue()) return false;
+      if (hasLocalizedDefaultValue()) {
+        if (!getLocalizedDefaultValue()
+            .equals(other.getLocalizedDefaultValue())) return false;
+      }
+      if (!getValidation()
+          .equals(other.getValidation())) return false;
+      if (getUserCanSetValue()
+          != other.getUserCanSetValue()) return false;
+      if (!getCurrencyCode()
+          .equals(other.getCurrencyCode())) return false;
+      if (!getDefaultTelCountryCode()
+          .equals(other.getDefaultTelCountryCode())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UNIQUENAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUniqueName().hashCode();
+      hash = (37 * hash) + FIELDTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + fieldType_;
+      hash = (37 * hash) + ISREQUIRED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsRequired());
+      hash = (37 * hash) + LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLabel().hashCode();
+      if (hasLocalizedLabel()) {
+        hash = (37 * hash) + LOCALIZEDLABEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedLabel().hashCode();
+      }
+      hash = (37 * hash) + DATATYPE_FIELD_NUMBER;
+      hash = (53 * hash) + dataType_;
+      hash = (37 * hash) + DEFAULTVALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultValue().hashCode();
+      if (hasLocalizedDefaultValue()) {
+        hash = (37 * hash) + LOCALIZEDDEFAULTVALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedDefaultValue().hashCode();
+      }
+      hash = (37 * hash) + VALIDATION_FIELD_NUMBER;
+      hash = (53 * hash) + getValidation().hashCode();
+      hash = (37 * hash) + USERCANSETVALUE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUserCanSetValue());
+      hash = (37 * hash) + CURRENCYCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrencyCode().hashCode();
+      hash = (37 * hash) + DEFAULTTELCOUNTRYCODE_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultTelCountryCode().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.DataCollectionField parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Distribution.DataCollectionField prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.DataCollectionField}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.DataCollectionField)
+        com.passkit.grpc.Distribution.DataCollectionFieldOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionField_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionField_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Distribution.DataCollectionField.class, com.passkit.grpc.Distribution.DataCollectionField.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Distribution.DataCollectionField.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        uniqueName_ = "";
+
+        fieldType_ = 0;
+
+        isRequired_ = false;
+
+        label_ = "";
+
+        if (localizedLabelBuilder_ == null) {
+          localizedLabel_ = null;
+        } else {
+          localizedLabel_ = null;
+          localizedLabelBuilder_ = null;
+        }
+        dataType_ = 0;
+
+        defaultValue_ = "";
+
+        if (localizedDefaultValueBuilder_ == null) {
+          localizedDefaultValue_ = null;
+        } else {
+          localizedDefaultValue_ = null;
+          localizedDefaultValueBuilder_ = null;
+        }
+        validation_ = "";
+
+        userCanSetValue_ = false;
+
+        currencyCode_ = "";
+
+        defaultTelCountryCode_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Distribution.internal_static_io_DataCollectionField_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionField getDefaultInstanceForType() {
+        return com.passkit.grpc.Distribution.DataCollectionField.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionField build() {
+        com.passkit.grpc.Distribution.DataCollectionField result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.DataCollectionField buildPartial() {
+        com.passkit.grpc.Distribution.DataCollectionField result = new com.passkit.grpc.Distribution.DataCollectionField(this);
+        result.uniqueName_ = uniqueName_;
+        result.fieldType_ = fieldType_;
+        result.isRequired_ = isRequired_;
+        result.label_ = label_;
+        if (localizedLabelBuilder_ == null) {
+          result.localizedLabel_ = localizedLabel_;
+        } else {
+          result.localizedLabel_ = localizedLabelBuilder_.build();
+        }
+        result.dataType_ = dataType_;
+        result.defaultValue_ = defaultValue_;
+        if (localizedDefaultValueBuilder_ == null) {
+          result.localizedDefaultValue_ = localizedDefaultValue_;
+        } else {
+          result.localizedDefaultValue_ = localizedDefaultValueBuilder_.build();
+        }
+        result.validation_ = validation_;
+        result.userCanSetValue_ = userCanSetValue_;
+        result.currencyCode_ = currencyCode_;
+        result.defaultTelCountryCode_ = defaultTelCountryCode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Distribution.DataCollectionField) {
+          return mergeFrom((com.passkit.grpc.Distribution.DataCollectionField)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Distribution.DataCollectionField other) {
+        if (other == com.passkit.grpc.Distribution.DataCollectionField.getDefaultInstance()) return this;
+        if (!other.getUniqueName().isEmpty()) {
+          uniqueName_ = other.uniqueName_;
+          onChanged();
+        }
+        if (other.fieldType_ != 0) {
+          setFieldTypeValue(other.getFieldTypeValue());
+        }
+        if (other.getIsRequired() != false) {
+          setIsRequired(other.getIsRequired());
+        }
+        if (!other.getLabel().isEmpty()) {
+          label_ = other.label_;
+          onChanged();
+        }
+        if (other.hasLocalizedLabel()) {
+          mergeLocalizedLabel(other.getLocalizedLabel());
+        }
+        if (other.dataType_ != 0) {
+          setDataTypeValue(other.getDataTypeValue());
+        }
+        if (!other.getDefaultValue().isEmpty()) {
+          defaultValue_ = other.defaultValue_;
+          onChanged();
+        }
+        if (other.hasLocalizedDefaultValue()) {
+          mergeLocalizedDefaultValue(other.getLocalizedDefaultValue());
+        }
+        if (!other.getValidation().isEmpty()) {
+          validation_ = other.validation_;
+          onChanged();
+        }
+        if (other.getUserCanSetValue() != false) {
+          setUserCanSetValue(other.getUserCanSetValue());
+        }
+        if (!other.getCurrencyCode().isEmpty()) {
+          currencyCode_ = other.currencyCode_;
+          onChanged();
+        }
+        if (!other.getDefaultTelCountryCode().isEmpty()) {
+          defaultTelCountryCode_ = other.defaultTelCountryCode_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Distribution.DataCollectionField parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Distribution.DataCollectionField) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uniqueName_ = "";
+      /**
+       * <pre>
+       * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+       * Else, uniqueName (key) and value are stored under meta object.
+       * </pre>
+       *
+       * <code>string uniqueName = 1;</code>
+       * @return The uniqueName.
+       */
+      public java.lang.String getUniqueName() {
+        java.lang.Object ref = uniqueName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uniqueName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+       * Else, uniqueName (key) and value are stored under meta object.
+       * </pre>
+       *
+       * <code>string uniqueName = 1;</code>
+       * @return The bytes for uniqueName.
+       */
+      public com.google.protobuf.ByteString
+          getUniqueNameBytes() {
+        java.lang.Object ref = uniqueName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uniqueName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+       * Else, uniqueName (key) and value are stored under meta object.
+       * </pre>
+       *
+       * <code>string uniqueName = 1;</code>
+       * @param value The uniqueName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uniqueName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+       * Else, uniqueName (key) and value are stored under meta object.
+       * </pre>
+       *
+       * <code>string uniqueName = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUniqueName() {
+        
+        uniqueName_ = getDefaultInstance().getUniqueName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If PII key is set as an unique name of the field, collected data will be stored under PII (ex. surname, forename).
+       * Else, uniqueName (key) and value are stored under meta object.
+       * </pre>
+       *
+       * <code>string uniqueName = 1;</code>
+       * @param value The bytes for uniqueName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUniqueNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uniqueName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int fieldType_ = 0;
+      /**
+       * <code>.io.FieldType fieldType = 2;</code>
+       * @return The enum numeric value on the wire for fieldType.
+       */
+      @java.lang.Override public int getFieldTypeValue() {
+        return fieldType_;
+      }
+      /**
+       * <code>.io.FieldType fieldType = 2;</code>
+       * @param value The enum numeric value on the wire for fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldTypeValue(int value) {
+        
+        fieldType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.FieldType fieldType = 2;</code>
+       * @return The fieldType.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Template.FieldType getFieldType() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Template.FieldType result = com.passkit.grpc.Template.FieldType.valueOf(fieldType_);
+        return result == null ? com.passkit.grpc.Template.FieldType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.io.FieldType fieldType = 2;</code>
+       * @param value The fieldType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldType(com.passkit.grpc.Template.FieldType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        fieldType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.FieldType fieldType = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFieldType() {
+        
+        fieldType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isRequired_ ;
+      /**
+       * <pre>
+       * If set true, the field is mandatory. If set false, the field is optional.
+       * </pre>
+       *
+       * <code>bool isRequired = 3;</code>
+       * @return The isRequired.
+       */
+      @java.lang.Override
+      public boolean getIsRequired() {
+        return isRequired_;
+      }
+      /**
+       * <pre>
+       * If set true, the field is mandatory. If set false, the field is optional.
+       * </pre>
+       *
+       * <code>bool isRequired = 3;</code>
+       * @param value The isRequired to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsRequired(boolean value) {
+        
+        isRequired_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If set true, the field is mandatory. If set false, the field is optional.
+       * </pre>
+       *
+       * <code>bool isRequired = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsRequired() {
+        
+        isRequired_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object label_ = "";
+      /**
+       * <pre>
+       * A text used for the data collection field label and pass field title.
+       * </pre>
+       *
+       * <code>string label = 4;</code>
+       * @return The label.
+       */
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A text used for the data collection field label and pass field title.
+       * </pre>
+       *
+       * <code>string label = 4;</code>
+       * @return The bytes for label.
+       */
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A text used for the data collection field label and pass field title.
+       * </pre>
+       *
+       * <code>string label = 4;</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        label_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A text used for the data collection field label and pass field title.
+       * </pre>
+       *
+       * <code>string label = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        
+        label_ = getDefaultInstance().getLabel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A text used for the data collection field label and pass field title.
+       * </pre>
+       *
+       * <code>string label = 4;</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        label_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedLabel_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedLabelBuilder_;
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       * @return Whether the localizedLabel field is set.
+       */
+      public boolean hasLocalizedLabel() {
+        return localizedLabelBuilder_ != null || localizedLabel_ != null;
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       * @return The localizedLabel.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedLabel() {
+        if (localizedLabelBuilder_ == null) {
+          return localizedLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLabel_;
+        } else {
+          return localizedLabelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public Builder setLocalizedLabel(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedLabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedLabel_ = value;
+          onChanged();
+        } else {
+          localizedLabelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public Builder setLocalizedLabel(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedLabelBuilder_ == null) {
+          localizedLabel_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedLabelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public Builder mergeLocalizedLabel(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedLabelBuilder_ == null) {
+          if (localizedLabel_ != null) {
+            localizedLabel_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLabel_).mergeFrom(value).buildPartial();
+          } else {
+            localizedLabel_ = value;
+          }
+          onChanged();
+        } else {
+          localizedLabelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public Builder clearLocalizedLabel() {
+        if (localizedLabelBuilder_ == null) {
+          localizedLabel_ = null;
+          onChanged();
+        } else {
+          localizedLabel_ = null;
+          localizedLabelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLabelBuilder() {
+        
+        onChanged();
+        return getLocalizedLabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLabelOrBuilder() {
+        if (localizedLabelBuilder_ != null) {
+          return localizedLabelBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedLabel_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLabel_;
+        }
+      }
+      /**
+       * <pre>
+       * This translates label text into different language.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedLabel = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedLabelFieldBuilder() {
+        if (localizedLabelBuilder_ == null) {
+          localizedLabelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedLabel(),
+                  getParentForChildren(),
+                  isClean());
+          localizedLabel_ = null;
+        }
+        return localizedLabelBuilder_;
+      }
+
+      private int dataType_ = 0;
+      /**
+       * <pre>
+       * Data type you want to receive from your users.
+       * </pre>
+       *
+       * <code>.io.DataType dataType = 6;</code>
+       * @return The enum numeric value on the wire for dataType.
+       */
+      @java.lang.Override public int getDataTypeValue() {
+        return dataType_;
+      }
+      /**
+       * <pre>
+       * Data type you want to receive from your users.
+       * </pre>
+       *
+       * <code>.io.DataType dataType = 6;</code>
+       * @param value The enum numeric value on the wire for dataType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataTypeValue(int value) {
+        
+        dataType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data type you want to receive from your users.
+       * </pre>
+       *
+       * <code>.io.DataType dataType = 6;</code>
+       * @return The dataType.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Template.DataType getDataType() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Template.DataType result = com.passkit.grpc.Template.DataType.valueOf(dataType_);
+        return result == null ? com.passkit.grpc.Template.DataType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Data type you want to receive from your users.
+       * </pre>
+       *
+       * <code>.io.DataType dataType = 6;</code>
+       * @param value The dataType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataType(com.passkit.grpc.Template.DataType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        dataType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Data type you want to receive from your users.
+       * </pre>
+       *
+       * <code>.io.DataType dataType = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataType() {
+        
+        dataType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultValue_ = "";
+      /**
+       * <pre>
+       * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+       * </pre>
+       *
+       * <code>string defaultValue = 7;</code>
+       * @return The defaultValue.
+       */
+      public java.lang.String getDefaultValue() {
+        java.lang.Object ref = defaultValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultValue_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+       * </pre>
+       *
+       * <code>string defaultValue = 7;</code>
+       * @return The bytes for defaultValue.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultValueBytes() {
+        java.lang.Object ref = defaultValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+       * </pre>
+       *
+       * <code>string defaultValue = 7;</code>
+       * @param value The defaultValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+       * </pre>
+       *
+       * <code>string defaultValue = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultValue() {
+        
+        defaultValue_ = getDefaultInstance().getDefaultValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional default value or text. E.g. a default set of terms an conditions. Value can contain a protocol field in the format of ${member.externalId}.
+       * </pre>
+       *
+       * <code>string defaultValue = 7;</code>
+       * @param value The bytes for defaultValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultValue_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedDefaultValue_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedDefaultValueBuilder_;
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       * @return Whether the localizedDefaultValue field is set.
+       */
+      public boolean hasLocalizedDefaultValue() {
+        return localizedDefaultValueBuilder_ != null || localizedDefaultValue_ != null;
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       * @return The localizedDefaultValue.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedDefaultValue() {
+        if (localizedDefaultValueBuilder_ == null) {
+          return localizedDefaultValue_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedDefaultValue_;
+        } else {
+          return localizedDefaultValueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public Builder setLocalizedDefaultValue(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedDefaultValueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedDefaultValue_ = value;
+          onChanged();
+        } else {
+          localizedDefaultValueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public Builder setLocalizedDefaultValue(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedDefaultValueBuilder_ == null) {
+          localizedDefaultValue_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedDefaultValueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public Builder mergeLocalizedDefaultValue(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedDefaultValueBuilder_ == null) {
+          if (localizedDefaultValue_ != null) {
+            localizedDefaultValue_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedDefaultValue_).mergeFrom(value).buildPartial();
+          } else {
+            localizedDefaultValue_ = value;
+          }
+          onChanged();
+        } else {
+          localizedDefaultValueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public Builder clearLocalizedDefaultValue() {
+        if (localizedDefaultValueBuilder_ == null) {
+          localizedDefaultValue_ = null;
+          onChanged();
+        } else {
+          localizedDefaultValue_ = null;
+          localizedDefaultValueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedDefaultValueBuilder() {
+        
+        onChanged();
+        return getLocalizedDefaultValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedDefaultValueOrBuilder() {
+        if (localizedDefaultValueBuilder_ != null) {
+          return localizedDefaultValueBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedDefaultValue_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedDefaultValue_;
+        }
+      }
+      /**
+       * <pre>
+       * This translates default value of the field into different languages.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedDefaultValueFieldBuilder() {
+        if (localizedDefaultValueBuilder_ == null) {
+          localizedDefaultValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedDefaultValue(),
+                  getParentForChildren(),
+                  isClean());
+          localizedDefaultValue_ = null;
+        }
+        return localizedDefaultValueBuilder_;
+      }
+
+      private java.lang.Object validation_ = "";
+      /**
+       * <pre>
+       * A regex which allows you to set set custom validation rules for the data stored.
+       * </pre>
+       *
+       * <code>string validation = 9;</code>
+       * @return The validation.
+       */
+      public java.lang.String getValidation() {
+        java.lang.Object ref = validation_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          validation_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A regex which allows you to set set custom validation rules for the data stored.
+       * </pre>
+       *
+       * <code>string validation = 9;</code>
+       * @return The bytes for validation.
+       */
+      public com.google.protobuf.ByteString
+          getValidationBytes() {
+        java.lang.Object ref = validation_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          validation_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A regex which allows you to set set custom validation rules for the data stored.
+       * </pre>
+       *
+       * <code>string validation = 9;</code>
+       * @param value The validation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidation(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        validation_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A regex which allows you to set set custom validation rules for the data stored.
+       * </pre>
+       *
+       * <code>string validation = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidation() {
+        
+        validation_ = getDefaultInstance().getValidation();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A regex which allows you to set set custom validation rules for the data stored.
+       * </pre>
+       *
+       * <code>string validation = 9;</code>
+       * @param value The bytes for validation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        validation_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean userCanSetValue_ ;
+      /**
+       * <pre>
+       * If false, a defaultValue or listOptions[0] will be used.
+       * </pre>
+       *
+       * <code>bool userCanSetValue = 10;</code>
+       * @return The userCanSetValue.
+       */
+      @java.lang.Override
+      public boolean getUserCanSetValue() {
+        return userCanSetValue_;
+      }
+      /**
+       * <pre>
+       * If false, a defaultValue or listOptions[0] will be used.
+       * </pre>
+       *
+       * <code>bool userCanSetValue = 10;</code>
+       * @param value The userCanSetValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserCanSetValue(boolean value) {
+        
+        userCanSetValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If false, a defaultValue or listOptions[0] will be used.
+       * </pre>
+       *
+       * <code>bool userCanSetValue = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserCanSetValue() {
+        
+        userCanSetValue_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object currencyCode_ = "";
+      /**
+       * <pre>
+       * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+       * </pre>
+       *
+       * <code>string currencyCode = 11;</code>
+       * @return The currencyCode.
+       */
+      public java.lang.String getCurrencyCode() {
+        java.lang.Object ref = currencyCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currencyCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+       * </pre>
+       *
+       * <code>string currencyCode = 11;</code>
+       * @return The bytes for currencyCode.
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyCodeBytes() {
+        java.lang.Object ref = currencyCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currencyCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+       * </pre>
+       *
+       * <code>string currencyCode = 11;</code>
+       * @param value The currencyCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currencyCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+       * </pre>
+       *
+       * <code>string currencyCode = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrencyCode() {
+        
+        currencyCode_ = getDefaultInstance().getCurrencyCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The currency code (e.g. USD, EUR) to display with money value if data type is set as currency.
+       * </pre>
+       *
+       * <code>string currencyCode = 11;</code>
+       * @param value The bytes for currencyCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrencyCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        currencyCode_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultTelCountryCode_ = "";
+      /**
+       * <pre>
+       * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+       * </pre>
+       *
+       * <code>string defaultTelCountryCode = 12;</code>
+       * @return The defaultTelCountryCode.
+       */
+      public java.lang.String getDefaultTelCountryCode() {
+        java.lang.Object ref = defaultTelCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultTelCountryCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+       * </pre>
+       *
+       * <code>string defaultTelCountryCode = 12;</code>
+       * @return The bytes for defaultTelCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultTelCountryCodeBytes() {
+        java.lang.Object ref = defaultTelCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultTelCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+       * </pre>
+       *
+       * <code>string defaultTelCountryCode = 12;</code>
+       * @param value The defaultTelCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTelCountryCode(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultTelCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+       * </pre>
+       *
+       * <code>string defaultTelCountryCode = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultTelCountryCode() {
+        
+        defaultTelCountryCode_ = getDefaultInstance().getDefaultTelCountryCode();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default international telephone code determines the default country flag of the tel input field (e.g. +852, +44).
+       * </pre>
+       *
+       * <code>string defaultTelCountryCode = 12;</code>
+       * @param value The bytes for defaultTelCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultTelCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultTelCountryCode_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.DataCollectionField)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.DataCollectionField)
+    private static final com.passkit.grpc.Distribution.DataCollectionField DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.DataCollectionField();
+    }
+
+    public static com.passkit.grpc.Distribution.DataCollectionField getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataCollectionField>
+        PARSER = new com.google.protobuf.AbstractParser<DataCollectionField>() {
+      @java.lang.Override
+      public DataCollectionField parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DataCollectionField(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataCollectionField> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataCollectionField> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.DataCollectionField getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_EmailDistributionRequest_descriptor;
   private static final 
@@ -10675,6 +14600,16 @@ public final class Distribution {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DataCollectionFields_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DataCollectionFields_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_DataCollectionField_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_DataCollectionField_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10687,51 +14622,67 @@ public final class Distribution {
       "\n\034io/common/distribution.proto\022\002io\032\036io/c" +
       "ommon/common_objects.proto\032\034io/common/lo" +
       "calization.proto\032\031io/common/protocols.pr" +
-      "oto\032.protoc-gen-openapiv2/options/annota" +
-      "tions.proto\"d\n\030EmailDistributionRequest\022" +
-      "\n\n\002id\030\001 \001(\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassP" +
-      "rotocol\022\030\n\020alternativeEmail\030\003 \001(\t\"\244\001\n\024Sm" +
-      "artPassLinkRequest\022\'\n\026projectDistributio" +
-      "nUrl\030\001 \001(\0132\007.io.Url\0224\n\006fields\030\002 \003(\0132$.io" +
-      ".SmartPassLinkRequest.FieldsEntry\032-\n\013Fie" +
-      "ldsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "\"\233\001\n\024DistributionSettings\0225\n\024distributio" +
-      "nChannels\030\001 \003(\0162\027.io.DistributionChannel" +
-      "\022\'\n\014welcomeEmail\030\002 \001(\0132\021.io.EmailTemplat" +
-      "e\022#\n\nwelcomeSms\030\003 \001(\0132\017.io.SmsTemplate\"\353" +
-      "\004\n\rEmailTemplate\022\017\n\007subject\030\001 \001(\t\022-\n\020loc" +
-      "alizedSubject\030\002 \001(\0132\023.io.LocalizedString" +
-      "\022\027\n\017bodyTextContent\030\003 \001(\t\0225\n\030localizedBo" +
-      "dyTextContent\030\004 \001(\0132\023.io.LocalizedString" +
-      "\022\027\n\017bodyHtmlContent\030\005 \001(\t\0225\n\030localizedBo" +
-      "dyHtmlContent\030\006 \001(\0132\023.io.LocalizedString" +
-      "\022-\n\rconfiguration\030\007 \001(\0132\026.io.EmailConfig" +
-      "uration\022\022\n\nbuttonText\030\010 \001(\t\022\027\n\017buttonTex" +
-      "tColor\030\t \001(\t\022\035\n\025buttonBackgroundColor\030\n " +
-      "\001(\t\022\032\n\022buttonBorderRadius\030\013 \001(\t\022\031\n\021foote" +
-      "rTextContent\030\014 \001(\t\0227\n\032localizedFooterTex" +
-      "tContent\030\r \001(\0132\023.io.LocalizedString\022\031\n\021f" +
-      "ooterHtmlContent\030\016 \001(\t\0227\n\032localizedFoote" +
-      "rHtmlContent\030\017 \001(\0132\023.io.LocalizedString\022" +
-      "\036\n\026messageBackgroundColor\030\020 \001(\t\022\033\n\023pageB" +
-      "ackgroundColor\030\021 \001(\t\"c\n\022EmailConfigurati" +
-      "on\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailFromName\030\002" +
-      " \001(\t\022#\n\033EmailFromVerifiedForSending\030\003 \001(" +
-      "\010\"a\n\013SmsTemplate\022\026\n\007content\030\001 \001(\tB\005\222A\002xF" +
-      "\0224\n\020localizedContent\030\002 \001(\0132\023.io.Localize" +
-      "dStringB\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolmentUrls\022\017" +
-      "\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001(\t\022C\n\021ti" +
-      "erEnrolmentUrls\030\003 \003(\0132(.io.EnrolmentUrls" +
-      ".TierEnrolmentUrlsEntry\022A\n\020tierEnrolment" +
-      "QRs\030\004 \003(\0132\'.io.EnrolmentUrls.TierEnrolme" +
-      "ntQRsEntry\0328\n\026TierEnrolmentUrlsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025TierEnro" +
-      "lmentQRsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001*N\n\023DistributionChannel\022\023\n\017NO_DISTR" +
-      "IBUTION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_" +
-      "SMS\020\002BG\n\020com.passkit.grpcZ$stash.passkit" +
-      ".com/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006" +
-      "proto3"
+      "oto\032\030io/common/template.proto\032.protoc-ge" +
+      "n-openapiv2/options/annotations.proto\"\211\001" +
+      "\n\030EmailDistributionRequest\022\n\n\002id\030\001 \001(\t\022\022" +
+      "\n\nexternalId\030\002 \001(\t\022\017\n\007classId\030\003 \001(\t\022\"\n\010p" +
+      "rotocol\030\004 \001(\0162\020.io.PassProtocol\022\030\n\020alter" +
+      "nativeEmail\030\005 \001(\t\"\244\001\n\024SmartPassLinkReque" +
+      "st\022\'\n\026projectDistributionUrl\030\001 \001(\0132\007.io." +
+      "Url\0224\n\006fields\030\002 \003(\0132$.io.SmartPassLinkRe" +
+      "quest.FieldsEntry\032-\n\013FieldsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\233\001\n\024Distributio" +
+      "nSettings\0225\n\024distributionChannels\030\001 \003(\0162" +
+      "\027.io.DistributionChannel\022\'\n\014welcomeEmail" +
+      "\030\002 \001(\0132\021.io.EmailTemplate\022#\n\nwelcomeSms\030" +
+      "\003 \001(\0132\017.io.SmsTemplate\"\204\005\n\rEmailTemplate" +
+      "\022\017\n\007subject\030\001 \001(\t\022-\n\020localizedSubject\030\002 " +
+      "\001(\0132\023.io.LocalizedString\022\027\n\017bodyTextCont" +
+      "ent\030\003 \001(\t\0225\n\030localizedBodyTextContent\030\004 " +
+      "\001(\0132\023.io.LocalizedString\022\027\n\017bodyHtmlCont" +
+      "ent\030\005 \001(\t\0225\n\030localizedBodyHtmlContent\030\006 " +
+      "\001(\0132\023.io.LocalizedString\022-\n\rconfiguratio" +
+      "n\030\007 \001(\0132\026.io.EmailConfiguration\022\022\n\nbutto" +
+      "nText\030\010 \001(\t\022\027\n\017buttonTextColor\030\t \001(\t\022\035\n\025" +
+      "buttonBackgroundColor\030\n \001(\t\022\032\n\022buttonBor" +
+      "derRadius\030\013 \001(\t\022\031\n\021footerTextContent\030\014 \001" +
+      "(\t\0227\n\032localizedFooterTextContent\030\r \001(\0132\023" +
+      ".io.LocalizedString\022\031\n\021footerHtmlContent" +
+      "\030\016 \001(\t\0227\n\032localizedFooterHtmlContent\030\017 \001" +
+      "(\0132\023.io.LocalizedString\022\036\n\026messageBackgr" +
+      "oundColor\030\020 \001(\t\022\033\n\023pageBackgroundColor\030\021" +
+      " \001(\t\022\027\n\017templateOptions\030\022 \001(\005\"c\n\022EmailCo" +
+      "nfiguration\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailF" +
+      "romName\030\002 \001(\t\022#\n\033EmailFromVerifiedForSen" +
+      "ding\030\003 \001(\010\"a\n\013SmsTemplate\022\026\n\007content\030\001 \001" +
+      "(\tB\005\222A\002xF\0224\n\020localizedContent\030\002 \001(\0132\023.io" +
+      ".LocalizedStringB\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolm" +
+      "entUrls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 " +
+      "\001(\t\022C\n\021tierEnrolmentUrls\030\003 \003(\0132(.io.Enro" +
+      "lmentUrls.TierEnrolmentUrlsEntry\022A\n\020tier" +
+      "EnrolmentQRs\030\004 \003(\0132\'.io.EnrolmentUrls.Ti" +
+      "erEnrolmentQRsEntry\0328\n\026TierEnrolmentUrls" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n" +
+      "\025TierEnrolmentQRsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"?\n\024DataCollectionFields\022\'" +
+      "\n\006fields\030\001 \003(\0132\027.io.DataCollectionField\"" +
+      "\347\002\n\023DataCollectionField\022\022\n\nuniqueName\030\001 " +
+      "\001(\t\022 \n\tfieldType\030\002 \001(\0162\r.io.FieldType\022\022\n" +
+      "\nisRequired\030\003 \001(\010\022\r\n\005label\030\004 \001(\t\022+\n\016loca" +
+      "lizedLabel\030\005 \001(\0132\023.io.LocalizedString\022\036\n" +
+      "\010dataType\030\006 \001(\0162\014.io.DataType\022\024\n\014default" +
+      "Value\030\007 \001(\t\0222\n\025localizedDefaultValue\030\010 \001" +
+      "(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\t " +
+      "\001(\t\022\027\n\017userCanSetValue\030\n \001(\010\022\024\n\014currency" +
+      "Code\030\013 \001(\t\022\035\n\025defaultTelCountryCode\030\014 \001(" +
+      "\t*N\n\023DistributionChannel\022\023\n\017NO_DISTRIBUT" +
+      "ION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020" +
+      "\002*x\n\024EmailTemplateOptions\022\027\n\023EMAIL_TEMP_" +
+      "OPT_NONE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID" +
+      "\020\001\022!\n\035EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010" +
+      "\004\020\004BG\n\020com.passkit.grpcZ$stash.passkit.c" +
+      "om/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10739,6 +14690,7 @@ public final class Distribution {
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.Protocols.getDescriptor(),
+          com.passkit.grpc.Template.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_io_EmailDistributionRequest_descriptor =
@@ -10746,7 +14698,7 @@ public final class Distribution {
     internal_static_io_EmailDistributionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_EmailDistributionRequest_descriptor,
-        new java.lang.String[] { "Id", "Protocol", "AlternativeEmail", });
+        new java.lang.String[] { "Id", "ExternalId", "ClassId", "Protocol", "AlternativeEmail", });
     internal_static_io_SmartPassLinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_SmartPassLinkRequest_fieldAccessorTable = new
@@ -10770,7 +14722,7 @@ public final class Distribution {
     internal_static_io_EmailTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_EmailTemplate_descriptor,
-        new java.lang.String[] { "Subject", "LocalizedSubject", "BodyTextContent", "LocalizedBodyTextContent", "BodyHtmlContent", "LocalizedBodyHtmlContent", "Configuration", "ButtonText", "ButtonTextColor", "ButtonBackgroundColor", "ButtonBorderRadius", "FooterTextContent", "LocalizedFooterTextContent", "FooterHtmlContent", "LocalizedFooterHtmlContent", "MessageBackgroundColor", "PageBackgroundColor", });
+        new java.lang.String[] { "Subject", "LocalizedSubject", "BodyTextContent", "LocalizedBodyTextContent", "BodyHtmlContent", "LocalizedBodyHtmlContent", "Configuration", "ButtonText", "ButtonTextColor", "ButtonBackgroundColor", "ButtonBorderRadius", "FooterTextContent", "LocalizedFooterTextContent", "FooterHtmlContent", "LocalizedFooterHtmlContent", "MessageBackgroundColor", "PageBackgroundColor", "TemplateOptions", });
     internal_static_io_EmailConfiguration_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_io_EmailConfiguration_fieldAccessorTable = new
@@ -10801,6 +14753,18 @@ public final class Distribution {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_EnrolmentUrls_TierEnrolmentQRsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_io_DataCollectionFields_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_io_DataCollectionFields_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DataCollectionFields_descriptor,
+        new java.lang.String[] { "Fields", });
+    internal_static_io_DataCollectionField_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_io_DataCollectionField_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_DataCollectionField_descriptor,
+        new java.lang.String[] { "UniqueName", "FieldType", "IsRequired", "Label", "LocalizedLabel", "DataType", "DefaultValue", "LocalizedDefaultValue", "Validation", "UserCanSetValue", "CurrencyCode", "DefaultTelCountryCode", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);
@@ -10809,6 +14773,7 @@ public final class Distribution {
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.Protocols.getDescriptor();
+    com.passkit.grpc.Template.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 

@@ -6222,44 +6222,42 @@ public final class PassOuterClass {
     java.lang.String[] descriptorData = {
       "\n\021io/raw/pass.proto\022\003raw\032\037google/protobu" +
       "f/timestamp.proto\032\027io/common/metrics.pro" +
-      "to\032\032io/common/pagination.proto\032\026io/commo" +
-      "n/filter.proto\032\024io/common/pass.proto\032\030io" +
-      "/common/personal.proto\032.protoc-gen-opena" +
-      "piv2/options/annotations.proto\"\307\005\n\004Pass\022" +
-      "\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\025\n\rpassP" +
-      "rojectId\030\003 \001(\t\022\026\n\016passTemplateId\030\004 \001(\t\022#" +
-      "\n\017personalDetails\030\005 \001(\0132\n.io.Person\022/\n\013d" +
-      "ynamicData\030\006 \003(\0132\032.raw.Pass.DynamicDataE" +
-      "ntry\022\016\n\006optOut\030\010 \001(\010\022\020\n\010isVoided\030\t \001(\010\0222" +
-      "\n\016invalidateDate\030\n \001(\0132\032.google.protobuf" +
-      ".Timestamp\022.\n\nexpiryDate\030\013 \001(\0132\032.google." +
-      "protobuf.Timestamp\022$\n\013passOptions\030\014 \001(\0132" +
-      "\017.io.PassOptions\022(\n\rpassOverrides\030\r \001(\0132" +
-      "\021.io.PassOverrides\022\"\n\014passMetaData\030\016 \001(\013" +
-      "2\014.io.Metadata\022+\n\007created\030\017 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\007updated\030\020 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\0322\n\020DynamicDataE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\221\001\222" +
-      "A\215\001\n\212\001*\004Pass2aPass contains dynamic info" +
-      "rmation that combined with a Pass Projec" +
-      "t & Template results in a pass.\322\001\rpassPr" +
-      "ojectId\322\001\016passTemplateId\"J\n\035PassRecordBy" +
-      "ExternalIdRequest\022\025\n\rpassProjectId\030\001 \001(\t" +
-      "\022\022\n\nexternalId\030\002 \001(\t\"U\n\036ListPassesByPass" +
-      "ProjectRequest\022\025\n\rpassProjectId\030\001 \001(\t\022\034\n" +
-      "\007filters\030\002 \001(\0132\013.io.Filters\"V\n\037ListPasse" +
-      "sByPassTemplateRequest\022\025\n\rpassProjectId\030" +
-      "\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io.FiltersBS\n\024c" +
-      "om.passkit.grpc.RawZ(stash.passkit.com/i" +
-      "o/model/sdk/go/io/raw\252\002\020PassKit.Grpc.Raw" +
-      "b\006proto3"
+      "to\032\026io/common/filter.proto\032\024io/common/pa" +
+      "ss.proto\032\030io/common/personal.proto\032.prot" +
+      "oc-gen-openapiv2/options/annotations.pro" +
+      "to\"\307\005\n\004Pass\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 " +
+      "\001(\t\022\025\n\rpassProjectId\030\003 \001(\t\022\026\n\016passTempla" +
+      "teId\030\004 \001(\t\022#\n\017personalDetails\030\005 \001(\0132\n.io" +
+      ".Person\022/\n\013dynamicData\030\006 \003(\0132\032.raw.Pass." +
+      "DynamicDataEntry\022\016\n\006optOut\030\010 \001(\010\022\020\n\010isVo" +
+      "ided\030\t \001(\010\0222\n\016invalidateDate\030\n \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022.\n\nexpiryDate\030\013 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022$\n\013passOp" +
+      "tions\030\014 \001(\0132\017.io.PassOptions\022(\n\rpassOver" +
+      "rides\030\r \001(\0132\021.io.PassOverrides\022\"\n\014passMe" +
+      "taData\030\016 \001(\0132\014.io.Metadata\022+\n\007created\030\017 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022+\n\007updat" +
+      "ed\030\020 \001(\0132\032.google.protobuf.Timestamp\0322\n\020" +
+      "DynamicDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001:\221\001\222A\215\001\n\212\001*\004Pass2aPass contains " +
+      "dynamic information that combined with a" +
+      " Pass Project & Template results in a pa" +
+      "ss.\322\001\rpassProjectId\322\001\016passTemplateId\"J\n\035" +
+      "PassRecordByExternalIdRequest\022\025\n\rpassPro" +
+      "jectId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\"U\n\036List" +
+      "PassesByPassProjectRequest\022\025\n\rpassProjec" +
+      "tId\030\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\"" +
+      "V\n\037ListPassesByPassTemplateRequest\022\025\n\rpa" +
+      "ssProjectId\030\001 \001(\t\022\034\n\007filters\030\002 \001(\0132\013.io." +
+      "FiltersBS\n\024com.passkit.grpc.RawZ(stash.p" +
+      "asskit.com/io/model/sdk/go/io/raw\252\002\020Pass" +
+      "Kit.Grpc.Rawb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
-          com.passkit.grpc.PaginationOuterClass.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
           com.passkit.grpc.PassOuterClass.getDescriptor(),
           com.passkit.grpc.Personal.getDescriptor(),
@@ -6302,7 +6300,6 @@ public final class PassOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     com.passkit.grpc.MetricsOuterClass.getDescriptor();
-    com.passkit.grpc.PaginationOuterClass.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
     com.passkit.grpc.PassOuterClass.getDescriptor();
     com.passkit.grpc.Personal.getDescriptor();

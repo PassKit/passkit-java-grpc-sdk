@@ -32,17 +32,30 @@ public final class ARpc {
       "{classId}\222A{\n\tAnalytics\022\rGet Analytics\032\033" +
       "Retrieves an analytics dataJ\"\n\003403\022\033\n\031Us" +
       "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
-      " was not found.B\213\003\n\032com.passkit.grpc.Ana" +
+      " was not found.B\241\007\n\032com.passkit.grpc.Ana" +
       "lyticsZ.stash.passkit.com/io/model/sdk/g" +
       "o/io/analytics\252\002\026PassKit.Grpc.Analytics\222" +
-      "A\242\002\022\370\001\n\025PassKit Analytics API\022_The PassK" +
+      "A\270\006\022\363\001\n\025PassKit Analytics API\022_The PassK" +
       "it Analytics API lets you track the perf" +
       "ormance of Apple Wallet and Google Pay p" +
       "asses.\0328https://passkit.com/legal/terms-" +
       "of-subscription-service/\"?\n\017PassKit Supp" +
       "ort\022\027https://docs.passkit.io\032\023support@pa" +
-      "sskit.com2\0030.1*\001\0022\020application/json:\020app" +
-      "lication/jsonb\006proto3"
+      "sskit.com*\001\0022\020application/json:\020applicat" +
+      "ion/jsonR9\n\003200\0222\n(Returned when the req" +
+      "uest is successful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Re" +
+      "turned when wrong user input is provided" +
+      ".R0\n\003401\022)\n\'Returned when the user is un" +
+      "authorized.RP\n\003403\022I\nGReturned when the " +
+      "user does not have permission to access " +
+      "the resource.R;\n\003404\0224\n*Returned when th" +
+      "e resource does not exist.\022\006\n\004\232\002\001\007R<\n\00350" +
+      "0\0225\n+Returned when there is an unexpecte" +
+      "d error.\022\006\n\004\232\002\001\007RW\n\003503\022P\nNServer is una" +
+      "vailable. Back off for 250ms and repeat " +
+      "request until successful.Z>\n<\n\napiKeyAut" +
+      "h\022.\010\002\022\031JWT Authentication token.\032\rAuthor" +
+      "ization \002b\020\n\016\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

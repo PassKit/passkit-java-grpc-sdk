@@ -245,6 +245,16 @@ public final class Expiry {
      * </pre>
      *
      * <code>uint32 expireAfterXDays = 3;</code>
+     * @return Whether the expireAfterXDays field is set.
+     */
+    boolean hasExpireAfterXDays();
+    /**
+     * <pre>
+     * Number of days the digital membership card is expired after the enrolment date.
+     * Please set expiryType as EXPIRE_AFTER_X_DAYS.
+     * </pre>
+     *
+     * <code>uint32 expireAfterXDays = 3;</code>
      * @return The expireAfterXDays.
      */
     int getExpireAfterXDays();
@@ -465,6 +475,19 @@ public final class Expiry {
     }
 
     public static final int EXPIREAFTERXDAYS_FIELD_NUMBER = 3;
+    /**
+     * <pre>
+     * Number of days the digital membership card is expired after the enrolment date.
+     * Please set expiryType as EXPIRE_AFTER_X_DAYS.
+     * </pre>
+     *
+     * <code>uint32 expireAfterXDays = 3;</code>
+     * @return Whether the expireAfterXDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasExpireAfterXDays() {
+      return expiryOneofCase_ == 3;
+    }
     /**
      * <pre>
      * Number of days the digital membership card is expired after the enrolment date.
@@ -1109,6 +1132,18 @@ public final class Expiry {
         return fixedExpiryDateBuilder_;
       }
 
+      /**
+       * <pre>
+       * Number of days the digital membership card is expired after the enrolment date.
+       * Please set expiryType as EXPIRE_AFTER_X_DAYS.
+       * </pre>
+       *
+       * <code>uint32 expireAfterXDays = 3;</code>
+       * @return Whether the expireAfterXDays field is set.
+       */
+      public boolean hasExpireAfterXDays() {
+        return expiryOneofCase_ == 3;
+      }
       /**
        * <pre>
        * Number of days the digital membership card is expired after the enrolment date.

@@ -3429,6 +3429,264 @@ public final class Template {
     // @@protoc_insertion_point(enum_scope:io.GooglePayField)
   }
 
+  /**
+   * Protobuf enum {@code io.PasswordType}
+   */
+  public enum PasswordType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PASSWORD_TYPE_DO_NOT_USE = 0;</code>
+     */
+    PASSWORD_TYPE_DO_NOT_USE(0),
+    /**
+     * <code>PASSWORD_TYPE_NO_PASSWORD = 1;</code>
+     */
+    PASSWORD_TYPE_NO_PASSWORD(1),
+    /**
+     * <code>PASSWORD_TYPE_PASSWORD_ONLY = 2;</code>
+     */
+    PASSWORD_TYPE_PASSWORD_ONLY(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PASSWORD_TYPE_DO_NOT_USE = 0;</code>
+     */
+    public static final int PASSWORD_TYPE_DO_NOT_USE_VALUE = 0;
+    /**
+     * <code>PASSWORD_TYPE_NO_PASSWORD = 1;</code>
+     */
+    public static final int PASSWORD_TYPE_NO_PASSWORD_VALUE = 1;
+    /**
+     * <code>PASSWORD_TYPE_PASSWORD_ONLY = 2;</code>
+     */
+    public static final int PASSWORD_TYPE_PASSWORD_ONLY_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PasswordType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PasswordType forNumber(int value) {
+      switch (value) {
+        case 0: return PASSWORD_TYPE_DO_NOT_USE;
+        case 1: return PASSWORD_TYPE_NO_PASSWORD;
+        case 2: return PASSWORD_TYPE_PASSWORD_ONLY;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PasswordType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PasswordType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PasswordType>() {
+            public PasswordType findValueByNumber(int number) {
+              return PasswordType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Template.getDescriptor().getEnumTypes().get(14);
+    }
+
+    private static final PasswordType[] VALUES = values();
+
+    public static PasswordType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PasswordType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.PasswordType)
+  }
+
+  /**
+   * Protobuf enum {@code io.SupportedAndroidWallet}
+   */
+  public enum SupportedAndroidWallet
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * For legacy support, a setting of do not use will default to WalletPasses.
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_DO_NOT_USE = 0;</code>
+     */
+    ANDROID_WALLET_DO_NOT_USE(0),
+    /**
+     * <pre>
+     * Android PassWallet https://passwallet.net.
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_PASSWALLET = 1;</code>
+     */
+    ANDROID_WALLET_PASSWALLET(1),
+    /**
+     * <pre>
+     * WalletPasses https://walletpasses.io (Default).
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_WALLETPASSES = 2;</code>
+     */
+    ANDROID_WALLET_WALLETPASSES(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * For legacy support, a setting of do not use will default to WalletPasses.
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_DO_NOT_USE = 0;</code>
+     */
+    public static final int ANDROID_WALLET_DO_NOT_USE_VALUE = 0;
+    /**
+     * <pre>
+     * Android PassWallet https://passwallet.net.
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_PASSWALLET = 1;</code>
+     */
+    public static final int ANDROID_WALLET_PASSWALLET_VALUE = 1;
+    /**
+     * <pre>
+     * WalletPasses https://walletpasses.io (Default).
+     * </pre>
+     *
+     * <code>ANDROID_WALLET_WALLETPASSES = 2;</code>
+     */
+    public static final int ANDROID_WALLET_WALLETPASSES_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SupportedAndroidWallet valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SupportedAndroidWallet forNumber(int value) {
+      switch (value) {
+        case 0: return ANDROID_WALLET_DO_NOT_USE;
+        case 1: return ANDROID_WALLET_PASSWALLET;
+        case 2: return ANDROID_WALLET_WALLETPASSES;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SupportedAndroidWallet>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SupportedAndroidWallet> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SupportedAndroidWallet>() {
+            public SupportedAndroidWallet findValueByNumber(int number) {
+              return SupportedAndroidWallet.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Template.getDescriptor().getEnumTypes().get(15);
+    }
+
+    private static final SupportedAndroidWallet[] VALUES = values();
+
+    public static SupportedAndroidWallet valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SupportedAndroidWallet(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.SupportedAndroidWallet)
+  }
+
   public interface SelectOptionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.SelectOption)
       com.google.protobuf.MessageOrBuilder {
@@ -16250,6 +16508,53 @@ public final class Template {
      * <code>.io.LocalizedString localizedDescription = 5;</code>
      */
     com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedDescriptionOrBuilder();
+
+    /**
+     * <pre>
+     * Clickable link description of the Android App
+     * </pre>
+     *
+     * <code>string urlDescription = 6;</code>
+     * @return The urlDescription.
+     */
+    java.lang.String getUrlDescription();
+    /**
+     * <pre>
+     * Clickable link description of the Android App
+     * </pre>
+     *
+     * <code>string urlDescription = 6;</code>
+     * @return The bytes for urlDescription.
+     */
+    com.google.protobuf.ByteString
+        getUrlDescriptionBytes();
+
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @return Whether the localizedUrlDescription field is set.
+     */
+    boolean hasLocalizedUrlDescription();
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @return The localizedUrlDescription.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedUrlDescription();
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedUrlDescriptionOrBuilder();
   }
   /**
    * <pre>
@@ -16270,6 +16575,7 @@ public final class Template {
     private GooglePayApp() {
       title_ = "";
       description_ = "";
+      urlDescription_ = "";
     }
 
     @java.lang.Override
@@ -16349,6 +16655,25 @@ public final class Template {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(localizedDescription_);
                 localizedDescription_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              urlDescription_ = s;
+              break;
+            }
+            case 58: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedUrlDescription_ != null) {
+                subBuilder = localizedUrlDescription_.toBuilder();
+              }
+              localizedUrlDescription_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedUrlDescription_);
+                localizedUrlDescription_ = subBuilder.buildPartial();
               }
 
               break;
@@ -16591,6 +16916,90 @@ public final class Template {
       return getLocalizedDescription();
     }
 
+    public static final int URLDESCRIPTION_FIELD_NUMBER = 6;
+    private volatile java.lang.Object urlDescription_;
+    /**
+     * <pre>
+     * Clickable link description of the Android App
+     * </pre>
+     *
+     * <code>string urlDescription = 6;</code>
+     * @return The urlDescription.
+     */
+    @java.lang.Override
+    public java.lang.String getUrlDescription() {
+      java.lang.Object ref = urlDescription_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        urlDescription_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Clickable link description of the Android App
+     * </pre>
+     *
+     * <code>string urlDescription = 6;</code>
+     * @return The bytes for urlDescription.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlDescriptionBytes() {
+      java.lang.Object ref = urlDescription_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        urlDescription_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDURLDESCRIPTION_FIELD_NUMBER = 7;
+    private com.passkit.grpc.Localization.LocalizedString localizedUrlDescription_;
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @return Whether the localizedUrlDescription field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedUrlDescription() {
+      return localizedUrlDescription_ != null;
+    }
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     * @return The localizedUrlDescription.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedUrlDescription() {
+      return localizedUrlDescription_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedUrlDescription_;
+    }
+    /**
+     * <pre>
+     * Localized clickable link description of the Android App
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedUrlDescriptionOrBuilder() {
+      return getLocalizedUrlDescription();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16620,6 +17029,12 @@ public final class Template {
       if (localizedDescription_ != null) {
         output.writeMessage(5, getLocalizedDescription());
       }
+      if (!getUrlDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, urlDescription_);
+      }
+      if (localizedUrlDescription_ != null) {
+        output.writeMessage(7, getLocalizedUrlDescription());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16646,6 +17061,13 @@ public final class Template {
       if (localizedDescription_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLocalizedDescription());
+      }
+      if (!getUrlDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, urlDescription_);
+      }
+      if (localizedUrlDescription_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLocalizedUrlDescription());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16681,6 +17103,13 @@ public final class Template {
         if (!getLocalizedDescription()
             .equals(other.getLocalizedDescription())) return false;
       }
+      if (!getUrlDescription()
+          .equals(other.getUrlDescription())) return false;
+      if (hasLocalizedUrlDescription() != other.hasLocalizedUrlDescription()) return false;
+      if (hasLocalizedUrlDescription()) {
+        if (!getLocalizedUrlDescription()
+            .equals(other.getLocalizedUrlDescription())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16707,6 +17136,12 @@ public final class Template {
       if (hasLocalizedDescription()) {
         hash = (37 * hash) + LOCALIZEDDESCRIPTION_FIELD_NUMBER;
         hash = (53 * hash) + getLocalizedDescription().hashCode();
+      }
+      hash = (37 * hash) + URLDESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getUrlDescription().hashCode();
+      if (hasLocalizedUrlDescription()) {
+        hash = (37 * hash) + LOCALIZEDURLDESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedUrlDescription().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -16867,6 +17302,14 @@ public final class Template {
           localizedDescription_ = null;
           localizedDescriptionBuilder_ = null;
         }
+        urlDescription_ = "";
+
+        if (localizedUrlDescriptionBuilder_ == null) {
+          localizedUrlDescription_ = null;
+        } else {
+          localizedUrlDescription_ = null;
+          localizedUrlDescriptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -16909,6 +17352,12 @@ public final class Template {
           result.localizedDescription_ = localizedDescription_;
         } else {
           result.localizedDescription_ = localizedDescriptionBuilder_.build();
+        }
+        result.urlDescription_ = urlDescription_;
+        if (localizedUrlDescriptionBuilder_ == null) {
+          result.localizedUrlDescription_ = localizedUrlDescription_;
+        } else {
+          result.localizedUrlDescription_ = localizedUrlDescriptionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -16974,6 +17423,13 @@ public final class Template {
         }
         if (other.hasLocalizedDescription()) {
           mergeLocalizedDescription(other.getLocalizedDescription());
+        }
+        if (!other.getUrlDescription().isEmpty()) {
+          urlDescription_ = other.urlDescription_;
+          onChanged();
+        }
+        if (other.hasLocalizedUrlDescription()) {
+          mergeLocalizedUrlDescription(other.getLocalizedUrlDescription());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -17659,6 +18115,257 @@ public final class Template {
           localizedDescription_ = null;
         }
         return localizedDescriptionBuilder_;
+      }
+
+      private java.lang.Object urlDescription_ = "";
+      /**
+       * <pre>
+       * Clickable link description of the Android App
+       * </pre>
+       *
+       * <code>string urlDescription = 6;</code>
+       * @return The urlDescription.
+       */
+      public java.lang.String getUrlDescription() {
+        java.lang.Object ref = urlDescription_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          urlDescription_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Clickable link description of the Android App
+       * </pre>
+       *
+       * <code>string urlDescription = 6;</code>
+       * @return The bytes for urlDescription.
+       */
+      public com.google.protobuf.ByteString
+          getUrlDescriptionBytes() {
+        java.lang.Object ref = urlDescription_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          urlDescription_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Clickable link description of the Android App
+       * </pre>
+       *
+       * <code>string urlDescription = 6;</code>
+       * @param value The urlDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        urlDescription_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickable link description of the Android App
+       * </pre>
+       *
+       * <code>string urlDescription = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrlDescription() {
+        
+        urlDescription_ = getDefaultInstance().getUrlDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Clickable link description of the Android App
+       * </pre>
+       *
+       * <code>string urlDescription = 6;</code>
+       * @param value The bytes for urlDescription to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        urlDescription_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedUrlDescription_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedUrlDescriptionBuilder_;
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       * @return Whether the localizedUrlDescription field is set.
+       */
+      public boolean hasLocalizedUrlDescription() {
+        return localizedUrlDescriptionBuilder_ != null || localizedUrlDescription_ != null;
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       * @return The localizedUrlDescription.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedUrlDescription() {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          return localizedUrlDescription_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedUrlDescription_;
+        } else {
+          return localizedUrlDescriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public Builder setLocalizedUrlDescription(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedUrlDescription_ = value;
+          onChanged();
+        } else {
+          localizedUrlDescriptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public Builder setLocalizedUrlDescription(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          localizedUrlDescription_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedUrlDescriptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public Builder mergeLocalizedUrlDescription(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          if (localizedUrlDescription_ != null) {
+            localizedUrlDescription_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedUrlDescription_).mergeFrom(value).buildPartial();
+          } else {
+            localizedUrlDescription_ = value;
+          }
+          onChanged();
+        } else {
+          localizedUrlDescriptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public Builder clearLocalizedUrlDescription() {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          localizedUrlDescription_ = null;
+          onChanged();
+        } else {
+          localizedUrlDescription_ = null;
+          localizedUrlDescriptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedUrlDescriptionBuilder() {
+        
+        onChanged();
+        return getLocalizedUrlDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedUrlDescriptionOrBuilder() {
+        if (localizedUrlDescriptionBuilder_ != null) {
+          return localizedUrlDescriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedUrlDescription_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedUrlDescription_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized clickable link description of the Android App
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedUrlDescription = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedUrlDescriptionFieldBuilder() {
+        if (localizedUrlDescriptionBuilder_ == null) {
+          localizedUrlDescriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedUrlDescription(),
+                  getParentForChildren(),
+                  isClean());
+          localizedUrlDescription_ = null;
+        }
+        return localizedUrlDescriptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18972,22 +19679,41 @@ public final class Template {
 
     /**
      * <pre>
-     * Set to on to present WalletPasses as the default option to Android Users
+     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
      * </pre>
      *
-     * <code>.io.Toggle preferWalletPasses = 2;</code>
-     * @return The enum numeric value on the wire for preferWalletPasses.
+     * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+     * @return The enum numeric value on the wire for preferThirdPartyAndroidWallet.
      */
-    int getPreferWalletPassesValue();
+    int getPreferThirdPartyAndroidWalletValue();
     /**
      * <pre>
-     * Set to on to present WalletPasses as the default option to Android Users
+     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
      * </pre>
      *
-     * <code>.io.Toggle preferWalletPasses = 2;</code>
-     * @return The preferWalletPasses.
+     * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+     * @return The preferThirdPartyAndroidWallet.
      */
-    com.passkit.grpc.CommonObjects.Toggle getPreferWalletPasses();
+    com.passkit.grpc.CommonObjects.Toggle getPreferThirdPartyAndroidWallet();
+
+    /**
+     * <pre>
+     * Preferred Android Wallet.
+     * </pre>
+     *
+     * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+     * @return The enum numeric value on the wire for preferredAndroidWallet.
+     */
+    int getPreferredAndroidWalletValue();
+    /**
+     * <pre>
+     * Preferred Android Wallet.
+     * </pre>
+     *
+     * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+     * @return The preferredAndroidWallet.
+     */
+    com.passkit.grpc.Template.SupportedAndroidWallet getPreferredAndroidWallet();
   }
   /**
    * Protobuf type {@code io.LandingPageSettings}
@@ -19003,7 +19729,8 @@ public final class Template {
     }
     private LandingPageSettings() {
       landingLocalizationOverride_ = java.util.Collections.emptyList();
-      preferWalletPasses_ = 0;
+      preferThirdPartyAndroidWallet_ = 0;
+      preferredAndroidWallet_ = 0;
     }
 
     @java.lang.Override
@@ -19063,7 +19790,13 @@ public final class Template {
             case 16: {
               int rawValue = input.readEnum();
 
-              preferWalletPasses_ = rawValue;
+              preferThirdPartyAndroidWallet_ = rawValue;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              preferredAndroidWallet_ = rawValue;
               break;
             }
             default: {
@@ -19179,31 +19912,58 @@ public final class Template {
     }
     private int landingLocalizationOverrideMemoizedSerializedSize;
 
-    public static final int PREFERWALLETPASSES_FIELD_NUMBER = 2;
-    private int preferWalletPasses_;
+    public static final int PREFERTHIRDPARTYANDROIDWALLET_FIELD_NUMBER = 2;
+    private int preferThirdPartyAndroidWallet_;
     /**
      * <pre>
-     * Set to on to present WalletPasses as the default option to Android Users
+     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
      * </pre>
      *
-     * <code>.io.Toggle preferWalletPasses = 2;</code>
-     * @return The enum numeric value on the wire for preferWalletPasses.
+     * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+     * @return The enum numeric value on the wire for preferThirdPartyAndroidWallet.
      */
-    @java.lang.Override public int getPreferWalletPassesValue() {
-      return preferWalletPasses_;
+    @java.lang.Override public int getPreferThirdPartyAndroidWalletValue() {
+      return preferThirdPartyAndroidWallet_;
     }
     /**
      * <pre>
-     * Set to on to present WalletPasses as the default option to Android Users
+     * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
      * </pre>
      *
-     * <code>.io.Toggle preferWalletPasses = 2;</code>
-     * @return The preferWalletPasses.
+     * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+     * @return The preferThirdPartyAndroidWallet.
      */
-    @java.lang.Override public com.passkit.grpc.CommonObjects.Toggle getPreferWalletPasses() {
+    @java.lang.Override public com.passkit.grpc.CommonObjects.Toggle getPreferThirdPartyAndroidWallet() {
       @SuppressWarnings("deprecation")
-      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(preferWalletPasses_);
+      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(preferThirdPartyAndroidWallet_);
       return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
+    }
+
+    public static final int PREFERREDANDROIDWALLET_FIELD_NUMBER = 3;
+    private int preferredAndroidWallet_;
+    /**
+     * <pre>
+     * Preferred Android Wallet.
+     * </pre>
+     *
+     * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+     * @return The enum numeric value on the wire for preferredAndroidWallet.
+     */
+    @java.lang.Override public int getPreferredAndroidWalletValue() {
+      return preferredAndroidWallet_;
+    }
+    /**
+     * <pre>
+     * Preferred Android Wallet.
+     * </pre>
+     *
+     * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+     * @return The preferredAndroidWallet.
+     */
+    @java.lang.Override public com.passkit.grpc.Template.SupportedAndroidWallet getPreferredAndroidWallet() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Template.SupportedAndroidWallet result = com.passkit.grpc.Template.SupportedAndroidWallet.valueOf(preferredAndroidWallet_);
+      return result == null ? com.passkit.grpc.Template.SupportedAndroidWallet.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -19228,8 +19988,11 @@ public final class Template {
       for (int i = 0; i < landingLocalizationOverride_.size(); i++) {
         output.writeEnumNoTag(landingLocalizationOverride_.get(i));
       }
-      if (preferWalletPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
-        output.writeEnum(2, preferWalletPasses_);
+      if (preferThirdPartyAndroidWallet_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
+        output.writeEnum(2, preferThirdPartyAndroidWallet_);
+      }
+      if (preferredAndroidWallet_ != com.passkit.grpc.Template.SupportedAndroidWallet.ANDROID_WALLET_DO_NOT_USE.getNumber()) {
+        output.writeEnum(3, preferredAndroidWallet_);
       }
       unknownFields.writeTo(output);
     }
@@ -19252,9 +20015,13 @@ public final class Template {
             .computeUInt32SizeNoTag(dataSize);
         }landingLocalizationOverrideMemoizedSerializedSize = dataSize;
       }
-      if (preferWalletPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
+      if (preferThirdPartyAndroidWallet_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, preferWalletPasses_);
+          .computeEnumSize(2, preferThirdPartyAndroidWallet_);
+      }
+      if (preferredAndroidWallet_ != com.passkit.grpc.Template.SupportedAndroidWallet.ANDROID_WALLET_DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, preferredAndroidWallet_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19272,7 +20039,8 @@ public final class Template {
       com.passkit.grpc.Template.LandingPageSettings other = (com.passkit.grpc.Template.LandingPageSettings) obj;
 
       if (!landingLocalizationOverride_.equals(other.landingLocalizationOverride_)) return false;
-      if (preferWalletPasses_ != other.preferWalletPasses_) return false;
+      if (preferThirdPartyAndroidWallet_ != other.preferThirdPartyAndroidWallet_) return false;
+      if (preferredAndroidWallet_ != other.preferredAndroidWallet_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19288,8 +20056,10 @@ public final class Template {
         hash = (37 * hash) + LANDINGLOCALIZATIONOVERRIDE_FIELD_NUMBER;
         hash = (53 * hash) + landingLocalizationOverride_.hashCode();
       }
-      hash = (37 * hash) + PREFERWALLETPASSES_FIELD_NUMBER;
-      hash = (53 * hash) + preferWalletPasses_;
+      hash = (37 * hash) + PREFERTHIRDPARTYANDROIDWALLET_FIELD_NUMBER;
+      hash = (53 * hash) + preferThirdPartyAndroidWallet_;
+      hash = (37 * hash) + PREFERREDANDROIDWALLET_FIELD_NUMBER;
+      hash = (53 * hash) + preferredAndroidWallet_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19425,7 +20195,9 @@ public final class Template {
         super.clear();
         landingLocalizationOverride_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
-        preferWalletPasses_ = 0;
+        preferThirdPartyAndroidWallet_ = 0;
+
+        preferredAndroidWallet_ = 0;
 
         return this;
       }
@@ -19459,7 +20231,8 @@ public final class Template {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.landingLocalizationOverride_ = landingLocalizationOverride_;
-        result.preferWalletPasses_ = preferWalletPasses_;
+        result.preferThirdPartyAndroidWallet_ = preferThirdPartyAndroidWallet_;
+        result.preferredAndroidWallet_ = preferredAndroidWallet_;
         onBuilt();
         return result;
       }
@@ -19518,8 +20291,11 @@ public final class Template {
           }
           onChanged();
         }
-        if (other.preferWalletPasses_ != 0) {
-          setPreferWalletPassesValue(other.getPreferWalletPassesValue());
+        if (other.preferThirdPartyAndroidWallet_ != 0) {
+          setPreferThirdPartyAndroidWalletValue(other.getPreferThirdPartyAndroidWalletValue());
+        }
+        if (other.preferredAndroidWallet_ != 0) {
+          setPreferredAndroidWalletValue(other.getPreferredAndroidWalletValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -19739,76 +20515,150 @@ public final class Template {
         return this;
       }
 
-      private int preferWalletPasses_ = 0;
+      private int preferThirdPartyAndroidWallet_ = 0;
       /**
        * <pre>
-       * Set to on to present WalletPasses as the default option to Android Users
+       * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
        * </pre>
        *
-       * <code>.io.Toggle preferWalletPasses = 2;</code>
-       * @return The enum numeric value on the wire for preferWalletPasses.
+       * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+       * @return The enum numeric value on the wire for preferThirdPartyAndroidWallet.
        */
-      @java.lang.Override public int getPreferWalletPassesValue() {
-        return preferWalletPasses_;
+      @java.lang.Override public int getPreferThirdPartyAndroidWalletValue() {
+        return preferThirdPartyAndroidWallet_;
       }
       /**
        * <pre>
-       * Set to on to present WalletPasses as the default option to Android Users
+       * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
        * </pre>
        *
-       * <code>.io.Toggle preferWalletPasses = 2;</code>
-       * @param value The enum numeric value on the wire for preferWalletPasses to set.
+       * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+       * @param value The enum numeric value on the wire for preferThirdPartyAndroidWallet to set.
        * @return This builder for chaining.
        */
-      public Builder setPreferWalletPassesValue(int value) {
+      public Builder setPreferThirdPartyAndroidWalletValue(int value) {
         
-        preferWalletPasses_ = value;
+        preferThirdPartyAndroidWallet_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Set to on to present WalletPasses as the default option to Android Users
+       * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
        * </pre>
        *
-       * <code>.io.Toggle preferWalletPasses = 2;</code>
-       * @return The preferWalletPasses.
+       * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+       * @return The preferThirdPartyAndroidWallet.
        */
       @java.lang.Override
-      public com.passkit.grpc.CommonObjects.Toggle getPreferWalletPasses() {
+      public com.passkit.grpc.CommonObjects.Toggle getPreferThirdPartyAndroidWallet() {
         @SuppressWarnings("deprecation")
-        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(preferWalletPasses_);
+        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(preferThirdPartyAndroidWallet_);
         return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
       }
       /**
        * <pre>
-       * Set to on to present WalletPasses as the default option to Android Users
+       * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
        * </pre>
        *
-       * <code>.io.Toggle preferWalletPasses = 2;</code>
-       * @param value The preferWalletPasses to set.
+       * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
+       * @param value The preferThirdPartyAndroidWallet to set.
        * @return This builder for chaining.
        */
-      public Builder setPreferWalletPasses(com.passkit.grpc.CommonObjects.Toggle value) {
+      public Builder setPreferThirdPartyAndroidWallet(com.passkit.grpc.CommonObjects.Toggle value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        preferWalletPasses_ = value.getNumber();
+        preferThirdPartyAndroidWallet_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Set to on to present WalletPasses as the default option to Android Users
+       * Set to on to present a third party wallet instead of Google Pay as the default option to Android Users.
        * </pre>
        *
-       * <code>.io.Toggle preferWalletPasses = 2;</code>
+       * <code>.io.Toggle preferThirdPartyAndroidWallet = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder clearPreferWalletPasses() {
+      public Builder clearPreferThirdPartyAndroidWallet() {
         
-        preferWalletPasses_ = 0;
+        preferThirdPartyAndroidWallet_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int preferredAndroidWallet_ = 0;
+      /**
+       * <pre>
+       * Preferred Android Wallet.
+       * </pre>
+       *
+       * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+       * @return The enum numeric value on the wire for preferredAndroidWallet.
+       */
+      @java.lang.Override public int getPreferredAndroidWalletValue() {
+        return preferredAndroidWallet_;
+      }
+      /**
+       * <pre>
+       * Preferred Android Wallet.
+       * </pre>
+       *
+       * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+       * @param value The enum numeric value on the wire for preferredAndroidWallet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreferredAndroidWalletValue(int value) {
+        
+        preferredAndroidWallet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred Android Wallet.
+       * </pre>
+       *
+       * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+       * @return The preferredAndroidWallet.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Template.SupportedAndroidWallet getPreferredAndroidWallet() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Template.SupportedAndroidWallet result = com.passkit.grpc.Template.SupportedAndroidWallet.valueOf(preferredAndroidWallet_);
+        return result == null ? com.passkit.grpc.Template.SupportedAndroidWallet.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Preferred Android Wallet.
+       * </pre>
+       *
+       * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+       * @param value The preferredAndroidWallet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreferredAndroidWallet(com.passkit.grpc.Template.SupportedAndroidWallet value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        preferredAndroidWallet_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preferred Android Wallet.
+       * </pre>
+       *
+       * <code>.io.SupportedAndroidWallet preferredAndroidWallet = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreferredAndroidWallet() {
+        
+        preferredAndroidWallet_ = 0;
         onChanged();
         return this;
       }
@@ -20272,6 +21122,33 @@ public final class Template {
      */
     com.google.protobuf.ByteString
         getCssOverridesBytes();
+
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @return Whether the passwordSettings field is set.
+     */
+    boolean hasPasswordSettings();
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @return The passwordSettings.
+     */
+    com.passkit.grpc.Template.PasswordSettings getPasswordSettings();
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     */
+    com.passkit.grpc.Template.PasswordSettingsOrBuilder getPasswordSettingsOrBuilder();
   }
   /**
    * <pre>
@@ -20494,6 +21371,19 @@ public final class Template {
               java.lang.String s = input.readStringRequireUtf8();
 
               cssOverrides_ = s;
+              break;
+            }
+            case 154: {
+              com.passkit.grpc.Template.PasswordSettings.Builder subBuilder = null;
+              if (passwordSettings_ != null) {
+                subBuilder = passwordSettings_.toBuilder();
+              }
+              passwordSettings_ = input.readMessage(com.passkit.grpc.Template.PasswordSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(passwordSettings_);
+                passwordSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -21280,6 +22170,44 @@ public final class Template {
       }
     }
 
+    public static final int PASSWORDSETTINGS_FIELD_NUMBER = 19;
+    private com.passkit.grpc.Template.PasswordSettings passwordSettings_;
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @return Whether the passwordSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasPasswordSettings() {
+      return passwordSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     * @return The passwordSettings.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Template.PasswordSettings getPasswordSettings() {
+      return passwordSettings_ == null ? com.passkit.grpc.Template.PasswordSettings.getDefaultInstance() : passwordSettings_;
+    }
+    /**
+     * <pre>
+     * Configuration for password protecting the data collection page
+     * </pre>
+     *
+     * <code>.io.PasswordSettings passwordSettings = 19;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Template.PasswordSettingsOrBuilder getPasswordSettingsOrBuilder() {
+      return getPasswordSettings();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -21347,6 +22275,9 @@ public final class Template {
       }
       if (!getCssOverridesBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, cssOverrides_);
+      }
+      if (passwordSettings_ != null) {
+        output.writeMessage(19, getPasswordSettings());
       }
       unknownFields.writeTo(output);
     }
@@ -21418,6 +22349,10 @@ public final class Template {
       }
       if (!getCssOverridesBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, cssOverrides_);
+      }
+      if (passwordSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getPasswordSettings());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -21494,6 +22429,11 @@ public final class Template {
       }
       if (!getCssOverrides()
           .equals(other.getCssOverrides())) return false;
+      if (hasPasswordSettings() != other.hasPasswordSettings()) return false;
+      if (hasPasswordSettings()) {
+        if (!getPasswordSettings()
+            .equals(other.getPasswordSettings())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -21557,6 +22497,10 @@ public final class Template {
       }
       hash = (37 * hash) + CSSOVERRIDES_FIELD_NUMBER;
       hash = (53 * hash) + getCssOverrides().hashCode();
+      if (hasPasswordSettings()) {
+        hash = (37 * hash) + PASSWORDSETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getPasswordSettings().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -21762,6 +22706,12 @@ public final class Template {
         }
         cssOverrides_ = "";
 
+        if (passwordSettingsBuilder_ == null) {
+          passwordSettings_ = null;
+        } else {
+          passwordSettings_ = null;
+          passwordSettingsBuilder_ = null;
+        }
         return this;
       }
 
@@ -21838,6 +22788,11 @@ public final class Template {
           result.localizedFooterText_ = localizedFooterTextBuilder_.build();
         }
         result.cssOverrides_ = cssOverrides_;
+        if (passwordSettingsBuilder_ == null) {
+          result.passwordSettings_ = passwordSettings_;
+        } else {
+          result.passwordSettings_ = passwordSettingsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -21949,6 +22904,9 @@ public final class Template {
         if (!other.getCssOverrides().isEmpty()) {
           cssOverrides_ = other.cssOverrides_;
           onChanged();
+        }
+        if (other.hasPasswordSettings()) {
+          mergePasswordSettings(other.getPasswordSettings());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24142,6 +25100,161 @@ public final class Template {
         onChanged();
         return this;
       }
+
+      private com.passkit.grpc.Template.PasswordSettings passwordSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Template.PasswordSettings, com.passkit.grpc.Template.PasswordSettings.Builder, com.passkit.grpc.Template.PasswordSettingsOrBuilder> passwordSettingsBuilder_;
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       * @return Whether the passwordSettings field is set.
+       */
+      public boolean hasPasswordSettings() {
+        return passwordSettingsBuilder_ != null || passwordSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       * @return The passwordSettings.
+       */
+      public com.passkit.grpc.Template.PasswordSettings getPasswordSettings() {
+        if (passwordSettingsBuilder_ == null) {
+          return passwordSettings_ == null ? com.passkit.grpc.Template.PasswordSettings.getDefaultInstance() : passwordSettings_;
+        } else {
+          return passwordSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public Builder setPasswordSettings(com.passkit.grpc.Template.PasswordSettings value) {
+        if (passwordSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          passwordSettings_ = value;
+          onChanged();
+        } else {
+          passwordSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public Builder setPasswordSettings(
+          com.passkit.grpc.Template.PasswordSettings.Builder builderForValue) {
+        if (passwordSettingsBuilder_ == null) {
+          passwordSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          passwordSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public Builder mergePasswordSettings(com.passkit.grpc.Template.PasswordSettings value) {
+        if (passwordSettingsBuilder_ == null) {
+          if (passwordSettings_ != null) {
+            passwordSettings_ =
+              com.passkit.grpc.Template.PasswordSettings.newBuilder(passwordSettings_).mergeFrom(value).buildPartial();
+          } else {
+            passwordSettings_ = value;
+          }
+          onChanged();
+        } else {
+          passwordSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public Builder clearPasswordSettings() {
+        if (passwordSettingsBuilder_ == null) {
+          passwordSettings_ = null;
+          onChanged();
+        } else {
+          passwordSettings_ = null;
+          passwordSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public com.passkit.grpc.Template.PasswordSettings.Builder getPasswordSettingsBuilder() {
+        
+        onChanged();
+        return getPasswordSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      public com.passkit.grpc.Template.PasswordSettingsOrBuilder getPasswordSettingsOrBuilder() {
+        if (passwordSettingsBuilder_ != null) {
+          return passwordSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return passwordSettings_ == null ?
+              com.passkit.grpc.Template.PasswordSettings.getDefaultInstance() : passwordSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for password protecting the data collection page
+       * </pre>
+       *
+       * <code>.io.PasswordSettings passwordSettings = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Template.PasswordSettings, com.passkit.grpc.Template.PasswordSettings.Builder, com.passkit.grpc.Template.PasswordSettingsOrBuilder> 
+          getPasswordSettingsFieldBuilder() {
+        if (passwordSettingsBuilder_ == null) {
+          passwordSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Template.PasswordSettings, com.passkit.grpc.Template.PasswordSettings.Builder, com.passkit.grpc.Template.PasswordSettingsOrBuilder>(
+                  getPasswordSettings(),
+                  getParentForChildren(),
+                  isClean());
+          passwordSettings_ = null;
+        }
+        return passwordSettingsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -24190,6 +25303,3006 @@ public final class Template {
 
     @java.lang.Override
     public com.passkit.grpc.Template.DataCollectionPageSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PasswordSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.PasswordSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Configures the type of password.
+     * </pre>
+     *
+     * <code>.io.PasswordType passwordType = 1;</code>
+     * @return The enum numeric value on the wire for passwordType.
+     */
+    int getPasswordTypeValue();
+    /**
+     * <pre>
+     * Configures the type of password.
+     * </pre>
+     *
+     * <code>.io.PasswordType passwordType = 1;</code>
+     * @return The passwordType.
+     */
+    com.passkit.grpc.Template.PasswordType getPasswordType();
+
+    /**
+     * <pre>
+     * Password users need to provide to access the data collection page.
+     * </pre>
+     *
+     * <code>string password = 2;</code>
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <pre>
+     * Password users need to provide to access the data collection page.
+     * </pre>
+     *
+     * <code>string password = 2;</code>
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
+
+    /**
+     * <pre>
+     * Label text for the password field.
+     * </pre>
+     *
+     * <code>string inputLabelText = 3;</code>
+     * @return The inputLabelText.
+     */
+    java.lang.String getInputLabelText();
+    /**
+     * <pre>
+     * Label text for the password field.
+     * </pre>
+     *
+     * <code>string inputLabelText = 3;</code>
+     * @return The bytes for inputLabelText.
+     */
+    com.google.protobuf.ByteString
+        getInputLabelTextBytes();
+
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     * @return Whether the localizedInputLabelText field is set.
+     */
+    boolean hasLocalizedInputLabelText();
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     * @return The localizedInputLabelText.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedInputLabelText();
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedInputLabelTextOrBuilder();
+
+    /**
+     * <pre>
+     * Error text to be shown when an incorrect password is shown.
+     * </pre>
+     *
+     * <code>string errorText = 5;</code>
+     * @return The errorText.
+     */
+    java.lang.String getErrorText();
+    /**
+     * <pre>
+     * Error text to be shown when an incorrect password is shown.
+     * </pre>
+     *
+     * <code>string errorText = 5;</code>
+     * @return The bytes for errorText.
+     */
+    com.google.protobuf.ByteString
+        getErrorTextBytes();
+
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     * @return Whether the localizedErrorText field is set.
+     */
+    boolean hasLocalizedErrorText();
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     * @return The localizedErrorText.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedErrorText();
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedErrorTextOrBuilder();
+
+    /**
+     * <pre>
+     * Header text to be displayed above the password input box.
+     * </pre>
+     *
+     * <code>string headerText = 7;</code>
+     * @return The headerText.
+     */
+    java.lang.String getHeaderText();
+    /**
+     * <pre>
+     * Header text to be displayed above the password input box.
+     * </pre>
+     *
+     * <code>string headerText = 7;</code>
+     * @return The bytes for headerText.
+     */
+    com.google.protobuf.ByteString
+        getHeaderTextBytes();
+
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     * @return Whether the localizedHeaderText field is set.
+     */
+    boolean hasLocalizedHeaderText();
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     * @return The localizedHeaderText.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderText();
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderTextOrBuilder();
+
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string buttonText = 9;</code>
+     * @return The buttonText.
+     */
+    java.lang.String getButtonText();
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string buttonText = 9;</code>
+     * @return The bytes for buttonText.
+     */
+    com.google.protobuf.ByteString
+        getButtonTextBytes();
+
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     * @return Whether the localizedButtonText field is set.
+     */
+    boolean hasLocalizedButtonText();
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     * @return The localizedButtonText.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedButtonText();
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedButtonTextOrBuilder();
+
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string titleText = 11;</code>
+     * @return The titleText.
+     */
+    java.lang.String getTitleText();
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string titleText = 11;</code>
+     * @return The bytes for titleText.
+     */
+    com.google.protobuf.ByteString
+        getTitleTextBytes();
+
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     * @return Whether the localizedTitleText field is set.
+     */
+    boolean hasLocalizedTitleText();
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     * @return The localizedTitleText.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedTitleText();
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleTextOrBuilder();
+  }
+  /**
+   * <pre>
+   * PasswordSettings holds the settings for the password protection page.
+   * </pre>
+   *
+   * Protobuf type {@code io.PasswordSettings}
+   */
+  public static final class PasswordSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.PasswordSettings)
+      PasswordSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PasswordSettings.newBuilder() to construct.
+    private PasswordSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PasswordSettings() {
+      passwordType_ = 0;
+      password_ = "";
+      inputLabelText_ = "";
+      errorText_ = "";
+      headerText_ = "";
+      buttonText_ = "";
+      titleText_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PasswordSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PasswordSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              passwordType_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              password_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              inputLabelText_ = s;
+              break;
+            }
+            case 34: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedInputLabelText_ != null) {
+                subBuilder = localizedInputLabelText_.toBuilder();
+              }
+              localizedInputLabelText_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedInputLabelText_);
+                localizedInputLabelText_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              errorText_ = s;
+              break;
+            }
+            case 50: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedErrorText_ != null) {
+                subBuilder = localizedErrorText_.toBuilder();
+              }
+              localizedErrorText_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedErrorText_);
+                localizedErrorText_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              headerText_ = s;
+              break;
+            }
+            case 66: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedHeaderText_ != null) {
+                subBuilder = localizedHeaderText_.toBuilder();
+              }
+              localizedHeaderText_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedHeaderText_);
+                localizedHeaderText_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              buttonText_ = s;
+              break;
+            }
+            case 82: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedButtonText_ != null) {
+                subBuilder = localizedButtonText_.toBuilder();
+              }
+              localizedButtonText_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedButtonText_);
+                localizedButtonText_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              titleText_ = s;
+              break;
+            }
+            case 98: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedTitleText_ != null) {
+                subBuilder = localizedTitleText_.toBuilder();
+              }
+              localizedTitleText_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedTitleText_);
+                localizedTitleText_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Template.internal_static_io_PasswordSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Template.internal_static_io_PasswordSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Template.PasswordSettings.class, com.passkit.grpc.Template.PasswordSettings.Builder.class);
+    }
+
+    public static final int PASSWORDTYPE_FIELD_NUMBER = 1;
+    private int passwordType_;
+    /**
+     * <pre>
+     * Configures the type of password.
+     * </pre>
+     *
+     * <code>.io.PasswordType passwordType = 1;</code>
+     * @return The enum numeric value on the wire for passwordType.
+     */
+    @java.lang.Override public int getPasswordTypeValue() {
+      return passwordType_;
+    }
+    /**
+     * <pre>
+     * Configures the type of password.
+     * </pre>
+     *
+     * <code>.io.PasswordType passwordType = 1;</code>
+     * @return The passwordType.
+     */
+    @java.lang.Override public com.passkit.grpc.Template.PasswordType getPasswordType() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Template.PasswordType result = com.passkit.grpc.Template.PasswordType.valueOf(passwordType_);
+      return result == null ? com.passkit.grpc.Template.PasswordType.UNRECOGNIZED : result;
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 2;
+    private volatile java.lang.Object password_;
+    /**
+     * <pre>
+     * Password users need to provide to access the data collection page.
+     * </pre>
+     *
+     * <code>string password = 2;</code>
+     * @return The password.
+     */
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Password users need to provide to access the data collection page.
+     * </pre>
+     *
+     * <code>string password = 2;</code>
+     * @return The bytes for password.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INPUTLABELTEXT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object inputLabelText_;
+    /**
+     * <pre>
+     * Label text for the password field.
+     * </pre>
+     *
+     * <code>string inputLabelText = 3;</code>
+     * @return The inputLabelText.
+     */
+    @java.lang.Override
+    public java.lang.String getInputLabelText() {
+      java.lang.Object ref = inputLabelText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inputLabelText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Label text for the password field.
+     * </pre>
+     *
+     * <code>string inputLabelText = 3;</code>
+     * @return The bytes for inputLabelText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInputLabelTextBytes() {
+      java.lang.Object ref = inputLabelText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inputLabelText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDINPUTLABELTEXT_FIELD_NUMBER = 4;
+    private com.passkit.grpc.Localization.LocalizedString localizedInputLabelText_;
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     * @return Whether the localizedInputLabelText field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedInputLabelText() {
+      return localizedInputLabelText_ != null;
+    }
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     * @return The localizedInputLabelText.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedInputLabelText() {
+      return localizedInputLabelText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedInputLabelText_;
+    }
+    /**
+     * <pre>
+     * Localized input label text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedInputLabelTextOrBuilder() {
+      return getLocalizedInputLabelText();
+    }
+
+    public static final int ERRORTEXT_FIELD_NUMBER = 5;
+    private volatile java.lang.Object errorText_;
+    /**
+     * <pre>
+     * Error text to be shown when an incorrect password is shown.
+     * </pre>
+     *
+     * <code>string errorText = 5;</code>
+     * @return The errorText.
+     */
+    @java.lang.Override
+    public java.lang.String getErrorText() {
+      java.lang.Object ref = errorText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errorText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Error text to be shown when an incorrect password is shown.
+     * </pre>
+     *
+     * <code>string errorText = 5;</code>
+     * @return The bytes for errorText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorTextBytes() {
+      java.lang.Object ref = errorText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDERRORTEXT_FIELD_NUMBER = 6;
+    private com.passkit.grpc.Localization.LocalizedString localizedErrorText_;
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     * @return Whether the localizedErrorText field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedErrorText() {
+      return localizedErrorText_ != null;
+    }
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     * @return The localizedErrorText.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedErrorText() {
+      return localizedErrorText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedErrorText_;
+    }
+    /**
+     * <pre>
+     * Localized error text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedErrorText = 6;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedErrorTextOrBuilder() {
+      return getLocalizedErrorText();
+    }
+
+    public static final int HEADERTEXT_FIELD_NUMBER = 7;
+    private volatile java.lang.Object headerText_;
+    /**
+     * <pre>
+     * Header text to be displayed above the password input box.
+     * </pre>
+     *
+     * <code>string headerText = 7;</code>
+     * @return The headerText.
+     */
+    @java.lang.Override
+    public java.lang.String getHeaderText() {
+      java.lang.Object ref = headerText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Header text to be displayed above the password input box.
+     * </pre>
+     *
+     * <code>string headerText = 7;</code>
+     * @return The bytes for headerText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeaderTextBytes() {
+      java.lang.Object ref = headerText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDHEADERTEXT_FIELD_NUMBER = 8;
+    private com.passkit.grpc.Localization.LocalizedString localizedHeaderText_;
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     * @return Whether the localizedHeaderText field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedHeaderText() {
+      return localizedHeaderText_ != null;
+    }
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     * @return The localizedHeaderText.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderText() {
+      return localizedHeaderText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderText_;
+    }
+    /**
+     * <pre>
+     * Localized header text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderTextOrBuilder() {
+      return getLocalizedHeaderText();
+    }
+
+    public static final int BUTTONTEXT_FIELD_NUMBER = 9;
+    private volatile java.lang.Object buttonText_;
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string buttonText = 9;</code>
+     * @return The buttonText.
+     */
+    @java.lang.Override
+    public java.lang.String getButtonText() {
+      java.lang.Object ref = buttonText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        buttonText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string buttonText = 9;</code>
+     * @return The bytes for buttonText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getButtonTextBytes() {
+      java.lang.Object ref = buttonText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        buttonText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDBUTTONTEXT_FIELD_NUMBER = 10;
+    private com.passkit.grpc.Localization.LocalizedString localizedButtonText_;
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     * @return Whether the localizedButtonText field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedButtonText() {
+      return localizedButtonText_ != null;
+    }
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     * @return The localizedButtonText.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedButtonText() {
+      return localizedButtonText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedButtonText_;
+    }
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedButtonText = 10;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedButtonTextOrBuilder() {
+      return getLocalizedButtonText();
+    }
+
+    public static final int TITLETEXT_FIELD_NUMBER = 11;
+    private volatile java.lang.Object titleText_;
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string titleText = 11;</code>
+     * @return The titleText.
+     */
+    @java.lang.Override
+    public java.lang.String getTitleText() {
+      java.lang.Object ref = titleText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        titleText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text for the submit button.
+     * </pre>
+     *
+     * <code>string titleText = 11;</code>
+     * @return The bytes for titleText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleTextBytes() {
+      java.lang.Object ref = titleText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        titleText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDTITLETEXT_FIELD_NUMBER = 12;
+    private com.passkit.grpc.Localization.LocalizedString localizedTitleText_;
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     * @return Whether the localizedTitleText field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedTitleText() {
+      return localizedTitleText_ != null;
+    }
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     * @return The localizedTitleText.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedTitleText() {
+      return localizedTitleText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTitleText_;
+    }
+    /**
+     * <pre>
+     * Localized button text.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedTitleText = 12;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleTextOrBuilder() {
+      return getLocalizedTitleText();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (passwordType_ != com.passkit.grpc.Template.PasswordType.PASSWORD_TYPE_DO_NOT_USE.getNumber()) {
+        output.writeEnum(1, passwordType_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
+      }
+      if (!getInputLabelTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, inputLabelText_);
+      }
+      if (localizedInputLabelText_ != null) {
+        output.writeMessage(4, getLocalizedInputLabelText());
+      }
+      if (!getErrorTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, errorText_);
+      }
+      if (localizedErrorText_ != null) {
+        output.writeMessage(6, getLocalizedErrorText());
+      }
+      if (!getHeaderTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, headerText_);
+      }
+      if (localizedHeaderText_ != null) {
+        output.writeMessage(8, getLocalizedHeaderText());
+      }
+      if (!getButtonTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, buttonText_);
+      }
+      if (localizedButtonText_ != null) {
+        output.writeMessage(10, getLocalizedButtonText());
+      }
+      if (!getTitleTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, titleText_);
+      }
+      if (localizedTitleText_ != null) {
+        output.writeMessage(12, getLocalizedTitleText());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (passwordType_ != com.passkit.grpc.Template.PasswordType.PASSWORD_TYPE_DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, passwordType_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
+      }
+      if (!getInputLabelTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, inputLabelText_);
+      }
+      if (localizedInputLabelText_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getLocalizedInputLabelText());
+      }
+      if (!getErrorTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, errorText_);
+      }
+      if (localizedErrorText_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLocalizedErrorText());
+      }
+      if (!getHeaderTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, headerText_);
+      }
+      if (localizedHeaderText_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getLocalizedHeaderText());
+      }
+      if (!getButtonTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, buttonText_);
+      }
+      if (localizedButtonText_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getLocalizedButtonText());
+      }
+      if (!getTitleTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, titleText_);
+      }
+      if (localizedTitleText_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getLocalizedTitleText());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Template.PasswordSettings)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Template.PasswordSettings other = (com.passkit.grpc.Template.PasswordSettings) obj;
+
+      if (passwordType_ != other.passwordType_) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (!getInputLabelText()
+          .equals(other.getInputLabelText())) return false;
+      if (hasLocalizedInputLabelText() != other.hasLocalizedInputLabelText()) return false;
+      if (hasLocalizedInputLabelText()) {
+        if (!getLocalizedInputLabelText()
+            .equals(other.getLocalizedInputLabelText())) return false;
+      }
+      if (!getErrorText()
+          .equals(other.getErrorText())) return false;
+      if (hasLocalizedErrorText() != other.hasLocalizedErrorText()) return false;
+      if (hasLocalizedErrorText()) {
+        if (!getLocalizedErrorText()
+            .equals(other.getLocalizedErrorText())) return false;
+      }
+      if (!getHeaderText()
+          .equals(other.getHeaderText())) return false;
+      if (hasLocalizedHeaderText() != other.hasLocalizedHeaderText()) return false;
+      if (hasLocalizedHeaderText()) {
+        if (!getLocalizedHeaderText()
+            .equals(other.getLocalizedHeaderText())) return false;
+      }
+      if (!getButtonText()
+          .equals(other.getButtonText())) return false;
+      if (hasLocalizedButtonText() != other.hasLocalizedButtonText()) return false;
+      if (hasLocalizedButtonText()) {
+        if (!getLocalizedButtonText()
+            .equals(other.getLocalizedButtonText())) return false;
+      }
+      if (!getTitleText()
+          .equals(other.getTitleText())) return false;
+      if (hasLocalizedTitleText() != other.hasLocalizedTitleText()) return false;
+      if (hasLocalizedTitleText()) {
+        if (!getLocalizedTitleText()
+            .equals(other.getLocalizedTitleText())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PASSWORDTYPE_FIELD_NUMBER;
+      hash = (53 * hash) + passwordType_;
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      hash = (37 * hash) + INPUTLABELTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getInputLabelText().hashCode();
+      if (hasLocalizedInputLabelText()) {
+        hash = (37 * hash) + LOCALIZEDINPUTLABELTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedInputLabelText().hashCode();
+      }
+      hash = (37 * hash) + ERRORTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getErrorText().hashCode();
+      if (hasLocalizedErrorText()) {
+        hash = (37 * hash) + LOCALIZEDERRORTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedErrorText().hashCode();
+      }
+      hash = (37 * hash) + HEADERTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getHeaderText().hashCode();
+      if (hasLocalizedHeaderText()) {
+        hash = (37 * hash) + LOCALIZEDHEADERTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedHeaderText().hashCode();
+      }
+      hash = (37 * hash) + BUTTONTEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getButtonText().hashCode();
+      if (hasLocalizedButtonText()) {
+        hash = (37 * hash) + LOCALIZEDBUTTONTEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedButtonText().hashCode();
+      }
+      hash = (37 * hash) + TITLETEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getTitleText().hashCode();
+      if (hasLocalizedTitleText()) {
+        hash = (37 * hash) + LOCALIZEDTITLETEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedTitleText().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.PasswordSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Template.PasswordSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PasswordSettings holds the settings for the password protection page.
+     * </pre>
+     *
+     * Protobuf type {@code io.PasswordSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.PasswordSettings)
+        com.passkit.grpc.Template.PasswordSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Template.internal_static_io_PasswordSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Template.internal_static_io_PasswordSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Template.PasswordSettings.class, com.passkit.grpc.Template.PasswordSettings.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Template.PasswordSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        passwordType_ = 0;
+
+        password_ = "";
+
+        inputLabelText_ = "";
+
+        if (localizedInputLabelTextBuilder_ == null) {
+          localizedInputLabelText_ = null;
+        } else {
+          localizedInputLabelText_ = null;
+          localizedInputLabelTextBuilder_ = null;
+        }
+        errorText_ = "";
+
+        if (localizedErrorTextBuilder_ == null) {
+          localizedErrorText_ = null;
+        } else {
+          localizedErrorText_ = null;
+          localizedErrorTextBuilder_ = null;
+        }
+        headerText_ = "";
+
+        if (localizedHeaderTextBuilder_ == null) {
+          localizedHeaderText_ = null;
+        } else {
+          localizedHeaderText_ = null;
+          localizedHeaderTextBuilder_ = null;
+        }
+        buttonText_ = "";
+
+        if (localizedButtonTextBuilder_ == null) {
+          localizedButtonText_ = null;
+        } else {
+          localizedButtonText_ = null;
+          localizedButtonTextBuilder_ = null;
+        }
+        titleText_ = "";
+
+        if (localizedTitleTextBuilder_ == null) {
+          localizedTitleText_ = null;
+        } else {
+          localizedTitleText_ = null;
+          localizedTitleTextBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Template.internal_static_io_PasswordSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.PasswordSettings getDefaultInstanceForType() {
+        return com.passkit.grpc.Template.PasswordSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.PasswordSettings build() {
+        com.passkit.grpc.Template.PasswordSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.PasswordSettings buildPartial() {
+        com.passkit.grpc.Template.PasswordSettings result = new com.passkit.grpc.Template.PasswordSettings(this);
+        result.passwordType_ = passwordType_;
+        result.password_ = password_;
+        result.inputLabelText_ = inputLabelText_;
+        if (localizedInputLabelTextBuilder_ == null) {
+          result.localizedInputLabelText_ = localizedInputLabelText_;
+        } else {
+          result.localizedInputLabelText_ = localizedInputLabelTextBuilder_.build();
+        }
+        result.errorText_ = errorText_;
+        if (localizedErrorTextBuilder_ == null) {
+          result.localizedErrorText_ = localizedErrorText_;
+        } else {
+          result.localizedErrorText_ = localizedErrorTextBuilder_.build();
+        }
+        result.headerText_ = headerText_;
+        if (localizedHeaderTextBuilder_ == null) {
+          result.localizedHeaderText_ = localizedHeaderText_;
+        } else {
+          result.localizedHeaderText_ = localizedHeaderTextBuilder_.build();
+        }
+        result.buttonText_ = buttonText_;
+        if (localizedButtonTextBuilder_ == null) {
+          result.localizedButtonText_ = localizedButtonText_;
+        } else {
+          result.localizedButtonText_ = localizedButtonTextBuilder_.build();
+        }
+        result.titleText_ = titleText_;
+        if (localizedTitleTextBuilder_ == null) {
+          result.localizedTitleText_ = localizedTitleText_;
+        } else {
+          result.localizedTitleText_ = localizedTitleTextBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Template.PasswordSettings) {
+          return mergeFrom((com.passkit.grpc.Template.PasswordSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Template.PasswordSettings other) {
+        if (other == com.passkit.grpc.Template.PasswordSettings.getDefaultInstance()) return this;
+        if (other.passwordType_ != 0) {
+          setPasswordTypeValue(other.getPasswordTypeValue());
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (!other.getInputLabelText().isEmpty()) {
+          inputLabelText_ = other.inputLabelText_;
+          onChanged();
+        }
+        if (other.hasLocalizedInputLabelText()) {
+          mergeLocalizedInputLabelText(other.getLocalizedInputLabelText());
+        }
+        if (!other.getErrorText().isEmpty()) {
+          errorText_ = other.errorText_;
+          onChanged();
+        }
+        if (other.hasLocalizedErrorText()) {
+          mergeLocalizedErrorText(other.getLocalizedErrorText());
+        }
+        if (!other.getHeaderText().isEmpty()) {
+          headerText_ = other.headerText_;
+          onChanged();
+        }
+        if (other.hasLocalizedHeaderText()) {
+          mergeLocalizedHeaderText(other.getLocalizedHeaderText());
+        }
+        if (!other.getButtonText().isEmpty()) {
+          buttonText_ = other.buttonText_;
+          onChanged();
+        }
+        if (other.hasLocalizedButtonText()) {
+          mergeLocalizedButtonText(other.getLocalizedButtonText());
+        }
+        if (!other.getTitleText().isEmpty()) {
+          titleText_ = other.titleText_;
+          onChanged();
+        }
+        if (other.hasLocalizedTitleText()) {
+          mergeLocalizedTitleText(other.getLocalizedTitleText());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Template.PasswordSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Template.PasswordSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int passwordType_ = 0;
+      /**
+       * <pre>
+       * Configures the type of password.
+       * </pre>
+       *
+       * <code>.io.PasswordType passwordType = 1;</code>
+       * @return The enum numeric value on the wire for passwordType.
+       */
+      @java.lang.Override public int getPasswordTypeValue() {
+        return passwordType_;
+      }
+      /**
+       * <pre>
+       * Configures the type of password.
+       * </pre>
+       *
+       * <code>.io.PasswordType passwordType = 1;</code>
+       * @param value The enum numeric value on the wire for passwordType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordTypeValue(int value) {
+        
+        passwordType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures the type of password.
+       * </pre>
+       *
+       * <code>.io.PasswordType passwordType = 1;</code>
+       * @return The passwordType.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Template.PasswordType getPasswordType() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Template.PasswordType result = com.passkit.grpc.Template.PasswordType.valueOf(passwordType_);
+        return result == null ? com.passkit.grpc.Template.PasswordType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Configures the type of password.
+       * </pre>
+       *
+       * <code>.io.PasswordType passwordType = 1;</code>
+       * @param value The passwordType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordType(com.passkit.grpc.Template.PasswordType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        passwordType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Configures the type of password.
+       * </pre>
+       *
+       * <code>.io.PasswordType passwordType = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPasswordType() {
+        
+        passwordType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <pre>
+       * Password users need to provide to access the data collection page.
+       * </pre>
+       *
+       * <code>string password = 2;</code>
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password users need to provide to access the data collection page.
+       * </pre>
+       *
+       * <code>string password = 2;</code>
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Password users need to provide to access the data collection page.
+       * </pre>
+       *
+       * <code>string password = 2;</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password users need to provide to access the data collection page.
+       * </pre>
+       *
+       * <code>string password = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+        
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password users need to provide to access the data collection page.
+       * </pre>
+       *
+       * <code>string password = 2;</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object inputLabelText_ = "";
+      /**
+       * <pre>
+       * Label text for the password field.
+       * </pre>
+       *
+       * <code>string inputLabelText = 3;</code>
+       * @return The inputLabelText.
+       */
+      public java.lang.String getInputLabelText() {
+        java.lang.Object ref = inputLabelText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          inputLabelText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Label text for the password field.
+       * </pre>
+       *
+       * <code>string inputLabelText = 3;</code>
+       * @return The bytes for inputLabelText.
+       */
+      public com.google.protobuf.ByteString
+          getInputLabelTextBytes() {
+        java.lang.Object ref = inputLabelText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          inputLabelText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Label text for the password field.
+       * </pre>
+       *
+       * <code>string inputLabelText = 3;</code>
+       * @param value The inputLabelText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputLabelText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        inputLabelText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Label text for the password field.
+       * </pre>
+       *
+       * <code>string inputLabelText = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInputLabelText() {
+        
+        inputLabelText_ = getDefaultInstance().getInputLabelText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Label text for the password field.
+       * </pre>
+       *
+       * <code>string inputLabelText = 3;</code>
+       * @param value The bytes for inputLabelText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputLabelTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        inputLabelText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedInputLabelText_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedInputLabelTextBuilder_;
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       * @return Whether the localizedInputLabelText field is set.
+       */
+      public boolean hasLocalizedInputLabelText() {
+        return localizedInputLabelTextBuilder_ != null || localizedInputLabelText_ != null;
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       * @return The localizedInputLabelText.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedInputLabelText() {
+        if (localizedInputLabelTextBuilder_ == null) {
+          return localizedInputLabelText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedInputLabelText_;
+        } else {
+          return localizedInputLabelTextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public Builder setLocalizedInputLabelText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedInputLabelTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedInputLabelText_ = value;
+          onChanged();
+        } else {
+          localizedInputLabelTextBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public Builder setLocalizedInputLabelText(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedInputLabelTextBuilder_ == null) {
+          localizedInputLabelText_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedInputLabelTextBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public Builder mergeLocalizedInputLabelText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedInputLabelTextBuilder_ == null) {
+          if (localizedInputLabelText_ != null) {
+            localizedInputLabelText_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedInputLabelText_).mergeFrom(value).buildPartial();
+          } else {
+            localizedInputLabelText_ = value;
+          }
+          onChanged();
+        } else {
+          localizedInputLabelTextBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public Builder clearLocalizedInputLabelText() {
+        if (localizedInputLabelTextBuilder_ == null) {
+          localizedInputLabelText_ = null;
+          onChanged();
+        } else {
+          localizedInputLabelText_ = null;
+          localizedInputLabelTextBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedInputLabelTextBuilder() {
+        
+        onChanged();
+        return getLocalizedInputLabelTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedInputLabelTextOrBuilder() {
+        if (localizedInputLabelTextBuilder_ != null) {
+          return localizedInputLabelTextBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedInputLabelText_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedInputLabelText_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized input label text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedInputLabelText = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedInputLabelTextFieldBuilder() {
+        if (localizedInputLabelTextBuilder_ == null) {
+          localizedInputLabelTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedInputLabelText(),
+                  getParentForChildren(),
+                  isClean());
+          localizedInputLabelText_ = null;
+        }
+        return localizedInputLabelTextBuilder_;
+      }
+
+      private java.lang.Object errorText_ = "";
+      /**
+       * <pre>
+       * Error text to be shown when an incorrect password is shown.
+       * </pre>
+       *
+       * <code>string errorText = 5;</code>
+       * @return The errorText.
+       */
+      public java.lang.String getErrorText() {
+        java.lang.Object ref = errorText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          errorText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Error text to be shown when an incorrect password is shown.
+       * </pre>
+       *
+       * <code>string errorText = 5;</code>
+       * @return The bytes for errorText.
+       */
+      public com.google.protobuf.ByteString
+          getErrorTextBytes() {
+        java.lang.Object ref = errorText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          errorText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Error text to be shown when an incorrect password is shown.
+       * </pre>
+       *
+       * <code>string errorText = 5;</code>
+       * @param value The errorText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        errorText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Error text to be shown when an incorrect password is shown.
+       * </pre>
+       *
+       * <code>string errorText = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearErrorText() {
+        
+        errorText_ = getDefaultInstance().getErrorText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Error text to be shown when an incorrect password is shown.
+       * </pre>
+       *
+       * <code>string errorText = 5;</code>
+       * @param value The bytes for errorText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        errorText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedErrorText_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedErrorTextBuilder_;
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       * @return Whether the localizedErrorText field is set.
+       */
+      public boolean hasLocalizedErrorText() {
+        return localizedErrorTextBuilder_ != null || localizedErrorText_ != null;
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       * @return The localizedErrorText.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedErrorText() {
+        if (localizedErrorTextBuilder_ == null) {
+          return localizedErrorText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedErrorText_;
+        } else {
+          return localizedErrorTextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public Builder setLocalizedErrorText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedErrorTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedErrorText_ = value;
+          onChanged();
+        } else {
+          localizedErrorTextBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public Builder setLocalizedErrorText(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedErrorTextBuilder_ == null) {
+          localizedErrorText_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedErrorTextBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public Builder mergeLocalizedErrorText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedErrorTextBuilder_ == null) {
+          if (localizedErrorText_ != null) {
+            localizedErrorText_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedErrorText_).mergeFrom(value).buildPartial();
+          } else {
+            localizedErrorText_ = value;
+          }
+          onChanged();
+        } else {
+          localizedErrorTextBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public Builder clearLocalizedErrorText() {
+        if (localizedErrorTextBuilder_ == null) {
+          localizedErrorText_ = null;
+          onChanged();
+        } else {
+          localizedErrorText_ = null;
+          localizedErrorTextBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedErrorTextBuilder() {
+        
+        onChanged();
+        return getLocalizedErrorTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedErrorTextOrBuilder() {
+        if (localizedErrorTextBuilder_ != null) {
+          return localizedErrorTextBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedErrorText_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedErrorText_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized error text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedErrorText = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedErrorTextFieldBuilder() {
+        if (localizedErrorTextBuilder_ == null) {
+          localizedErrorTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedErrorText(),
+                  getParentForChildren(),
+                  isClean());
+          localizedErrorText_ = null;
+        }
+        return localizedErrorTextBuilder_;
+      }
+
+      private java.lang.Object headerText_ = "";
+      /**
+       * <pre>
+       * Header text to be displayed above the password input box.
+       * </pre>
+       *
+       * <code>string headerText = 7;</code>
+       * @return The headerText.
+       */
+      public java.lang.String getHeaderText() {
+        java.lang.Object ref = headerText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          headerText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header text to be displayed above the password input box.
+       * </pre>
+       *
+       * <code>string headerText = 7;</code>
+       * @return The bytes for headerText.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderTextBytes() {
+        java.lang.Object ref = headerText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          headerText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header text to be displayed above the password input box.
+       * </pre>
+       *
+       * <code>string headerText = 7;</code>
+       * @param value The headerText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        headerText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header text to be displayed above the password input box.
+       * </pre>
+       *
+       * <code>string headerText = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeaderText() {
+        
+        headerText_ = getDefaultInstance().getHeaderText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header text to be displayed above the password input box.
+       * </pre>
+       *
+       * <code>string headerText = 7;</code>
+       * @param value The bytes for headerText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        headerText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedHeaderText_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedHeaderTextBuilder_;
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       * @return Whether the localizedHeaderText field is set.
+       */
+      public boolean hasLocalizedHeaderText() {
+        return localizedHeaderTextBuilder_ != null || localizedHeaderText_ != null;
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       * @return The localizedHeaderText.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderText() {
+        if (localizedHeaderTextBuilder_ == null) {
+          return localizedHeaderText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderText_;
+        } else {
+          return localizedHeaderTextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public Builder setLocalizedHeaderText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedHeaderTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedHeaderText_ = value;
+          onChanged();
+        } else {
+          localizedHeaderTextBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public Builder setLocalizedHeaderText(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedHeaderTextBuilder_ == null) {
+          localizedHeaderText_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedHeaderTextBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public Builder mergeLocalizedHeaderText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedHeaderTextBuilder_ == null) {
+          if (localizedHeaderText_ != null) {
+            localizedHeaderText_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedHeaderText_).mergeFrom(value).buildPartial();
+          } else {
+            localizedHeaderText_ = value;
+          }
+          onChanged();
+        } else {
+          localizedHeaderTextBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public Builder clearLocalizedHeaderText() {
+        if (localizedHeaderTextBuilder_ == null) {
+          localizedHeaderText_ = null;
+          onChanged();
+        } else {
+          localizedHeaderText_ = null;
+          localizedHeaderTextBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedHeaderTextBuilder() {
+        
+        onChanged();
+        return getLocalizedHeaderTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderTextOrBuilder() {
+        if (localizedHeaderTextBuilder_ != null) {
+          return localizedHeaderTextBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedHeaderText_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderText_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized header text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderText = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedHeaderTextFieldBuilder() {
+        if (localizedHeaderTextBuilder_ == null) {
+          localizedHeaderTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedHeaderText(),
+                  getParentForChildren(),
+                  isClean());
+          localizedHeaderText_ = null;
+        }
+        return localizedHeaderTextBuilder_;
+      }
+
+      private java.lang.Object buttonText_ = "";
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string buttonText = 9;</code>
+       * @return The buttonText.
+       */
+      public java.lang.String getButtonText() {
+        java.lang.Object ref = buttonText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          buttonText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string buttonText = 9;</code>
+       * @return The bytes for buttonText.
+       */
+      public com.google.protobuf.ByteString
+          getButtonTextBytes() {
+        java.lang.Object ref = buttonText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          buttonText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string buttonText = 9;</code>
+       * @param value The buttonText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setButtonText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        buttonText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string buttonText = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearButtonText() {
+        
+        buttonText_ = getDefaultInstance().getButtonText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string buttonText = 9;</code>
+       * @param value The bytes for buttonText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setButtonTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        buttonText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedButtonText_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedButtonTextBuilder_;
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       * @return Whether the localizedButtonText field is set.
+       */
+      public boolean hasLocalizedButtonText() {
+        return localizedButtonTextBuilder_ != null || localizedButtonText_ != null;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       * @return The localizedButtonText.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedButtonText() {
+        if (localizedButtonTextBuilder_ == null) {
+          return localizedButtonText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedButtonText_;
+        } else {
+          return localizedButtonTextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public Builder setLocalizedButtonText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedButtonTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedButtonText_ = value;
+          onChanged();
+        } else {
+          localizedButtonTextBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public Builder setLocalizedButtonText(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedButtonTextBuilder_ == null) {
+          localizedButtonText_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedButtonTextBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public Builder mergeLocalizedButtonText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedButtonTextBuilder_ == null) {
+          if (localizedButtonText_ != null) {
+            localizedButtonText_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedButtonText_).mergeFrom(value).buildPartial();
+          } else {
+            localizedButtonText_ = value;
+          }
+          onChanged();
+        } else {
+          localizedButtonTextBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public Builder clearLocalizedButtonText() {
+        if (localizedButtonTextBuilder_ == null) {
+          localizedButtonText_ = null;
+          onChanged();
+        } else {
+          localizedButtonText_ = null;
+          localizedButtonTextBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedButtonTextBuilder() {
+        
+        onChanged();
+        return getLocalizedButtonTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedButtonTextOrBuilder() {
+        if (localizedButtonTextBuilder_ != null) {
+          return localizedButtonTextBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedButtonText_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedButtonText_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedButtonText = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedButtonTextFieldBuilder() {
+        if (localizedButtonTextBuilder_ == null) {
+          localizedButtonTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedButtonText(),
+                  getParentForChildren(),
+                  isClean());
+          localizedButtonText_ = null;
+        }
+        return localizedButtonTextBuilder_;
+      }
+
+      private java.lang.Object titleText_ = "";
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string titleText = 11;</code>
+       * @return The titleText.
+       */
+      public java.lang.String getTitleText() {
+        java.lang.Object ref = titleText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          titleText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string titleText = 11;</code>
+       * @return The bytes for titleText.
+       */
+      public com.google.protobuf.ByteString
+          getTitleTextBytes() {
+        java.lang.Object ref = titleText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          titleText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string titleText = 11;</code>
+       * @param value The titleText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        titleText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string titleText = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitleText() {
+        
+        titleText_ = getDefaultInstance().getTitleText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text for the submit button.
+       * </pre>
+       *
+       * <code>string titleText = 11;</code>
+       * @param value The bytes for titleText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        titleText_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedTitleText_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedTitleTextBuilder_;
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       * @return Whether the localizedTitleText field is set.
+       */
+      public boolean hasLocalizedTitleText() {
+        return localizedTitleTextBuilder_ != null || localizedTitleText_ != null;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       * @return The localizedTitleText.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedTitleText() {
+        if (localizedTitleTextBuilder_ == null) {
+          return localizedTitleText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTitleText_;
+        } else {
+          return localizedTitleTextBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public Builder setLocalizedTitleText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedTitleTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedTitleText_ = value;
+          onChanged();
+        } else {
+          localizedTitleTextBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public Builder setLocalizedTitleText(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedTitleTextBuilder_ == null) {
+          localizedTitleText_ = builderForValue.build();
+          onChanged();
+        } else {
+          localizedTitleTextBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public Builder mergeLocalizedTitleText(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedTitleTextBuilder_ == null) {
+          if (localizedTitleText_ != null) {
+            localizedTitleText_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTitleText_).mergeFrom(value).buildPartial();
+          } else {
+            localizedTitleText_ = value;
+          }
+          onChanged();
+        } else {
+          localizedTitleTextBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public Builder clearLocalizedTitleText() {
+        if (localizedTitleTextBuilder_ == null) {
+          localizedTitleText_ = null;
+          onChanged();
+        } else {
+          localizedTitleText_ = null;
+          localizedTitleTextBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTitleTextBuilder() {
+        
+        onChanged();
+        return getLocalizedTitleTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleTextOrBuilder() {
+        if (localizedTitleTextBuilder_ != null) {
+          return localizedTitleTextBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedTitleText_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTitleText_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized button text.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedTitleText = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedTitleTextFieldBuilder() {
+        if (localizedTitleTextBuilder_ == null) {
+          localizedTitleTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedTitleText(),
+                  getParentForChildren(),
+                  isClean());
+          localizedTitleText_ = null;
+        }
+        return localizedTitleTextBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.PasswordSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.PasswordSettings)
+    private static final com.passkit.grpc.Template.PasswordSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Template.PasswordSettings();
+    }
+
+    public static com.passkit.grpc.Template.PasswordSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PasswordSettings>
+        PARSER = new com.google.protobuf.AbstractParser<PasswordSettings>() {
+      @java.lang.Override
+      public PasswordSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PasswordSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PasswordSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PasswordSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Template.PasswordSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -43973,6 +48086,11 @@ public final class Template {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_DataCollectionPageSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_PasswordSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_PasswordSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_PassTemplateResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -44092,247 +48210,268 @@ public final class Template {
       "\022 \n\006webApp\030\004 \001(\0132\020.io.GooglePayApp\022\031\n\021cl" +
       "assTemplateInfo\030\005 \001(\t\022\027\n\017backgroundColor" +
       "\030\006 \001(\t\022+\n\021languageOverrides\030\007 \003(\0162\020.io.L" +
-      "anguageCode\"\250\001\n\014GooglePayApp\022\024\n\003url\030\001 \001(" +
+      "anguageCode\"\366\001\n\014GooglePayApp\022\024\n\003url\030\001 \001(" +
       "\0132\007.io.Url\022\r\n\005title\030\002 \001(\t\022+\n\016localizedTi" +
       "tle\030\003 \001(\0132\023.io.LocalizedString\022\023\n\013descri" +
       "ption\030\004 \001(\t\0221\n\024localizedDescription\030\005 \001(" +
-      "\0132\023.io.LocalizedString\"m\n\004Data\022!\n\ndataFi" +
-      "elds\030\001 \003(\0132\r.io.DataField\022B\n\032dataCollect" +
-      "ionPageSettings\030\002 \001(\0132\036.io.DataCollectio" +
-      "nPageSettings\"t\n\023LandingPageSettings\0225\n\033" +
-      "landingLocalizationOverride\030\001 \003(\0162\020.io.L" +
-      "anguageCode\022&\n\022preferWalletPasses\030\002 \001(\0162" +
-      "\n.io.Toggle\"\254\005\n\032DataCollectionPageSettin" +
-      "gs\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(" +
-      "\0132\023.io.LocalizedString\022\023\n\013description\030\003 " +
-      "\001(\t\0221\n\024localizedDescription\030\004 \001(\0132\023.io.L" +
-      "ocalizedString\022\030\n\020submitButtonText\030\005 \001(\t" +
-      "\0226\n\031localizedSubmitButtonText\030\006 \001(\0132\023.io" +
-      ".LocalizedString\022\023\n\013loadingText\030\007 \001(\t\0221\n" +
-      "\024localizedLoadingText\030\010 \001(\0132\023.io.Localiz" +
-      "edString\022\024\n\014thankYouText\030\t \001(\t\0222\n\025locali" +
-      "zedThankYouText\030\n \001(\0132\023.io.LocalizedStri" +
-      "ng\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229\n\034local" +
-      "izedPageBackgroundColor\030\014 \001(\0132\023.io.Local" +
-      "izedString\022.\n\020trackingSettings\030\r \001(\0132\024.i" +
-      "o.TrackingSettings\022\035\n\025submitButtonTextCo" +
-      "lor\030\016 \001(\t\022#\n\033submitButtonBackgroundColor" +
-      "\030\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023localizedF" +
-      "ooterText\030\021 \001(\0132\023.io.LocalizedString\022\024\n\014" +
-      "cssOverrides\030\022 \001(\t\"\363\001\n\024PassTemplateRespo" +
-      "nse\022\"\n\010template\030\001 \001(\0132\020.io.PassTemplate\022" +
-      "\014\n\004Name\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010" +
-      "protocol\030\004 \001(\0162\020.io.PassProtocol\022\020\n\010revi" +
-      "sion\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"\\\n\006Colors\022\027\n\017ba" +
-      "ckgroundColor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022" +
-      "\021\n\ttextColor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\"." +
-      "\n\017CopyObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName" +
-      "\030\002 \001(\t\">\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertif" +
-      "icateId\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataF" +
-      "ield\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002" +
-      " \001(\t\022 \n\tfieldType\030\003 \001(\0162\r.io.FieldType\022\022" +
-      "\n\nisRequired\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016loc" +
-      "alizedLabel\030\006 \001(\0132\023.io.LocalizedString\022\036" +
-      "\n\010dataType\030\007 \001(\0162\014.io.DataType\022\024\n\014defaul" +
-      "tValue\030\010 \001(\t\0222\n\025localizedDefaultValue\030\t " +
-      "\001(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\n" +
-      " \001(\t\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014currenc" +
-      "yCode\030\014 \001(\t\022H\n\035appleWalletFieldRenderOpt" +
-      "ions\030\r \001(\0132!.io.AppleWalletFieldRenderOp" +
-      "tions\022N\n dataCollectionFieldRenderOption" +
-      "s\030\016 \001(\0132$.io.DataCollectionFieldRenderOp" +
-      "tions\022\034\n\005usage\030\017 \003(\0162\r.io.UsageType\022D\n\033g" +
-      "ooglePayFieldRenderOptions\030\020 \001(\0132\037.io.Go" +
-      "oglePayFieldRenderOptions\022\035\n\025defaultTelC" +
-      "ountryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRen" +
-      "derOptions\022(\n\rtextAlignment\030\002 \001(\0162\021.io.T" +
-      "extAlignment\022.\n\020positionSettings\030\003 \001(\0132\024" +
-      ".io.PositionSettings\022\025\n\rchangeMessage\030\004 " +
-      "\001(\t\0223\n\026localizedChangeMessage\030\005 \001(\0132\023.io" +
-      ".LocalizedString\022$\n\tdateStyle\030\006 \001(\0162\021.io" +
-      ".DateTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162\021.io.D" +
-      "ateTimeStyle\022$\n\013numberStyle\030\010 \001(\0162\017.io.N" +
-      "umberStyle\022/\n\025suppressLinkDetection\030\t \003(" +
-      "\0162\020.io.LinkDetector\022\026\n\016ignoreTimezone\030\n " +
-      "\001(\010\022\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033GooglePay" +
-      "FieldRenderOptions\022-\n\021googlePayPosition\030" +
-      "\001 \001(\0162\022.io.GooglePayField\022\032\n\022textModuleP" +
-      "riority\030\002 \001(\r\"G\n\020PositionSettings\022!\n\007sec" +
-      "tion\030\001 \001(\0162\020.io.FieldSection\022\020\n\010priority" +
-      "\030\002 \001(\r\"\237\003\n DataCollectionFieldRenderOpti" +
-      "ons\022\020\n\010helpText\030\001 \001(\t\022.\n\021localizedHelpTe" +
-      "xt\030\002 \001(\0132\023.io.LocalizedString\022\024\n\014display" +
-      "Order\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rsele" +
-      "ctOptions\030\006 \003(\0132\020.io.SelectOption\0221\n\024loc" +
-      "alizedPlaceholder\030\007 \001(\0132\023.io.LocalizedSt" +
-      "ring\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addressRen" +
-      "derOptions\030\t \001(\0132\030.io.AddressRenderOptio" +
-      "ns\022 \n\030localizedYearPlaceholder\030\n \001(\t\022!\n\031" +
-      "localizedMonthPlaceholder\030\013 \001(\t\022\037\n\027local" +
-      "izedDayPlaceholder\030\014 \001(\t\"\242\006\n\024AddressRend" +
-      "erOptions\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddr" +
-      "ess2Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014co" +
-      "untryLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023ad" +
-      "dress1Placeholder\030\006 \001(\t\022\033\n\023address2Place" +
-      "holder\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n" +
-      "\022countryPlaceholder\030\t \001(\t\022\026\n\016zipPlacehol" +
-      "der\030\n \001(\t\0223\n\026localizedAddress1Label\030\013 \001(" +
-      "\0132\023.io.LocalizedString\0223\n\026localizedAddre" +
-      "ss2Label\030\014 \001(\0132\023.io.LocalizedString\022/\n\022l" +
-      "ocalizedCityLabel\030\r \001(\0132\023.io.LocalizedSt" +
-      "ring\0222\n\025localizedCountryLabel\030\016 \001(\0132\023.io" +
-      ".LocalizedString\022.\n\021localizedZipLabel\030\017 " +
-      "\001(\0132\023.io.LocalizedString\0229\n\034localizedAdd" +
-      "ress1Placeholder\030\020 \001(\0132\023.io.LocalizedStr" +
-      "ing\0229\n\034localizedAddress2Placeholder\030\021 \001(" +
-      "\0132\023.io.LocalizedString\0225\n\030localizedCityP" +
-      "laceholder\030\022 \001(\0132\023.io.LocalizedString\0228\n" +
-      "\033localizedCountryPlaceholder\030\023 \001(\0132\023.io." +
-      "LocalizedString\0224\n\027localizedZipPlacehold" +
-      "er\030\024 \001(\0132\023.io.LocalizedString\"\267\001\n\007Sharin" +
-      "g\022\027\n\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022" +
-      "\023\n\013description\030\003 \001(\t\0221\n\024localizedDescrip" +
-      "tion\030\004 \001(\0132\023.io.LocalizedString:>\222A;\n9*\007" +
-      "Sharing2.Controls the sharing settings f" +
-      "or the program.\"N\n\026DefaultTemplateReques" +
-      "t\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n" +
-      "\010revision\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPL" +
-      "E_NOT_SUPPORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006" +
-      "COUPON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022" +
-      "\016\n\nSTORE_CARD\020\005*w\n\021GooglePayPassType\022\034\n\030" +
-      "GOOGLE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n" +
-      "\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFE" +
-      "R\020\005\022\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCO" +
-      "DE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022" +
-      "\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFi" +
-      "eldType\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007" +
-      "\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCO" +
-      "L_FIELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016Standa" +
-      "rdFields\022\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000" +
-      "\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGA" +
-      "L\020\002\022\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDAR" +
-      "D_USEFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026" +
-      "\n\022STANDARD_LOCATIONS\020\006*\\\n\rTextAlignment\022" +
-      "\035\n\031TEXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001" +
-      "\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n" +
-      "\rDateTimeStyle\022\036\n\032DATE_TIME_STYLE_DO_NOT" +
-      "_USE\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DAT" +
-      "E_TIME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE" +
-      "_LONG\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014Li" +
-      "nkDetector\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000" +
-      "\022\031\n\025LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETE" +
-      "CTOR_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LI" +
-      "NK_DETECTOR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027N" +
-      "UMBER_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE" +
-      "_DECIMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027" +
-      "NUMBER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYL" +
-      "E_SPELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYP" +
-      "E_DO_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021" +
-      "TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020" +
-      "\003\022\030\n\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_T" +
-      "YPE_TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010D" +
-      "ataType\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n" +
-      "\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_" +
-      "YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDAT" +
-      "E_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n" +
-      "\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE" +
-      "\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS" +
-      "\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010N" +
-      "O_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM" +
-      "\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME" +
-      "_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007" +
-      "\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020" +
-      "DATE_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022" +
-      "\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220" +
-      "\001\n\014FieldSection\022\034\n\030FIELD_SECTION_DO_NOT_" +
-      "USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS" +
-      "\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FI" +
-      "ELDS\020\004\022\021\n\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayF" +
-      "ield\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n" +
-      " GOOGLE_PAY_BOARDING_AIRLINE_NAME\020\001\022$\n G" +
-      "OOGLE_PAY_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOO" +
-      "GLE_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_" +
-      "BOARDING_DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOA" +
-      "RDING_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BO" +
-      "ARDING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARD" +
-      "ING_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDI" +
-      "NG_PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDI" +
-      "NG_ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_S" +
-      "EAT\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARDING_PO" +
-      "SITION\020\013\022)\n%GOOGLE_PAY_BOARDING_BOARDING" +
-      "_SEQUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
-      "ING_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT" +
-      "_NUMBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_CONFIRM" +
-      "ATION_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARDING_TI" +
-      "CKET_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDING_FRE" +
-      "QUENT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARD" +
-      "ING_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING" +
-      "_DEPARTURE_TIME\020\023\022$\n GOOGLE_PAY_BOARDING" +
-      "_ARRIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_A" +
-      "RRIVAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BOARDING" +
-      "_ARRIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME" +
-      "\020d\022\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036G" +
-      "OOGLE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGL" +
-      "E_PAY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_S" +
-      "ECTION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GO" +
-      "OGLE_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVEN" +
-      "T_TICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DO" +
-      "ORS_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030" +
-      "\n\024GOOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_E" +
-      "VENT_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_T" +
-      "ICKET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT_CONFI" +
-      "RMATION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FAC" +
-      "E_VALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT" +
-      "\020s\022\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034" +
-      "\n\027GOOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_P" +
-      "AY_GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIF" +
-      "T_BALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_G" +
-      "IFT_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMB" +
-      "ER\020\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRAM_NAME" +
-      "\020\254\002\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#G" +
-      "OOGLE_PAY_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n" +
-      "\037GOOGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035G" +
-      "OOGLE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGL" +
-      "E_PAY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_" +
-      "PAY_LOYALTY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n" +
-      "\026GOOGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY" +
-      "_OFFER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_D" +
-      "ETAILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT" +
-      "\020\223\003\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#" +
-      "\n\036GOOGLE_PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034G" +
-      "OOGLE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE" +
-      "_PAY_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE" +
-      "_PAY_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY" +
-      "_TRANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TR" +
-      "ANSIT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_P" +
-      "ASSENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_" +
-      "CARRIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020" +
-      "\374\003\022\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOG" +
-      "LE_PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGL" +
-      "E_PAY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE" +
-      "_PAY_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_" +
-      "TRANSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSI" +
-      "T_ZONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLA" +
-      "SS\020\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCESSION_C" +
-      "ATEGORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_R" +
-      "ESTRICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROU" +
-      "TE_RESTRICTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_" +
-      "TRANSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_P" +
-      "AY_TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOG" +
-      "LE_PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOG" +
-      "LE_PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGL" +
-      "E_PAY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PA" +
-      "Y_TRANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE" +
-      "_PAY_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY" +
-      "_TRANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY" +
-      "_TRANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_P" +
-      "AY_TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_N" +
-      "AME\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_MODULE\020" +
-      "\352\007BG\n\020com.passkit.grpcZ$stash.passkit.co" +
-      "m/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pro" +
-      "to3"
+      "\0132\023.io.LocalizedString\022\026\n\016urlDescription" +
+      "\030\006 \001(\t\0224\n\027localizedUrlDescription\030\007 \001(\0132" +
+      "\023.io.LocalizedString\"m\n\004Data\022!\n\ndataFiel" +
+      "ds\030\001 \003(\0132\r.io.DataField\022B\n\032dataCollectio" +
+      "nPageSettings\030\002 \001(\0132\036.io.DataCollectionP" +
+      "ageSettings\"\273\001\n\023LandingPageSettings\0225\n\033l" +
+      "andingLocalizationOverride\030\001 \003(\0162\020.io.La" +
+      "nguageCode\0221\n\035preferThirdPartyAndroidWal" +
+      "let\030\002 \001(\0162\n.io.Toggle\022:\n\026preferredAndroi" +
+      "dWallet\030\003 \001(\0162\032.io.SupportedAndroidWalle" +
+      "t\"\334\005\n\032DataCollectionPageSettings\022\r\n\005titl" +
+      "e\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(\0132\023.io.Loc" +
+      "alizedString\022\023\n\013description\030\003 \001(\t\0221\n\024loc" +
+      "alizedDescription\030\004 \001(\0132\023.io.LocalizedSt" +
+      "ring\022\030\n\020submitButtonText\030\005 \001(\t\0226\n\031locali" +
+      "zedSubmitButtonText\030\006 \001(\0132\023.io.Localized" +
+      "String\022\023\n\013loadingText\030\007 \001(\t\0221\n\024localized" +
+      "LoadingText\030\010 \001(\0132\023.io.LocalizedString\022\024" +
+      "\n\014thankYouText\030\t \001(\t\0222\n\025localizedThankYo" +
+      "uText\030\n \001(\0132\023.io.LocalizedString\022\033\n\023page" +
+      "BackgroundColor\030\013 \001(\t\0229\n\034localizedPageBa" +
+      "ckgroundColor\030\014 \001(\0132\023.io.LocalizedString" +
+      "\022.\n\020trackingSettings\030\r \001(\0132\024.io.Tracking" +
+      "Settings\022\035\n\025submitButtonTextColor\030\016 \001(\t\022" +
+      "#\n\033submitButtonBackgroundColor\030\017 \001(\t\022\022\n\n" +
+      "footerText\030\020 \001(\t\0220\n\023localizedFooterText\030" +
+      "\021 \001(\0132\023.io.LocalizedString\022\024\n\014cssOverrid" +
+      "es\030\022 \001(\t\022.\n\020passwordSettings\030\023 \001(\0132\024.io." +
+      "PasswordSettings\"\256\003\n\020PasswordSettings\022&\n" +
+      "\014passwordType\030\001 \001(\0162\020.io.PasswordType\022\020\n" +
+      "\010password\030\002 \001(\t\022\026\n\016inputLabelText\030\003 \001(\t\022" +
+      "4\n\027localizedInputLabelText\030\004 \001(\0132\023.io.Lo" +
+      "calizedString\022\021\n\terrorText\030\005 \001(\t\022/\n\022loca" +
+      "lizedErrorText\030\006 \001(\0132\023.io.LocalizedStrin" +
+      "g\022\022\n\nheaderText\030\007 \001(\t\0220\n\023localizedHeader" +
+      "Text\030\010 \001(\0132\023.io.LocalizedString\022\022\n\nbutto" +
+      "nText\030\t \001(\t\0220\n\023localizedButtonText\030\n \001(\013" +
+      "2\023.io.LocalizedString\022\021\n\ttitleText\030\013 \001(\t" +
+      "\022/\n\022localizedTitleText\030\014 \001(\0132\023.io.Locali" +
+      "zedString\"\363\001\n\024PassTemplateResponse\022\"\n\010te" +
+      "mplate\030\001 \001(\0132\020.io.PassTemplate\022\014\n\004Name\030\002" +
+      " \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010protocol\030" +
+      "\004 \001(\0162\020.io.PassProtocol\022\020\n\010revision\030\005 \001(" +
+      "\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\"\\\n\006Colors\022\027\n\017backgroundC" +
+      "olor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022\021\n\ttextCo" +
+      "lor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\".\n\017CopyObj" +
+      "ectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName\030\002 \001(\t\">\n" +
+      "\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertificateId\030\002" +
+      " \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataField\022\022\n\nu" +
+      "niqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002 \001(\t\022 \n\tf" +
+      "ieldType\030\003 \001(\0162\r.io.FieldType\022\022\n\nisRequi" +
+      "red\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016localizedLab" +
+      "el\030\006 \001(\0132\023.io.LocalizedString\022\036\n\010dataTyp" +
+      "e\030\007 \001(\0162\014.io.DataType\022\024\n\014defaultValue\030\010 " +
+      "\001(\t\0222\n\025localizedDefaultValue\030\t \001(\0132\023.io." +
+      "LocalizedString\022\022\n\nvalidation\030\n \001(\t\022\027\n\017u" +
+      "serCanSetValue\030\013 \001(\010\022\024\n\014currencyCode\030\014 \001" +
+      "(\t\022H\n\035appleWalletFieldRenderOptions\030\r \001(" +
+      "\0132!.io.AppleWalletFieldRenderOptions\022N\n " +
+      "dataCollectionFieldRenderOptions\030\016 \001(\0132$" +
+      ".io.DataCollectionFieldRenderOptions\022\034\n\005" +
+      "usage\030\017 \003(\0162\r.io.UsageType\022D\n\033googlePayF" +
+      "ieldRenderOptions\030\020 \001(\0132\037.io.GooglePayFi" +
+      "eldRenderOptions\022\035\n\025defaultTelCountryCod" +
+      "e\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRenderOption" +
+      "s\022(\n\rtextAlignment\030\002 \001(\0162\021.io.TextAlignm" +
+      "ent\022.\n\020positionSettings\030\003 \001(\0132\024.io.Posit" +
+      "ionSettings\022\025\n\rchangeMessage\030\004 \001(\t\0223\n\026lo" +
+      "calizedChangeMessage\030\005 \001(\0132\023.io.Localize" +
+      "dString\022$\n\tdateStyle\030\006 \001(\0162\021.io.DateTime" +
+      "Style\022$\n\ttimeStyle\030\007 \001(\0162\021.io.DateTimeSt" +
+      "yle\022$\n\013numberStyle\030\010 \001(\0162\017.io.NumberStyl" +
+      "e\022/\n\025suppressLinkDetection\030\t \003(\0162\020.io.Li" +
+      "nkDetector\022\026\n\016ignoreTimezone\030\n \001(\010\022\026\n\016is" +
+      "RelativeDate\030\013 \001(\010\"h\n\033GooglePayFieldRend" +
+      "erOptions\022-\n\021googlePayPosition\030\001 \001(\0162\022.i" +
+      "o.GooglePayField\022\032\n\022textModulePriority\030\002" +
+      " \001(\r\"G\n\020PositionSettings\022!\n\007section\030\001 \001(" +
+      "\0162\020.io.FieldSection\022\020\n\010priority\030\002 \001(\r\"\237\003" +
+      "\n DataCollectionFieldRenderOptions\022\020\n\010he" +
+      "lpText\030\001 \001(\t\022.\n\021localizedHelpText\030\002 \001(\0132" +
+      "\023.io.LocalizedString\022\024\n\014displayOrder\030\003 \001" +
+      "(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rselectOptions" +
+      "\030\006 \003(\0132\020.io.SelectOption\0221\n\024localizedPla" +
+      "ceholder\030\007 \001(\0132\023.io.LocalizedString\022\024\n\014a" +
+      "utocomplete\030\010 \001(\010\0226\n\024addressRenderOption" +
+      "s\030\t \001(\0132\030.io.AddressRenderOptions\022 \n\030loc" +
+      "alizedYearPlaceholder\030\n \001(\t\022!\n\031localized" +
+      "MonthPlaceholder\030\013 \001(\t\022\037\n\027localizedDayPl" +
+      "aceholder\030\014 \001(\t\"\242\006\n\024AddressRenderOptions" +
+      "\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddress2Label" +
+      "\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014countryLabe" +
+      "l\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023address1Pla" +
+      "ceholder\030\006 \001(\t\022\033\n\023address2Placeholder\030\007 " +
+      "\001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n\022countryP" +
+      "laceholder\030\t \001(\t\022\026\n\016zipPlaceholder\030\n \001(\t" +
+      "\0223\n\026localizedAddress1Label\030\013 \001(\0132\023.io.Lo" +
+      "calizedString\0223\n\026localizedAddress2Label\030" +
+      "\014 \001(\0132\023.io.LocalizedString\022/\n\022localizedC" +
+      "ityLabel\030\r \001(\0132\023.io.LocalizedString\0222\n\025l" +
+      "ocalizedCountryLabel\030\016 \001(\0132\023.io.Localize" +
+      "dString\022.\n\021localizedZipLabel\030\017 \001(\0132\023.io." +
+      "LocalizedString\0229\n\034localizedAddress1Plac" +
+      "eholder\030\020 \001(\0132\023.io.LocalizedString\0229\n\034lo" +
+      "calizedAddress2Placeholder\030\021 \001(\0132\023.io.Lo" +
+      "calizedString\0225\n\030localizedCityPlaceholde" +
+      "r\030\022 \001(\0132\023.io.LocalizedString\0228\n\033localize" +
+      "dCountryPlaceholder\030\023 \001(\0132\023.io.Localized" +
+      "String\0224\n\027localizedZipPlaceholder\030\024 \001(\0132" +
+      "\023.io.LocalizedString\"\267\001\n\007Sharing\022\027\n\017proh" +
+      "ibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\023\n\013descri" +
+      "ption\030\003 \001(\t\0221\n\024localizedDescription\030\004 \001(" +
+      "\0132\023.io.LocalizedString:>\222A;\n9*\007Sharing2." +
+      "Controls the sharing settings for the pr" +
+      "ogram.\"N\n\026DefaultTemplateRequest\022\"\n\010prot" +
+      "ocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n\010revision" +
+      "\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPLE_NOT_SUP" +
+      "PORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006COUPON\020\002\022" +
+      "\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022\016\n\nSTORE_" +
+      "CARD\020\005*w\n\021GooglePayPassType\022\034\n\030GOOGLE_PA" +
+      "Y_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n\006FLIGHT\020\002" +
+      "\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFER\020\005\022\013\n\007TR" +
+      "ANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCODE_TYPE_D" +
+      "O_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022\n\n\006PDF417" +
+      "\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFieldType\022\023" +
+      "\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007\n\003PII\020\002\022\024" +
+      "\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCOL_FIELDS\020" +
+      "\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016StandardFields\022" +
+      "\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000\022\025\n\021STAND" +
+      "ARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGAL\020\002\022\030\n\024ST" +
+      "ANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDARD_USEFUL_" +
+      "LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026\n\022STANDAR" +
+      "D_LOCATIONS\020\006*\\\n\rTextAlignment\022\035\n\031TEXT_A" +
+      "LIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001\022\n\n\006CENTE" +
+      "R\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n\rDateTime" +
+      "Style\022\036\n\032DATE_TIME_STYLE_DO_NOT_USE\020\000\022\031\n" +
+      "\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DATE_TIME_ST" +
+      "YLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE_LONG\020\003\022\030" +
+      "\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014LinkDetecto" +
+      "r\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000\022\031\n\025LINK_" +
+      "DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETECTOR_DATE" +
+      "\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LINK_DETECT" +
+      "OR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027NUMBER_STY" +
+      "LE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE_DECIMAL\020" +
+      "\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027NUMBER_ST" +
+      "YLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYLE_SPELL\020\004" +
+      "*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYPE_DO_NOT_" +
+      "USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021TRANSIT_T" +
+      "YPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020\003\022\030\n\024TRAN" +
+      "SIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_TYPE_TRAIN" +
+      "\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010DataType\022\022" +
+      "\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n\tTEXT_LON" +
+      "G\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_YYYYMM\020\004\022" +
+      "\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDATE_TIME\020\007\022" +
+      "\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n\022\007\n\003URL\020\013" +
+      "\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE\020\017\022\014\n\010CUR" +
+      "RENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS\020\022\022\013\n\007DAT" +
+      "E_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010NO_STYLE\020\000" +
+      "\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM\020\002\022\r\n\tDAT" +
+      "E_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME_SHORT\020\005\022" +
+      "\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007\022\r\n\tTIME_" +
+      "FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020DATE_TIME" +
+      "_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022\n\016DATE_TI" +
+      "ME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220\001\n\014FieldS" +
+      "ection\022\034\n\030FIELD_SECTION_DO_NOT_USE\020\000\022\017\n\013" +
+      "BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS\020\002\022\024\n\020SEC" +
+      "ONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FIELDS\020\004\022\021\n" +
+      "\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayField\022\037\n\033G" +
+      "OOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n GOOGLE_P" +
+      "AY_BOARDING_AIRLINE_NAME\020\001\022$\n GOOGLE_PAY" +
+      "_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOOGLE_PAY_B" +
+      "OARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_BOARDING_" +
+      "DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOARDING_ORI" +
+      "GIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BOARDING_OR" +
+      "IGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
+      "ING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDING_PASSEN" +
+      "GER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDING_ZONE_G" +
+      "ROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_SEAT\020\n\022)\n%" +
+      "GOOGLE_PAY_BOARDING_BOARDING_POSITION\020\013\022" +
+      ")\n%GOOGLE_PAY_BOARDING_BOARDING_SEQUENCE" +
+      "\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARDING_DOOR\020" +
+      "\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT_NUMBER\020\016" +
+      "\022+\n\'GOOGLE_PAY_BOARDING_CONFIRMATION_NUM" +
+      "BER\020\017\022%\n!GOOGLE_PAY_BOARDING_TICKET_NUMB" +
+      "ER\020\020\022-\n)GOOGLE_PAY_BOARDING_FREQUENT_FLY" +
+      "ER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARDING_GATE_" +
+      "CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING_DEPARTUR" +
+      "E_TIME\020\023\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_" +
+      "TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_ARRIVAL_TE" +
+      "RMINAL\020\025\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_" +
+      "GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME\020d\022\037\n\033GOO" +
+      "GLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036GOOGLE_PAY" +
+      "_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGLE_PAY_EVE" +
+      "NT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_SECTION\020h\022" +
+      "\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GOOGLE_PAY_" +
+      "EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVENT_TICKET_" +
+      "HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DOORS_OPEN\020" +
+      "l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030\n\024GOOGLE_" +
+      "PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_EVENT_TICK" +
+      "ET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_TICKET_NUM" +
+      "BER\020p\022(\n$GOOGLE_PAY_EVENT_CONFIRMATION_N" +
+      "UMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FACE_VALUE\020r" +
+      "\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT\020s\022\"\n\035GOO" +
+      "GLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034\n\027GOOGLE_" +
+      "PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_PAY_GIFT_C" +
+      "ARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIFT_BALANCE" +
+      "_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_GIFT_PIN\020\314" +
+      "\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMBER\020\315\001\022$\n\037" +
+      "GOOGLE_PAY_LOYALTY_PROGRAM_NAME\020\254\002\022\036\n\031GO" +
+      "OGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#GOOGLE_PAY" +
+      "_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n\037GOOGLE_P" +
+      "AY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035GOOGLE_PAY" +
+      "_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGLE_PAY_LOY" +
+      "ALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_PAY_LOYAL" +
+      "TY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n\026GOOGLE_P" +
+      "AY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY_OFFER_PR" +
+      "OVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_DETAILS\020\222\003" +
+      "\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT\020\223\003\022!\n\034GO" +
+      "OGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#\n\036GOOGLE_" +
+      "PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034GOOGLE_PAY" +
+      "_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE_PAY_TRAN" +
+      "SIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE_PAY_TRAN" +
+      "SIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY_TRANSIT_" +
+      "VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TRANSIT_ARR" +
+      "IVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_PASSENGER_" +
+      "NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_CARRIAGE\020" +
+      "\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020\374\003\022\034\n\027GOO" +
+      "GLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOGLE_PAY_TR" +
+      "ANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGLE_PAY_TRA" +
+      "NSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE_PAY_TRAN" +
+      "SIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_TRANSIT_P" +
+      "LATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSIT_ZONE\020\202\004" +
+      "\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLASS\020\203\004\022+\n&" +
+      "GOOGLE_PAY_TRANSIT_CONCESSION_CATEGORY\020\204" +
+      "\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_RESTRICTIO" +
+      "NS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROUTE_RESTRI" +
+      "CTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_TRANSIT_T" +
+      "IME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_PAY_TRANSI" +
+      "T_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOGLE_PAY_TR" +
+      "ANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOGLE_PAY_TR" +
+      "ANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGLE_PAY_TRA" +
+      "NSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PAY_TRANSIT" +
+      "_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE_PAY_TRAN" +
+      "SIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY_TRANSIT_" +
+      "PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY_TRANSIT_" +
+      "DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_PAY_TEXT_M" +
+      "ODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_NAME\020\351\007\022\"\n" +
+      "\035GOOGLE_PAY_STATIC_TEXT_MODULE\020\352\007*l\n\014Pas" +
+      "swordType\022\034\n\030PASSWORD_TYPE_DO_NOT_USE\020\000\022" +
+      "\035\n\031PASSWORD_TYPE_NO_PASSWORD\020\001\022\037\n\033PASSWO" +
+      "RD_TYPE_PASSWORD_ONLY\020\002*w\n\026SupportedAndr" +
+      "oidWallet\022\035\n\031ANDROID_WALLET_DO_NOT_USE\020\000" +
+      "\022\035\n\031ANDROID_WALLET_PASSWALLET\020\001\022\037\n\033ANDRO" +
+      "ID_WALLET_WALLETPASSES\020\002BG\n\020com.passkit." +
+      "grpcZ$stash.passkit.com/io/model/sdk/go/" +
+      "io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -44383,7 +48522,7 @@ public final class Template {
     internal_static_io_GooglePayApp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_GooglePayApp_descriptor,
-        new java.lang.String[] { "Url", "Title", "LocalizedTitle", "Description", "LocalizedDescription", });
+        new java.lang.String[] { "Url", "Title", "LocalizedTitle", "Description", "LocalizedDescription", "UrlDescription", "LocalizedUrlDescription", });
     internal_static_io_Data_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_io_Data_fieldAccessorTable = new
@@ -44395,81 +48534,87 @@ public final class Template {
     internal_static_io_LandingPageSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_LandingPageSettings_descriptor,
-        new java.lang.String[] { "LandingLocalizationOverride", "PreferWalletPasses", });
+        new java.lang.String[] { "LandingLocalizationOverride", "PreferThirdPartyAndroidWallet", "PreferredAndroidWallet", });
     internal_static_io_DataCollectionPageSettings_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_io_DataCollectionPageSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataCollectionPageSettings_descriptor,
-        new java.lang.String[] { "Title", "LocalizedTitle", "Description", "LocalizedDescription", "SubmitButtonText", "LocalizedSubmitButtonText", "LoadingText", "LocalizedLoadingText", "ThankYouText", "LocalizedThankYouText", "PageBackgroundColor", "LocalizedPageBackgroundColor", "TrackingSettings", "SubmitButtonTextColor", "SubmitButtonBackgroundColor", "FooterText", "LocalizedFooterText", "CssOverrides", });
-    internal_static_io_PassTemplateResponse_descriptor =
+        new java.lang.String[] { "Title", "LocalizedTitle", "Description", "LocalizedDescription", "SubmitButtonText", "LocalizedSubmitButtonText", "LoadingText", "LocalizedLoadingText", "ThankYouText", "LocalizedThankYouText", "PageBackgroundColor", "LocalizedPageBackgroundColor", "TrackingSettings", "SubmitButtonTextColor", "SubmitButtonBackgroundColor", "FooterText", "LocalizedFooterText", "CssOverrides", "PasswordSettings", });
+    internal_static_io_PasswordSettings_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_io_PasswordSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_PasswordSettings_descriptor,
+        new java.lang.String[] { "PasswordType", "Password", "InputLabelText", "LocalizedInputLabelText", "ErrorText", "LocalizedErrorText", "HeaderText", "LocalizedHeaderText", "ButtonText", "LocalizedButtonText", "TitleText", "LocalizedTitleText", });
+    internal_static_io_PassTemplateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_io_PassTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PassTemplateResponse_descriptor,
         new java.lang.String[] { "Template", "Name", "OwnerUsername", "Protocol", "Revision", "CreatedAt", "UpdatedAt", });
     internal_static_io_Colors_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_io_Colors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Colors_descriptor,
         new java.lang.String[] { "BackgroundColor", "LabelColor", "TextColor", "StripColor", });
     internal_static_io_CopyObjectInput_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_io_CopyObjectInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_CopyObjectInput_descriptor,
         new java.lang.String[] { "Id", "NewName", });
     internal_static_io_NFC_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_io_NFC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_NFC_descriptor,
         new java.lang.String[] { "Enabled", "CertificateId", "Payload", });
     internal_static_io_DataField_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_io_DataField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataField_descriptor,
         new java.lang.String[] { "UniqueName", "TemplateId", "FieldType", "IsRequired", "Label", "LocalizedLabel", "DataType", "DefaultValue", "LocalizedDefaultValue", "Validation", "UserCanSetValue", "CurrencyCode", "AppleWalletFieldRenderOptions", "DataCollectionFieldRenderOptions", "Usage", "GooglePayFieldRenderOptions", "DefaultTelCountryCode", });
     internal_static_io_AppleWalletFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_io_AppleWalletFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_AppleWalletFieldRenderOptions_descriptor,
         new java.lang.String[] { "TextAlignment", "PositionSettings", "ChangeMessage", "LocalizedChangeMessage", "DateStyle", "TimeStyle", "NumberStyle", "SuppressLinkDetection", "IgnoreTimezone", "IsRelativeDate", });
     internal_static_io_GooglePayFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_io_GooglePayFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_GooglePayFieldRenderOptions_descriptor,
         new java.lang.String[] { "GooglePayPosition", "TextModulePriority", });
     internal_static_io_PositionSettings_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_io_PositionSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PositionSettings_descriptor,
         new java.lang.String[] { "Section", "Priority", });
     internal_static_io_DataCollectionFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_io_DataCollectionFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataCollectionFieldRenderOptions_descriptor,
         new java.lang.String[] { "HelpText", "LocalizedHelpText", "DisplayOrder", "Placeholder", "SelectOptions", "LocalizedPlaceholder", "Autocomplete", "AddressRenderOptions", "LocalizedYearPlaceholder", "LocalizedMonthPlaceholder", "LocalizedDayPlaceholder", });
     internal_static_io_AddressRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_io_AddressRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_AddressRenderOptions_descriptor,
         new java.lang.String[] { "Address1Label", "Address2Label", "CityLabel", "CountryLabel", "ZipLabel", "Address1Placeholder", "Address2Placeholder", "CityPlaceholder", "CountryPlaceholder", "ZipPlaceholder", "LocalizedAddress1Label", "LocalizedAddress2Label", "LocalizedCityLabel", "LocalizedCountryLabel", "LocalizedZipLabel", "LocalizedAddress1Placeholder", "LocalizedAddress2Placeholder", "LocalizedCityPlaceholder", "LocalizedCountryPlaceholder", "LocalizedZipPlaceholder", });
     internal_static_io_Sharing_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_io_Sharing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Sharing_descriptor,
         new java.lang.String[] { "ProhibitSharing", "Url", "Description", "LocalizedDescription", });
     internal_static_io_DefaultTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_io_DefaultTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DefaultTemplateRequest_descriptor,

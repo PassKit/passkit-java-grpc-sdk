@@ -10819,6 +10819,41 @@ public final class MemberOuterClass {
      * @return The tierPoints.
      */
     int getTierPoints();
+
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    boolean hasEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return The eventDetails.
+     */
+    com.passkit.grpc.Members.Event.EventDetails getEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     */
+    com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder();
+
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 8;</code>
+     * @return The tierId.
+     */
+    java.lang.String getTierId();
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 8;</code>
+     * @return The bytes for tierId.
+     */
+    com.google.protobuf.ByteString
+        getTierIdBytes();
   }
   /**
    * Protobuf type {@code members.EarnBurnPointsRequest}
@@ -10836,6 +10871,7 @@ public final class MemberOuterClass {
       id_ = "";
       externalId_ = "";
       programId_ = "";
+      tierId_ = "";
     }
 
     @java.lang.Override
@@ -10899,6 +10935,25 @@ public final class MemberOuterClass {
             case 48: {
 
               tierPoints_ = input.readUInt32();
+              break;
+            }
+            case 58: {
+              com.passkit.grpc.Members.Event.EventDetails.Builder subBuilder = null;
+              if (eventDetails_ != null) {
+                subBuilder = eventDetails_.toBuilder();
+              }
+              eventDetails_ = input.readMessage(com.passkit.grpc.Members.Event.EventDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eventDetails_);
+                eventDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tierId_ = s;
               break;
             }
             default: {
@@ -11116,6 +11171,78 @@ public final class MemberOuterClass {
       return tierPoints_;
     }
 
+    public static final int EVENTDETAILS_FIELD_NUMBER = 7;
+    private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventDetails() {
+      return eventDetails_ != null;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return The eventDetails.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+      return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+      return getEventDetails();
+    }
+
+    public static final int TIERID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object tierId_;
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 8;</code>
+     * @return The tierId.
+     */
+    @java.lang.Override
+    public java.lang.String getTierId() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tierId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 8;</code>
+     * @return The bytes for tierId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTierIdBytes() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11148,6 +11275,12 @@ public final class MemberOuterClass {
       if (tierPoints_ != 0) {
         output.writeUInt32(6, tierPoints_);
       }
+      if (eventDetails_ != null) {
+        output.writeMessage(7, getEventDetails());
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, tierId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11178,6 +11311,13 @@ public final class MemberOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, tierPoints_);
       }
+      if (eventDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getEventDetails());
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, tierId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11207,6 +11347,13 @@ public final class MemberOuterClass {
               other.getSecondaryPoints())) return false;
       if (getTierPoints()
           != other.getTierPoints()) return false;
+      if (hasEventDetails() != other.hasEventDetails()) return false;
+      if (hasEventDetails()) {
+        if (!getEventDetails()
+            .equals(other.getEventDetails())) return false;
+      }
+      if (!getTierId()
+          .equals(other.getTierId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11232,6 +11379,12 @@ public final class MemberOuterClass {
           getSecondaryPoints());
       hash = (37 * hash) + TIERPOINTS_FIELD_NUMBER;
       hash = (53 * hash) + getTierPoints();
+      if (hasEventDetails()) {
+        hash = (37 * hash) + EVENTDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventDetails().hashCode();
+      }
+      hash = (37 * hash) + TIERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTierId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -11377,6 +11530,14 @@ public final class MemberOuterClass {
 
         tierPoints_ = 0;
 
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+        tierId_ = "";
+
         return this;
       }
 
@@ -11409,6 +11570,12 @@ public final class MemberOuterClass {
         result.points_ = points_;
         result.secondaryPoints_ = secondaryPoints_;
         result.tierPoints_ = tierPoints_;
+        if (eventDetailsBuilder_ == null) {
+          result.eventDetails_ = eventDetails_;
+        } else {
+          result.eventDetails_ = eventDetailsBuilder_.build();
+        }
+        result.tierId_ = tierId_;
         onBuilt();
         return result;
       }
@@ -11477,6 +11644,13 @@ public final class MemberOuterClass {
         }
         if (other.getTierPoints() != 0) {
           setTierPoints(other.getTierPoints());
+        }
+        if (other.hasEventDetails()) {
+          mergeEventDetails(other.getEventDetails());
+        }
+        if (!other.getTierId().isEmpty()) {
+          tierId_ = other.tierId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -11923,6 +12097,221 @@ public final class MemberOuterClass {
         onChanged();
         return this;
       }
+
+      private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> eventDetailsBuilder_;
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       * @return Whether the eventDetails field is set.
+       */
+      public boolean hasEventDetails() {
+        return eventDetailsBuilder_ != null || eventDetails_ != null;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       * @return The eventDetails.
+       */
+      public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        } else {
+          return eventDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder setEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventDetails_ = value;
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder setEventDetails(
+          com.passkit.grpc.Members.Event.EventDetails.Builder builderForValue) {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder mergeEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (eventDetails_ != null) {
+            eventDetails_ =
+              com.passkit.grpc.Members.Event.EventDetails.newBuilder(eventDetails_).mergeFrom(value).buildPartial();
+          } else {
+            eventDetails_ = value;
+          }
+          onChanged();
+        } else {
+          eventDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder clearEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+          onChanged();
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetails.Builder getEventDetailsBuilder() {
+        
+        onChanged();
+        return getEventDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+        if (eventDetailsBuilder_ != null) {
+          return eventDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return eventDetails_ == null ?
+              com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> 
+          getEventDetailsFieldBuilder() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder>(
+                  getEventDetails(),
+                  getParentForChildren(),
+                  isClean());
+          eventDetails_ = null;
+        }
+        return eventDetailsBuilder_;
+      }
+
+      private java.lang.Object tierId_ = "";
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 8;</code>
+       * @return The tierId.
+       */
+      public java.lang.String getTierId() {
+        java.lang.Object ref = tierId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tierId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 8;</code>
+       * @return The bytes for tierId.
+       */
+      public com.google.protobuf.ByteString
+          getTierIdBytes() {
+        java.lang.Object ref = tierId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tierId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 8;</code>
+       * @param value The tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tierId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTierId() {
+        
+        tierId_ = getDefaultInstance().getTierId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 8;</code>
+       * @param value The bytes for tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tierId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12099,6 +12488,41 @@ public final class MemberOuterClass {
      * @return The resetTierPoints.
      */
     boolean getResetTierPoints();
+
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    boolean hasEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     * @return The eventDetails.
+     */
+    com.passkit.grpc.Members.Event.EventDetails getEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     */
+    com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder();
+
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 11;</code>
+     * @return The tierId.
+     */
+    java.lang.String getTierId();
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 11;</code>
+     * @return The bytes for tierId.
+     */
+    com.google.protobuf.ByteString
+        getTierIdBytes();
   }
   /**
    * Protobuf type {@code members.SetPointsRequest}
@@ -12116,6 +12540,7 @@ public final class MemberOuterClass {
       id_ = "";
       externalId_ = "";
       programId_ = "";
+      tierId_ = "";
     }
 
     @java.lang.Override
@@ -12194,6 +12619,25 @@ public final class MemberOuterClass {
             case 72: {
 
               resetTierPoints_ = input.readBool();
+              break;
+            }
+            case 82: {
+              com.passkit.grpc.Members.Event.EventDetails.Builder subBuilder = null;
+              if (eventDetails_ != null) {
+                subBuilder = eventDetails_.toBuilder();
+              }
+              eventDetails_ = input.readMessage(com.passkit.grpc.Members.Event.EventDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eventDetails_);
+                eventDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tierId_ = s;
               break;
             }
             default: {
@@ -12456,6 +12900,78 @@ public final class MemberOuterClass {
       return resetTierPoints_;
     }
 
+    public static final int EVENTDETAILS_FIELD_NUMBER = 10;
+    private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventDetails() {
+      return eventDetails_ != null;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     * @return The eventDetails.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+      return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 10;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+      return getEventDetails();
+    }
+
+    public static final int TIERID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object tierId_;
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 11;</code>
+     * @return The tierId.
+     */
+    @java.lang.Override
+    public java.lang.String getTierId() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tierId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional field to change the tierIf of the member.
+     * </pre>
+     *
+     * <code>string tierId = 11;</code>
+     * @return The bytes for tierId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTierIdBytes() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12496,6 +13012,12 @@ public final class MemberOuterClass {
       }
       if (resetTierPoints_ != false) {
         output.writeBool(9, resetTierPoints_);
+      }
+      if (eventDetails_ != null) {
+        output.writeMessage(10, getEventDetails());
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, tierId_);
       }
       unknownFields.writeTo(output);
     }
@@ -12539,6 +13061,13 @@ public final class MemberOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, resetTierPoints_);
       }
+      if (eventDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getEventDetails());
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, tierId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12574,6 +13103,13 @@ public final class MemberOuterClass {
           != other.getResetSecondaryPoints()) return false;
       if (getResetTierPoints()
           != other.getResetTierPoints()) return false;
+      if (hasEventDetails() != other.hasEventDetails()) return false;
+      if (hasEventDetails()) {
+        if (!getEventDetails()
+            .equals(other.getEventDetails())) return false;
+      }
+      if (!getTierId()
+          .equals(other.getTierId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12608,6 +13144,12 @@ public final class MemberOuterClass {
       hash = (37 * hash) + RESETTIERPOINTS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getResetTierPoints());
+      if (hasEventDetails()) {
+        hash = (37 * hash) + EVENTDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventDetails().hashCode();
+      }
+      hash = (37 * hash) + TIERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTierId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12759,6 +13301,14 @@ public final class MemberOuterClass {
 
         resetTierPoints_ = false;
 
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+        tierId_ = "";
+
         return this;
       }
 
@@ -12794,6 +13344,12 @@ public final class MemberOuterClass {
         result.resetPoints_ = resetPoints_;
         result.resetSecondaryPoints_ = resetSecondaryPoints_;
         result.resetTierPoints_ = resetTierPoints_;
+        if (eventDetailsBuilder_ == null) {
+          result.eventDetails_ = eventDetails_;
+        } else {
+          result.eventDetails_ = eventDetailsBuilder_.build();
+        }
+        result.tierId_ = tierId_;
         onBuilt();
         return result;
       }
@@ -12871,6 +13427,13 @@ public final class MemberOuterClass {
         }
         if (other.getResetTierPoints() != false) {
           setResetTierPoints(other.getResetTierPoints());
+        }
+        if (other.hasEventDetails()) {
+          mergeEventDetails(other.getEventDetails());
+        }
+        if (!other.getTierId().isEmpty()) {
+          tierId_ = other.tierId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13443,6 +14006,221 @@ public final class MemberOuterClass {
       public Builder clearResetTierPoints() {
         
         resetTierPoints_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> eventDetailsBuilder_;
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       * @return Whether the eventDetails field is set.
+       */
+      public boolean hasEventDetails() {
+        return eventDetailsBuilder_ != null || eventDetails_ != null;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       * @return The eventDetails.
+       */
+      public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        } else {
+          return eventDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public Builder setEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventDetails_ = value;
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public Builder setEventDetails(
+          com.passkit.grpc.Members.Event.EventDetails.Builder builderForValue) {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public Builder mergeEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (eventDetails_ != null) {
+            eventDetails_ =
+              com.passkit.grpc.Members.Event.EventDetails.newBuilder(eventDetails_).mergeFrom(value).buildPartial();
+          } else {
+            eventDetails_ = value;
+          }
+          onChanged();
+        } else {
+          eventDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public Builder clearEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+          onChanged();
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetails.Builder getEventDetailsBuilder() {
+        
+        onChanged();
+        return getEventDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+        if (eventDetailsBuilder_ != null) {
+          return eventDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return eventDetails_ == null ?
+              com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> 
+          getEventDetailsFieldBuilder() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder>(
+                  getEventDetails(),
+                  getParentForChildren(),
+                  isClean());
+          eventDetails_ = null;
+        }
+        return eventDetailsBuilder_;
+      }
+
+      private java.lang.Object tierId_ = "";
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 11;</code>
+       * @return The tierId.
+       */
+      public java.lang.String getTierId() {
+        java.lang.Object ref = tierId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tierId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 11;</code>
+       * @return The bytes for tierId.
+       */
+      public com.google.protobuf.ByteString
+          getTierIdBytes() {
+        java.lang.Object ref = tierId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tierId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 11;</code>
+       * @param value The tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tierId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTierId() {
+        
+        tierId_ = getDefaultInstance().getTierId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional field to change the tierIf of the member.
+       * </pre>
+       *
+       * <code>string tierId = 11;</code>
+       * @param value The bytes for tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tierId_ = value;
         onChanged();
         return this;
       }
@@ -17751,85 +18529,85 @@ public final class MemberOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\026io/member/member.proto\022\007members\032\037googl" +
-      "e/protobuf/timestamp.proto\032\031io/common/pr" +
-      "oximity.proto\032\027io/common/message.proto\032\027" +
-      "io/common/metrics.proto\032\024io/common/note." +
-      "proto\032\032io/common/pagination.proto\032\026io/co" +
-      "mmon/filter.proto\032\024io/common/pass.proto\032" +
-      "\030io/common/personal.proto\032\026io/common/exp" +
-      "iry.proto\032.protoc-gen-openapiv2/options/" +
-      "annotations.proto\"\264\007\n\006Member\022\n\n\002id\030\001 \001(\t" +
-      "\022\022\n\nexternalId\030\002 \001(\t\022\032\n\022groupingIdentifi" +
-      "er\030\003 \001(\t\022\016\n\006tierId\030\004 \001(\t\022\021\n\tprogramId\030\005 " +
-      "\001(\t\022\032\n\006person\030\006 \001(\0132\n.io.Person\022/\n\010metaD" +
-      "ata\030\007 \003(\0132\035.members.Member.MetaDataEntry" +
-      "\022\016\n\006optOut\030\r \001(\010\022\016\n\006points\030\016 \001(\002\022\027\n\017seco" +
-      "ndaryPoints\030\017 \001(\002\022\022\n\ntierPoints\030\020 \001(\r\022.\n" +
-      "\nexpiryDate\030\022 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022%\n\006status\030\023 \001(\0162\025.members.MemberSt" +
-      "atus\022(\n\rpassOverrides\030\024 \001(\0132\021.io.PassOve" +
-      "rrides\022\"\n\014passMetaData\030\025 \001(\0132\014.io.Metada" +
-      "ta\022\027\n\005notes\030\032 \003(\0132\010.io.Note\0226\n\022currentTi" +
-      "erAwarded\030\033 \001(\0132\032.google.protobuf.Timest" +
-      "amp\0226\n\022currentTierExpires\030\034 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022+\n\007created\030\035 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022+\n\007updated\030\036 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\024\n\014profile" +
-      "Image\030\037 \001(\t\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001:\253\001\222A\247\001\n\244\001*\006Member2\204" +
-      "\001Basic member information needs to be pr" +
-      "ovided. Member information is deleted or" +
-      " rendered unusable once the member recor" +
-      "d is deleted.\322\001\006tierId\322\001\tprogramIdJ\004\010\010\020\t" +
-      "J\004\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014J\004\010\014\020\rJ\004\010\026\020\027J\004\010\027\020\030J\004\010\030" +
-      "\020\031J\004\010\031\020\032\"H\n\037MemberRecordByExternalIdRequ" +
-      "est\022\021\n\tprogramId\030\001 \001(\t\022\022\n\nexternalId\030\002 \001" +
-      "(\t\"V\n\024MemberSegmentRequest\022\032\n\006filter\030\001 \001" +
-      "(\0132\n.io.Filter\022\"\n\tnewValues\030\002 \001(\0132\017.memb" +
-      "ers.Member\"v\n\023UpdateExpiryRequest\022\021\n\tpro" +
-      "gramId\030\001 \001(\t\022\016\n\006tierId\030\002 \001(\t\022*\n\016expirySe" +
-      "ttings\030\003 \001(\0132\022.io.ExpirySettings\022\020\n\010time" +
-      "zone\030\004 \001(\t\"q\n\014MemberExpiry\022\n\n\002id\030\001 \001(\t\022\022" +
-      "\n\nexternalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022.\n" +
-      "\nexpiryDate\030\004 \001(\0132\032.google.protobuf.Time" +
-      "stamp\"~\n\014MemberPoints\022\n\n\002id\030\001 \001(\t\022\022\n\next" +
-      "ernalId\030\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006poin" +
-      "ts\030\004 \001(\002\022\027\n\017secondaryPoints\030\005 \001(\002\022\022\n\ntie" +
-      "rPoints\030\006 \001(\r\"\207\001\n\025EarnBurnPointsRequest\022" +
-      "\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\tprogr" +
-      "amId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n\017secondaryP" +
-      "oints\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001(\r\"\316\001\n\020SetP" +
-      "ointsRequest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002" +
-      " \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022" +
-      "\027\n\017secondaryPoints\030\005 \001(\002\022\022\n\ntierPoints\030\006" +
-      " \001(\r\022\023\n\013resetPoints\030\007 \001(\010\022\034\n\024resetSecond" +
-      "aryPoints\030\010 \001(\010\022\027\n\017resetTierPoints\030\t \001(\010" +
-      "\"\340\002\n\027MemberCheckInOutRequest\022\020\n\010memberId" +
-      "\030\001 \001(\t\022\030\n\020externalMemberId\030\002 \001(\t\022\021\n\tprog" +
-      "ramId\030\003 \001(\t\022\017\n\007address\030\004 \001(\t\022\013\n\003lat\030\005 \001(" +
-      "\001\022\013\n\003lon\030\006 \001(\001\022\013\n\003alt\030\007 \001(\005\022\027\n\017externalE" +
-      "ventId\030\010 \001(\t\022\030\n\020externalDeviceId\030\t \001(\t\022\031" +
-      "\n\021externalServiceId\030\n \001(\t\022@\n\010metaData\030\013 " +
-      "\003(\0132..members.MemberCheckInOutRequest.Me" +
-      "taDataEntry\022\r\n\005notes\030\014 \001(\t\032/\n\rMetaDataEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"N\n\025L" +
-      "istRequestDeprecated\022\021\n\tprogramId\030\001 \001(\t\022" +
-      "\"\n\npagination\030\002 \001(\0132\016.io.Pagination\"R\n\013L" +
-      "istRequest\022\021\n\tprogramId\030\001 \001(\t\022\034\n\007filters" +
-      "\030\002 \001(\0132\013.io.Filters\022\022\n\nemailAsCsv\030\003 \001(\010*" +
-      "c\n\014MemberStatus\022\014\n\010ENROLLED\020\000\022\n\n\006ACTIVE\020" +
-      "\001\022\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRED\020\003\022\017\n\013CHECKE" +
-      "D_OUT\020\004\022\013\n\007DELETED\020\005B_\n\030com.passkit.grpc" +
-      ".MembersZ,stash.passkit.com/io/model/sdk" +
-      "/go/io/members\252\002\024PassKit.Grpc.Membersb\006p" +
-      "roto3"
+      "e/protobuf/timestamp.proto\032\027io/common/me" +
+      "trics.proto\032\024io/common/note.proto\032\032io/co" +
+      "mmon/pagination.proto\032\026io/common/filter." +
+      "proto\032\024io/common/pass.proto\032\030io/common/p" +
+      "ersonal.proto\032\026io/common/expiry.proto\032\025i" +
+      "o/member/event.proto\032.protoc-gen-openapi" +
+      "v2/options/annotations.proto\"\264\007\n\006Member\022" +
+      "\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\032\n\022group" +
+      "ingIdentifier\030\003 \001(\t\022\016\n\006tierId\030\004 \001(\t\022\021\n\tp" +
+      "rogramId\030\005 \001(\t\022\032\n\006person\030\006 \001(\0132\n.io.Pers" +
+      "on\022/\n\010metaData\030\007 \003(\0132\035.members.Member.Me" +
+      "taDataEntry\022\016\n\006optOut\030\r \001(\010\022\016\n\006points\030\016 " +
+      "\001(\002\022\027\n\017secondaryPoints\030\017 \001(\002\022\022\n\ntierPoin" +
+      "ts\030\020 \001(\r\022.\n\nexpiryDate\030\022 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022%\n\006status\030\023 \001(\0162\025.membe" +
+      "rs.MemberStatus\022(\n\rpassOverrides\030\024 \001(\0132\021" +
+      ".io.PassOverrides\022\"\n\014passMetaData\030\025 \001(\0132" +
+      "\014.io.Metadata\022\027\n\005notes\030\032 \003(\0132\010.io.Note\0226" +
+      "\n\022currentTierAwarded\030\033 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\0226\n\022currentTierExpires\030\034 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022+\n\007create" +
+      "d\030\035 \001(\0132\032.google.protobuf.Timestamp\022+\n\007u" +
+      "pdated\030\036 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\024\n\014profileImage\030\037 \001(\t\032/\n\rMetaDataEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\253\001\222A\247\001\n\244" +
+      "\001*\006Member2\204\001Basic member information nee" +
+      "ds to be provided. Member information is" +
+      " deleted or rendered unusable once the m" +
+      "ember record is deleted.\322\001\006tierId\322\001\tprog" +
+      "ramIdJ\004\010\010\020\tJ\004\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014J\004\010\014\020\rJ\004\010\026\020" +
+      "\027J\004\010\027\020\030J\004\010\030\020\031J\004\010\031\020\032\"H\n\037MemberRecordByExt" +
+      "ernalIdRequest\022\021\n\tprogramId\030\001 \001(\t\022\022\n\next" +
+      "ernalId\030\002 \001(\t\"V\n\024MemberSegmentRequest\022\032\n" +
+      "\006filter\030\001 \001(\0132\n.io.Filter\022\"\n\tnewValues\030\002" +
+      " \001(\0132\017.members.Member\"v\n\023UpdateExpiryReq" +
+      "uest\022\021\n\tprogramId\030\001 \001(\t\022\016\n\006tierId\030\002 \001(\t\022" +
+      "*\n\016expirySettings\030\003 \001(\0132\022.io.ExpirySetti" +
+      "ngs\022\020\n\010timezone\030\004 \001(\t\"q\n\014MemberExpiry\022\n\n" +
+      "\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\tprogram" +
+      "Id\030\003 \001(\t\022.\n\nexpiryDate\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"~\n\014MemberPoints\022\n\n\002id\030\001" +
+      " \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\tprogramId\030\003 " +
+      "\001(\t\022\016\n\006points\030\004 \001(\002\022\027\n\017secondaryPoints\030\005" +
+      " \001(\002\022\022\n\ntierPoints\030\006 \001(\r\"\304\001\n\025EarnBurnPoi" +
+      "ntsRequest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001" +
+      "(\t\022\021\n\tprogramId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n" +
+      "\017secondaryPoints\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001" +
+      "(\r\022+\n\014eventDetails\030\007 \001(\0132\025.members.Event" +
+      "Details\022\016\n\006tierId\030\010 \001(\t\"\213\002\n\020SetPointsReq" +
+      "uest\022\n\n\002id\030\001 \001(\t\022\022\n\nexternalId\030\002 \001(\t\022\021\n\t" +
+      "programId\030\003 \001(\t\022\016\n\006points\030\004 \001(\002\022\027\n\017secon" +
+      "daryPoints\030\005 \001(\002\022\022\n\ntierPoints\030\006 \001(\r\022\023\n\013" +
+      "resetPoints\030\007 \001(\010\022\034\n\024resetSecondaryPoint" +
+      "s\030\010 \001(\010\022\027\n\017resetTierPoints\030\t \001(\010\022+\n\014even" +
+      "tDetails\030\n \001(\0132\025.members.EventDetails\022\016\n" +
+      "\006tierId\030\013 \001(\t\"\340\002\n\027MemberCheckInOutReques" +
+      "t\022\020\n\010memberId\030\001 \001(\t\022\030\n\020externalMemberId\030" +
+      "\002 \001(\t\022\021\n\tprogramId\030\003 \001(\t\022\017\n\007address\030\004 \001(" +
+      "\t\022\013\n\003lat\030\005 \001(\001\022\013\n\003lon\030\006 \001(\001\022\013\n\003alt\030\007 \001(\005" +
+      "\022\027\n\017externalEventId\030\010 \001(\t\022\030\n\020externalDev" +
+      "iceId\030\t \001(\t\022\031\n\021externalServiceId\030\n \001(\t\022@" +
+      "\n\010metaData\030\013 \003(\0132..members.MemberCheckIn" +
+      "OutRequest.MetaDataEntry\022\r\n\005notes\030\014 \001(\t\032" +
+      "/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"N\n\025ListRequestDeprecated\022\021\n\tpro" +
+      "gramId\030\001 \001(\t\022\"\n\npagination\030\002 \001(\0132\016.io.Pa" +
+      "gination\"R\n\013ListRequest\022\021\n\tprogramId\030\001 \001" +
+      "(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\022\022\n\nemai" +
+      "lAsCsv\030\003 \001(\010*c\n\014MemberStatus\022\014\n\010ENROLLED" +
+      "\020\000\022\n\n\006ACTIVE\020\001\022\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRE" +
+      "D\020\003\022\017\n\013CHECKED_OUT\020\004\022\013\n\007DELETED\020\005B_\n\030com" +
+      ".passkit.grpc.MembersZ,stash.passkit.com" +
+      "/io/model/sdk/go/io/members\252\002\024PassKit.Gr" +
+      "pc.Membersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.passkit.grpc.Proximity.getDescriptor(),
-          com.passkit.grpc.MessageOuterClass.getDescriptor(),
           com.passkit.grpc.MetricsOuterClass.getDescriptor(),
           com.passkit.grpc.NoteOuterClass.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
@@ -17837,6 +18615,7 @@ public final class MemberOuterClass {
           com.passkit.grpc.PassOuterClass.getDescriptor(),
           com.passkit.grpc.Personal.getDescriptor(),
           com.passkit.grpc.Expiry.getDescriptor(),
+          com.passkit.grpc.Members.Event.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_members_Member_descriptor =
@@ -17886,13 +18665,13 @@ public final class MemberOuterClass {
     internal_static_members_EarnBurnPointsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_EarnBurnPointsRequest_descriptor,
-        new java.lang.String[] { "Id", "ExternalId", "ProgramId", "Points", "SecondaryPoints", "TierPoints", });
+        new java.lang.String[] { "Id", "ExternalId", "ProgramId", "Points", "SecondaryPoints", "TierPoints", "EventDetails", "TierId", });
     internal_static_members_SetPointsRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_members_SetPointsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_SetPointsRequest_descriptor,
-        new java.lang.String[] { "Id", "ExternalId", "ProgramId", "Points", "SecondaryPoints", "TierPoints", "ResetPoints", "ResetSecondaryPoints", "ResetTierPoints", });
+        new java.lang.String[] { "Id", "ExternalId", "ProgramId", "Points", "SecondaryPoints", "TierPoints", "ResetPoints", "ResetSecondaryPoints", "ResetTierPoints", "EventDetails", "TierId", });
     internal_static_members_MemberCheckInOutRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_members_MemberCheckInOutRequest_fieldAccessorTable = new
@@ -17923,8 +18702,6 @@ public final class MemberOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.passkit.grpc.Proximity.getDescriptor();
-    com.passkit.grpc.MessageOuterClass.getDescriptor();
     com.passkit.grpc.MetricsOuterClass.getDescriptor();
     com.passkit.grpc.NoteOuterClass.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
@@ -17932,6 +18709,7 @@ public final class MemberOuterClass {
     com.passkit.grpc.PassOuterClass.getDescriptor();
     com.passkit.grpc.Personal.getDescriptor();
     com.passkit.grpc.Expiry.getDescriptor();
+    com.passkit.grpc.Members.Event.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 

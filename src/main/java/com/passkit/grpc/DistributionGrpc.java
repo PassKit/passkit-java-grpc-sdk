@@ -1,24 +1,11 @@
 package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/core/a_rpc_distribution.proto")
 public final class DistributionGrpc {
 
@@ -59,34 +46,65 @@ public final class DistributionGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassLinkRequest,
-      com.passkit.grpc.CommonObjects.Url> getGetSmartPasssLinkMethod;
+      com.passkit.grpc.CommonObjects.Url> getGetSmartPassLinkMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "getSmartPasssLink",
+      fullMethodName = SERVICE_NAME + '/' + "getSmartPassLink",
       requestType = com.passkit.grpc.Distribution.SmartPassLinkRequest.class,
       responseType = com.passkit.grpc.CommonObjects.Url.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassLinkRequest,
-      com.passkit.grpc.CommonObjects.Url> getGetSmartPasssLinkMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassLinkRequest, com.passkit.grpc.CommonObjects.Url> getGetSmartPasssLinkMethod;
-    if ((getGetSmartPasssLinkMethod = DistributionGrpc.getGetSmartPasssLinkMethod) == null) {
+      com.passkit.grpc.CommonObjects.Url> getGetSmartPassLinkMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassLinkRequest, com.passkit.grpc.CommonObjects.Url> getGetSmartPassLinkMethod;
+    if ((getGetSmartPassLinkMethod = DistributionGrpc.getGetSmartPassLinkMethod) == null) {
       synchronized (DistributionGrpc.class) {
-        if ((getGetSmartPasssLinkMethod = DistributionGrpc.getGetSmartPasssLinkMethod) == null) {
-          DistributionGrpc.getGetSmartPasssLinkMethod = getGetSmartPasssLinkMethod =
+        if ((getGetSmartPassLinkMethod = DistributionGrpc.getGetSmartPassLinkMethod) == null) {
+          DistributionGrpc.getGetSmartPassLinkMethod = getGetSmartPassLinkMethod =
               io.grpc.MethodDescriptor.<com.passkit.grpc.Distribution.SmartPassLinkRequest, com.passkit.grpc.CommonObjects.Url>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSmartPasssLink"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSmartPassLink"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Distribution.SmartPassLinkRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
-              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getSmartPasssLink"))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getSmartPassLink"))
               .build();
         }
       }
     }
-    return getGetSmartPasssLinkMethod;
+    return getGetSmartPassLinkMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.ClassObjectInput,
+      com.passkit.grpc.Distribution.DataCollectionFields> getGetDataCollectionPageFieldsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getDataCollectionPageFields",
+      requestType = com.passkit.grpc.CommonObjects.ClassObjectInput.class,
+      responseType = com.passkit.grpc.Distribution.DataCollectionFields.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.ClassObjectInput,
+      com.passkit.grpc.Distribution.DataCollectionFields> getGetDataCollectionPageFieldsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.ClassObjectInput, com.passkit.grpc.Distribution.DataCollectionFields> getGetDataCollectionPageFieldsMethod;
+    if ((getGetDataCollectionPageFieldsMethod = DistributionGrpc.getGetDataCollectionPageFieldsMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getGetDataCollectionPageFieldsMethod = DistributionGrpc.getGetDataCollectionPageFieldsMethod) == null) {
+          DistributionGrpc.getGetDataCollectionPageFieldsMethod = getGetDataCollectionPageFieldsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.ClassObjectInput, com.passkit.grpc.Distribution.DataCollectionFields>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getDataCollectionPageFields"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.ClassObjectInput.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Distribution.DataCollectionFields.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getDataCollectionPageFields"))
+              .build();
+        }
+      }
+    }
+    return getGetDataCollectionPageFieldsMethod;
   }
 
   /**
@@ -141,32 +159,46 @@ public final class DistributionGrpc {
      */
     public void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSendWelcomeEmailMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendWelcomeEmailMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSmartPasssLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
+    public void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSmartPasssLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmartPassLinkMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataCollectionPageFieldsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getSendWelcomeEmailMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Distribution.EmailDistributionRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_SEND_WELCOME_EMAIL)))
           .addMethod(
-            getGetSmartPasssLinkMethod(),
-            asyncUnaryCall(
+            getGetSmartPassLinkMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Distribution.SmartPassLinkRequest,
                 com.passkit.grpc.CommonObjects.Url>(
-                  this, METHODID_GET_SMART_PASSS_LINK)))
+                  this, METHODID_GET_SMART_PASS_LINK)))
+          .addMethod(
+            getGetDataCollectionPageFieldsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.ClassObjectInput,
+                com.passkit.grpc.Distribution.DataCollectionFields>(
+                  this, METHODID_GET_DATA_COLLECTION_PAGE_FIELDS)))
           .build();
     }
   }
@@ -189,16 +221,24 @@ public final class DistributionGrpc {
      */
     public void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendWelcomeEmailMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getSmartPasssLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
+    public void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
-      asyncUnaryCall(
-          getChannel().newCall(getGetSmartPasssLinkMethod(), getCallOptions()), request, responseObserver);
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSmartPassLinkMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDataCollectionPageFieldsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -219,15 +259,22 @@ public final class DistributionGrpc {
     /**
      */
     public com.google.protobuf.Empty sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendWelcomeEmailMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.passkit.grpc.CommonObjects.Url getSmartPasssLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request) {
-      return blockingUnaryCall(
-          getChannel(), getGetSmartPasssLinkMethod(), getCallOptions(), request);
+    public com.passkit.grpc.CommonObjects.Url getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSmartPassLinkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Distribution.DataCollectionFields getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDataCollectionPageFieldsMethod(), getCallOptions(), request);
     }
   }
 
@@ -249,21 +296,30 @@ public final class DistributionGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendWelcomeEmail(
         com.passkit.grpc.Distribution.EmailDistributionRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendWelcomeEmailMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getSmartPasssLink(
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getSmartPassLink(
         com.passkit.grpc.Distribution.SmartPassLinkRequest request) {
-      return futureUnaryCall(
-          getChannel().newCall(getGetSmartPasssLinkMethod(), getCallOptions()), request);
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSmartPassLinkMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.DataCollectionFields> getDataCollectionPageFields(
+        com.passkit.grpc.CommonObjects.ClassObjectInput request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDataCollectionPageFieldsMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_SEND_WELCOME_EMAIL = 0;
-  private static final int METHODID_GET_SMART_PASSS_LINK = 1;
+  private static final int METHODID_GET_SMART_PASS_LINK = 1;
+  private static final int METHODID_GET_DATA_COLLECTION_PAGE_FIELDS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -286,9 +342,13 @@ public final class DistributionGrpc {
           serviceImpl.sendWelcomeEmail((com.passkit.grpc.Distribution.EmailDistributionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
-        case METHODID_GET_SMART_PASSS_LINK:
-          serviceImpl.getSmartPasssLink((com.passkit.grpc.Distribution.SmartPassLinkRequest) request,
+        case METHODID_GET_SMART_PASS_LINK:
+          serviceImpl.getSmartPassLink((com.passkit.grpc.Distribution.SmartPassLinkRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
+          break;
+        case METHODID_GET_DATA_COLLECTION_PAGE_FIELDS:
+          serviceImpl.getDataCollectionPageFields((com.passkit.grpc.CommonObjects.ClassObjectInput) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -352,7 +412,8 @@ public final class DistributionGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DistributionFileDescriptorSupplier())
               .addMethod(getSendWelcomeEmailMethod())
-              .addMethod(getGetSmartPasssLinkMethod())
+              .addMethod(getGetSmartPassLinkMethod())
+              .addMethod(getGetDataCollectionPageFieldsMethod())
               .build();
         }
       }

@@ -28,33 +28,77 @@ public final class ARpcCertificates {
       "tobuf/empty.proto\032\036io/common/common_obje" +
       "cts.proto\032 io/certificate/certificate.pr" +
       "oto\032\032io/common/pagination.proto\032\026io/comm" +
-      "on/filter.proto2\320\007\n\014Certificates\022i\n\027getA" +
-      "ppleCertificateData\022\026.io.PassTypeIdentif" +
-      "ier\032\023.io.CertificateData\"!\202\323\344\223\002\033\022\031/certi" +
-      "ficate/{passTypeId}\022\207\001\n\034getCertificateSi" +
-      "gningRequest\022\026.google.protobuf.Empty\032\035.i" +
-      "o.CertificateSigningRequest\"0\202\323\344\223\002*\022(/ce" +
-      "rtificate/certificate_signing_request\022d\n" +
-      "\023addAppleCertificate\022\r.io.FileBytes\032\023.io" +
-      ".CertificateData\")\202\323\344\223\002#\"\036/certificate/a" +
-      "pple_certificate:\001*\022g\n\026updateAppleCertif" +
-      "icate\022\r.io.FileBytes\032\023.io.CertificateDat" +
-      "a\")\202\323\344\223\002#\032\036/certificate/apple_certificat" +
-      "e:\001*\022_\n\037listAppleCertificatesDeprecated\022" +
-      "\016.io.Pagination\032\023.io.CertificateData\"\025\202\323" +
-      "\344\223\002\017\022\r/certificates0\001\022`\n\025listAppleCertif" +
-      "icates\022\013.io.Filters\032\023.io.CertificateData" +
-      "\"#\202\323\344\223\002\035\"\030/certificates/apple/list:\001*0\001\022" +
-      "Z\n countAppleCertificatesDeprecated\022\016.io" +
-      ".Pagination\032\t.io.Count\"\033\202\323\344\223\002\025\022\023/certifi" +
-      "cates/count\022V\n\026countAppleCertificates\022\013." +
-      "io.Filters\032\t.io.Count\"$\202\323\344\223\002\036\"\031/certific" +
-      "ates/apple/count:\001*\022\204\001\n\031sendNFCSigningCr" +
-      "edentials\022 .io.NFCSigningCredentialsRequ" +
-      "est\032\026.google.protobuf.Empty\"-\202\323\344\223\002\'\"\"/ce" +
-      "rtificates/nfc/credentials/send:\001*BG\n\020co" +
-      "m.passkit.grpcZ$stash.passkit.com/io/mod" +
-      "el/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "on/filter.proto\032.protoc-gen-openapiv2/op" +
+      "tions/annotations.proto2\350\016\n\014Certificates" +
+      "\022\334\001\n\027getAppleCertificateData\022\026.io.PassTy" +
+      "peIdentifier\032\023.io.CertificateData\"\223\001\202\323\344\223" +
+      "\002\033\022\031/certificate/{passTypeId}\222Ao\022\032Get Ap" +
+      "ple pass certificate\032QGets the certifica" +
+      "te data for certificate with Pass Type I" +
+      "dentifier {passTypeId}.\022\325\001\n\034getCertifica" +
+      "teSigningRequest\022\026.google.protobuf.Empty" +
+      "\032\035.io.CertificateSigningRequest\"~\202\323\344\223\002*\022" +
+      "(/certificate/certificate_signing_reques" +
+      "t\222AK\022%Get CSR (Certificate Signing Reque" +
+      "st)\032\"Gets a CSR for the logged in user.\022" +
+      "\242\001\n\023addAppleCertificate\022\r.io.FileBytes\032\023" +
+      ".io.CertificateData\"g\202\323\344\223\002#\"\036/certificat" +
+      "e/apple_certificate:\001*\222A;\022\025Add Apple cer" +
+      "tificate\032\"Uploads an Apple pass certific" +
+      "ate.\022\273\001\n\026updateAppleCertificate\022\r.io.Fil" +
+      "eBytes\032\023.io.CertificateData\"}\202\323\344\223\002#\032\036/ce" +
+      "rtificate/apple_certificate:\001*\222AQ\022\030Updat" +
+      "e Apple certificate\0325Updates or renews a" +
+      "n existing Apple pass certificate.\022\273\001\n\037l" +
+      "istAppleCertificatesDeprecated\022\016.io.Pagi" +
+      "nation\032\023.io.CertificateData\"q\202\323\344\223\002\017\022\r/ce" +
+      "rtificates\222AY\022)List Apple pass certifica" +
+      "tes [DEPRECATED]\032,Retrieves a users cert" +
+      "ificates [DEPRECATED].0\001\022\241\001\n\025listAppleCe" +
+      "rtificates\022\013.io.Filters\032\023.io.Certificate" +
+      "Data\"d\202\323\344\223\002\035\"\030/certificates/apple/list:\001" +
+      "*\222A>\022\034List Apple pass certificates\032\036Retr" +
+      "ieves a users certificates0\001\022\340\001\n countAp" +
+      "pleCertificatesDeprecated\022\016.io.Paginatio" +
+      "n\032\t.io.Count\"\240\001\202\323\344\223\002\025\022\023/certificates/cou" +
+      "nt\222A\201\001\022*Count Apple pass certificates [D" +
+      "EPRECATED]\032SRetrieves the total count of" +
+      " pass certificates for the logged in use" +
+      "r [DEPRECATED].\022\301\001\n\026countAppleCertificat" +
+      "es\022\013.io.Filters\032\t.io.Count\"\216\001\202\323\344\223\002\036\"\031/ce" +
+      "rtificates/apple/count:\001*\222Ag\022\035Count Appl" +
+      "e pass certificates\032FRetrieves the total" +
+      " count of pass certificates for the logg" +
+      "ed in user.\022\264\002\n\031sendNFCSigningCredential" +
+      "s\022 .io.NFCSigningCredentialsRequest\032\026.go" +
+      "ogle.protobuf.Empty\"\334\001\202\323\344\223\002\'\"\"/certifica" +
+      "tes/nfc/credentials/send:\001*\222A\253\001\022\034Send NF" +
+      "C signing credentials\032\212\001Sends the NFC si" +
+      "gning credentials for a certificate to t" +
+      "he registered email address of the user." +
+      " Only works with NFC enabled certificate" +
+      "s.B\330\006\n\020com.passkit.grpcZ$stash.passkit.c" +
+      "om/io/model/sdk/go/io\252\002\014PassKit.Grpc\222A\215\006" +
+      "\022\332\001\n\030PassKit Certificates API\022CAPI for m" +
+      "anaging Apple Wallet Pass Type Identifie" +
+      "rs & Certificates.\0328https://passkit.com/" +
+      "legal/terms-of-subscription-service/\"?\n\017" +
+      "PassKit Support\022\027https://docs.passkit.io" +
+      "\032\023support@passkit.com*\001\0022\020application/js" +
+      "on:\020application/jsonR9\n\003200\0222\n(Returned " +
+      "when the request is successful.\022\006\n\004\232\002\001\007R" +
+      "4\n\003400\022-\n+Returned when wrong user input" +
+      " is provided.R0\n\003401\022)\n\'Returned when th" +
+      "e user is unauthorized.RP\n\003403\022I\nGReturn" +
+      "ed when the user does not have permissio" +
+      "n to access the resource.R;\n\003404\0224\n*Retu" +
+      "rned when the resource does not exist.\022\006" +
+      "\n\004\232\002\001\007R<\n\003500\0225\n+Returned when there is " +
+      "an unexpected error.\022\006\n\004\232\002\001\007RW\n\003503\022P\nNS" +
+      "erver is unavailable. Back off for 250ms" +
+      " and repeat request until successful.Z>\n" +
+      "<\n\napiKeyAuth\022.\010\002\022\031JWT Authentication to" +
+      "ken.\032\rAuthorization \002b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -65,10 +109,13 @@ public final class ARpcCertificates {
           com.passkit.grpc.Certificate.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
           com.passkit.grpc.Filter.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -77,6 +124,7 @@ public final class ARpcCertificates {
     com.passkit.grpc.Certificate.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
     com.passkit.grpc.Filter.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

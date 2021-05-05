@@ -3,8 +3,8 @@
 
 package com.passkit.grpc;
 
-public final class Useragent {
-  private Useragent() {}
+public final class BrowserAgent {
+  private BrowserAgent() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -277,15 +277,15 @@ public final class Useragent {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.passkit.grpc.Useragent.internal_static_io_UserAgent_descriptor;
+      return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.passkit.grpc.Useragent.internal_static_io_UserAgent_fieldAccessorTable
+      return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.passkit.grpc.Useragent.UserAgent.class, com.passkit.grpc.Useragent.UserAgent.Builder.class);
+              com.passkit.grpc.BrowserAgent.UserAgent.class, com.passkit.grpc.BrowserAgent.UserAgent.Builder.class);
     }
 
     public static final int RAW_FIELD_NUMBER = 1;
@@ -753,10 +753,10 @@ public final class Useragent {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.passkit.grpc.Useragent.UserAgent)) {
+      if (!(obj instanceof com.passkit.grpc.BrowserAgent.UserAgent)) {
         return super.equals(obj);
       }
-      com.passkit.grpc.Useragent.UserAgent other = (com.passkit.grpc.Useragent.UserAgent) obj;
+      com.passkit.grpc.BrowserAgent.UserAgent other = (com.passkit.grpc.BrowserAgent.UserAgent) obj;
 
       if (!getRaw()
           .equals(other.getRaw())) return false;
@@ -820,69 +820,69 @@ public final class Useragent {
       return hash;
     }
 
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(byte[] data)
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(java.io.InputStream input)
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseDelimitedFrom(java.io.InputStream input)
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseDelimitedFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.passkit.grpc.Useragent.UserAgent parseFrom(
+    public static com.passkit.grpc.BrowserAgent.UserAgent parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -895,7 +895,7 @@ public final class Useragent {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.passkit.grpc.Useragent.UserAgent prototype) {
+    public static Builder newBuilder(com.passkit.grpc.BrowserAgent.UserAgent prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -916,21 +916,21 @@ public final class Useragent {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:io.UserAgent)
-        com.passkit.grpc.Useragent.UserAgentOrBuilder {
+        com.passkit.grpc.BrowserAgent.UserAgentOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.passkit.grpc.Useragent.internal_static_io_UserAgent_descriptor;
+        return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.passkit.grpc.Useragent.internal_static_io_UserAgent_fieldAccessorTable
+        return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.passkit.grpc.Useragent.UserAgent.class, com.passkit.grpc.Useragent.UserAgent.Builder.class);
+                com.passkit.grpc.BrowserAgent.UserAgent.class, com.passkit.grpc.BrowserAgent.UserAgent.Builder.class);
       }
 
-      // Construct using com.passkit.grpc.Useragent.UserAgent.newBuilder()
+      // Construct using com.passkit.grpc.BrowserAgent.UserAgent.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -976,17 +976,17 @@ public final class Useragent {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.passkit.grpc.Useragent.internal_static_io_UserAgent_descriptor;
+        return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_descriptor;
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Useragent.UserAgent getDefaultInstanceForType() {
-        return com.passkit.grpc.Useragent.UserAgent.getDefaultInstance();
+      public com.passkit.grpc.BrowserAgent.UserAgent getDefaultInstanceForType() {
+        return com.passkit.grpc.BrowserAgent.UserAgent.getDefaultInstance();
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Useragent.UserAgent build() {
-        com.passkit.grpc.Useragent.UserAgent result = buildPartial();
+      public com.passkit.grpc.BrowserAgent.UserAgent build() {
+        com.passkit.grpc.BrowserAgent.UserAgent result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -994,8 +994,8 @@ public final class Useragent {
       }
 
       @java.lang.Override
-      public com.passkit.grpc.Useragent.UserAgent buildPartial() {
-        com.passkit.grpc.Useragent.UserAgent result = new com.passkit.grpc.Useragent.UserAgent(this);
+      public com.passkit.grpc.BrowserAgent.UserAgent buildPartial() {
+        com.passkit.grpc.BrowserAgent.UserAgent result = new com.passkit.grpc.BrowserAgent.UserAgent(this);
         result.raw_ = raw_;
         result.platform_ = platform_;
         result.os_ = os_;
@@ -1045,16 +1045,16 @@ public final class Useragent {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.passkit.grpc.Useragent.UserAgent) {
-          return mergeFrom((com.passkit.grpc.Useragent.UserAgent)other);
+        if (other instanceof com.passkit.grpc.BrowserAgent.UserAgent) {
+          return mergeFrom((com.passkit.grpc.BrowserAgent.UserAgent)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.passkit.grpc.Useragent.UserAgent other) {
-        if (other == com.passkit.grpc.Useragent.UserAgent.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.passkit.grpc.BrowserAgent.UserAgent other) {
+        if (other == com.passkit.grpc.BrowserAgent.UserAgent.getDefaultInstance()) return this;
         if (!other.getRaw().isEmpty()) {
           raw_ = other.raw_;
           onChanged();
@@ -1112,11 +1112,11 @@ public final class Useragent {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Useragent.UserAgent parsedMessage = null;
+        com.passkit.grpc.BrowserAgent.UserAgent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Useragent.UserAgent) e.getUnfinishedMessage();
+          parsedMessage = (com.passkit.grpc.BrowserAgent.UserAgent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1888,12 +1888,12 @@ public final class Useragent {
     }
 
     // @@protoc_insertion_point(class_scope:io.UserAgent)
-    private static final com.passkit.grpc.Useragent.UserAgent DEFAULT_INSTANCE;
+    private static final com.passkit.grpc.BrowserAgent.UserAgent DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.passkit.grpc.Useragent.UserAgent();
+      DEFAULT_INSTANCE = new com.passkit.grpc.BrowserAgent.UserAgent();
     }
 
-    public static com.passkit.grpc.Useragent.UserAgent getDefaultInstance() {
+    public static com.passkit.grpc.BrowserAgent.UserAgent getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1918,7 +1918,7 @@ public final class Useragent {
     }
 
     @java.lang.Override
-    public com.passkit.grpc.Useragent.UserAgent getDefaultInstanceForType() {
+    public com.passkit.grpc.BrowserAgent.UserAgent getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1944,9 +1944,9 @@ public final class Useragent {
       "\001(\t\022\025\n\rengineVersion\030\006 \001(\t\022\017\n\007browser\030\007 " +
       "\001(\t\022\026\n\016browserVersion\030\010 \001(\t\022\024\n\014localizat" +
       "ion\030\t \001(\t\022\016\n\006mobile\030\n \001(\010\022\030\n\020walletCompa" +
-      "tible\030\013 \001(\010BG\n\020com.passkit.grpcZ$stash.p" +
-      "asskit.com/io/model/sdk/go/io\252\002\014PassKit." +
-      "Grpcb\006proto3"
+      "tible\030\013 \001(\010BU\n\020com.passkit.grpcB\014Browser" +
+      "AgentZ$stash.passkit.com/io/model/sdk/go" +
+      "/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

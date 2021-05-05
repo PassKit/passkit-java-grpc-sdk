@@ -3898,36 +3898,32 @@ public final class VenueOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034io/event_tickets/venue.proto\022\revent_ti" +
       "ckets\032\037google/protobuf/timestamp.proto\032\034" +
-      "io/common/distribution.proto\032\034io/common/" +
-      "localization.proto\032\027io/common/project.pr" +
-      "oto\032\031io/common/proximity.proto\032.protoc-g" +
-      "en-openapiv2/options/annotations.proto\"\244" +
-      "\003\n\005Venue\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t" +
-      "\022\014\n\004name\030\003 \001(\t\022*\n\rlocalizedName\030\004 \001(\0132\023." +
-      "io.LocalizedString\022\017\n\007address\030\005 \001(\t\022-\n\020l" +
-      "ocalizedAddress\030\006 \001(\0132\023.io.LocalizedStri" +
-      "ng\022\020\n\010timezone\030\007 \001(\t\022\"\n\tgpsCoords\030\010 \003(\0132" +
-      "\017.io.GPSLocation\0222\n\007created\030\t \001(\0132\032.goog" +
-      "le.protobuf.TimestampB\005\222A\002@\001\0222\n\007updated\030" +
-      "\n \001(\0132\032.google.protobuf.TimestampB\005\222A\002@\001" +
-      ":c\222A`\n^*\005Venue25Venue holds details abou" +
-      "t where the event takes place\322\001\004name\322\001\007a" +
-      "ddress\322\001\014ianaTimezone\"\224\001\n\032VenueLimitedFi" +
-      "eldsResponse\022\n\n\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n" +
-      "\004name\030\003 \001(\t:O\222AL\nJ*\021Venue (Light ver)25V" +
-      "enue holds details about where the event" +
-      " takes placeBo\n\035com.passkit.grpc.EventTi" +
-      "cketsZ2stash.passkit.com/io/model/sdk/go" +
-      "/io/event_tickets\252\002\031PassKit.Grpc.EventTi" +
-      "cketsb\006proto3"
+      "io/common/localization.proto\032\031io/common/" +
+      "proximity.proto\032.protoc-gen-openapiv2/op" +
+      "tions/annotations.proto\"\244\003\n\005Venue\022\021\n\002id\030" +
+      "\001 \001(\tB\005\222A\002@\001\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022" +
+      "*\n\rlocalizedName\030\004 \001(\0132\023.io.LocalizedStr" +
+      "ing\022\017\n\007address\030\005 \001(\t\022-\n\020localizedAddress" +
+      "\030\006 \001(\0132\023.io.LocalizedString\022\020\n\010timezone\030" +
+      "\007 \001(\t\022\"\n\tgpsCoords\030\010 \003(\0132\017.io.GPSLocatio" +
+      "n\0222\n\007created\030\t \001(\0132\032.google.protobuf.Tim" +
+      "estampB\005\222A\002@\001\0222\n\007updated\030\n \001(\0132\032.google." +
+      "protobuf.TimestampB\005\222A\002@\001:c\222A`\n^*\005Venue2" +
+      "5Venue holds details about where the eve" +
+      "nt takes place\322\001\004name\322\001\007address\322\001\014ianaTi" +
+      "mezone\"\224\001\n\032VenueLimitedFieldsResponse\022\n\n" +
+      "\002id\030\001 \001(\t\022\013\n\003uid\030\002 \001(\t\022\014\n\004name\030\003 \001(\t:O\222A" +
+      "L\nJ*\021Venue (Light ver)25Venue holds deta" +
+      "ils about where the event takes placeBo\n" +
+      "\035com.passkit.grpc.EventTicketsZ2stash.pa" +
+      "sskit.com/io/model/sdk/go/io/event_ticke" +
+      "ts\252\002\031PassKit.Grpc.EventTicketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.passkit.grpc.Distribution.getDescriptor(),
           com.passkit.grpc.Localization.getDescriptor(),
-          com.passkit.grpc.ProjectOuterClass.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
@@ -3950,9 +3946,7 @@ public final class VenueOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.passkit.grpc.Distribution.getDescriptor();
     com.passkit.grpc.Localization.getDescriptor();
-    com.passkit.grpc.ProjectOuterClass.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }

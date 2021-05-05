@@ -1,24 +1,11 @@
 package com.passkit.grpc.Members;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/member/a_rpc.proto")
 public final class MembersGrpc {
 
@@ -1081,6 +1068,37 @@ public final class MembersGrpc {
     return getUpdateMemberExpiryMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Personal.PersonRequest,
+      com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "patchPerson",
+      requestType = com.passkit.grpc.Personal.PersonRequest.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Personal.PersonRequest,
+      com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Personal.PersonRequest, com.passkit.grpc.CommonObjects.Id> getPatchPersonMethod;
+    if ((getPatchPersonMethod = MembersGrpc.getPatchPersonMethod) == null) {
+      synchronized (MembersGrpc.class) {
+        if ((getPatchPersonMethod = MembersGrpc.getPatchPersonMethod) == null) {
+          MembersGrpc.getPatchPersonMethod = getPatchPersonMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Personal.PersonRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchPerson"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Personal.PersonRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("patchPerson"))
+              .build();
+        }
+      }
+    }
+    return getPatchPersonMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequest,
       com.passkit.grpc.CommonObjects.Count> getCountMemberEventsMethod;
 
@@ -1384,7 +1402,7 @@ public final class MembersGrpc {
      */
     public void createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProgramMethod(), responseObserver);
     }
 
     /**
@@ -1394,7 +1412,7 @@ public final class MembersGrpc {
      */
     public void updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateProgramMethod(), responseObserver);
     }
 
     /**
@@ -1404,7 +1422,7 @@ public final class MembersGrpc {
      */
     public void getProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProgramMethod(), responseObserver);
     }
 
     /**
@@ -1414,7 +1432,7 @@ public final class MembersGrpc {
      */
     public void copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyProgramMethod(), responseObserver);
     }
 
     /**
@@ -1424,7 +1442,7 @@ public final class MembersGrpc {
      */
     public void deleteProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProgramMethod(), responseObserver);
     }
 
     /**
@@ -1434,7 +1452,7 @@ public final class MembersGrpc {
      */
     public void listProgramsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnimplementedUnaryCall(getListProgramsDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProgramsDeprecatedMethod(), responseObserver);
     }
 
     /**
@@ -1444,7 +1462,7 @@ public final class MembersGrpc {
      */
     public void listPrograms(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnimplementedUnaryCall(getListProgramsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListProgramsMethod(), responseObserver);
     }
 
     /**
@@ -1454,7 +1472,7 @@ public final class MembersGrpc {
      */
     public void createTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateTierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTierMethod(), responseObserver);
     }
 
     /**
@@ -1464,7 +1482,7 @@ public final class MembersGrpc {
      */
     public void updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateTierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTierMethod(), responseObserver);
     }
 
     /**
@@ -1474,7 +1492,7 @@ public final class MembersGrpc {
      */
     public void getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTierMethod(), responseObserver);
     }
 
     /**
@@ -1484,7 +1502,7 @@ public final class MembersGrpc {
      */
     public void deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTierMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTierMethod(), responseObserver);
     }
 
     /**
@@ -1494,7 +1512,7 @@ public final class MembersGrpc {
      */
     public void listTiersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTiersDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTiersDeprecatedMethod(), responseObserver);
     }
 
     /**
@@ -1504,7 +1522,7 @@ public final class MembersGrpc {
      */
     public void listTiers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTiersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTiersMethod(), responseObserver);
     }
 
     /**
@@ -1514,7 +1532,7 @@ public final class MembersGrpc {
      */
     public void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnrolMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnrolMemberMethod(), responseObserver);
     }
 
     /**
@@ -1524,56 +1542,56 @@ public final class MembersGrpc {
      */
     public void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getEnrolMemberPublicMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnrolMemberPublicMethod(), responseObserver);
     }
 
     /**
      */
     public void getMemberRecordById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMemberRecordByIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMemberRecordByIdMethod(), responseObserver);
     }
 
     /**
      */
     public void getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMemberRecordByExternalIdMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMemberRecordByExternalIdMethod(), responseObserver);
     }
 
     /**
      */
     public void checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnimplementedUnaryCall(getCheckInMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckInMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnimplementedUnaryCall(getCheckOutMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCheckOutMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void listMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMembersDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMembersDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMembersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMembersMethod(), responseObserver);
     }
 
     /**
      */
     public void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMemberMethod(), responseObserver);
     }
 
     /**
@@ -1583,7 +1601,7 @@ public final class MembersGrpc {
      */
     public void earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnimplementedUnaryCall(getEarnPointsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEarnPointsMethod(), responseObserver);
     }
 
     /**
@@ -1593,427 +1611,441 @@ public final class MembersGrpc {
      */
     public void burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnimplementedUnaryCall(getBurnPointsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBurnPointsMethod(), responseObserver);
     }
 
     /**
      */
     public void setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnimplementedUnaryCall(getSetPointsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPointsMethod(), responseObserver);
     }
 
     /**
      */
     public void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMembersBySegmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMembersBySegmentMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMembersBySegmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMembersBySegmentMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountMembersDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountMembersDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountMembersMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountMembersMethod(), responseObserver);
     }
 
     /**
      */
     public void getMessageHistoryForMember(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMessageHistoryForMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessageHistoryForMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMetaKeysForProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMetaKeysForProgramMethod(), responseObserver);
     }
 
     /**
      */
     public void renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getRenewMembersExpiryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRenewMembersExpiryMethod(), responseObserver);
     }
 
     /**
      */
     public void updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMemberExpiryMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMemberExpiryMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchPersonMethod(), responseObserver);
     }
 
     /**
      */
     public void countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountMemberEventsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountMemberEventsMethod(), responseObserver);
     }
 
     /**
      */
     public void listMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnimplementedUnaryCall(getListMemberEventsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMemberEventsMethod(), responseObserver);
     }
 
     /**
      */
     public void getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetMemberEventMetaKeysForProgramMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMemberEventMetaKeysForProgramMethod(), responseObserver);
     }
 
     /**
      */
     public void listEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnimplementedUnaryCall(getListEventsForMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListEventsForMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMemberEventsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMemberEventsMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteEventsForMemberMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteEventsForMemberMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMemberEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMemberEventMethod(), responseObserver);
     }
 
     /**
      */
     public void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetProgramEnrolmentMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProgramEnrolmentMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.ProgramOuterClass.Program,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_PROGRAM)))
           .addMethod(
             getUpdateProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.ProgramOuterClass.Program,
                 com.passkit.grpc.Members.ProgramOuterClass.Program>(
                   this, METHODID_UPDATE_PROGRAM)))
           .addMethod(
             getGetProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Members.ProgramOuterClass.Program>(
                   this, METHODID_GET_PROGRAM)))
           .addMethod(
             getCopyProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_PROGRAM)))
           .addMethod(
             getDeleteProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_PROGRAM)))
           .addMethod(
             getListProgramsDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Members.ProgramOuterClass.Program>(
                   this, METHODID_LIST_PROGRAMS_DEPRECATED)))
           .addMethod(
             getListProgramsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Members.ProgramOuterClass.Program>(
                   this, METHODID_LIST_PROGRAMS)))
           .addMethod(
             getCreateTierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.TierOuterClass.Tier,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_TIER)))
           .addMethod(
             getUpdateTierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.TierOuterClass.Tier,
                 com.passkit.grpc.Members.TierOuterClass.Tier>(
                   this, METHODID_UPDATE_TIER)))
           .addMethod(
             getGetTierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.TierOuterClass.TierRequestInput,
                 com.passkit.grpc.Members.TierOuterClass.Tier>(
                   this, METHODID_GET_TIER)))
           .addMethod(
             getDeleteTierMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.TierOuterClass.TierRequestInput,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TIER)))
           .addMethod(
             getListTiersDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
                 com.passkit.grpc.Members.TierOuterClass.Tier>(
                   this, METHODID_LIST_TIERS_DEPRECATED)))
           .addMethod(
             getListTiersMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.passkit.grpc.Members.TierOuterClass.Tier>(
                   this, METHODID_LIST_TIERS)))
           .addMethod(
             getEnrolMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.Member,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_ENROL_MEMBER)))
           .addMethod(
             getEnrolMemberPublicMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.Member,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_ENROL_MEMBER_PUBLIC)))
           .addMethod(
             getGetMemberRecordByIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Members.MemberOuterClass.Member>(
                   this, METHODID_GET_MEMBER_RECORD_BY_ID)))
           .addMethod(
             getGetMemberRecordByExternalIdMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest,
                 com.passkit.grpc.Members.MemberOuterClass.Member>(
                   this, METHODID_GET_MEMBER_RECORD_BY_EXTERNAL_ID)))
           .addMethod(
             getCheckInMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest,
                 com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>(
                   this, METHODID_CHECK_IN_MEMBER)))
           .addMethod(
             getCheckOutMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest,
                 com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>(
                   this, METHODID_CHECK_OUT_MEMBER)))
           .addMethod(
             getListMembersDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
                 com.passkit.grpc.Members.MemberOuterClass.Member>(
                   this, METHODID_LIST_MEMBERS_DEPRECATED)))
           .addMethod(
             getListMembersMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.passkit.grpc.Members.MemberOuterClass.Member>(
                   this, METHODID_LIST_MEMBERS)))
           .addMethod(
             getUpdateMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.Member,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_UPDATE_MEMBER)))
           .addMethod(
             getEarnPointsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest,
                 com.passkit.grpc.Members.MemberOuterClass.MemberPoints>(
                   this, METHODID_EARN_POINTS)))
           .addMethod(
             getBurnPointsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest,
                 com.passkit.grpc.Members.MemberOuterClass.MemberPoints>(
                   this, METHODID_BURN_POINTS)))
           .addMethod(
             getSetPointsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest,
                 com.passkit.grpc.Members.MemberOuterClass.MemberPoints>(
                   this, METHODID_SET_POINTS)))
           .addMethod(
             getUpdateMembersBySegmentMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPDATE_MEMBERS_BY_SEGMENT)))
           .addMethod(
             getDeleteMembersBySegmentMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_MEMBERS_BY_SEGMENT)))
           .addMethod(
             getDeleteMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.Member,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_MEMBER)))
           .addMethod(
             getCountMembersDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_MEMBERS_DEPRECATED)))
           .addMethod(
             getCountMembersMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_MEMBERS)))
           .addMethod(
             getGetMessageHistoryForMemberMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.MessageOuterClass.Message>(
                   this, METHODID_GET_MESSAGE_HISTORY_FOR_MEMBER)))
           .addMethod(
             getGetMetaKeysForProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.CommonObjects.Strings>(
                   this, METHODID_GET_META_KEYS_FOR_PROGRAM)))
           .addMethod(
             getRenewMembersExpiryMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_RENEW_MEMBERS_EXPIRY)))
           .addMethod(
             getUpdateMemberExpiryMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.MemberExpiry,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_UPDATE_MEMBER_EXPIRY)))
           .addMethod(
+            getPatchPersonMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Personal.PersonRequest,
+                com.passkit.grpc.CommonObjects.Id>(
+                  this, METHODID_PATCH_PERSON)))
+          .addMethod(
             getCountMemberEventsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_MEMBER_EVENTS)))
           .addMethod(
             getListMemberEventsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>(
                   this, METHODID_LIST_MEMBER_EVENTS)))
           .addMethod(
             getGetMemberEventMetaKeysForProgramMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.CommonObjects.Strings>(
                   this, METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM)))
           .addMethod(
             getListEventsForMemberMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>(
                   this, METHODID_LIST_EVENTS_FOR_MEMBER)))
           .addMethod(
             getDeleteMemberEventsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Members.MemberOuterClass.ListRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_MEMBER_EVENTS)))
           .addMethod(
             getDeleteEventsForMemberMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_EVENTS_FOR_MEMBER)))
           .addMethod(
             getDeleteMemberEventMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_MEMBER_EVENT)))
           .addMethod(
             getGetProgramEnrolmentMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Distribution.EnrolmentUrls>(
@@ -2043,7 +2075,7 @@ public final class MembersGrpc {
      */
     public void createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2054,7 +2086,7 @@ public final class MembersGrpc {
      */
     public void updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2065,7 +2097,7 @@ public final class MembersGrpc {
      */
     public void getProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2076,7 +2108,7 @@ public final class MembersGrpc {
      */
     public void copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2087,7 +2119,7 @@ public final class MembersGrpc {
      */
     public void deleteProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2098,7 +2130,7 @@ public final class MembersGrpc {
      */
     public void listProgramsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListProgramsDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2109,7 +2141,7 @@ public final class MembersGrpc {
      */
     public void listPrograms(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.ProgramOuterClass.Program> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListProgramsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2120,7 +2152,7 @@ public final class MembersGrpc {
      */
     public void createTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2131,7 +2163,7 @@ public final class MembersGrpc {
      */
     public void updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateTierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2142,7 +2174,7 @@ public final class MembersGrpc {
      */
     public void getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2153,7 +2185,7 @@ public final class MembersGrpc {
      */
     public void deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTierMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2164,7 +2196,7 @@ public final class MembersGrpc {
      */
     public void listTiersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTiersDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2175,7 +2207,7 @@ public final class MembersGrpc {
      */
     public void listTiers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.TierOuterClass.Tier> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTiersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2186,7 +2218,7 @@ public final class MembersGrpc {
      */
     public void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnrolMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2197,7 +2229,7 @@ public final class MembersGrpc {
      */
     public void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnrolMemberPublicMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2205,7 +2237,7 @@ public final class MembersGrpc {
      */
     public void getMemberRecordById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMemberRecordByIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2213,7 +2245,7 @@ public final class MembersGrpc {
      */
     public void getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMemberRecordByExternalIdMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2221,7 +2253,7 @@ public final class MembersGrpc {
      */
     public void checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCheckInMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2229,7 +2261,7 @@ public final class MembersGrpc {
      */
     public void checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCheckOutMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2237,7 +2269,7 @@ public final class MembersGrpc {
      */
     public void listMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListMembersDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2245,7 +2277,7 @@ public final class MembersGrpc {
      */
     public void listMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListMembersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2253,7 +2285,7 @@ public final class MembersGrpc {
      */
     public void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2264,7 +2296,7 @@ public final class MembersGrpc {
      */
     public void earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEarnPointsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2275,7 +2307,7 @@ public final class MembersGrpc {
      */
     public void burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBurnPointsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2283,7 +2315,7 @@ public final class MembersGrpc {
      */
     public void setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSetPointsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2291,7 +2323,7 @@ public final class MembersGrpc {
      */
     public void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMembersBySegmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2299,7 +2331,7 @@ public final class MembersGrpc {
      */
     public void deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMembersBySegmentMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2307,7 +2339,7 @@ public final class MembersGrpc {
      */
     public void deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2315,7 +2347,7 @@ public final class MembersGrpc {
      */
     public void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountMembersDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2323,7 +2355,7 @@ public final class MembersGrpc {
      */
     public void countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountMembersMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2331,7 +2363,7 @@ public final class MembersGrpc {
      */
     public void getMessageHistoryForMember(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetMessageHistoryForMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2339,7 +2371,7 @@ public final class MembersGrpc {
      */
     public void getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMetaKeysForProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2347,7 +2379,7 @@ public final class MembersGrpc {
      */
     public void renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRenewMembersExpiryMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2355,15 +2387,23 @@ public final class MembersGrpc {
      */
     public void updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateMemberExpiryMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPatchPersonMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
     public void countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountMemberEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2371,7 +2411,7 @@ public final class MembersGrpc {
      */
     public void listMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListMemberEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2379,7 +2419,7 @@ public final class MembersGrpc {
      */
     public void getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMemberEventMetaKeysForProgramMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2387,7 +2427,7 @@ public final class MembersGrpc {
      */
     public void listEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListEventsForMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2395,7 +2435,7 @@ public final class MembersGrpc {
      */
     public void deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMemberEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2403,7 +2443,7 @@ public final class MembersGrpc {
      */
     public void deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteEventsForMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2411,7 +2451,7 @@ public final class MembersGrpc {
      */
     public void deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteMemberEventMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2419,7 +2459,7 @@ public final class MembersGrpc {
      */
     public void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -2444,7 +2484,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateProgramMethod(), getCallOptions(), request);
     }
 
@@ -2454,7 +2494,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.ProgramOuterClass.Program updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateProgramMethod(), getCallOptions(), request);
     }
 
@@ -2464,7 +2504,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.ProgramOuterClass.Program getProgram(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProgramMethod(), getCallOptions(), request);
     }
 
@@ -2474,7 +2514,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyProgramMethod(), getCallOptions(), request);
     }
 
@@ -2484,7 +2524,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteProgram(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteProgramMethod(), getCallOptions(), request);
     }
 
@@ -2495,7 +2535,7 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.ProgramOuterClass.Program> listProgramsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListProgramsDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2506,7 +2546,7 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.ProgramOuterClass.Program> listPrograms(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListProgramsMethod(), getCallOptions(), request);
     }
 
@@ -2516,7 +2556,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTier(com.passkit.grpc.Members.TierOuterClass.Tier request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTierMethod(), getCallOptions(), request);
     }
 
@@ -2526,7 +2566,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.TierOuterClass.Tier updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateTierMethod(), getCallOptions(), request);
     }
 
@@ -2536,7 +2576,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.TierOuterClass.Tier getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTierMethod(), getCallOptions(), request);
     }
 
@@ -2546,7 +2586,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.google.protobuf.Empty deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTierMethod(), getCallOptions(), request);
     }
 
@@ -2557,7 +2597,7 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.TierOuterClass.Tier> listTiersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTiersDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2568,7 +2608,7 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.TierOuterClass.Tier> listTiers(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTiersMethod(), getCallOptions(), request);
     }
 
@@ -2578,7 +2618,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnrolMemberMethod(), getCallOptions(), request);
     }
 
@@ -2588,35 +2628,35 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnrolMemberPublicMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Members.MemberOuterClass.Member getMemberRecordById(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMemberRecordByIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Members.MemberOuterClass.Member getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMemberRecordByExternalIdMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckInMemberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCheckOutMemberMethod(), getCallOptions(), request);
     }
 
@@ -2624,7 +2664,7 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberOuterClass.Member> listMembersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListMembersDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2632,14 +2672,14 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberOuterClass.Member> listMembers(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListMembersMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMemberMethod(), getCallOptions(), request);
     }
 
@@ -2649,7 +2689,7 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEarnPointsMethod(), getCallOptions(), request);
     }
 
@@ -2659,49 +2699,49 @@ public final class MembersGrpc {
      * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBurnPointsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSetPointsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMembersBySegmentMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMembersBySegmentMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMemberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountMembersDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountMembersMethod(), getCallOptions(), request);
     }
 
@@ -2709,35 +2749,42 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.MessageOuterClass.Message> getMessageHistoryForMember(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetMessageHistoryForMemberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Strings getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMetaKeysForProgramMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRenewMembersExpiryMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMemberExpiryMethod(), getCallOptions(), request);
     }
 
     /**
      */
+    public com.passkit.grpc.CommonObjects.Id patchPerson(com.passkit.grpc.Personal.PersonRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPatchPersonMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.passkit.grpc.CommonObjects.Count countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountMemberEventsMethod(), getCallOptions(), request);
     }
 
@@ -2745,14 +2792,14 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> listMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListMemberEventsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Strings getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMemberEventMetaKeysForProgramMethod(), getCallOptions(), request);
     }
 
@@ -2760,35 +2807,35 @@ public final class MembersGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> listEventsForMember(
         com.passkit.grpc.CommonObjects.Id request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListEventsForMemberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMemberEventsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteEventsForMemberMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteMemberEventMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Distribution.EnrolmentUrls getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProgramEnrolmentMethod(), getCallOptions(), request);
     }
   }
@@ -2814,7 +2861,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createProgram(
         com.passkit.grpc.Members.ProgramOuterClass.Program request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateProgramMethod(), getCallOptions()), request);
     }
 
@@ -2825,7 +2872,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.ProgramOuterClass.Program> updateProgram(
         com.passkit.grpc.Members.ProgramOuterClass.Program request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateProgramMethod(), getCallOptions()), request);
     }
 
@@ -2836,7 +2883,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.ProgramOuterClass.Program> getProgram(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProgramMethod(), getCallOptions()), request);
     }
 
@@ -2847,7 +2894,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyProgram(
         com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyProgramMethod(), getCallOptions()), request);
     }
 
@@ -2858,7 +2905,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteProgram(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteProgramMethod(), getCallOptions()), request);
     }
 
@@ -2869,7 +2916,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTier(
         com.passkit.grpc.Members.TierOuterClass.Tier request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTierMethod(), getCallOptions()), request);
     }
 
@@ -2880,7 +2927,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.TierOuterClass.Tier> updateTier(
         com.passkit.grpc.Members.TierOuterClass.Tier request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateTierMethod(), getCallOptions()), request);
     }
 
@@ -2891,7 +2938,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.TierOuterClass.Tier> getTier(
         com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTierMethod(), getCallOptions()), request);
     }
 
@@ -2902,7 +2949,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTier(
         com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTierMethod(), getCallOptions()), request);
     }
 
@@ -2913,7 +2960,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMember(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnrolMemberMethod(), getCallOptions()), request);
     }
 
@@ -2924,7 +2971,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMemberPublic(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnrolMemberPublicMethod(), getCallOptions()), request);
     }
 
@@ -2932,7 +2979,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.Member> getMemberRecordById(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMemberRecordByIdMethod(), getCallOptions()), request);
     }
 
@@ -2940,7 +2987,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.Member> getMemberRecordByExternalId(
         com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMemberRecordByExternalIdMethod(), getCallOptions()), request);
     }
 
@@ -2948,7 +2995,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> checkInMember(
         com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCheckInMemberMethod(), getCallOptions()), request);
     }
 
@@ -2956,7 +3003,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> checkOutMember(
         com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCheckOutMemberMethod(), getCallOptions()), request);
     }
 
@@ -2964,7 +3011,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateMember(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMemberMethod(), getCallOptions()), request);
     }
 
@@ -2975,7 +3022,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> earnPoints(
         com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEarnPointsMethod(), getCallOptions()), request);
     }
 
@@ -2986,7 +3033,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> burnPoints(
         com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBurnPointsMethod(), getCallOptions()), request);
     }
 
@@ -2994,7 +3041,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> setPoints(
         com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSetPointsMethod(), getCallOptions()), request);
     }
 
@@ -3002,7 +3049,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateMembersBySegment(
         com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMembersBySegmentMethod(), getCallOptions()), request);
     }
 
@@ -3010,7 +3057,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMembersBySegment(
         com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMembersBySegmentMethod(), getCallOptions()), request);
     }
 
@@ -3018,7 +3065,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMember(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMemberMethod(), getCallOptions()), request);
     }
 
@@ -3026,7 +3073,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMembersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountMembersDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -3034,7 +3081,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMembers(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountMembersMethod(), getCallOptions()), request);
     }
 
@@ -3042,7 +3089,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Strings> getMetaKeysForProgram(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMetaKeysForProgramMethod(), getCallOptions()), request);
     }
 
@@ -3050,7 +3097,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> renewMembersExpiry(
         com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRenewMembersExpiryMethod(), getCallOptions()), request);
     }
 
@@ -3058,15 +3105,23 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateMemberExpiry(
         com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateMemberExpiryMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> patchPerson(
+        com.passkit.grpc.Personal.PersonRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPatchPersonMethod(), getCallOptions()), request);
     }
 
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountMemberEventsMethod(), getCallOptions()), request);
     }
 
@@ -3074,7 +3129,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Strings> getMemberEventMetaKeysForProgram(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMemberEventMetaKeysForProgramMethod(), getCallOptions()), request);
     }
 
@@ -3082,7 +3137,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMemberEventsMethod(), getCallOptions()), request);
     }
 
@@ -3090,7 +3145,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteEventsForMember(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteEventsForMemberMethod(), getCallOptions()), request);
     }
 
@@ -3098,7 +3153,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMemberEvent(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteMemberEventMethod(), getCallOptions()), request);
     }
 
@@ -3106,7 +3161,7 @@ public final class MembersGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.EnrolmentUrls> getProgramEnrolment(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request);
     }
   }
@@ -3145,14 +3200,15 @@ public final class MembersGrpc {
   private static final int METHODID_GET_META_KEYS_FOR_PROGRAM = 31;
   private static final int METHODID_RENEW_MEMBERS_EXPIRY = 32;
   private static final int METHODID_UPDATE_MEMBER_EXPIRY = 33;
-  private static final int METHODID_COUNT_MEMBER_EVENTS = 34;
-  private static final int METHODID_LIST_MEMBER_EVENTS = 35;
-  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 36;
-  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 37;
-  private static final int METHODID_DELETE_MEMBER_EVENTS = 38;
-  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 39;
-  private static final int METHODID_DELETE_MEMBER_EVENT = 40;
-  private static final int METHODID_GET_PROGRAM_ENROLMENT = 41;
+  private static final int METHODID_PATCH_PERSON = 34;
+  private static final int METHODID_COUNT_MEMBER_EVENTS = 35;
+  private static final int METHODID_LIST_MEMBER_EVENTS = 36;
+  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 37;
+  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 38;
+  private static final int METHODID_DELETE_MEMBER_EVENTS = 39;
+  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 40;
+  private static final int METHODID_DELETE_MEMBER_EVENT = 41;
+  private static final int METHODID_GET_PROGRAM_ENROLMENT = 42;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3307,6 +3363,10 @@ public final class MembersGrpc {
           serviceImpl.updateMemberExpiry((com.passkit.grpc.Members.MemberOuterClass.MemberExpiry) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
           break;
+        case METHODID_PATCH_PERSON:
+          serviceImpl.patchPerson((com.passkit.grpc.Personal.PersonRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
         case METHODID_COUNT_MEMBER_EVENTS:
           serviceImpl.countMemberEvents((com.passkit.grpc.Members.MemberOuterClass.ListRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count>) responseObserver);
@@ -3434,6 +3494,7 @@ public final class MembersGrpc {
               .addMethod(getGetMetaKeysForProgramMethod())
               .addMethod(getRenewMembersExpiryMethod())
               .addMethod(getUpdateMemberExpiryMethod())
+              .addMethod(getPatchPersonMethod())
               .addMethod(getCountMemberEventsMethod())
               .addMethod(getListMemberEventsMethod())
               .addMethod(getGetMemberEventMetaKeysForProgramMethod())

@@ -1,24 +1,11 @@
 package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/core/a_rpc_templates.proto")
 public final class TemplatesGrpc {
 
@@ -1350,574 +1337,574 @@ public final class TemplatesGrpc {
      */
     public void createTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void updateTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void getTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetDefaultTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDefaultTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void copyTemplate(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteTemplateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTemplateMethod(), responseObserver);
     }
 
     /**
      */
     public void listTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTemplatesForUserDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTemplatesForUserDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTemplatesForUserMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTemplatesForUserMethod(), responseObserver);
     }
 
     /**
      */
     public void listTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTemplatesDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTemplatesDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListTemplatesMethod(), responseObserver);
     }
 
     /**
      */
     public void countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountTemplatesDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountTemplatesDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountTemplatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountTemplatesMethod(), responseObserver);
     }
 
     /**
      */
     public void countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountTemplatesForUserDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountTemplatesForUserDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountTemplatesForUserMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountTemplatesForUserMethod(), responseObserver);
     }
 
     /**
      */
     public void createLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateLocationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateLocationMethod(), responseObserver);
     }
 
     /**
      */
     public void updateLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateLocationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLocationMethod(), responseObserver);
     }
 
     /**
      */
     public void getLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLocationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLocationMethod(), responseObserver);
     }
 
     /**
      */
     public void listLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLocationsDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLocationsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLocationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLocationsMethod(), responseObserver);
     }
 
     /**
      */
     public void copyLocation(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyLocationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyLocationMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteLocationMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteLocationMethod(), responseObserver);
     }
 
     /**
      */
     public void countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountLocationsDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountLocationsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountLocationsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountLocationsMethod(), responseObserver);
     }
 
     /**
      */
     public void createBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateBeaconMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateBeaconMethod(), responseObserver);
     }
 
     /**
      */
     public void updateBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateBeaconMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateBeaconMethod(), responseObserver);
     }
 
     /**
      */
     public void getBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetBeaconMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetBeaconMethod(), responseObserver);
     }
 
     /**
      */
     public void listBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnimplementedUnaryCall(getListBeaconsDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBeaconsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnimplementedUnaryCall(getListBeaconsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListBeaconsMethod(), responseObserver);
     }
 
     /**
      */
     public void copyBeacon(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyBeaconMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyBeaconMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteBeaconMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteBeaconMethod(), responseObserver);
     }
 
     /**
      */
     public void countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountBeaconsDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountBeaconsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountBeaconsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountBeaconsMethod(), responseObserver);
     }
 
     /**
      */
     public void createLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateLinkMethod(), responseObserver);
     }
 
     /**
      */
     public void updateLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateLinkMethod(), responseObserver);
     }
 
     /**
      */
     public void getLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLinkMethod(), responseObserver);
     }
 
     /**
      */
     public void listLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLinksDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLinksDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnimplementedUnaryCall(getListLinksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListLinksMethod(), responseObserver);
     }
 
     /**
      */
     public void copyLink(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnimplementedUnaryCall(getCopyLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyLinkMethod(), responseObserver);
     }
 
     /**
      */
     public void deleteLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteLinkMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteLinkMethod(), responseObserver);
     }
 
     /**
      */
     public void countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountLinksDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountLinksDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountLinksMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountLinksMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getCreateTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.PassTemplate,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_TEMPLATE)))
           .addMethod(
             getUpdateTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.PassTemplate,
                 com.passkit.grpc.Template.PassTemplate>(
                   this, METHODID_UPDATE_TEMPLATE)))
           .addMethod(
             getGetTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Template.PassTemplateResponse>(
                   this, METHODID_GET_TEMPLATE)))
           .addMethod(
             getGetDefaultTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.DefaultTemplateRequest,
                 com.passkit.grpc.Template.PassTemplate>(
                   this, METHODID_GET_DEFAULT_TEMPLATE)))
           .addMethod(
             getCopyTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.CopyObjectInput,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_TEMPLATE)))
           .addMethod(
             getDeleteTemplateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TEMPLATE)))
           .addMethod(
             getListTemplatesForUserDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Template.PassTemplateResponse>(
                   this, METHODID_LIST_TEMPLATES_FOR_USER_DEPRECATED)))
           .addMethod(
             getListTemplatesForUserMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Template.PassTemplateResponse>(
                   this, METHODID_LIST_TEMPLATES_FOR_USER)))
           .addMethod(
             getListTemplatesDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Template.PassTemplateResponse>(
                   this, METHODID_LIST_TEMPLATES_DEPRECATED)))
           .addMethod(
             getListTemplatesMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Template.PassTemplateResponse>(
                   this, METHODID_LIST_TEMPLATES)))
           .addMethod(
             getCountTemplatesDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_TEMPLATES_DEPRECATED)))
           .addMethod(
             getCountTemplatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_TEMPLATES)))
           .addMethod(
             getCountTemplatesForUserDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_TEMPLATES_FOR_USER_DEPRECATED)))
           .addMethod(
             getCountTemplatesForUserMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_TEMPLATES_FOR_USER)))
           .addMethod(
             getCreateLocationMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Proximity.GPSLocation,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_LOCATION)))
           .addMethod(
             getUpdateLocationMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Proximity.GPSLocation,
                 com.passkit.grpc.Proximity.GPSLocation>(
                   this, METHODID_UPDATE_LOCATION)))
           .addMethod(
             getGetLocationMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Proximity.GPSLocation>(
                   this, METHODID_GET_LOCATION)))
           .addMethod(
             getListLocationsDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Proximity.GPSLocation>(
                   this, METHODID_LIST_LOCATIONS_DEPRECATED)))
           .addMethod(
             getListLocationsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Proximity.GPSLocation>(
                   this, METHODID_LIST_LOCATIONS)))
           .addMethod(
             getCopyLocationMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.CopyObjectInput,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_LOCATION)))
           .addMethod(
             getDeleteLocationMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_LOCATION)))
           .addMethod(
             getCountLocationsDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_LOCATIONS_DEPRECATED)))
           .addMethod(
             getCountLocationsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_LOCATIONS)))
           .addMethod(
             getCreateBeaconMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Proximity.Beacon,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_BEACON)))
           .addMethod(
             getUpdateBeaconMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Proximity.Beacon,
                 com.passkit.grpc.Proximity.Beacon>(
                   this, METHODID_UPDATE_BEACON)))
           .addMethod(
             getGetBeaconMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Proximity.Beacon>(
                   this, METHODID_GET_BEACON)))
           .addMethod(
             getListBeaconsDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Proximity.Beacon>(
                   this, METHODID_LIST_BEACONS_DEPRECATED)))
           .addMethod(
             getListBeaconsMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Proximity.Beacon>(
                   this, METHODID_LIST_BEACONS)))
           .addMethod(
             getCopyBeaconMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.CopyObjectInput,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_BEACON)))
           .addMethod(
             getDeleteBeaconMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_BEACON)))
           .addMethod(
             getCountBeaconsDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_BEACONS_DEPRECATED)))
           .addMethod(
             getCountBeaconsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_BEACONS)))
           .addMethod(
             getCreateLinkMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Links.Link,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_CREATE_LINK)))
           .addMethod(
             getUpdateLinkMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Links.Link,
                 com.passkit.grpc.Links.Link>(
                   this, METHODID_UPDATE_LINK)))
           .addMethod(
             getGetLinkMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.passkit.grpc.Links.Link>(
                   this, METHODID_GET_LINK)))
           .addMethod(
             getListLinksDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Links.Link>(
                   this, METHODID_LIST_LINKS_DEPRECATED)))
           .addMethod(
             getListLinksMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Links.Link>(
                   this, METHODID_LIST_LINKS)))
           .addMethod(
             getCopyLinkMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Template.CopyObjectInput,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_COPY_LINK)))
           .addMethod(
             getDeleteLinkMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_LINK)))
           .addMethod(
             getCountLinksDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_LINKS_DEPRECATED)))
           .addMethod(
             getCountLinksMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
@@ -1944,7 +1931,7 @@ public final class TemplatesGrpc {
      */
     public void createTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1952,7 +1939,7 @@ public final class TemplatesGrpc {
      */
     public void updateTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1960,7 +1947,7 @@ public final class TemplatesGrpc {
      */
     public void getTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1968,7 +1955,7 @@ public final class TemplatesGrpc {
      */
     public void getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDefaultTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1976,7 +1963,7 @@ public final class TemplatesGrpc {
      */
     public void copyTemplate(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1984,7 +1971,7 @@ public final class TemplatesGrpc {
      */
     public void deleteTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTemplateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -1992,7 +1979,7 @@ public final class TemplatesGrpc {
      */
     public void listTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTemplatesForUserDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2000,7 +1987,7 @@ public final class TemplatesGrpc {
      */
     public void listTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTemplatesForUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2008,7 +1995,7 @@ public final class TemplatesGrpc {
      */
     public void listTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTemplatesDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2016,7 +2003,7 @@ public final class TemplatesGrpc {
      */
     public void listTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2024,7 +2011,7 @@ public final class TemplatesGrpc {
      */
     public void countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountTemplatesDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2032,7 +2019,7 @@ public final class TemplatesGrpc {
      */
     public void countTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountTemplatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2040,7 +2027,7 @@ public final class TemplatesGrpc {
      */
     public void countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountTemplatesForUserDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2048,7 +2035,7 @@ public final class TemplatesGrpc {
      */
     public void countTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountTemplatesForUserMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2056,7 +2043,7 @@ public final class TemplatesGrpc {
      */
     public void createLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateLocationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2064,7 +2051,7 @@ public final class TemplatesGrpc {
      */
     public void updateLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateLocationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2072,7 +2059,7 @@ public final class TemplatesGrpc {
      */
     public void getLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLocationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2080,7 +2067,7 @@ public final class TemplatesGrpc {
      */
     public void listLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListLocationsDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2088,7 +2075,7 @@ public final class TemplatesGrpc {
      */
     public void listLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListLocationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2096,7 +2083,7 @@ public final class TemplatesGrpc {
      */
     public void copyLocation(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyLocationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2104,7 +2091,7 @@ public final class TemplatesGrpc {
      */
     public void deleteLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteLocationMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2112,7 +2099,7 @@ public final class TemplatesGrpc {
      */
     public void countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountLocationsDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2120,7 +2107,7 @@ public final class TemplatesGrpc {
      */
     public void countLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountLocationsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2128,7 +2115,7 @@ public final class TemplatesGrpc {
      */
     public void createBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateBeaconMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2136,7 +2123,7 @@ public final class TemplatesGrpc {
      */
     public void updateBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateBeaconMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2144,7 +2131,7 @@ public final class TemplatesGrpc {
      */
     public void getBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetBeaconMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2152,7 +2139,7 @@ public final class TemplatesGrpc {
      */
     public void listBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListBeaconsDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2160,7 +2147,7 @@ public final class TemplatesGrpc {
      */
     public void listBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListBeaconsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2168,7 +2155,7 @@ public final class TemplatesGrpc {
      */
     public void copyBeacon(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyBeaconMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2176,7 +2163,7 @@ public final class TemplatesGrpc {
      */
     public void deleteBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteBeaconMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2184,7 +2171,7 @@ public final class TemplatesGrpc {
      */
     public void countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountBeaconsDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2192,7 +2179,7 @@ public final class TemplatesGrpc {
      */
     public void countBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountBeaconsMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2200,7 +2187,7 @@ public final class TemplatesGrpc {
      */
     public void createLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2208,7 +2195,7 @@ public final class TemplatesGrpc {
      */
     public void updateLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2216,7 +2203,7 @@ public final class TemplatesGrpc {
      */
     public void getLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2224,7 +2211,7 @@ public final class TemplatesGrpc {
      */
     public void listLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListLinksDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2232,7 +2219,7 @@ public final class TemplatesGrpc {
      */
     public void listLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListLinksMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2240,7 +2227,7 @@ public final class TemplatesGrpc {
      */
     public void copyLink(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCopyLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2248,7 +2235,7 @@ public final class TemplatesGrpc {
      */
     public void deleteLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteLinkMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2256,7 +2243,7 @@ public final class TemplatesGrpc {
      */
     public void countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountLinksDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -2264,7 +2251,7 @@ public final class TemplatesGrpc {
      */
     public void countLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountLinksMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -2286,42 +2273,42 @@ public final class TemplatesGrpc {
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createTemplate(com.passkit.grpc.Template.PassTemplate request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Template.PassTemplate updateTemplate(com.passkit.grpc.Template.PassTemplate request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Template.PassTemplateResponse getTemplate(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Template.PassTemplate getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDefaultTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id copyTemplate(com.passkit.grpc.Template.CopyObjectInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyTemplateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteTemplate(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTemplateMethod(), getCallOptions(), request);
     }
 
@@ -2329,7 +2316,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTemplatesForUserDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2337,7 +2324,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesForUser(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTemplatesForUserMethod(), getCallOptions(), request);
     }
 
@@ -2345,7 +2332,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTemplatesDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2353,56 +2340,56 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplates(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListTemplatesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountTemplatesDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countTemplates(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountTemplatesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountTemplatesForUserDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesForUser(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountTemplatesForUserMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createLocation(com.passkit.grpc.Proximity.GPSLocation request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateLocationMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Proximity.GPSLocation updateLocation(com.passkit.grpc.Proximity.GPSLocation request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateLocationMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Proximity.GPSLocation getLocation(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLocationMethod(), getCallOptions(), request);
     }
 
@@ -2410,7 +2397,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.GPSLocation> listLocationsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListLocationsDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2418,56 +2405,56 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.GPSLocation> listLocations(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListLocationsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id copyLocation(com.passkit.grpc.Template.CopyObjectInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyLocationMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteLocation(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteLocationMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountLocationsDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countLocations(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountLocationsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createBeacon(com.passkit.grpc.Proximity.Beacon request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateBeaconMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Proximity.Beacon updateBeacon(com.passkit.grpc.Proximity.Beacon request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateBeaconMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Proximity.Beacon getBeacon(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetBeaconMethod(), getCallOptions(), request);
     }
 
@@ -2475,7 +2462,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.Beacon> listBeaconsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListBeaconsDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2483,56 +2470,56 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.Beacon> listBeacons(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListBeaconsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id copyBeacon(com.passkit.grpc.Template.CopyObjectInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyBeaconMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteBeacon(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteBeaconMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountBeaconsDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countBeacons(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountBeaconsMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id createLink(com.passkit.grpc.Links.Link request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Links.Link updateLink(com.passkit.grpc.Links.Link request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Links.Link getLink(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLinkMethod(), getCallOptions(), request);
     }
 
@@ -2540,7 +2527,7 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Links.Link> listLinksDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListLinksDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -2548,35 +2535,35 @@ public final class TemplatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Links.Link> listLinks(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListLinksMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Id copyLink(com.passkit.grpc.Template.CopyObjectInput request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCopyLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty deleteLink(com.passkit.grpc.CommonObjects.Id request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteLinkMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountLinksDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countLinks(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountLinksMethod(), getCallOptions(), request);
     }
   }
@@ -2599,7 +2586,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTemplate(
         com.passkit.grpc.Template.PassTemplate request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2607,7 +2594,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplate> updateTemplate(
         com.passkit.grpc.Template.PassTemplate request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2615,7 +2602,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplateResponse> getTemplate(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2623,7 +2610,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplate> getDefaultTemplate(
         com.passkit.grpc.Template.DefaultTemplateRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDefaultTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2631,7 +2618,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyTemplate(
         com.passkit.grpc.Template.CopyObjectInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2639,7 +2626,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTemplate(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTemplateMethod(), getCallOptions()), request);
     }
 
@@ -2647,7 +2634,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountTemplatesDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -2655,7 +2642,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplates(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountTemplatesMethod(), getCallOptions()), request);
     }
 
@@ -2663,7 +2650,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountTemplatesForUserDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -2671,7 +2658,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesForUser(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountTemplatesForUserMethod(), getCallOptions()), request);
     }
 
@@ -2679,7 +2666,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createLocation(
         com.passkit.grpc.Proximity.GPSLocation request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateLocationMethod(), getCallOptions()), request);
     }
 
@@ -2687,7 +2674,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.GPSLocation> updateLocation(
         com.passkit.grpc.Proximity.GPSLocation request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateLocationMethod(), getCallOptions()), request);
     }
 
@@ -2695,7 +2682,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.GPSLocation> getLocation(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLocationMethod(), getCallOptions()), request);
     }
 
@@ -2703,7 +2690,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyLocation(
         com.passkit.grpc.Template.CopyObjectInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyLocationMethod(), getCallOptions()), request);
     }
 
@@ -2711,7 +2698,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteLocation(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteLocationMethod(), getCallOptions()), request);
     }
 
@@ -2719,7 +2706,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLocationsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountLocationsDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -2727,7 +2714,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLocations(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountLocationsMethod(), getCallOptions()), request);
     }
 
@@ -2735,7 +2722,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createBeacon(
         com.passkit.grpc.Proximity.Beacon request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateBeaconMethod(), getCallOptions()), request);
     }
 
@@ -2743,7 +2730,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.Beacon> updateBeacon(
         com.passkit.grpc.Proximity.Beacon request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateBeaconMethod(), getCallOptions()), request);
     }
 
@@ -2751,7 +2738,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.Beacon> getBeacon(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetBeaconMethod(), getCallOptions()), request);
     }
 
@@ -2759,7 +2746,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyBeacon(
         com.passkit.grpc.Template.CopyObjectInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyBeaconMethod(), getCallOptions()), request);
     }
 
@@ -2767,7 +2754,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteBeacon(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteBeaconMethod(), getCallOptions()), request);
     }
 
@@ -2775,7 +2762,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countBeaconsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountBeaconsDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -2783,7 +2770,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countBeacons(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountBeaconsMethod(), getCallOptions()), request);
     }
 
@@ -2791,7 +2778,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createLink(
         com.passkit.grpc.Links.Link request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateLinkMethod(), getCallOptions()), request);
     }
 
@@ -2799,7 +2786,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Links.Link> updateLink(
         com.passkit.grpc.Links.Link request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateLinkMethod(), getCallOptions()), request);
     }
 
@@ -2807,7 +2794,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Links.Link> getLink(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetLinkMethod(), getCallOptions()), request);
     }
 
@@ -2815,7 +2802,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyLink(
         com.passkit.grpc.Template.CopyObjectInput request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCopyLinkMethod(), getCallOptions()), request);
     }
 
@@ -2823,7 +2810,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteLink(
         com.passkit.grpc.CommonObjects.Id request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteLinkMethod(), getCallOptions()), request);
     }
 
@@ -2831,7 +2818,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLinksDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountLinksDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -2839,7 +2826,7 @@ public final class TemplatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLinks(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountLinksMethod(), getCallOptions()), request);
     }
   }

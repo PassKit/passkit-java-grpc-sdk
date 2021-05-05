@@ -28,25 +28,48 @@ public final class ARpcDistribution {
       "tobuf/empty.proto\032.protoc-gen-openapiv2/" +
       "options/annotations.proto\032\036io/common/com" +
       "mon_objects.proto\032\034io/common/distributio" +
-      "n.proto2\226\005\n\014Distribution\022\252\002\n\020sendWelcome" +
+      "n.proto2\350\005\n\014Distribution\022\257\001\n\020sendWelcome" +
       "Email\022\034.io.EmailDistributionRequest\032\026.go" +
-      "ogle.protobuf.Empty\"\337\001\202\323\344\223\002\030\"\023/distribut" +
-      "ion/email:\001*\222A\275\001\022\022Send Welcome Email\032.Se" +
-      "nds a welcome email to an individual rec" +
-      "ord.J0\n\003400\022)\n\'There is a problem with t" +
-      "he input data.J\036\n\003404\022\027\n\025Record was not " +
-      "found.J%\n\003500\022\036\n\034There was an internal e" +
-      "rror.\022\330\002\n\021getSmartPasssLink\022\030.io.SmartPa" +
-      "ssLinkRequest\032\007.io.Url\"\237\002\202\323\344\223\002 \"\033/distri" +
-      "bution/smartpasslink:\001*\222A\365\001\022\022Get SmartPa" +
-      "ss Link\032fGet SmartPass returns encrypted" +
-      " SmartPass link based on a pass payload " +
-      "for a member, coupon or ticket.J0\n\003400\022)" +
-      "\n\'There is a problem with the input data" +
-      ".J\036\n\003404\022\027\n\025Record was not found.J%\n\003500" +
-      "\022\036\n\034There was an internal error.BG\n\020com." +
-      "passkit.grpcZ$stash.passkit.com/io/model" +
-      "/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "ogle.protobuf.Empty\"e\202\323\344\223\002\030\"\023/distributi" +
+      "on/email:\001*\222AD\022\022Send Welcome Email\032.Send" +
+      "s a welcome email to an individual recor" +
+      "d.\022\335\001\n\020getSmartPassLink\022\030.io.SmartPassLi" +
+      "nkRequest\032\007.io.Url\"\245\001\202\323\344\223\002 \"\033/distributi" +
+      "on/smartpasslink:\001*\222A|\022\022Get SmartPass Li" +
+      "nk\032fGet SmartPass returns encrypted Smar" +
+      "tPass link based on a pass payload for a" +
+      " member, coupon or ticket.\022\305\002\n\033getDataCo" +
+      "llectionPageFields\022\024.io.ClassObjectInput" +
+      "\032\030.io.DataCollectionFields\"\365\001\202\323\344\223\002\026\022\024/di" +
+      "stribution/fields\222A\325\001\022\037Get Data Collecti" +
+      "on Page Fields\032nRetrieves a list of fiel" +
+      "ds used on the data collection page. Cla" +
+      "ssId is required only for the Member pro" +
+      "tocol.J\"\n\003403\022\033\n\031User lacks authorizatio" +
+      "n.J\036\n\003404\022\027\n\025Record was not found.B\201\007\n\020c" +
+      "om.passkit.grpcZ$stash.passkit.com/io/mo" +
+      "del/sdk/go/io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030Pas" +
+      "sKit Distribution API\022ZAPI for generatin" +
+      "g SmartPass links and distribution of yo" +
+      "ur passes via different channels.\0328https" +
+      "://passkit.com/legal/terms-of-subscripti" +
+      "on-service/\"?\n\017PassKit Support\022\027https://" +
+      "docs.passkit.io\032\023support@passkit.com*\001\0022" +
+      "\020application/json:\020application/jsonR9\n\0032" +
+      "00\0222\n(Returned when the request is succe" +
+      "ssful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when w" +
+      "rong user input is provided.R0\n\003401\022)\n\'R" +
+      "eturned when the user is unauthorized.RP" +
+      "\n\003403\022I\nGReturned when the user does not" +
+      " have permission to access the resource." +
+      "R;\n\003404\0224\n*Returned when the resource do" +
+      "es not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned" +
+      " when there is an unexpected error.\022\006\n\004\232" +
+      "\002\001\007RW\n\003503\022P\nNServer is unavailable. Bac" +
+      "k off for 250ms and repeat request until" +
+      " successful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Au" +
+      "thentication token.\032\rAuthorization \002b\020\n\016" +
+      "\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61,6 +84,7 @@ public final class ARpcDistribution {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Operation);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();

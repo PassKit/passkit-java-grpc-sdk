@@ -32,7 +32,7 @@ public final class ARpc {
       "uction.proto\032\"io/event_tickets/ticket_ty" +
       "pe.proto\032\035io/event_tickets/ticket.proto\032" +
       "\034io/event_tickets/venue.proto\032.protoc-ge" +
-      "n-openapiv2/options/annotations.proto2\361V" +
+      "n-openapiv2/options/annotations.proto2\264X" +
       "\n\014EventTickets\022\230\001\n\020createProduction\022\031.ev" +
       "ent_tickets.Production\032\006.io.Id\"a\202\323\344\223\002\035\"\030" +
       "/eventTickets/production:\001*\222A;\n\013Producti" +
@@ -232,108 +232,116 @@ public final class ARpc {
       "ts\022\rUpdate Ticket\032xUpdates an existing T" +
       "icket. Requires ticket.ID to be set, or " +
       "ticket.ticketNumber + ticket.event.produ" +
-      "ction.id to be set.\022\213\003\n\016validateTicket\022$" +
-      ".event_tickets.ValidateTicketRequest\032%.e" +
-      "vent_tickets.ValidateTicketResponse\"\253\002\202\323" +
-      "\344\223\002\"\032\035/eventTickets/ticket/validate:\001*\222A" +
-      "\377\001\n\007Tickets\022\017Validate Ticket\032\342\001Validates" +
-      " an existing Ticket. Use this endpoint w" +
-      "hen you want to check validity of a tick" +
-      "et. Tickets can be validated multiple ti" +
-      "mes. Requires ticket.id to be set, or ti" +
-      "cket.ticketNumber + ticket.event.product" +
-      "ion.id to be set.\022\345\002\n\014redeemTicket\022\025.eve" +
-      "nt_tickets.Ticket\032\006.io.Id\"\265\002\202\323\344\223\002 \032\033/eve" +
-      "ntTickets/ticket/redeem:\001*\222A\213\002\n\007Tickets\022" +
-      "\rRedeem Ticket\032\360\001Redeems an existing Tic" +
-      "ket. Use this endpoint when you want to " +
-      "capture redemption data and trigger the " +
-      "switch to the redeemed design of the Tic" +
-      "ket. Requires ticket.id to be set, or ti" +
-      "cket.ticketNumber + ticket.event.product" +
-      "ion.id to be set.\022\320\002\n\032redeemTicketsByOrd" +
-      "erNumber\022\".event_tickets.RedeemByOrderNu" +
-      "mber\032\007.io.Ids\"\204\002\202\323\344\223\002-\032(/eventTickets/ti" +
-      "ckets/orderNumber/redeem:\001*\222A\315\001\n\007Tickets" +
-      "\022\036Redeem Tickets by Order Number\032\241\001Redee" +
-      "ms existing Tickets by Order Number. Use" +
-      " this endpoint when you want to capture " +
-      "redemption data and trigger the switch t" +
-      "o the redeemed design of the Ticket.\022\217\001\n" +
-      "\rgetTicketById\022\006.io.Id\032\025.event_tickets.T" +
-      "icket\"_\202\323\344\223\002\036\022\034/eventTickets/ticket/id/{" +
-      "id}\222A8\n\007Tickets\022\020Get Ticket by ID\032\033Gets " +
-      "a Ticket record by ID.\022\320\001\n\027getTicketByTi" +
-      "cketNumber\022\".event_tickets.TicketNumberR" +
-      "equest\032\025.event_tickets.Ticket\"z\202\323\344\223\002#\022!/" +
-      "eventTickets/ticket/ticketNumber\222AN\n\007Tic" +
-      "kets\022\033Get Ticket by Ticket Number\032&Gets " +
-      "a Ticket record by Ticket Number.\022\316\001\n\027ge" +
-      "tTicketsByOrderNumber\022!.event_tickets.Or" +
-      "derNumberRequest\032\026.event_tickets.Tickets" +
-      "\"x\202\323\344\223\002#\022!/eventTickets/tickets/orderNum" +
-      "ber\222AL\n\007Tickets\022\033Get Tickets by Order Nu" +
-      "mber\032$Gets Ticket records by Order Numbe" +
-      "r.\022\256\002\n\022getEventTicketPass\022%.event_ticket" +
-      "s.EventTicketPassRequest\032\017.io.PassBundle" +
-      "s\"\337\001\202\323\344\223\002\027\"\022/eventTickets/pass:\001*\222A\276\001\n\007T" +
-      "ickets\022\025Get Event Ticket Pass\032\233\001Retrieve" +
-      "s digital event ticket pass(es) in the r" +
-      "equested format based on the index provi" +
-      "ded. Only one of ticketId, ticketNumber " +
-      "or orderNumber is required.\022\223\003\n\014deleteTi" +
-      "cket\022\025.event_tickets.Ticket\032\026.google.pro" +
-      "tobuf.Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/tick" +
-      "et:\001*\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Dele" +
-      "te an existing Ticket by Id or Ticket Nu" +
+      "ction.id to be set.\022\300\001\n\013patchPerson\022 .ev" +
+      "ent_tickets.EventTicketPerson\032\006.io.Id\"\206\001" +
+      "\202\323\344\223\002 2\033/eventTickets/ticket/person:\001*\222A" +
+      "]\n\007Tickets\022\033Update Personal Information\032" +
+      "5Updates personal information of a event" +
+      " ticket holder\022\213\003\n\016validateTicket\022$.even" +
+      "t_tickets.ValidateTicketRequest\032%.event_" +
+      "tickets.ValidateTicketResponse\"\253\002\202\323\344\223\002\"\032" +
+      "\035/eventTickets/ticket/validate:\001*\222A\377\001\n\007T" +
+      "ickets\022\017Validate Ticket\032\342\001Validates an e" +
+      "xisting Ticket. Use this endpoint when y" +
+      "ou want to check validity of a ticket. T" +
+      "ickets can be validated multiple times. " +
+      "Requires ticket.id to be set, or ticket." +
+      "ticketNumber + ticket.event.production.i" +
+      "d to be set.\022\345\002\n\014redeemTicket\022\025.event_ti" +
+      "ckets.Ticket\032\006.io.Id\"\265\002\202\323\344\223\002 \032\033/eventTic" +
+      "kets/ticket/redeem:\001*\222A\213\002\n\007Tickets\022\rRede" +
+      "em Ticket\032\360\001Redeems an existing Ticket. " +
+      "Use this endpoint when you want to captu" +
+      "re redemption data and trigger the switc" +
+      "h to the redeemed design of the Ticket. " +
+      "Requires ticket.id to be set, or ticket." +
+      "ticketNumber + ticket.event.production.i" +
+      "d to be set.\022\320\002\n\032redeemTicketsByOrderNum" +
+      "ber\022\".event_tickets.RedeemByOrderNumber\032" +
+      "\007.io.Ids\"\204\002\202\323\344\223\002-\032(/eventTickets/tickets" +
+      "/orderNumber/redeem:\001*\222A\315\001\n\007Tickets\022\036Red" +
+      "eem Tickets by Order Number\032\241\001Redeems ex" +
+      "isting Tickets by Order Number. Use this" +
+      " endpoint when you want to capture redem" +
+      "ption data and trigger the switch to the" +
+      " redeemed design of the Ticket.\022\217\001\n\rgetT" +
+      "icketById\022\006.io.Id\032\025.event_tickets.Ticket" +
+      "\"_\202\323\344\223\002\036\022\034/eventTickets/ticket/id/{id}\222A" +
+      "8\n\007Tickets\022\020Get Ticket by ID\032\033Gets a Tic" +
+      "ket record by ID.\022\320\001\n\027getTicketByTicketN" +
+      "umber\022\".event_tickets.TicketNumberReques" +
+      "t\032\025.event_tickets.Ticket\"z\202\323\344\223\002#\022!/event" +
+      "Tickets/ticket/ticketNumber\222AN\n\007Tickets\022" +
+      "\033Get Ticket by Ticket Number\032&Gets a Tic" +
+      "ket record by Ticket Number.\022\316\001\n\027getTick" +
+      "etsByOrderNumber\022!.event_tickets.OrderNu" +
+      "mberRequest\032\026.event_tickets.Tickets\"x\202\323\344" +
+      "\223\002#\022!/eventTickets/tickets/orderNumber\222A" +
+      "L\n\007Tickets\022\033Get Tickets by Order Number\032" +
+      "$Gets Ticket records by Order Number.\022\256\002" +
+      "\n\022getEventTicketPass\022%.event_tickets.Eve" +
+      "ntTicketPassRequest\032\017.io.PassBundles\"\337\001\202" +
+      "\323\344\223\002\027\"\022/eventTickets/pass:\001*\222A\276\001\n\007Ticket" +
+      "s\022\025Get Event Ticket Pass\032\233\001Retrieves dig" +
+      "ital event ticket pass(es) in the reques" +
+      "ted format based on the index provided. " +
+      "Only one of ticketId, ticketNumber or or" +
+      "derNumber is required.\022\223\003\n\014deleteTicket\022" +
+      "\025.event_tickets.Ticket\032\026.google.protobuf" +
+      ".Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/ticket:\001*" +
+      "\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Delete an" +
+      " existing Ticket by Id or Ticket Number." +
+      " Invalidates the ticket in the customers" +
+      " Mobile Wallet; rendering it useless. Th" +
+      "is method is irreversible and should be " +
+      "used with care. Requires ticket.ID to be" +
+      " set, or ticket.ticketNumber + ticket.ev" +
+      "ent.production.id to be set.\022\335\002\n\032deleteT" +
+      "icketsByOrderNumber\022!.event_tickets.Orde" +
+      "rNumberRequest\032\026.google.protobuf.Empty\"\203" +
+      "\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:\001*\222A\333" +
+      "\001\n\007Tickets\022\036Delete Tickets by Order Numb" +
+      "er\032\257\001Delete existing Ticketd by Order Nu" +
       "mber. Invalidates the ticket in the cust" +
       "omers Mobile Wallet; rendering it useles" +
       "s. This method is irreversible and shoul" +
-      "d be used with care. Requires ticket.ID " +
-      "to be set, or ticket.ticketNumber + tick" +
-      "et.event.production.id to be set.\022\335\002\n\032de" +
-      "leteTicketsByOrderNumber\022!.event_tickets" +
-      ".OrderNumberRequest\032\026.google.protobuf.Em" +
-      "pty\"\203\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:" +
-      "\001*\222A\333\001\n\007Tickets\022\036Delete Tickets by Order" +
-      " Number\032\257\001Delete existing Ticketd by Ord" +
-      "er Number. Invalidates the ticket in the" +
-      " customers Mobile Wallet; rendering it u" +
-      "seless. This method is irreversible and " +
-      "should be used with care.\022\317\001\n\013listTicket" +
-      "s\022 .event_tickets.TicketListRequest\032\".ev" +
-      "ent_tickets.TicketLimitedFields\"x\202\323\344\223\002\037\"" +
-      "\032/eventTickets/tickets/list:\001*\222AP\n\007Ticke" +
-      "ts\022\014List Tickets\0327List all tickets for a" +
-      " Production. Supports pagination.0\001\022\313\001\n\014" +
-      "countTickets\022 .event_tickets.TicketListR" +
-      "equest\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTicket" +
-      "s/tickets/count:\001*\222Ad\n\007Tickets\022\rCount Ti" +
-      "ckets\032JCount all tickets for a Productio" +
-      "n, Event, Ticket Type and / or Start Dat" +
-      "eB\212\007\n\035com.passkit.grpc.EventTicketsZ2sta" +
-      "sh.passkit.com/io/model/sdk/go/io/event_" +
-      "tickets\252\002\031PassKit.Grpc.EventTickets\222A\227\006\022" +
-      "\264\002\n\031PassKit Event Tickets API\022\221\001This API" +
-      " enables you to get all your Digital Eve" +
-      "nt Tickets into Apple Wallet & Google Pa" +
-      "y, from theatre and cinema, to sport eve" +
-      "nts and concerts.\0328https://passkit.com/l" +
-      "egal/terms-of-subscription-service/\"?\n\017P" +
-      "assKit Support\022\027https://docs.passkit.io\032" +
-      "\023support@passkit.com2\0100.1-spec*\001\0022\020appli" +
-      "cation/json:\020application/jsonR9\n\003200\0222\n(" +
-      "Returned when the request is successful." +
-      "\022\006\n\004\232\002\001\007RP\n\003403\022I\nGReturned when the use" +
-      "r does not have permission to access the" +
-      " resource.R;\n\003404\0224\n*Returned when the r" +
-      "esource does not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225" +
-      "\n+Returned when there is an unexpected e" +
-      "rror.\022\006\n\004\232\002\001\007R]\n\003503\022V\nTReturned when th" +
-      "e user is being throttled. Back off for " +
-      "a few ms and then try again.Z>\n<\n\napiKey" +
-      "Auth\022.\010\002\022\031JWT Authentication token.\032\rAut" +
-      "horization \002b\020\n\016\n\napiKeyAuth\022\000b\006proto3"
+      "d be used with care.\022\317\001\n\013listTickets\022 .e" +
+      "vent_tickets.TicketListRequest\032\".event_t" +
+      "ickets.TicketLimitedFields\"x\202\323\344\223\002\037\"\032/eve" +
+      "ntTickets/tickets/list:\001*\222AP\n\007Tickets\022\014L" +
+      "ist Tickets\0327List all tickets for a Prod" +
+      "uction. Supports pagination.0\001\022\313\001\n\014count" +
+      "Tickets\022 .event_tickets.TicketListReques" +
+      "t\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTickets/tic" +
+      "kets/count:\001*\222Ad\n\007Tickets\022\rCount Tickets" +
+      "\032JCount all tickets for a Production, Ev" +
+      "ent, Ticket Type and / or Start DateB\354\007\n" +
+      "\035com.passkit.grpc.EventTicketsZ2stash.pa" +
+      "sskit.com/io/model/sdk/go/io/event_ticke" +
+      "ts\252\002\031PassKit.Grpc.EventTickets\222A\371\006\022\264\002\n\031P" +
+      "assKit Event Tickets API\022\221\001This API enab" +
+      "les you to get all your Digital Event Ti" +
+      "ckets into Apple Wallet & Google Pay, fr" +
+      "om theatre and cinema, to sport events a" +
+      "nd concerts.\0328https://passkit.com/legal/" +
+      "terms-of-subscription-service/\"?\n\017PassKi" +
+      "t Support\022\027https://docs.passkit.io\032\023supp" +
+      "ort@passkit.com2\0100.1-spec*\001\0022\020applicatio" +
+      "n/json:\020application/jsonR9\n\003200\0222\n(Retur" +
+      "ned when the request is successful.\022\006\n\004\232" +
+      "\002\001\007R4\n\003400\022-\n+Returned when wrong user i" +
+      "nput is provided.R0\n\003401\022)\n\'Returned whe" +
+      "n the user is unauthorized.RP\n\003403\022I\nGRe" +
+      "turned when the user does not have permi" +
+      "ssion to access the resource.R;\n\003404\0224\n*" +
+      "Returned when the resource does not exis" +
+      "t.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when there" +
+      " is an unexpected error.\022\006\n\004\232\002\001\007RW\n\003503\022" +
+      "P\nNServer is unavailable. Back off for 2" +
+      "50ms and repeat request until successful" +
+      ".Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticatio" +
+      "n token.\032\rAuthorization \002b\020\n\016\n\napiKeyAut" +
+      "h\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

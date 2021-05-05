@@ -1,24 +1,11 @@
 package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.33.1)",
+    value = "by gRPC proto compiler (version 1.37.0)",
     comments = "Source: io/core/a_rpc_certificates.proto")
 public final class CertificatesGrpc {
 
@@ -358,126 +345,126 @@ public final class CertificatesGrpc {
      */
     public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetAppleCertificateDataMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppleCertificateDataMethod(), responseObserver);
     }
 
     /**
      */
     public void getCertificateSigningRequest(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateSigningRequest> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetCertificateSigningRequestMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCertificateSigningRequestMethod(), responseObserver);
     }
 
     /**
      */
     public void addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getAddAppleCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddAppleCertificateMethod(), responseObserver);
     }
 
     /**
      */
     public void updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateAppleCertificateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAppleCertificateMethod(), responseObserver);
     }
 
     /**
      */
     public void listAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAppleCertificatesDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAppleCertificatesDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void listAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnimplementedUnaryCall(getListAppleCertificatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAppleCertificatesMethod(), responseObserver);
     }
 
     /**
      */
     public void countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountAppleCertificatesDeprecatedMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountAppleCertificatesDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
     public void countAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnimplementedUnaryCall(getCountAppleCertificatesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountAppleCertificatesMethod(), responseObserver);
     }
 
     /**
      */
     public void sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnimplementedUnaryCall(getSendNFCSigningCredentialsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendNFCSigningCredentialsMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetAppleCertificateDataMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Certificate.PassTypeIdentifier,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_GET_APPLE_CERTIFICATE_DATA)))
           .addMethod(
             getGetCertificateSigningRequestMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.google.protobuf.Empty,
                 com.passkit.grpc.Certificate.CertificateSigningRequest>(
                   this, METHODID_GET_CERTIFICATE_SIGNING_REQUEST)))
           .addMethod(
             getAddAppleCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.FileBytes,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_ADD_APPLE_CERTIFICATE)))
           .addMethod(
             getUpdateAppleCertificateMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.FileBytes,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_UPDATE_APPLE_CERTIFICATE)))
           .addMethod(
             getListAppleCertificatesDeprecatedMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_LIST_APPLE_CERTIFICATES_DEPRECATED)))
           .addMethod(
             getListAppleCertificatesMethod(),
-            asyncServerStreamingCall(
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.Certificate.CertificateData>(
                   this, METHODID_LIST_APPLE_CERTIFICATES)))
           .addMethod(
             getCountAppleCertificatesDeprecatedMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.PaginationOuterClass.Pagination,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_APPLE_CERTIFICATES_DEPRECATED)))
           .addMethod(
             getCountAppleCertificatesMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Filter.Filters,
                 com.passkit.grpc.CommonObjects.Count>(
                   this, METHODID_COUNT_APPLE_CERTIFICATES)))
           .addMethod(
             getSendNFCSigningCredentialsMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.Certificate.NFCSigningCredentialsRequest,
                 com.google.protobuf.Empty>(
@@ -504,7 +491,7 @@ public final class CertificatesGrpc {
      */
     public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -512,7 +499,7 @@ public final class CertificatesGrpc {
      */
     public void getCertificateSigningRequest(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateSigningRequest> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCertificateSigningRequestMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -520,7 +507,7 @@ public final class CertificatesGrpc {
      */
     public void addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddAppleCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -528,7 +515,7 @@ public final class CertificatesGrpc {
      */
     public void updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAppleCertificateMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -536,7 +523,7 @@ public final class CertificatesGrpc {
      */
     public void listAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListAppleCertificatesDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -544,7 +531,7 @@ public final class CertificatesGrpc {
      */
     public void listAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
-      asyncServerStreamingCall(
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListAppleCertificatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -552,7 +539,7 @@ public final class CertificatesGrpc {
      */
     public void countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountAppleCertificatesDeprecatedMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -560,7 +547,7 @@ public final class CertificatesGrpc {
      */
     public void countAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCountAppleCertificatesMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -568,7 +555,7 @@ public final class CertificatesGrpc {
      */
     public void sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendNFCSigningCredentialsMethod(), getCallOptions()), request, responseObserver);
     }
   }
@@ -590,28 +577,28 @@ public final class CertificatesGrpc {
     /**
      */
     public com.passkit.grpc.Certificate.CertificateData getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetAppleCertificateDataMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Certificate.CertificateSigningRequest getCertificateSigningRequest(com.google.protobuf.Empty request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCertificateSigningRequestMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Certificate.CertificateData addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddAppleCertificateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.Certificate.CertificateData updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAppleCertificateMethod(), getCallOptions(), request);
     }
 
@@ -619,7 +606,7 @@ public final class CertificatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Certificate.CertificateData> listAppleCertificatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListAppleCertificatesDeprecatedMethod(), getCallOptions(), request);
     }
 
@@ -627,28 +614,28 @@ public final class CertificatesGrpc {
      */
     public java.util.Iterator<com.passkit.grpc.Certificate.CertificateData> listAppleCertificates(
         com.passkit.grpc.Filter.Filters request) {
-      return blockingServerStreamingCall(
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListAppleCertificatesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountAppleCertificatesDeprecatedMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.passkit.grpc.CommonObjects.Count countAppleCertificates(com.passkit.grpc.Filter.Filters request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountAppleCertificatesMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.google.protobuf.Empty sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendNFCSigningCredentialsMethod(), getCallOptions(), request);
     }
   }
@@ -671,7 +658,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> getAppleCertificateData(
         com.passkit.grpc.Certificate.PassTypeIdentifier request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetAppleCertificateDataMethod(), getCallOptions()), request);
     }
 
@@ -679,7 +666,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateSigningRequest> getCertificateSigningRequest(
         com.google.protobuf.Empty request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCertificateSigningRequestMethod(), getCallOptions()), request);
     }
 
@@ -687,7 +674,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> addAppleCertificate(
         com.passkit.grpc.CommonObjects.FileBytes request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddAppleCertificateMethod(), getCallOptions()), request);
     }
 
@@ -695,7 +682,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> updateAppleCertificate(
         com.passkit.grpc.CommonObjects.FileBytes request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAppleCertificateMethod(), getCallOptions()), request);
     }
 
@@ -703,7 +690,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countAppleCertificatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountAppleCertificatesDeprecatedMethod(), getCallOptions()), request);
     }
 
@@ -711,7 +698,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countAppleCertificates(
         com.passkit.grpc.Filter.Filters request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCountAppleCertificatesMethod(), getCallOptions()), request);
     }
 
@@ -719,7 +706,7 @@ public final class CertificatesGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendNFCSigningCredentials(
         com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendNFCSigningCredentialsMethod(), getCallOptions()), request);
     }
   }
