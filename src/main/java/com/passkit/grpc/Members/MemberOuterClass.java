@@ -18454,6 +18454,1371 @@ public final class MemberOuterClass {
 
   }
 
+  public interface ChangeTierRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:members.ChangeTierRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+     * </pre>
+     *
+     * <code>string memberId = 1;</code>
+     * @return The memberId.
+     */
+    java.lang.String getMemberId();
+    /**
+     * <pre>
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+     * </pre>
+     *
+     * <code>string memberId = 1;</code>
+     * @return The bytes for memberId.
+     */
+    com.google.protobuf.ByteString
+        getMemberIdBytes();
+
+    /**
+     * <pre>
+     * External member ID. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string externalMemberId = 2;</code>
+     * @return The externalMemberId.
+     */
+    java.lang.String getExternalMemberId();
+    /**
+     * <pre>
+     * External member ID. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string externalMemberId = 2;</code>
+     * @return The bytes for externalMemberId.
+     */
+    com.google.protobuf.ByteString
+        getExternalMemberIdBytes();
+
+    /**
+     * <pre>
+     * Program ID which member belongs to. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string programId = 3;</code>
+     * @return The programId.
+     */
+    java.lang.String getProgramId();
+    /**
+     * <pre>
+     * Program ID which member belongs to. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string programId = 3;</code>
+     * @return The bytes for programId.
+     */
+    com.google.protobuf.ByteString
+        getProgramIdBytes();
+
+    /**
+     * <pre>
+     * Indicates the ID of the tier.
+     * </pre>
+     *
+     * <code>string tierId = 4;</code>
+     * @return The tierId.
+     */
+    java.lang.String getTierId();
+    /**
+     * <pre>
+     * Indicates the ID of the tier.
+     * </pre>
+     *
+     * <code>string tierId = 4;</code>
+     * @return The bytes for tierId.
+     */
+    com.google.protobuf.ByteString
+        getTierIdBytes();
+
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    boolean hasEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return The eventDetails.
+     */
+    com.passkit.grpc.Members.Event.EventDetails getEventDetails();
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     */
+    com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code members.ChangeTierRequest}
+   */
+  public static final class ChangeTierRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:members.ChangeTierRequest)
+      ChangeTierRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChangeTierRequest.newBuilder() to construct.
+    private ChangeTierRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChangeTierRequest() {
+      memberId_ = "";
+      externalMemberId_ = "";
+      programId_ = "";
+      tierId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChangeTierRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChangeTierRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              memberId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              externalMemberId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              programId_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tierId_ = s;
+              break;
+            }
+            case 58: {
+              com.passkit.grpc.Members.Event.EventDetails.Builder subBuilder = null;
+              if (eventDetails_ != null) {
+                subBuilder = eventDetails_.toBuilder();
+              }
+              eventDetails_ = input.readMessage(com.passkit.grpc.Members.Event.EventDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(eventDetails_);
+                eventDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Members.MemberOuterClass.internal_static_members_ChangeTierRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Members.MemberOuterClass.internal_static_members_ChangeTierRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.class, com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.Builder.class);
+    }
+
+    public static final int MEMBERID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object memberId_;
+    /**
+     * <pre>
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+     * </pre>
+     *
+     * <code>string memberId = 1;</code>
+     * @return The memberId.
+     */
+    @java.lang.Override
+    public java.lang.String getMemberId() {
+      java.lang.Object ref = memberId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        memberId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+     * </pre>
+     *
+     * <code>string memberId = 1;</code>
+     * @return The bytes for memberId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMemberIdBytes() {
+      java.lang.Object ref = memberId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        memberId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXTERNALMEMBERID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object externalMemberId_;
+    /**
+     * <pre>
+     * External member ID. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string externalMemberId = 2;</code>
+     * @return The externalMemberId.
+     */
+    @java.lang.Override
+    public java.lang.String getExternalMemberId() {
+      java.lang.Object ref = externalMemberId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        externalMemberId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * External member ID. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string externalMemberId = 2;</code>
+     * @return The bytes for externalMemberId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExternalMemberIdBytes() {
+      java.lang.Object ref = externalMemberId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        externalMemberId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROGRAMID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object programId_;
+    /**
+     * <pre>
+     * Program ID which member belongs to. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string programId = 3;</code>
+     * @return The programId.
+     */
+    @java.lang.Override
+    public java.lang.String getProgramId() {
+      java.lang.Object ref = programId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        programId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Program ID which member belongs to. Required if id is not provided.
+     * </pre>
+     *
+     * <code>string programId = 3;</code>
+     * @return The bytes for programId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProgramIdBytes() {
+      java.lang.Object ref = programId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        programId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIERID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object tierId_;
+    /**
+     * <pre>
+     * Indicates the ID of the tier.
+     * </pre>
+     *
+     * <code>string tierId = 4;</code>
+     * @return The tierId.
+     */
+    @java.lang.Override
+    public java.lang.String getTierId() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tierId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Indicates the ID of the tier.
+     * </pre>
+     *
+     * <code>string tierId = 4;</code>
+     * @return The bytes for tierId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTierIdBytes() {
+      java.lang.Object ref = tierId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tierId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EVENTDETAILS_FIELD_NUMBER = 7;
+    private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return Whether the eventDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventDetails() {
+      return eventDetails_ != null;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     * @return The eventDetails.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+      return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+    }
+    /**
+     * <code>.members.EventDetails eventDetails = 7;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+      return getEventDetails();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getMemberIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, memberId_);
+      }
+      if (!getExternalMemberIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalMemberId_);
+      }
+      if (!getProgramIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, programId_);
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tierId_);
+      }
+      if (eventDetails_ != null) {
+        output.writeMessage(7, getEventDetails());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getMemberIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, memberId_);
+      }
+      if (!getExternalMemberIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalMemberId_);
+      }
+      if (!getProgramIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, programId_);
+      }
+      if (!getTierIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tierId_);
+      }
+      if (eventDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getEventDetails());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest other = (com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest) obj;
+
+      if (!getMemberId()
+          .equals(other.getMemberId())) return false;
+      if (!getExternalMemberId()
+          .equals(other.getExternalMemberId())) return false;
+      if (!getProgramId()
+          .equals(other.getProgramId())) return false;
+      if (!getTierId()
+          .equals(other.getTierId())) return false;
+      if (hasEventDetails() != other.hasEventDetails()) return false;
+      if (hasEventDetails()) {
+        if (!getEventDetails()
+            .equals(other.getEventDetails())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MEMBERID_FIELD_NUMBER;
+      hash = (53 * hash) + getMemberId().hashCode();
+      hash = (37 * hash) + EXTERNALMEMBERID_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalMemberId().hashCode();
+      hash = (37 * hash) + PROGRAMID_FIELD_NUMBER;
+      hash = (53 * hash) + getProgramId().hashCode();
+      hash = (37 * hash) + TIERID_FIELD_NUMBER;
+      hash = (53 * hash) + getTierId().hashCode();
+      if (hasEventDetails()) {
+        hash = (37 * hash) + EVENTDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getEventDetails().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code members.ChangeTierRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:members.ChangeTierRequest)
+        com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Members.MemberOuterClass.internal_static_members_ChangeTierRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Members.MemberOuterClass.internal_static_members_ChangeTierRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.class, com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        memberId_ = "";
+
+        externalMemberId_ = "";
+
+        programId_ = "";
+
+        tierId_ = "";
+
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Members.MemberOuterClass.internal_static_members_ChangeTierRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest build() {
+        com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest buildPartial() {
+        com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest result = new com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest(this);
+        result.memberId_ = memberId_;
+        result.externalMemberId_ = externalMemberId_;
+        result.programId_ = programId_;
+        result.tierId_ = tierId_;
+        if (eventDetailsBuilder_ == null) {
+          result.eventDetails_ = eventDetails_;
+        } else {
+          result.eventDetails_ = eventDetailsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest) {
+          return mergeFrom((com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest other) {
+        if (other == com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.getDefaultInstance()) return this;
+        if (!other.getMemberId().isEmpty()) {
+          memberId_ = other.memberId_;
+          onChanged();
+        }
+        if (!other.getExternalMemberId().isEmpty()) {
+          externalMemberId_ = other.externalMemberId_;
+          onChanged();
+        }
+        if (!other.getProgramId().isEmpty()) {
+          programId_ = other.programId_;
+          onChanged();
+        }
+        if (!other.getTierId().isEmpty()) {
+          tierId_ = other.tierId_;
+          onChanged();
+        }
+        if (other.hasEventDetails()) {
+          mergeEventDetails(other.getEventDetails());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object memberId_ = "";
+      /**
+       * <pre>
+       * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+       * </pre>
+       *
+       * <code>string memberId = 1;</code>
+       * @return The memberId.
+       */
+      public java.lang.String getMemberId() {
+        java.lang.Object ref = memberId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          memberId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+       * </pre>
+       *
+       * <code>string memberId = 1;</code>
+       * @return The bytes for memberId.
+       */
+      public com.google.protobuf.ByteString
+          getMemberIdBytes() {
+        java.lang.Object ref = memberId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          memberId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+       * </pre>
+       *
+       * <code>string memberId = 1;</code>
+       * @param value The memberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemberId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        memberId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+       * </pre>
+       *
+       * <code>string memberId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMemberId() {
+        
+        memberId_ = getDefaultInstance().getMemberId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * PassKit generated member ID (22 characters). Required if externalMemberId and programId are not provided.
+       * </pre>
+       *
+       * <code>string memberId = 1;</code>
+       * @param value The bytes for memberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMemberIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        memberId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object externalMemberId_ = "";
+      /**
+       * <pre>
+       * External member ID. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string externalMemberId = 2;</code>
+       * @return The externalMemberId.
+       */
+      public java.lang.String getExternalMemberId() {
+        java.lang.Object ref = externalMemberId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          externalMemberId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External member ID. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string externalMemberId = 2;</code>
+       * @return The bytes for externalMemberId.
+       */
+      public com.google.protobuf.ByteString
+          getExternalMemberIdBytes() {
+        java.lang.Object ref = externalMemberId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          externalMemberId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * External member ID. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string externalMemberId = 2;</code>
+       * @param value The externalMemberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalMemberId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        externalMemberId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External member ID. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string externalMemberId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExternalMemberId() {
+        
+        externalMemberId_ = getDefaultInstance().getExternalMemberId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * External member ID. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string externalMemberId = 2;</code>
+       * @param value The bytes for externalMemberId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExternalMemberIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        externalMemberId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object programId_ = "";
+      /**
+       * <pre>
+       * Program ID which member belongs to. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string programId = 3;</code>
+       * @return The programId.
+       */
+      public java.lang.String getProgramId() {
+        java.lang.Object ref = programId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          programId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Program ID which member belongs to. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string programId = 3;</code>
+       * @return The bytes for programId.
+       */
+      public com.google.protobuf.ByteString
+          getProgramIdBytes() {
+        java.lang.Object ref = programId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          programId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Program ID which member belongs to. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string programId = 3;</code>
+       * @param value The programId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgramId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        programId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Program ID which member belongs to. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string programId = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgramId() {
+        
+        programId_ = getDefaultInstance().getProgramId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Program ID which member belongs to. Required if id is not provided.
+       * </pre>
+       *
+       * <code>string programId = 3;</code>
+       * @param value The bytes for programId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgramIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        programId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tierId_ = "";
+      /**
+       * <pre>
+       * Indicates the ID of the tier.
+       * </pre>
+       *
+       * <code>string tierId = 4;</code>
+       * @return The tierId.
+       */
+      public java.lang.String getTierId() {
+        java.lang.Object ref = tierId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tierId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates the ID of the tier.
+       * </pre>
+       *
+       * <code>string tierId = 4;</code>
+       * @return The bytes for tierId.
+       */
+      public com.google.protobuf.ByteString
+          getTierIdBytes() {
+        java.lang.Object ref = tierId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tierId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Indicates the ID of the tier.
+       * </pre>
+       *
+       * <code>string tierId = 4;</code>
+       * @param value The tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tierId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the ID of the tier.
+       * </pre>
+       *
+       * <code>string tierId = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTierId() {
+        
+        tierId_ = getDefaultInstance().getTierId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicates the ID of the tier.
+       * </pre>
+       *
+       * <code>string tierId = 4;</code>
+       * @param value The bytes for tierId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTierIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tierId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Members.Event.EventDetails eventDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> eventDetailsBuilder_;
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       * @return Whether the eventDetails field is set.
+       */
+      public boolean hasEventDetails() {
+        return eventDetailsBuilder_ != null || eventDetails_ != null;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       * @return The eventDetails.
+       */
+      public com.passkit.grpc.Members.Event.EventDetails getEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          return eventDetails_ == null ? com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        } else {
+          return eventDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder setEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          eventDetails_ = value;
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder setEventDetails(
+          com.passkit.grpc.Members.Event.EventDetails.Builder builderForValue) {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          eventDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder mergeEventDetails(com.passkit.grpc.Members.Event.EventDetails value) {
+        if (eventDetailsBuilder_ == null) {
+          if (eventDetails_ != null) {
+            eventDetails_ =
+              com.passkit.grpc.Members.Event.EventDetails.newBuilder(eventDetails_).mergeFrom(value).buildPartial();
+          } else {
+            eventDetails_ = value;
+          }
+          onChanged();
+        } else {
+          eventDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public Builder clearEventDetails() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetails_ = null;
+          onChanged();
+        } else {
+          eventDetails_ = null;
+          eventDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetails.Builder getEventDetailsBuilder() {
+        
+        onChanged();
+        return getEventDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      public com.passkit.grpc.Members.Event.EventDetailsOrBuilder getEventDetailsOrBuilder() {
+        if (eventDetailsBuilder_ != null) {
+          return eventDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return eventDetails_ == null ?
+              com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance() : eventDetails_;
+        }
+      }
+      /**
+       * <code>.members.EventDetails eventDetails = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder> 
+          getEventDetailsFieldBuilder() {
+        if (eventDetailsBuilder_ == null) {
+          eventDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Members.Event.EventDetails, com.passkit.grpc.Members.Event.EventDetails.Builder, com.passkit.grpc.Members.Event.EventDetailsOrBuilder>(
+                  getEventDetails(),
+                  getParentForChildren(),
+                  isClean());
+          eventDetails_ = null;
+        }
+        return eventDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:members.ChangeTierRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:members.ChangeTierRequest)
+    private static final com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest();
+    }
+
+    public static com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChangeTierRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ChangeTierRequest>() {
+      @java.lang.Override
+      public ChangeTierRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChangeTierRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChangeTierRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChangeTierRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_members_Member_descriptor;
   private static final 
@@ -18519,6 +19884,11 @@ public final class MemberOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_members_ListRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_members_ChangeTierRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_members_ChangeTierRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -18597,12 +19967,16 @@ public final class MemberOuterClass {
       "gramId\030\001 \001(\t\022\"\n\npagination\030\002 \001(\0132\016.io.Pa" +
       "gination\"R\n\013ListRequest\022\021\n\tprogramId\030\001 \001" +
       "(\t\022\034\n\007filters\030\002 \001(\0132\013.io.Filters\022\022\n\nemai" +
-      "lAsCsv\030\003 \001(\010*c\n\014MemberStatus\022\014\n\010ENROLLED" +
-      "\020\000\022\n\n\006ACTIVE\020\001\022\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRE" +
-      "D\020\003\022\017\n\013CHECKED_OUT\020\004\022\013\n\007DELETED\020\005B_\n\030com" +
-      ".passkit.grpc.MembersZ,stash.passkit.com" +
-      "/io/model/sdk/go/io/members\252\002\024PassKit.Gr" +
-      "pc.Membersb\006proto3"
+      "lAsCsv\030\003 \001(\010\"\217\001\n\021ChangeTierRequest\022\020\n\010me" +
+      "mberId\030\001 \001(\t\022\030\n\020externalMemberId\030\002 \001(\t\022\021" +
+      "\n\tprogramId\030\003 \001(\t\022\016\n\006tierId\030\004 \001(\t\022+\n\014eve" +
+      "ntDetails\030\007 \001(\0132\025.members.EventDetails*c" +
+      "\n\014MemberStatus\022\014\n\010ENROLLED\020\000\022\n\n\006ACTIVE\020\001" +
+      "\022\016\n\nCHECKED_IN\020\002\022\013\n\007EXPIRED\020\003\022\017\n\013CHECKED" +
+      "_OUT\020\004\022\013\n\007DELETED\020\005B_\n\030com.passkit.grpc." +
+      "MembersZ,stash.passkit.com/io/model/sdk/" +
+      "go/io/members\252\002\024PassKit.Grpc.Membersb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18696,6 +20070,12 @@ public final class MemberOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_ListRequest_descriptor,
         new java.lang.String[] { "ProgramId", "Filters", "EmailAsCsv", });
+    internal_static_members_ChangeTierRequest_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_members_ChangeTierRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_members_ChangeTierRequest_descriptor,
+        new java.lang.String[] { "MemberId", "ExternalMemberId", "ProgramId", "TierId", "EventDetails", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);

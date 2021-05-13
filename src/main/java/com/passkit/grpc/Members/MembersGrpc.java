@@ -789,6 +789,37 @@ public final class MembersGrpc {
     return getSetPointsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest,
+      com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> getChangeMemberTierMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "changeMemberTier",
+      requestType = com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.class,
+      responseType = com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest,
+      com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> getChangeMemberTierMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> getChangeMemberTierMethod;
+    if ((getChangeMemberTierMethod = MembersGrpc.getChangeMemberTierMethod) == null) {
+      synchronized (MembersGrpc.class) {
+        if ((getChangeMemberTierMethod = MembersGrpc.getChangeMemberTierMethod) == null) {
+          MembersGrpc.getChangeMemberTierMethod = getChangeMemberTierMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest, com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "changeMemberTier"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent.getDefaultInstance()))
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("changeMemberTier"))
+              .build();
+        }
+      }
+    }
+    return getChangeMemberTierMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest,
       com.google.protobuf.Empty> getUpdateMembersBySegmentMethod;
 
@@ -1623,6 +1654,13 @@ public final class MembersGrpc {
 
     /**
      */
+    public void changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangeMemberTierMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMembersBySegmentMethod(), responseObserver);
@@ -1924,6 +1962,13 @@ public final class MembersGrpc {
                 com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest,
                 com.passkit.grpc.Members.MemberOuterClass.MemberPoints>(
                   this, METHODID_SET_POINTS)))
+          .addMethod(
+            getChangeMemberTierMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest,
+                com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>(
+                  this, METHODID_CHANGE_MEMBER_TIER)))
           .addMethod(
             getUpdateMembersBySegmentMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2321,6 +2366,14 @@ public final class MembersGrpc {
 
     /**
      */
+    public void changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getChangeMemberTierMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2712,6 +2765,13 @@ public final class MembersGrpc {
 
     /**
      */
+    public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getChangeMemberTierMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.google.protobuf.Empty updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateMembersBySegmentMethod(), getCallOptions(), request);
@@ -3047,6 +3107,14 @@ public final class MembersGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> changeMemberTier(
+        com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getChangeMemberTierMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateMembersBySegment(
         com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -3191,24 +3259,25 @@ public final class MembersGrpc {
   private static final int METHODID_EARN_POINTS = 22;
   private static final int METHODID_BURN_POINTS = 23;
   private static final int METHODID_SET_POINTS = 24;
-  private static final int METHODID_UPDATE_MEMBERS_BY_SEGMENT = 25;
-  private static final int METHODID_DELETE_MEMBERS_BY_SEGMENT = 26;
-  private static final int METHODID_DELETE_MEMBER = 27;
-  private static final int METHODID_COUNT_MEMBERS_DEPRECATED = 28;
-  private static final int METHODID_COUNT_MEMBERS = 29;
-  private static final int METHODID_GET_MESSAGE_HISTORY_FOR_MEMBER = 30;
-  private static final int METHODID_GET_META_KEYS_FOR_PROGRAM = 31;
-  private static final int METHODID_RENEW_MEMBERS_EXPIRY = 32;
-  private static final int METHODID_UPDATE_MEMBER_EXPIRY = 33;
-  private static final int METHODID_PATCH_PERSON = 34;
-  private static final int METHODID_COUNT_MEMBER_EVENTS = 35;
-  private static final int METHODID_LIST_MEMBER_EVENTS = 36;
-  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 37;
-  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 38;
-  private static final int METHODID_DELETE_MEMBER_EVENTS = 39;
-  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 40;
-  private static final int METHODID_DELETE_MEMBER_EVENT = 41;
-  private static final int METHODID_GET_PROGRAM_ENROLMENT = 42;
+  private static final int METHODID_CHANGE_MEMBER_TIER = 25;
+  private static final int METHODID_UPDATE_MEMBERS_BY_SEGMENT = 26;
+  private static final int METHODID_DELETE_MEMBERS_BY_SEGMENT = 27;
+  private static final int METHODID_DELETE_MEMBER = 28;
+  private static final int METHODID_COUNT_MEMBERS_DEPRECATED = 29;
+  private static final int METHODID_COUNT_MEMBERS = 30;
+  private static final int METHODID_GET_MESSAGE_HISTORY_FOR_MEMBER = 31;
+  private static final int METHODID_GET_META_KEYS_FOR_PROGRAM = 32;
+  private static final int METHODID_RENEW_MEMBERS_EXPIRY = 33;
+  private static final int METHODID_UPDATE_MEMBER_EXPIRY = 34;
+  private static final int METHODID_PATCH_PERSON = 35;
+  private static final int METHODID_COUNT_MEMBER_EVENTS = 36;
+  private static final int METHODID_LIST_MEMBER_EVENTS = 37;
+  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 38;
+  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 39;
+  private static final int METHODID_DELETE_MEMBER_EVENTS = 40;
+  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 41;
+  private static final int METHODID_DELETE_MEMBER_EVENT = 42;
+  private static final int METHODID_GET_PROGRAM_ENROLMENT = 43;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3326,6 +3395,10 @@ public final class MembersGrpc {
         case METHODID_SET_POINTS:
           serviceImpl.setPoints((com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints>) responseObserver);
+          break;
+        case METHODID_CHANGE_MEMBER_TIER:
+          serviceImpl.changeMemberTier((com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent>) responseObserver);
           break;
         case METHODID_UPDATE_MEMBERS_BY_SEGMENT:
           serviceImpl.updateMembersBySegment((com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest) request,
@@ -3485,6 +3558,7 @@ public final class MembersGrpc {
               .addMethod(getEarnPointsMethod())
               .addMethod(getBurnPointsMethod())
               .addMethod(getSetPointsMethod())
+              .addMethod(getChangeMemberTierMethod())
               .addMethod(getUpdateMembersBySegmentMethod())
               .addMethod(getDeleteMembersBySegmentMethod())
               .addMethod(getDeleteMemberMethod())
