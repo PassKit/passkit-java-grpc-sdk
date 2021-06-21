@@ -1186,7 +1186,7 @@ public final class CommonObjects {
 
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1196,7 +1196,7 @@ public final class CommonObjects {
         getIdList();
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1205,7 +1205,7 @@ public final class CommonObjects {
     int getIdCount();
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1215,7 +1215,7 @@ public final class CommonObjects {
     java.lang.String getId(int index);
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1320,7 +1320,7 @@ public final class CommonObjects {
     private com.google.protobuf.LazyStringList id_;
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1332,7 +1332,7 @@ public final class CommonObjects {
     }
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1343,7 +1343,7 @@ public final class CommonObjects {
     }
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1355,7 +1355,7 @@ public final class CommonObjects {
     }
     /**
      * <pre>
-     * The unique identifier to an object or record.
+     * An array of unique identifiers for objects or records.
      * </pre>
      *
      * <code>repeated string id = 1;</code>
@@ -1697,7 +1697,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1709,7 +1709,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1720,7 +1720,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1732,7 +1732,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1745,7 +1745,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1765,7 +1765,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1784,7 +1784,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1801,7 +1801,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>
@@ -1815,7 +1815,7 @@ public final class CommonObjects {
       }
       /**
        * <pre>
-       * The unique identifier to an object or record.
+       * An array of unique identifiers for objects or records.
        * </pre>
        *
        * <code>repeated string id = 1;</code>

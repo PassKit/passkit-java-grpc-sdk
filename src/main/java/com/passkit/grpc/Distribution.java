@@ -14550,6 +14550,760 @@ public final class Distribution {
 
   }
 
+  public interface SmartPassCsvUploadRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.SmartPassCsvUploadRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+     * </pre>
+     *
+     * <code>string distributionUrl = 1;</code>
+     * @return The distributionUrl.
+     */
+    java.lang.String getDistributionUrl();
+    /**
+     * <pre>
+     * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+     * </pre>
+     *
+     * <code>string distributionUrl = 1;</code>
+     * @return The bytes for distributionUrl.
+     */
+    com.google.protobuf.ByteString
+        getDistributionUrlBytes();
+
+    /**
+     * <code>string csvContent = 2;</code>
+     * @return The csvContent.
+     */
+    java.lang.String getCsvContent();
+    /**
+     * <code>string csvContent = 2;</code>
+     * @return The bytes for csvContent.
+     */
+    com.google.protobuf.ByteString
+        getCsvContentBytes();
+  }
+  /**
+   * Protobuf type {@code io.SmartPassCsvUploadRequest}
+   */
+  public static final class SmartPassCsvUploadRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.SmartPassCsvUploadRequest)
+      SmartPassCsvUploadRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SmartPassCsvUploadRequest.newBuilder() to construct.
+    private SmartPassCsvUploadRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SmartPassCsvUploadRequest() {
+      distributionUrl_ = "";
+      csvContent_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SmartPassCsvUploadRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SmartPassCsvUploadRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              distributionUrl_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              csvContent_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Distribution.internal_static_io_SmartPassCsvUploadRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Distribution.internal_static_io_SmartPassCsvUploadRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.class, com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.Builder.class);
+    }
+
+    public static final int DISTRIBUTIONURL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object distributionUrl_;
+    /**
+     * <pre>
+     * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+     * </pre>
+     *
+     * <code>string distributionUrl = 1;</code>
+     * @return The distributionUrl.
+     */
+    @java.lang.Override
+    public java.lang.String getDistributionUrl() {
+      java.lang.Object ref = distributionUrl_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        distributionUrl_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+     * </pre>
+     *
+     * <code>string distributionUrl = 1;</code>
+     * @return The bytes for distributionUrl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDistributionUrlBytes() {
+      java.lang.Object ref = distributionUrl_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        distributionUrl_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CSVCONTENT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object csvContent_;
+    /**
+     * <code>string csvContent = 2;</code>
+     * @return The csvContent.
+     */
+    @java.lang.Override
+    public java.lang.String getCsvContent() {
+      java.lang.Object ref = csvContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        csvContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string csvContent = 2;</code>
+     * @return The bytes for csvContent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCsvContentBytes() {
+      java.lang.Object ref = csvContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        csvContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDistributionUrlBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, distributionUrl_);
+      }
+      if (!getCsvContentBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, csvContent_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDistributionUrlBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, distributionUrl_);
+      }
+      if (!getCsvContentBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, csvContent_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Distribution.SmartPassCsvUploadRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Distribution.SmartPassCsvUploadRequest other = (com.passkit.grpc.Distribution.SmartPassCsvUploadRequest) obj;
+
+      if (!getDistributionUrl()
+          .equals(other.getDistributionUrl())) return false;
+      if (!getCsvContent()
+          .equals(other.getCsvContent())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DISTRIBUTIONURL_FIELD_NUMBER;
+      hash = (53 * hash) + getDistributionUrl().hashCode();
+      hash = (37 * hash) + CSVCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCsvContent().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.SmartPassCsvUploadRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.SmartPassCsvUploadRequest)
+        com.passkit.grpc.Distribution.SmartPassCsvUploadRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Distribution.internal_static_io_SmartPassCsvUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Distribution.internal_static_io_SmartPassCsvUploadRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.class, com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        distributionUrl_ = "";
+
+        csvContent_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Distribution.internal_static_io_SmartPassCsvUploadRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.SmartPassCsvUploadRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.SmartPassCsvUploadRequest build() {
+        com.passkit.grpc.Distribution.SmartPassCsvUploadRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.SmartPassCsvUploadRequest buildPartial() {
+        com.passkit.grpc.Distribution.SmartPassCsvUploadRequest result = new com.passkit.grpc.Distribution.SmartPassCsvUploadRequest(this);
+        result.distributionUrl_ = distributionUrl_;
+        result.csvContent_ = csvContent_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Distribution.SmartPassCsvUploadRequest) {
+          return mergeFrom((com.passkit.grpc.Distribution.SmartPassCsvUploadRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest other) {
+        if (other == com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.getDefaultInstance()) return this;
+        if (!other.getDistributionUrl().isEmpty()) {
+          distributionUrl_ = other.distributionUrl_;
+          onChanged();
+        }
+        if (!other.getCsvContent().isEmpty()) {
+          csvContent_ = other.csvContent_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Distribution.SmartPassCsvUploadRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Distribution.SmartPassCsvUploadRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object distributionUrl_ = "";
+      /**
+       * <pre>
+       * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+       * </pre>
+       *
+       * <code>string distributionUrl = 1;</code>
+       * @return The distributionUrl.
+       */
+      public java.lang.String getDistributionUrl() {
+        java.lang.Object ref = distributionUrl_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          distributionUrl_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+       * </pre>
+       *
+       * <code>string distributionUrl = 1;</code>
+       * @return The bytes for distributionUrl.
+       */
+      public com.google.protobuf.ByteString
+          getDistributionUrlBytes() {
+        java.lang.Object ref = distributionUrl_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          distributionUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+       * </pre>
+       *
+       * <code>string distributionUrl = 1;</code>
+       * @param value The distributionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDistributionUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        distributionUrl_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+       * </pre>
+       *
+       * <code>string distributionUrl = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDistributionUrl() {
+        
+        distributionUrl_ = getDefaultInstance().getDistributionUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Url used to prefix the smartpass link. Also includes the short code needed to lookup the parent project.
+       * </pre>
+       *
+       * <code>string distributionUrl = 1;</code>
+       * @param value The bytes for distributionUrl to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDistributionUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        distributionUrl_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object csvContent_ = "";
+      /**
+       * <code>string csvContent = 2;</code>
+       * @return The csvContent.
+       */
+      public java.lang.String getCsvContent() {
+        java.lang.Object ref = csvContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          csvContent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string csvContent = 2;</code>
+       * @return The bytes for csvContent.
+       */
+      public com.google.protobuf.ByteString
+          getCsvContentBytes() {
+        java.lang.Object ref = csvContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          csvContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string csvContent = 2;</code>
+       * @param value The csvContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsvContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        csvContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string csvContent = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCsvContent() {
+        
+        csvContent_ = getDefaultInstance().getCsvContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string csvContent = 2;</code>
+       * @param value The bytes for csvContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsvContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        csvContent_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.SmartPassCsvUploadRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.SmartPassCsvUploadRequest)
+    private static final com.passkit.grpc.Distribution.SmartPassCsvUploadRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.SmartPassCsvUploadRequest();
+    }
+
+    public static com.passkit.grpc.Distribution.SmartPassCsvUploadRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SmartPassCsvUploadRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SmartPassCsvUploadRequest>() {
+      @java.lang.Override
+      public SmartPassCsvUploadRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SmartPassCsvUploadRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SmartPassCsvUploadRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SmartPassCsvUploadRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.SmartPassCsvUploadRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_EmailDistributionRequest_descriptor;
   private static final 
@@ -14610,6 +15364,11 @@ public final class Distribution {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_DataCollectionField_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_SmartPassCsvUploadRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_SmartPassCsvUploadRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14675,14 +15434,15 @@ public final class Distribution {
       "(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\t " +
       "\001(\t\022\027\n\017userCanSetValue\030\n \001(\010\022\024\n\014currency" +
       "Code\030\013 \001(\t\022\035\n\025defaultTelCountryCode\030\014 \001(" +
-      "\t*N\n\023DistributionChannel\022\023\n\017NO_DISTRIBUT" +
-      "ION\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020" +
-      "\002*x\n\024EmailTemplateOptions\022\027\n\023EMAIL_TEMP_" +
-      "OPT_NONE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID" +
-      "\020\001\022!\n\035EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010" +
-      "\004\020\004BG\n\020com.passkit.grpcZ$stash.passkit.c" +
-      "om/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006pr" +
-      "oto3"
+      "\t\"H\n\031SmartPassCsvUploadRequest\022\027\n\017distri" +
+      "butionUrl\030\001 \001(\t\022\022\n\ncsvContent\030\002 \001(\t*N\n\023D" +
+      "istributionChannel\022\023\n\017NO_DISTRIBUTION\020\000\022" +
+      "\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*x\n\024E" +
+      "mailTemplateOptions\022\027\n\023EMAIL_TEMP_OPT_NO" +
+      "NE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID\020\001\022!\n\035" +
+      "EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010\004\020\004BG\n" +
+      "\020com.passkit.grpcZ$stash.passkit.com/io/" +
+      "model/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14765,6 +15525,12 @@ public final class Distribution {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataCollectionField_descriptor,
         new java.lang.String[] { "UniqueName", "FieldType", "IsRequired", "Label", "LocalizedLabel", "DataType", "DefaultValue", "LocalizedDefaultValue", "Validation", "UserCanSetValue", "CurrencyCode", "DefaultTelCountryCode", });
+    internal_static_io_SmartPassCsvUploadRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_io_SmartPassCsvUploadRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_SmartPassCsvUploadRequest_descriptor,
+        new java.lang.String[] { "DistributionUrl", "CsvContent", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);

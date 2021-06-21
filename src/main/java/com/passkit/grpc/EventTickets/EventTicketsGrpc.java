@@ -1037,27 +1037,27 @@ public final class EventTicketsGrpc {
     return getValidateTicketMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest,
       com.passkit.grpc.CommonObjects.Id> getRedeemTicketMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "redeemTicket",
-      requestType = com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.class,
+      requestType = com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.class,
       responseType = com.passkit.grpc.CommonObjects.Id.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest,
       com.passkit.grpc.CommonObjects.Id> getRedeemTicketMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.CommonObjects.Id> getRedeemTicketMethod;
+    io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest, com.passkit.grpc.CommonObjects.Id> getRedeemTicketMethod;
     if ((getRedeemTicketMethod = EventTicketsGrpc.getRedeemTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getRedeemTicketMethod = EventTicketsGrpc.getRedeemTicketMethod) == null) {
           EventTicketsGrpc.getRedeemTicketMethod = getRedeemTicketMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest, com.passkit.grpc.CommonObjects.Id>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "redeemTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
+                  com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("redeemTicket"))
@@ -1223,27 +1223,27 @@ public final class EventTicketsGrpc {
     return getGetEventTicketPassMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketId,
       com.google.protobuf.Empty> getDeleteTicketMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "deleteTicket",
-      requestType = com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.class,
+      requestType = com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketId,
       com.google.protobuf.Empty> getDeleteTicketMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.google.protobuf.Empty> getDeleteTicketMethod;
+    io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.google.protobuf.Empty> getDeleteTicketMethod;
     if ((getDeleteTicketMethod = EventTicketsGrpc.getDeleteTicketMethod) == null) {
       synchronized (EventTicketsGrpc.class) {
         if ((getDeleteTicketMethod = EventTicketsGrpc.getDeleteTicketMethod) == null) {
           EventTicketsGrpc.getDeleteTicketMethod = getDeleteTicketMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTicket"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()))
+                  com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
               .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("deleteTicket"))
@@ -1628,7 +1628,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
+    public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRedeemTicketMethod(), responseObserver);
     }
@@ -1670,7 +1670,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
+    public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTicketMethod(), responseObserver);
     }
@@ -1933,7 +1933,7 @@ public final class EventTicketsGrpc {
             getRedeemTicketMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+                com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest,
                 com.passkit.grpc.CommonObjects.Id>(
                   this, METHODID_REDEEM_TICKET)))
           .addMethod(
@@ -1975,7 +1975,7 @@ public final class EventTicketsGrpc {
             getDeleteTicketMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.passkit.grpc.EventTickets.TicketOuterClass.Ticket,
+                com.passkit.grpc.EventTickets.TicketOuterClass.TicketId,
                 com.google.protobuf.Empty>(
                   this, METHODID_DELETE_TICKET)))
           .addMethod(
@@ -2283,7 +2283,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
+    public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRedeemTicketMethod(), getCallOptions()), request, responseObserver);
@@ -2331,7 +2331,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
+    public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteTicketMethod(), getCallOptions()), request, responseObserver);
@@ -2613,7 +2613,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public com.passkit.grpc.CommonObjects.Id redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
+    public com.passkit.grpc.CommonObjects.Id redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRedeemTicketMethod(), getCallOptions(), request);
     }
@@ -2655,7 +2655,7 @@ public final class EventTicketsGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
+    public com.google.protobuf.Empty deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTicketMethod(), getCallOptions(), request);
     }
@@ -2932,7 +2932,7 @@ public final class EventTicketsGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemTicket(
-        com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
+        com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRedeemTicketMethod(), getCallOptions()), request);
     }
@@ -2980,7 +2980,7 @@ public final class EventTicketsGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicket(
-        com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteTicketMethod(), getCallOptions()), request);
     }
@@ -3196,7 +3196,7 @@ public final class EventTicketsGrpc {
               (io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse>) responseObserver);
           break;
         case METHODID_REDEEM_TICKET:
-          serviceImpl.redeemTicket((com.passkit.grpc.EventTickets.TicketOuterClass.Ticket) request,
+          serviceImpl.redeemTicket((com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
           break;
         case METHODID_REDEEM_TICKETS_BY_ORDER_NUMBER:
@@ -3220,7 +3220,7 @@ public final class EventTicketsGrpc {
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.PassBundles>) responseObserver);
           break;
         case METHODID_DELETE_TICKET:
-          serviceImpl.deleteTicket((com.passkit.grpc.EventTickets.TicketOuterClass.Ticket) request,
+          serviceImpl.deleteTicket((com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_DELETE_TICKETS_BY_ORDER_NUMBER:

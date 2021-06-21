@@ -32,7 +32,7 @@ public final class ARpc {
       "uction.proto\032\"io/event_tickets/ticket_ty" +
       "pe.proto\032\035io/event_tickets/ticket.proto\032" +
       "\034io/event_tickets/venue.proto\032.protoc-ge" +
-      "n-openapiv2/options/annotations.proto2\264X" +
+      "n-openapiv2/options/annotations.proto2\346W" +
       "\n\014EventTickets\022\230\001\n\020createProduction\022\031.ev" +
       "ent_tickets.Production\032\006.io.Id\"a\202\323\344\223\002\035\"\030" +
       "/eventTickets/production:\001*\222A;\n\013Producti" +
@@ -247,16 +247,14 @@ public final class ARpc {
       "ickets can be validated multiple times. " +
       "Requires ticket.id to be set, or ticket." +
       "ticketNumber + ticket.event.production.i" +
-      "d to be set.\022\345\002\n\014redeemTicket\022\025.event_ti" +
-      "ckets.Ticket\032\006.io.Id\"\265\002\202\323\344\223\002 \032\033/eventTic" +
-      "kets/ticket/redeem:\001*\222A\213\002\n\007Tickets\022\rRede" +
-      "em Ticket\032\360\001Redeems an existing Ticket. " +
-      "Use this endpoint when you want to captu" +
-      "re redemption data and trigger the switc" +
-      "h to the redeemed design of the Ticket. " +
-      "Requires ticket.id to be set, or ticket." +
-      "ticketNumber + ticket.event.production.i" +
-      "d to be set.\022\320\002\n\032redeemTicketsByOrderNum" +
+      "d to be set.\022\225\002\n\014redeemTicket\022\".event_ti" +
+      "ckets.RedeemTicketRequest\032\006.io.Id\"\330\001\202\323\344\223" +
+      "\002 \032\033/eventTickets/ticket/redeem:\001*\222A\256\001\n\007" +
+      "Tickets\022\rRedeem Ticket\032\223\001Redeems an exis" +
+      "ting Ticket. Use this endpoint when you " +
+      "want to capture redemption data and trig" +
+      "ger the switch to the redeemed design of" +
+      " the Ticket.\022\320\002\n\032redeemTicketsByOrderNum" +
       "ber\022\".event_tickets.RedeemByOrderNumber\032" +
       "\007.io.Ids\"\204\002\202\323\344\223\002-\032(/eventTickets/tickets" +
       "/orderNumber/redeem:\001*\222A\315\001\n\007Tickets\022\036Red" +
@@ -286,62 +284,62 @@ public final class ARpc {
       "ital event ticket pass(es) in the reques" +
       "ted format based on the index provided. " +
       "Only one of ticketId, ticketNumber or or" +
-      "derNumber is required.\022\223\003\n\014deleteTicket\022" +
-      "\025.event_tickets.Ticket\032\026.google.protobuf" +
-      ".Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/ticket:\001*" +
-      "\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Delete an" +
-      " existing Ticket by Id or Ticket Number." +
-      " Invalidates the ticket in the customers" +
-      " Mobile Wallet; rendering it useless. Th" +
-      "is method is irreversible and should be " +
-      "used with care. Requires ticket.ID to be" +
-      " set, or ticket.ticketNumber + ticket.ev" +
-      "ent.production.id to be set.\022\335\002\n\032deleteT" +
-      "icketsByOrderNumber\022!.event_tickets.Orde" +
-      "rNumberRequest\032\026.google.protobuf.Empty\"\203" +
-      "\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:\001*\222A\333" +
-      "\001\n\007Tickets\022\036Delete Tickets by Order Numb" +
-      "er\032\257\001Delete existing Ticketd by Order Nu" +
-      "mber. Invalidates the ticket in the cust" +
-      "omers Mobile Wallet; rendering it useles" +
-      "s. This method is irreversible and shoul" +
-      "d be used with care.\022\317\001\n\013listTickets\022 .e" +
-      "vent_tickets.TicketListRequest\032\".event_t" +
-      "ickets.TicketLimitedFields\"x\202\323\344\223\002\037\"\032/eve" +
-      "ntTickets/tickets/list:\001*\222AP\n\007Tickets\022\014L" +
-      "ist Tickets\0327List all tickets for a Prod" +
-      "uction. Supports pagination.0\001\022\313\001\n\014count" +
-      "Tickets\022 .event_tickets.TicketListReques" +
-      "t\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTickets/tic" +
-      "kets/count:\001*\222Ad\n\007Tickets\022\rCount Tickets" +
-      "\032JCount all tickets for a Production, Ev" +
-      "ent, Ticket Type and / or Start DateB\354\007\n" +
-      "\035com.passkit.grpc.EventTicketsZ2stash.pa" +
-      "sskit.com/io/model/sdk/go/io/event_ticke" +
-      "ts\252\002\031PassKit.Grpc.EventTickets\222A\371\006\022\264\002\n\031P" +
-      "assKit Event Tickets API\022\221\001This API enab" +
-      "les you to get all your Digital Event Ti" +
-      "ckets into Apple Wallet & Google Pay, fr" +
-      "om theatre and cinema, to sport events a" +
-      "nd concerts.\0328https://passkit.com/legal/" +
-      "terms-of-subscription-service/\"?\n\017PassKi" +
-      "t Support\022\027https://docs.passkit.io\032\023supp" +
-      "ort@passkit.com2\0100.1-spec*\001\0022\020applicatio" +
-      "n/json:\020application/jsonR9\n\003200\0222\n(Retur" +
-      "ned when the request is successful.\022\006\n\004\232" +
-      "\002\001\007R4\n\003400\022-\n+Returned when wrong user i" +
-      "nput is provided.R0\n\003401\022)\n\'Returned whe" +
-      "n the user is unauthorized.RP\n\003403\022I\nGRe" +
-      "turned when the user does not have permi" +
-      "ssion to access the resource.R;\n\003404\0224\n*" +
-      "Returned when the resource does not exis" +
-      "t.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when there" +
-      " is an unexpected error.\022\006\n\004\232\002\001\007RW\n\003503\022" +
-      "P\nNServer is unavailable. Back off for 2" +
-      "50ms and repeat request until successful" +
-      ".Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticatio" +
-      "n token.\032\rAuthorization \002b\020\n\016\n\napiKeyAut" +
-      "h\022\000b\006proto3"
+      "derNumber is required.\022\225\003\n\014deleteTicket\022" +
+      "\027.event_tickets.TicketId\032\026.google.protob" +
+      "uf.Empty\"\323\002\202\323\344\223\002\031*\024/eventTickets/ticket:" +
+      "\001*\222A\260\002\n\007Tickets\022\rDelete Ticket\032\225\002Delete " +
+      "an existing Ticket by Id or Ticket Numbe" +
+      "r. Invalidates the ticket in the custome" +
+      "rs Mobile Wallet; rendering it useless. " +
+      "This method is irreversible and should b" +
+      "e used with care. Requires ticket.ID to " +
+      "be set, or ticket.ticketNumber + ticket." +
+      "event.production.id to be set.\022\335\002\n\032delet" +
+      "eTicketsByOrderNumber\022!.event_tickets.Or" +
+      "derNumberRequest\032\026.google.protobuf.Empty" +
+      "\"\203\002\202\323\344\223\002\036*\031/eventTickets/orderNumber:\001*\222" +
+      "A\333\001\n\007Tickets\022\036Delete Tickets by Order Nu" +
+      "mber\032\257\001Delete existing Ticketd by Order " +
+      "Number. Invalidates the ticket in the cu" +
+      "stomers Mobile Wallet; rendering it usel" +
+      "ess. This method is irreversible and sho" +
+      "uld be used with care.\022\317\001\n\013listTickets\022 " +
+      ".event_tickets.TicketListRequest\032\".event" +
+      "_tickets.TicketLimitedFields\"x\202\323\344\223\002\037\"\032/e" +
+      "ventTickets/tickets/list:\001*\222AP\n\007Tickets\022" +
+      "\014List Tickets\0327List all tickets for a Pr" +
+      "oduction. Supports pagination.0\001\022\313\001\n\014cou" +
+      "ntTickets\022 .event_tickets.TicketListRequ" +
+      "est\032\t.io.Count\"\215\001\202\323\344\223\002 \"\033/eventTickets/t" +
+      "ickets/count:\001*\222Ad\n\007Tickets\022\rCount Ticke" +
+      "ts\032JCount all tickets for a Production, " +
+      "Event, Ticket Type and / or Start DateB\354" +
+      "\007\n\035com.passkit.grpc.EventTicketsZ2stash." +
+      "passkit.com/io/model/sdk/go/io/event_tic" +
+      "kets\252\002\031PassKit.Grpc.EventTickets\222A\371\006\022\264\002\n" +
+      "\031PassKit Event Tickets API\022\221\001This API en" +
+      "ables you to get all your Digital Event " +
+      "Tickets into Apple Wallet & Google Pay, " +
+      "from theatre and cinema, to sport events" +
+      " and concerts.\0328https://passkit.com/lega" +
+      "l/terms-of-subscription-service/\"?\n\017Pass" +
+      "Kit Support\022\027https://docs.passkit.io\032\023su" +
+      "pport@passkit.com2\0100.1-spec*\001\0022\020applicat" +
+      "ion/json:\020application/jsonR9\n\003200\0222\n(Ret" +
+      "urned when the request is successful.\022\006\n" +
+      "\004\232\002\001\007R4\n\003400\022-\n+Returned when wrong user" +
+      " input is provided.R0\n\003401\022)\n\'Returned w" +
+      "hen the user is unauthorized.RP\n\003403\022I\nG" +
+      "Returned when the user does not have per" +
+      "mission to access the resource.R;\n\003404\0224" +
+      "\n*Returned when the resource does not ex" +
+      "ist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when the" +
+      "re is an unexpected error.\022\006\n\004\232\002\001\007RW\n\00350" +
+      "3\022P\nNServer is unavailable. Back off for" +
+      " 250ms and repeat request until successf" +
+      "ul.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticat" +
+      "ion token.\032\rAuthorization \002b\020\n\016\n\napiKeyA" +
+      "uth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

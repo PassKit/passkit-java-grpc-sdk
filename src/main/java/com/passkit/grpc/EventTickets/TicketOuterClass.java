@@ -147,6 +147,1829 @@ public final class TicketOuterClass {
     // @@protoc_insertion_point(enum_scope:event_tickets.TicketStatus)
   }
 
+  public interface TicketIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:event_tickets.TicketId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return Whether the ticketId field is set.
+     */
+    boolean hasTicketId();
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return The ticketId.
+     */
+    java.lang.String getTicketId();
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return The bytes for ticketId.
+     */
+    com.google.protobuf.ByteString
+        getTicketIdBytes();
+
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     * @return Whether the ticketNumber field is set.
+     */
+    boolean hasTicketNumber();
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     * @return The ticketNumber.
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getTicketNumber();
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder getTicketNumberOrBuilder();
+
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.IdCase getIdCase();
+  }
+  /**
+   * <pre>
+   * An object to communicate the ID of the ticket. Either the ticket id (22 character identifier), or the production id
+   * (22 character identifier), or Production UID (user defined id) plus the externally provided ticket number should be provided.
+   * </pre>
+   *
+   * Protobuf type {@code event_tickets.TicketId}
+   */
+  public static final class TicketId extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:event_tickets.TicketId)
+      TicketIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TicketId.newBuilder() to construct.
+    private TicketId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TicketId() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TicketId();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TicketId(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              idCase_ = 1;
+              id_ = s;
+              break;
+            }
+            case 18: {
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder subBuilder = null;
+              if (idCase_ == 2) {
+                subBuilder = ((com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_).toBuilder();
+              }
+              id_ =
+                  input.readMessage(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_);
+                id_ = subBuilder.buildPartial();
+              }
+              idCase_ = 2;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.class, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder.class);
+    }
+
+    private int idCase_ = 0;
+    private java.lang.Object id_;
+    public enum IdCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      TICKETID(1),
+      TICKETNUMBER(2),
+      ID_NOT_SET(0);
+      private final int value;
+      private IdCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static IdCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static IdCase forNumber(int value) {
+        switch (value) {
+          case 1: return TICKETID;
+          case 2: return TICKETNUMBER;
+          case 0: return ID_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public IdCase
+    getIdCase() {
+      return IdCase.forNumber(
+          idCase_);
+    }
+
+    public static final int TICKETID_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return Whether the ticketId field is set.
+     */
+    public boolean hasTicketId() {
+      return idCase_ == 1;
+    }
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return The ticketId.
+     */
+    public java.lang.String getTicketId() {
+      java.lang.Object ref = "";
+      if (idCase_ == 1) {
+        ref = id_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (idCase_ == 1) {
+          id_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Ticket id (22 character identifier).
+     * </pre>
+     *
+     * <code>string ticketId = 1;</code>
+     * @return The bytes for ticketId.
+     */
+    public com.google.protobuf.ByteString
+        getTicketIdBytes() {
+      java.lang.Object ref = "";
+      if (idCase_ == 1) {
+        ref = id_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (idCase_ == 1) {
+          id_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TICKETNUMBER_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     * @return Whether the ticketNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasTicketNumber() {
+      return idCase_ == 2;
+    }
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     * @return The ticketNumber.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getTicketNumber() {
+      if (idCase_ == 2) {
+         return (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_;
+      }
+      return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * A ticket number object containing a production id and ticket number"
+     * </pre>
+     *
+     * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder getTicketNumberOrBuilder() {
+      if (idCase_ == 2) {
+         return (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_;
+      }
+      return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (idCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (idCase_ == 2) {
+        output.writeMessage(2, (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (idCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (idCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketId)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.EventTickets.TicketOuterClass.TicketId other = (com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) obj;
+
+      if (!getIdCase().equals(other.getIdCase())) return false;
+      switch (idCase_) {
+        case 1:
+          if (!getTicketId()
+              .equals(other.getTicketId())) return false;
+          break;
+        case 2:
+          if (!getTicketNumber()
+              .equals(other.getTicketNumber())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (idCase_) {
+        case 1:
+          hash = (37 * hash) + TICKETID_FIELD_NUMBER;
+          hash = (53 * hash) + getTicketId().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + TICKETNUMBER_FIELD_NUMBER;
+          hash = (53 * hash) + getTicketNumber().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * An object to communicate the ID of the ticket. Either the ticket id (22 character identifier), or the production id
+     * (22 character identifier), or Production UID (user defined id) plus the externally provided ticket number should be provided.
+     * </pre>
+     *
+     * Protobuf type {@code event_tickets.TicketId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:event_tickets.TicketId)
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.class, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        idCase_ = 0;
+        id_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getDefaultInstanceForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId build() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId buildPartial() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketId result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketId(this);
+        if (idCase_ == 1) {
+          result.id_ = id_;
+        }
+        if (idCase_ == 2) {
+          if (ticketNumberBuilder_ == null) {
+            result.id_ = id_;
+          } else {
+            result.id_ = ticketNumberBuilder_.build();
+          }
+        }
+        result.idCase_ = idCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) {
+          return mergeFrom((com.passkit.grpc.EventTickets.TicketOuterClass.TicketId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId other) {
+        if (other == com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance()) return this;
+        switch (other.getIdCase()) {
+          case TICKETID: {
+            idCase_ = 1;
+            id_ = other.id_;
+            onChanged();
+            break;
+          }
+          case TICKETNUMBER: {
+            mergeTicketNumber(other.getTicketNumber());
+            break;
+          }
+          case ID_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketId parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int idCase_ = 0;
+      private java.lang.Object id_;
+      public IdCase
+          getIdCase() {
+        return IdCase.forNumber(
+            idCase_);
+      }
+
+      public Builder clearId() {
+        idCase_ = 0;
+        id_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @return Whether the ticketId field is set.
+       */
+      @java.lang.Override
+      public boolean hasTicketId() {
+        return idCase_ == 1;
+      }
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @return The ticketId.
+       */
+      @java.lang.Override
+      public java.lang.String getTicketId() {
+        java.lang.Object ref = "";
+        if (idCase_ == 1) {
+          ref = id_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (idCase_ == 1) {
+            id_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @return The bytes for ticketId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getTicketIdBytes() {
+        java.lang.Object ref = "";
+        if (idCase_ == 1) {
+          ref = id_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (idCase_ == 1) {
+            id_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @param value The ticketId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTicketId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  idCase_ = 1;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTicketId() {
+        if (idCase_ == 1) {
+          idCase_ = 0;
+          id_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The Ticket id (22 character identifier).
+       * </pre>
+       *
+       * <code>string ticketId = 1;</code>
+       * @param value The bytes for ticketId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTicketIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        idCase_ = 1;
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder> ticketNumberBuilder_;
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       * @return Whether the ticketNumber field is set.
+       */
+      @java.lang.Override
+      public boolean hasTicketNumber() {
+        return idCase_ == 2;
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       * @return The ticketNumber.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getTicketNumber() {
+        if (ticketNumberBuilder_ == null) {
+          if (idCase_ == 2) {
+            return (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_;
+          }
+          return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+        } else {
+          if (idCase_ == 2) {
+            return ticketNumberBuilder_.getMessage();
+          }
+          return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      public Builder setTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber value) {
+        if (ticketNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+          onChanged();
+        } else {
+          ticketNumberBuilder_.setMessage(value);
+        }
+        idCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      public Builder setTicketNumber(
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder builderForValue) {
+        if (ticketNumberBuilder_ == null) {
+          id_ = builderForValue.build();
+          onChanged();
+        } else {
+          ticketNumberBuilder_.setMessage(builderForValue.build());
+        }
+        idCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      public Builder mergeTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber value) {
+        if (ticketNumberBuilder_ == null) {
+          if (idCase_ == 2 &&
+              id_ != com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance()) {
+            id_ = com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.newBuilder((com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            id_ = value;
+          }
+          onChanged();
+        } else {
+          if (idCase_ == 2) {
+            ticketNumberBuilder_.mergeFrom(value);
+          }
+          ticketNumberBuilder_.setMessage(value);
+        }
+        idCase_ = 2;
+        return this;
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      public Builder clearTicketNumber() {
+        if (ticketNumberBuilder_ == null) {
+          if (idCase_ == 2) {
+            idCase_ = 0;
+            id_ = null;
+            onChanged();
+          }
+        } else {
+          if (idCase_ == 2) {
+            idCase_ = 0;
+            id_ = null;
+          }
+          ticketNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder getTicketNumberBuilder() {
+        return getTicketNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder getTicketNumberOrBuilder() {
+        if ((idCase_ == 2) && (ticketNumberBuilder_ != null)) {
+          return ticketNumberBuilder_.getMessageOrBuilder();
+        } else {
+          if (idCase_ == 2) {
+            return (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_;
+          }
+          return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * A ticket number object containing a production id and ticket number"
+       * </pre>
+       *
+       * <code>.event_tickets.TicketNumber ticketNumber = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder> 
+          getTicketNumberFieldBuilder() {
+        if (ticketNumberBuilder_ == null) {
+          if (!(idCase_ == 2)) {
+            id_ = com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+          }
+          ticketNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder>(
+                  (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) id_,
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        idCase_ = 2;
+        onChanged();;
+        return ticketNumberBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:event_tickets.TicketId)
+    }
+
+    // @@protoc_insertion_point(class_scope:event_tickets.TicketId)
+    private static final com.passkit.grpc.EventTickets.TicketOuterClass.TicketId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketId();
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TicketId>
+        PARSER = new com.google.protobuf.AbstractParser<TicketId>() {
+      @java.lang.Override
+      public TicketId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TicketId(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TicketId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TicketId> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TicketNumberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:event_tickets.TicketNumber)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The Production id (22 character identifier), or the Production user defined id.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
+     * @return The productionId.
+     */
+    java.lang.String getProductionId();
+    /**
+     * <pre>
+     * The Production id (22 character identifier), or the Production user defined id.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
+     * @return The bytes for productionId.
+     */
+    com.google.protobuf.ByteString
+        getProductionIdBytes();
+
+    /**
+     * <pre>
+     * The user defined ticket number (unique within production)
+     * </pre>
+     *
+     * <code>string ticketNumber = 2;</code>
+     * @return The ticketNumber.
+     */
+    java.lang.String getTicketNumber();
+    /**
+     * <pre>
+     * The user defined ticket number (unique within production)
+     * </pre>
+     *
+     * <code>string ticketNumber = 2;</code>
+     * @return The bytes for ticketNumber.
+     */
+    com.google.protobuf.ByteString
+        getTicketNumberBytes();
+  }
+  /**
+   * Protobuf type {@code event_tickets.TicketNumber}
+   */
+  public static final class TicketNumber extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:event_tickets.TicketNumber)
+      TicketNumberOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TicketNumber.newBuilder() to construct.
+    private TicketNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TicketNumber() {
+      productionId_ = "";
+      ticketNumber_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TicketNumber();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TicketNumber(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              productionId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ticketNumber_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.class, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder.class);
+    }
+
+    public static final int PRODUCTIONID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object productionId_;
+    /**
+     * <pre>
+     * The Production id (22 character identifier), or the Production user defined id.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
+     * @return The productionId.
+     */
+    @java.lang.Override
+    public java.lang.String getProductionId() {
+      java.lang.Object ref = productionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        productionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The Production id (22 character identifier), or the Production user defined id.
+     * </pre>
+     *
+     * <code>string productionId = 1;</code>
+     * @return The bytes for productionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProductionIdBytes() {
+      java.lang.Object ref = productionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        productionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TICKETNUMBER_FIELD_NUMBER = 2;
+    private volatile java.lang.Object ticketNumber_;
+    /**
+     * <pre>
+     * The user defined ticket number (unique within production)
+     * </pre>
+     *
+     * <code>string ticketNumber = 2;</code>
+     * @return The ticketNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getTicketNumber() {
+      java.lang.Object ref = ticketNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ticketNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The user defined ticket number (unique within production)
+     * </pre>
+     *
+     * <code>string ticketNumber = 2;</code>
+     * @return The bytes for ticketNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTicketNumberBytes() {
+      java.lang.Object ref = ticketNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ticketNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProductionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
+      }
+      if (!getTicketNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketNumber_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProductionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
+      }
+      if (!getTicketNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketNumber_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber other = (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) obj;
+
+      if (!getProductionId()
+          .equals(other.getProductionId())) return false;
+      if (!getTicketNumber()
+          .equals(other.getTicketNumber())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRODUCTIONID_FIELD_NUMBER;
+      hash = (53 * hash) + getProductionId().hashCode();
+      hash = (37 * hash) + TICKETNUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getTicketNumber().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code event_tickets.TicketNumber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:event_tickets.TicketNumber)
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.class, com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        productionId_ = "";
+
+        ticketNumber_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getDefaultInstanceForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber build() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber buildPartial() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber(this);
+        result.productionId_ = productionId_;
+        result.ticketNumber_ = ticketNumber_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) {
+          return mergeFrom((com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber other) {
+        if (other == com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance()) return this;
+        if (!other.getProductionId().isEmpty()) {
+          productionId_ = other.productionId_;
+          onChanged();
+        }
+        if (!other.getTicketNumber().isEmpty()) {
+          ticketNumber_ = other.ticketNumber_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object productionId_ = "";
+      /**
+       * <pre>
+       * The Production id (22 character identifier), or the Production user defined id.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
+       * @return The productionId.
+       */
+      public java.lang.String getProductionId() {
+        java.lang.Object ref = productionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          productionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Production id (22 character identifier), or the Production user defined id.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
+       * @return The bytes for productionId.
+       */
+      public com.google.protobuf.ByteString
+          getProductionIdBytes() {
+        java.lang.Object ref = productionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          productionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The Production id (22 character identifier), or the Production user defined id.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
+       * @param value The productionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        productionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Production id (22 character identifier), or the Production user defined id.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProductionId() {
+        
+        productionId_ = getDefaultInstance().getProductionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The Production id (22 character identifier), or the Production user defined id.
+       * </pre>
+       *
+       * <code>string productionId = 1;</code>
+       * @param value The bytes for productionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProductionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        productionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ticketNumber_ = "";
+      /**
+       * <pre>
+       * The user defined ticket number (unique within production)
+       * </pre>
+       *
+       * <code>string ticketNumber = 2;</code>
+       * @return The ticketNumber.
+       */
+      public java.lang.String getTicketNumber() {
+        java.lang.Object ref = ticketNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ticketNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The user defined ticket number (unique within production)
+       * </pre>
+       *
+       * <code>string ticketNumber = 2;</code>
+       * @return The bytes for ticketNumber.
+       */
+      public com.google.protobuf.ByteString
+          getTicketNumberBytes() {
+        java.lang.Object ref = ticketNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ticketNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The user defined ticket number (unique within production)
+       * </pre>
+       *
+       * <code>string ticketNumber = 2;</code>
+       * @param value The ticketNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTicketNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ticketNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The user defined ticket number (unique within production)
+       * </pre>
+       *
+       * <code>string ticketNumber = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTicketNumber() {
+        
+        ticketNumber_ = getDefaultInstance().getTicketNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The user defined ticket number (unique within production)
+       * </pre>
+       *
+       * <code>string ticketNumber = 2;</code>
+       * @param value The bytes for ticketNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTicketNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ticketNumber_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:event_tickets.TicketNumber)
+    }
+
+    // @@protoc_insertion_point(class_scope:event_tickets.TicketNumber)
+    private static final com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber();
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TicketNumber>
+        PARSER = new com.google.protobuf.AbstractParser<TicketNumber>() {
+      @java.lang.Override
+      public TicketNumber parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TicketNumber(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TicketNumber> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TicketNumber> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface TicketOrBuilder extends
       // @@protoc_insertion_point(interface_extends:event_tickets.Ticket)
       com.google.protobuf.MessageOrBuilder {
@@ -19410,7 +21233,7 @@ public final class TicketOuterClass {
 
     /**
      * <pre>
-     * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+     * If provided will auto redeem ticket once max number of validations has been reached.
      * </pre>
      *
      * <code>uint32 maxNumberOfValidations = 1;</code>
@@ -19420,30 +21243,30 @@ public final class TicketOuterClass {
 
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      * @return Whether the ticket field is set.
      */
     boolean hasTicket();
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      * @return The ticket.
      */
-    com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicket();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket();
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      */
-    com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder getTicketOrBuilder();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder();
 
     /**
      * <pre>
@@ -19523,11 +21346,11 @@ public final class TicketOuterClass {
               break;
             }
             case 18: {
-              com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder subBuilder = null;
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder subBuilder = null;
               if (ticket_ != null) {
                 subBuilder = ticket_.toBuilder();
               }
-              ticket_ = input.readMessage(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.parser(), extensionRegistry);
+              ticket_ = input.readMessage(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(ticket_);
                 ticket_ = subBuilder.buildPartial();
@@ -19584,7 +21407,7 @@ public final class TicketOuterClass {
     private int maxNumberOfValidations_;
     /**
      * <pre>
-     * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+     * If provided will auto redeem ticket once max number of validations has been reached.
      * </pre>
      *
      * <code>uint32 maxNumberOfValidations = 1;</code>
@@ -19596,13 +21419,13 @@ public final class TicketOuterClass {
     }
 
     public static final int TICKET_FIELD_NUMBER = 2;
-    private com.passkit.grpc.EventTickets.TicketOuterClass.Ticket ticket_;
+    private com.passkit.grpc.EventTickets.TicketOuterClass.TicketId ticket_;
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      * @return Whether the ticket field is set.
      */
     @java.lang.Override
@@ -19611,25 +21434,25 @@ public final class TicketOuterClass {
     }
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      * @return The ticket.
      */
     @java.lang.Override
-    public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicket() {
-      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance() : ticket_;
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket() {
+      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
     }
     /**
      * <pre>
-     * Ticket details for the ticket to validate.
+     * Ticket id for the ticket to validate.
      * </pre>
      *
-     * <code>.event_tickets.Ticket ticket = 2;</code>
+     * <code>.event_tickets.TicketId ticket = 2;</code>
      */
     @java.lang.Override
-    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder getTicketOrBuilder() {
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
       return getTicket();
     }
 
@@ -20036,7 +21859,7 @@ public final class TicketOuterClass {
       private int maxNumberOfValidations_ ;
       /**
        * <pre>
-       * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+       * If provided will auto redeem ticket once max number of validations has been reached.
        * </pre>
        *
        * <code>uint32 maxNumberOfValidations = 1;</code>
@@ -20048,7 +21871,7 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+       * If provided will auto redeem ticket once max number of validations has been reached.
        * </pre>
        *
        * <code>uint32 maxNumberOfValidations = 1;</code>
@@ -20063,7 +21886,7 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * If provided will auto redeem ticket once max number of validations has been reached. A ticket can be validated a max of 10 times.
+       * If provided will auto redeem ticket once max number of validations has been reached.
        * </pre>
        *
        * <code>uint32 maxNumberOfValidations = 1;</code>
@@ -20076,15 +21899,15 @@ public final class TicketOuterClass {
         return this;
       }
 
-      private com.passkit.grpc.EventTickets.TicketOuterClass.Ticket ticket_;
+      private com.passkit.grpc.EventTickets.TicketOuterClass.TicketId ticket_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder> ticketBuilder_;
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder> ticketBuilder_;
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        * @return Whether the ticket field is set.
        */
       public boolean hasTicket() {
@@ -20092,27 +21915,27 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        * @return The ticket.
        */
-      public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicket() {
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket() {
         if (ticketBuilder_ == null) {
-          return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance() : ticket_;
+          return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
         } else {
           return ticketBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
-      public Builder setTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket value) {
+      public Builder setTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
         if (ticketBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20127,13 +21950,13 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
       public Builder setTicket(
-          com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder builderForValue) {
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder builderForValue) {
         if (ticketBuilder_ == null) {
           ticket_ = builderForValue.build();
           onChanged();
@@ -20145,16 +21968,16 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
-      public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket value) {
+      public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
         if (ticketBuilder_ == null) {
           if (ticket_ != null) {
             ticket_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.newBuilder(ticket_).mergeFrom(value).buildPartial();
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.newBuilder(ticket_).mergeFrom(value).buildPartial();
           } else {
             ticket_ = value;
           }
@@ -20167,10 +21990,10 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
       public Builder clearTicket() {
         if (ticketBuilder_ == null) {
@@ -20185,44 +22008,44 @@ public final class TicketOuterClass {
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
-      public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder getTicketBuilder() {
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder getTicketBuilder() {
         
         onChanged();
         return getTicketFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
-      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder getTicketOrBuilder() {
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
         if (ticketBuilder_ != null) {
           return ticketBuilder_.getMessageOrBuilder();
         } else {
           return ticket_ == null ?
-              com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance() : ticket_;
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
         }
       }
       /**
        * <pre>
-       * Ticket details for the ticket to validate.
+       * Ticket id for the ticket to validate.
        * </pre>
        *
-       * <code>.event_tickets.Ticket ticket = 2;</code>
+       * <code>.event_tickets.TicketId ticket = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder> 
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder> 
           getTicketFieldBuilder() {
         if (ticketBuilder_ == null) {
           ticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.passkit.grpc.EventTickets.TicketOuterClass.Ticket, com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder>(
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder>(
                   getTicket(),
                   getParentForChildren(),
                   isClean());
@@ -21205,6 +23028,950 @@ public final class TicketOuterClass {
 
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RedeemTicketRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:event_tickets.RedeemTicketRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     * @return Whether the ticket field is set.
+     */
+    boolean hasTicket();
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     * @return The ticket.
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket();
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder();
+
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     * @return Whether the redemptionDetails field is set.
+     */
+    boolean hasRedemptionDetails();
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     * @return The redemptionDetails.
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails getRedemptionDetails();
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     */
+    com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code event_tickets.RedeemTicketRequest}
+   */
+  public static final class RedeemTicketRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:event_tickets.RedeemTicketRequest)
+      RedeemTicketRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RedeemTicketRequest.newBuilder() to construct.
+    private RedeemTicketRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RedeemTicketRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RedeemTicketRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RedeemTicketRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder subBuilder = null;
+              if (ticket_ != null) {
+                subBuilder = ticket_.toBuilder();
+              }
+              ticket_ = input.readMessage(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ticket_);
+                ticket_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder subBuilder = null;
+              if (redemptionDetails_ != null) {
+                subBuilder = redemptionDetails_.toBuilder();
+              }
+              redemptionDetails_ = input.readMessage(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(redemptionDetails_);
+                redemptionDetails_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.class, com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.Builder.class);
+    }
+
+    public static final int TICKET_FIELD_NUMBER = 1;
+    private com.passkit.grpc.EventTickets.TicketOuterClass.TicketId ticket_;
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     * @return Whether the ticket field is set.
+     */
+    @java.lang.Override
+    public boolean hasTicket() {
+      return ticket_ != null;
+    }
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     * @return The ticket.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket() {
+      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
+    }
+    /**
+     * <pre>
+     * Ticket id for the ticket to redeem.
+     * </pre>
+     *
+     * <code>.event_tickets.TicketId ticket = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
+      return getTicket();
+    }
+
+    public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 3;
+    private com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails redemptionDetails_;
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     * @return Whether the redemptionDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasRedemptionDetails() {
+      return redemptionDetails_ != null;
+    }
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     * @return The redemptionDetails.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails getRedemptionDetails() {
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
+    }
+    /**
+     * <pre>
+     * Additional details to set for this redemption.
+     * </pre>
+     *
+     * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
+      return getRedemptionDetails();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (ticket_ != null) {
+        output.writeMessage(1, getTicket());
+      }
+      if (redemptionDetails_ != null) {
+        output.writeMessage(3, getRedemptionDetails());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (ticket_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTicket());
+      }
+      if (redemptionDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRedemptionDetails());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest other = (com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest) obj;
+
+      if (hasTicket() != other.hasTicket()) return false;
+      if (hasTicket()) {
+        if (!getTicket()
+            .equals(other.getTicket())) return false;
+      }
+      if (hasRedemptionDetails() != other.hasRedemptionDetails()) return false;
+      if (hasRedemptionDetails()) {
+        if (!getRedemptionDetails()
+            .equals(other.getRedemptionDetails())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTicket()) {
+        hash = (37 * hash) + TICKET_FIELD_NUMBER;
+        hash = (53 * hash) + getTicket().hashCode();
+      }
+      if (hasRedemptionDetails()) {
+        hash = (37 * hash) + REDEMPTIONDETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getRedemptionDetails().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code event_tickets.RedeemTicketRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:event_tickets.RedeemTicketRequest)
+        com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.class, com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (ticketBuilder_ == null) {
+          ticket_ = null;
+        } else {
+          ticket_ = null;
+          ticketBuilder_ = null;
+        }
+        if (redemptionDetailsBuilder_ == null) {
+          redemptionDetails_ = null;
+        } else {
+          redemptionDetails_ = null;
+          redemptionDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest build() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest buildPartial() {
+        com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest(this);
+        if (ticketBuilder_ == null) {
+          result.ticket_ = ticket_;
+        } else {
+          result.ticket_ = ticketBuilder_.build();
+        }
+        if (redemptionDetailsBuilder_ == null) {
+          result.redemptionDetails_ = redemptionDetails_;
+        } else {
+          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest) {
+          return mergeFrom((com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest other) {
+        if (other == com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest.getDefaultInstance()) return this;
+        if (other.hasTicket()) {
+          mergeTicket(other.getTicket());
+        }
+        if (other.hasRedemptionDetails()) {
+          mergeRedemptionDetails(other.getRedemptionDetails());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.passkit.grpc.EventTickets.TicketOuterClass.TicketId ticket_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder> ticketBuilder_;
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       * @return Whether the ticket field is set.
+       */
+      public boolean hasTicket() {
+        return ticketBuilder_ != null || ticket_ != null;
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       * @return The ticket.
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId getTicket() {
+        if (ticketBuilder_ == null) {
+          return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
+        } else {
+          return ticketBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public Builder setTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
+        if (ticketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ticket_ = value;
+          onChanged();
+        } else {
+          ticketBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public Builder setTicket(
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder builderForValue) {
+        if (ticketBuilder_ == null) {
+          ticket_ = builderForValue.build();
+          onChanged();
+        } else {
+          ticketBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
+        if (ticketBuilder_ == null) {
+          if (ticket_ != null) {
+            ticket_ =
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.newBuilder(ticket_).mergeFrom(value).buildPartial();
+          } else {
+            ticket_ = value;
+          }
+          onChanged();
+        } else {
+          ticketBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public Builder clearTicket() {
+        if (ticketBuilder_ == null) {
+          ticket_ = null;
+          onChanged();
+        } else {
+          ticket_ = null;
+          ticketBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder getTicketBuilder() {
+        
+        onChanged();
+        return getTicketFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
+        if (ticketBuilder_ != null) {
+          return ticketBuilder_.getMessageOrBuilder();
+        } else {
+          return ticket_ == null ?
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
+        }
+      }
+      /**
+       * <pre>
+       * Ticket id for the ticket to redeem.
+       * </pre>
+       *
+       * <code>.event_tickets.TicketId ticket = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder> 
+          getTicketFieldBuilder() {
+        if (ticketBuilder_ == null) {
+          ticketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId, com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder>(
+                  getTicket(),
+                  getParentForChildren(),
+                  isClean());
+          ticket_ = null;
+        }
+        return ticketBuilder_;
+      }
+
+      private com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails redemptionDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder> redemptionDetailsBuilder_;
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       * @return Whether the redemptionDetails field is set.
+       */
+      public boolean hasRedemptionDetails() {
+        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       * @return The redemptionDetails.
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails getRedemptionDetails() {
+        if (redemptionDetailsBuilder_ == null) {
+          return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
+        } else {
+          return redemptionDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public Builder setRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
+        if (redemptionDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          redemptionDetails_ = value;
+          onChanged();
+        } else {
+          redemptionDetailsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public Builder setRedemptionDetails(
+          com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
+        if (redemptionDetailsBuilder_ == null) {
+          redemptionDetails_ = builderForValue.build();
+          onChanged();
+        } else {
+          redemptionDetailsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
+        if (redemptionDetailsBuilder_ == null) {
+          if (redemptionDetails_ != null) {
+            redemptionDetails_ =
+              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          } else {
+            redemptionDetails_ = value;
+          }
+          onChanged();
+        } else {
+          redemptionDetailsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public Builder clearRedemptionDetails() {
+        if (redemptionDetailsBuilder_ == null) {
+          redemptionDetails_ = null;
+          onChanged();
+        } else {
+          redemptionDetails_ = null;
+          redemptionDetailsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
+        
+        onChanged();
+        return getRedemptionDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
+        if (redemptionDetailsBuilder_ != null) {
+          return redemptionDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return redemptionDetails_ == null ?
+              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
+        }
+      }
+      /**
+       * <pre>
+       * Additional details to set for this redemption.
+       * </pre>
+       *
+       * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder> 
+          getRedemptionDetailsFieldBuilder() {
+        if (redemptionDetailsBuilder_ == null) {
+          redemptionDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder>(
+                  getRedemptionDetails(),
+                  getParentForChildren(),
+                  isClean());
+          redemptionDetails_ = null;
+        }
+        return redemptionDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:event_tickets.RedeemTicketRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:event_tickets.RedeemTicketRequest)
+    private static final com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest();
+    }
+
+    public static com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RedeemTicketRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RedeemTicketRequest>() {
+      @java.lang.Override
+      public RedeemTicketRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RedeemTicketRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RedeemTicketRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RedeemTicketRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -36563,6 +39330,16 @@ public final class TicketOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_event_tickets_TicketId_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_event_tickets_TicketId_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_event_tickets_TicketNumber_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_event_tickets_TicketNumber_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_event_tickets_Ticket_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36638,6 +39415,11 @@ public final class TicketOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_event_tickets_ValidateTicketResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_event_tickets_RedeemTicketRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_event_tickets_RedeemTicketRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_event_tickets_TicketLimitedFields_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36691,156 +39473,163 @@ public final class TicketOuterClass {
       "ickets/event.proto\032\"io/event_tickets/tic" +
       "ket_type.proto\032!io/event_tickets/product" +
       "ion.proto\032.protoc-gen-openapiv2/options/" +
-      "annotations.proto\"\223\010\n\006Ticket\022\021\n\002id\030\001 \001(\t" +
-      "B\005\222A\002@\001\022\024\n\014ticketNumber\030\002 \001(\t\022#\n\005event\030\003" +
-      " \001(\0132\024.event_tickets.Event\022-\n\nticketType" +
-      "\030\004 \001(\0132\031.event_tickets.TicketType\022\023\n\013ord" +
-      "erNumber\030\005 \001(\t\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017ba" +
-      "rcodeContents\030\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023." +
-      "event_tickets.Seat\022+\n\tfaceValue\030\t \001(\0132\030." +
-      "event_tickets.FaceValue\022\032\n\006person\030\n \001(\0132" +
-      "\n.io.Person\0225\n\010metaData\030\013 \003(\0132#.event_ti" +
-      "ckets.Ticket.MetaDataEntry\022\032\n\006optOut\030\014 \001" +
-      "(\0162\n.io.Toggle\0222\n\006status\030\r \001(\0162\033.event_t" +
-      "ickets.TicketStatusB\005\222A\002@\001\022.\n\nexpiryDate" +
+      "annotations.proto\"Y\n\010TicketId\022\022\n\010ticketI" +
+      "d\030\001 \001(\tH\000\0223\n\014ticketNumber\030\002 \001(\0132\033.event_" +
+      "tickets.TicketNumberH\000B\004\n\002id\":\n\014TicketNu" +
+      "mber\022\024\n\014productionId\030\001 \001(\t\022\024\n\014ticketNumb" +
+      "er\030\002 \001(\t\"\223\010\n\006Ticket\022\021\n\002id\030\001 \001(\tB\005\222A\002@\001\022\024" +
+      "\n\014ticketNumber\030\002 \001(\t\022#\n\005event\030\003 \001(\0132\024.ev" +
+      "ent_tickets.Event\022-\n\nticketType\030\004 \001(\0132\031." +
+      "event_tickets.TicketType\022\023\n\013orderNumber\030" +
+      "\005 \001(\t\022\022\n\ngroupingId\030\006 \001(\t\022\027\n\017barcodeCont" +
+      "ents\030\007 \001(\t\022%\n\010seatInfo\030\010 \001(\0132\023.event_tic" +
+      "kets.Seat\022+\n\tfaceValue\030\t \001(\0132\030.event_tic" +
+      "kets.FaceValue\022\032\n\006person\030\n \001(\0132\n.io.Pers" +
+      "on\0225\n\010metaData\030\013 \003(\0132#.event_tickets.Tic" +
+      "ket.MetaDataEntry\022\032\n\006optOut\030\014 \001(\0162\n.io.T" +
+      "oggle\0222\n\006status\030\r \001(\0162\033.event_tickets.Ti" +
+      "cketStatusB\005\222A\002@\001\022.\n\nexpiryDate\030\016 \001(\0132\032." +
+      "google.protobuf.Timestamp\022;\n\021redemptionD" +
+      "etails\030\017 \001(\0132 .event_tickets.RedemptionD" +
+      "etails\0227\n\017validateDetails\030\020 \003(\0132\036.event_" +
+      "tickets.ValidateDetails\022(\n\rpassOverrides" +
+      "\030\021 \001(\0132\021.io.PassOverrides\022\"\n\014passMetaDat" +
+      "a\030\022 \001(\0132\014.io.Metadata\0222\n\007created\030\023 \001(\0132\032" +
+      ".google.protobuf.TimestampB\005\222A\002@\001\0222\n\007upd" +
+      "ated\030\024 \001(\0132\032.google.protobuf.TimestampB\005" +
+      "\222A\002@\001\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001:\305\001\222A\301\001\n\276\001*\006Ticket2\233\001Ticke" +
+      "t is a unique ticket instance and holds " +
+      "details about the event dates & times, v" +
+      "enue, ticket holder and other relevant d" +
+      "etails pertaining to a ticket.\322\001\005event\322\001" +
+      "\rticketTypeUid\"\235\001\n\017ValidateDetails\0220\n\014va" +
+      "lidateDate\030\001 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003alt\030\004 " +
+      "\001(\005\022\026\n\016validateSource\030\006 \001(\t\022\031\n\021validateR" +
+      "eference\030\007 \001(\t\"\245\001\n\021RedemptionDetails\0222\n\016" +
+      "redemptionDate\030\001 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022\013\n\003al" +
+      "t\030\004 \001(\005\022\030\n\020redemptionSource\030\006 \001(\t\022\033\n\023red" +
+      "emptionReference\030\007 \001(\t\"-\n\tFaceValue\022\016\n\006a" +
+      "mount\030\001 \001(\002\022\020\n\010currency\030\002 \001(\t\"\362\001\n\004Seat\022\014" +
+      "\n\004seat\030\001 \001(\t\022*\n\rlocalizedSeat\030\002 \001(\0132\023.io" +
+      ".LocalizedString\022\013\n\003row\030\003 \001(\t\022)\n\014localiz" +
+      "edRow\030\004 \001(\0132\023.io.LocalizedString\022\017\n\007sect" +
+      "ion\030\005 \001(\t\022-\n\020localizedSection\030\006 \001(\0132\023.io" +
+      ".LocalizedString\022\014\n\004gate\030\007 \001(\t\022*\n\rlocali" +
+      "zedGate\030\010 \001(\0132\023.io.LocalizedString\"\372\002\n\021T" +
+      "icketListRequest\022\026\n\014productionId\030\001 \001(\tH\000" +
+      "\022\027\n\rproductionUid\030\002 \001(\tH\000\022\021\n\007eventId\030\003 \001" +
+      "(\tH\001\022O\n\032eventFilterByVenueAndStart\030\004 \001(\013" +
+      "2).event_tickets.EventFilterByVenueAndSt" +
+      "artH\001\022\026\n\014ticketTypeId\030\005 \001(\tH\002\022\027\n\rticketT" +
+      "ypeUid\030\006 \001(\tH\002\022\034\n\007filters\030\007 \001(\0132\013.io.Fil" +
+      "ters:\\\222AY\nW*\014List Request2(Used to filte" +
+      "r tickets for a production.\322\001\014production" +
+      "Id\322\001\rproductionUidB\014\n\nproductionB\007\n\005even" +
+      "tB\014\n\nticketType\"\341\001\n\032EventFilterByVenueAn" +
+      "dStart\022\017\n\007venueId\030\001 \001(\t\022\020\n\010venueUid\030\002 \001(" +
+      "\t\0226\n\022scheduledStartDate\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp:h\222Ae\nc*\022Event Filter B" +
+      "y Id2,Used to filter tickets for a speci" +
+      "fic event.\322\001\007venueId\322\001\010venueUid\322\001\tstartD" +
+      "ate\"X\n\023TicketNumberRequest\022\024\n\014production" +
+      "Id\030\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t\022\024\n\014ticke" +
+      "tNumber\030\003 \001(\t\"V\n\022OrderNumberRequest\022\024\n\014p" +
+      "roductionId\030\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t" +
+      "\022\023\n\013orderNumber\030\003 \001(\t\"\224\001\n\023RedeemByOrderN" +
+      "umber\022\024\n\014productionId\030\001 \001(\t\022\025\n\rproductio" +
+      "nUid\030\002 \001(\t\022\023\n\013orderNumber\030\003 \001(\t\022;\n\021redem" +
+      "ptionDetails\030\004 \001(\0132 .event_tickets.Redem" +
+      "ptionDetails\">\n\007Tickets\0223\n\007tickets\030\001 \003(\013" +
+      "2\".event_tickets.TicketLimitedFields\"4\n\021" +
+      "TicketPassBundles\022\037\n\007tickets\030\001 \003(\0132\016.io." +
+      "PassBundle\"\231\001\n\025ValidateTicketRequest\022\036\n\026" +
+      "maxNumberOfValidations\030\001 \001(\r\022\'\n\006ticket\030\002" +
+      " \001(\0132\027.event_tickets.TicketId\0227\n\017validat" +
+      "eDetails\030\003 \001(\0132\036.event_tickets.ValidateD" +
+      "etails\"N\n\026ValidateTicketResponse\022\r\n\005vali" +
+      "d\030\001 \001(\010\022%\n\006ticket\030\002 \001(\0132\025.event_tickets." +
+      "Ticket\"{\n\023RedeemTicketRequest\022\'\n\006ticket\030" +
+      "\001 \001(\0132\027.event_tickets.TicketId\022;\n\021redemp" +
+      "tionDetails\030\003 \001(\0132 .event_tickets.Redemp" +
+      "tionDetails\"\261\t\n\023TicketLimitedFields\022\n\n\002i" +
+      "d\030\001 \001(\t\022\024\n\014ticketNumber\030\002 \001(\t\022B\n\nproduct" +
+      "ion\030\003 \001(\0132..event_tickets.ProductionLimi" +
+      "tedFieldsResponse\0228\n\005event\030\004 \001(\0132).event" +
+      "_tickets.EventLimitedFieldsResponse\0228\n\005v" +
+      "enue\030\005 \001(\0132).event_tickets.VenueLimitedF" +
+      "ieldsResponse\022:\n\nticketType\030\006 \001(\0132&.even" +
+      "t_tickets.TicketTypeLimitedFields\022\023\n\013ord" +
+      "erNumber\030\007 \001(\t\022\022\n\ngroupingId\030\010 \001(\t\022\027\n\017ba" +
+      "rcodeContents\030\t \001(\t\022%\n\010seatInfo\030\n \001(\0132\023." +
+      "event_tickets.Seat\022+\n\tfaceValue\030\013 \001(\0132\030." +
+      "event_tickets.FaceValue\022\032\n\006person\030\014 \001(\0132" +
+      "\n.io.Person\022B\n\010metaData\030\r \003(\01320.event_ti" +
+      "ckets.TicketLimitedFields.MetaDataEntry\022" +
+      "\016\n\006optOut\030\016 \001(\010\022+\n\006status\030\017 \001(\0162\033.event_" +
+      "tickets.TicketStatus\022.\n\nexpiryDate\030\020 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022;\n\021redempti" +
+      "onDetails\030\021 \001(\0132 .event_tickets.Redempti" +
+      "onDetails\0227\n\017validateDetails\030\022 \003(\0132\036.eve" +
+      "nt_tickets.ValidateDetails\022(\n\rpassOverri" +
+      "des\030\023 \001(\0132\021.io.PassOverrides\022\"\n\014passMeta" +
+      "Data\030\024 \001(\0132\014.io.Metadata\022+\n\007created\030\025 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022+\n\007updated" +
+      "\030\026 \001(\0132\032.google.protobuf.Timestamp\032/\n\rMe" +
+      "taDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001:\321\001\222A\315\001\n\312\001*\022Ticket (Light ver)2\233\001Tick" +
+      "et is a unique ticket instance and holds" +
+      " details about the event dates & times, " +
+      "venue, ticket holder and other relevant " +
+      "details pertaining to a ticket.\322\001\005event\322" +
+      "\001\rticketTypeUid\"\326\007\n\022IssueTicketRequest\022\021" +
+      "\n\007eventId\030\001 \001(\tH\000\0229\n\005event\030\002 \001(\0132(.event" +
+      "_tickets.EventLimitedFieldsRequestH\000\022\024\n\014" +
+      "ticketTypeId\030\003 \001(\t\022\024\n\014ticketNumber\030\004 \001(\t" +
+      "\022\023\n\013orderNumber\030\005 \001(\t\022\022\n\ngroupingId\030\006 \001(" +
+      "\t\022\027\n\017barcodeContents\030\007 \001(\t\022%\n\010seatInfo\030\010" +
+      " \001(\0132\023.event_tickets.Seat\022+\n\tfaceValue\030\t" +
+      " \001(\0132\030.event_tickets.FaceValue\022\032\n\006person" +
+      "\030\n \001(\0132\n.io.Person\022A\n\010metaData\030\013 \003(\0132/.e" +
+      "vent_tickets.IssueTicketRequest.MetaData" +
+      "Entry\022\016\n\006optOut\030\014 \001(\010\022+\n\006status\030\r \001(\0162\033." +
+      "event_tickets.TicketStatus\022.\n\nexpiryDate" +
       "\030\016 \001(\0132\032.google.protobuf.Timestamp\022;\n\021re" +
       "demptionDetails\030\017 \001(\0132 .event_tickets.Re" +
       "demptionDetails\0227\n\017validateDetails\030\020 \003(\013" +
       "2\036.event_tickets.ValidateDetails\022(\n\rpass" +
       "Overrides\030\021 \001(\0132\021.io.PassOverrides\022\"\n\014pa" +
-      "ssMetaData\030\022 \001(\0132\014.io.Metadata\0222\n\007create" +
-      "d\030\023 \001(\0132\032.google.protobuf.TimestampB\005\222A\002" +
-      "@\001\0222\n\007updated\030\024 \001(\0132\032.google.protobuf.Ti" +
-      "mestampB\005\222A\002@\001\032/\n\rMetaDataEntry\022\013\n\003key\030\001" +
-      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001:\305\001\222A\301\001\n\276\001*\006Ticke" +
-      "t2\233\001Ticket is a unique ticket instance a" +
-      "nd holds details about the event dates &" +
-      " times, venue, ticket holder and other r" +
-      "elevant details pertaining to a ticket.\322" +
-      "\001\005event\322\001\rticketTypeUid\"\235\001\n\017ValidateDeta" +
-      "ils\0220\n\014validateDate\030\001 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 \001(\001\022" +
-      "\013\n\003alt\030\004 \001(\005\022\026\n\016validateSource\030\006 \001(\t\022\031\n\021" +
-      "validateReference\030\007 \001(\t\"\245\001\n\021RedemptionDe" +
-      "tails\0222\n\016redemptionDate\030\001 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022\013\n\003lat\030\002 \001(\001\022\013\n\003lon\030\003 " +
-      "\001(\001\022\013\n\003alt\030\004 \001(\005\022\030\n\020redemptionSource\030\006 \001" +
-      "(\t\022\033\n\023redemptionReference\030\007 \001(\t\"-\n\tFaceV" +
-      "alue\022\016\n\006amount\030\001 \001(\002\022\020\n\010currency\030\002 \001(\t\"\362" +
-      "\001\n\004Seat\022\014\n\004seat\030\001 \001(\t\022*\n\rlocalizedSeat\030\002" +
-      " \001(\0132\023.io.LocalizedString\022\013\n\003row\030\003 \001(\t\022)" +
-      "\n\014localizedRow\030\004 \001(\0132\023.io.LocalizedStrin" +
-      "g\022\017\n\007section\030\005 \001(\t\022-\n\020localizedSection\030\006" +
-      " \001(\0132\023.io.LocalizedString\022\014\n\004gate\030\007 \001(\t\022" +
-      "*\n\rlocalizedGate\030\010 \001(\0132\023.io.LocalizedStr" +
-      "ing\"\372\002\n\021TicketListRequest\022\026\n\014productionI" +
-      "d\030\001 \001(\tH\000\022\027\n\rproductionUid\030\002 \001(\tH\000\022\021\n\007ev" +
-      "entId\030\003 \001(\tH\001\022O\n\032eventFilterByVenueAndSt" +
-      "art\030\004 \001(\0132).event_tickets.EventFilterByV" +
-      "enueAndStartH\001\022\026\n\014ticketTypeId\030\005 \001(\tH\002\022\027" +
-      "\n\rticketTypeUid\030\006 \001(\tH\002\022\034\n\007filters\030\007 \001(\013" +
-      "2\013.io.Filters:\\\222AY\nW*\014List Request2(Used" +
-      " to filter tickets for a production.\322\001\014p" +
-      "roductionId\322\001\rproductionUidB\014\n\nproductio" +
-      "nB\007\n\005eventB\014\n\nticketType\"\341\001\n\032EventFilter" +
-      "ByVenueAndStart\022\017\n\007venueId\030\001 \001(\t\022\020\n\010venu" +
-      "eUid\030\002 \001(\t\0226\n\022scheduledStartDate\030\003 \001(\0132\032" +
-      ".google.protobuf.Timestamp:h\222Ae\nc*\022Event" +
-      " Filter By Id2,Used to filter tickets fo" +
-      "r a specific event.\322\001\007venueId\322\001\010venueUid" +
-      "\322\001\tstartDate\"X\n\023TicketNumberRequest\022\024\n\014p" +
-      "roductionId\030\001 \001(\t\022\025\n\rproductionUid\030\002 \001(\t" +
-      "\022\024\n\014ticketNumber\030\003 \001(\t\"V\n\022OrderNumberReq" +
-      "uest\022\024\n\014productionId\030\001 \001(\t\022\025\n\rproduction" +
-      "Uid\030\002 \001(\t\022\023\n\013orderNumber\030\003 \001(\t\"\224\001\n\023Redee" +
-      "mByOrderNumber\022\024\n\014productionId\030\001 \001(\t\022\025\n\r" +
-      "productionUid\030\002 \001(\t\022\023\n\013orderNumber\030\003 \001(\t" +
-      "\022;\n\021redemptionDetails\030\004 \001(\0132 .event_tick" +
-      "ets.RedemptionDetails\">\n\007Tickets\0223\n\007tick" +
-      "ets\030\001 \003(\0132\".event_tickets.TicketLimitedF" +
-      "ields\"4\n\021TicketPassBundles\022\037\n\007tickets\030\001 " +
-      "\003(\0132\016.io.PassBundle\"\227\001\n\025ValidateTicketRe" +
-      "quest\022\036\n\026maxNumberOfValidations\030\001 \001(\r\022%\n" +
-      "\006ticket\030\002 \001(\0132\025.event_tickets.Ticket\0227\n\017" +
-      "validateDetails\030\003 \001(\0132\036.event_tickets.Va" +
-      "lidateDetails\"N\n\026ValidateTicketResponse\022" +
-      "\r\n\005valid\030\001 \001(\010\022%\n\006ticket\030\002 \001(\0132\025.event_t" +
-      "ickets.Ticket\"\261\t\n\023TicketLimitedFields\022\n\n" +
-      "\002id\030\001 \001(\t\022\024\n\014ticketNumber\030\002 \001(\t\022B\n\nprodu" +
-      "ction\030\003 \001(\0132..event_tickets.ProductionLi" +
-      "mitedFieldsResponse\0228\n\005event\030\004 \001(\0132).eve" +
-      "nt_tickets.EventLimitedFieldsResponse\0228\n" +
-      "\005venue\030\005 \001(\0132).event_tickets.VenueLimite" +
-      "dFieldsResponse\022:\n\nticketType\030\006 \001(\0132&.ev" +
-      "ent_tickets.TicketTypeLimitedFields\022\023\n\013o" +
-      "rderNumber\030\007 \001(\t\022\022\n\ngroupingId\030\010 \001(\t\022\027\n\017" +
-      "barcodeContents\030\t \001(\t\022%\n\010seatInfo\030\n \001(\0132" +
-      "\023.event_tickets.Seat\022+\n\tfaceValue\030\013 \001(\0132" +
-      "\030.event_tickets.FaceValue\022\032\n\006person\030\014 \001(" +
-      "\0132\n.io.Person\022B\n\010metaData\030\r \003(\01320.event_" +
-      "tickets.TicketLimitedFields.MetaDataEntr" +
-      "y\022\016\n\006optOut\030\016 \001(\010\022+\n\006status\030\017 \001(\0162\033.even" +
-      "t_tickets.TicketStatus\022.\n\nexpiryDate\030\020 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022;\n\021redemp" +
-      "tionDetails\030\021 \001(\0132 .event_tickets.Redemp" +
-      "tionDetails\0227\n\017validateDetails\030\022 \003(\0132\036.e" +
-      "vent_tickets.ValidateDetails\022(\n\rpassOver" +
-      "rides\030\023 \001(\0132\021.io.PassOverrides\022\"\n\014passMe" +
-      "taData\030\024 \001(\0132\014.io.Metadata\022+\n\007created\030\025 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022+\n\007updat" +
-      "ed\030\026 \001(\0132\032.google.protobuf.Timestamp\032/\n\r" +
-      "MetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001:\321\001\222A\315\001\n\312\001*\022Ticket (Light ver)2\233\001Ti" +
-      "cket is a unique ticket instance and hol" +
-      "ds details about the event dates & times" +
-      ", venue, ticket holder and other relevan" +
-      "t details pertaining to a ticket.\322\001\005even" +
-      "t\322\001\rticketTypeUid\"\326\007\n\022IssueTicketRequest" +
-      "\022\021\n\007eventId\030\001 \001(\tH\000\0229\n\005event\030\002 \001(\0132(.eve" +
-      "nt_tickets.EventLimitedFieldsRequestH\000\022\024" +
-      "\n\014ticketTypeId\030\003 \001(\t\022\024\n\014ticketNumber\030\004 \001" +
-      "(\t\022\023\n\013orderNumber\030\005 \001(\t\022\022\n\ngroupingId\030\006 " +
-      "\001(\t\022\027\n\017barcodeContents\030\007 \001(\t\022%\n\010seatInfo" +
-      "\030\010 \001(\0132\023.event_tickets.Seat\022+\n\tfaceValue" +
-      "\030\t \001(\0132\030.event_tickets.FaceValue\022\032\n\006pers" +
-      "on\030\n \001(\0132\n.io.Person\022A\n\010metaData\030\013 \003(\0132/" +
-      ".event_tickets.IssueTicketRequest.MetaDa" +
-      "taEntry\022\016\n\006optOut\030\014 \001(\010\022+\n\006status\030\r \001(\0162" +
-      "\033.event_tickets.TicketStatus\022.\n\nexpiryDa" +
-      "te\030\016 \001(\0132\032.google.protobuf.Timestamp\022;\n\021" +
-      "redemptionDetails\030\017 \001(\0132 .event_tickets." +
-      "RedemptionDetails\0227\n\017validateDetails\030\020 \003" +
-      "(\0132\036.event_tickets.ValidateDetails\022(\n\rpa" +
-      "ssOverrides\030\021 \001(\0132\021.io.PassOverrides\022\"\n\014" +
-      "passMetaData\030\022 \001(\0132\014.io.Metadata\022+\n\007crea" +
-      "ted\030\023 \001(\0132\032.google.protobuf.Timestamp\022+\n" +
-      "\007updated\030\024 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\t:\0028\001:\207\001\222A\203\001\n\200\001*\024Issue Ticket Requ" +
-      "est2GIssue ticket. Event is auto created" +
-      " if it does not exist on the record.\322\001\007e" +
-      "ventId\322\001\005event\322\001\014ticketTypeIdB\013\n\teventIn" +
-      "fo\"\206\002\n\026IssueTicketResponseIds\022\020\n\010ticketI" +
-      "d\030\001 \001(\t\022\024\n\014productionId\030\002 \001(\t\022\017\n\007venueId" +
-      "\030\003 \001(\t\022\024\n\014ticketTypeId\030\004 \001(\t\022\017\n\007eventId\030" +
-      "\005 \001(\t:\213\001\222A\207\001\n\204\001*\031Issue Ticket Response I" +
-      "ds2gList of PassKit generated ids return" +
-      "ed after issuing a ticket with productio" +
-      "n, venue, ticket type UIDs.\"\333\001\n\026EventTic" +
-      "ketPassRequest\022\032\n\010ticketId\030\001 \001(\0132\006.io.Id" +
-      "H\000\022:\n\014ticketNumber\030\002 \001(\0132\".event_tickets" +
-      ".TicketNumberRequestH\000\0228\n\013orderNumber\030\003 " +
-      "\001(\0132!.event_tickets.OrderNumberRequestH\000" +
-      "\022$\n\006format\030\004 \003(\0162\024.io.PassBundleFormatB\t" +
-      "\n\007request\"\236\001\n\021EventTicketPerson\022\032\n\010ticke" +
-      "tId\030\001 \001(\0132\006.io.IdH\000\022:\n\014ticketNumber\030\002 \001(" +
-      "\0132\".event_tickets.TicketNumberRequestH\000\022" +
-      "\032\n\006person\030\005 \001(\0132\n.io.PersonB\t\n\007requestJ\004" +
-      "\010\003\020\004J\004\010\004\020\005*?\n\014TicketStatus\022\017\n\013STATUS_NON" +
-      "E\020\000\022\n\n\006ISSUED\020\001\022\014\n\010REDEEMED\020\002\"\004\010\003\020\003Bo\n\035c" +
-      "om.passkit.grpc.EventTicketsZ2stash.pass" +
-      "kit.com/io/model/sdk/go/io/event_tickets" +
-      "\252\002\031PassKit.Grpc.EventTicketsb\006proto3"
+      "ssMetaData\030\022 \001(\0132\014.io.Metadata\022+\n\007create" +
+      "d\030\023 \001(\0132\032.google.protobuf.Timestamp\022+\n\007u" +
+      "pdated\030\024 \001(\0132\032.google.protobuf.Timestamp" +
+      "\032/\n\rMetaDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001:\207\001\222A\203\001\n\200\001*\024Issue Ticket Reques" +
+      "t2GIssue ticket. Event is auto created i" +
+      "f it does not exist on the record.\322\001\007eve" +
+      "ntId\322\001\005event\322\001\014ticketTypeIdB\013\n\teventInfo" +
+      "\"\206\002\n\026IssueTicketResponseIds\022\020\n\010ticketId\030" +
+      "\001 \001(\t\022\024\n\014productionId\030\002 \001(\t\022\017\n\007venueId\030\003" +
+      " \001(\t\022\024\n\014ticketTypeId\030\004 \001(\t\022\017\n\007eventId\030\005 " +
+      "\001(\t:\213\001\222A\207\001\n\204\001*\031Issue Ticket Response Ids" +
+      "2gList of PassKit generated ids returned" +
+      " after issuing a ticket with production," +
+      " venue, ticket type UIDs.\"\333\001\n\026EventTicke" +
+      "tPassRequest\022\032\n\010ticketId\030\001 \001(\0132\006.io.IdH\000" +
+      "\022:\n\014ticketNumber\030\002 \001(\0132\".event_tickets.T" +
+      "icketNumberRequestH\000\0228\n\013orderNumber\030\003 \001(" +
+      "\0132!.event_tickets.OrderNumberRequestH\000\022$" +
+      "\n\006format\030\004 \003(\0162\024.io.PassBundleFormatB\t\n\007" +
+      "request\"\236\001\n\021EventTicketPerson\022\032\n\010ticketI" +
+      "d\030\001 \001(\0132\006.io.IdH\000\022:\n\014ticketNumber\030\002 \001(\0132" +
+      "\".event_tickets.TicketNumberRequestH\000\022\032\n" +
+      "\006person\030\005 \001(\0132\n.io.PersonB\t\n\007requestJ\004\010\003" +
+      "\020\004J\004\010\004\020\005*?\n\014TicketStatus\022\017\n\013STATUS_NONE\020" +
+      "\000\022\n\n\006ISSUED\020\001\022\014\n\010REDEEMED\020\002\"\004\010\003\020\003Bo\n\035com" +
+      ".passkit.grpc.EventTicketsZ2stash.passki" +
+      "t.com/io/model/sdk/go/io/event_tickets\252\002" +
+      "\031PassKit.Grpc.EventTicketsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36858,8 +39647,20 @@ public final class TicketOuterClass {
           com.passkit.grpc.EventTickets.ProductionOuterClass.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
-    internal_static_event_tickets_Ticket_descriptor =
+    internal_static_event_tickets_TicketId_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_event_tickets_TicketId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_event_tickets_TicketId_descriptor,
+        new java.lang.String[] { "TicketId", "TicketNumber", "Id", });
+    internal_static_event_tickets_TicketNumber_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_event_tickets_TicketNumber_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_event_tickets_TicketNumber_descriptor,
+        new java.lang.String[] { "ProductionId", "TicketNumber", });
+    internal_static_event_tickets_Ticket_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_event_tickets_Ticket_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_Ticket_descriptor,
@@ -36871,85 +39672,91 @@ public final class TicketOuterClass {
         internal_static_event_tickets_Ticket_MetaDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_event_tickets_ValidateDetails_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_event_tickets_ValidateDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_ValidateDetails_descriptor,
         new java.lang.String[] { "ValidateDate", "Lat", "Lon", "Alt", "ValidateSource", "ValidateReference", });
     internal_static_event_tickets_RedemptionDetails_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_event_tickets_RedemptionDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_RedemptionDetails_descriptor,
         new java.lang.String[] { "RedemptionDate", "Lat", "Lon", "Alt", "RedemptionSource", "RedemptionReference", });
     internal_static_event_tickets_FaceValue_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_event_tickets_FaceValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_FaceValue_descriptor,
         new java.lang.String[] { "Amount", "Currency", });
     internal_static_event_tickets_Seat_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_event_tickets_Seat_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_Seat_descriptor,
         new java.lang.String[] { "Seat", "LocalizedSeat", "Row", "LocalizedRow", "Section", "LocalizedSection", "Gate", "LocalizedGate", });
     internal_static_event_tickets_TicketListRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_event_tickets_TicketListRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_TicketListRequest_descriptor,
         new java.lang.String[] { "ProductionId", "ProductionUid", "EventId", "EventFilterByVenueAndStart", "TicketTypeId", "TicketTypeUid", "Filters", "Production", "Event", "TicketType", });
     internal_static_event_tickets_EventFilterByVenueAndStart_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_event_tickets_EventFilterByVenueAndStart_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_EventFilterByVenueAndStart_descriptor,
         new java.lang.String[] { "VenueId", "VenueUid", "ScheduledStartDate", });
     internal_static_event_tickets_TicketNumberRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_event_tickets_TicketNumberRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_TicketNumberRequest_descriptor,
         new java.lang.String[] { "ProductionId", "ProductionUid", "TicketNumber", });
     internal_static_event_tickets_OrderNumberRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_event_tickets_OrderNumberRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_OrderNumberRequest_descriptor,
         new java.lang.String[] { "ProductionId", "ProductionUid", "OrderNumber", });
     internal_static_event_tickets_RedeemByOrderNumber_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_event_tickets_RedeemByOrderNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_RedeemByOrderNumber_descriptor,
         new java.lang.String[] { "ProductionId", "ProductionUid", "OrderNumber", "RedemptionDetails", });
     internal_static_event_tickets_Tickets_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_event_tickets_Tickets_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_Tickets_descriptor,
         new java.lang.String[] { "Tickets", });
     internal_static_event_tickets_TicketPassBundles_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_event_tickets_TicketPassBundles_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_TicketPassBundles_descriptor,
         new java.lang.String[] { "Tickets", });
     internal_static_event_tickets_ValidateTicketRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_event_tickets_ValidateTicketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_ValidateTicketRequest_descriptor,
         new java.lang.String[] { "MaxNumberOfValidations", "Ticket", "ValidateDetails", });
     internal_static_event_tickets_ValidateTicketResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_event_tickets_ValidateTicketResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_ValidateTicketResponse_descriptor,
         new java.lang.String[] { "Valid", "Ticket", });
+    internal_static_event_tickets_RedeemTicketRequest_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_event_tickets_RedeemTicketRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_event_tickets_RedeemTicketRequest_descriptor,
+        new java.lang.String[] { "Ticket", "RedemptionDetails", });
     internal_static_event_tickets_TicketLimitedFields_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_event_tickets_TicketLimitedFields_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_TicketLimitedFields_descriptor,
@@ -36961,7 +39768,7 @@ public final class TicketOuterClass {
         internal_static_event_tickets_TicketLimitedFields_MetaDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_event_tickets_IssueTicketRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_event_tickets_IssueTicketRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_IssueTicketRequest_descriptor,
@@ -36973,19 +39780,19 @@ public final class TicketOuterClass {
         internal_static_event_tickets_IssueTicketRequest_MetaDataEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_event_tickets_IssueTicketResponseIds_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_event_tickets_IssueTicketResponseIds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_IssueTicketResponseIds_descriptor,
         new java.lang.String[] { "TicketId", "ProductionId", "VenueId", "TicketTypeId", "EventId", });
     internal_static_event_tickets_EventTicketPassRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_event_tickets_EventTicketPassRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_EventTicketPassRequest_descriptor,
         new java.lang.String[] { "TicketId", "TicketNumber", "OrderNumber", "Format", "Request", });
     internal_static_event_tickets_EventTicketPerson_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_event_tickets_EventTicketPerson_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_event_tickets_EventTicketPerson_descriptor,

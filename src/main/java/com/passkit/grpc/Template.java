@@ -12470,7 +12470,7 @@ public final class Template {
 
     /**
      * <pre>
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      * </pre>
      *
      * <code>string userInfo = 2;</code>
@@ -12479,7 +12479,7 @@ public final class Template {
     java.lang.String getUserInfo();
     /**
      * <pre>
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      * </pre>
      *
      * <code>string userInfo = 2;</code>
@@ -12490,7 +12490,7 @@ public final class Template {
 
     /**
      * <pre>
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      * </pre>
      *
      * <code>string appLaunchUrl = 3;</code>
@@ -12499,7 +12499,7 @@ public final class Template {
     java.lang.String getAppLaunchUrl();
     /**
      * <pre>
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      * </pre>
      *
      * <code>string appLaunchUrl = 3;</code>
@@ -12510,7 +12510,7 @@ public final class Template {
 
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -12519,7 +12519,7 @@ public final class Template {
     java.util.List<java.lang.Integer> getAssociatedStoreIdentifiersList();
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -12528,7 +12528,7 @@ public final class Template {
     int getAssociatedStoreIdentifiersCount();
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -12802,7 +12802,7 @@ public final class Template {
     private volatile java.lang.Object userInfo_;
     /**
      * <pre>
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      * </pre>
      *
      * <code>string userInfo = 2;</code>
@@ -12823,7 +12823,7 @@ public final class Template {
     }
     /**
      * <pre>
-     * Information that will not appear on the pass.
+     * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
      * </pre>
      *
      * <code>string userInfo = 2;</code>
@@ -12848,7 +12848,7 @@ public final class Template {
     private volatile java.lang.Object appLaunchUrl_;
     /**
      * <pre>
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      * </pre>
      *
      * <code>string appLaunchUrl = 3;</code>
@@ -12869,7 +12869,7 @@ public final class Template {
     }
     /**
      * <pre>
-     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+     * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
      * </pre>
      *
      * <code>string appLaunchUrl = 3;</code>
@@ -12894,7 +12894,7 @@ public final class Template {
     private com.google.protobuf.Internal.IntList associatedStoreIdentifiers_;
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -12907,7 +12907,7 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -12918,7 +12918,7 @@ public final class Template {
     }
     /**
      * <pre>
-     * A list of iTunes Store item identifiers which is used to generate a app install page.
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13600,7 +13600,7 @@ public final class Template {
       private java.lang.Object userInfo_ = "";
       /**
        * <pre>
-       * Information that will not appear on the pass.
+       * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
        * </pre>
        *
        * <code>string userInfo = 2;</code>
@@ -13620,7 +13620,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * Information that will not appear on the pass.
+       * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
        * </pre>
        *
        * <code>string userInfo = 2;</code>
@@ -13641,7 +13641,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * Information that will not appear on the pass.
+       * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
        * </pre>
        *
        * <code>string userInfo = 2;</code>
@@ -13660,7 +13660,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * Information that will not appear on the pass.
+       * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
        * </pre>
        *
        * <code>string userInfo = 2;</code>
@@ -13674,7 +13674,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * Information that will not appear on the pass.
+       * Custom information for companion apps. This data is not displayed to the user on the pass. This data needs to be a valid JSON object and is passed to the companion app when it launches from the pass. For example, a pass for a cafe could include information about the user’s favorite drink and sandwich in a machine-readable form for the companion app to read, making it easy to place an order for "the usual" from the app.
        * </pre>
        *
        * <code>string userInfo = 2;</code>
@@ -13696,7 +13696,7 @@ public final class Template {
       private java.lang.Object appLaunchUrl_ = "";
       /**
        * <pre>
-       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
        * </pre>
        *
        * <code>string appLaunchUrl = 3;</code>
@@ -13716,7 +13716,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
        * </pre>
        *
        * <code>string appLaunchUrl = 3;</code>
@@ -13737,7 +13737,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
        * </pre>
        *
        * <code>string appLaunchUrl = 3;</code>
@@ -13756,7 +13756,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
        * </pre>
        *
        * <code>string appLaunchUrl = 3;</code>
@@ -13770,7 +13770,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the assoStoreId). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
+       * This is used to specify a deep link into the app displayed on the back of the Apple Wallet pass (the app is chosen from the associatedStoreIdentifiers). If the app supports deep linking, you can use this url to go to a specific point within the app when the link is clicked.
        * </pre>
        *
        * <code>string appLaunchUrl = 3;</code>
@@ -13798,7 +13798,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13811,7 +13811,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13822,7 +13822,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13834,7 +13834,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13851,7 +13851,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13866,7 +13866,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>
@@ -13883,7 +13883,7 @@ public final class Template {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers which is used to generate a app install page.
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 4;</code>

@@ -20,7 +20,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -29,7 +29,7 @@ public final class PassOuterClass {
     boolean hasImageIds();
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -38,7 +38,7 @@ public final class PassOuterClass {
     com.passkit.grpc.Image.ImageIds getImageIds();
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -47,7 +47,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -56,7 +56,7 @@ public final class PassOuterClass {
         getLocationsList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -64,7 +64,7 @@ public final class PassOuterClass {
     com.passkit.grpc.Proximity.GPSLocation getLocations(int index);
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -72,7 +72,7 @@ public final class PassOuterClass {
     int getLocationsCount();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -81,7 +81,7 @@ public final class PassOuterClass {
         getLocationsOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -91,7 +91,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -100,7 +100,7 @@ public final class PassOuterClass {
         getBeaconsList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -108,7 +108,7 @@ public final class PassOuterClass {
     com.passkit.grpc.Proximity.Beacon getBeacons(int index);
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -116,7 +116,7 @@ public final class PassOuterClass {
     int getBeaconsCount();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -125,7 +125,7 @@ public final class PassOuterClass {
         getBeaconsOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -135,7 +135,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -144,7 +144,7 @@ public final class PassOuterClass {
         getLinksList();
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -152,7 +152,7 @@ public final class PassOuterClass {
     com.passkit.grpc.Links.Link getLinks(int index);
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -160,7 +160,7 @@ public final class PassOuterClass {
     int getLinksCount();
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -169,7 +169,7 @@ public final class PassOuterClass {
         getLinksOrBuilderList();
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -179,7 +179,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
@@ -188,7 +188,7 @@ public final class PassOuterClass {
     boolean hasColors();
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
@@ -197,16 +197,45 @@ public final class PassOuterClass {
     com.passkit.grpc.Template.Colors getColors();
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
      */
     com.passkit.grpc.Template.ColorsOrBuilder getColorsOrBuilder();
+
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @return A list containing the associatedStoreIdentifiers.
+     */
+    java.util.List<java.lang.Integer> getAssociatedStoreIdentifiersList();
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @return The count of associatedStoreIdentifiers.
+     */
+    int getAssociatedStoreIdentifiersCount();
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @param index The index of the element to return.
+     * @return The associatedStoreIdentifiers at the given index.
+     */
+    int getAssociatedStoreIdentifiers(int index);
   }
   /**
    * <pre>
-   * PassObject contains pass-object level details that are common across protocols.
+   * PassOverrides contains optional pass-object level details. Overrides any template level values.
    * </pre>
    *
    * Protobuf type {@code io.PassOverrides}
@@ -224,6 +253,7 @@ public final class PassOuterClass {
       locations_ = java.util.Collections.emptyList();
       beacons_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
+      associatedStoreIdentifiers_ = emptyIntList();
     }
 
     @java.lang.Override
@@ -310,6 +340,27 @@ public final class PassOuterClass {
 
               break;
             }
+            case 56: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                associatedStoreIdentifiers_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              associatedStoreIdentifiers_.addInt(input.readUInt32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                associatedStoreIdentifiers_ = newIntList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                associatedStoreIdentifiers_.addInt(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -334,6 +385,9 @@ public final class PassOuterClass {
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           links_ = java.util.Collections.unmodifiableList(links_);
         }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          associatedStoreIdentifiers_.makeImmutable(); // C
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -355,7 +409,7 @@ public final class PassOuterClass {
     private com.passkit.grpc.Image.ImageIds imageIds_;
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -367,7 +421,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -379,7 +433,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * Image ID's of images to override for this pass
+     * Image ID's of images to override for this pass.
      * </pre>
      *
      * <code>.io.ImageIds imageIds = 1;</code>
@@ -393,7 +447,7 @@ public final class PassOuterClass {
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locations_;
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -404,7 +458,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -416,7 +470,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -427,7 +481,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -438,7 +492,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -453,7 +507,7 @@ public final class PassOuterClass {
     private java.util.List<com.passkit.grpc.Proximity.Beacon> beacons_;
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -464,7 +518,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -476,7 +530,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -487,7 +541,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -498,7 +552,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+     * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
      * </pre>
      *
      * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -513,7 +567,7 @@ public final class PassOuterClass {
     private java.util.List<com.passkit.grpc.Links.Link> links_;
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -524,7 +578,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -536,7 +590,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -547,7 +601,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -558,7 +612,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+     * A list of (personalized) links to be shown on the pass.
      * </pre>
      *
      * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -573,7 +627,7 @@ public final class PassOuterClass {
     private com.passkit.grpc.Template.Colors colors_;
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
@@ -585,7 +639,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
@@ -597,7 +651,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * stores custom pass colors
+     * Stores custom pass colors.
      * </pre>
      *
      * <code>.io.Colors colors = 6;</code>
@@ -606,6 +660,46 @@ public final class PassOuterClass {
     public com.passkit.grpc.Template.ColorsOrBuilder getColorsOrBuilder() {
       return getColors();
     }
+
+    public static final int ASSOCIATEDSTOREIDENTIFIERS_FIELD_NUMBER = 7;
+    private com.google.protobuf.Internal.IntList associatedStoreIdentifiers_;
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @return A list containing the associatedStoreIdentifiers.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getAssociatedStoreIdentifiersList() {
+      return associatedStoreIdentifiers_;
+    }
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @return The count of associatedStoreIdentifiers.
+     */
+    public int getAssociatedStoreIdentifiersCount() {
+      return associatedStoreIdentifiers_.size();
+    }
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+     * @param index The index of the element to return.
+     * @return The associatedStoreIdentifiers at the given index.
+     */
+    public int getAssociatedStoreIdentifiers(int index) {
+      return associatedStoreIdentifiers_.getInt(index);
+    }
+    private int associatedStoreIdentifiersMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -621,6 +715,7 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      getSerializedSize();
       if (imageIds_ != null) {
         output.writeMessage(1, getImageIds());
       }
@@ -635,6 +730,13 @@ public final class PassOuterClass {
       }
       if (colors_ != null) {
         output.writeMessage(6, getColors());
+      }
+      if (getAssociatedStoreIdentifiersList().size() > 0) {
+        output.writeUInt32NoTag(58);
+        output.writeUInt32NoTag(associatedStoreIdentifiersMemoizedSerializedSize);
+      }
+      for (int i = 0; i < associatedStoreIdentifiers_.size(); i++) {
+        output.writeUInt32NoTag(associatedStoreIdentifiers_.getInt(i));
       }
       unknownFields.writeTo(output);
     }
@@ -664,6 +766,20 @@ public final class PassOuterClass {
       if (colors_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getColors());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < associatedStoreIdentifiers_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(associatedStoreIdentifiers_.getInt(i));
+        }
+        size += dataSize;
+        if (!getAssociatedStoreIdentifiersList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        associatedStoreIdentifiersMemoizedSerializedSize = dataSize;
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -696,6 +812,8 @@ public final class PassOuterClass {
         if (!getColors()
             .equals(other.getColors())) return false;
       }
+      if (!getAssociatedStoreIdentifiersList()
+          .equals(other.getAssociatedStoreIdentifiersList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -726,6 +844,10 @@ public final class PassOuterClass {
       if (hasColors()) {
         hash = (37 * hash) + COLORS_FIELD_NUMBER;
         hash = (53 * hash) + getColors().hashCode();
+      }
+      if (getAssociatedStoreIdentifiersCount() > 0) {
+        hash = (37 * hash) + ASSOCIATEDSTOREIDENTIFIERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssociatedStoreIdentifiersList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -824,7 +946,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * PassObject contains pass-object level details that are common across protocols.
+     * PassOverrides contains optional pass-object level details. Overrides any template level values.
      * </pre>
      *
      * Protobuf type {@code io.PassOverrides}
@@ -897,6 +1019,8 @@ public final class PassOuterClass {
           colors_ = null;
           colorsBuilder_ = null;
         }
+        associatedStoreIdentifiers_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -961,6 +1085,11 @@ public final class PassOuterClass {
         } else {
           result.colors_ = colorsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          associatedStoreIdentifiers_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.associatedStoreIdentifiers_ = associatedStoreIdentifiers_;
         onBuilt();
         return result;
       }
@@ -1093,6 +1222,16 @@ public final class PassOuterClass {
         if (other.hasColors()) {
           mergeColors(other.getColors());
         }
+        if (!other.associatedStoreIdentifiers_.isEmpty()) {
+          if (associatedStoreIdentifiers_.isEmpty()) {
+            associatedStoreIdentifiers_ = other.associatedStoreIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureAssociatedStoreIdentifiersIsMutable();
+            associatedStoreIdentifiers_.addAll(other.associatedStoreIdentifiers_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1128,7 +1267,7 @@ public final class PassOuterClass {
           com.passkit.grpc.Image.ImageIds, com.passkit.grpc.Image.ImageIds.Builder, com.passkit.grpc.Image.ImageIdsOrBuilder> imageIdsBuilder_;
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1139,7 +1278,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1154,7 +1293,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1174,7 +1313,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1192,7 +1331,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1214,7 +1353,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1232,7 +1371,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1244,7 +1383,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1259,7 +1398,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * Image ID's of images to override for this pass
+       * Image ID's of images to override for this pass.
        * </pre>
        *
        * <code>.io.ImageIds imageIds = 1;</code>
@@ -1292,7 +1431,7 @@ public final class PassOuterClass {
 
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1306,7 +1445,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1320,7 +1459,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1334,7 +1473,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1355,7 +1494,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1373,7 +1512,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1393,7 +1532,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1414,7 +1553,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1432,7 +1571,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1450,7 +1589,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1469,7 +1608,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1486,7 +1625,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1503,7 +1642,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1514,7 +1653,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1528,7 +1667,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1543,7 +1682,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1554,7 +1693,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1566,7 +1705,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 GPS locations where this pass should be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locations = 3 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1604,7 +1743,7 @@ public final class PassOuterClass {
 
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1618,7 +1757,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1632,7 +1771,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1646,7 +1785,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1667,7 +1806,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1685,7 +1824,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1705,7 +1844,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1726,7 +1865,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1744,7 +1883,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1762,7 +1901,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1781,7 +1920,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1798,7 +1937,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1815,7 +1954,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1826,7 +1965,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1840,7 +1979,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1855,7 +1994,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1866,7 +2005,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1878,7 +2017,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen. Overrides any template level values.
+       * A list of up to 10 Beacon UUIDs that should trigger the pass to be presented on the lock-screen.
        * </pre>
        *
        * <code>repeated .io.Beacon beacons = 4 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1916,7 +2055,7 @@ public final class PassOuterClass {
 
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1930,7 +2069,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1944,7 +2083,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1958,7 +2097,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1979,7 +2118,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -1997,7 +2136,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2017,7 +2156,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2038,7 +2177,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2056,7 +2195,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2074,7 +2213,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2093,7 +2232,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2110,7 +2249,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2127,7 +2266,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2138,7 +2277,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2152,7 +2291,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2167,7 +2306,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2178,7 +2317,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2190,7 +2329,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of (personalized) links to be shown on the pass. Overrides any template level values.
+       * A list of (personalized) links to be shown on the pass.
        * </pre>
        *
        * <code>repeated .io.Link links = 5 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2219,7 +2358,7 @@ public final class PassOuterClass {
           com.passkit.grpc.Template.Colors, com.passkit.grpc.Template.Colors.Builder, com.passkit.grpc.Template.ColorsOrBuilder> colorsBuilder_;
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2230,7 +2369,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2245,7 +2384,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2265,7 +2404,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2283,7 +2422,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2305,7 +2444,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2323,7 +2462,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2335,7 +2474,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2350,7 +2489,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * stores custom pass colors
+       * Stores custom pass colors.
        * </pre>
        *
        * <code>.io.Colors colors = 6;</code>
@@ -2367,6 +2506,113 @@ public final class PassOuterClass {
           colors_ = null;
         }
         return colorsBuilder_;
+      }
+
+      private com.google.protobuf.Internal.IntList associatedStoreIdentifiers_ = emptyIntList();
+      private void ensureAssociatedStoreIdentifiersIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          associatedStoreIdentifiers_ = mutableCopy(associatedStoreIdentifiers_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @return A list containing the associatedStoreIdentifiers.
+       */
+      public java.util.List<java.lang.Integer>
+          getAssociatedStoreIdentifiersList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(associatedStoreIdentifiers_) : associatedStoreIdentifiers_;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @return The count of associatedStoreIdentifiers.
+       */
+      public int getAssociatedStoreIdentifiersCount() {
+        return associatedStoreIdentifiers_.size();
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @param index The index of the element to return.
+       * @return The associatedStoreIdentifiers at the given index.
+       */
+      public int getAssociatedStoreIdentifiers(int index) {
+        return associatedStoreIdentifiers_.getInt(index);
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @param index The index to set the value at.
+       * @param value The associatedStoreIdentifiers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssociatedStoreIdentifiers(
+          int index, int value) {
+        ensureAssociatedStoreIdentifiersIsMutable();
+        associatedStoreIdentifiers_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @param value The associatedStoreIdentifiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAssociatedStoreIdentifiers(int value) {
+        ensureAssociatedStoreIdentifiersIsMutable();
+        associatedStoreIdentifiers_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @param values The associatedStoreIdentifiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAssociatedStoreIdentifiers(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureAssociatedStoreIdentifiersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, associatedStoreIdentifiers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssociatedStoreIdentifiers() {
+        associatedStoreIdentifiers_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5317,23 +5563,23 @@ public final class PassOuterClass {
       "to\032\031io/common/protocols.proto\032\031io/common" +
       "/proximity.proto\032\030io/common/template.pro" +
       "to\032.protoc-gen-openapiv2/options/annotat" +
-      "ions.proto\"\303\001\n\rPassOverrides\022\036\n\010imageIds" +
+      "ions.proto\"\347\001\n\rPassOverrides\022\036\n\010imageIds" +
       "\030\001 \001(\0132\014.io.ImageIds\022*\n\tlocations\030\003 \003(\0132" +
       "\017.io.GPSLocationB\006\222A\003\240\001\n\022#\n\007beacons\030\004 \003(" +
       "\0132\n.io.BeaconB\006\222A\003\240\001\n\022\037\n\005links\030\005 \003(\0132\010.i" +
       "o.LinkB\006\222A\003\240\001\n\022\032\n\006colors\030\006 \001(\0132\n.io.Colo" +
-      "rsJ\004\010\002\020\003\"\\\n\013PassOptions\022&\n\005apple\030\001 \001(\0132\027" +
-      ".io.AppleWalletSettings\022%\n\006google\030\002 \001(\0132" +
-      "\025.io.GooglePaySettings\"\377\001\n\004Pass\022\n\n\002id\030\001 " +
-      "\001(\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020" +
-      ".io.PassProtocol\022!\n\rpersonDetails\030\004 \001(\0132" +
-      "\n.io.Person\022\036\n\010metadata\030\005 \001(\0132\014.io.Metad" +
-      "ata\022,\n\nrecordData\030\006 \003(\0132\030.io.Pass.Record" +
-      "DataEntry\022\022\n\nexternalId\030\007 \001(\t\0321\n\017RecordD" +
-      "ataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "BG\n\020com.passkit.grpcZ$stash.passkit.com/" +
-      "io/model/sdk/go/io\252\002\014PassKit.Grpcb\006proto" +
-      "3"
+      "rs\022\"\n\032associatedStoreIdentifiers\030\007 \003(\rJ\004" +
+      "\010\002\020\003\"\\\n\013PassOptions\022&\n\005apple\030\001 \001(\0132\027.io." +
+      "AppleWalletSettings\022%\n\006google\030\002 \001(\0132\025.io" +
+      ".GooglePaySettings\"\377\001\n\004Pass\022\n\n\002id\030\001 \001(\t\022" +
+      "\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020.io." +
+      "PassProtocol\022!\n\rpersonDetails\030\004 \001(\0132\n.io" +
+      ".Person\022\036\n\010metadata\030\005 \001(\0132\014.io.Metadata\022" +
+      ",\n\nrecordData\030\006 \003(\0132\030.io.Pass.RecordData" +
+      "Entry\022\022\n\nexternalId\030\007 \001(\t\0321\n\017RecordDataE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BG\n\020" +
+      "com.passkit.grpcZ$stash.passkit.com/io/m" +
+      "odel/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5352,7 +5598,7 @@ public final class PassOuterClass {
     internal_static_io_PassOverrides_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PassOverrides_descriptor,
-        new java.lang.String[] { "ImageIds", "Locations", "Beacons", "Links", "Colors", });
+        new java.lang.String[] { "ImageIds", "Locations", "Beacons", "Links", "Colors", "AssociatedStoreIdentifiers", });
     internal_static_io_PassOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_PassOptions_fieldAccessorTable = new

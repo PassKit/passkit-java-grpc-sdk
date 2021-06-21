@@ -107,6 +107,37 @@ public final class DistributionGrpc {
     return getGetDataCollectionPageFieldsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
+      com.google.protobuf.Empty> getUploadSmartPassCsvMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "uploadSmartPassCsv",
+      requestType = com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
+      com.google.protobuf.Empty> getUploadSmartPassCsvMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.SmartPassCsvUploadRequest, com.google.protobuf.Empty> getUploadSmartPassCsvMethod;
+    if ((getUploadSmartPassCsvMethod = DistributionGrpc.getUploadSmartPassCsvMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getUploadSmartPassCsvMethod = DistributionGrpc.getUploadSmartPassCsvMethod) == null) {
+          DistributionGrpc.getUploadSmartPassCsvMethod = getUploadSmartPassCsvMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Distribution.SmartPassCsvUploadRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "uploadSmartPassCsv"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Distribution.SmartPassCsvUploadRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("uploadSmartPassCsv"))
+              .build();
+        }
+      }
+    }
+    return getUploadSmartPassCsvMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class DistributionGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataCollectionPageFieldsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadSmartPassCsvMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -199,6 +237,13 @@ public final class DistributionGrpc {
                 com.passkit.grpc.CommonObjects.ClassObjectInput,
                 com.passkit.grpc.Distribution.DataCollectionFields>(
                   this, METHODID_GET_DATA_COLLECTION_PAGE_FIELDS)))
+          .addMethod(
+            getUploadSmartPassCsvMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
+                com.google.protobuf.Empty>(
+                  this, METHODID_UPLOAD_SMART_PASS_CSV)))
           .build();
     }
   }
@@ -240,6 +285,14 @@ public final class DistributionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetDataCollectionPageFieldsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUploadSmartPassCsvMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +328,13 @@ public final class DistributionGrpc {
     public com.passkit.grpc.Distribution.DataCollectionFields getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDataCollectionPageFieldsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUploadSmartPassCsvMethod(), getCallOptions(), request);
     }
   }
 
@@ -315,11 +375,20 @@ public final class DistributionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetDataCollectionPageFieldsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> uploadSmartPassCsv(
+        com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUploadSmartPassCsvMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_WELCOME_EMAIL = 0;
   private static final int METHODID_GET_SMART_PASS_LINK = 1;
   private static final int METHODID_GET_DATA_COLLECTION_PAGE_FIELDS = 2;
+  private static final int METHODID_UPLOAD_SMART_PASS_CSV = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -349,6 +418,10 @@ public final class DistributionGrpc {
         case METHODID_GET_DATA_COLLECTION_PAGE_FIELDS:
           serviceImpl.getDataCollectionPageFields((com.passkit.grpc.CommonObjects.ClassObjectInput) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields>) responseObserver);
+          break;
+        case METHODID_UPLOAD_SMART_PASS_CSV:
+          serviceImpl.uploadSmartPassCsv((com.passkit.grpc.Distribution.SmartPassCsvUploadRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -414,6 +487,7 @@ public final class DistributionGrpc {
               .addMethod(getSendWelcomeEmailMethod())
               .addMethod(getGetSmartPassLinkMethod())
               .addMethod(getGetDataCollectionPageFieldsMethod())
+              .addMethod(getUploadSmartPassCsvMethod())
               .build();
         }
       }

@@ -28,7 +28,7 @@ public final class ARpcDistribution {
       "tobuf/empty.proto\032.protoc-gen-openapiv2/" +
       "options/annotations.proto\032\036io/common/com" +
       "mon_objects.proto\032\034io/common/distributio" +
-      "n.proto2\350\005\n\014Distribution\022\257\001\n\020sendWelcome" +
+      "n.proto2\203\010\n\014Distribution\022\257\001\n\020sendWelcome" +
       "Email\022\034.io.EmailDistributionRequest\032\026.go" +
       "ogle.protobuf.Empty\"e\202\323\344\223\002\030\"\023/distributi" +
       "on/email:\001*\222AD\022\022Send Welcome Email\032.Send" +
@@ -46,30 +46,37 @@ public final class ARpcDistribution {
       "ds used on the data collection page. Cla" +
       "ssId is required only for the Member pro" +
       "tocol.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.B\201\007\n\020c" +
-      "om.passkit.grpcZ$stash.passkit.com/io/mo" +
-      "del/sdk/go/io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030Pas" +
-      "sKit Distribution API\022ZAPI for generatin" +
-      "g SmartPass links and distribution of yo" +
-      "ur passes via different channels.\0328https" +
-      "://passkit.com/legal/terms-of-subscripti" +
-      "on-service/\"?\n\017PassKit Support\022\027https://" +
-      "docs.passkit.io\032\023support@passkit.com*\001\0022" +
-      "\020application/json:\020application/jsonR9\n\0032" +
-      "00\0222\n(Returned when the request is succe" +
-      "ssful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when w" +
-      "rong user input is provided.R0\n\003401\022)\n\'R" +
-      "eturned when the user is unauthorized.RP" +
-      "\n\003403\022I\nGReturned when the user does not" +
-      " have permission to access the resource." +
-      "R;\n\003404\0224\n*Returned when the resource do" +
-      "es not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned" +
-      " when there is an unexpected error.\022\006\n\004\232" +
-      "\002\001\007RW\n\003503\022P\nNServer is unavailable. Bac" +
-      "k off for 250ms and repeat request until" +
-      " successful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Au" +
-      "thentication token.\032\rAuthorization \002b\020\n\016" +
-      "\n\napiKeyAuth\022\000b\006proto3"
+      "n.J\036\n\003404\022\027\n\025Record was not found.\022\230\002\n\022u" +
+      "ploadSmartPassCsv\022\035.io.SmartPassCsvUploa" +
+      "dRequest\032\026.google.protobuf.Empty\"\312\001\202\323\344\223\002" +
+      "\034\"\027/distribution/smartpass:\001*\222A\244\001\022\024Uploa" +
+      "d SmartPass Csv\032\213\001Upload SmartPass Csv s" +
+      "ends a projects short code and file byte" +
+      "s to be processed. Processed file will b" +
+      "e sent to the users registered email.B\201\007" +
+      "\n\020com.passkit.grpcZ$stash.passkit.com/io" +
+      "/model/sdk/go/io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030" +
+      "PassKit Distribution API\022ZAPI for genera" +
+      "ting SmartPass links and distribution of" +
+      " your passes via different channels.\0328ht" +
+      "tps://passkit.com/legal/terms-of-subscri" +
+      "ption-service/\"?\n\017PassKit Support\022\027https" +
+      "://docs.passkit.io\032\023support@passkit.com*" +
+      "\001\0022\020application/json:\020application/jsonR9" +
+      "\n\003200\0222\n(Returned when the request is su" +
+      "ccessful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned whe" +
+      "n wrong user input is provided.R0\n\003401\022)" +
+      "\n\'Returned when the user is unauthorized" +
+      ".RP\n\003403\022I\nGReturned when the user does " +
+      "not have permission to access the resour" +
+      "ce.R;\n\003404\0224\n*Returned when the resource" +
+      " does not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Retur" +
+      "ned when there is an unexpected error.\022\006" +
+      "\n\004\232\002\001\007RW\n\003503\022P\nNServer is unavailable. " +
+      "Back off for 250ms and repeat request un" +
+      "til successful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT" +
+      " Authentication token.\032\rAuthorization \002b" +
+      "\020\n\016\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
