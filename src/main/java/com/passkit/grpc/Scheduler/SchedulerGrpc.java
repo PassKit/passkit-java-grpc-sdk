@@ -15,29 +15,29 @@ public final class SchedulerGrpc {
   public static final String SERVICE_NAME = "scheduler.Scheduler";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod;
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "createSchedulingJob",
-      requestType = ct.Scheduler.SchedulingJob.class,
-      responseType = ct.Scheduler.SchedulingJobResponse.class,
+      requestType = com.passkit.grpc.ct.Scheduler.SchedulingJob.class,
+      responseType = com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod() {
-    io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod;
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getCreateSchedulingJobMethod;
     if ((getCreateSchedulingJobMethod = SchedulerGrpc.getCreateSchedulingJobMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getCreateSchedulingJobMethod = SchedulerGrpc.getCreateSchedulingJobMethod) == null) {
           SchedulerGrpc.getCreateSchedulingJobMethod = getCreateSchedulingJobMethod =
-              io.grpc.MethodDescriptor.<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createSchedulingJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJob.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJob.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("createSchedulingJob"))
               .build();
         }
@@ -47,28 +47,28 @@ public final class SchedulerGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod;
+      com.passkit.grpc.ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getSchedulingJob",
       requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = ct.Scheduler.SchedulingJob.class,
+      responseType = com.passkit.grpc.ct.Scheduler.SchedulingJob.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod;
+      com.passkit.grpc.ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ct.Scheduler.SchedulingJob> getGetSchedulingJobMethod;
     if ((getGetSchedulingJobMethod = SchedulerGrpc.getGetSchedulingJobMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getGetSchedulingJobMethod = SchedulerGrpc.getGetSchedulingJobMethod) == null) {
           SchedulerGrpc.getGetSchedulingJobMethod = getGetSchedulingJobMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, ct.Scheduler.SchedulingJob>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ct.Scheduler.SchedulingJob>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSchedulingJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJob.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJob.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("getSchedulingJob"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class SchedulerGrpc {
     return getGetSchedulingJobMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod;
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "updateSchedulingJob",
-      requestType = ct.Scheduler.SchedulingJob.class,
-      responseType = ct.Scheduler.SchedulingJobResponse.class,
+      requestType = com.passkit.grpc.ct.Scheduler.SchedulingJob.class,
+      responseType = com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod() {
-    io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod;
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getUpdateSchedulingJobMethod;
     if ((getUpdateSchedulingJobMethod = SchedulerGrpc.getUpdateSchedulingJobMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getUpdateSchedulingJobMethod = SchedulerGrpc.getUpdateSchedulingJobMethod) == null) {
           SchedulerGrpc.getUpdateSchedulingJobMethod = getUpdateSchedulingJobMethod =
-              io.grpc.MethodDescriptor.<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateSchedulingJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJob.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJob.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("updateSchedulingJob"))
               .build();
         }
@@ -108,29 +108,29 @@ public final class SchedulerGrpc {
     return getUpdateSchedulingJobMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod;
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "patchSchedulingJob",
-      requestType = ct.Scheduler.SchedulingJob.class,
-      responseType = ct.Scheduler.SchedulingJobResponse.class,
+      requestType = com.passkit.grpc.ct.Scheduler.SchedulingJob.class,
+      responseType = com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob,
-      ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod() {
-    io.grpc.MethodDescriptor<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod;
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
+      com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> getPatchSchedulingJobMethod;
     if ((getPatchSchedulingJobMethod = SchedulerGrpc.getPatchSchedulingJobMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getPatchSchedulingJobMethod = SchedulerGrpc.getPatchSchedulingJobMethod) == null) {
           SchedulerGrpc.getPatchSchedulingJobMethod = getPatchSchedulingJobMethod =
-              io.grpc.MethodDescriptor.<ct.Scheduler.SchedulingJob, ct.Scheduler.SchedulingJobResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.ct.Scheduler.SchedulingJob, com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchSchedulingJob"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJob.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJob.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("patchSchedulingJob"))
               .build();
         }
@@ -171,28 +171,28 @@ public final class SchedulerGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod;
+      com.passkit.grpc.ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "getSchedulingJobHistory",
       requestType = com.passkit.grpc.CommonObjects.Id.class,
-      responseType = ct.Scheduler.JobHistory.class,
+      responseType = com.passkit.grpc.ct.Scheduler.JobHistory.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
-      ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod;
+      com.passkit.grpc.ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ct.Scheduler.JobHistory> getGetSchedulingJobHistoryMethod;
     if ((getGetSchedulingJobHistoryMethod = SchedulerGrpc.getGetSchedulingJobHistoryMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getGetSchedulingJobHistoryMethod = SchedulerGrpc.getGetSchedulingJobHistoryMethod) == null) {
           SchedulerGrpc.getGetSchedulingJobHistoryMethod = getGetSchedulingJobHistoryMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, ct.Scheduler.JobHistory>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.ct.Scheduler.JobHistory>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getSchedulingJobHistory"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.JobHistory.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.JobHistory.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("getSchedulingJobHistory"))
               .build();
         }
@@ -202,28 +202,28 @@ public final class SchedulerGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Scheduler.Scheduler.ListRequest,
-      ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod;
+      com.passkit.grpc.ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "listSchedulingJobHistories",
       requestType = com.passkit.grpc.Scheduler.Scheduler.ListRequest.class,
-      responseType = ct.Scheduler.JobHistory.class,
+      responseType = com.passkit.grpc.ct.Scheduler.JobHistory.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
   public static io.grpc.MethodDescriptor<com.passkit.grpc.Scheduler.Scheduler.ListRequest,
-      ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.Scheduler.Scheduler.ListRequest, ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod;
+      com.passkit.grpc.ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Scheduler.Scheduler.ListRequest, com.passkit.grpc.ct.Scheduler.JobHistory> getListSchedulingJobHistoriesMethod;
     if ((getListSchedulingJobHistoriesMethod = SchedulerGrpc.getListSchedulingJobHistoriesMethod) == null) {
       synchronized (SchedulerGrpc.class) {
         if ((getListSchedulingJobHistoriesMethod = SchedulerGrpc.getListSchedulingJobHistoriesMethod) == null) {
           SchedulerGrpc.getListSchedulingJobHistoriesMethod = getListSchedulingJobHistoriesMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.Scheduler.Scheduler.ListRequest, ct.Scheduler.JobHistory>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Scheduler.Scheduler.ListRequest, com.passkit.grpc.ct.Scheduler.JobHistory>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listSchedulingJobHistories"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.Scheduler.Scheduler.ListRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ct.Scheduler.JobHistory.getDefaultInstance()))
+                  com.passkit.grpc.ct.Scheduler.JobHistory.getDefaultInstance()))
               .setSchemaDescriptor(new SchedulerMethodDescriptorSupplier("listSchedulingJobHistories"))
               .build();
         }
@@ -282,29 +282,29 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public void createSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
     public void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJob> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void patchSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchSchedulingJobMethod(), responseObserver);
     }
 
@@ -318,14 +318,14 @@ public final class SchedulerGrpc {
     /**
      */
     public void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingJobHistoryMethod(), responseObserver);
     }
 
     /**
      */
     public void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSchedulingJobHistoriesMethod(), responseObserver);
     }
 
@@ -335,29 +335,29 @@ public final class SchedulerGrpc {
             getCreateSchedulingJobMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                ct.Scheduler.SchedulingJob,
-                ct.Scheduler.SchedulingJobResponse>(
+                com.passkit.grpc.ct.Scheduler.SchedulingJob,
+                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
                   this, METHODID_CREATE_SCHEDULING_JOB)))
           .addMethod(
             getGetSchedulingJobMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
-                ct.Scheduler.SchedulingJob>(
+                com.passkit.grpc.ct.Scheduler.SchedulingJob>(
                   this, METHODID_GET_SCHEDULING_JOB)))
           .addMethod(
             getUpdateSchedulingJobMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                ct.Scheduler.SchedulingJob,
-                ct.Scheduler.SchedulingJobResponse>(
+                com.passkit.grpc.ct.Scheduler.SchedulingJob,
+                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
                   this, METHODID_UPDATE_SCHEDULING_JOB)))
           .addMethod(
             getPatchSchedulingJobMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                ct.Scheduler.SchedulingJob,
-                ct.Scheduler.SchedulingJobResponse>(
+                com.passkit.grpc.ct.Scheduler.SchedulingJob,
+                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
                   this, METHODID_PATCH_SCHEDULING_JOB)))
           .addMethod(
             getDeleteSchedulingJobMethod(),
@@ -371,14 +371,14 @@ public final class SchedulerGrpc {
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.passkit.grpc.CommonObjects.Id,
-                ct.Scheduler.JobHistory>(
+                com.passkit.grpc.ct.Scheduler.JobHistory>(
                   this, METHODID_GET_SCHEDULING_JOB_HISTORY)))
           .addMethod(
             getListSchedulingJobHistoriesMethod(),
             io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
                 com.passkit.grpc.Scheduler.Scheduler.ListRequest,
-                ct.Scheduler.JobHistory>(
+                com.passkit.grpc.ct.Scheduler.JobHistory>(
                   this, METHODID_LIST_SCHEDULING_JOB_HISTORIES)))
           .build();
     }
@@ -400,8 +400,8 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public void createSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateSchedulingJobMethod(), getCallOptions()), request, responseObserver);
     }
@@ -409,23 +409,23 @@ public final class SchedulerGrpc {
     /**
      */
     public void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJob> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSchedulingJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void updateSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateSchedulingJobMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void patchSchedulingJob(ct.Scheduler.SchedulingJob request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse> responseObserver) {
+    public void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPatchSchedulingJobMethod(), getCallOptions()), request, responseObserver);
     }
@@ -441,7 +441,7 @@ public final class SchedulerGrpc {
     /**
      */
     public void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSchedulingJobHistoryMethod(), getCallOptions()), request, responseObserver);
     }
@@ -449,7 +449,7 @@ public final class SchedulerGrpc {
     /**
      */
     public void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
-        io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory> responseObserver) {
+        io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getListSchedulingJobHistoriesMethod(), getCallOptions()), request, responseObserver);
     }
@@ -471,28 +471,28 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public ct.Scheduler.SchedulingJobResponse createSchedulingJob(ct.Scheduler.SchedulingJob request) {
+    public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateSchedulingJobMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public ct.Scheduler.SchedulingJob getSchedulingJob(com.passkit.grpc.CommonObjects.Id request) {
+    public com.passkit.grpc.ct.Scheduler.SchedulingJob getSchedulingJob(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSchedulingJobMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public ct.Scheduler.SchedulingJobResponse updateSchedulingJob(ct.Scheduler.SchedulingJob request) {
+    public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateSchedulingJobMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public ct.Scheduler.SchedulingJobResponse patchSchedulingJob(ct.Scheduler.SchedulingJob request) {
+    public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPatchSchedulingJobMethod(), getCallOptions(), request);
     }
@@ -506,14 +506,14 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public ct.Scheduler.JobHistory getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request) {
+    public com.passkit.grpc.ct.Scheduler.JobHistory getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSchedulingJobHistoryMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<ct.Scheduler.JobHistory> listSchedulingJobHistories(
+    public java.util.Iterator<com.passkit.grpc.ct.Scheduler.JobHistory> listSchedulingJobHistories(
         com.passkit.grpc.Scheduler.Scheduler.ListRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getListSchedulingJobHistoriesMethod(), getCallOptions(), request);
@@ -536,15 +536,15 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ct.Scheduler.SchedulingJobResponse> createSchedulingJob(
-        ct.Scheduler.SchedulingJob request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> createSchedulingJob(
+        com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateSchedulingJobMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ct.Scheduler.SchedulingJob> getSchedulingJob(
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJob> getSchedulingJob(
         com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSchedulingJobMethod(), getCallOptions()), request);
@@ -552,16 +552,16 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ct.Scheduler.SchedulingJobResponse> updateSchedulingJob(
-        ct.Scheduler.SchedulingJob request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> updateSchedulingJob(
+        com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateSchedulingJobMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ct.Scheduler.SchedulingJobResponse> patchSchedulingJob(
-        ct.Scheduler.SchedulingJob request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> patchSchedulingJob(
+        com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPatchSchedulingJobMethod(), getCallOptions()), request);
     }
@@ -576,7 +576,7 @@ public final class SchedulerGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ct.Scheduler.JobHistory> getSchedulingJobHistory(
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.JobHistory> getSchedulingJobHistory(
         com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSchedulingJobHistoryMethod(), getCallOptions()), request);
@@ -609,20 +609,20 @@ public final class SchedulerGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_SCHEDULING_JOB:
-          serviceImpl.createSchedulingJob((ct.Scheduler.SchedulingJob) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse>) responseObserver);
+          serviceImpl.createSchedulingJob((com.passkit.grpc.ct.Scheduler.SchedulingJob) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>) responseObserver);
           break;
         case METHODID_GET_SCHEDULING_JOB:
           serviceImpl.getSchedulingJob((com.passkit.grpc.CommonObjects.Id) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJob>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob>) responseObserver);
           break;
         case METHODID_UPDATE_SCHEDULING_JOB:
-          serviceImpl.updateSchedulingJob((ct.Scheduler.SchedulingJob) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse>) responseObserver);
+          serviceImpl.updateSchedulingJob((com.passkit.grpc.ct.Scheduler.SchedulingJob) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>) responseObserver);
           break;
         case METHODID_PATCH_SCHEDULING_JOB:
-          serviceImpl.patchSchedulingJob((ct.Scheduler.SchedulingJob) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.SchedulingJobResponse>) responseObserver);
+          serviceImpl.patchSchedulingJob((com.passkit.grpc.ct.Scheduler.SchedulingJob) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>) responseObserver);
           break;
         case METHODID_DELETE_SCHEDULING_JOB:
           serviceImpl.deleteSchedulingJob((com.passkit.grpc.CommonObjects.Id) request,
@@ -630,11 +630,11 @@ public final class SchedulerGrpc {
           break;
         case METHODID_GET_SCHEDULING_JOB_HISTORY:
           serviceImpl.getSchedulingJobHistory((com.passkit.grpc.CommonObjects.Id) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory>) responseObserver);
           break;
         case METHODID_LIST_SCHEDULING_JOB_HISTORIES:
           serviceImpl.listSchedulingJobHistories((com.passkit.grpc.Scheduler.Scheduler.ListRequest) request,
-              (io.grpc.stub.StreamObserver<ct.Scheduler.JobHistory>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory>) responseObserver);
           break;
         default:
           throw new AssertionError();

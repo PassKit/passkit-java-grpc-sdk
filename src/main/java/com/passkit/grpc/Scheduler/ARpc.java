@@ -103,7 +103,7 @@ public final class ARpc {
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Scheduler.Scheduler.getDescriptor(),
-          ct.Scheduler.getDescriptor(),
+          com.passkit.grpc.ct.Scheduler.getDescriptor(),
         });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
@@ -117,7 +117,7 @@ public final class ARpc {
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Scheduler.Scheduler.getDescriptor();
-    ct.Scheduler.getDescriptor();
+    com.passkit.grpc.ct.Scheduler.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
