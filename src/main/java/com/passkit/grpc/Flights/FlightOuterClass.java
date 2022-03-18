@@ -953,6 +953,7 @@ public final class FlightOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+     * @deprecated
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Deprecated boolean getAutoInvalidateCancelledPasses();
@@ -2550,6 +2551,7 @@ public final class FlightOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+     * @deprecated
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Override
@@ -3046,31 +3048,31 @@ public final class FlightOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, carrierCode_);
       }
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, flightNumber_);
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deplaningPoint_);
       }
       if (departureDate_ != null) {
         output.writeMessage(5, getDepartureDate());
       }
-      if (!getDepartureTerminalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(departureTerminal_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, departureTerminal_);
       }
-      if (!getArrivalTerminalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arrivalTerminal_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, arrivalTerminal_);
       }
-      if (!getDepartureGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(departureGate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, departureGate_);
       }
-      if (!getArrivalGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arrivalGate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, arrivalGate_);
       }
       if (scheduledDepartureTime_ != null) {
@@ -3091,19 +3093,19 @@ public final class FlightOuterClass {
       if (estimatedArrivalTime_ != null) {
         output.writeMessage(15, getEstimatedArrivalTime());
       }
-      if (!getOperatingCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatingCarrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, operatingCarrierCode_);
       }
-      if (!getOperatingFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatingFlightNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, operatingFlightNumber_);
       }
       for (int i = 0; i < codeShareFlightNumbers_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, codeShareFlightNumbers_.getRaw(i));
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, passTemplateId_);
       }
-      if (!getBaggageBeltBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baggageBelt_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 21, baggageBelt_);
       }
       if (autoInvalidateAfter_ != 0) {
@@ -3136,7 +3138,7 @@ public final class FlightOuterClass {
       if (conditionalItems_ != false) {
         output.writeBool(31, conditionalItems_);
       }
-      if (!getBarcodeAdditionalDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeAdditionalData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 32, barcodeAdditionalData_);
       }
       if (metrics_ != null) {
@@ -3145,7 +3147,7 @@ public final class FlightOuterClass {
       if (createMethod_ != com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.DO_NOT_USE.getNumber()) {
         output.writeEnum(34, createMethod_);
       }
-      if (!getDesignatorIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(designatorId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 35, designatorId_);
       }
       if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
@@ -3160,32 +3162,32 @@ public final class FlightOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, carrierCode_);
       }
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, flightNumber_);
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deplaningPoint_);
       }
       if (departureDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getDepartureDate());
       }
-      if (!getDepartureTerminalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(departureTerminal_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, departureTerminal_);
       }
-      if (!getArrivalTerminalBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arrivalTerminal_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, arrivalTerminal_);
       }
-      if (!getDepartureGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(departureGate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, departureGate_);
       }
-      if (!getArrivalGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(arrivalGate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, arrivalGate_);
       }
       if (scheduledDepartureTime_ != null) {
@@ -3212,10 +3214,10 @@ public final class FlightOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getEstimatedArrivalTime());
       }
-      if (!getOperatingCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatingCarrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, operatingCarrierCode_);
       }
-      if (!getOperatingFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operatingFlightNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, operatingFlightNumber_);
       }
       {
@@ -3226,10 +3228,10 @@ public final class FlightOuterClass {
         size += dataSize;
         size += 2 * getCodeShareFlightNumbersList().size();
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, passTemplateId_);
       }
-      if (!getBaggageBeltBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(baggageBelt_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, baggageBelt_);
       }
       if (autoInvalidateAfter_ != 0) {
@@ -3272,7 +3274,7 @@ public final class FlightOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(31, conditionalItems_);
       }
-      if (!getBarcodeAdditionalDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeAdditionalData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(32, barcodeAdditionalData_);
       }
       if (metrics_ != null) {
@@ -3283,7 +3285,7 @@ public final class FlightOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(34, createMethod_);
       }
-      if (!getDesignatorIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(designatorId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, designatorId_);
       }
       if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
@@ -6580,6 +6582,7 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+       * @deprecated
        * @return The autoInvalidateCancelledPasses.
        */
       @java.lang.Override
@@ -6592,6 +6595,7 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+       * @deprecated
        * @param value The autoInvalidateCancelledPasses to set.
        * @return This builder for chaining.
        */
@@ -6607,6 +6611,7 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAutoInvalidateCancelledPasses() {
@@ -8876,19 +8881,19 @@ public final class FlightOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, carrierCode_);
       }
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, flightNumber_);
       }
       if (departureDate_ != null) {
         output.writeMessage(3, getDepartureDate());
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, deplaningPoint_);
       }
       unknownFields.writeTo(output);
@@ -8900,20 +8905,20 @@ public final class FlightOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, carrierCode_);
       }
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, flightNumber_);
       }
       if (departureDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getDepartureDate());
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, deplaningPoint_);
       }
       size += unknownFields.getSerializedSize();

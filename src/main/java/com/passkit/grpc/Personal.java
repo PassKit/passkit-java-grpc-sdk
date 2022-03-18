@@ -1255,22 +1255,22 @@ public final class Personal {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, surname_);
       }
-      if (!getForenameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(forename_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, forename_);
       }
       for (int i = 0; i < otherNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, otherNames_.getRaw(i));
       }
-      if (!getSalutationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(salutation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, salutation_);
       }
-      if (!getSuffixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, suffix_);
       }
-      if (!getDisplayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, displayName_);
       }
       if (gender_ != com.passkit.grpc.Personal.Gender.NOT_KNOWN.getNumber()) {
@@ -1279,13 +1279,13 @@ public final class Personal {
       if (dateOfBirth_ != null) {
         output.writeMessage(8, getDateOfBirth());
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, emailAddress_);
       }
-      if (!getMobileNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mobileNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, mobileNumber_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, externalId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1303,10 +1303,10 @@ public final class Personal {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSurnameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(surname_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, surname_);
       }
-      if (!getForenameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(forename_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, forename_);
       }
       {
@@ -1317,13 +1317,13 @@ public final class Personal {
         size += dataSize;
         size += 1 * getOtherNamesList().size();
       }
-      if (!getSalutationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(salutation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, salutation_);
       }
-      if (!getSuffixBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, suffix_);
       }
-      if (!getDisplayNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, displayName_);
       }
       if (gender_ != com.passkit.grpc.Personal.Gender.NOT_KNOWN.getNumber()) {
@@ -1334,13 +1334,13 @@ public final class Personal {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDateOfBirth());
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, emailAddress_);
       }
-      if (!getMobileNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mobileNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, mobileNumber_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, externalId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
@@ -3076,7 +3076,10 @@ public final class Personal {
           int key,
           java.lang.String value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableExternalIds().getMutableMap()
             .put(key, value);
         return this;
@@ -3642,25 +3645,25 @@ public final class Personal {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressLine1Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine1_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, addressLine1_);
       }
-      if (!getAddressLine2Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine2_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, addressLine2_);
       }
-      if (!getAddressLine3Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine3_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, addressLine3_);
       }
-      if (!getCityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, city_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, state_);
       }
-      if (!getZipCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zipCode_);
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, countryCode_);
       }
       unknownFields.writeTo(output);
@@ -3672,25 +3675,25 @@ public final class Personal {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressLine1Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine1_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, addressLine1_);
       }
-      if (!getAddressLine2Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine2_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, addressLine2_);
       }
-      if (!getAddressLine3Bytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(addressLine3_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, addressLine3_);
       }
-      if (!getCityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(city_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, city_);
       }
-      if (!getStateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(state_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, state_);
       }
-      if (!getZipCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, zipCode_);
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, countryCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -4984,13 +4987,13 @@ public final class Personal {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
       }
       if (person_ != null) {
@@ -5005,13 +5008,13 @@ public final class Personal {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
       }
       if (person_ != null) {

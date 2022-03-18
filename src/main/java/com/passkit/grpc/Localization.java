@@ -1041,7 +1041,7 @@ public final class Localization {
     @java.lang.Override
     public boolean containsTranslations(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTranslations().getMap().containsKey(key);
     }
     /**
@@ -1076,7 +1076,7 @@ public final class Localization {
     public java.lang.String getTranslationsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTranslations().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1092,7 +1092,7 @@ public final class Localization {
 
     public java.lang.String getTranslationsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTranslations().getMap();
       if (!map.containsKey(key)) {
@@ -1478,7 +1478,7 @@ public final class Localization {
       @java.lang.Override
       public boolean containsTranslations(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTranslations().getMap().containsKey(key);
       }
       /**
@@ -1513,7 +1513,7 @@ public final class Localization {
       public java.lang.String getTranslationsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTranslations().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1529,7 +1529,7 @@ public final class Localization {
 
       public java.lang.String getTranslationsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTranslations().getMap();
         if (!map.containsKey(key)) {
@@ -1553,7 +1553,7 @@ public final class Localization {
 
       public Builder removeTranslations(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTranslations().getMutableMap()
             .remove(key);
         return this;
@@ -1576,8 +1576,11 @@ public final class Localization {
       public Builder putTranslations(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTranslations().getMutableMap()
             .put(key, value);
         return this;

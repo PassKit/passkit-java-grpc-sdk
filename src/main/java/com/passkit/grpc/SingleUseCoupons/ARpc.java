@@ -33,7 +33,7 @@ public final class ARpc {
       "ign.proto\032!io/single_use_coupons/offer.p" +
       "roto\032\"io/single_use_coupons/coupon.proto" +
       "\032.protoc-gen-openapiv2/options/annotatio" +
-      "ns.proto2\353@\n\020SingleUseCoupons\022\300\001\n\024create" +
+      "ns.proto2\345@\n\020SingleUseCoupons\022\300\001\n\024create" +
       "CouponCampaign\022\".single_use_coupons.Coup" +
       "onCampaign\032\006.io.Id\"|\202\323\344\223\002\037\"\032/coupon/sing" +
       "leUse/campaign:\001*\222AT\n\020Coupon Campaigns\022\026" +
@@ -48,225 +48,225 @@ public final class ARpc {
       "se_coupons.CouponCampaign\"s\202\323\344\223\002!\022\037/coup" +
       "on/singleUse/campaign/{id}\222AI\n\020Coupon Ca" +
       "mpaigns\022\023Get Coupon Campaign\032 Gets an ex" +
-      "isting Coupon Campaign\022\236\003\n\024deleteCouponC" +
+      "isting Coupon Campaign\022\233\003\n\024deleteCouponC" +
       "ampaign\022\006.io.Id\032\026.google.protobuf.Empty\"" +
-      "\345\002\202\323\344\223\002$*\037/coupon/singleUse/campaign/{id" +
-      "}:\001*\222A\267\002\n\020Coupon Campaigns\022\026Delete Coupo" +
-      "n Campaign\032\212\002Deletes an existing Coupon " +
-      "Campaign by id. Deleting a Coupon Campai" +
-      "gn results in the related offer being de" +
-      "leted, and all coupons being invalidated" +
-      " in the customers Mobile Wallet; renderi" +
-      "ng them unusable. This method needs to b" +
-      "e used with care, this is irreversible.\022" +
-      "\224\002\n\035listCouponCampaignsDeprecated\022\016.io.P" +
-      "agination\032\".single_use_coupons.CouponCam" +
-      "paign\"\274\001\202\323\344\223\002\035\022\033/coupon/singleUse/campai" +
-      "gns\222A\225\001\n\020Coupon Campaigns\022\"List Coupon C" +
-      "ampaigns [DEPRECATED]\032][DEPRECATED: OR o" +
-      "perator is not supported] Lists all Coup" +
-      "on Campaigns for the logged in user.0\001\022\276" +
-      "\004\n\023listCouponCampaigns\022\013.io.Filters\032\".si" +
-      "ngle_use_coupons.CouponCampaign\"\363\003\202\323\344\223\002%" +
-      "\" /coupon/singleUse/campaigns/list:\001*\222A\304" +
-      "\003\n\020Coupon Campaigns\022\025List Coupon Campaig" +
-      "ns\032\230\003Lists all Coupon Campaigns for the " +
-      "logged in user.\n\n<span style=\"font-weigh" +
-      "t:bold\">About filter field names, operat" +
-      "ors and sample payloads:</span> <a targe" +
-      "t=\"_blank\" href=\"https://help.passkit.co" +
-      "m/en/articles/4130967-coupon-protocol-fi" +
-      "ltering-listing-and-counting-by-api#filt" +
-      "er-campaigns\">https://help.passkit.com/e" +
+      "\342\002\202\323\344\223\002!*\037/coupon/singleUse/campaign/{id" +
+      "}\222A\267\002\n\020Coupon Campaigns\022\026Delete Coupon C" +
+      "ampaign\032\212\002Deletes an existing Coupon Cam" +
+      "paign by id. Deleting a Coupon Campaign " +
+      "results in the related offer being delet" +
+      "ed, and all coupons being invalidated in" +
+      " the customers Mobile Wallet; rendering " +
+      "them unusable. This method needs to be u" +
+      "sed with care, this is irreversible.\022\224\002\n" +
+      "\035listCouponCampaignsDeprecated\022\016.io.Pagi" +
+      "nation\032\".single_use_coupons.CouponCampai" +
+      "gn\"\274\001\202\323\344\223\002\035\022\033/coupon/singleUse/campaigns" +
+      "\222A\225\001\n\020Coupon Campaigns\022\"List Coupon Camp" +
+      "aigns [DEPRECATED]\032][DEPRECATED: OR oper" +
+      "ator is not supported] Lists all Coupon " +
+      "Campaigns for the logged in user.0\001\022\276\004\n\023" +
+      "listCouponCampaigns\022\013.io.Filters\032\".singl" +
+      "e_use_coupons.CouponCampaign\"\363\003\202\323\344\223\002%\" /" +
+      "coupon/singleUse/campaigns/list:\001*\222A\304\003\n\020" +
+      "Coupon Campaigns\022\025List Coupon Campaigns\032" +
+      "\230\003Lists all Coupon Campaigns for the log" +
+      "ged in user.\n\n<span style=\"font-weight:b" +
+      "old\">About filter field names, operators" +
+      " and sample payloads:</span> <a target=\"" +
+      "_blank\" href=\"https://help.passkit.com/e" +
       "n/articles/4130967-coupon-protocol-filte" +
       "ring-listing-and-counting-by-api#filter-" +
-      "campaigns</a>0\001\022\362\001\n\014getAnalytics\022\024.io.An" +
-      "alyticsRequest\0323.single_use_coupons.Coup" +
-      "onCampaignAnalyticsResponse\"\226\001\202\323\344\223\0020\022./c" +
-      "oupon/singleUse/campaign/{classId}/analy" +
-      "tics\222A]\n\020Coupon Campaigns\022\035Get Coupon Ca" +
-      "mpaign Analytics\032*Retrieves protocol spe" +
-      "cific analytics data\022\243\001\n\021createCouponOff" +
-      "er\022\037.single_use_coupons.CouponOffer\032\006.io" +
-      ".Id\"e\202\323\344\223\002\034\"\027/coupon/singleUse/offer:\001*\222" +
-      "A@\n\rCoupon Offers\022\023Create Coupon Offer\032\032" +
-      "Creates a new Coupon Offer\022\302\001\n\021updateCou" +
-      "ponOffer\022\037.single_use_coupons.CouponOffe" +
-      "r\032\037.single_use_coupons.CouponOffer\"k\202\323\344\223" +
-      "\002\034\032\027/coupon/singleUse/offer:\001*\222AF\n\rCoupo" +
-      "n Offers\022\023Update Coupon Offer\032 Updates a" +
-      "n existing Coupon Offer\022\242\001\n\016getCouponOff" +
-      "er\022\006.io.Id\032\037.single_use_coupons.CouponOf" +
-      "fer\"g\202\323\344\223\002\036\022\034/coupon/singleUse/offer/{id" +
-      "}\222A@\n\rCoupon Offers\022\020Get Coupon Offer\032\035G" +
-      "ets an existing Coupon Offer\022\333\002\n\021deleteC" +
-      "ouponOffer\022\006.io.Id\032\026.google.protobuf.Emp" +
-      "ty\"\245\002\202\323\344\223\002!*\034/coupon/singleUse/offer/{id" +
-      "}:\001*\222A\372\001\n\rCoupon Offers\022\023Delete Coupon O" +
-      "ffer\032\323\001Deletes an existing Coupon Offer " +
-      "by id. Deleting a Coupon Offer results i" +
-      "n all coupons being invalidated in the c" +
-      "ustomers Mobile Wallet; rendering them u" +
-      "nusable. Needs to be used with care, thi" +
-      "s is irreversible.\022\241\002\n\032listCouponOffersD" +
-      "eprecated\0225.single_use_coupons.CouponOff" +
-      "ersListRequestDeprecated\032\037.single_use_co" +
-      "upons.CouponOffer\"\250\001\202\323\344\223\002\032\022\030/coupon/sing" +
-      "leUse/offers\222A\204\001\n\rCoupon Offers\022\037List Co" +
-      "upon Offers [DEPRECATED]\032R[DEPRECATED: O" +
-      "R operator is not supported] Lists all C" +
-      "oupon Offers for a campaign.0\001\022\276\004\n\020listC" +
-      "ouponOffers\022+.single_use_coupons.CouponO" +
-      "ffersListRequest\032\037.single_use_coupons.Co" +
-      "uponOffer\"\331\003\202\323\344\223\002\"\"\035/coupon/singleUse/of" +
-      "fers/list:\001*\222A\255\003\n\rCoupon Offers\022\022List Co" +
-      "upon Offers\032\207\003Lists all Coupon Offers fo" +
-      "r a campaign.\n\n<span style=\"font-weight:" +
-      "bold\">About filter field names, operator" +
-      "s and sample payloads:</span> <a target=" +
-      "\"_blank\" href=\"https://help.passkit.com/" +
-      "en/articles/4130967-coupon-protocol-filt" +
-      "ering-listing-and-counting-by-api#filter" +
-      "-offers\">https://help.passkit.com/en/art" +
+      "campaigns\">https://help.passkit.com/en/a" +
+      "rticles/4130967-coupon-protocol-filterin" +
+      "g-listing-and-counting-by-api#filter-cam" +
+      "paigns</a>0\001\022\362\001\n\014getAnalytics\022\024.io.Analy" +
+      "ticsRequest\0323.single_use_coupons.CouponC" +
+      "ampaignAnalyticsResponse\"\226\001\202\323\344\223\0020\022./coup" +
+      "on/singleUse/campaign/{classId}/analytic" +
+      "s\222A]\n\020Coupon Campaigns\022\035Get Coupon Campa" +
+      "ign Analytics\032*Retrieves protocol specif" +
+      "ic analytics data\022\243\001\n\021createCouponOffer\022" +
+      "\037.single_use_coupons.CouponOffer\032\006.io.Id" +
+      "\"e\202\323\344\223\002\034\"\027/coupon/singleUse/offer:\001*\222A@\n" +
+      "\rCoupon Offers\022\023Create Coupon Offer\032\032Cre" +
+      "ates a new Coupon Offer\022\302\001\n\021updateCoupon" +
+      "Offer\022\037.single_use_coupons.CouponOffer\032\037" +
+      ".single_use_coupons.CouponOffer\"k\202\323\344\223\002\034\032" +
+      "\027/coupon/singleUse/offer:\001*\222AF\n\rCoupon O" +
+      "ffers\022\023Update Coupon Offer\032 Updates an e" +
+      "xisting Coupon Offer\022\242\001\n\016getCouponOffer\022" +
+      "\006.io.Id\032\037.single_use_coupons.CouponOffer" +
+      "\"g\202\323\344\223\002\036\022\034/coupon/singleUse/offer/{id}\222A" +
+      "@\n\rCoupon Offers\022\020Get Coupon Offer\032\035Gets" +
+      " an existing Coupon Offer\022\330\002\n\021deleteCoup" +
+      "onOffer\022\006.io.Id\032\026.google.protobuf.Empty\"" +
+      "\242\002\202\323\344\223\002\036*\034/coupon/singleUse/offer/{id}\222A" +
+      "\372\001\n\rCoupon Offers\022\023Delete Coupon Offer\032\323" +
+      "\001Deletes an existing Coupon Offer by id." +
+      " Deleting a Coupon Offer results in all " +
+      "coupons being invalidated in the custome" +
+      "rs Mobile Wallet; rendering them unusabl" +
+      "e. Needs to be used with care, this is i" +
+      "rreversible.\022\241\002\n\032listCouponOffersDepreca" +
+      "ted\0225.single_use_coupons.CouponOffersLis" +
+      "tRequestDeprecated\032\037.single_use_coupons." +
+      "CouponOffer\"\250\001\202\323\344\223\002\032\022\030/coupon/singleUse/" +
+      "offers\222A\204\001\n\rCoupon Offers\022\037List Coupon O" +
+      "ffers [DEPRECATED]\032R[DEPRECATED: OR oper" +
+      "ator is not supported] Lists all Coupon " +
+      "Offers for a campaign.0\001\022\276\004\n\020listCouponO" +
+      "ffers\022+.single_use_coupons.CouponOffersL" +
+      "istRequest\032\037.single_use_coupons.CouponOf" +
+      "fer\"\331\003\202\323\344\223\002\"\"\035/coupon/singleUse/offers/l" +
+      "ist:\001*\222A\255\003\n\rCoupon Offers\022\022List Coupon O" +
+      "ffers\032\207\003Lists all Coupon Offers for a ca" +
+      "mpaign.\n\n<span style=\"font-weight:bold\">" +
+      "About filter field names, operators and " +
+      "sample payloads:</span> <a target=\"_blan" +
+      "k\" href=\"https://help.passkit.com/en/art" +
       "icles/4130967-coupon-protocol-filtering-" +
       "listing-and-counting-by-api#filter-offer" +
-      "s</a>0\001\022\217\001\n\014createCoupon\022\032.single_use_co" +
-      "upons.Coupon\032\006.io.Id\"[\202\323\344\223\002\035\"\030/coupon/si" +
-      "ngleUse/coupon:\001*\222A5\n\007Coupons\022\rCreate Co" +
-      "upon\032\033Creates a new unique Coupon\022\216\001\n\014up" +
-      "dateCoupon\022\032.single_use_coupons.Coupon\032\006" +
-      ".io.Id\"Z\202\323\344\223\002\035\032\030/coupon/singleUse/coupon" +
-      ":\001*\222A4\n\007Coupons\022\rUpdate Coupon\032\032Updates " +
-      "an existing Coupon\022\276\001\n\023streamCouponUpdat" +
-      "es\022\032.single_use_coupons.Coupon\032\006.io.Id\"\177" +
-      "\222A|\n\007Coupons\022\'Stream Coupon Updates (gRP" +
-      "C SDKss only)\032HUpdates existing Coupon r" +
-      "ecords via stream. To be used for batch " +
-      "update.(\0010\001\022\353\002\n\014redeemCoupon\022\032.single_us" +
-      "e_coupons.Coupon\032\006.io.Id\"\266\002\202\323\344\223\002$\032\037/coup" +
-      "on/singleUse/coupon/redeem:\001*\222A\210\002\n\007Coupo" +
-      "ns\022\rRedeem Coupon\032\355\001Redeems an existing " +
-      "Coupon. Use this endpoint when you want " +
-      "to capture redemption data and trigger t" +
-      "he switch to the redemption design of th" +
-      "e coupon. The coupon cannot be used agai" +
-      "n after calling this endpoint, and is ma" +
-      "rked as redeemed.\022\213\002\n\026updateCouponExtern" +
-      "alId\022..single_use_coupons.CouponNewExter" +
-      "nalIdRequest\032\006.io.Id\"\270\001\202\323\344\223\002(\032#/coupon/s" +
-      "ingleUse/coupon/externalId:\001*\222A\206\001\n\007Coupo" +
-      "ns\022\031Update Coupon External Id\032`Updates a" +
-      "n external id of an existing coupon. Ext" +
-      "enal id needs to be unique within the ca" +
-      "mpaign.\022\313\001\n\027streamCouponRedemptions\022\032.si" +
-      "ngle_use_coupons.Coupon\032\006.io.Id\"\207\001\222A\203\001\n\007" +
-      "Coupons\022*Stream Coupon Redemptions (gRPC" +
-      " SDKs only)\032LRedeems existing Coupon rec" +
-      "ords via stream. To be used for batch re" +
-      "demption.(\0010\001\022\216\001\n\rgetCouponById\022\006.io.Id\032" +
-      "\032.single_use_coupons.Coupon\"Y\202\323\344\223\002\037\022\035/co" +
-      "upon/singleUse/coupon/{id}\222A1\n\007Coupons\022\020" +
-      "Get Coupon by ID\032\024Gets a Coupon record\022\364" +
-      "\001\n\025getCouponByExternalId\022%.single_use_co" +
-      "upons.ExternalIdRequest\032\032.single_use_cou" +
-      "pons.Coupon\"\227\001\202\323\344\223\002E\022C/coupon/singleUse/" +
-      "coupon/externalId/{couponCampaignId}/{ex" +
-      "ternalId}\222AI\n\007Coupons\022\031Get Coupon by Ext" +
-      "ernal ID\032#Gets a Coupon record by Extern" +
-      "al ID\022\302\002\n\nvoidCoupon\022\032.single_use_coupon" +
-      "s.Coupon\032\026.google.protobuf.Empty\"\377\001\202\323\344\223\002" +
-      "\035*\030/coupon/singleUse/coupon:\001*\222A\330\001\n\007Coup" +
-      "ons\022\013Void Coupon\032\277\001Voids (deletes) an ex" +
-      "isting Coupon by ID or External ID. Inva" +
-      "lidates the coupon in the customers Mobi" +
-      "le Wallet; rendering it useless. This me" +
-      "thod is irreversible and should be used " +
-      "with care.\022\270\002\n%listCouponsByCouponCampai" +
-      "gnDeprecated\022).single_use_coupons.ListRe" +
-      "questDeprecated\032\032.single_use_coupons.Cou" +
-      "pon\"\305\001\202\323\344\223\002.\022,/coupon/singleUse/coupons/" +
-      "{couponCampaignId}\222A\215\001\n\007Coupons\022\031List Co" +
-      "upons [DEPRECATED]\032g[DEPRECATED: OR oper" +
-      "ator is not supported] List all coupons " +
-      "for a Coupon Campaign. Supports paginati" +
-      "on.0\001\022\327\004\n\033listCouponsByCouponCampaign\022\037." +
-      "single_use_coupons.ListRequest\032\032.single_" +
-      "use_coupons.Coupon\"\370\003\202\323\344\223\0026\"1/coupon/sin" +
-      "gleUse/coupons/list/{couponCampaignId}:\001" +
-      "*\222A\270\003\n\007Coupons\022\014List Coupons\032\236\003List all " +
-      "coupons for a Coupon Campaign. Supports " +
-      "pagination.\n\n<span style=\"font-weight:bo" +
-      "ld\">About filter field names, operators " +
-      "and sample payloads:</span> <a target=\"_" +
-      "blank\" href=\"https://help.passkit.com/en" +
+      "s\">https://help.passkit.com/en/articles/" +
+      "4130967-coupon-protocol-filtering-listin" +
+      "g-and-counting-by-api#filter-offers</a>0" +
+      "\001\022\217\001\n\014createCoupon\022\032.single_use_coupons." +
+      "Coupon\032\006.io.Id\"[\202\323\344\223\002\035\"\030/coupon/singleUs" +
+      "e/coupon:\001*\222A5\n\007Coupons\022\rCreate Coupon\032\033" +
+      "Creates a new unique Coupon\022\216\001\n\014updateCo" +
+      "upon\022\032.single_use_coupons.Coupon\032\006.io.Id" +
+      "\"Z\202\323\344\223\002\035\032\030/coupon/singleUse/coupon:\001*\222A4" +
+      "\n\007Coupons\022\rUpdate Coupon\032\032Updates an exi" +
+      "sting Coupon\022\276\001\n\023streamCouponUpdates\022\032.s" +
+      "ingle_use_coupons.Coupon\032\006.io.Id\"\177\222A|\n\007C" +
+      "oupons\022\'Stream Coupon Updates (gRPC SDKs" +
+      "s only)\032HUpdates existing Coupon records" +
+      " via stream. To be used for batch update" +
+      ".(\0010\001\022\353\002\n\014redeemCoupon\022\032.single_use_coup" +
+      "ons.Coupon\032\006.io.Id\"\266\002\202\323\344\223\002$\032\037/coupon/sin" +
+      "gleUse/coupon/redeem:\001*\222A\210\002\n\007Coupons\022\rRe" +
+      "deem Coupon\032\355\001Redeems an existing Coupon" +
+      ". Use this endpoint when you want to cap" +
+      "ture redemption data and trigger the swi" +
+      "tch to the redemption design of the coup" +
+      "on. The coupon cannot be used again afte" +
+      "r calling this endpoint, and is marked a" +
+      "s redeemed.\022\213\002\n\026updateCouponExternalId\022." +
+      ".single_use_coupons.CouponNewExternalIdR" +
+      "equest\032\006.io.Id\"\270\001\202\323\344\223\002(\032#/coupon/singleU" +
+      "se/coupon/externalId:\001*\222A\206\001\n\007Coupons\022\031Up" +
+      "date Coupon External Id\032`Updates an exte" +
+      "rnal id of an existing coupon. Extenal i" +
+      "d needs to be unique within the campaign" +
+      ".\022\313\001\n\027streamCouponRedemptions\022\032.single_u" +
+      "se_coupons.Coupon\032\006.io.Id\"\207\001\222A\203\001\n\007Coupon" +
+      "s\022*Stream Coupon Redemptions (gRPC SDKs " +
+      "only)\032LRedeems existing Coupon records v" +
+      "ia stream. To be used for batch redempti" +
+      "on.(\0010\001\022\216\001\n\rgetCouponById\022\006.io.Id\032\032.sing" +
+      "le_use_coupons.Coupon\"Y\202\323\344\223\002\037\022\035/coupon/s" +
+      "ingleUse/coupon/{id}\222A1\n\007Coupons\022\020Get Co" +
+      "upon by ID\032\024Gets a Coupon record\022\364\001\n\025get" +
+      "CouponByExternalId\022%.single_use_coupons." +
+      "ExternalIdRequest\032\032.single_use_coupons.C" +
+      "oupon\"\227\001\202\323\344\223\002E\022C/coupon/singleUse/coupon" +
+      "/externalId/{couponCampaignId}/{external" +
+      "Id}\222AI\n\007Coupons\022\031Get Coupon by External " +
+      "ID\032#Gets a Coupon record by External ID\022" +
+      "\302\002\n\nvoidCoupon\022\032.single_use_coupons.Coup" +
+      "on\032\026.google.protobuf.Empty\"\377\001\202\323\344\223\002\035*\030/co" +
+      "upon/singleUse/coupon:\001*\222A\330\001\n\007Coupons\022\013V" +
+      "oid Coupon\032\277\001Voids (deletes) an existing" +
+      " Coupon by ID or External ID. Invalidate" +
+      "s the coupon in the customers Mobile Wal" +
+      "let; rendering it useless. This method i" +
+      "s irreversible and should be used with c" +
+      "are.\022\270\002\n%listCouponsByCouponCampaignDepr" +
+      "ecated\022).single_use_coupons.ListRequestD" +
+      "eprecated\032\032.single_use_coupons.Coupon\"\305\001" +
+      "\202\323\344\223\002.\022,/coupon/singleUse/coupons/{coupo" +
+      "nCampaignId}\222A\215\001\n\007Coupons\022\031List Coupons " +
+      "[DEPRECATED]\032g[DEPRECATED: OR operator i" +
+      "s not supported] List all coupons for a " +
+      "Coupon Campaign. Supports pagination.0\001\022" +
+      "\327\004\n\033listCouponsByCouponCampaign\022\037.single" +
+      "_use_coupons.ListRequest\032\032.single_use_co" +
+      "upons.Coupon\"\370\003\202\323\344\223\0026\"1/coupon/singleUse" +
+      "/coupons/list/{couponCampaignId}:\001*\222A\270\003\n" +
+      "\007Coupons\022\014List Coupons\032\236\003List all coupon" +
+      "s for a Coupon Campaign. Supports pagina" +
+      "tion.\n\n<span style=\"font-weight:bold\">Ab" +
+      "out filter field names, operators and sa" +
+      "mple payloads:</span> <a target=\"_blank\"" +
+      " href=\"https://help.passkit.com/en/artic" +
+      "les/4130967-coupon-protocol-filtering-li" +
+      "sting-and-counting-by-api#filter-coupons" +
+      "\">https://help.passkit.com/en/articles/4" +
+      "130967-coupon-protocol-filtering-listing" +
+      "-and-counting-by-api#filter-coupons</a>0" +
+      "\001\022\230\002\n&countCouponsByCouponCampaignDeprec" +
+      "ated\022).single_use_coupons.ListRequestDep" +
+      "recated\032\t.io.Count\"\267\001\202\323\344\223\0024\0222/coupon/sin" +
+      "gleUse/coupons/count/{couponCampaignId}\222" +
+      "Az\n\007Coupons\022\032Count Coupons [DEPRECATED]\032" +
+      "S[DEPRECATED: OR operator is not support" +
+      "ed] Count all coupons for a Coupon Campa" +
+      "ign.\022\263\004\n\034countCouponsByCouponCampaign\022\037." +
+      "single_use_coupons.ListRequest\032\t.io.Coun" +
+      "t\"\346\003\202\323\344\223\0027\"2/coupon/singleUse/coupons/co" +
+      "unt/{couponCampaignId}:\001*\222A\245\003\n\007Coupons\022\r" +
+      "Count Coupons\032\212\003Count all coupons for a " +
+      "Coupon Campaign.\n\n<span style=\"font-weig" +
+      "ht:bold\">About filter field names, opera" +
+      "tors and sample payloads:</span> <a targ" +
+      "et=\"_blank\" href=\"https://help.passkit.c" +
+      "om/en/articles/4130967-coupon-protocol-f" +
+      "iltering-listing-and-counting-by-api#fil" +
+      "ter-coupons\">https://help.passkit.com/en" +
       "/articles/4130967-coupon-protocol-filter" +
       "ing-listing-and-counting-by-api#filter-c" +
-      "oupons\">https://help.passkit.com/en/arti" +
-      "cles/4130967-coupon-protocol-filtering-l" +
-      "isting-and-counting-by-api#filter-coupon" +
-      "s</a>0\001\022\230\002\n&countCouponsByCouponCampaign" +
-      "Deprecated\022).single_use_coupons.ListRequ" +
-      "estDeprecated\032\t.io.Count\"\267\001\202\323\344\223\0024\0222/coup" +
-      "on/singleUse/coupons/count/{couponCampai" +
-      "gnId}\222Az\n\007Coupons\022\032Count Coupons [DEPREC" +
-      "ATED]\032S[DEPRECATED: OR operator is not s" +
-      "upported] Count all coupons for a Coupon" +
-      " Campaign.\022\263\004\n\034countCouponsByCouponCampa" +
-      "ign\022\037.single_use_coupons.ListRequest\032\t.i" +
-      "o.Count\"\346\003\202\323\344\223\0027\"2/coupon/singleUse/coup" +
-      "ons/count/{couponCampaignId}:\001*\222A\245\003\n\007Cou" +
-      "pons\022\rCount Coupons\032\212\003Count all coupons " +
-      "for a Coupon Campaign.\n\n<span style=\"fon" +
-      "t-weight:bold\">About filter field names," +
-      " operators and sample payloads:</span> <" +
-      "a target=\"_blank\" href=\"https://help.pas" +
-      "skit.com/en/articles/4130967-coupon-prot" +
-      "ocol-filtering-listing-and-counting-by-a" +
-      "pi#filter-coupons\">https://help.passkit." +
-      "com/en/articles/4130967-coupon-protocol-" +
-      "filtering-listing-and-counting-by-api#fi" +
-      "lter-coupons</a>\022\264\001\n\013patchPerson\022\021.io.Pe" +
-      "rsonRequest\032\006.io.Id\"\211\001\202\323\344\223\002$2\037/coupon/si" +
-      "ngleUse/coupon/person:\001*\222A\\\n\007Coupons\022\033Up" +
-      "date Personal Information\0324Updates perso" +
-      "nal information of a coupon pass holder\022" +
-      "\271\001\n\022copyCouponCampaign\022\'.single_use_coup" +
-      "ons.CampaignCopyRequest\032\006.io.Id\"r\202\323\344\223\002$\"" +
-      "\037/coupon/singleUse/campaign/copy:\001*\222AE\n\020" +
-      "Coupon Campaigns\022\rCopy Campaign\032\"Copies " +
-      "an existing campaign record\022\360\001\n\026getMetaK" +
-      "eysForCampaign\022\006.io.Id\032\013.io.Strings\"\300\001\202\323" +
-      "\344\223\002&\022$/coupon/singleUse/campaign/meta/{i" +
-      "d}\222A\220\001\n\020Coupon Campaigns\022\034Get Meta Keys " +
-      "for a Campaign\032^Returns a list of distin" +
-      "ct meta field keys. Can be used for buil" +
-      "ding filters / table headings.B\203\010\n!com.p" +
-      "asskit.grpc.SingleUseCouponsZ7stash.pass" +
-      "kit.com/io/model/sdk/go/io/single_use_co" +
-      "upons\252\002\035PassKit.Grpc.SingleUseCoupons\222A\203" +
-      "\007\022\276\002\n\035PassKit Single Use Coupon API\022\234\001Th" +
-      "is protocol is suit for cases where the " +
-      "user requires a clean and simple single " +
-      "use coupon for short term coupon campaig" +
-      "ns in Apple Wallet and Google Pay.\0328http" +
-      "s://passkit.com/legal/terms-of-subscript" +
-      "ion-service/\"?\n\017PassKit Support\022\027https:/" +
-      "/docs.passkit.io\032\023support@passkit.com2\0031" +
-      ".0*\001\0022\020application/json:\020application/jso" +
-      "nR9\n\003200\0222\n(Returned when the request is" +
-      " successful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned " +
-      "when wrong user input is provided.R0\n\00340" +
-      "1\022)\n\'Returned when the user is unauthori" +
-      "zed.RP\n\003403\022I\nGReturned when the user do" +
-      "es not have permission to access the res" +
-      "ource.R;\n\003404\0224\n*Returned when the resou" +
-      "rce does not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Re" +
-      "turned when there is an unexpected error" +
-      ".\022\006\n\004\232\002\001\007RW\n\003503\022P\nNServer is unavailabl" +
-      "e. Back off for 250ms and repeat request" +
-      " until successful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031" +
-      "JWT Authentication token.\032\rAuthorization" +
-      " \002b\020\n\016\n\napiKeyAuth\022\000b\006proto3"
+      "oupons</a>\022\264\001\n\013patchPerson\022\021.io.PersonRe" +
+      "quest\032\006.io.Id\"\211\001\202\323\344\223\002$2\037/coupon/singleUs" +
+      "e/coupon/person:\001*\222A\\\n\007Coupons\022\033Update P" +
+      "ersonal Information\0324Updates personal in" +
+      "formation of a coupon pass holder\022\271\001\n\022co" +
+      "pyCouponCampaign\022\'.single_use_coupons.Ca" +
+      "mpaignCopyRequest\032\006.io.Id\"r\202\323\344\223\002$\"\037/coup" +
+      "on/singleUse/campaign/copy:\001*\222AE\n\020Coupon" +
+      " Campaigns\022\rCopy Campaign\032\"Copies an exi" +
+      "sting campaign record\022\360\001\n\026getMetaKeysFor" +
+      "Campaign\022\006.io.Id\032\013.io.Strings\"\300\001\202\323\344\223\002&\022$" +
+      "/coupon/singleUse/campaign/meta/{id}\222A\220\001" +
+      "\n\020Coupon Campaigns\022\034Get Meta Keys for a " +
+      "Campaign\032^Returns a list of distinct met" +
+      "a field keys. Can be used for building f" +
+      "ilters / table headings.B\203\010\n!com.passkit" +
+      ".grpc.SingleUseCouponsZ7stash.passkit.co" +
+      "m/io/model/sdk/go/io/single_use_coupons\252" +
+      "\002\035PassKit.Grpc.SingleUseCoupons\222A\203\007\022\276\002\n\035" +
+      "PassKit Single Use Coupon API\022\234\001This pro" +
+      "tocol is suit for cases where the user r" +
+      "equires a clean and simple single use co" +
+      "upon for short term coupon campaigns in " +
+      "Apple Wallet and Google Pay.\0328https://pa" +
+      "sskit.com/legal/terms-of-subscription-se" +
+      "rvice/\"?\n\017PassKit Support\022\027https://docs." +
+      "passkit.io\032\023support@passkit.com2\0031.0*\001\0022" +
+      "\020application/json:\020application/jsonR9\n\0032" +
+      "00\0222\n(Returned when the request is succe" +
+      "ssful.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when w" +
+      "rong user input is provided.R0\n\003401\022)\n\'R" +
+      "eturned when the user is unauthorized.RP" +
+      "\n\003403\022I\nGReturned when the user does not" +
+      " have permission to access the resource." +
+      "R;\n\003404\0224\n*Returned when the resource do" +
+      "es not exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned" +
+      " when there is an unexpected error.\022\006\n\004\232" +
+      "\002\001\007RW\n\003503\022P\nNServer is unavailable. Bac" +
+      "k off for 250ms and repeat request until" +
+      " successful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Au" +
+      "thentication token.\032\rAuthorization \002b\020\n\016" +
+      "\n\napiKeyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

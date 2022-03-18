@@ -707,28 +707,28 @@ public final class Airport {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIataAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iataAirportCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iataAirportCode_);
       }
-      if (!getIcaoAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icaoAirportCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, icaoAirportCode_);
       }
-      if (!getCityNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cityName_);
       }
       if (localizedCityName_ != null) {
         output.writeMessage(4, getLocalizedCityName());
       }
-      if (!getAirportNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, airportName_);
       }
       if (localizedAirportName_ != null) {
         output.writeMessage(6, getLocalizedAirportName());
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, countryCode_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, timezone_);
       }
       unknownFields.writeTo(output);
@@ -740,30 +740,30 @@ public final class Airport {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIataAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iataAirportCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iataAirportCode_);
       }
-      if (!getIcaoAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icaoAirportCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, icaoAirportCode_);
       }
-      if (!getCityNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cityName_);
       }
       if (localizedCityName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedCityName());
       }
-      if (!getAirportNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, airportName_);
       }
       if (localizedAirportName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedAirportName());
       }
-      if (!getCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, countryCode_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, timezone_);
       }
       size += unknownFields.getSerializedSize();
@@ -2254,7 +2254,7 @@ public final class Airport {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, airportCode_);
       }
       unknownFields.writeTo(output);
@@ -2266,7 +2266,7 @@ public final class Airport {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAirportCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, airportCode_);
       }
       size += unknownFields.getSerializedSize();

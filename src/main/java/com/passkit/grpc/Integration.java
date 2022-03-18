@@ -3465,7 +3465,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -3483,7 +3483,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
       }
       for (java.util.Map.Entry<java.lang.Integer, java.lang.String> entry
@@ -4040,7 +4040,10 @@ public final class Integration {
           int key,
           java.lang.String value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableConfigurations().getMutableMap()
             .put(key, value);
         return this;
@@ -4336,7 +4339,7 @@ public final class Integration {
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
       unknownFields.writeTo(output);
@@ -4352,7 +4355,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5083,7 +5086,7 @@ public final class Integration {
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, protocol_);
       }
-      if (!getSubscriptionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subscriptionId_);
       }
       unknownFields.writeTo(output);
@@ -5099,7 +5102,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, protocol_);
       }
-      if (!getSubscriptionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subscriptionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6146,7 +6149,7 @@ public final class Integration {
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
       if (configType_ != com.passkit.grpc.Integration.ConfigurationType.CONFIGURATION_NONE.getNumber()) {
@@ -6174,7 +6177,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
       if (configType_ != com.passkit.grpc.Integration.ConfigurationType.CONFIGURATION_NONE.getNumber()) {
@@ -7450,7 +7453,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDestinationFieldKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFieldKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, destinationFieldKey_);
       }
       if (destinationFieldDataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
@@ -7459,7 +7462,7 @@ public final class Integration {
       if (isRequired_ != false) {
         output.writeBool(3, isRequired_);
       }
-      if (!getSourceFieldUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceFieldUniqueName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, sourceFieldUniqueName_);
       }
       unknownFields.writeTo(output);
@@ -7471,7 +7474,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDestinationFieldKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationFieldKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, destinationFieldKey_);
       }
       if (destinationFieldDataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
@@ -7482,7 +7485,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, isRequired_);
       }
-      if (!getSourceFieldUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceFieldUniqueName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, sourceFieldUniqueName_);
       }
       size += unknownFields.getSerializedSize();
@@ -8437,7 +8440,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, targetUrl_);
       }
       if (actionMethod_ != com.passkit.grpc.Integration.ActionMethod.METHOD_NONE.getNumber()) {
@@ -8455,7 +8458,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, targetUrl_);
       }
       if (actionMethod_ != com.passkit.grpc.Integration.ActionMethod.METHOD_NONE.getNumber()) {
@@ -9350,7 +9353,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEventBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, event_);
       }
       if (pass_ != null) {
@@ -9365,7 +9368,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEventBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, event_);
       }
       if (pass_ != null) {
@@ -10851,10 +10854,10 @@ public final class Integration {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -10873,7 +10876,7 @@ public final class Integration {
       if (configType_ != com.passkit.grpc.Integration.ConfigurationType.CONFIGURATION_NONE.getNumber()) {
         output.writeEnum(6, configType_);
       }
-      if (!getConfigurationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configuration_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, configuration_);
       }
       if (createdAt_ != null) {
@@ -10897,10 +10900,10 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -10927,7 +10930,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, configType_);
       }
-      if (!getConfigurationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configuration_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, configuration_);
       }
       if (createdAt_ != null) {
@@ -12932,7 +12935,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
       }
       if (request_ != null) {
@@ -12947,7 +12950,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
       }
       if (request_ != null) {
@@ -13815,7 +13818,7 @@ public final class Integration {
     @java.lang.Override
     public boolean containsParams(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetParams().getMap().containsKey(key);
     }
     /**
@@ -13850,7 +13853,7 @@ public final class Integration {
     public java.lang.String getParamsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetParams().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -13866,7 +13869,7 @@ public final class Integration {
 
     public java.lang.String getParamsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetParams().getMap();
       if (!map.containsKey(key)) {
@@ -13935,7 +13938,7 @@ public final class Integration {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRequestNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestName_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -13944,7 +13947,7 @@ public final class Integration {
           internalGetParams(),
           ParamsDefaultEntryHolder.defaultEntry,
           2);
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payload_);
       }
       unknownFields.writeTo(output);
@@ -13956,7 +13959,7 @@ public final class Integration {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRequestNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestName_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -13969,7 +13972,7 @@ public final class Integration {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, params__);
       }
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payload_);
       }
       size += unknownFields.getSerializedSize();
@@ -14424,7 +14427,7 @@ public final class Integration {
       @java.lang.Override
       public boolean containsParams(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetParams().getMap().containsKey(key);
       }
       /**
@@ -14459,7 +14462,7 @@ public final class Integration {
       public java.lang.String getParamsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetParams().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -14475,7 +14478,7 @@ public final class Integration {
 
       public java.lang.String getParamsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetParams().getMap();
         if (!map.containsKey(key)) {
@@ -14499,7 +14502,7 @@ public final class Integration {
 
       public Builder removeParams(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableParams().getMutableMap()
             .remove(key);
         return this;
@@ -14522,8 +14525,11 @@ public final class Integration {
       public Builder putParams(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableParams().getMutableMap()
             .put(key, value);
         return this;

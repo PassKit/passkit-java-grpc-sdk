@@ -784,7 +784,7 @@ public final class ProgramOuterClass {
       if (balanceType_ != com.passkit.grpc.Members.ProgramOuterClass.BalanceType.BALANCE_TYPE_STRING.getNumber()) {
         output.writeEnum(1, balanceType_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, currencyCode_);
       }
       unknownFields.writeTo(output);
@@ -800,7 +800,7 @@ public final class ProgramOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, balanceType_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, currencyCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -3038,10 +3038,10 @@ public final class ProgramOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (localizedName_ != null) {
@@ -3057,7 +3057,7 @@ public final class ProgramOuterClass {
       if (quota_ != null) {
         output.writeMessage(5, getQuota());
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, passTypeIdentifier_);
       }
       if (distributionSettings_ != null) {
@@ -3069,7 +3069,7 @@ public final class ProgramOuterClass {
       if (autoReminderDaysBeforeExpiry_ != 0) {
         output.writeUInt32(9, autoReminderDaysBeforeExpiry_);
       }
-      if (!getExpiryMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expiryMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, expiryMessage_);
       }
       if (localizedExpiryMessage_ != null) {
@@ -3117,10 +3117,10 @@ public final class ProgramOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (localizedName_ != null) {
@@ -3143,7 +3143,7 @@ public final class ProgramOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getQuota());
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, passTypeIdentifier_);
       }
       if (distributionSettings_ != null) {
@@ -3158,7 +3158,7 @@ public final class ProgramOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, autoReminderDaysBeforeExpiry_);
       }
-      if (!getExpiryMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(expiryMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, expiryMessage_);
       }
       if (localizedExpiryMessage_ != null) {
@@ -8176,10 +8176,10 @@ public final class ProgramOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (getStatusList().size() > 0) {
@@ -8189,7 +8189,7 @@ public final class ProgramOuterClass {
       for (int i = 0; i < status_.size(); i++) {
         output.writeEnumNoTag(status_.get(i));
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, passTypeIdentifier_);
       }
       unknownFields.writeTo(output);
@@ -8201,10 +8201,10 @@ public final class ProgramOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       {
@@ -8219,7 +8219,7 @@ public final class ProgramOuterClass {
             .computeUInt32SizeNoTag(dataSize);
         }statusMemoizedSerializedSize = dataSize;
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, passTypeIdentifier_);
       }
       size += unknownFields.getSerializedSize();
@@ -10933,10 +10933,10 @@ public final class ProgramOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFieldUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldUniqueName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldUniqueName_);
       }
-      if (!getErrorMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, errorMessage_);
       }
       unknownFields.writeTo(output);
@@ -10948,10 +10948,10 @@ public final class ProgramOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFieldUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldUniqueName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldUniqueName_);
       }
-      if (!getErrorMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, errorMessage_);
       }
       size += unknownFields.getSerializedSize();
@@ -11554,6 +11554,47 @@ public final class ProgramOuterClass {
      */
     com.google.protobuf.ByteString
         getErrorPageBodyBytes();
+
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @return A list containing the fieldsToMatchUponRecovery.
+     */
+    java.util.List<java.lang.String>
+        getFieldsToMatchUponRecoveryList();
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @return The count of fieldsToMatchUponRecovery.
+     */
+    int getFieldsToMatchUponRecoveryCount();
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @param index The index of the element to return.
+     * @return The fieldsToMatchUponRecovery at the given index.
+     */
+    java.lang.String getFieldsToMatchUponRecovery(int index);
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fieldsToMatchUponRecovery at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFieldsToMatchUponRecoveryBytes(int index);
   }
   /**
    * <pre>
@@ -11575,6 +11616,7 @@ public final class ProgramOuterClass {
       delivery_ = 0;
       errorPageHeader_ = "";
       errorPageBody_ = "";
+      fieldsToMatchUponRecovery_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -11597,6 +11639,7 @@ public final class ProgramOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -11630,6 +11673,15 @@ public final class ProgramOuterClass {
               errorPageBody_ = s;
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                fieldsToMatchUponRecovery_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              fieldsToMatchUponRecovery_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11645,6 +11697,9 @@ public final class ProgramOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          fieldsToMatchUponRecovery_ = fieldsToMatchUponRecovery_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -11796,6 +11851,57 @@ public final class ProgramOuterClass {
       }
     }
 
+    public static final int FIELDSTOMATCHUPONRECOVERY_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList fieldsToMatchUponRecovery_;
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @return A list containing the fieldsToMatchUponRecovery.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFieldsToMatchUponRecoveryList() {
+      return fieldsToMatchUponRecovery_;
+    }
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @return The count of fieldsToMatchUponRecovery.
+     */
+    public int getFieldsToMatchUponRecoveryCount() {
+      return fieldsToMatchUponRecovery_.size();
+    }
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @param index The index of the element to return.
+     * @return The fieldsToMatchUponRecovery at the given index.
+     */
+    public java.lang.String getFieldsToMatchUponRecovery(int index) {
+      return fieldsToMatchUponRecovery_.get(index);
+    }
+    /**
+     * <pre>
+     * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+     * </pre>
+     *
+     * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the fieldsToMatchUponRecovery at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFieldsToMatchUponRecoveryBytes(int index) {
+      return fieldsToMatchUponRecovery_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11816,11 +11922,14 @@ public final class ProgramOuterClass {
       if (delivery_ != com.passkit.grpc.Members.ProgramOuterClass.RecoverPassDelivery.DELIVERY_REDIRECT.getNumber()) {
         output.writeEnum(2, delivery_);
       }
-      if (!getErrorPageHeaderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorPageHeader_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, errorPageHeader_);
       }
-      if (!getErrorPageBodyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorPageBody_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errorPageBody_);
+      }
+      for (int i = 0; i < fieldsToMatchUponRecovery_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, fieldsToMatchUponRecovery_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -11839,11 +11948,19 @@ public final class ProgramOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, delivery_);
       }
-      if (!getErrorPageHeaderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorPageHeader_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, errorPageHeader_);
       }
-      if (!getErrorPageBodyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorPageBody_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errorPageBody_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fieldsToMatchUponRecovery_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fieldsToMatchUponRecovery_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFieldsToMatchUponRecoveryList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11867,6 +11984,8 @@ public final class ProgramOuterClass {
           .equals(other.getErrorPageHeader())) return false;
       if (!getErrorPageBody()
           .equals(other.getErrorPageBody())) return false;
+      if (!getFieldsToMatchUponRecoveryList()
+          .equals(other.getFieldsToMatchUponRecoveryList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11887,6 +12006,10 @@ public final class ProgramOuterClass {
       hash = (53 * hash) + getErrorPageHeader().hashCode();
       hash = (37 * hash) + ERRORPAGEBODY_FIELD_NUMBER;
       hash = (53 * hash) + getErrorPageBody().hashCode();
+      if (getFieldsToMatchUponRecoveryCount() > 0) {
+        hash = (37 * hash) + FIELDSTOMATCHUPONRECOVERY_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldsToMatchUponRecoveryList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12032,6 +12155,8 @@ public final class ProgramOuterClass {
 
         errorPageBody_ = "";
 
+        fieldsToMatchUponRecovery_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -12058,10 +12183,16 @@ public final class ProgramOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings buildPartial() {
         com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings result = new com.passkit.grpc.Members.ProgramOuterClass.PassRecoverySettings(this);
+        int from_bitField0_ = bitField0_;
         result.enabled_ = enabled_;
         result.delivery_ = delivery_;
         result.errorPageHeader_ = errorPageHeader_;
         result.errorPageBody_ = errorPageBody_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          fieldsToMatchUponRecovery_ = fieldsToMatchUponRecovery_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.fieldsToMatchUponRecovery_ = fieldsToMatchUponRecovery_;
         onBuilt();
         return result;
       }
@@ -12124,6 +12255,16 @@ public final class ProgramOuterClass {
           errorPageBody_ = other.errorPageBody_;
           onChanged();
         }
+        if (!other.fieldsToMatchUponRecovery_.isEmpty()) {
+          if (fieldsToMatchUponRecovery_.isEmpty()) {
+            fieldsToMatchUponRecovery_ = other.fieldsToMatchUponRecovery_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFieldsToMatchUponRecoveryIsMutable();
+            fieldsToMatchUponRecovery_.addAll(other.fieldsToMatchUponRecovery_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -12152,6 +12293,7 @@ public final class ProgramOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private boolean enabled_ ;
       /**
@@ -12461,6 +12603,152 @@ public final class ProgramOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList fieldsToMatchUponRecovery_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFieldsToMatchUponRecoveryIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          fieldsToMatchUponRecovery_ = new com.google.protobuf.LazyStringArrayList(fieldsToMatchUponRecovery_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @return A list containing the fieldsToMatchUponRecovery.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFieldsToMatchUponRecoveryList() {
+        return fieldsToMatchUponRecovery_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @return The count of fieldsToMatchUponRecovery.
+       */
+      public int getFieldsToMatchUponRecoveryCount() {
+        return fieldsToMatchUponRecovery_.size();
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param index The index of the element to return.
+       * @return The fieldsToMatchUponRecovery at the given index.
+       */
+      public java.lang.String getFieldsToMatchUponRecovery(int index) {
+        return fieldsToMatchUponRecovery_.get(index);
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the fieldsToMatchUponRecovery at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFieldsToMatchUponRecoveryBytes(int index) {
+        return fieldsToMatchUponRecovery_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The fieldsToMatchUponRecovery to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFieldsToMatchUponRecovery(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsToMatchUponRecoveryIsMutable();
+        fieldsToMatchUponRecovery_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param value The fieldsToMatchUponRecovery to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFieldsToMatchUponRecovery(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsToMatchUponRecoveryIsMutable();
+        fieldsToMatchUponRecovery_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param values The fieldsToMatchUponRecovery to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFieldsToMatchUponRecovery(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFieldsToMatchUponRecoveryIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fieldsToMatchUponRecovery_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFieldsToMatchUponRecovery() {
+        fieldsToMatchUponRecovery_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets which person and meta fields to match for pass recovery. This gives you control over how strict you want the match to be. If this is left blank, all person and meta fields provided need to match with what is in the member record.
+       * </pre>
+       *
+       * <code>repeated string fieldsToMatchUponRecovery = 5;</code>
+       * @param value The bytes of the fieldsToMatchUponRecovery to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFieldsToMatchUponRecoveryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFieldsToMatchUponRecoveryIsMutable();
+        fieldsToMatchUponRecovery_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -12615,24 +12903,25 @@ public final class ProgramOuterClass {
       "rograms\030\001 \003(\0132\020.members.Program\"#\n\023GetMe" +
       "taKeysResponse\022\014\n\004keys\030\001 \003(\t\"A\n\020CustomEx" +
       "ternalId\022\027\n\017fieldUniqueName\030\001 \001(\t\022\024\n\014err" +
-      "orMessage\030\002 \001(\t\"\207\001\n\024PassRecoverySettings" +
+      "orMessage\030\002 \001(\t\"\252\001\n\024PassRecoverySettings" +
       "\022\017\n\007enabled\030\001 \001(\010\022.\n\010delivery\030\002 \001(\0162\034.me" +
       "mbers.RecoverPassDelivery\022\027\n\017errorPageHe" +
-      "ader\030\003 \001(\t\022\025\n\rerrorPageBody\030\004 \001(\t*\217\001\n\036Pr" +
-      "ogramAutoUpDownGradeTierType\022\026\n\022UPDOWNGR" +
-      "ADE_POINTS\020\000\022 \n\034UPDOWNGRADE_SECONDARY_PO" +
-      "INTS\020\001\022\033\n\027UPDOWNGRADE_TIER_POINTS\020\002\022\026\n\022U" +
-      "PDOWNGRADE_VISITS\020\003*m\n\013BalanceType\022\027\n\023BA" +
-      "LANCE_TYPE_STRING\020\000\022\024\n\020BALANCE_TYPE_INT\020" +
-      "\001\022\027\n\023BALANCE_TYPE_DOUBLE\020\002\022\026\n\022BALANCE_TY" +
-      "PE_MONEY\020\003*e\n\023ProfileImageSetting\022\026\n\022PRO" +
-      "FILE_IMAGE_NONE\020\000\022\032\n\026PROFILE_IMAGE_OPTIO" +
-      "NAL\020\001\022\032\n\026PROFILE_IMAGE_REQUIRED\020\002*R\n\023Rec" +
-      "overPassDelivery\022\025\n\021DELIVERY_REDIRECT\020\000\022" +
-      "\022\n\016DELIVERY_EMAIL\020\001\022\020\n\014DELIVERY_SMS\020\002B_\n" +
-      "\030com.passkit.grpc.MembersZ,stash.passkit" +
-      ".com/io/model/sdk/go/io/members\252\002\024PassKi" +
-      "t.Grpc.Membersb\006proto3"
+      "ader\030\003 \001(\t\022\025\n\rerrorPageBody\030\004 \001(\t\022!\n\031fie" +
+      "ldsToMatchUponRecovery\030\005 \003(\t*\217\001\n\036Program" +
+      "AutoUpDownGradeTierType\022\026\n\022UPDOWNGRADE_P" +
+      "OINTS\020\000\022 \n\034UPDOWNGRADE_SECONDARY_POINTS\020" +
+      "\001\022\033\n\027UPDOWNGRADE_TIER_POINTS\020\002\022\026\n\022UPDOWN" +
+      "GRADE_VISITS\020\003*m\n\013BalanceType\022\027\n\023BALANCE" +
+      "_TYPE_STRING\020\000\022\024\n\020BALANCE_TYPE_INT\020\001\022\027\n\023" +
+      "BALANCE_TYPE_DOUBLE\020\002\022\026\n\022BALANCE_TYPE_MO" +
+      "NEY\020\003*e\n\023ProfileImageSetting\022\026\n\022PROFILE_" +
+      "IMAGE_NONE\020\000\022\032\n\026PROFILE_IMAGE_OPTIONAL\020\001" +
+      "\022\032\n\026PROFILE_IMAGE_REQUIRED\020\002*R\n\023RecoverP" +
+      "assDelivery\022\025\n\021DELIVERY_REDIRECT\020\000\022\022\n\016DE" +
+      "LIVERY_EMAIL\020\001\022\020\n\014DELIVERY_SMS\020\002B_\n\030com." +
+      "passkit.grpc.MembersZ,stash.passkit.com/" +
+      "io/model/sdk/go/io/members\252\002\024PassKit.Grp" +
+      "c.Membersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12698,7 +12987,7 @@ public final class ProgramOuterClass {
     internal_static_members_PassRecoverySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_members_PassRecoverySettings_descriptor,
-        new java.lang.String[] { "Enabled", "Delivery", "ErrorPageHeader", "ErrorPageBody", });
+        new java.lang.String[] { "Enabled", "Delivery", "ErrorPageHeader", "ErrorPageBody", "FieldsToMatchUponRecovery", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Schema);

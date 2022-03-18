@@ -1179,19 +1179,19 @@ public final class ProductionOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (localizedName_ != null) {
         output.writeMessage(4, getLocalizedName());
       }
-      if (!getFinePrintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finePrint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, finePrint_);
       }
       if (localizedFinePrint_ != null) {
@@ -1213,7 +1213,7 @@ public final class ProductionOuterClass {
       for (int i = 0; i < status_.size(); i++) {
         output.writeEnumNoTag(status_.get(i));
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, passTypeIdentifier_);
       }
       if (distributionSettings_ != null) {
@@ -1234,20 +1234,20 @@ public final class ProductionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (localizedName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedName());
       }
-      if (!getFinePrintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finePrint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, finePrint_);
       }
       if (localizedFinePrint_ != null) {
@@ -1278,7 +1278,7 @@ public final class ProductionOuterClass {
             .computeUInt32SizeNoTag(dataSize);
         }statusMemoizedSerializedSize = dataSize;
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, passTypeIdentifier_);
       }
       if (distributionSettings_ != null) {
@@ -3909,7 +3909,7 @@ public final class ProductionOuterClass {
     @java.lang.Override
     public boolean containsSources(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSources().getMap().containsKey(key);
     }
     /**
@@ -3944,7 +3944,7 @@ public final class ProductionOuterClass {
     public int getSourcesOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetSources().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3960,7 +3960,7 @@ public final class ProductionOuterClass {
 
     public int getSourcesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetSources().getMap();
       if (!map.containsKey(key)) {
@@ -4792,7 +4792,7 @@ public final class ProductionOuterClass {
       @java.lang.Override
       public boolean containsSources(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetSources().getMap().containsKey(key);
       }
       /**
@@ -4827,7 +4827,7 @@ public final class ProductionOuterClass {
       public int getSourcesOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetSources().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4843,7 +4843,7 @@ public final class ProductionOuterClass {
 
       public int getSourcesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetSources().getMap();
         if (!map.containsKey(key)) {
@@ -4867,7 +4867,7 @@ public final class ProductionOuterClass {
 
       public Builder removeSources(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableSources().getMutableMap()
             .remove(key);
         return this;
@@ -4890,7 +4890,7 @@ public final class ProductionOuterClass {
       public Builder putSources(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableSources().getMutableMap()
             .put(key, value);
@@ -5822,13 +5822,13 @@ public final class ProductionOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (getStatusList().size() > 0) {
@@ -5838,7 +5838,7 @@ public final class ProductionOuterClass {
       for (int i = 0; i < status_.size(); i++) {
         output.writeEnumNoTag(status_.get(i));
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, passTypeIdentifier_);
       }
       unknownFields.writeTo(output);
@@ -5850,13 +5850,13 @@ public final class ProductionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       {
@@ -5871,7 +5871,7 @@ public final class ProductionOuterClass {
             .computeUInt32SizeNoTag(dataSize);
         }statusMemoizedSerializedSize = dataSize;
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, passTypeIdentifier_);
       }
       size += unknownFields.getSerializedSize();
@@ -7146,13 +7146,13 @@ public final class ProductionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       unknownFields.writeTo(output);
@@ -7164,13 +7164,13 @@ public final class ProductionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       size += unknownFields.getSerializedSize();

@@ -896,7 +896,7 @@ public final class PassOuterClass {
     @java.lang.Override
     public boolean containsDynamicData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetDynamicData().getMap().containsKey(key);
     }
     /**
@@ -931,7 +931,7 @@ public final class PassOuterClass {
     public java.lang.String getDynamicDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDynamicData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -947,7 +947,7 @@ public final class PassOuterClass {
 
     public java.lang.String getDynamicDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetDynamicData().getMap();
       if (!map.containsKey(key)) {
@@ -1266,16 +1266,16 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, passProjectId_);
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, passTemplateId_);
       }
       if (personalDetails_ != null) {
@@ -1323,16 +1323,16 @@ public final class PassOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, passProjectId_);
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, passTemplateId_);
       }
       if (personalDetails_ != null) {
@@ -2512,7 +2512,7 @@ public final class PassOuterClass {
       @java.lang.Override
       public boolean containsDynamicData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetDynamicData().getMap().containsKey(key);
       }
       /**
@@ -2547,7 +2547,7 @@ public final class PassOuterClass {
       public java.lang.String getDynamicDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetDynamicData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2563,7 +2563,7 @@ public final class PassOuterClass {
 
       public java.lang.String getDynamicDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetDynamicData().getMap();
         if (!map.containsKey(key)) {
@@ -2587,7 +2587,7 @@ public final class PassOuterClass {
 
       public Builder removeDynamicData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableDynamicData().getMutableMap()
             .remove(key);
         return this;
@@ -2610,8 +2610,11 @@ public final class PassOuterClass {
       public Builder putDynamicData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableDynamicData().getMutableMap()
             .put(key, value);
         return this;
@@ -4095,10 +4098,10 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passProjectId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
       unknownFields.writeTo(output);
@@ -4110,10 +4113,10 @@ public final class PassOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passProjectId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
       size += unknownFields.getSerializedSize();
@@ -4850,7 +4853,7 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passProjectId_);
       }
       if (filters_ != null) {
@@ -4865,7 +4868,7 @@ public final class PassOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passProjectId_);
       }
       if (filters_ != null) {
@@ -5621,7 +5624,7 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passProjectId_);
       }
       if (filters_ != null) {
@@ -5636,7 +5639,7 @@ public final class PassOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPassProjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passProjectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passProjectId_);
       }
       if (filters_ != null) {

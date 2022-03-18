@@ -1248,7 +1248,7 @@ public final class MemberEventsOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -1283,7 +1283,7 @@ public final class MemberEventsOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1299,7 +1299,7 @@ public final class MemberEventsOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -1482,7 +1482,7 @@ public final class MemberEventsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (member_ != null) {
@@ -1491,28 +1491,28 @@ public final class MemberEventsOuterClass {
       if (eventType_ != com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvents.EVENT_MEMBER_DO_NOT_USE.getNumber()) {
         output.writeEnum(3, eventType_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, address_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(5, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(6, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(7, alt_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, externalId_);
       }
-      if (!getExternalUserIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalUserId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, externalUserId_);
       }
-      if (!getExternalDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalDeviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, externalDeviceId_);
       }
-      if (!getExternalServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalServiceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, externalServiceId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -1521,7 +1521,7 @@ public final class MemberEventsOuterClass {
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
           12);
-      if (!getNotesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 13, notes_);
       }
       if (date_ != null) {
@@ -1542,7 +1542,7 @@ public final class MemberEventsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (member_ != null) {
@@ -1553,14 +1553,14 @@ public final class MemberEventsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, eventType_);
       }
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, address_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(5, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(6, lon_);
       }
@@ -1568,16 +1568,16 @@ public final class MemberEventsOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, alt_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, externalId_);
       }
-      if (!getExternalUserIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalUserId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, externalUserId_);
       }
-      if (!getExternalDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalDeviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, externalDeviceId_);
       }
-      if (!getExternalServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalServiceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, externalServiceId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -1590,7 +1590,7 @@ public final class MemberEventsOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(12, metaData__);
       }
-      if (!getNotesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, notes_);
       }
       if (date_ != null) {
@@ -3089,7 +3089,7 @@ public final class MemberEventsOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -3124,7 +3124,7 @@ public final class MemberEventsOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3140,7 +3140,7 @@ public final class MemberEventsOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -3164,7 +3164,7 @@ public final class MemberEventsOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -3187,8 +3187,11 @@ public final class MemberEventsOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -4359,19 +4362,19 @@ public final class MemberEventsOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      if (!getGroupingIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, groupingIdentifier_);
       }
-      if (!getTierIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tierId_);
       }
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, programId_);
       }
       if (person_ != null) {
@@ -4386,19 +4389,19 @@ public final class MemberEventsOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      if (!getGroupingIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, groupingIdentifier_);
       }
-      if (!getTierIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tierId_);
       }
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, programId_);
       }
       if (person_ != null) {

@@ -22,7 +22,7 @@ public final class Annotations {
   public static final int OPENAPIV2_SWAGGER_FIELD_NUMBER = 1042;
   /**
    * <pre>
-   * ID assigned by protobuf-global-extension-registry&#64;google.com for grpc-gateway project.
+   * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -39,7 +39,7 @@ public final class Annotations {
   public static final int OPENAPIV2_OPERATION_FIELD_NUMBER = 1042;
   /**
    * <pre>
-   * ID assigned by protobuf-global-extension-registry&#64;google.com for grpc-gateway project.
+   * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -56,7 +56,7 @@ public final class Annotations {
   public static final int OPENAPIV2_SCHEMA_FIELD_NUMBER = 1042;
   /**
    * <pre>
-   * ID assigned by protobuf-global-extension-registry&#64;google.com for grpc-gateway project.
+   * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -73,7 +73,7 @@ public final class Annotations {
   public static final int OPENAPIV2_TAG_FIELD_NUMBER = 1042;
   /**
    * <pre>
-   * ID assigned by protobuf-global-extension-registry&#64;google.com for grpc-gateway project.
+   * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -90,7 +90,7 @@ public final class Annotations {
   public static final int OPENAPIV2_FIELD_FIELD_NUMBER = 1042;
   /**
    * <pre>
-   * ID assigned by protobuf-global-extension-registry&#64;google.com for grpc-gateway project.
+   * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>

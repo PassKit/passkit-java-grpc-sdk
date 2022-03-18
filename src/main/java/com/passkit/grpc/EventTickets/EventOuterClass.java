@@ -1040,7 +1040,7 @@ public final class EventOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (production_ != null) {
@@ -1085,7 +1085,7 @@ public final class EventOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (production_ != null) {
@@ -3964,7 +3964,7 @@ public final class EventOuterClass {
       if (productionCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, production_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, venueId_);
       }
       if (filters_ != null) {
@@ -3985,7 +3985,7 @@ public final class EventOuterClass {
       if (productionCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, production_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, venueId_);
       }
       if (filters_ != null) {
@@ -7048,7 +7048,7 @@ public final class EventOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (scheduledStartDate_ != null) {
@@ -7069,7 +7069,7 @@ public final class EventOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (scheduledStartDate_ != null) {
@@ -8982,10 +8982,10 @@ public final class EventOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, venueId_);
       }
       if (doorsOpen_ != null) {
@@ -9024,10 +9024,10 @@ public final class EventOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, venueId_);
       }
       if (doorsOpen_ != null) {
@@ -12222,7 +12222,7 @@ public final class EventOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (production_ != null) {
@@ -12267,7 +12267,7 @@ public final class EventOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (production_ != null) {

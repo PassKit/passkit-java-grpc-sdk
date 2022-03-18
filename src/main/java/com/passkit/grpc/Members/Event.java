@@ -625,7 +625,7 @@ public final class Event {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -660,7 +660,7 @@ public final class Event {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -676,7 +676,7 @@ public final class Event {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -745,25 +745,25 @@ public final class Event {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(3, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(4, alt_);
       }
-      if (!getExternalEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalEventId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, externalEventId_);
       }
-      if (!getExternalDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalDeviceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, externalDeviceId_);
       }
-      if (!getExternalServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalServiceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, externalServiceId_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -772,7 +772,7 @@ public final class Event {
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
           8);
-      if (!getNotesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, notes_);
       }
       unknownFields.writeTo(output);
@@ -784,14 +784,14 @@ public final class Event {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, lon_);
       }
@@ -799,13 +799,13 @@ public final class Event {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, alt_);
       }
-      if (!getExternalEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalEventId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, externalEventId_);
       }
-      if (!getExternalDeviceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalDeviceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, externalDeviceId_);
       }
-      if (!getExternalServiceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalServiceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, externalServiceId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -818,7 +818,7 @@ public final class Event {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(8, metaData__);
       }
-      if (!getNotesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, notes_);
       }
       size += unknownFields.getSerializedSize();
@@ -1761,7 +1761,7 @@ public final class Event {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -1796,7 +1796,7 @@ public final class Event {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1812,7 +1812,7 @@ public final class Event {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -1836,7 +1836,7 @@ public final class Event {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -1859,8 +1859,11 @@ public final class Event {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;

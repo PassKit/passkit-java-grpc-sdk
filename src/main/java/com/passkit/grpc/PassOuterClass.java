@@ -4075,7 +4075,7 @@ public final class PassOuterClass {
     @java.lang.Override
     public boolean containsRecordData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetRecordData().getMap().containsKey(key);
     }
     /**
@@ -4110,7 +4110,7 @@ public final class PassOuterClass {
     public java.lang.String getRecordDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetRecordData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4126,7 +4126,7 @@ public final class PassOuterClass {
 
     public java.lang.String getRecordDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetRecordData().getMap();
       if (!map.containsKey(key)) {
@@ -4195,10 +4195,10 @@ public final class PassOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -4216,7 +4216,7 @@ public final class PassOuterClass {
           internalGetRecordData(),
           RecordDataDefaultEntryHolder.defaultEntry,
           6);
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, externalId_);
       }
       unknownFields.writeTo(output);
@@ -4228,10 +4228,10 @@ public final class PassOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -4256,7 +4256,7 @@ public final class PassOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, recordData__);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, externalId_);
       }
       size += unknownFields.getSerializedSize();
@@ -5261,7 +5261,7 @@ public final class PassOuterClass {
       @java.lang.Override
       public boolean containsRecordData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetRecordData().getMap().containsKey(key);
       }
       /**
@@ -5296,7 +5296,7 @@ public final class PassOuterClass {
       public java.lang.String getRecordDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetRecordData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5312,7 +5312,7 @@ public final class PassOuterClass {
 
       public java.lang.String getRecordDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetRecordData().getMap();
         if (!map.containsKey(key)) {
@@ -5336,7 +5336,7 @@ public final class PassOuterClass {
 
       public Builder removeRecordData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableRecordData().getMutableMap()
             .remove(key);
         return this;
@@ -5359,8 +5359,11 @@ public final class PassOuterClass {
       public Builder putRecordData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableRecordData().getMutableMap()
             .put(key, value);
         return this;

@@ -2161,37 +2161,37 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getOfferTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerTitle_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, offerTitle_);
       }
       if (localizedOfferTitle_ != null) {
         output.writeMessage(3, getLocalizedOfferTitle());
       }
-      if (!getOfferShortTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerShortTitle_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, offerShortTitle_);
       }
       if (localizedOfferShortTitle_ != null) {
         output.writeMessage(5, getLocalizedOfferShortTitle());
       }
-      if (!getOfferDetailsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerDetails_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, offerDetails_);
       }
       if (localizedOfferDetails_ != null) {
         output.writeMessage(7, getLocalizedOfferDetails());
       }
-      if (!getOfferFinePrintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerFinePrint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, offerFinePrint_);
       }
       if (localizedOfferFinePrint_ != null) {
         output.writeMessage(9, getLocalizedOfferFinePrint());
       }
-      if (!getBeforeRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beforeRedeemPassTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, beforeRedeemPassTemplateId_);
       }
-      if (!getAfterRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemPassTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, afterRedeemPassTemplateId_);
       }
       if (quota_ != null) {
@@ -2215,16 +2215,16 @@ public final class Offer {
       if (updated_ != null) {
         output.writeMessage(18, getUpdated());
       }
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, campaignId_);
       }
       if (distributionSettings_ != null) {
         output.writeMessage(20, getDistributionSettings());
       }
-      if (!getShortCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 21, shortCode_);
       }
-      if (!getIanaTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ianaTimezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, ianaTimezone_);
       }
       if (disabled_ != false) {
@@ -2239,41 +2239,41 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getOfferTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerTitle_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, offerTitle_);
       }
       if (localizedOfferTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLocalizedOfferTitle());
       }
-      if (!getOfferShortTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerShortTitle_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, offerShortTitle_);
       }
       if (localizedOfferShortTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLocalizedOfferShortTitle());
       }
-      if (!getOfferDetailsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerDetails_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, offerDetails_);
       }
       if (localizedOfferDetails_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getLocalizedOfferDetails());
       }
-      if (!getOfferFinePrintBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerFinePrint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, offerFinePrint_);
       }
       if (localizedOfferFinePrint_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getLocalizedOfferFinePrint());
       }
-      if (!getBeforeRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beforeRedeemPassTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, beforeRedeemPassTemplateId_);
       }
-      if (!getAfterRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemPassTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, afterRedeemPassTemplateId_);
       }
       if (quota_ != null) {
@@ -2304,17 +2304,17 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(18, getUpdated());
       }
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, campaignId_);
       }
       if (distributionSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(20, getDistributionSettings());
       }
-      if (!getShortCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, shortCode_);
       }
-      if (!getIanaTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ianaTimezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, ianaTimezone_);
       }
       if (disabled_ != false) {
@@ -8973,7 +8973,7 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFixedCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fixedCode_);
       }
       if (useCouponSku_ != false) {
@@ -8994,7 +8994,7 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFixedCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fixedCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fixedCode_);
       }
       if (useCouponSku_ != false) {
@@ -10024,7 +10024,7 @@ public final class Offer {
       if (timeoutSeconds_ != 0) {
         output.writeUInt32(1, timeoutSeconds_);
       }
-      if (!getTimerHelpTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timerHelpText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, timerHelpText_);
       }
       if (localizedTimeHelpText_ != null) {
@@ -10043,7 +10043,7 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, timeoutSeconds_);
       }
-      if (!getTimerHelpTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timerHelpText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, timerHelpText_);
       }
       if (localizedTimeHelpText_ != null) {
@@ -11138,7 +11138,7 @@ public final class Offer {
       if (redemptionCodeInput_ != null) {
         output.writeMessage(2, getRedemptionCodeInput());
       }
-      if (!getSubmitButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, submitButtonText_);
       }
       if (localizedSubmitButtonText_ != null) {
@@ -11165,7 +11165,7 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getRedemptionCodeInput());
       }
-      if (!getSubmitButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, submitButtonText_);
       }
       if (localizedSubmitButtonText_ != null) {
@@ -13043,37 +13043,37 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
       }
       if (localizedLabel_ != null) {
         output.writeMessage(2, getLocalizedLabel());
       }
-      if (!getHelperTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helperText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, helperText_);
       }
       if (localizedHelperText_ != null) {
         output.writeMessage(4, getLocalizedHelperText());
       }
-      if (!getErrorMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, errorMessage_);
       }
       if (localizedErrorMessage_ != null) {
         output.writeMessage(6, getLocalizedErrorMessage());
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         output.writeMessage(8, getLocalizedDefaultValue());
       }
-      if (!getPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placeholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, placeholder_);
       }
       if (localizedPlaceholder_ != null) {
         output.writeMessage(10, getLocalizedPlaceholder());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, validation_);
       }
       unknownFields.writeTo(output);
@@ -13085,42 +13085,42 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
       }
       if (localizedLabel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedLabel());
       }
-      if (!getHelperTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helperText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, helperText_);
       }
       if (localizedHelperText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedHelperText());
       }
-      if (!getErrorMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, errorMessage_);
       }
       if (localizedErrorMessage_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedErrorMessage());
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLocalizedDefaultValue());
       }
-      if (!getPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placeholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, placeholder_);
       }
       if (localizedPlaceholder_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocalizedPlaceholder());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, validation_);
       }
       size += unknownFields.getSerializedSize();
@@ -15987,13 +15987,13 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
       }
       if (localizedTitle_ != null) {
         output.writeMessage(2, getLocalizedTitle());
       }
-      if (!getRedemptionInstructionsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionInstructions_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, redemptionInstructions_);
       }
       if (localizedRedemptionInstructions_ != null) {
@@ -16005,7 +16005,7 @@ public final class Offer {
       if (redemptionImageAssetsCase_ == 6) {
         output.writeMessage(6, (com.passkit.grpc.Image.ImageData) redemptionImageAssets_);
       }
-      if (!getFooterTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, footerText_);
       }
       if (localizedFooterText_ != null) {
@@ -16020,7 +16020,7 @@ public final class Offer {
       if (callToActionButton_ != null) {
         output.writeMessage(11, getCallToActionButton());
       }
-      if (!getCssOverridesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cssOverrides_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, cssOverrides_);
       }
       unknownFields.writeTo(output);
@@ -16032,14 +16032,14 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
       }
       if (localizedTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedTitle());
       }
-      if (!getRedemptionInstructionsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionInstructions_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, redemptionInstructions_);
       }
       if (localizedRedemptionInstructions_ != null) {
@@ -16054,7 +16054,7 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, (com.passkit.grpc.Image.ImageData) redemptionImageAssets_);
       }
-      if (!getFooterTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, footerText_);
       }
       if (localizedFooterText_ != null) {
@@ -16073,7 +16073,7 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getCallToActionButton());
       }
-      if (!getCssOverridesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cssOverrides_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, cssOverrides_);
       }
       size += unknownFields.getSerializedSize();
@@ -18616,13 +18616,13 @@ public final class Offer {
       if (hideCallToActionButton_ != false) {
         output.writeBool(1, hideCallToActionButton_);
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, buttonText_);
       }
       if (localizedButtonText_ != null) {
         output.writeMessage(3, getLocalizedButtonText());
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, link_);
       }
       if (localizedLink_ != null) {
@@ -18641,14 +18641,14 @@ public final class Offer {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, hideCallToActionButton_);
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, buttonText_);
       }
       if (localizedButtonText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLocalizedButtonText());
       }
-      if (!getLinkBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(link_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, link_);
       }
       if (localizedLink_ != null) {
@@ -20606,37 +20606,37 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRedeemConfirmationDialogBoxTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemConfirmationDialogBoxText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, redeemConfirmationDialogBoxText_);
       }
       if (localizedRedeemConfirmationDialogBoxText_ != null) {
         output.writeMessage(2, getLocalizedRedeemConfirmationDialogBoxText());
       }
-      if (!getCancelRedeemTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelRedeemText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cancelRedeemText_);
       }
       if (localizedCancelRedeemText_ != null) {
         output.writeMessage(4, getLocalizedCancelRedeemText());
       }
-      if (!getAfterRedeemTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, afterRedeemText_);
       }
       if (localizedAfterRedeemText_ != null) {
         output.writeMessage(6, getLocalizedAfterRedeemText());
       }
-      if (!getCouponAlreadyRedeemedTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponAlreadyRedeemedText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, couponAlreadyRedeemedText_);
       }
       if (localizedCouponAlreadyRedeemedText_ != null) {
         output.writeMessage(8, getLocalizedCouponAlreadyRedeemedText());
       }
-      if (!getOfferExpiredTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerExpiredText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, offerExpiredText_);
       }
       if (localizedOfferExpiredText_ != null) {
         output.writeMessage(10, getLocalizedOfferExpiredText());
       }
-      if (!getCouponExpiredTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponExpiredText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, couponExpiredText_);
       }
       if (localizedCouponExpiredText_ != null) {
@@ -20651,42 +20651,42 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRedeemConfirmationDialogBoxTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemConfirmationDialogBoxText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, redeemConfirmationDialogBoxText_);
       }
       if (localizedRedeemConfirmationDialogBoxText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedRedeemConfirmationDialogBoxText());
       }
-      if (!getCancelRedeemTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelRedeemText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cancelRedeemText_);
       }
       if (localizedCancelRedeemText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedCancelRedeemText());
       }
-      if (!getAfterRedeemTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, afterRedeemText_);
       }
       if (localizedAfterRedeemText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedAfterRedeemText());
       }
-      if (!getCouponAlreadyRedeemedTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponAlreadyRedeemedText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, couponAlreadyRedeemedText_);
       }
       if (localizedCouponAlreadyRedeemedText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLocalizedCouponAlreadyRedeemedText());
       }
-      if (!getOfferExpiredTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerExpiredText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, offerExpiredText_);
       }
       if (localizedOfferExpiredText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocalizedOfferExpiredText());
       }
-      if (!getCouponExpiredTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponExpiredText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, couponExpiredText_);
       }
       if (localizedCouponExpiredText_ != null) {
@@ -22942,7 +22942,7 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
       if (pagination_ != null) {
@@ -22957,7 +22957,7 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
       }
       if (pagination_ != null) {
@@ -23717,7 +23717,7 @@ public final class Offer {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, campaignId_);
       }
       if (filters_ != null) {
@@ -23732,7 +23732,7 @@ public final class Offer {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, campaignId_);
       }
       if (filters_ != null) {

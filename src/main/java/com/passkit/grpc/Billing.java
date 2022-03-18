@@ -744,7 +744,10 @@ public final class Billing {
           int key,
           com.passkit.grpc.Billing.QuotaDetails value) {
         
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableDetails().getMutableMap()
             .put(key, value);
         return this;

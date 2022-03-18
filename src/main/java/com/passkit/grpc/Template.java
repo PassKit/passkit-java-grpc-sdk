@@ -4019,13 +4019,13 @@ public final class Template {
       if (listPriority_ != 0) {
         output.writeUInt32(1, listPriority_);
       }
-      if (!getTextLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textLabel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, textLabel_);
       }
       if (localizedTextLabel_ != null) {
         output.writeMessage(3, getLocalizedTextLabel());
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, value_);
       }
       unknownFields.writeTo(output);
@@ -4041,14 +4041,14 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, listPriority_);
       }
-      if (!getTextLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textLabel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, textLabel_);
       }
       if (localizedTextLabel_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLocalizedTextLabel());
       }
-      if (!getValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(value_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, value_);
       }
       size += unknownFields.getSerializedSize();
@@ -5135,19 +5135,19 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, payload_);
       }
       if (format_ != com.passkit.grpc.Template.BarcodeType.BARCODE_TYPE_DO_NOT_USE.getNumber()) {
         output.writeEnum(2, format_);
       }
-      if (!getAltTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(altText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, altText_);
       }
       if (localizedAltText_ != null) {
         output.writeMessage(4, getLocalizedAltText());
       }
-      if (!getMessageEncodingBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageEncoding_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, messageEncoding_);
       }
       unknownFields.writeTo(output);
@@ -5159,21 +5159,21 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, payload_);
       }
       if (format_ != com.passkit.grpc.Template.BarcodeType.BARCODE_TYPE_DO_NOT_USE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, format_);
       }
-      if (!getAltTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(altText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, altText_);
       }
       if (localizedAltText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedAltText());
       }
-      if (!getMessageEncodingBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageEncoding_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, messageEncoding_);
       }
       size += unknownFields.getSerializedSize();
@@ -7881,10 +7881,10 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -7896,13 +7896,13 @@ public final class Template {
       if (defaultLanguage_ != com.passkit.grpc.Localization.LanguageCode.EN.getNumber()) {
         output.writeEnum(5, defaultLanguage_);
       }
-      if (!getOrganizationNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, organizationName_);
       }
       if (localizedOrganizationName_ != null) {
         output.writeMessage(7, getLocalizedOrganizationName());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, description_);
       }
       if (localizedDescription_ != null) {
@@ -7944,7 +7944,7 @@ public final class Template {
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(21, links_.get(i));
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 22, timezone_);
       }
       if (expirySettings_ != null) {
@@ -7962,10 +7962,10 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -7980,14 +7980,14 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, defaultLanguage_);
       }
-      if (!getOrganizationNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(organizationName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, organizationName_);
       }
       if (localizedOrganizationName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getLocalizedOrganizationName());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, description_);
       }
       if (localizedDescription_ != null) {
@@ -8042,7 +8042,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, links_.get(i));
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, timezone_);
       }
       if (expirySettings_ != null) {
@@ -13071,10 +13071,10 @@ public final class Template {
       if (passType_ != com.passkit.grpc.Template.ApplePassType.APPLE_NOT_SUPPORTED.getNumber()) {
         output.writeEnum(1, passType_);
       }
-      if (!getUserInfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userInfo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userInfo_);
       }
-      if (!getAppLaunchUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appLaunchUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, appLaunchUrl_);
       }
       if (getAssociatedStoreIdentifiersList().size() > 0) {
@@ -13093,7 +13093,7 @@ public final class Template {
       if (transitType_ != com.passkit.grpc.Template.TransitType.TRANSIT_TYPE_DO_NOT_USE.getNumber()) {
         output.writeEnum(7, transitType_);
       }
-      if (!getGroupingIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, groupingIdentifier_);
       }
       unknownFields.writeTo(output);
@@ -13109,10 +13109,10 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, passType_);
       }
-      if (!getUserInfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userInfo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userInfo_);
       }
-      if (!getAppLaunchUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(appLaunchUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, appLaunchUrl_);
       }
       {
@@ -13145,7 +13145,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, transitType_);
       }
-      if (!getGroupingIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, groupingIdentifier_);
       }
       size += unknownFields.getSerializedSize();
@@ -14967,10 +14967,10 @@ public final class Template {
       if (webApp_ != null) {
         output.writeMessage(4, getWebApp());
       }
-      if (!getClassTemplateInfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classTemplateInfo_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, classTemplateInfo_);
       }
-      if (!getBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, backgroundColor_);
       }
       if (getLanguageOverridesList().size() > 0) {
@@ -15005,10 +15005,10 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getWebApp());
       }
-      if (!getClassTemplateInfoBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classTemplateInfo_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, classTemplateInfo_);
       }
-      if (!getBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, backgroundColor_);
       }
       {
@@ -17017,19 +17017,19 @@ public final class Template {
       if (url_ != null) {
         output.writeMessage(1, getUrl());
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
       }
       if (localizedTitle_ != null) {
         output.writeMessage(3, getLocalizedTitle());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
       if (localizedDescription_ != null) {
         output.writeMessage(5, getLocalizedDescription());
       }
-      if (!getUrlDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(urlDescription_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, urlDescription_);
       }
       if (localizedUrlDescription_ != null) {
@@ -17048,21 +17048,21 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getUrl());
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
       }
       if (localizedTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getLocalizedTitle());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
       if (localizedDescription_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLocalizedDescription());
       }
-      if (!getUrlDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(urlDescription_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, urlDescription_);
       }
       if (localizedUrlDescription_ != null) {
@@ -19714,6 +19714,60 @@ public final class Template {
      * @return The preferredAndroidWallet.
      */
     com.passkit.grpc.Template.SupportedAndroidWallet getPreferredAndroidWallet();
+
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    int getLocalizedTextOverridesCount();
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    boolean containsLocalizedTextOverrides(
+        java.lang.String key);
+    /**
+     * Use {@link #getLocalizedTextOverridesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+    getLocalizedTextOverrides();
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+    getLocalizedTextOverridesMap();
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+
+    com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrDefault(
+        java.lang.String key,
+        com.passkit.grpc.Localization.LocalizedString defaultValue);
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+
+    com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code io.LandingPageSettings}
@@ -19799,6 +19853,19 @@ public final class Template {
               preferredAndroidWallet_ = rawValue;
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                localizedTextOverrides_ = com.google.protobuf.MapField.newMapField(
+                    LocalizedTextOverridesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000002;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+              localizedTextOverrides__ = input.readMessage(
+                  LocalizedTextOverridesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              localizedTextOverrides_.getMutableMap().put(
+                  localizedTextOverrides__.getKey(), localizedTextOverrides__.getValue());
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -19826,6 +19893,18 @@ public final class Template {
       return com.passkit.grpc.Template.internal_static_io_LandingPageSettings_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLocalizedTextOverrides();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -19966,6 +20045,103 @@ public final class Template {
       return result == null ? com.passkit.grpc.Template.SupportedAndroidWallet.UNRECOGNIZED : result;
     }
 
+    public static final int LOCALIZEDTEXTOVERRIDES_FIELD_NUMBER = 4;
+    private static final class LocalizedTextOverridesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.passkit.grpc.Localization.LocalizedString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.passkit.grpc.Localization.LocalizedString>newDefaultInstance(
+                  com.passkit.grpc.Template.internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.passkit.grpc.Localization.LocalizedString.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, com.passkit.grpc.Localization.LocalizedString> localizedTextOverrides_;
+    private com.google.protobuf.MapField<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+    internalGetLocalizedTextOverrides() {
+      if (localizedTextOverrides_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LocalizedTextOverridesDefaultEntryHolder.defaultEntry);
+      }
+      return localizedTextOverrides_;
+    }
+
+    public int getLocalizedTextOverridesCount() {
+      return internalGetLocalizedTextOverrides().getMap().size();
+    }
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLocalizedTextOverrides(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLocalizedTextOverrides().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLocalizedTextOverridesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> getLocalizedTextOverrides() {
+      return getLocalizedTextOverridesMap();
+    }
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> getLocalizedTextOverridesMap() {
+      return internalGetLocalizedTextOverrides().getMap();
+    }
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    @java.lang.Override
+
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrDefault(
+        java.lang.String key,
+        com.passkit.grpc.Localization.LocalizedString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> map =
+          internalGetLocalizedTextOverrides().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+     * </pre>
+     *
+     * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+     */
+    @java.lang.Override
+
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> map =
+          internalGetLocalizedTextOverrides().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19994,6 +20170,12 @@ public final class Template {
       if (preferredAndroidWallet_ != com.passkit.grpc.Template.SupportedAndroidWallet.ANDROID_WALLET_DO_NOT_USE.getNumber()) {
         output.writeEnum(3, preferredAndroidWallet_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLocalizedTextOverrides(),
+          LocalizedTextOverridesDefaultEntryHolder.defaultEntry,
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -20023,6 +20205,16 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, preferredAndroidWallet_);
       }
+      for (java.util.Map.Entry<java.lang.String, com.passkit.grpc.Localization.LocalizedString> entry
+           : internalGetLocalizedTextOverrides().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+        localizedTextOverrides__ = LocalizedTextOverridesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, localizedTextOverrides__);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -20041,6 +20233,8 @@ public final class Template {
       if (!landingLocalizationOverride_.equals(other.landingLocalizationOverride_)) return false;
       if (preferThirdPartyAndroidWallet_ != other.preferThirdPartyAndroidWallet_) return false;
       if (preferredAndroidWallet_ != other.preferredAndroidWallet_) return false;
+      if (!internalGetLocalizedTextOverrides().equals(
+          other.internalGetLocalizedTextOverrides())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20060,6 +20254,10 @@ public final class Template {
       hash = (53 * hash) + preferThirdPartyAndroidWallet_;
       hash = (37 * hash) + PREFERREDANDROIDWALLET_FIELD_NUMBER;
       hash = (53 * hash) + preferredAndroidWallet_;
+      if (!internalGetLocalizedTextOverrides().getMap().isEmpty()) {
+        hash = (37 * hash) + LOCALIZEDTEXTOVERRIDES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLocalizedTextOverrides().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -20167,6 +20365,28 @@ public final class Template {
         return com.passkit.grpc.Template.internal_static_io_LandingPageSettings_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLocalizedTextOverrides();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLocalizedTextOverrides();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -20199,6 +20419,7 @@ public final class Template {
 
         preferredAndroidWallet_ = 0;
 
+        internalGetMutableLocalizedTextOverrides().clear();
         return this;
       }
 
@@ -20233,6 +20454,8 @@ public final class Template {
         result.landingLocalizationOverride_ = landingLocalizationOverride_;
         result.preferThirdPartyAndroidWallet_ = preferThirdPartyAndroidWallet_;
         result.preferredAndroidWallet_ = preferredAndroidWallet_;
+        result.localizedTextOverrides_ = internalGetLocalizedTextOverrides();
+        result.localizedTextOverrides_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -20297,6 +20520,8 @@ public final class Template {
         if (other.preferredAndroidWallet_ != 0) {
           setPreferredAndroidWalletValue(other.getPreferredAndroidWalletValue());
         }
+        internalGetMutableLocalizedTextOverrides().mergeFrom(
+            other.internalGetLocalizedTextOverrides());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -20660,6 +20885,165 @@ public final class Template {
         
         preferredAndroidWallet_ = 0;
         onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.passkit.grpc.Localization.LocalizedString> localizedTextOverrides_;
+      private com.google.protobuf.MapField<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+      internalGetLocalizedTextOverrides() {
+        if (localizedTextOverrides_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LocalizedTextOverridesDefaultEntryHolder.defaultEntry);
+        }
+        return localizedTextOverrides_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+      internalGetMutableLocalizedTextOverrides() {
+        onChanged();;
+        if (localizedTextOverrides_ == null) {
+          localizedTextOverrides_ = com.google.protobuf.MapField.newMapField(
+              LocalizedTextOverridesDefaultEntryHolder.defaultEntry);
+        }
+        if (!localizedTextOverrides_.isMutable()) {
+          localizedTextOverrides_ = localizedTextOverrides_.copy();
+        }
+        return localizedTextOverrides_;
+      }
+
+      public int getLocalizedTextOverridesCount() {
+        return internalGetLocalizedTextOverrides().getMap().size();
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLocalizedTextOverrides(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLocalizedTextOverrides().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLocalizedTextOverridesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> getLocalizedTextOverrides() {
+        return getLocalizedTextOverridesMap();
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> getLocalizedTextOverridesMap() {
+        return internalGetLocalizedTextOverrides().getMap();
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+      @java.lang.Override
+
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrDefault(
+          java.lang.String key,
+          com.passkit.grpc.Localization.LocalizedString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> map =
+            internalGetLocalizedTextOverrides().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+      @java.lang.Override
+
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> map =
+            internalGetLocalizedTextOverrides().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLocalizedTextOverrides() {
+        internalGetMutableLocalizedTextOverrides().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+
+      public Builder removeLocalizedTextOverrides(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLocalizedTextOverrides().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString>
+      getMutableLocalizedTextOverrides() {
+        return internalGetMutableLocalizedTextOverrides().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+      public Builder putLocalizedTextOverrides(
+          java.lang.String key,
+          com.passkit.grpc.Localization.LocalizedString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLocalizedTextOverrides().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
+       * </pre>
+       *
+       * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
+       */
+
+      public Builder putAllLocalizedTextOverrides(
+          java.util.Map<java.lang.String, com.passkit.grpc.Localization.LocalizedString> values) {
+        internalGetMutableLocalizedTextOverrides().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -22222,37 +22606,37 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
       }
       if (localizedTitle_ != null) {
         output.writeMessage(2, getLocalizedTitle());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (localizedDescription_ != null) {
         output.writeMessage(4, getLocalizedDescription());
       }
-      if (!getSubmitButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, submitButtonText_);
       }
       if (localizedSubmitButtonText_ != null) {
         output.writeMessage(6, getLocalizedSubmitButtonText());
       }
-      if (!getLoadingTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadingText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, loadingText_);
       }
       if (localizedLoadingText_ != null) {
         output.writeMessage(8, getLocalizedLoadingText());
       }
-      if (!getThankYouTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thankYouText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, thankYouText_);
       }
       if (localizedThankYouText_ != null) {
         output.writeMessage(10, getLocalizedThankYouText());
       }
-      if (!getPageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageBackgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, pageBackgroundColor_);
       }
       if (localizedPageBackgroundColor_ != null) {
@@ -22261,19 +22645,19 @@ public final class Template {
       if (trackingSettings_ != null) {
         output.writeMessage(13, getTrackingSettings());
       }
-      if (!getSubmitButtonTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonTextColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, submitButtonTextColor_);
       }
-      if (!getSubmitButtonBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonBackgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 15, submitButtonBackgroundColor_);
       }
-      if (!getFooterTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, footerText_);
       }
       if (localizedFooterText_ != null) {
         output.writeMessage(17, getLocalizedFooterText());
       }
-      if (!getCssOverridesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cssOverrides_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, cssOverrides_);
       }
       if (passwordSettings_ != null) {
@@ -22288,42 +22672,42 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
       }
       if (localizedTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedTitle());
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (localizedDescription_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedDescription());
       }
-      if (!getSubmitButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, submitButtonText_);
       }
       if (localizedSubmitButtonText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedSubmitButtonText());
       }
-      if (!getLoadingTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(loadingText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, loadingText_);
       }
       if (localizedLoadingText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLocalizedLoadingText());
       }
-      if (!getThankYouTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(thankYouText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, thankYouText_);
       }
       if (localizedThankYouText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocalizedThankYouText());
       }
-      if (!getPageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, pageBackgroundColor_);
       }
       if (localizedPageBackgroundColor_ != null) {
@@ -22334,20 +22718,20 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getTrackingSettings());
       }
-      if (!getSubmitButtonTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonTextColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, submitButtonTextColor_);
       }
-      if (!getSubmitButtonBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(submitButtonBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, submitButtonBackgroundColor_);
       }
-      if (!getFooterTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, footerText_);
       }
       if (localizedFooterText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getLocalizedFooterText());
       }
-      if (!getCssOverridesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cssOverrides_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, cssOverrides_);
       }
       if (passwordSettings_ != null) {
@@ -26291,34 +26675,34 @@ public final class Template {
       if (passwordType_ != com.passkit.grpc.Template.PasswordType.PASSWORD_TYPE_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, passwordType_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
-      if (!getInputLabelTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inputLabelText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, inputLabelText_);
       }
       if (localizedInputLabelText_ != null) {
         output.writeMessage(4, getLocalizedInputLabelText());
       }
-      if (!getErrorTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, errorText_);
       }
       if (localizedErrorText_ != null) {
         output.writeMessage(6, getLocalizedErrorText());
       }
-      if (!getHeaderTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, headerText_);
       }
       if (localizedHeaderText_ != null) {
         output.writeMessage(8, getLocalizedHeaderText());
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, buttonText_);
       }
       if (localizedButtonText_ != null) {
         output.writeMessage(10, getLocalizedButtonText());
       }
-      if (!getTitleTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(titleText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, titleText_);
       }
       if (localizedTitleText_ != null) {
@@ -26337,38 +26721,38 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, passwordType_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
-      if (!getInputLabelTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inputLabelText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, inputLabelText_);
       }
       if (localizedInputLabelText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedInputLabelText());
       }
-      if (!getErrorTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, errorText_);
       }
       if (localizedErrorText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedErrorText());
       }
-      if (!getHeaderTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headerText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, headerText_);
       }
       if (localizedHeaderText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLocalizedHeaderText());
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, buttonText_);
       }
       if (localizedButtonText_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocalizedButtonText());
       }
-      if (!getTitleTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(titleText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, titleText_);
       }
       if (localizedTitleText_ != null) {
@@ -28741,10 +29125,10 @@ public final class Template {
       if (template_ != null) {
         output.writeMessage(1, getTemplate());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ownerUsername_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -28772,10 +29156,10 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getTemplate());
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ownerUsername_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -30203,16 +30587,16 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, backgroundColor_);
       }
-      if (!getLabelColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(labelColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, labelColor_);
       }
-      if (!getTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, textColor_);
       }
-      if (!getStripColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stripColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, stripColor_);
       }
       unknownFields.writeTo(output);
@@ -30224,16 +30608,16 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(backgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, backgroundColor_);
       }
-      if (!getLabelColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(labelColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, labelColor_);
       }
-      if (!getTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, textColor_);
       }
-      if (!getStripColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stripColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, stripColor_);
       }
       size += unknownFields.getSerializedSize();
@@ -31191,10 +31575,10 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNewNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newName_);
       }
       unknownFields.writeTo(output);
@@ -31206,10 +31590,10 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNewNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newName_);
       }
       size += unknownFields.getSerializedSize();
@@ -31934,10 +32318,10 @@ public final class Template {
       if (enabled_ != false) {
         output.writeBool(1, enabled_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, certificateId_);
       }
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, payload_);
       }
       unknownFields.writeTo(output);
@@ -31953,10 +32337,10 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, enabled_);
       }
-      if (!getCertificateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, certificateId_);
       }
-      if (!getPayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(payload_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, payload_);
       }
       size += unknownFields.getSerializedSize();
@@ -33728,10 +34112,10 @@ public final class Template {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueName_);
       }
-      if (!getTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, templateId_);
       }
       if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
@@ -33740,7 +34124,7 @@ public final class Template {
       if (isRequired_ != false) {
         output.writeBool(4, isRequired_);
       }
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, label_);
       }
       if (localizedLabel_ != null) {
@@ -33749,19 +34133,19 @@ public final class Template {
       if (dataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
         output.writeEnum(7, dataType_);
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         output.writeMessage(9, getLocalizedDefaultValue());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, validation_);
       }
       if (userCanSetValue_ != false) {
         output.writeBool(11, userCanSetValue_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, currencyCode_);
       }
       if (appleWalletFieldRenderOptions_ != null) {
@@ -33780,7 +34164,7 @@ public final class Template {
       if (googlePayFieldRenderOptions_ != null) {
         output.writeMessage(16, getGooglePayFieldRenderOptions());
       }
-      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTelCountryCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, defaultTelCountryCode_);
       }
       unknownFields.writeTo(output);
@@ -33792,10 +34176,10 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueName_);
       }
-      if (!getTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, templateId_);
       }
       if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
@@ -33806,7 +34190,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, isRequired_);
       }
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, label_);
       }
       if (localizedLabel_ != null) {
@@ -33817,21 +34201,21 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, dataType_);
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getLocalizedDefaultValue());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, validation_);
       }
       if (userCanSetValue_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, userCanSetValue_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, currencyCode_);
       }
       if (appleWalletFieldRenderOptions_ != null) {
@@ -33858,7 +34242,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getGooglePayFieldRenderOptions());
       }
-      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTelCountryCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, defaultTelCountryCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -36832,7 +37216,7 @@ public final class Template {
       if (positionSettings_ != null) {
         output.writeMessage(3, getPositionSettings());
       }
-      if (!getChangeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, changeMessage_);
       }
       if (localizedChangeMessage_ != null) {
@@ -36877,7 +37261,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPositionSettings());
       }
-      if (!getChangeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, changeMessage_);
       }
       if (localizedChangeMessage_ != null) {
@@ -40408,7 +40792,7 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getHelpTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helpText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, helpText_);
       }
       if (localizedHelpText_ != null) {
@@ -40417,7 +40801,7 @@ public final class Template {
       if (displayOrder_ != 0) {
         output.writeInt32(3, displayOrder_);
       }
-      if (!getPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placeholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, placeholder_);
       }
       for (int i = 0; i < selectOptions_.size(); i++) {
@@ -40432,13 +40816,13 @@ public final class Template {
       if (addressRenderOptions_ != null) {
         output.writeMessage(9, getAddressRenderOptions());
       }
-      if (!getLocalizedYearPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedYearPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, localizedYearPlaceholder_);
       }
-      if (!getLocalizedMonthPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedMonthPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, localizedMonthPlaceholder_);
       }
-      if (!getLocalizedDayPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedDayPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, localizedDayPlaceholder_);
       }
       unknownFields.writeTo(output);
@@ -40450,7 +40834,7 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getHelpTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(helpText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, helpText_);
       }
       if (localizedHelpText_ != null) {
@@ -40461,7 +40845,7 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, displayOrder_);
       }
-      if (!getPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(placeholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, placeholder_);
       }
       for (int i = 0; i < selectOptions_.size(); i++) {
@@ -40480,13 +40864,13 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAddressRenderOptions());
       }
-      if (!getLocalizedYearPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedYearPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, localizedYearPlaceholder_);
       }
-      if (!getLocalizedMonthPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedMonthPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, localizedMonthPlaceholder_);
       }
-      if (!getLocalizedDayPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localizedDayPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, localizedDayPlaceholder_);
       }
       size += unknownFields.getSerializedSize();
@@ -43550,34 +43934,34 @@ public final class Template {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getAddress1LabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address1Label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address1Label_);
       }
-      if (!getAddress2LabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address2Label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, address2Label_);
       }
-      if (!getCityLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityLabel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cityLabel_);
       }
-      if (!getCountryLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryLabel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, countryLabel_);
       }
-      if (!getZipLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipLabel_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, zipLabel_);
       }
-      if (!getAddress1PlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address1Placeholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, address1Placeholder_);
       }
-      if (!getAddress2PlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address2Placeholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, address2Placeholder_);
       }
-      if (!getCityPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, cityPlaceholder_);
       }
-      if (!getCountryPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, countryPlaceholder_);
       }
-      if (!getZipPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipPlaceholder_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, zipPlaceholder_);
       }
       if (localizedAddress1Label_ != null) {
@@ -43619,34 +44003,34 @@ public final class Template {
       if (size != -1) return size;
 
       size = 0;
-      if (!getAddress1LabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address1Label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address1Label_);
       }
-      if (!getAddress2LabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address2Label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, address2Label_);
       }
-      if (!getCityLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityLabel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cityLabel_);
       }
-      if (!getCountryLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryLabel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, countryLabel_);
       }
-      if (!getZipLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipLabel_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, zipLabel_);
       }
-      if (!getAddress1PlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address1Placeholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, address1Placeholder_);
       }
-      if (!getAddress2PlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address2Placeholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, address2Placeholder_);
       }
-      if (!getCityPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cityPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, cityPlaceholder_);
       }
-      if (!getCountryPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, countryPlaceholder_);
       }
-      if (!getZipPlaceholderBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zipPlaceholder_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, zipPlaceholder_);
       }
       if (localizedAddress1Label_ != null) {
@@ -46649,10 +47033,10 @@ public final class Template {
       if (prohibitSharing_ != false) {
         output.writeBool(1, prohibitSharing_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (localizedDescription_ != null) {
@@ -46671,10 +47055,10 @@ public final class Template {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, prohibitSharing_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (localizedDescription_ != null) {
@@ -48081,6 +48465,11 @@ public final class Template {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_LandingPageSettings_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_DataCollectionPageSettings_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -48219,259 +48608,263 @@ public final class Template {
       "\023.io.LocalizedString\"m\n\004Data\022!\n\ndataFiel" +
       "ds\030\001 \003(\0132\r.io.DataField\022B\n\032dataCollectio" +
       "nPageSettings\030\002 \001(\0132\036.io.DataCollectionP" +
-      "ageSettings\"\273\001\n\023LandingPageSettings\0225\n\033l" +
+      "ageSettings\"\344\002\n\023LandingPageSettings\0225\n\033l" +
       "andingLocalizationOverride\030\001 \003(\0162\020.io.La" +
       "nguageCode\0221\n\035preferThirdPartyAndroidWal" +
       "let\030\002 \001(\0162\n.io.Toggle\022:\n\026preferredAndroi" +
       "dWallet\030\003 \001(\0162\032.io.SupportedAndroidWalle" +
-      "t\"\334\005\n\032DataCollectionPageSettings\022\r\n\005titl" +
-      "e\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(\0132\023.io.Loc" +
-      "alizedString\022\023\n\013description\030\003 \001(\t\0221\n\024loc" +
-      "alizedDescription\030\004 \001(\0132\023.io.LocalizedSt" +
-      "ring\022\030\n\020submitButtonText\030\005 \001(\t\0226\n\031locali" +
-      "zedSubmitButtonText\030\006 \001(\0132\023.io.Localized" +
-      "String\022\023\n\013loadingText\030\007 \001(\t\0221\n\024localized" +
-      "LoadingText\030\010 \001(\0132\023.io.LocalizedString\022\024" +
-      "\n\014thankYouText\030\t \001(\t\0222\n\025localizedThankYo" +
-      "uText\030\n \001(\0132\023.io.LocalizedString\022\033\n\023page" +
-      "BackgroundColor\030\013 \001(\t\0229\n\034localizedPageBa" +
-      "ckgroundColor\030\014 \001(\0132\023.io.LocalizedString" +
-      "\022.\n\020trackingSettings\030\r \001(\0132\024.io.Tracking" +
-      "Settings\022\035\n\025submitButtonTextColor\030\016 \001(\t\022" +
-      "#\n\033submitButtonBackgroundColor\030\017 \001(\t\022\022\n\n" +
-      "footerText\030\020 \001(\t\0220\n\023localizedFooterText\030" +
-      "\021 \001(\0132\023.io.LocalizedString\022\024\n\014cssOverrid" +
-      "es\030\022 \001(\t\022.\n\020passwordSettings\030\023 \001(\0132\024.io." +
-      "PasswordSettings\"\256\003\n\020PasswordSettings\022&\n" +
-      "\014passwordType\030\001 \001(\0162\020.io.PasswordType\022\020\n" +
-      "\010password\030\002 \001(\t\022\026\n\016inputLabelText\030\003 \001(\t\022" +
-      "4\n\027localizedInputLabelText\030\004 \001(\0132\023.io.Lo" +
-      "calizedString\022\021\n\terrorText\030\005 \001(\t\022/\n\022loca" +
-      "lizedErrorText\030\006 \001(\0132\023.io.LocalizedStrin" +
-      "g\022\022\n\nheaderText\030\007 \001(\t\0220\n\023localizedHeader" +
-      "Text\030\010 \001(\0132\023.io.LocalizedString\022\022\n\nbutto" +
-      "nText\030\t \001(\t\0220\n\023localizedButtonText\030\n \001(\013" +
-      "2\023.io.LocalizedString\022\021\n\ttitleText\030\013 \001(\t" +
-      "\022/\n\022localizedTitleText\030\014 \001(\0132\023.io.Locali" +
-      "zedString\"\363\001\n\024PassTemplateResponse\022\"\n\010te" +
-      "mplate\030\001 \001(\0132\020.io.PassTemplate\022\014\n\004Name\030\002" +
-      " \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010protocol\030" +
-      "\004 \001(\0162\020.io.PassProtocol\022\020\n\010revision\030\005 \001(" +
-      "\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\"\\\n\006Colors\022\027\n\017backgroundC" +
-      "olor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022\021\n\ttextCo" +
-      "lor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\".\n\017CopyObj" +
-      "ectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName\030\002 \001(\t\">\n" +
-      "\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertificateId\030\002" +
-      " \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataField\022\022\n\nu" +
-      "niqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002 \001(\t\022 \n\tf" +
-      "ieldType\030\003 \001(\0162\r.io.FieldType\022\022\n\nisRequi" +
-      "red\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016localizedLab" +
-      "el\030\006 \001(\0132\023.io.LocalizedString\022\036\n\010dataTyp" +
-      "e\030\007 \001(\0162\014.io.DataType\022\024\n\014defaultValue\030\010 " +
-      "\001(\t\0222\n\025localizedDefaultValue\030\t \001(\0132\023.io." +
-      "LocalizedString\022\022\n\nvalidation\030\n \001(\t\022\027\n\017u" +
-      "serCanSetValue\030\013 \001(\010\022\024\n\014currencyCode\030\014 \001" +
-      "(\t\022H\n\035appleWalletFieldRenderOptions\030\r \001(" +
-      "\0132!.io.AppleWalletFieldRenderOptions\022N\n " +
-      "dataCollectionFieldRenderOptions\030\016 \001(\0132$" +
-      ".io.DataCollectionFieldRenderOptions\022\034\n\005" +
-      "usage\030\017 \003(\0162\r.io.UsageType\022D\n\033googlePayF" +
-      "ieldRenderOptions\030\020 \001(\0132\037.io.GooglePayFi" +
-      "eldRenderOptions\022\035\n\025defaultTelCountryCod" +
-      "e\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRenderOption" +
-      "s\022(\n\rtextAlignment\030\002 \001(\0162\021.io.TextAlignm" +
-      "ent\022.\n\020positionSettings\030\003 \001(\0132\024.io.Posit" +
-      "ionSettings\022\025\n\rchangeMessage\030\004 \001(\t\0223\n\026lo" +
-      "calizedChangeMessage\030\005 \001(\0132\023.io.Localize" +
-      "dString\022$\n\tdateStyle\030\006 \001(\0162\021.io.DateTime" +
-      "Style\022$\n\ttimeStyle\030\007 \001(\0162\021.io.DateTimeSt" +
-      "yle\022$\n\013numberStyle\030\010 \001(\0162\017.io.NumberStyl" +
-      "e\022/\n\025suppressLinkDetection\030\t \003(\0162\020.io.Li" +
-      "nkDetector\022\026\n\016ignoreTimezone\030\n \001(\010\022\026\n\016is" +
-      "RelativeDate\030\013 \001(\010\"h\n\033GooglePayFieldRend" +
-      "erOptions\022-\n\021googlePayPosition\030\001 \001(\0162\022.i" +
-      "o.GooglePayField\022\032\n\022textModulePriority\030\002" +
-      " \001(\r\"G\n\020PositionSettings\022!\n\007section\030\001 \001(" +
-      "\0162\020.io.FieldSection\022\020\n\010priority\030\002 \001(\r\"\237\003" +
-      "\n DataCollectionFieldRenderOptions\022\020\n\010he" +
-      "lpText\030\001 \001(\t\022.\n\021localizedHelpText\030\002 \001(\0132" +
-      "\023.io.LocalizedString\022\024\n\014displayOrder\030\003 \001" +
-      "(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rselectOptions" +
-      "\030\006 \003(\0132\020.io.SelectOption\0221\n\024localizedPla" +
-      "ceholder\030\007 \001(\0132\023.io.LocalizedString\022\024\n\014a" +
-      "utocomplete\030\010 \001(\010\0226\n\024addressRenderOption" +
-      "s\030\t \001(\0132\030.io.AddressRenderOptions\022 \n\030loc" +
-      "alizedYearPlaceholder\030\n \001(\t\022!\n\031localized" +
-      "MonthPlaceholder\030\013 \001(\t\022\037\n\027localizedDayPl" +
-      "aceholder\030\014 \001(\t\"\242\006\n\024AddressRenderOptions" +
-      "\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddress2Label" +
-      "\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014countryLabe" +
-      "l\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023address1Pla" +
-      "ceholder\030\006 \001(\t\022\033\n\023address2Placeholder\030\007 " +
-      "\001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n\022countryP" +
-      "laceholder\030\t \001(\t\022\026\n\016zipPlaceholder\030\n \001(\t" +
-      "\0223\n\026localizedAddress1Label\030\013 \001(\0132\023.io.Lo" +
-      "calizedString\0223\n\026localizedAddress2Label\030" +
-      "\014 \001(\0132\023.io.LocalizedString\022/\n\022localizedC" +
-      "ityLabel\030\r \001(\0132\023.io.LocalizedString\0222\n\025l" +
-      "ocalizedCountryLabel\030\016 \001(\0132\023.io.Localize" +
-      "dString\022.\n\021localizedZipLabel\030\017 \001(\0132\023.io." +
-      "LocalizedString\0229\n\034localizedAddress1Plac" +
-      "eholder\030\020 \001(\0132\023.io.LocalizedString\0229\n\034lo" +
-      "calizedAddress2Placeholder\030\021 \001(\0132\023.io.Lo" +
-      "calizedString\0225\n\030localizedCityPlaceholde" +
-      "r\030\022 \001(\0132\023.io.LocalizedString\0228\n\033localize" +
-      "dCountryPlaceholder\030\023 \001(\0132\023.io.Localized" +
-      "String\0224\n\027localizedZipPlaceholder\030\024 \001(\0132" +
-      "\023.io.LocalizedString\"\267\001\n\007Sharing\022\027\n\017proh" +
-      "ibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\023\n\013descri" +
-      "ption\030\003 \001(\t\0221\n\024localizedDescription\030\004 \001(" +
-      "\0132\023.io.LocalizedString:>\222A;\n9*\007Sharing2." +
-      "Controls the sharing settings for the pr" +
-      "ogram.\"N\n\026DefaultTemplateRequest\022\"\n\010prot" +
-      "ocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n\010revision" +
-      "\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPLE_NOT_SUP" +
-      "PORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006COUPON\020\002\022" +
-      "\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022\016\n\nSTORE_" +
-      "CARD\020\005*w\n\021GooglePayPassType\022\034\n\030GOOGLE_PA" +
-      "Y_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n\006FLIGHT\020\002" +
-      "\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFER\020\005\022\013\n\007TR" +
-      "ANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCODE_TYPE_D" +
-      "O_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022\n\n\006PDF417" +
-      "\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFieldType\022\023" +
-      "\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007\n\003PII\020\002\022\024" +
-      "\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCOL_FIELDS\020" +
-      "\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016StandardFields\022" +
-      "\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000\022\025\n\021STAND" +
-      "ARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGAL\020\002\022\030\n\024ST" +
-      "ANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDARD_USEFUL_" +
-      "LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026\n\022STANDAR" +
-      "D_LOCATIONS\020\006*\\\n\rTextAlignment\022\035\n\031TEXT_A" +
-      "LIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001\022\n\n\006CENTE" +
-      "R\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n\rDateTime" +
-      "Style\022\036\n\032DATE_TIME_STYLE_DO_NOT_USE\020\000\022\031\n" +
-      "\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DATE_TIME_ST" +
-      "YLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE_LONG\020\003\022\030" +
-      "\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014LinkDetecto" +
-      "r\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000\022\031\n\025LINK_" +
-      "DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETECTOR_DATE" +
-      "\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LINK_DETECT" +
-      "OR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027NUMBER_STY" +
-      "LE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE_DECIMAL\020" +
-      "\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027NUMBER_ST" +
-      "YLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYLE_SPELL\020\004" +
-      "*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYPE_DO_NOT_" +
-      "USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021TRANSIT_T" +
-      "YPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020\003\022\030\n\024TRAN" +
-      "SIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_TYPE_TRAIN" +
-      "\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010DataType\022\022" +
-      "\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n\tTEXT_LON" +
-      "G\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_YYYYMM\020\004\022" +
-      "\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDATE_TIME\020\007\022" +
-      "\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n\022\007\n\003URL\020\013" +
-      "\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE\020\017\022\014\n\010CUR" +
-      "RENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS\020\022\022\013\n\007DAT" +
-      "E_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010NO_STYLE\020\000" +
-      "\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM\020\002\022\r\n\tDAT" +
-      "E_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME_SHORT\020\005\022" +
-      "\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007\022\r\n\tTIME_" +
-      "FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020DATE_TIME" +
-      "_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022\n\016DATE_TI" +
-      "ME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220\001\n\014FieldS" +
-      "ection\022\034\n\030FIELD_SECTION_DO_NOT_USE\020\000\022\017\n\013" +
-      "BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS\020\002\022\024\n\020SEC" +
-      "ONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FIELDS\020\004\022\021\n" +
-      "\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayField\022\037\n\033G" +
-      "OOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n GOOGLE_P" +
-      "AY_BOARDING_AIRLINE_NAME\020\001\022$\n GOOGLE_PAY" +
-      "_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOOGLE_PAY_B" +
-      "OARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_BOARDING_" +
-      "DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOARDING_ORI" +
-      "GIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BOARDING_OR" +
-      "IGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
-      "ING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDING_PASSEN" +
-      "GER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDING_ZONE_G" +
-      "ROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_SEAT\020\n\022)\n%" +
-      "GOOGLE_PAY_BOARDING_BOARDING_POSITION\020\013\022" +
-      ")\n%GOOGLE_PAY_BOARDING_BOARDING_SEQUENCE" +
-      "\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARDING_DOOR\020" +
-      "\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT_NUMBER\020\016" +
-      "\022+\n\'GOOGLE_PAY_BOARDING_CONFIRMATION_NUM" +
-      "BER\020\017\022%\n!GOOGLE_PAY_BOARDING_TICKET_NUMB" +
-      "ER\020\020\022-\n)GOOGLE_PAY_BOARDING_FREQUENT_FLY" +
-      "ER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARDING_GATE_" +
-      "CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING_DEPARTUR" +
-      "E_TIME\020\023\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_" +
-      "TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_ARRIVAL_TE" +
-      "RMINAL\020\025\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_" +
-      "GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME\020d\022\037\n\033GOO" +
-      "GLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036GOOGLE_PAY" +
-      "_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGLE_PAY_EVE" +
-      "NT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_SECTION\020h\022" +
-      "\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GOOGLE_PAY_" +
-      "EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVENT_TICKET_" +
-      "HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DOORS_OPEN\020" +
-      "l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030\n\024GOOGLE_" +
-      "PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_EVENT_TICK" +
-      "ET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_TICKET_NUM" +
-      "BER\020p\022(\n$GOOGLE_PAY_EVENT_CONFIRMATION_N" +
-      "UMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FACE_VALUE\020r" +
-      "\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT\020s\022\"\n\035GOO" +
-      "GLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034\n\027GOOGLE_" +
-      "PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_PAY_GIFT_C" +
-      "ARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIFT_BALANCE" +
-      "_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_GIFT_PIN\020\314" +
-      "\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMBER\020\315\001\022$\n\037" +
-      "GOOGLE_PAY_LOYALTY_PROGRAM_NAME\020\254\002\022\036\n\031GO" +
-      "OGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#GOOGLE_PAY" +
-      "_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n\037GOOGLE_P" +
-      "AY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035GOOGLE_PAY" +
-      "_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGLE_PAY_LOY" +
-      "ALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_PAY_LOYAL" +
-      "TY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n\026GOOGLE_P" +
-      "AY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY_OFFER_PR" +
-      "OVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_DETAILS\020\222\003" +
-      "\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT\020\223\003\022!\n\034GO" +
-      "OGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#\n\036GOOGLE_" +
-      "PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034GOOGLE_PAY" +
-      "_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE_PAY_TRAN" +
-      "SIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE_PAY_TRAN" +
-      "SIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY_TRANSIT_" +
-      "VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TRANSIT_ARR" +
-      "IVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_PASSENGER_" +
-      "NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_CARRIAGE\020" +
-      "\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020\374\003\022\034\n\027GOO" +
-      "GLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOGLE_PAY_TR" +
-      "ANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGLE_PAY_TRA" +
-      "NSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE_PAY_TRAN" +
-      "SIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_TRANSIT_P" +
-      "LATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSIT_ZONE\020\202\004" +
-      "\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLASS\020\203\004\022+\n&" +
-      "GOOGLE_PAY_TRANSIT_CONCESSION_CATEGORY\020\204" +
-      "\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_RESTRICTIO" +
-      "NS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROUTE_RESTRI" +
-      "CTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_TRANSIT_T" +
-      "IME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_PAY_TRANSI" +
-      "T_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOGLE_PAY_TR" +
-      "ANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOGLE_PAY_TR" +
-      "ANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGLE_PAY_TRA" +
-      "NSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PAY_TRANSIT" +
-      "_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE_PAY_TRAN" +
-      "SIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY_TRANSIT_" +
-      "PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY_TRANSIT_" +
-      "DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_PAY_TEXT_M" +
-      "ODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_NAME\020\351\007\022\"\n" +
-      "\035GOOGLE_PAY_STATIC_TEXT_MODULE\020\352\007*l\n\014Pas" +
-      "swordType\022\034\n\030PASSWORD_TYPE_DO_NOT_USE\020\000\022" +
-      "\035\n\031PASSWORD_TYPE_NO_PASSWORD\020\001\022\037\n\033PASSWO" +
-      "RD_TYPE_PASSWORD_ONLY\020\002*w\n\026SupportedAndr" +
-      "oidWallet\022\035\n\031ANDROID_WALLET_DO_NOT_USE\020\000" +
-      "\022\035\n\031ANDROID_WALLET_PASSWALLET\020\001\022\037\n\033ANDRO" +
-      "ID_WALLET_WALLETPASSES\020\002BG\n\020com.passkit." +
-      "grpcZ$stash.passkit.com/io/model/sdk/go/" +
-      "io\252\002\014PassKit.Grpcb\006proto3"
+      "t\022S\n\026localizedTextOverrides\030\004 \003(\01323.io.L" +
+      "andingPageSettings.LocalizedTextOverride" +
+      "sEntry\032R\n\033LocalizedTextOverridesEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\"\n\005value\030\002 \001(\0132\023.io.Localized" +
+      "String:\0028\001\"\334\005\n\032DataCollectionPageSetting" +
+      "s\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(\013" +
+      "2\023.io.LocalizedString\022\023\n\013description\030\003 \001" +
+      "(\t\0221\n\024localizedDescription\030\004 \001(\0132\023.io.Lo" +
+      "calizedString\022\030\n\020submitButtonText\030\005 \001(\t\022" +
+      "6\n\031localizedSubmitButtonText\030\006 \001(\0132\023.io." +
+      "LocalizedString\022\023\n\013loadingText\030\007 \001(\t\0221\n\024" +
+      "localizedLoadingText\030\010 \001(\0132\023.io.Localize" +
+      "dString\022\024\n\014thankYouText\030\t \001(\t\0222\n\025localiz" +
+      "edThankYouText\030\n \001(\0132\023.io.LocalizedStrin" +
+      "g\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229\n\034locali" +
+      "zedPageBackgroundColor\030\014 \001(\0132\023.io.Locali" +
+      "zedString\022.\n\020trackingSettings\030\r \001(\0132\024.io" +
+      ".TrackingSettings\022\035\n\025submitButtonTextCol" +
+      "or\030\016 \001(\t\022#\n\033submitButtonBackgroundColor\030" +
+      "\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023localizedFo" +
+      "oterText\030\021 \001(\0132\023.io.LocalizedString\022\024\n\014c" +
+      "ssOverrides\030\022 \001(\t\022.\n\020passwordSettings\030\023 " +
+      "\001(\0132\024.io.PasswordSettings\"\256\003\n\020PasswordSe" +
+      "ttings\022&\n\014passwordType\030\001 \001(\0162\020.io.Passwo" +
+      "rdType\022\020\n\010password\030\002 \001(\t\022\026\n\016inputLabelTe" +
+      "xt\030\003 \001(\t\0224\n\027localizedInputLabelText\030\004 \001(" +
+      "\0132\023.io.LocalizedString\022\021\n\terrorText\030\005 \001(" +
+      "\t\022/\n\022localizedErrorText\030\006 \001(\0132\023.io.Local" +
+      "izedString\022\022\n\nheaderText\030\007 \001(\t\0220\n\023locali" +
+      "zedHeaderText\030\010 \001(\0132\023.io.LocalizedString" +
+      "\022\022\n\nbuttonText\030\t \001(\t\0220\n\023localizedButtonT" +
+      "ext\030\n \001(\0132\023.io.LocalizedString\022\021\n\ttitleT" +
+      "ext\030\013 \001(\t\022/\n\022localizedTitleText\030\014 \001(\0132\023." +
+      "io.LocalizedString\"\363\001\n\024PassTemplateRespo" +
+      "nse\022\"\n\010template\030\001 \001(\0132\020.io.PassTemplate\022" +
+      "\014\n\004Name\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010" +
+      "protocol\030\004 \001(\0162\020.io.PassProtocol\022\020\n\010revi" +
+      "sion\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.g" +
+      "oogle.protobuf.Timestamp\"\\\n\006Colors\022\027\n\017ba" +
+      "ckgroundColor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022" +
+      "\021\n\ttextColor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\"." +
+      "\n\017CopyObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName" +
+      "\030\002 \001(\t\">\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertif" +
+      "icateId\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataF" +
+      "ield\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002" +
+      " \001(\t\022 \n\tfieldType\030\003 \001(\0162\r.io.FieldType\022\022" +
+      "\n\nisRequired\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016loc" +
+      "alizedLabel\030\006 \001(\0132\023.io.LocalizedString\022\036" +
+      "\n\010dataType\030\007 \001(\0162\014.io.DataType\022\024\n\014defaul" +
+      "tValue\030\010 \001(\t\0222\n\025localizedDefaultValue\030\t " +
+      "\001(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\n" +
+      " \001(\t\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014currenc" +
+      "yCode\030\014 \001(\t\022H\n\035appleWalletFieldRenderOpt" +
+      "ions\030\r \001(\0132!.io.AppleWalletFieldRenderOp" +
+      "tions\022N\n dataCollectionFieldRenderOption" +
+      "s\030\016 \001(\0132$.io.DataCollectionFieldRenderOp" +
+      "tions\022\034\n\005usage\030\017 \003(\0162\r.io.UsageType\022D\n\033g" +
+      "ooglePayFieldRenderOptions\030\020 \001(\0132\037.io.Go" +
+      "oglePayFieldRenderOptions\022\035\n\025defaultTelC" +
+      "ountryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRen" +
+      "derOptions\022(\n\rtextAlignment\030\002 \001(\0162\021.io.T" +
+      "extAlignment\022.\n\020positionSettings\030\003 \001(\0132\024" +
+      ".io.PositionSettings\022\025\n\rchangeMessage\030\004 " +
+      "\001(\t\0223\n\026localizedChangeMessage\030\005 \001(\0132\023.io" +
+      ".LocalizedString\022$\n\tdateStyle\030\006 \001(\0162\021.io" +
+      ".DateTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162\021.io.D" +
+      "ateTimeStyle\022$\n\013numberStyle\030\010 \001(\0162\017.io.N" +
+      "umberStyle\022/\n\025suppressLinkDetection\030\t \003(" +
+      "\0162\020.io.LinkDetector\022\026\n\016ignoreTimezone\030\n " +
+      "\001(\010\022\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033GooglePay" +
+      "FieldRenderOptions\022-\n\021googlePayPosition\030" +
+      "\001 \001(\0162\022.io.GooglePayField\022\032\n\022textModuleP" +
+      "riority\030\002 \001(\r\"G\n\020PositionSettings\022!\n\007sec" +
+      "tion\030\001 \001(\0162\020.io.FieldSection\022\020\n\010priority" +
+      "\030\002 \001(\r\"\237\003\n DataCollectionFieldRenderOpti" +
+      "ons\022\020\n\010helpText\030\001 \001(\t\022.\n\021localizedHelpTe" +
+      "xt\030\002 \001(\0132\023.io.LocalizedString\022\024\n\014display" +
+      "Order\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rsele" +
+      "ctOptions\030\006 \003(\0132\020.io.SelectOption\0221\n\024loc" +
+      "alizedPlaceholder\030\007 \001(\0132\023.io.LocalizedSt" +
+      "ring\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addressRen" +
+      "derOptions\030\t \001(\0132\030.io.AddressRenderOptio" +
+      "ns\022 \n\030localizedYearPlaceholder\030\n \001(\t\022!\n\031" +
+      "localizedMonthPlaceholder\030\013 \001(\t\022\037\n\027local" +
+      "izedDayPlaceholder\030\014 \001(\t\"\242\006\n\024AddressRend" +
+      "erOptions\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddr" +
+      "ess2Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014co" +
+      "untryLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023ad" +
+      "dress1Placeholder\030\006 \001(\t\022\033\n\023address2Place" +
+      "holder\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n" +
+      "\022countryPlaceholder\030\t \001(\t\022\026\n\016zipPlacehol" +
+      "der\030\n \001(\t\0223\n\026localizedAddress1Label\030\013 \001(" +
+      "\0132\023.io.LocalizedString\0223\n\026localizedAddre" +
+      "ss2Label\030\014 \001(\0132\023.io.LocalizedString\022/\n\022l" +
+      "ocalizedCityLabel\030\r \001(\0132\023.io.LocalizedSt" +
+      "ring\0222\n\025localizedCountryLabel\030\016 \001(\0132\023.io" +
+      ".LocalizedString\022.\n\021localizedZipLabel\030\017 " +
+      "\001(\0132\023.io.LocalizedString\0229\n\034localizedAdd" +
+      "ress1Placeholder\030\020 \001(\0132\023.io.LocalizedStr" +
+      "ing\0229\n\034localizedAddress2Placeholder\030\021 \001(" +
+      "\0132\023.io.LocalizedString\0225\n\030localizedCityP" +
+      "laceholder\030\022 \001(\0132\023.io.LocalizedString\0228\n" +
+      "\033localizedCountryPlaceholder\030\023 \001(\0132\023.io." +
+      "LocalizedString\0224\n\027localizedZipPlacehold" +
+      "er\030\024 \001(\0132\023.io.LocalizedString\"\267\001\n\007Sharin" +
+      "g\022\027\n\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022" +
+      "\023\n\013description\030\003 \001(\t\0221\n\024localizedDescrip" +
+      "tion\030\004 \001(\0132\023.io.LocalizedString:>\222A;\n9*\007" +
+      "Sharing2.Controls the sharing settings f" +
+      "or the program.\"N\n\026DefaultTemplateReques" +
+      "t\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n" +
+      "\010revision\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPL" +
+      "E_NOT_SUPPORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006" +
+      "COUPON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022" +
+      "\016\n\nSTORE_CARD\020\005*w\n\021GooglePayPassType\022\034\n\030" +
+      "GOOGLE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n" +
+      "\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFE" +
+      "R\020\005\022\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCO" +
+      "DE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022" +
+      "\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFi" +
+      "eldType\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007" +
+      "\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCO" +
+      "L_FIELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016Standa" +
+      "rdFields\022\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000" +
+      "\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGA" +
+      "L\020\002\022\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDAR" +
+      "D_USEFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026" +
+      "\n\022STANDARD_LOCATIONS\020\006*\\\n\rTextAlignment\022" +
+      "\035\n\031TEXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001" +
+      "\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n" +
+      "\rDateTimeStyle\022\036\n\032DATE_TIME_STYLE_DO_NOT" +
+      "_USE\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DAT" +
+      "E_TIME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE" +
+      "_LONG\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014Li" +
+      "nkDetector\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000" +
+      "\022\031\n\025LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETE" +
+      "CTOR_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LI" +
+      "NK_DETECTOR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027N" +
+      "UMBER_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE" +
+      "_DECIMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027" +
+      "NUMBER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYL" +
+      "E_SPELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYP" +
+      "E_DO_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021" +
+      "TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020" +
+      "\003\022\030\n\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_T" +
+      "YPE_TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010D" +
+      "ataType\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n" +
+      "\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_" +
+      "YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDAT" +
+      "E_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n" +
+      "\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE" +
+      "\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS" +
+      "\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010N" +
+      "O_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM" +
+      "\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME" +
+      "_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007" +
+      "\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020" +
+      "DATE_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022" +
+      "\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220" +
+      "\001\n\014FieldSection\022\034\n\030FIELD_SECTION_DO_NOT_" +
+      "USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS" +
+      "\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FI" +
+      "ELDS\020\004\022\021\n\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayF" +
+      "ield\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n" +
+      " GOOGLE_PAY_BOARDING_AIRLINE_NAME\020\001\022$\n G" +
+      "OOGLE_PAY_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOO" +
+      "GLE_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_" +
+      "BOARDING_DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOA" +
+      "RDING_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BO" +
+      "ARDING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARD" +
+      "ING_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDI" +
+      "NG_PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDI" +
+      "NG_ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_S" +
+      "EAT\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARDING_PO" +
+      "SITION\020\013\022)\n%GOOGLE_PAY_BOARDING_BOARDING" +
+      "_SEQUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
+      "ING_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT" +
+      "_NUMBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_CONFIRM" +
+      "ATION_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARDING_TI" +
+      "CKET_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDING_FRE" +
+      "QUENT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARD" +
+      "ING_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING" +
+      "_DEPARTURE_TIME\020\023\022$\n GOOGLE_PAY_BOARDING" +
+      "_ARRIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_A" +
+      "RRIVAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BOARDING" +
+      "_ARRIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME" +
+      "\020d\022\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036G" +
+      "OOGLE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGL" +
+      "E_PAY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_S" +
+      "ECTION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GO" +
+      "OGLE_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVEN" +
+      "T_TICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DO" +
+      "ORS_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030" +
+      "\n\024GOOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_E" +
+      "VENT_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_T" +
+      "ICKET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT_CONFI" +
+      "RMATION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FAC" +
+      "E_VALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT" +
+      "\020s\022\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034" +
+      "\n\027GOOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_P" +
+      "AY_GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIF" +
+      "T_BALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_G" +
+      "IFT_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMB" +
+      "ER\020\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRAM_NAME" +
+      "\020\254\002\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#G" +
+      "OOGLE_PAY_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n" +
+      "\037GOOGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035G" +
+      "OOGLE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGL" +
+      "E_PAY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_" +
+      "PAY_LOYALTY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n" +
+      "\026GOOGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY" +
+      "_OFFER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_D" +
+      "ETAILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT" +
+      "\020\223\003\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#" +
+      "\n\036GOOGLE_PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034G" +
+      "OOGLE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE" +
+      "_PAY_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE" +
+      "_PAY_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY" +
+      "_TRANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TR" +
+      "ANSIT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_P" +
+      "ASSENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_" +
+      "CARRIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020" +
+      "\374\003\022\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOG" +
+      "LE_PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGL" +
+      "E_PAY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE" +
+      "_PAY_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_" +
+      "TRANSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSI" +
+      "T_ZONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLA" +
+      "SS\020\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCESSION_C" +
+      "ATEGORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_R" +
+      "ESTRICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROU" +
+      "TE_RESTRICTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_" +
+      "TRANSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_P" +
+      "AY_TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOG" +
+      "LE_PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOG" +
+      "LE_PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGL" +
+      "E_PAY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PA" +
+      "Y_TRANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE" +
+      "_PAY_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY" +
+      "_TRANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY" +
+      "_TRANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_P" +
+      "AY_TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_N" +
+      "AME\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_MODULE\020" +
+      "\352\007*l\n\014PasswordType\022\034\n\030PASSWORD_TYPE_DO_N" +
+      "OT_USE\020\000\022\035\n\031PASSWORD_TYPE_NO_PASSWORD\020\001\022" +
+      "\037\n\033PASSWORD_TYPE_PASSWORD_ONLY\020\002*w\n\026Supp" +
+      "ortedAndroidWallet\022\035\n\031ANDROID_WALLET_DO_" +
+      "NOT_USE\020\000\022\035\n\031ANDROID_WALLET_PASSWALLET\020\001" +
+      "\022\037\n\033ANDROID_WALLET_WALLETPASSES\020\002BG\n\020com" +
+      ".passkit.grpcZ$stash.passkit.com/io/mode" +
+      "l/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48534,7 +48927,13 @@ public final class Template {
     internal_static_io_LandingPageSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_LandingPageSettings_descriptor,
-        new java.lang.String[] { "LandingLocalizationOverride", "PreferThirdPartyAndroidWallet", "PreferredAndroidWallet", });
+        new java.lang.String[] { "LandingLocalizationOverride", "PreferThirdPartyAndroidWallet", "PreferredAndroidWallet", "LocalizedTextOverrides", });
+    internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_descriptor =
+      internal_static_io_LandingPageSettings_descriptor.getNestedTypes().get(0);
+    internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_io_DataCollectionPageSettings_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_io_DataCollectionPageSettings_fieldAccessorTable = new

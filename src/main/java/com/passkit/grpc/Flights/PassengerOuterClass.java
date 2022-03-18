@@ -739,7 +739,7 @@ public final class PassengerOuterClass {
       if (infantDetails_ != null) {
         output.writeMessage(5, getInfantDetails());
       }
-      if (!getKnownTravelerNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(knownTravelerNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, knownTravelerNumber_);
       }
       unknownFields.writeTo(output);
@@ -771,7 +771,7 @@ public final class PassengerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getInfantDetails());
       }
-      if (!getKnownTravelerNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(knownTravelerNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, knownTravelerNumber_);
       }
       size += unknownFields.getSerializedSize();
@@ -2356,16 +2356,16 @@ public final class PassengerOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProgramNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, programName_);
       }
-      if (!getAirlineDesignatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airlineDesignator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, airlineDesignator_);
       }
-      if (!getNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, number_);
       }
-      if (!getTierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tier_);
       }
       unknownFields.writeTo(output);
@@ -2377,16 +2377,16 @@ public final class PassengerOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProgramNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, programName_);
       }
-      if (!getAirlineDesignatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airlineDesignator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, airlineDesignator_);
       }
-      if (!getNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, number_);
       }
-      if (!getTierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tier_);
       }
       size += unknownFields.getSerializedSize();
@@ -3796,13 +3796,13 @@ public final class PassengerOuterClass {
       if (identityDocument_ != com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.PASSPORT.getNumber()) {
         output.writeEnum(1, identityDocument_);
       }
-      if (!getIssuingCountryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuingCountry_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, issuingCountry_);
       }
-      if (!getNationalityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nationality_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nationality_);
       }
-      if (!getDocumentNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, documentNumber_);
       }
       if (dateOfBirth_ != null) {
@@ -3830,13 +3830,13 @@ public final class PassengerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, identityDocument_);
       }
-      if (!getIssuingCountryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(issuingCountry_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, issuingCountry_);
       }
-      if (!getNationalityBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nationality_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nationality_);
       }
-      if (!getDocumentNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(documentNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, documentNumber_);
       }
       if (dateOfBirth_ != null) {
@@ -5898,22 +5898,22 @@ public final class PassengerOuterClass {
       if (identityDetails_ != null) {
         output.writeMessage(2, getIdentityDetails());
       }
-      if (!getBarcodePayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodePayload_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, barcodePayload_);
       }
       if (conditionalItems_ != null) {
         output.writeMessage(4, getConditionalItems());
       }
-      if (!getBarcodeAdditionalDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeAdditionalData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, barcodeAdditionalData_);
       }
-      if (!getSecurityImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityImage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, securityImage_);
       }
-      if (!getPrivilegeImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeImage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privilegeImage_);
       }
-      if (!getFooterImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerImage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, footerImage_);
       }
       unknownFields.writeTo(output);
@@ -5933,23 +5933,23 @@ public final class PassengerOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getIdentityDetails());
       }
-      if (!getBarcodePayloadBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodePayload_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, barcodePayload_);
       }
       if (conditionalItems_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getConditionalItems());
       }
-      if (!getBarcodeAdditionalDataBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeAdditionalData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, barcodeAdditionalData_);
       }
-      if (!getSecurityImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityImage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, securityImage_);
       }
-      if (!getPrivilegeImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privilegeImage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privilegeImage_);
       }
-      if (!getFooterImageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerImage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, footerImage_);
       }
       size += unknownFields.getSerializedSize();

@@ -5,8 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.37.0)",
+    value = "by gRPC proto compiler (version 1.44.1)",
     comments = "Source: io/core/a_rpc_images.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ImagesGrpc {
 
   private ImagesGrpc() {}

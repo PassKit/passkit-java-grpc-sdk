@@ -253,6 +253,132 @@ public final class CommonObjects {
   }
 
   /**
+   * Protobuf enum {@code io.TimeState}
+   */
+  public enum TimeState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>TIME_STATE_NONE = 0;</code>
+     */
+    TIME_STATE_NONE(0),
+    /**
+     * <code>TIME_STATE_CURRENT = 1;</code>
+     */
+    TIME_STATE_CURRENT(1),
+    /**
+     * <code>TIME_STATE_PREVIOUS = 2;</code>
+     */
+    TIME_STATE_PREVIOUS(2),
+    /**
+     * <code>TIME_STATE_FOLLOWING = 3;</code>
+     */
+    TIME_STATE_FOLLOWING(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>TIME_STATE_NONE = 0;</code>
+     */
+    public static final int TIME_STATE_NONE_VALUE = 0;
+    /**
+     * <code>TIME_STATE_CURRENT = 1;</code>
+     */
+    public static final int TIME_STATE_CURRENT_VALUE = 1;
+    /**
+     * <code>TIME_STATE_PREVIOUS = 2;</code>
+     */
+    public static final int TIME_STATE_PREVIOUS_VALUE = 2;
+    /**
+     * <code>TIME_STATE_FOLLOWING = 3;</code>
+     */
+    public static final int TIME_STATE_FOLLOWING_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static TimeState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static TimeState forNumber(int value) {
+      switch (value) {
+        case 0: return TIME_STATE_NONE;
+        case 1: return TIME_STATE_CURRENT;
+        case 2: return TIME_STATE_PREVIOUS;
+        case 3: return TIME_STATE_FOLLOWING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<TimeState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        TimeState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TimeState>() {
+            public TimeState findValueByNumber(int number) {
+              return TimeState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final TimeState[] VALUES = values();
+
+    public static TimeState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private TimeState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.TimeState)
+  }
+
+  /**
    * <pre>
    * PassBundleFormat is used to specify which format(s) to provide the pass content.
    * </pre>
@@ -388,7 +514,7 @@ public final class CommonObjects {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.CommonObjects.getDescriptor().getEnumTypes().get(2);
+      return com.passkit.grpc.CommonObjects.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final PassBundleFormat[] VALUES = values();
@@ -542,7 +668,7 @@ public final class CommonObjects {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.passkit.grpc.CommonObjects.getDescriptor().getEnumTypes().get(3);
+      return com.passkit.grpc.CommonObjects.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final UsageType[] VALUES = values();
@@ -740,7 +866,7 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       unknownFields.writeTo(output);
@@ -752,7 +878,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       size += unknownFields.getSerializedSize();
@@ -1901,6 +2027,18 @@ public final class CommonObjects {
      */
     com.google.protobuf.ByteString
         getUrlBytes();
+
+    /**
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
   }
   /**
    * Protobuf type {@code io.Url}
@@ -1916,6 +2054,7 @@ public final class CommonObjects {
     }
     private Url() {
       url_ = "";
+      title_ = "";
     }
 
     @java.lang.Override
@@ -1952,6 +2091,12 @@ public final class CommonObjects {
               java.lang.String s = input.readStringRequireUtf8();
 
               url_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              title_ = s;
               break;
             }
             default: {
@@ -2024,6 +2169,44 @@ public final class CommonObjects {
       }
     }
 
+    public static final int TITLE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object title_;
+    /**
+     * <code>string title = 2;</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 2;</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2038,8 +2221,11 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
       }
       unknownFields.writeTo(output);
     }
@@ -2050,8 +2236,11 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2070,6 +2259,8 @@ public final class CommonObjects {
 
       if (!getUrl()
           .equals(other.getUrl())) return false;
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2083,6 +2274,8 @@ public final class CommonObjects {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + URL_FIELD_NUMBER;
       hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2218,6 +2411,8 @@ public final class CommonObjects {
         super.clear();
         url_ = "";
 
+        title_ = "";
+
         return this;
       }
 
@@ -2245,6 +2440,7 @@ public final class CommonObjects {
       public com.passkit.grpc.CommonObjects.Url buildPartial() {
         com.passkit.grpc.CommonObjects.Url result = new com.passkit.grpc.CommonObjects.Url(this);
         result.url_ = url_;
+        result.title_ = title_;
         onBuilt();
         return result;
       }
@@ -2295,6 +2491,10 @@ public final class CommonObjects {
         if (other == com.passkit.grpc.CommonObjects.Url.getDefaultInstance()) return this;
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
+          onChanged();
+        }
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2398,6 +2598,82 @@ public final class CommonObjects {
   checkByteStringIsUtf8(value);
         
         url_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 2;</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        title_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        
+        title_ = getDefaultInstance().getTitle();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 2;</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        title_ = value;
         onChanged();
         return this;
       }
@@ -6153,7 +6429,7 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDateTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dateTime_);
       }
       unknownFields.writeTo(output);
@@ -6165,7 +6441,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDateTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dateTime_);
       }
       size += unknownFields.getSerializedSize();
@@ -6765,7 +7041,7 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDateTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateTime_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dateTime_);
       }
       unknownFields.writeTo(output);
@@ -6777,7 +7053,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDateTimeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(dateTime_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dateTime_);
       }
       size += unknownFields.getSerializedSize();
@@ -7627,19 +7903,19 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
-      if (!getGooglePayURLBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(googlePayURL_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, googlePayURL_);
       }
       if (!applePassBytes_.isEmpty()) {
         output.writeBytes(6, applePassBytes_);
       }
-      if (!getMultiplePassesURLBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multiplePassesURL_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, multiplePassesURL_);
       }
       unknownFields.writeTo(output);
@@ -7651,20 +7927,20 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
-      if (!getGooglePayURLBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(googlePayURL_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, googlePayURL_);
       }
       if (!applePassBytes_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, applePassBytes_);
       }
-      if (!getMultiplePassesURLBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(multiplePassesURL_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, multiplePassesURL_);
       }
       size += unknownFields.getSerializedSize();
@@ -9586,7 +9862,7 @@ public final class CommonObjects {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (getFormatList().size() > 0) {
@@ -9605,7 +9881,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       {
@@ -10500,7 +10776,7 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -10518,7 +10794,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -11382,7 +11658,7 @@ public final class CommonObjects {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -11400,7 +11676,7 @@ public final class CommonObjects {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
@@ -12219,7 +12495,7 @@ public final class CommonObjects {
     @java.lang.Override
     public boolean containsItems(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetItems().getMap().containsKey(key);
     }
     /**
@@ -12254,7 +12530,7 @@ public final class CommonObjects {
     public java.lang.String getItemsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetItems().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -12270,7 +12546,7 @@ public final class CommonObjects {
 
     public java.lang.String getItemsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetItems().getMap();
       if (!map.containsKey(key)) {
@@ -12656,7 +12932,7 @@ public final class CommonObjects {
       @java.lang.Override
       public boolean containsItems(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetItems().getMap().containsKey(key);
       }
       /**
@@ -12691,7 +12967,7 @@ public final class CommonObjects {
       public java.lang.String getItemsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetItems().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -12707,7 +12983,7 @@ public final class CommonObjects {
 
       public java.lang.String getItemsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetItems().getMap();
         if (!map.containsKey(key)) {
@@ -12731,7 +13007,7 @@ public final class CommonObjects {
 
       public Builder removeItems(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableItems().getMutableMap()
             .remove(key);
         return this;
@@ -12754,8 +13030,11 @@ public final class CommonObjects {
       public Builder putItems(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableItems().getMutableMap()
             .put(key, value);
         return this;
@@ -13605,10 +13884,10 @@ public final class CommonObjects {
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, protocol_);
       }
-      if (!getObjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, objectId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
       }
       unknownFields.writeTo(output);
@@ -13624,10 +13903,10 @@ public final class CommonObjects {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, protocol_);
       }
-      if (!getObjectIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(objectId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, objectId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
       }
       size += unknownFields.getSerializedSize();
@@ -14221,6 +14500,4402 @@ public final class CommonObjects {
 
   }
 
+  public interface RecursiveDateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.RecursiveDate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * </pre>
+     *
+     * <code>string schedule = 1;</code>
+     * @return The schedule.
+     */
+    java.lang.String getSchedule();
+    /**
+     * <pre>
+     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * </pre>
+     *
+     * <code>string schedule = 1;</code>
+     * @return The bytes for schedule.
+     */
+    com.google.protobuf.ByteString
+        getScheduleBytes();
+
+    /**
+     * <pre>
+     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+     * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 2;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+     * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 2;</code>
+     * @return The state.
+     */
+    com.passkit.grpc.CommonObjects.TimeState getState();
+  }
+  /**
+   * <pre>
+   * To be used for setting recursive datetime.
+   * </pre>
+   *
+   * Protobuf type {@code io.RecursiveDate}
+   */
+  public static final class RecursiveDate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.RecursiveDate)
+      RecursiveDateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecursiveDate.newBuilder() to construct.
+    private RecursiveDate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecursiveDate() {
+      schedule_ = "";
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecursiveDate();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecursiveDate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              schedule_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              state_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_RecursiveDate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_RecursiveDate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.RecursiveDate.class, com.passkit.grpc.CommonObjects.RecursiveDate.Builder.class);
+    }
+
+    public static final int SCHEDULE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object schedule_;
+    /**
+     * <pre>
+     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * </pre>
+     *
+     * <code>string schedule = 1;</code>
+     * @return The schedule.
+     */
+    @java.lang.Override
+    public java.lang.String getSchedule() {
+      java.lang.Object ref = schedule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        schedule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+     * </pre>
+     *
+     * <code>string schedule = 1;</code>
+     * @return The bytes for schedule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getScheduleBytes() {
+      java.lang.Object ref = schedule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        schedule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 2;
+    private int state_;
+    /**
+     * <pre>
+     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+     * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 2;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+     * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 2;</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.passkit.grpc.CommonObjects.TimeState getState() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+      return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schedule_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, schedule_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        output.writeEnum(2, state_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(schedule_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, schedule_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, state_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.RecursiveDate)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.RecursiveDate other = (com.passkit.grpc.CommonObjects.RecursiveDate) obj;
+
+      if (!getSchedule()
+          .equals(other.getSchedule())) return false;
+      if (state_ != other.state_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SCHEDULE_FIELD_NUMBER;
+      hash = (53 * hash) + getSchedule().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.RecursiveDate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.RecursiveDate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * To be used for setting recursive datetime.
+     * </pre>
+     *
+     * Protobuf type {@code io.RecursiveDate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.RecursiveDate)
+        com.passkit.grpc.CommonObjects.RecursiveDateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_RecursiveDate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_RecursiveDate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.RecursiveDate.class, com.passkit.grpc.CommonObjects.RecursiveDate.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.RecursiveDate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        schedule_ = "";
+
+        state_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_RecursiveDate_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.RecursiveDate getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.RecursiveDate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.RecursiveDate build() {
+        com.passkit.grpc.CommonObjects.RecursiveDate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.RecursiveDate buildPartial() {
+        com.passkit.grpc.CommonObjects.RecursiveDate result = new com.passkit.grpc.CommonObjects.RecursiveDate(this);
+        result.schedule_ = schedule_;
+        result.state_ = state_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.RecursiveDate) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.RecursiveDate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.RecursiveDate other) {
+        if (other == com.passkit.grpc.CommonObjects.RecursiveDate.getDefaultInstance()) return this;
+        if (!other.getSchedule().isEmpty()) {
+          schedule_ = other.schedule_;
+          onChanged();
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.RecursiveDate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.RecursiveDate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object schedule_ = "";
+      /**
+       * <pre>
+       * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+       * </pre>
+       *
+       * <code>string schedule = 1;</code>
+       * @return The schedule.
+       */
+      public java.lang.String getSchedule() {
+        java.lang.Object ref = schedule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          schedule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+       * </pre>
+       *
+       * <code>string schedule = 1;</code>
+       * @return The bytes for schedule.
+       */
+      public com.google.protobuf.ByteString
+          getScheduleBytes() {
+        java.lang.Object ref = schedule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          schedule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+       * </pre>
+       *
+       * <code>string schedule = 1;</code>
+       * @param value The schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSchedule(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        schedule_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+       * </pre>
+       *
+       * <code>string schedule = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSchedule() {
+        
+        schedule_ = getDefaultInstance().getSchedule();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Crontab expression (https://crontab.guru) to declare the recursive billing period start.
+       * </pre>
+       *
+       * <code>string schedule = 1;</code>
+       * @param value The bytes for schedule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScheduleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        schedule_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+       * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 2;</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+       * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 2;</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+       * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 2;</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.TimeState getState() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+        return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+       * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 2;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.passkit.grpc.CommonObjects.TimeState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State adds flexibility to the recursive date where user can shift scheduled date. Default is TIME_STATE_CURRENT.
+       * Eg. Given schedule is &#64;monthly, if state is PREVIOUS, the recursive date will be 'At 00:00 on day-of-PREVIOUS-month 1'.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.RecursiveDate)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.RecursiveDate)
+    private static final com.passkit.grpc.CommonObjects.RecursiveDate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.RecursiveDate();
+    }
+
+    public static com.passkit.grpc.CommonObjects.RecursiveDate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecursiveDate>
+        PARSER = new com.google.protobuf.AbstractParser<RecursiveDate>() {
+      @java.lang.Override
+      public RecursiveDate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecursiveDate(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecursiveDate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecursiveDate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.RecursiveDate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MonthlyRecursiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.MonthlyRecursive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The day which the recursive period starts. Available values are 1-31.
+     * Selecting 31 for the last day of any month.
+     * </pre>
+     *
+     * <code>int32 dayOfMonth = 1;</code>
+     * @return The dayOfMonth.
+     */
+    int getDayOfMonth();
+
+    /**
+     * <pre>
+     * Default hour is 0.
+     * </pre>
+     *
+     * <code>int32 hour = 2;</code>
+     * @return The hour.
+     */
+    int getHour();
+
+    /**
+     * <pre>
+     * Default minute is 0.
+     * </pre>
+     *
+     * <code>int32 minute = 3;</code>
+     * @return The minute.
+     */
+    int getMinute();
+
+    /**
+     * <pre>
+     * Default second is 0.
+     * </pre>
+     *
+     * <code>int32 second = 4;</code>
+     * @return The second.
+     */
+    int getSecond();
+
+    /**
+     * <pre>
+     * State to select the month.
+     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 5;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * State to select the month.
+     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 5;</code>
+     * @return The state.
+     */
+    com.passkit.grpc.CommonObjects.TimeState getState();
+  }
+  /**
+   * Protobuf type {@code io.MonthlyRecursive}
+   */
+  public static final class MonthlyRecursive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.MonthlyRecursive)
+      MonthlyRecursiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MonthlyRecursive.newBuilder() to construct.
+    private MonthlyRecursive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MonthlyRecursive() {
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MonthlyRecursive();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MonthlyRecursive(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              dayOfMonth_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              hour_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              minute_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              second_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              state_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_MonthlyRecursive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_MonthlyRecursive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.MonthlyRecursive.class, com.passkit.grpc.CommonObjects.MonthlyRecursive.Builder.class);
+    }
+
+    public static final int DAYOFMONTH_FIELD_NUMBER = 1;
+    private int dayOfMonth_;
+    /**
+     * <pre>
+     * The day which the recursive period starts. Available values are 1-31.
+     * Selecting 31 for the last day of any month.
+     * </pre>
+     *
+     * <code>int32 dayOfMonth = 1;</code>
+     * @return The dayOfMonth.
+     */
+    @java.lang.Override
+    public int getDayOfMonth() {
+      return dayOfMonth_;
+    }
+
+    public static final int HOUR_FIELD_NUMBER = 2;
+    private int hour_;
+    /**
+     * <pre>
+     * Default hour is 0.
+     * </pre>
+     *
+     * <code>int32 hour = 2;</code>
+     * @return The hour.
+     */
+    @java.lang.Override
+    public int getHour() {
+      return hour_;
+    }
+
+    public static final int MINUTE_FIELD_NUMBER = 3;
+    private int minute_;
+    /**
+     * <pre>
+     * Default minute is 0.
+     * </pre>
+     *
+     * <code>int32 minute = 3;</code>
+     * @return The minute.
+     */
+    @java.lang.Override
+    public int getMinute() {
+      return minute_;
+    }
+
+    public static final int SECOND_FIELD_NUMBER = 4;
+    private int second_;
+    /**
+     * <pre>
+     * Default second is 0.
+     * </pre>
+     *
+     * <code>int32 second = 4;</code>
+     * @return The second.
+     */
+    @java.lang.Override
+    public int getSecond() {
+      return second_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 5;
+    private int state_;
+    /**
+     * <pre>
+     * State to select the month.
+     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 5;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * State to select the month.
+     * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 5;</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.passkit.grpc.CommonObjects.TimeState getState() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+      return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (dayOfMonth_ != 0) {
+        output.writeInt32(1, dayOfMonth_);
+      }
+      if (hour_ != 0) {
+        output.writeInt32(2, hour_);
+      }
+      if (minute_ != 0) {
+        output.writeInt32(3, minute_);
+      }
+      if (second_ != 0) {
+        output.writeInt32(4, second_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        output.writeEnum(5, state_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (dayOfMonth_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, dayOfMonth_);
+      }
+      if (hour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, hour_);
+      }
+      if (minute_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, minute_);
+      }
+      if (second_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, second_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, state_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.MonthlyRecursive)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.MonthlyRecursive other = (com.passkit.grpc.CommonObjects.MonthlyRecursive) obj;
+
+      if (getDayOfMonth()
+          != other.getDayOfMonth()) return false;
+      if (getHour()
+          != other.getHour()) return false;
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (getSecond()
+          != other.getSecond()) return false;
+      if (state_ != other.state_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DAYOFMONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getDayOfMonth();
+      hash = (37 * hash) + HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getHour();
+      hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinute();
+      hash = (37 * hash) + SECOND_FIELD_NUMBER;
+      hash = (53 * hash) + getSecond();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.MonthlyRecursive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.MonthlyRecursive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.MonthlyRecursive)
+        com.passkit.grpc.CommonObjects.MonthlyRecursiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_MonthlyRecursive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_MonthlyRecursive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.MonthlyRecursive.class, com.passkit.grpc.CommonObjects.MonthlyRecursive.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.MonthlyRecursive.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dayOfMonth_ = 0;
+
+        hour_ = 0;
+
+        minute_ = 0;
+
+        second_ = 0;
+
+        state_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_MonthlyRecursive_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.MonthlyRecursive getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.MonthlyRecursive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.MonthlyRecursive build() {
+        com.passkit.grpc.CommonObjects.MonthlyRecursive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.MonthlyRecursive buildPartial() {
+        com.passkit.grpc.CommonObjects.MonthlyRecursive result = new com.passkit.grpc.CommonObjects.MonthlyRecursive(this);
+        result.dayOfMonth_ = dayOfMonth_;
+        result.hour_ = hour_;
+        result.minute_ = minute_;
+        result.second_ = second_;
+        result.state_ = state_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.MonthlyRecursive) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.MonthlyRecursive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.MonthlyRecursive other) {
+        if (other == com.passkit.grpc.CommonObjects.MonthlyRecursive.getDefaultInstance()) return this;
+        if (other.getDayOfMonth() != 0) {
+          setDayOfMonth(other.getDayOfMonth());
+        }
+        if (other.getHour() != 0) {
+          setHour(other.getHour());
+        }
+        if (other.getMinute() != 0) {
+          setMinute(other.getMinute());
+        }
+        if (other.getSecond() != 0) {
+          setSecond(other.getSecond());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.MonthlyRecursive parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.MonthlyRecursive) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int dayOfMonth_ ;
+      /**
+       * <pre>
+       * The day which the recursive period starts. Available values are 1-31.
+       * Selecting 31 for the last day of any month.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 1;</code>
+       * @return The dayOfMonth.
+       */
+      @java.lang.Override
+      public int getDayOfMonth() {
+        return dayOfMonth_;
+      }
+      /**
+       * <pre>
+       * The day which the recursive period starts. Available values are 1-31.
+       * Selecting 31 for the last day of any month.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 1;</code>
+       * @param value The dayOfMonth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDayOfMonth(int value) {
+        
+        dayOfMonth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The day which the recursive period starts. Available values are 1-31.
+       * Selecting 31 for the last day of any month.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDayOfMonth() {
+        
+        dayOfMonth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int hour_ ;
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 2;</code>
+       * @return The hour.
+       */
+      @java.lang.Override
+      public int getHour() {
+        return hour_;
+      }
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 2;</code>
+       * @param value The hour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHour(int value) {
+        
+        hour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHour() {
+        
+        hour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minute_ ;
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 3;</code>
+       * @return The minute.
+       */
+      @java.lang.Override
+      public int getMinute() {
+        return minute_;
+      }
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 3;</code>
+       * @param value The minute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinute(int value) {
+        
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinute() {
+        
+        minute_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int second_ ;
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 4;</code>
+       * @return The second.
+       */
+      @java.lang.Override
+      public int getSecond() {
+        return second_;
+      }
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 4;</code>
+       * @param value The second to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecond(int value) {
+        
+        second_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecond() {
+        
+        second_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       * State to select the month.
+       * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 5;</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       * State to select the month.
+       * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 5;</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State to select the month.
+       * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 5;</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.TimeState getState() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+        return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * State to select the month.
+       * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 5;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.passkit.grpc.CommonObjects.TimeState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State to select the month.
+       * Eg. Given the date=15 and state=TIME_STATE_CURRENT, then the date is 15th of the current month.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.MonthlyRecursive)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.MonthlyRecursive)
+    private static final com.passkit.grpc.CommonObjects.MonthlyRecursive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.MonthlyRecursive();
+    }
+
+    public static com.passkit.grpc.CommonObjects.MonthlyRecursive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MonthlyRecursive>
+        PARSER = new com.google.protobuf.AbstractParser<MonthlyRecursive>() {
+      @java.lang.Override
+      public MonthlyRecursive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MonthlyRecursive(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MonthlyRecursive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MonthlyRecursive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.MonthlyRecursive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface YearlyRecursiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.YearlyRecursive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The month in which the recursive period starts.
+     * </pre>
+     *
+     * <code>int32 month = 1;</code>
+     * @return The month.
+     */
+    int getMonth();
+
+    /**
+     * <pre>
+     * The day on which the recursive period starts. Available values are 1-31.
+     * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     * </pre>
+     *
+     * <code>int32 dayOfMonth = 2;</code>
+     * @return The dayOfMonth.
+     */
+    int getDayOfMonth();
+
+    /**
+     * <pre>
+     * Default hour is 0.
+     * </pre>
+     *
+     * <code>int32 hour = 3;</code>
+     * @return The hour.
+     */
+    int getHour();
+
+    /**
+     * <pre>
+     * Default minute is 0.
+     * </pre>
+     *
+     * <code>int32 minute = 4;</code>
+     * @return The minute.
+     */
+    int getMinute();
+
+    /**
+     * <pre>
+     * Default second is 0.
+     * </pre>
+     *
+     * <code>int32 second = 5;</code>
+     * @return The second.
+     */
+    int getSecond();
+
+    /**
+     * <pre>
+     * State to select the year.
+     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 6;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    int getStateValue();
+    /**
+     * <pre>
+     * State to select the year.
+     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 6;</code>
+     * @return The state.
+     */
+    com.passkit.grpc.CommonObjects.TimeState getState();
+  }
+  /**
+   * Protobuf type {@code io.YearlyRecursive}
+   */
+  public static final class YearlyRecursive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.YearlyRecursive)
+      YearlyRecursiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use YearlyRecursive.newBuilder() to construct.
+    private YearlyRecursive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private YearlyRecursive() {
+      state_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new YearlyRecursive();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private YearlyRecursive(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              month_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              dayOfMonth_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              hour_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              minute_ = input.readInt32();
+              break;
+            }
+            case 40: {
+
+              second_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              state_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_YearlyRecursive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_YearlyRecursive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.YearlyRecursive.class, com.passkit.grpc.CommonObjects.YearlyRecursive.Builder.class);
+    }
+
+    public static final int MONTH_FIELD_NUMBER = 1;
+    private int month_;
+    /**
+     * <pre>
+     * The month in which the recursive period starts.
+     * </pre>
+     *
+     * <code>int32 month = 1;</code>
+     * @return The month.
+     */
+    @java.lang.Override
+    public int getMonth() {
+      return month_;
+    }
+
+    public static final int DAYOFMONTH_FIELD_NUMBER = 2;
+    private int dayOfMonth_;
+    /**
+     * <pre>
+     * The day on which the recursive period starts. Available values are 1-31.
+     * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+     * </pre>
+     *
+     * <code>int32 dayOfMonth = 2;</code>
+     * @return The dayOfMonth.
+     */
+    @java.lang.Override
+    public int getDayOfMonth() {
+      return dayOfMonth_;
+    }
+
+    public static final int HOUR_FIELD_NUMBER = 3;
+    private int hour_;
+    /**
+     * <pre>
+     * Default hour is 0.
+     * </pre>
+     *
+     * <code>int32 hour = 3;</code>
+     * @return The hour.
+     */
+    @java.lang.Override
+    public int getHour() {
+      return hour_;
+    }
+
+    public static final int MINUTE_FIELD_NUMBER = 4;
+    private int minute_;
+    /**
+     * <pre>
+     * Default minute is 0.
+     * </pre>
+     *
+     * <code>int32 minute = 4;</code>
+     * @return The minute.
+     */
+    @java.lang.Override
+    public int getMinute() {
+      return minute_;
+    }
+
+    public static final int SECOND_FIELD_NUMBER = 5;
+    private int second_;
+    /**
+     * <pre>
+     * Default second is 0.
+     * </pre>
+     *
+     * <code>int32 second = 5;</code>
+     * @return The second.
+     */
+    @java.lang.Override
+    public int getSecond() {
+      return second_;
+    }
+
+    public static final int STATE_FIELD_NUMBER = 6;
+    private int state_;
+    /**
+     * <pre>
+     * State to select the year.
+     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 6;</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * State to select the year.
+     * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+     * </pre>
+     *
+     * <code>.io.TimeState state = 6;</code>
+     * @return The state.
+     */
+    @java.lang.Override public com.passkit.grpc.CommonObjects.TimeState getState() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+      return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (month_ != 0) {
+        output.writeInt32(1, month_);
+      }
+      if (dayOfMonth_ != 0) {
+        output.writeInt32(2, dayOfMonth_);
+      }
+      if (hour_ != 0) {
+        output.writeInt32(3, hour_);
+      }
+      if (minute_ != 0) {
+        output.writeInt32(4, minute_);
+      }
+      if (second_ != 0) {
+        output.writeInt32(5, second_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        output.writeEnum(6, state_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (month_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, month_);
+      }
+      if (dayOfMonth_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, dayOfMonth_);
+      }
+      if (hour_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, hour_);
+      }
+      if (minute_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, minute_);
+      }
+      if (second_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, second_);
+      }
+      if (state_ != com.passkit.grpc.CommonObjects.TimeState.TIME_STATE_NONE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, state_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.YearlyRecursive)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.YearlyRecursive other = (com.passkit.grpc.CommonObjects.YearlyRecursive) obj;
+
+      if (getMonth()
+          != other.getMonth()) return false;
+      if (getDayOfMonth()
+          != other.getDayOfMonth()) return false;
+      if (getHour()
+          != other.getHour()) return false;
+      if (getMinute()
+          != other.getMinute()) return false;
+      if (getSecond()
+          != other.getSecond()) return false;
+      if (state_ != other.state_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getMonth();
+      hash = (37 * hash) + DAYOFMONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getDayOfMonth();
+      hash = (37 * hash) + HOUR_FIELD_NUMBER;
+      hash = (53 * hash) + getHour();
+      hash = (37 * hash) + MINUTE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinute();
+      hash = (37 * hash) + SECOND_FIELD_NUMBER;
+      hash = (53 * hash) + getSecond();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + state_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.YearlyRecursive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.YearlyRecursive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.YearlyRecursive)
+        com.passkit.grpc.CommonObjects.YearlyRecursiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_YearlyRecursive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_YearlyRecursive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.YearlyRecursive.class, com.passkit.grpc.CommonObjects.YearlyRecursive.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.YearlyRecursive.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        month_ = 0;
+
+        dayOfMonth_ = 0;
+
+        hour_ = 0;
+
+        minute_ = 0;
+
+        second_ = 0;
+
+        state_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_YearlyRecursive_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.YearlyRecursive getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.YearlyRecursive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.YearlyRecursive build() {
+        com.passkit.grpc.CommonObjects.YearlyRecursive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.YearlyRecursive buildPartial() {
+        com.passkit.grpc.CommonObjects.YearlyRecursive result = new com.passkit.grpc.CommonObjects.YearlyRecursive(this);
+        result.month_ = month_;
+        result.dayOfMonth_ = dayOfMonth_;
+        result.hour_ = hour_;
+        result.minute_ = minute_;
+        result.second_ = second_;
+        result.state_ = state_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.YearlyRecursive) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.YearlyRecursive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.YearlyRecursive other) {
+        if (other == com.passkit.grpc.CommonObjects.YearlyRecursive.getDefaultInstance()) return this;
+        if (other.getMonth() != 0) {
+          setMonth(other.getMonth());
+        }
+        if (other.getDayOfMonth() != 0) {
+          setDayOfMonth(other.getDayOfMonth());
+        }
+        if (other.getHour() != 0) {
+          setHour(other.getHour());
+        }
+        if (other.getMinute() != 0) {
+          setMinute(other.getMinute());
+        }
+        if (other.getSecond() != 0) {
+          setSecond(other.getSecond());
+        }
+        if (other.state_ != 0) {
+          setStateValue(other.getStateValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.YearlyRecursive parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.YearlyRecursive) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int month_ ;
+      /**
+       * <pre>
+       * The month in which the recursive period starts.
+       * </pre>
+       *
+       * <code>int32 month = 1;</code>
+       * @return The month.
+       */
+      @java.lang.Override
+      public int getMonth() {
+        return month_;
+      }
+      /**
+       * <pre>
+       * The month in which the recursive period starts.
+       * </pre>
+       *
+       * <code>int32 month = 1;</code>
+       * @param value The month to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMonth(int value) {
+        
+        month_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The month in which the recursive period starts.
+       * </pre>
+       *
+       * <code>int32 month = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMonth() {
+        
+        month_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int dayOfMonth_ ;
+      /**
+       * <pre>
+       * The day on which the recursive period starts. Available values are 1-31.
+       * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 2;</code>
+       * @return The dayOfMonth.
+       */
+      @java.lang.Override
+      public int getDayOfMonth() {
+        return dayOfMonth_;
+      }
+      /**
+       * <pre>
+       * The day on which the recursive period starts. Available values are 1-31.
+       * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 2;</code>
+       * @param value The dayOfMonth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDayOfMonth(int value) {
+        
+        dayOfMonth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The day on which the recursive period starts. Available values are 1-31.
+       * Selecting dayOfMonth=29 and month=2, for the last day of Feb of any year.
+       * </pre>
+       *
+       * <code>int32 dayOfMonth = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDayOfMonth() {
+        
+        dayOfMonth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int hour_ ;
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 3;</code>
+       * @return The hour.
+       */
+      @java.lang.Override
+      public int getHour() {
+        return hour_;
+      }
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 3;</code>
+       * @param value The hour to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHour(int value) {
+        
+        hour_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default hour is 0.
+       * </pre>
+       *
+       * <code>int32 hour = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHour() {
+        
+        hour_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minute_ ;
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 4;</code>
+       * @return The minute.
+       */
+      @java.lang.Override
+      public int getMinute() {
+        return minute_;
+      }
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 4;</code>
+       * @param value The minute to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinute(int value) {
+        
+        minute_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default minute is 0.
+       * </pre>
+       *
+       * <code>int32 minute = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinute() {
+        
+        minute_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int second_ ;
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 5;</code>
+       * @return The second.
+       */
+      @java.lang.Override
+      public int getSecond() {
+        return second_;
+      }
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 5;</code>
+       * @param value The second to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecond(int value) {
+        
+        second_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Default second is 0.
+       * </pre>
+       *
+       * <code>int32 second = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecond() {
+        
+        second_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int state_ = 0;
+      /**
+       * <pre>
+       * State to select the year.
+       * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 6;</code>
+       * @return The enum numeric value on the wire for state.
+       */
+      @java.lang.Override public int getStateValue() {
+        return state_;
+      }
+      /**
+       * <pre>
+       * State to select the year.
+       * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 6;</code>
+       * @param value The enum numeric value on the wire for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateValue(int value) {
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State to select the year.
+       * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 6;</code>
+       * @return The state.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.TimeState getState() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.CommonObjects.TimeState result = com.passkit.grpc.CommonObjects.TimeState.valueOf(state_);
+        return result == null ? com.passkit.grpc.CommonObjects.TimeState.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * State to select the year.
+       * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 6;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(com.passkit.grpc.CommonObjects.TimeState value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        state_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * State to select the year.
+       * Eg. Given the month=1, date=15 and state=TIME_STATE_CURRENT, then the date is 15th Jan of the current year.
+       * </pre>
+       *
+       * <code>.io.TimeState state = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.YearlyRecursive)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.YearlyRecursive)
+    private static final com.passkit.grpc.CommonObjects.YearlyRecursive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.YearlyRecursive();
+    }
+
+    public static com.passkit.grpc.CommonObjects.YearlyRecursive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<YearlyRecursive>
+        PARSER = new com.google.protobuf.AbstractParser<YearlyRecursive>() {
+      @java.lang.Override
+      public YearlyRecursive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new YearlyRecursive(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<YearlyRecursive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<YearlyRecursive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.YearlyRecursive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PassIdsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.PassIds)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @return A list containing the ids.
+     */
+    java.util.List<java.lang.String>
+        getIdsList();
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @return The count of ids.
+     */
+    int getIdsCount();
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    java.lang.String getIds(int index);
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ids at the given index.
+     */
+    com.google.protobuf.ByteString
+        getIdsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code io.PassIds}
+   */
+  public static final class PassIds extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.PassIds)
+      PassIdsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PassIds.newBuilder() to construct.
+    private PassIds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PassIds() {
+      ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PassIds();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PassIds(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                ids_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              ids_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          ids_ = ids_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_PassIds_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_PassIds_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.PassIds.class, com.passkit.grpc.CommonObjects.PassIds.Builder.class);
+    }
+
+    public static final int IDS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList ids_;
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @return A list containing the ids.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getIdsList() {
+      return ids_;
+    }
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @return The count of ids.
+     */
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    public java.lang.String getIds(int index) {
+      return ids_.get(index);
+    }
+    /**
+     * <code>repeated string ids = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the ids at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getIdsBytes(int index) {
+      return ids_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < ids_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ids_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ids_.size(); i++) {
+          dataSize += computeStringSizeNoTag(ids_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getIdsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.PassIds)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.PassIds other = (com.passkit.grpc.CommonObjects.PassIds) obj;
+
+      if (!getIdsList()
+          .equals(other.getIdsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getIdsCount() > 0) {
+        hash = (37 * hash) + IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.PassIds parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.PassIds prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.PassIds}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.PassIds)
+        com.passkit.grpc.CommonObjects.PassIdsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_PassIds_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_PassIds_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.PassIds.class, com.passkit.grpc.CommonObjects.PassIds.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.PassIds.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_PassIds_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.PassIds getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.PassIds build() {
+        com.passkit.grpc.CommonObjects.PassIds result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.PassIds buildPartial() {
+        com.passkit.grpc.CommonObjects.PassIds result = new com.passkit.grpc.CommonObjects.PassIds(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          ids_ = ids_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.ids_ = ids_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.PassIds) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.PassIds)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.PassIds other) {
+        if (other == com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance()) return this;
+        if (!other.ids_.isEmpty()) {
+          if (ids_.isEmpty()) {
+            ids_ = other.ids_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureIdsIsMutable();
+            ids_.addAll(other.ids_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.PassIds parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.PassIds) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          ids_ = new com.google.protobuf.LazyStringArrayList(ids_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @return A list containing the ids.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getIdsList() {
+        return ids_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @return The count of ids.
+       */
+      public int getIdsCount() {
+        return ids_.size();
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
+       */
+      public java.lang.String getIds(int index) {
+        return ids_.get(index);
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the ids at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getIdsBytes(int index) {
+        return ids_.getByteString(index);
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIdsIsMutable();
+        ids_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureIdsIsMutable();
+        ids_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIds() {
+        ids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string ids = 1;</code>
+       * @param value The bytes of the ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureIdsIsMutable();
+        ids_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.PassIds)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.PassIds)
+    private static final com.passkit.grpc.CommonObjects.PassIds DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.PassIds();
+    }
+
+    public static com.passkit.grpc.CommonObjects.PassIds getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PassIds>
+        PARSER = new com.google.protobuf.AbstractParser<PassIds>() {
+      @java.lang.Override
+      public PassIds parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PassIds(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PassIds> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PassIds> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.PassIds getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProtocolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.Protocol)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     * @return Whether the protocol field is set.
+     */
+    boolean hasProtocol();
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     * @return The protocol.
+     */
+    com.passkit.grpc.CommonObjects.Protocol getProtocol();
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     */
+    com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder();
+
+    /**
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return The pagination.
+     */
+    com.passkit.grpc.PaginationOuterClass.Pagination getPagination();
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     */
+    com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code io.Protocol}
+   */
+  public static final class Protocol extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.Protocol)
+      ProtocolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Protocol.newBuilder() to construct.
+    private Protocol(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Protocol() {
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Protocol();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Protocol(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.passkit.grpc.CommonObjects.Protocol.Builder subBuilder = null;
+              if (protocol_ != null) {
+                subBuilder = protocol_.toBuilder();
+              }
+              protocol_ = input.readMessage(com.passkit.grpc.CommonObjects.Protocol.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(protocol_);
+                protocol_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 26: {
+              com.passkit.grpc.PaginationOuterClass.Pagination.Builder subBuilder = null;
+              if (pagination_ != null) {
+                subBuilder = pagination_.toBuilder();
+              }
+              pagination_ = input.readMessage(com.passkit.grpc.PaginationOuterClass.Pagination.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pagination_);
+                pagination_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_Protocol_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.CommonObjects.internal_static_io_Protocol_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.CommonObjects.Protocol.class, com.passkit.grpc.CommonObjects.Protocol.Builder.class);
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 1;
+    private com.passkit.grpc.CommonObjects.Protocol protocol_;
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     * @return Whether the protocol field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocol() {
+      return protocol_ != null;
+    }
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     * @return The protocol.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.Protocol getProtocol() {
+      return protocol_ == null ? com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance() : protocol_;
+    }
+    /**
+     * <code>.io.Protocol protocol = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder() {
+      return getProtocol();
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object classId_;
+    /**
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.passkit.grpc.PaginationOuterClass.Pagination pagination_;
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.PaginationOuterClass.Pagination getPagination() {
+      return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
+      return getPagination();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (protocol_ != null) {
+        output.writeMessage(1, getProtocol());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (protocol_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProtocol());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.CommonObjects.Protocol)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.CommonObjects.Protocol other = (com.passkit.grpc.CommonObjects.Protocol) obj;
+
+      if (hasProtocol() != other.hasProtocol()) return false;
+      if (hasProtocol()) {
+        if (!getProtocol()
+            .equals(other.getProtocol())) return false;
+      }
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProtocol()) {
+        hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+        hash = (53 * hash) + getProtocol().hashCode();
+      }
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.CommonObjects.Protocol parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.CommonObjects.Protocol prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.Protocol}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.Protocol)
+        com.passkit.grpc.CommonObjects.ProtocolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_Protocol_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_Protocol_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.CommonObjects.Protocol.class, com.passkit.grpc.CommonObjects.Protocol.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.CommonObjects.Protocol.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (protocolBuilder_ == null) {
+          protocol_ = null;
+        } else {
+          protocol_ = null;
+          protocolBuilder_ = null;
+        }
+        classId_ = "";
+
+        if (paginationBuilder_ == null) {
+          pagination_ = null;
+        } else {
+          pagination_ = null;
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.CommonObjects.internal_static_io_Protocol_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.Protocol getDefaultInstanceForType() {
+        return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.Protocol build() {
+        com.passkit.grpc.CommonObjects.Protocol result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.Protocol buildPartial() {
+        com.passkit.grpc.CommonObjects.Protocol result = new com.passkit.grpc.CommonObjects.Protocol(this);
+        if (protocolBuilder_ == null) {
+          result.protocol_ = protocol_;
+        } else {
+          result.protocol_ = protocolBuilder_.build();
+        }
+        result.classId_ = classId_;
+        if (paginationBuilder_ == null) {
+          result.pagination_ = pagination_;
+        } else {
+          result.pagination_ = paginationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.CommonObjects.Protocol) {
+          return mergeFrom((com.passkit.grpc.CommonObjects.Protocol)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.CommonObjects.Protocol other) {
+        if (other == com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance()) return this;
+        if (other.hasProtocol()) {
+          mergeProtocol(other.getProtocol());
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.CommonObjects.Protocol parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.CommonObjects.Protocol) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.passkit.grpc.CommonObjects.Protocol protocol_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder> protocolBuilder_;
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       * @return Whether the protocol field is set.
+       */
+      public boolean hasProtocol() {
+        return protocolBuilder_ != null || protocol_ != null;
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       * @return The protocol.
+       */
+      public com.passkit.grpc.CommonObjects.Protocol getProtocol() {
+        if (protocolBuilder_ == null) {
+          return protocol_ == null ? com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance() : protocol_;
+        } else {
+          return protocolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public Builder setProtocol(com.passkit.grpc.CommonObjects.Protocol value) {
+        if (protocolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          protocol_ = value;
+          onChanged();
+        } else {
+          protocolBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public Builder setProtocol(
+          com.passkit.grpc.CommonObjects.Protocol.Builder builderForValue) {
+        if (protocolBuilder_ == null) {
+          protocol_ = builderForValue.build();
+          onChanged();
+        } else {
+          protocolBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public Builder mergeProtocol(com.passkit.grpc.CommonObjects.Protocol value) {
+        if (protocolBuilder_ == null) {
+          if (protocol_ != null) {
+            protocol_ =
+              com.passkit.grpc.CommonObjects.Protocol.newBuilder(protocol_).mergeFrom(value).buildPartial();
+          } else {
+            protocol_ = value;
+          }
+          onChanged();
+        } else {
+          protocolBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public Builder clearProtocol() {
+        if (protocolBuilder_ == null) {
+          protocol_ = null;
+          onChanged();
+        } else {
+          protocol_ = null;
+          protocolBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Protocol.Builder getProtocolBuilder() {
+        
+        onChanged();
+        return getProtocolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      public com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder() {
+        if (protocolBuilder_ != null) {
+          return protocolBuilder_.getMessageOrBuilder();
+        } else {
+          return protocol_ == null ?
+              com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance() : protocol_;
+        }
+      }
+      /**
+       * <code>.io.Protocol protocol = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder> 
+          getProtocolFieldBuilder() {
+        if (protocolBuilder_ == null) {
+          protocolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder>(
+                  getProtocol(),
+                  getParentForChildren(),
+                  isClean());
+          protocol_ = null;
+        }
+        return protocolBuilder_;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string classId = 2;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.PaginationOuterClass.Pagination pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return paginationBuilder_ != null || pagination_ != null;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       * @return The pagination.
+       */
+      public com.passkit.grpc.PaginationOuterClass.Pagination getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder setPagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+          onChanged();
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder setPagination(
+          com.passkit.grpc.PaginationOuterClass.Pagination.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+          onChanged();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder mergePagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
+        if (paginationBuilder_ == null) {
+          if (pagination_ != null) {
+            pagination_ =
+              com.passkit.grpc.PaginationOuterClass.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
+          } else {
+            pagination_ = value;
+          }
+          onChanged();
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder clearPagination() {
+        if (paginationBuilder_ == null) {
+          pagination_ = null;
+          onChanged();
+        } else {
+          pagination_ = null;
+          paginationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public com.passkit.grpc.PaginationOuterClass.Pagination.Builder getPaginationBuilder() {
+        
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all passes for the class will be selected.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.Protocol)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.Protocol)
+    private static final com.passkit.grpc.CommonObjects.Protocol DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.CommonObjects.Protocol();
+    }
+
+    public static com.passkit.grpc.CommonObjects.Protocol getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Protocol>
+        PARSER = new com.google.protobuf.AbstractParser<Protocol>() {
+      @java.lang.Override
+      public Protocol parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Protocol(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Protocol> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Protocol> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.Protocol getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Id_descriptor;
   private static final 
@@ -14321,6 +18996,31 @@ public final class CommonObjects {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_ClassObjectInput_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_RecursiveDate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_RecursiveDate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_MonthlyRecursive_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_MonthlyRecursive_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_YearlyRecursive_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_YearlyRecursive_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_PassIds_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_PassIds_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_Protocol_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_Protocol_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14335,44 +19035,58 @@ public final class CommonObjects {
       "roto\032\032io/common/pagination.proto\032\026io/com" +
       "mon/filter.proto\032\031io/common/protocols.pr" +
       "oto\"\020\n\002Id\022\n\n\002id\030\001 \001(\t\"\021\n\003Ids\022\n\n\002id\030\001 \003(\t" +
-      "\"\022\n\003Url\022\013\n\003url\030\001 \001(\t\"\026\n\005Count\022\r\n\005total\030\001" +
-      " \001(\005\"\036\n\tFileBytes\022\021\n\tfileBytes\030\001 \001(\014\"\033\n\007" +
-      "Boolean\022\020\n\010response\030\001 \001(\010\"\033\n\007Strings\022\020\n\010" +
-      "response\030\001 \003(\t\"0\n\004Date\022\014\n\004year\030\001 \001(\005\022\r\n\005" +
-      "month\030\002 \001(\005\022\013\n\003day\030\003 \001(\005\"4\n\004Time\022\014\n\004hour" +
-      "\030\001 \001(\005\022\016\n\006minute\030\002 \001(\005\022\016\n\006second\030\003 \001(\005\"[" +
-      "\n\tLocalDate\022N\n\010dateTime\030\001 \001(\tB<\222A9\212\0016^([" +
-      "0-9]{4})-?(1[0-2]|0[1-9])-?(3[01]|0[1-9]" +
-      "|[12][0-9])\"\234\001\n\rLocalDateTime\022\212\001\n\010dateTi" +
-      "me\030\001 \001(\tBx\222Au\212\001r^([0-9]{4})-?(1[0-2]|0[1" +
-      "-9])-?(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[" +
-      "01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-" +
-      "9]{1,3})?$\"n\n\nPassBundle\022\n\n\002id\030\001 \001(\t\022\013\n\003" +
-      "url\030\002 \001(\t\022\024\n\014googlePayURL\030\005 \001(\t\022\026\n\016apple" +
-      "PassBytes\030\006 \001(\014\022\031\n\021multiplePassesURL\030\007 \001" +
-      "(\t\"-\n\013PassBundles\022\036\n\006passes\030\001 \003(\0132\016.io.P" +
-      "assBundle\"E\n\021PassBundleRequest\022\n\n\002id\030\001 \001" +
-      "(\t\022$\n\006format\030\002 \003(\0162\024.io.PassBundleFormat" +
-      "\"p\n\025ListRequestDeprecated\022\017\n\007classId\030\001 \001" +
-      "(\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassProtocol\022\"" +
-      "\n\npagination\030\003 \001(\0132\016.io.Pagination\"`\n\013Li" +
-      "stRequest\022\017\n\007classId\030\001 \001(\t\022\"\n\010protocol\030\002" +
-      " \001(\0162\020.io.PassProtocol\022\034\n\007filters\030\003 \001(\0132" +
-      "\013.io.Filters\"b\n\tDataItems\022\'\n\005items\030\001 \003(\013" +
-      "2\030.io.DataItems.ItemsEntry\032,\n\nItemsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\024\n\006PkBo" +
-      "ol\022\n\n\002ok\030\001 \001(\010\"Y\n\020ClassObjectInput\022\"\n\010pr" +
-      "otocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n\010object" +
-      "Id\030\002 \001(\t\022\017\n\007classId\030\003 \001(\t*4\n\014ListPositio" +
-      "n\022\n\n\006APPEND\020\000\022\013\n\007PREPEND\020\001\022\013\n\007REPLACE\020\002*" +
-      ")\n\006Toggle\022\016\n\nDO_NOT_USE\020\000\022\006\n\002ON\020\001\022\007\n\003OFF" +
-      "\020\002*W\n\020PassBundleFormat\022\014\n\010PASS_URL\020\000\022\016\n\n" +
-      "GOOGLE_URL\020\002\022\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nM" +
-      "ULTI_LINK\020\020*g\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026" +
-      "\n\022USAGE_APPLE_WALLET\020\001\022\024\n\020USAGE_GOOGLE_P" +
-      "AY\020\002\022\036\n\032USAGE_DATA_COLLECTION_PAGE\020\004BG\n\020" +
-      "com.passkit.grpcZ$stash.passkit.com/io/m" +
-      "odel/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "\"!\n\003Url\022\013\n\003url\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\"\026\n\005C" +
+      "ount\022\r\n\005total\030\001 \001(\005\"\036\n\tFileBytes\022\021\n\tfile" +
+      "Bytes\030\001 \001(\014\"\033\n\007Boolean\022\020\n\010response\030\001 \001(\010" +
+      "\"\033\n\007Strings\022\020\n\010response\030\001 \003(\t\"0\n\004Date\022\014\n" +
+      "\004year\030\001 \001(\005\022\r\n\005month\030\002 \001(\005\022\013\n\003day\030\003 \001(\005\"" +
+      "4\n\004Time\022\014\n\004hour\030\001 \001(\005\022\016\n\006minute\030\002 \001(\005\022\016\n" +
+      "\006second\030\003 \001(\005\"[\n\tLocalDate\022N\n\010dateTime\030\001" +
+      " \001(\tB<\222A9\212\0016^([0-9]{4})-?(1[0-2]|0[1-9])" +
+      "-?(3[01]|0[1-9]|[12][0-9])\"\234\001\n\rLocalDate" +
+      "Time\022\212\001\n\010dateTime\030\001 \001(\tBx\222Au\212\001r^([0-9]{4" +
+      "})-?(1[0-2]|0[1-9])-?(3[01]|0[1-9]|[12][" +
+      "0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([" +
+      "0-5][0-9])(.[0-9]{1,3})?$\"n\n\nPassBundle\022" +
+      "\n\n\002id\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\022\024\n\014googlePayURL" +
+      "\030\005 \001(\t\022\026\n\016applePassBytes\030\006 \001(\014\022\031\n\021multip" +
+      "lePassesURL\030\007 \001(\t\"-\n\013PassBundles\022\036\n\006pass" +
+      "es\030\001 \003(\0132\016.io.PassBundle\"E\n\021PassBundleRe" +
+      "quest\022\n\n\002id\030\001 \001(\t\022$\n\006format\030\002 \003(\0162\024.io.P" +
+      "assBundleFormat\"p\n\025ListRequestDeprecated" +
+      "\022\017\n\007classId\030\001 \001(\t\022\"\n\010protocol\030\002 \001(\0162\020.io" +
+      ".PassProtocol\022\"\n\npagination\030\003 \001(\0132\016.io.P" +
+      "agination\"`\n\013ListRequest\022\017\n\007classId\030\001 \001(" +
+      "\t\022\"\n\010protocol\030\002 \001(\0162\020.io.PassProtocol\022\034\n" +
+      "\007filters\030\003 \001(\0132\013.io.Filters\"b\n\tDataItems" +
+      "\022\'\n\005items\030\001 \003(\0132\030.io.DataItems.ItemsEntr" +
+      "y\032,\n\nItemsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"\024\n\006PkBool\022\n\n\002ok\030\001 \001(\010\"Y\n\020ClassOb" +
+      "jectInput\022\"\n\010protocol\030\001 \001(\0162\020.io.PassPro" +
+      "tocol\022\020\n\010objectId\030\002 \001(\t\022\017\n\007classId\030\003 \001(\t" +
+      "\"?\n\rRecursiveDate\022\020\n\010schedule\030\001 \001(\t\022\034\n\005s" +
+      "tate\030\002 \001(\0162\r.io.TimeState\"r\n\020MonthlyRecu" +
+      "rsive\022\022\n\ndayOfMonth\030\001 \001(\005\022\014\n\004hour\030\002 \001(\005\022" +
+      "\016\n\006minute\030\003 \001(\005\022\016\n\006second\030\004 \001(\005\022\034\n\005state" +
+      "\030\005 \001(\0162\r.io.TimeState\"\200\001\n\017YearlyRecursiv" +
+      "e\022\r\n\005month\030\001 \001(\005\022\022\n\ndayOfMonth\030\002 \001(\005\022\014\n\004" +
+      "hour\030\003 \001(\005\022\016\n\006minute\030\004 \001(\005\022\016\n\006second\030\005 \001" +
+      "(\005\022\034\n\005state\030\006 \001(\0162\r.io.TimeState\"\026\n\007Pass" +
+      "Ids\022\013\n\003ids\030\001 \003(\t\"_\n\010Protocol\022\036\n\010protocol" +
+      "\030\001 \001(\0132\014.io.Protocol\022\017\n\007classId\030\002 \001(\t\022\"\n" +
+      "\npagination\030\003 \001(\0132\016.io.Pagination*4\n\014Lis" +
+      "tPosition\022\n\n\006APPEND\020\000\022\013\n\007PREPEND\020\001\022\013\n\007RE" +
+      "PLACE\020\002*)\n\006Toggle\022\016\n\nDO_NOT_USE\020\000\022\006\n\002ON\020" +
+      "\001\022\007\n\003OFF\020\002*k\n\tTimeState\022\023\n\017TIME_STATE_NO" +
+      "NE\020\000\022\026\n\022TIME_STATE_CURRENT\020\001\022\027\n\023TIME_STA" +
+      "TE_PREVIOUS\020\002\022\030\n\024TIME_STATE_FOLLOWING\020\003*" +
+      "W\n\020PassBundleFormat\022\014\n\010PASS_URL\020\000\022\016\n\nGOO" +
+      "GLE_URL\020\002\022\025\n\021APPLE_PASS_BUNDLE\020\010\022\016\n\nMULT" +
+      "I_LINK\020\020*g\n\tUsageType\022\014\n\010NO_USAGE\020\000\022\026\n\022U" +
+      "SAGE_APPLE_WALLET\020\001\022\024\n\020USAGE_GOOGLE_PAY\020" +
+      "\002\022\036\n\032USAGE_DATA_COLLECTION_PAGE\020\004BG\n\020com" +
+      ".passkit.grpcZ$stash.passkit.com/io/mode" +
+      "l/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14399,7 +19113,7 @@ public final class CommonObjects {
     internal_static_io_Url_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Url_descriptor,
-        new java.lang.String[] { "Url", });
+        new java.lang.String[] { "Url", "Title", });
     internal_static_io_Count_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_io_Count_fieldAccessorTable = new
@@ -14502,6 +19216,36 @@ public final class CommonObjects {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ClassObjectInput_descriptor,
         new java.lang.String[] { "Protocol", "ObjectId", "ClassId", });
+    internal_static_io_RecursiveDate_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_io_RecursiveDate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_RecursiveDate_descriptor,
+        new java.lang.String[] { "Schedule", "State", });
+    internal_static_io_MonthlyRecursive_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_io_MonthlyRecursive_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_MonthlyRecursive_descriptor,
+        new java.lang.String[] { "DayOfMonth", "Hour", "Minute", "Second", "State", });
+    internal_static_io_YearlyRecursive_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_io_YearlyRecursive_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_YearlyRecursive_descriptor,
+        new java.lang.String[] { "Month", "DayOfMonth", "Hour", "Minute", "Second", "State", });
+    internal_static_io_PassIds_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_io_PassIds_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_PassIds_descriptor,
+        new java.lang.String[] { "Ids", });
+    internal_static_io_Protocol_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_io_Protocol_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_Protocol_descriptor,
+        new java.lang.String[] { "Protocol", "ClassId", "Pagination", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);

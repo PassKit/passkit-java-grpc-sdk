@@ -937,7 +937,7 @@ public final class Reporting {
     @java.lang.Override
     public boolean containsUtmSourceBreakdown(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetUtmSourceBreakdown().getMap().containsKey(key);
     }
     /**
@@ -972,7 +972,7 @@ public final class Reporting {
     public int getUtmSourceBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmSourceBreakdown().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -988,7 +988,7 @@ public final class Reporting {
 
     public int getUtmSourceBreakdownOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmSourceBreakdown().getMap();
       if (!map.containsKey(key)) {
@@ -1094,7 +1094,7 @@ public final class Reporting {
     @java.lang.Override
     public boolean containsUtmMediumBreakdown(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetUtmMediumBreakdown().getMap().containsKey(key);
     }
     /**
@@ -1129,7 +1129,7 @@ public final class Reporting {
     public int getUtmMediumBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmMediumBreakdown().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1145,7 +1145,7 @@ public final class Reporting {
 
     public int getUtmMediumBreakdownOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmMediumBreakdown().getMap();
       if (!map.containsKey(key)) {
@@ -1191,7 +1191,7 @@ public final class Reporting {
     @java.lang.Override
     public boolean containsUtmNameBreakdown(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetUtmNameBreakdown().getMap().containsKey(key);
     }
     /**
@@ -1226,7 +1226,7 @@ public final class Reporting {
     public int getUtmNameBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmNameBreakdown().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1242,7 +1242,7 @@ public final class Reporting {
 
     public int getUtmNameBreakdownOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmNameBreakdown().getMap();
       if (!map.containsKey(key)) {
@@ -1288,7 +1288,7 @@ public final class Reporting {
     @java.lang.Override
     public boolean containsUtmTermBreakdown(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetUtmTermBreakdown().getMap().containsKey(key);
     }
     /**
@@ -1323,7 +1323,7 @@ public final class Reporting {
     public int getUtmTermBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmTermBreakdown().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1339,7 +1339,7 @@ public final class Reporting {
 
     public int getUtmTermBreakdownOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmTermBreakdown().getMap();
       if (!map.containsKey(key)) {
@@ -1385,7 +1385,7 @@ public final class Reporting {
     @java.lang.Override
     public boolean containsUtmContentBreakdown(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetUtmContentBreakdown().getMap().containsKey(key);
     }
     /**
@@ -1420,7 +1420,7 @@ public final class Reporting {
     public int getUtmContentBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmContentBreakdown().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1436,7 +1436,7 @@ public final class Reporting {
 
     public int getUtmContentBreakdownOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetUtmContentBreakdown().getMap();
       if (!map.containsKey(key)) {
@@ -2512,7 +2512,7 @@ public final class Reporting {
       @java.lang.Override
       public boolean containsUtmSourceBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetUtmSourceBreakdown().getMap().containsKey(key);
       }
       /**
@@ -2547,7 +2547,7 @@ public final class Reporting {
       public int getUtmSourceBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmSourceBreakdown().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2563,7 +2563,7 @@ public final class Reporting {
 
       public int getUtmSourceBreakdownOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmSourceBreakdown().getMap();
         if (!map.containsKey(key)) {
@@ -2587,7 +2587,7 @@ public final class Reporting {
 
       public Builder removeUtmSourceBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableUtmSourceBreakdown().getMutableMap()
             .remove(key);
         return this;
@@ -2610,7 +2610,7 @@ public final class Reporting {
       public Builder putUtmSourceBreakdown(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableUtmSourceBreakdown().getMutableMap()
             .put(key, value);
@@ -2980,7 +2980,7 @@ public final class Reporting {
       @java.lang.Override
       public boolean containsUtmMediumBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetUtmMediumBreakdown().getMap().containsKey(key);
       }
       /**
@@ -3015,7 +3015,7 @@ public final class Reporting {
       public int getUtmMediumBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmMediumBreakdown().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3031,7 +3031,7 @@ public final class Reporting {
 
       public int getUtmMediumBreakdownOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmMediumBreakdown().getMap();
         if (!map.containsKey(key)) {
@@ -3055,7 +3055,7 @@ public final class Reporting {
 
       public Builder removeUtmMediumBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableUtmMediumBreakdown().getMutableMap()
             .remove(key);
         return this;
@@ -3078,7 +3078,7 @@ public final class Reporting {
       public Builder putUtmMediumBreakdown(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableUtmMediumBreakdown().getMutableMap()
             .put(key, value);
@@ -3136,7 +3136,7 @@ public final class Reporting {
       @java.lang.Override
       public boolean containsUtmNameBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetUtmNameBreakdown().getMap().containsKey(key);
       }
       /**
@@ -3171,7 +3171,7 @@ public final class Reporting {
       public int getUtmNameBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmNameBreakdown().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3187,7 +3187,7 @@ public final class Reporting {
 
       public int getUtmNameBreakdownOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmNameBreakdown().getMap();
         if (!map.containsKey(key)) {
@@ -3211,7 +3211,7 @@ public final class Reporting {
 
       public Builder removeUtmNameBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableUtmNameBreakdown().getMutableMap()
             .remove(key);
         return this;
@@ -3234,7 +3234,7 @@ public final class Reporting {
       public Builder putUtmNameBreakdown(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableUtmNameBreakdown().getMutableMap()
             .put(key, value);
@@ -3292,7 +3292,7 @@ public final class Reporting {
       @java.lang.Override
       public boolean containsUtmTermBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetUtmTermBreakdown().getMap().containsKey(key);
       }
       /**
@@ -3327,7 +3327,7 @@ public final class Reporting {
       public int getUtmTermBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmTermBreakdown().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3343,7 +3343,7 @@ public final class Reporting {
 
       public int getUtmTermBreakdownOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmTermBreakdown().getMap();
         if (!map.containsKey(key)) {
@@ -3367,7 +3367,7 @@ public final class Reporting {
 
       public Builder removeUtmTermBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableUtmTermBreakdown().getMutableMap()
             .remove(key);
         return this;
@@ -3390,7 +3390,7 @@ public final class Reporting {
       public Builder putUtmTermBreakdown(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableUtmTermBreakdown().getMutableMap()
             .put(key, value);
@@ -3448,7 +3448,7 @@ public final class Reporting {
       @java.lang.Override
       public boolean containsUtmContentBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetUtmContentBreakdown().getMap().containsKey(key);
       }
       /**
@@ -3483,7 +3483,7 @@ public final class Reporting {
       public int getUtmContentBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmContentBreakdown().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3499,7 +3499,7 @@ public final class Reporting {
 
       public int getUtmContentBreakdownOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetUtmContentBreakdown().getMap();
         if (!map.containsKey(key)) {
@@ -3523,7 +3523,7 @@ public final class Reporting {
 
       public Builder removeUtmContentBreakdown(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableUtmContentBreakdown().getMutableMap()
             .remove(key);
         return this;
@@ -3546,7 +3546,7 @@ public final class Reporting {
       public Builder putUtmContentBreakdown(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableUtmContentBreakdown().getMutableMap()
             .put(key, value);
@@ -4655,7 +4655,7 @@ public final class Reporting {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (created_ != 0) {
@@ -4685,7 +4685,7 @@ public final class Reporting {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (created_ != 0) {
@@ -6172,19 +6172,19 @@ public final class Reporting {
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
       }
       if (period_ != com.passkit.grpc.Reporting.Period.DAY.getNumber()) {
         output.writeEnum(3, period_);
       }
-      if (!getStartDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, startDate_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, endDate_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, timezone_);
       }
       if (filterCase_ == 15) {
@@ -6209,20 +6209,20 @@ public final class Reporting {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, protocol_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
       }
       if (period_ != com.passkit.grpc.Reporting.Period.DAY.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(3, period_);
       }
-      if (!getStartDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, startDate_);
       }
-      if (!getEndDateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, endDate_);
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, timezone_);
       }
       if (filterCase_ == 15) {
@@ -7809,7 +7809,7 @@ public final class Reporting {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getOfferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, offerId_);
       }
       unknownFields.writeTo(output);
@@ -7821,7 +7821,7 @@ public final class Reporting {
       if (size != -1) return size;
 
       size = 0;
-      if (!getOfferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, offerId_);
       }
       size += unknownFields.getSerializedSize();
@@ -8550,16 +8550,16 @@ public final class Reporting {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, flightNumber_);
       }
       if (departureDate_ != null) {
         output.writeMessage(2, getDepartureDate());
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, deplaningPoint_);
       }
       unknownFields.writeTo(output);
@@ -8571,17 +8571,17 @@ public final class Reporting {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFlightNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(flightNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, flightNumber_);
       }
       if (departureDate_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDepartureDate());
       }
-      if (!getBoardingPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, boardingPoint_);
       }
-      if (!getDeplaningPointBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, deplaningPoint_);
       }
       size += unknownFields.getSerializedSize();
@@ -9686,19 +9686,19 @@ public final class Reporting {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ticketTypeId_);
       }
-      if (!getTicketTypeUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketTypeUid_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, venueId_);
       }
-      if (!getVenueUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, venueUid_);
       }
-      if (!getEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, eventId_);
       }
       unknownFields.writeTo(output);
@@ -9710,19 +9710,19 @@ public final class Reporting {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ticketTypeId_);
       }
-      if (!getTicketTypeUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketTypeUid_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, venueId_);
       }
-      if (!getVenueUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, venueUid_);
       }
-      if (!getEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, eventId_);
       }
       size += unknownFields.getSerializedSize();

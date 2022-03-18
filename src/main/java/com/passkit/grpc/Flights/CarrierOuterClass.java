@@ -586,25 +586,25 @@ public final class CarrierOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIataCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iataCarrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, iataCarrierCode_);
       }
-      if (!getIcaoCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icaoCarrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, icaoCarrierCode_);
       }
       if (iataAccountingCode_ != 0) {
         output.writeInt32(3, iataAccountingCode_);
       }
-      if (!getAirlineNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airlineName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, airlineName_);
       }
       if (localizedAirlineName_ != null) {
         output.writeMessage(5, getLocalizedAirlineName());
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, passTypeIdentifier_);
       }
-      if (!getPrivateKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privateKeyId_);
       }
       unknownFields.writeTo(output);
@@ -616,27 +616,27 @@ public final class CarrierOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIataCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(iataCarrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, iataCarrierCode_);
       }
-      if (!getIcaoCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(icaoCarrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, icaoCarrierCode_);
       }
       if (iataAccountingCode_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, iataAccountingCode_);
       }
-      if (!getAirlineNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airlineName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, airlineName_);
       }
       if (localizedAirlineName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLocalizedAirlineName());
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, passTypeIdentifier_);
       }
-      if (!getPrivateKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privateKeyId_);
       }
       size += unknownFields.getSerializedSize();
@@ -1895,7 +1895,7 @@ public final class CarrierOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, carrierCode_);
       }
       unknownFields.writeTo(output);
@@ -1907,7 +1907,7 @@ public final class CarrierOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCarrierCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, carrierCode_);
       }
       size += unknownFields.getSerializedSize();

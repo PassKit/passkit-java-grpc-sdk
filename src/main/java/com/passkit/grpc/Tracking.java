@@ -1591,7 +1591,7 @@ public final class Tracking {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPixelIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pixelId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pixelId_);
       }
       for (int i = 0; i < dataCollectionPageStandardEvents_.size(); i++) {
@@ -1621,7 +1621,7 @@ public final class Tracking {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPixelIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pixelId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pixelId_);
       }
       for (int i = 0; i < dataCollectionPageStandardEvents_.size(); i++) {
@@ -4455,7 +4455,7 @@ public final class Tracking {
       if (event_ != com.passkit.grpc.Tracking.FbPixelStandardEvent.FBP_STANDARD_EVENT_DO_NOT_USE.getNumber()) {
         output.writeEnum(1, event_);
       }
-      if (!getPropertiesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, properties_);
       }
       unknownFields.writeTo(output);
@@ -4471,7 +4471,7 @@ public final class Tracking {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, event_);
       }
-      if (!getPropertiesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, properties_);
       }
       size += unknownFields.getSerializedSize();
@@ -5219,10 +5219,10 @@ public final class Tracking {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEventBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, event_);
       }
-      if (!getPropertiesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, properties_);
       }
       unknownFields.writeTo(output);
@@ -5234,10 +5234,10 @@ public final class Tracking {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEventBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(event_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, event_);
       }
-      if (!getPropertiesBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, properties_);
       }
       size += unknownFields.getSerializedSize();

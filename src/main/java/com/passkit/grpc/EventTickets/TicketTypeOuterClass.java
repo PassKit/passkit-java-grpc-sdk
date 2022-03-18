@@ -936,31 +936,31 @@ public final class TicketTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, productionId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
       if (localizedName_ != null) {
         output.writeMessage(5, getLocalizedName());
       }
-      if (!getTicketTypeConditionsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeConditions_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, ticketTypeConditions_);
       }
       if (localizedTicketTypeConditions_ != null) {
         output.writeMessage(7, getLocalizedTicketTypeConditions());
       }
-      if (!getBeforeRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beforeRedeemPassTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, beforeRedeemPassTemplateId_);
       }
-      if (!getAfterRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemPassTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, afterRedeemPassTemplateId_);
       }
       if (created_ != null) {
@@ -978,33 +978,33 @@ public final class TicketTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, productionId_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
       if (localizedName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLocalizedName());
       }
-      if (!getTicketTypeConditionsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeConditions_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, ticketTypeConditions_);
       }
       if (localizedTicketTypeConditions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getLocalizedTicketTypeConditions());
       }
-      if (!getBeforeRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(beforeRedeemPassTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, beforeRedeemPassTemplateId_);
       }
-      if (!getAfterRedeemPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(afterRedeemPassTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, afterRedeemPassTemplateId_);
       }
       if (created_ != null) {
@@ -3035,10 +3035,10 @@ public final class TicketTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
       unknownFields.writeTo(output);
@@ -3050,10 +3050,10 @@ public final class TicketTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
       size += unknownFields.getSerializedSize();
@@ -3898,13 +3898,13 @@ public final class TicketTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       unknownFields.writeTo(output);
@@ -3916,13 +3916,13 @@ public final class TicketTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       size += unknownFields.getSerializedSize();
@@ -4766,7 +4766,7 @@ public final class TicketTypeOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
       if (filters_ != null) {
@@ -4781,7 +4781,7 @@ public final class TicketTypeOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
       if (filters_ != null) {

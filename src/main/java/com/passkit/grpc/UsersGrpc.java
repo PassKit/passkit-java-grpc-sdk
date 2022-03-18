@@ -5,8 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.37.0)",
+    value = "by gRPC proto compiler (version 1.44.1)",
     comments = "Source: io/core/a_rpc_others.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class UsersGrpc {
 
   private UsersGrpc() {}
@@ -76,27 +77,27 @@ public final class UsersGrpc {
     return getNewUserMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.VerifyRequest,
       com.passkit.grpc.CommonObjects.Boolean> getVerifyMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "verify",
-      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      requestType = com.passkit.grpc.User.VerifyRequest.class,
       responseType = com.passkit.grpc.CommonObjects.Boolean.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.VerifyRequest,
       com.passkit.grpc.CommonObjects.Boolean> getVerifyMethod() {
-    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Boolean> getVerifyMethod;
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.VerifyRequest, com.passkit.grpc.CommonObjects.Boolean> getVerifyMethod;
     if ((getVerifyMethod = UsersGrpc.getVerifyMethod) == null) {
       synchronized (UsersGrpc.class) {
         if ((getVerifyMethod = UsersGrpc.getVerifyMethod) == null) {
           UsersGrpc.getVerifyMethod = getVerifyMethod =
-              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Boolean>newBuilder()
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.VerifyRequest, com.passkit.grpc.CommonObjects.Boolean>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "verify"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+                  com.passkit.grpc.User.VerifyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.passkit.grpc.CommonObjects.Boolean.getDefaultInstance()))
               .setSchemaDescriptor(new UsersMethodDescriptorSupplier("verify"))
@@ -884,7 +885,7 @@ public final class UsersGrpc {
 
     /**
      */
-    public void verify(com.passkit.grpc.CommonObjects.Id request,
+    public void verify(com.passkit.grpc.User.VerifyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVerifyMethod(), responseObserver);
     }
@@ -1073,7 +1074,7 @@ public final class UsersGrpc {
             getVerifyMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
+                com.passkit.grpc.User.VerifyRequest,
                 com.passkit.grpc.CommonObjects.Boolean>(
                   this, METHODID_VERIFY)))
           .addMethod(
@@ -1273,7 +1274,7 @@ public final class UsersGrpc {
 
     /**
      */
-    public void verify(com.passkit.grpc.CommonObjects.Id request,
+    public void verify(com.passkit.grpc.User.VerifyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getVerifyMethod(), getCallOptions()), request, responseObserver);
@@ -1497,7 +1498,7 @@ public final class UsersGrpc {
 
     /**
      */
-    public com.passkit.grpc.CommonObjects.Boolean verify(com.passkit.grpc.CommonObjects.Id request) {
+    public com.passkit.grpc.CommonObjects.Boolean verify(com.passkit.grpc.User.VerifyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getVerifyMethod(), getCallOptions(), request);
     }
@@ -1706,7 +1707,7 @@ public final class UsersGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Boolean> verify(
-        com.passkit.grpc.CommonObjects.Id request) {
+        com.passkit.grpc.User.VerifyRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getVerifyMethod(), getCallOptions()), request);
     }
@@ -1904,7 +1905,7 @@ public final class UsersGrpc {
               (io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT>) responseObserver);
           break;
         case METHODID_VERIFY:
-          serviceImpl.verify((com.passkit.grpc.CommonObjects.Id) request,
+          serviceImpl.verify((com.passkit.grpc.User.VerifyRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean>) responseObserver);
           break;
         case METHODID_RESEND_VERIFICATION_EMAIL:

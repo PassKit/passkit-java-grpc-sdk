@@ -933,31 +933,31 @@ public final class TransactionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getReferenceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(referenceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, referenceId_);
       }
-      if (totalPrice_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(totalPrice_) != 0) {
         output.writeFloat(2, totalPrice_);
       }
       for (int i = 0; i < orderItems_.size(); i++) {
         output.writeMessage(3, orderItems_.get(i));
       }
-      if (discount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(discount_) != 0) {
         output.writeFloat(4, discount_);
       }
       for (int i = 0; i < discountItems_.size(); i++) {
         output.writeMessage(5, discountItems_.get(i));
       }
-      if (serviceCharge_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(serviceCharge_) != 0) {
         output.writeFloat(6, serviceCharge_);
       }
-      if (totalTax_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(totalTax_) != 0) {
         output.writeFloat(7, totalTax_);
       }
-      if (finalPrice_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(finalPrice_) != 0) {
         output.writeFloat(8, finalPrice_);
       }
-      if (roundingDifference_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(roundingDifference_) != 0) {
         output.writeFloat(9, roundingDifference_);
       }
       if (isRefunded_ != false) {
@@ -966,13 +966,13 @@ public final class TransactionOuterClass {
       if (timestamp_ != null) {
         output.writeMessage(11, getTimestamp());
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, currency_);
       }
       if (location_ != null) {
         output.writeMessage(13, getLocation());
       }
-      if (!getTransactionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, transactionSource_);
       }
       unknownFields.writeTo(output);
@@ -984,10 +984,10 @@ public final class TransactionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getReferenceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(referenceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, referenceId_);
       }
-      if (totalPrice_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(totalPrice_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, totalPrice_);
       }
@@ -995,7 +995,7 @@ public final class TransactionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, orderItems_.get(i));
       }
-      if (discount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(discount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, discount_);
       }
@@ -1003,19 +1003,19 @@ public final class TransactionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, discountItems_.get(i));
       }
-      if (serviceCharge_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(serviceCharge_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(6, serviceCharge_);
       }
-      if (totalTax_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(totalTax_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(7, totalTax_);
       }
-      if (finalPrice_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(finalPrice_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(8, finalPrice_);
       }
-      if (roundingDifference_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(roundingDifference_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(9, roundingDifference_);
       }
@@ -1027,14 +1027,14 @@ public final class TransactionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getTimestamp());
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, currency_);
       }
       if (location_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLocation());
       }
-      if (!getTransactionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, transactionSource_);
       }
       size += unknownFields.getSerializedSize();
@@ -3482,16 +3482,16 @@ public final class TransactionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDiscountCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discountCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, discountCode_);
       }
-      if (!getVoucherCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voucherCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, voucherCode_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(4, amount_);
       }
-      if (!getItemNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, itemName_);
       }
       unknownFields.writeTo(output);
@@ -3503,17 +3503,17 @@ public final class TransactionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDiscountCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discountCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, discountCode_);
       }
-      if (!getVoucherCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(voucherCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, voucherCode_);
       }
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, amount_);
       }
-      if (!getItemNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, itemName_);
       }
       size += unknownFields.getSerializedSize();
@@ -4537,19 +4537,19 @@ public final class TransactionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(1, amount_);
       }
-      if (tax_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(tax_) != 0) {
         output.writeFloat(2, tax_);
       }
-      if (!getItemNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, itemName_);
       }
       if (quantity_ != 0) {
         output.writeInt32(4, quantity_);
       }
-      if (!getSkuBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sku_);
       }
       unknownFields.writeTo(output);
@@ -4561,22 +4561,22 @@ public final class TransactionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1, amount_);
       }
-      if (tax_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(tax_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(2, tax_);
       }
-      if (!getItemNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, itemName_);
       }
       if (quantity_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, quantity_);
       }
-      if (!getSkuBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sku_);
       }
       size += unknownFields.getSerializedSize();

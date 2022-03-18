@@ -2479,7 +2479,7 @@ public final class Barcode {
       if (documentType_ != com.passkit.grpc.Flights.Barcode.DocType.B.getNumber()) {
         output.writeEnum(5, documentType_);
       }
-      if (!getBoardingPassIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPassIssuer_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, boardingPassIssuer_);
       }
       for (int i = 0; i < baggageTagNumber_.size(); i++) {
@@ -2526,7 +2526,7 @@ public final class Barcode {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, documentType_);
       }
-      if (!getBoardingPassIssuerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPassIssuer_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, boardingPassIssuer_);
       }
       {

@@ -483,7 +483,7 @@ public final class Filter {
       for (int i = 0; i < filterGroups_.size(); i++) {
         output.writeMessage(3, filterGroups_.get(i));
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, orderBy_);
       }
       if (orderAsc_ != false) {
@@ -510,7 +510,7 @@ public final class Filter {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, filterGroups_.get(i));
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, orderBy_);
       }
       if (orderAsc_ != false) {
@@ -1702,13 +1702,13 @@ public final class Filter {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFilterFieldBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterField_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, filterField_);
       }
-      if (!getFilterValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, filterValue_);
       }
-      if (!getFilterOperatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterOperator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filterOperator_);
       }
       unknownFields.writeTo(output);
@@ -1720,13 +1720,13 @@ public final class Filter {
       if (size != -1) return size;
 
       size = 0;
-      if (!getFilterFieldBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterField_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, filterField_);
       }
-      if (!getFilterValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, filterValue_);
       }
-      if (!getFilterOperatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterOperator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filterOperator_);
       }
       size += unknownFields.getSerializedSize();

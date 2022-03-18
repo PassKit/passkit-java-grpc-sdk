@@ -581,16 +581,16 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPassTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passTypeId_);
       }
-      if (!getTeamIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, teamId_);
       }
-      if (!getTeamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, teamName_);
       }
-      if (!getSerialNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serialNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, serialNumber_);
       }
       if (validFrom_ != null) {
@@ -599,13 +599,13 @@ public final class Certificate {
       if (validTo_ != null) {
         output.writeMessage(6, getValidTo());
       }
-      if (!getModulusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modulus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, modulus_);
       }
       if (nfcCapable_ != false) {
         output.writeBool(8, nfcCapable_);
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, ownerUsername_);
       }
       unknownFields.writeTo(output);
@@ -617,16 +617,16 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPassTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passTypeId_);
       }
-      if (!getTeamIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, teamId_);
       }
-      if (!getTeamNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(teamName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, teamName_);
       }
-      if (!getSerialNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serialNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, serialNumber_);
       }
       if (validFrom_ != null) {
@@ -637,14 +637,14 @@ public final class Certificate {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getValidTo());
       }
-      if (!getModulusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modulus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, modulus_);
       }
       if (nfcCapable_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, nfcCapable_);
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, ownerUsername_);
       }
       size += unknownFields.getSerializedSize();
@@ -2095,10 +2095,10 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       if (expiry_ != null) {
@@ -2116,10 +2116,10 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       if (expiry_ != null) {
@@ -4006,13 +4006,13 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getCommonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commonName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, commonName_);
       }
-      if (!getSerialNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serialNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serialNumber_);
       }
       if (validFrom_ != null) {
@@ -4021,13 +4021,13 @@ public final class Certificate {
       if (validTo_ != null) {
         output.writeMessage(5, getValidTo());
       }
-      if (!getModulusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modulus_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, modulus_);
       }
       for (int i = 0; i < subjectAlternativeNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, subjectAlternativeNames_.getRaw(i));
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, ownerUsername_);
       }
       unknownFields.writeTo(output);
@@ -4039,13 +4039,13 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getCommonNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commonName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, commonName_);
       }
-      if (!getSerialNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serialNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serialNumber_);
       }
       if (validFrom_ != null) {
@@ -4056,7 +4056,7 @@ public final class Certificate {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getValidTo());
       }
-      if (!getModulusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(modulus_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, modulus_);
       }
       {
@@ -4067,7 +4067,7 @@ public final class Certificate {
         size += dataSize;
         size += 1 * getSubjectAlternativeNamesList().size();
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, ownerUsername_);
       }
       size += unknownFields.getSerializedSize();
@@ -5615,19 +5615,19 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (expiry_ != null) {
         output.writeMessage(4, getExpiry());
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerUsername_);
       }
       unknownFields.writeTo(output);
@@ -5639,20 +5639,20 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (expiry_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
-      if (!getOwnerUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerUsername_);
       }
       size += unknownFields.getSerializedSize();
@@ -6611,7 +6611,7 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPassTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passTypeId_);
       }
       unknownFields.writeTo(output);
@@ -6623,7 +6623,7 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPassTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passTypeId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7179,7 +7179,7 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCsrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, csr_);
       }
       unknownFields.writeTo(output);
@@ -7191,7 +7191,7 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCsrBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, csr_);
       }
       size += unknownFields.getSerializedSize();
@@ -7804,10 +7804,10 @@ public final class Certificate {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, password_);
       }
-      if (!getPrivateKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privateKeyId_);
       }
       unknownFields.writeTo(output);
@@ -7819,10 +7819,10 @@ public final class Certificate {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, password_);
       }
-      if (!getPrivateKeyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, privateKeyId_);
       }
       size += unknownFields.getSerializedSize();

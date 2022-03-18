@@ -666,31 +666,31 @@ public final class BrowserAgent {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getRawBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(raw_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, raw_);
       }
-      if (!getPlatformBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, platform_);
       }
-      if (!getOsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(os_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, os_);
       }
-      if (!getOsVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, osVersion_);
       }
-      if (!getEngineBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engine_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, engine_);
       }
-      if (!getEngineVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engineVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, engineVersion_);
       }
-      if (!getBrowserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(browser_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, browser_);
       }
-      if (!getBrowserVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(browserVersion_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, browserVersion_);
       }
-      if (!getLocalizationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localization_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, localization_);
       }
       if (mobile_ != false) {
@@ -708,31 +708,31 @@ public final class BrowserAgent {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRawBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(raw_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, raw_);
       }
-      if (!getPlatformBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(platform_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, platform_);
       }
-      if (!getOsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(os_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, os_);
       }
-      if (!getOsVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(osVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, osVersion_);
       }
-      if (!getEngineBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engine_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, engine_);
       }
-      if (!getEngineVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(engineVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, engineVersion_);
       }
-      if (!getBrowserBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(browser_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, browser_);
       }
-      if (!getBrowserVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(browserVersion_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, browserVersion_);
       }
-      if (!getLocalizationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(localization_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, localization_);
       }
       if (mobile_ != false) {

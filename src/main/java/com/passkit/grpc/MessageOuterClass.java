@@ -20,56 +20,48 @@ public final class MessageOuterClass {
   public enum MessageStatus
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>CREATED = 0;</code>
+     * <code>MESSAGE_STATUS_DO_NOT_USE = 0;</code>
      */
-    CREATED(0),
+    MESSAGE_STATUS_DO_NOT_USE(0),
     /**
-     * <code>PROCESSING = 1;</code>
+     * <code>SCHEDULED = 1;</code>
      */
-    PROCESSING(1),
+    SCHEDULED(1),
     /**
-     * <code>ABORTED_WITH_ERRORS = 2;</code>
+     * <code>ACTIVE = 2;</code>
      */
-    ABORTED_WITH_ERRORS(2),
+    ACTIVE(2),
     /**
-     * <code>COMPLETED_WITH_WARNINGS = 3;</code>
+     * <code>EXPIRED = 3;</code>
      */
-    COMPLETED_WITH_WARNINGS(3),
+    EXPIRED(3),
     /**
-     * <code>COMPLETED_WITH_ERRORS = 4;</code>
+     * <code>CANCELLED = 4;</code>
      */
-    COMPLETED_WITH_ERRORS(4),
-    /**
-     * <code>COMPLETED_WITHOUT_ERRORS = 5;</code>
-     */
-    COMPLETED_WITHOUT_ERRORS(5),
+    CANCELLED(4),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>CREATED = 0;</code>
+     * <code>MESSAGE_STATUS_DO_NOT_USE = 0;</code>
      */
-    public static final int CREATED_VALUE = 0;
+    public static final int MESSAGE_STATUS_DO_NOT_USE_VALUE = 0;
     /**
-     * <code>PROCESSING = 1;</code>
+     * <code>SCHEDULED = 1;</code>
      */
-    public static final int PROCESSING_VALUE = 1;
+    public static final int SCHEDULED_VALUE = 1;
     /**
-     * <code>ABORTED_WITH_ERRORS = 2;</code>
+     * <code>ACTIVE = 2;</code>
      */
-    public static final int ABORTED_WITH_ERRORS_VALUE = 2;
+    public static final int ACTIVE_VALUE = 2;
     /**
-     * <code>COMPLETED_WITH_WARNINGS = 3;</code>
+     * <code>EXPIRED = 3;</code>
      */
-    public static final int COMPLETED_WITH_WARNINGS_VALUE = 3;
+    public static final int EXPIRED_VALUE = 3;
     /**
-     * <code>COMPLETED_WITH_ERRORS = 4;</code>
+     * <code>CANCELLED = 4;</code>
      */
-    public static final int COMPLETED_WITH_ERRORS_VALUE = 4;
-    /**
-     * <code>COMPLETED_WITHOUT_ERRORS = 5;</code>
-     */
-    public static final int COMPLETED_WITHOUT_ERRORS_VALUE = 5;
+    public static final int CANCELLED_VALUE = 4;
 
 
     public final int getNumber() {
@@ -96,12 +88,11 @@ public final class MessageOuterClass {
      */
     public static MessageStatus forNumber(int value) {
       switch (value) {
-        case 0: return CREATED;
-        case 1: return PROCESSING;
-        case 2: return ABORTED_WITH_ERRORS;
-        case 3: return COMPLETED_WITH_WARNINGS;
-        case 4: return COMPLETED_WITH_ERRORS;
-        case 5: return COMPLETED_WITHOUT_ERRORS;
+        case 0: return MESSAGE_STATUS_DO_NOT_USE;
+        case 1: return SCHEDULED;
+        case 2: return ACTIVE;
+        case 3: return EXPIRED;
+        case 4: return CANCELLED;
         default: return null;
       }
     }
@@ -163,148 +154,32 @@ public final class MessageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <pre>
-     * the protocol that this message is associated with.
-     * </pre>
-     *
-     * <code>.io.PassProtocol protocol = 1;</code>
-     * @return The enum numeric value on the wire for protocol.
+     * <code>string id = 1;</code>
+     * @return The id.
      */
-    int getProtocolValue();
+    java.lang.String getId();
     /**
-     * <pre>
-     * the protocol that this message is associated with.
-     * </pre>
-     *
-     * <code>.io.PassProtocol protocol = 1;</code>
-     * @return The protocol.
-     */
-    com.passkit.grpc.Protocols.PassProtocol getProtocol();
-
-    /**
-     * <pre>
-     * the id of the company that made the message
-     * </pre>
-     *
-     * <code>string companyId = 2;</code>
-     * @return The companyId.
-     */
-    java.lang.String getCompanyId();
-    /**
-     * <pre>
-     * the id of the company that made the message
-     * </pre>
-     *
-     * <code>string companyId = 2;</code>
-     * @return The bytes for companyId.
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
-        getCompanyIdBytes();
+        getIdBytes();
 
     /**
      * <pre>
-     * the higher level class id for the protocol.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      * </pre>
      *
-     * <code>string classId = 3;</code>
-     * @return The classId.
-     */
-    java.lang.String getClassId();
-    /**
-     * <pre>
-     * the higher level class id for the protocol.
-     * </pre>
-     *
-     * <code>string classId = 3;</code>
-     * @return The bytes for classId.
-     */
-    com.google.protobuf.ByteString
-        getClassIdBytes();
-
-    /**
-     * <pre>
-     * the unique id for this message
-     * </pre>
-     *
-     * <code>string uuid = 4;</code>
-     * @return The uuid.
-     */
-    java.lang.String getUuid();
-    /**
-     * <pre>
-     * the unique id for this message
-     * </pre>
-     *
-     * <code>string uuid = 4;</code>
-     * @return The bytes for uuid.
-     */
-    com.google.protobuf.ByteString
-        getUuidBytes();
-
-    /**
-     * <pre>
-     * the status of the message.
-     * </pre>
-     *
-     * <code>.io.MessageStatus status = 5;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <pre>
-     * the status of the message.
-     * </pre>
-     *
-     * <code>.io.MessageStatus status = 5;</code>
-     * @return The status.
-     */
-    com.passkit.grpc.MessageOuterClass.MessageStatus getStatus();
-
-    /**
-     * <pre>
-     * warning of any errors that may have occurred.
-     * </pre>
-     *
-     * <code>string warning = 6;</code>
-     * @return The warning.
-     */
-    java.lang.String getWarning();
-    /**
-     * <pre>
-     * warning of any errors that may have occurred.
-     * </pre>
-     *
-     * <code>string warning = 6;</code>
-     * @return The bytes for warning.
-     */
-    com.google.protobuf.ByteString
-        getWarningBytes();
-
-    /**
-     * <pre>
-     * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-     * </pre>
-     *
-     * <code>uint32 imageId = 7;</code>
-     * @return The imageId.
-     */
-    int getImageId();
-
-    /**
-     * <pre>
-     * Title (summary) of the message.
-     * </pre>
-     *
-     * <code>string title = 8;</code>
+     * <code>string title = 2;</code>
      * @return The title.
      */
     java.lang.String getTitle();
     /**
      * <pre>
-     * Title (summary) of the message.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      * </pre>
      *
-     * <code>string title = 8;</code>
+     * <code>string title = 2;</code>
      * @return The bytes for title.
      */
     com.google.protobuf.ByteString
@@ -312,215 +187,245 @@ public final class MessageOuterClass {
 
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      * @return Whether the localizedTitle field is set.
      */
     boolean hasLocalizedTitle();
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      * @return The localizedTitle.
      */
     com.passkit.grpc.Localization.LocalizedString getLocalizedTitle();
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      */
     com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleOrBuilder();
 
     /**
      * <pre>
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      * </pre>
      *
-     * <code>string content = 10;</code>
-     * @return The content.
+     * <code>string plainTextContent = 4;</code>
+     * @return The plainTextContent.
      */
-    java.lang.String getContent();
+    java.lang.String getPlainTextContent();
     /**
      * <pre>
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      * </pre>
      *
-     * <code>string content = 10;</code>
-     * @return The bytes for content.
+     * <code>string plainTextContent = 4;</code>
+     * @return The bytes for plainTextContent.
      */
     com.google.protobuf.ByteString
-        getContentBytes();
+        getPlainTextContentBytes();
 
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
-     * @return Whether the localizedContent field is set.
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+     * @return Whether the localizedPlainTextContent field is set.
      */
-    boolean hasLocalizedContent();
+    boolean hasLocalizedPlainTextContent();
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
-     * @return The localizedContent.
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+     * @return The localizedPlainTextContent.
      */
-    com.passkit.grpc.Localization.LocalizedString getLocalizedContent();
+    com.passkit.grpc.Localization.LocalizedString getLocalizedPlainTextContent();
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
      */
-    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder();
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPlainTextContentOrBuilder();
 
     /**
      * <pre>
-     * Start date indicates when the message is shown on the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return Whether the startDate field is set.
+     * <code>string richTextContent = 6;</code>
+     * @return The richTextContent.
      */
-    boolean hasStartDate();
+    java.lang.String getRichTextContent();
     /**
      * <pre>
-     * Start date indicates when the message is shown on the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return The startDate.
+     * <code>string richTextContent = 6;</code>
+     * @return The bytes for richTextContent.
      */
-    com.google.protobuf.Timestamp getStartDate();
-    /**
-     * <pre>
-     * Start date indicates when the message is shown on the pass.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder();
+    com.google.protobuf.ByteString
+        getRichTextContentBytes();
 
     /**
      * <pre>
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return Whether the endDate field is set.
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @return Whether the localizedRichTextContent field is set.
      */
-    boolean hasEndDate();
+    boolean hasLocalizedRichTextContent();
     /**
      * <pre>
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return The endDate.
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @return The localizedRichTextContent.
      */
-    com.google.protobuf.Timestamp getEndDate();
+    com.passkit.grpc.Localization.LocalizedString getLocalizedRichTextContent();
     /**
      * <pre>
-     * End date indicates when the message is removed from the pass.
+     * Localized rich text content.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
      */
-    com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder();
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRichTextContentOrBuilder();
 
     /**
      * <pre>
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      * </pre>
      *
-     * <code>.io.Filter filter = 14;</code>
-     * @return Whether the filter field is set.
+     * <code>repeated .io.Url urls = 8;</code>
      */
-    boolean hasFilter();
+    java.util.List<com.passkit.grpc.CommonObjects.Url> 
+        getUrlsList();
     /**
      * <pre>
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      * </pre>
      *
-     * <code>.io.Filter filter = 14;</code>
-     * @return The filter.
+     * <code>repeated .io.Url urls = 8;</code>
      */
-    com.passkit.grpc.PaginationOuterClass.Filter getFilter();
+    com.passkit.grpc.CommonObjects.Url getUrls(int index);
     /**
      * <pre>
-     * optional filter used determine which members qualify for this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      * </pre>
      *
-     * <code>.io.Filter filter = 14;</code>
+     * <code>repeated .io.Url urls = 8;</code>
      */
-    com.passkit.grpc.PaginationOuterClass.FilterOrBuilder getFilterOrBuilder();
+    int getUrlsCount();
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    java.util.List<? extends com.passkit.grpc.CommonObjects.UrlOrBuilder> 
+        getUrlsOrBuilderList();
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    com.passkit.grpc.CommonObjects.UrlOrBuilder getUrlsOrBuilder(
+        int index);
 
     /**
      * <pre>
-     * number of records this message will be sent to.
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
      * </pre>
      *
-     * <code>uint32 recordsMatchingSegment = 15;</code>
-     * @return The recordsMatchingSegment.
+     * <code>.io.ImageIds images = 9;</code>
+     * @return Whether the images field is set.
      */
-    int getRecordsMatchingSegment();
+    boolean hasImages();
+    /**
+     * <pre>
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     * </pre>
+     *
+     * <code>.io.ImageIds images = 9;</code>
+     * @return The images.
+     */
+    com.passkit.grpc.Image.ImageIds getImages();
+    /**
+     * <pre>
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     * </pre>
+     *
+     * <code>.io.ImageIds images = 9;</code>
+     */
+    com.passkit.grpc.Image.ImageIdsOrBuilder getImagesOrBuilder();
 
     /**
      * <pre>
-     * number of records updated with this message.
+     * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
      * </pre>
      *
-     * <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-     * @return The recordsSuccessfullyUpdate.
+     * <code>uint32 priority = 10;</code>
+     * @return The priority.
      */
-    int getRecordsSuccessfullyUpdate();
+    int getPriority();
 
     /**
      * <pre>
-     * number of records that failed updated with this message.
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
      * </pre>
      *
-     * <code>uint32 recordsFailedToUpdate = 17;</code>
-     * @return The recordsFailedToUpdate.
+     * <code>string displayFrom = 11;</code>
+     * @return The displayFrom.
      */
-    int getRecordsFailedToUpdate();
+    java.lang.String getDisplayFrom();
+    /**
+     * <pre>
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
+     * </pre>
+     *
+     * <code>string displayFrom = 11;</code>
+     * @return The bytes for displayFrom.
+     */
+    com.google.protobuf.ByteString
+        getDisplayFromBytes();
 
     /**
      * <pre>
-     * The date the message was created in the PassKit system.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return Whether the created field is set.
+     * <code>string displayUntil = 12;</code>
+     * @return The displayUntil.
      */
-    boolean hasCreated();
+    java.lang.String getDisplayUntil();
     /**
      * <pre>
-     * The date the message was created in the PassKit system.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return The created.
+     * <code>string displayUntil = 12;</code>
+     * @return The bytes for displayUntil.
      */
-    com.google.protobuf.Timestamp getCreated();
-    /**
-     * <pre>
-     * The date the message was created in the PassKit system.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
-     */
-    com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder();
+    com.google.protobuf.ByteString
+        getDisplayUntilBytes();
   }
   /**
    * Protobuf type {@code io.Message}
@@ -535,14 +440,13 @@ public final class MessageOuterClass {
       super(builder);
     }
     private Message() {
-      protocol_ = 0;
-      companyId_ = "";
-      classId_ = "";
-      uuid_ = "";
-      status_ = 0;
-      warning_ = "";
+      id_ = "";
       title_ = "";
-      content_ = "";
+      plainTextContent_ = "";
+      richTextContent_ = "";
+      urls_ = java.util.Collections.emptyList();
+      displayFrom_ = "";
+      displayUntil_ = "";
     }
 
     @java.lang.Override
@@ -565,6 +469,7 @@ public final class MessageOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -575,54 +480,19 @@ public final class MessageOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
-              int rawValue = input.readEnum();
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              protocol_ = rawValue;
+              id_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              companyId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              classId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              warning_ = s;
-              break;
-            }
-            case 56: {
-
-              imageId_ = input.readUInt32();
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               title_ = s;
               break;
             }
-            case 74: {
+            case 26: {
               com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
               if (localizedTitle_ != null) {
                 subBuilder = localizedTitle_.toBuilder();
@@ -635,90 +505,81 @@ public final class MessageOuterClass {
 
               break;
             }
-            case 82: {
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              content_ = s;
+              plainTextContent_ = s;
+              break;
+            }
+            case 42: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedPlainTextContent_ != null) {
+                subBuilder = localizedPlainTextContent_.toBuilder();
+              }
+              localizedPlainTextContent_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedPlainTextContent_);
+                localizedPlainTextContent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              richTextContent_ = s;
+              break;
+            }
+            case 58: {
+              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
+              if (localizedRichTextContent_ != null) {
+                subBuilder = localizedRichTextContent_.toBuilder();
+              }
+              localizedRichTextContent_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(localizedRichTextContent_);
+                localizedRichTextContent_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                urls_ = new java.util.ArrayList<com.passkit.grpc.CommonObjects.Url>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              urls_.add(
+                  input.readMessage(com.passkit.grpc.CommonObjects.Url.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              com.passkit.grpc.Image.ImageIds.Builder subBuilder = null;
+              if (images_ != null) {
+                subBuilder = images_.toBuilder();
+              }
+              images_ = input.readMessage(com.passkit.grpc.Image.ImageIds.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(images_);
+                images_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 80: {
+
+              priority_ = input.readUInt32();
               break;
             }
             case 90: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedContent_ != null) {
-                subBuilder = localizedContent_.toBuilder();
-              }
-              localizedContent_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedContent_);
-                localizedContent_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              displayFrom_ = s;
               break;
             }
             case 98: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startDate_ != null) {
-                subBuilder = startDate_.toBuilder();
-              }
-              startDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(startDate_);
-                startDate_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
-              break;
-            }
-            case 106: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (endDate_ != null) {
-                subBuilder = endDate_.toBuilder();
-              }
-              endDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(endDate_);
-                endDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              com.passkit.grpc.PaginationOuterClass.Filter.Builder subBuilder = null;
-              if (filter_ != null) {
-                subBuilder = filter_.toBuilder();
-              }
-              filter_ = input.readMessage(com.passkit.grpc.PaginationOuterClass.Filter.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(filter_);
-                filter_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 120: {
-
-              recordsMatchingSegment_ = input.readUInt32();
-              break;
-            }
-            case 128: {
-
-              recordsSuccessfullyUpdate_ = input.readUInt32();
-              break;
-            }
-            case 136: {
-
-              recordsFailedToUpdate_ = input.readUInt32();
-              break;
-            }
-            case 146: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
+              displayUntil_ = s;
               break;
             }
             default: {
@@ -736,6 +597,9 @@ public final class MessageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          urls_ = java.util.Collections.unmodifiableList(urls_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -753,267 +617,52 @@ public final class MessageOuterClass {
               com.passkit.grpc.MessageOuterClass.Message.class, com.passkit.grpc.MessageOuterClass.Message.Builder.class);
     }
 
-    public static final int PROTOCOL_FIELD_NUMBER = 1;
-    private int protocol_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
     /**
-     * <pre>
-     * the protocol that this message is associated with.
-     * </pre>
-     *
-     * <code>.io.PassProtocol protocol = 1;</code>
-     * @return The enum numeric value on the wire for protocol.
-     */
-    @java.lang.Override public int getProtocolValue() {
-      return protocol_;
-    }
-    /**
-     * <pre>
-     * the protocol that this message is associated with.
-     * </pre>
-     *
-     * <code>.io.PassProtocol protocol = 1;</code>
-     * @return The protocol.
-     */
-    @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
-      return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
-    }
-
-    public static final int COMPANYID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object companyId_;
-    /**
-     * <pre>
-     * the id of the company that made the message
-     * </pre>
-     *
-     * <code>string companyId = 2;</code>
-     * @return The companyId.
+     * <code>string id = 1;</code>
+     * @return The id.
      */
     @java.lang.Override
-    public java.lang.String getCompanyId() {
-      java.lang.Object ref = companyId_;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        companyId_ = s;
+        id_ = s;
         return s;
       }
     }
     /**
-     * <pre>
-     * the id of the company that made the message
-     * </pre>
-     *
-     * <code>string companyId = 2;</code>
-     * @return The bytes for companyId.
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCompanyIdBytes() {
-      java.lang.Object ref = companyId_;
+        getIdBytes() {
+      java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        companyId_ = b;
+        id_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int CLASSID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object classId_;
-    /**
-     * <pre>
-     * the higher level class id for the protocol.
-     * </pre>
-     *
-     * <code>string classId = 3;</code>
-     * @return The classId.
-     */
-    @java.lang.Override
-    public java.lang.String getClassId() {
-      java.lang.Object ref = classId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        classId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * the higher level class id for the protocol.
-     * </pre>
-     *
-     * <code>string classId = 3;</code>
-     * @return The bytes for classId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getClassIdBytes() {
-      java.lang.Object ref = classId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        classId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int UUID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object uuid_;
-    /**
-     * <pre>
-     * the unique id for this message
-     * </pre>
-     *
-     * <code>string uuid = 4;</code>
-     * @return The uuid.
-     */
-    @java.lang.Override
-    public java.lang.String getUuid() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        uuid_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * the unique id for this message
-     * </pre>
-     *
-     * <code>string uuid = 4;</code>
-     * @return The bytes for uuid.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getUuidBytes() {
-      java.lang.Object ref = uuid_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        uuid_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 5;
-    private int status_;
-    /**
-     * <pre>
-     * the status of the message.
-     * </pre>
-     *
-     * <code>.io.MessageStatus status = 5;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <pre>
-     * the status of the message.
-     * </pre>
-     *
-     * <code>.io.MessageStatus status = 5;</code>
-     * @return The status.
-     */
-    @java.lang.Override public com.passkit.grpc.MessageOuterClass.MessageStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.MessageOuterClass.MessageStatus result = com.passkit.grpc.MessageOuterClass.MessageStatus.valueOf(status_);
-      return result == null ? com.passkit.grpc.MessageOuterClass.MessageStatus.UNRECOGNIZED : result;
-    }
-
-    public static final int WARNING_FIELD_NUMBER = 6;
-    private volatile java.lang.Object warning_;
-    /**
-     * <pre>
-     * warning of any errors that may have occurred.
-     * </pre>
-     *
-     * <code>string warning = 6;</code>
-     * @return The warning.
-     */
-    @java.lang.Override
-    public java.lang.String getWarning() {
-      java.lang.Object ref = warning_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        warning_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * warning of any errors that may have occurred.
-     * </pre>
-     *
-     * <code>string warning = 6;</code>
-     * @return The bytes for warning.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWarningBytes() {
-      java.lang.Object ref = warning_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        warning_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int IMAGEID_FIELD_NUMBER = 7;
-    private int imageId_;
-    /**
-     * <pre>
-     * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-     * </pre>
-     *
-     * <code>uint32 imageId = 7;</code>
-     * @return The imageId.
-     */
-    @java.lang.Override
-    public int getImageId() {
-      return imageId_;
-    }
-
-    public static final int TITLE_FIELD_NUMBER = 8;
+    public static final int TITLE_FIELD_NUMBER = 2;
     private volatile java.lang.Object title_;
     /**
      * <pre>
-     * Title (summary) of the message.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      * </pre>
      *
-     * <code>string title = 8;</code>
+     * <code>string title = 2;</code>
      * @return The title.
      */
     @java.lang.Override
@@ -1031,10 +680,10 @@ public final class MessageOuterClass {
     }
     /**
      * <pre>
-     * Title (summary) of the message.
+     * The message title. This is used as a label in iOS and as the title in Google Pay.
      * </pre>
      *
-     * <code>string title = 8;</code>
+     * <code>string title = 2;</code>
      * @return The bytes for title.
      */
     @java.lang.Override
@@ -1052,14 +701,14 @@ public final class MessageOuterClass {
       }
     }
 
-    public static final int LOCALIZEDTITLE_FIELD_NUMBER = 9;
+    public static final int LOCALIZEDTITLE_FIELD_NUMBER = 3;
     private com.passkit.grpc.Localization.LocalizedString localizedTitle_;
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      * @return Whether the localizedTitle field is set.
      */
     @java.lang.Override
@@ -1068,10 +717,10 @@ public final class MessageOuterClass {
     }
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      * @return The localizedTitle.
      */
     @java.lang.Override
@@ -1080,295 +729,387 @@ public final class MessageOuterClass {
     }
     /**
      * <pre>
-     * Localized title of the message.
+     * Localized message title.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedTitle = 9;</code>
+     * <code>.io.LocalizedString localizedTitle = 3;</code>
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleOrBuilder() {
       return getLocalizedTitle();
     }
 
-    public static final int CONTENT_FIELD_NUMBER = 10;
-    private volatile java.lang.Object content_;
+    public static final int PLAINTEXTCONTENT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object plainTextContent_;
     /**
      * <pre>
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      * </pre>
      *
-     * <code>string content = 10;</code>
-     * @return The content.
+     * <code>string plainTextContent = 4;</code>
+     * @return The plainTextContent.
      */
     @java.lang.Override
-    public java.lang.String getContent() {
-      java.lang.Object ref = content_;
+    public java.lang.String getPlainTextContent() {
+      java.lang.Object ref = plainTextContent_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        content_ = s;
+        plainTextContent_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * Content of the message (finer details).
+     * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
      * </pre>
      *
-     * <code>string content = 10;</code>
-     * @return The bytes for content.
+     * <code>string plainTextContent = 4;</code>
+     * @return The bytes for plainTextContent.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getContentBytes() {
-      java.lang.Object ref = content_;
+        getPlainTextContentBytes() {
+      java.lang.Object ref = plainTextContent_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        content_ = b;
+        plainTextContent_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int LOCALIZEDCONTENT_FIELD_NUMBER = 11;
-    private com.passkit.grpc.Localization.LocalizedString localizedContent_;
+    public static final int LOCALIZEDPLAINTEXTCONTENT_FIELD_NUMBER = 5;
+    private com.passkit.grpc.Localization.LocalizedString localizedPlainTextContent_;
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
-     * @return Whether the localizedContent field is set.
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+     * @return Whether the localizedPlainTextContent field is set.
      */
     @java.lang.Override
-    public boolean hasLocalizedContent() {
-      return localizedContent_ != null;
+    public boolean hasLocalizedPlainTextContent() {
+      return localizedPlainTextContent_ != null;
     }
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
-     * @return The localizedContent.
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+     * @return The localizedPlainTextContent.
      */
     @java.lang.Override
-    public com.passkit.grpc.Localization.LocalizedString getLocalizedContent() {
-      return localizedContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedContent_;
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedPlainTextContent() {
+      return localizedPlainTextContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPlainTextContent_;
     }
     /**
      * <pre>
-     * Localized content of the message.
+     * Localized plain text content.
      * </pre>
      *
-     * <code>.io.LocalizedString localizedContent = 11;</code>
+     * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
      */
     @java.lang.Override
-    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder() {
-      return getLocalizedContent();
-    }
-
-    public static final int STARTDATE_FIELD_NUMBER = 12;
-    private com.google.protobuf.Timestamp startDate_;
-    /**
-     * <pre>
-     * Start date indicates when the message is shown on the pass.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return Whether the startDate field is set.
-     */
-    @java.lang.Override
-    public boolean hasStartDate() {
-      return startDate_ != null;
-    }
-    /**
-     * <pre>
-     * Start date indicates when the message is shown on the pass.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     * @return The startDate.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Timestamp getStartDate() {
-      return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
-    }
-    /**
-     * <pre>
-     * Start date indicates when the message is shown on the pass.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp startDate = 12;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-      return getStartDate();
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPlainTextContentOrBuilder() {
+      return getLocalizedPlainTextContent();
     }
 
-    public static final int ENDDATE_FIELD_NUMBER = 13;
-    private com.google.protobuf.Timestamp endDate_;
+    public static final int RICHTEXTCONTENT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object richTextContent_;
     /**
      * <pre>
-     * End date indicates when the message is removed from the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return Whether the endDate field is set.
+     * <code>string richTextContent = 6;</code>
+     * @return The richTextContent.
      */
     @java.lang.Override
-    public boolean hasEndDate() {
-      return endDate_ != null;
+    public java.lang.String getRichTextContent() {
+      java.lang.Object ref = richTextContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        richTextContent_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * End date indicates when the message is removed from the pass.
+     * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
-     * @return The endDate.
+     * <code>string richTextContent = 6;</code>
+     * @return The bytes for richTextContent.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getEndDate() {
-      return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
-    }
-    /**
-     * <pre>
-     * End date indicates when the message is removed from the pass.
-     * </pre>
-     *
-     * <code>.google.protobuf.Timestamp endDate = 13;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
-      return getEndDate();
-    }
-
-    public static final int FILTER_FIELD_NUMBER = 14;
-    private com.passkit.grpc.PaginationOuterClass.Filter filter_;
-    /**
-     * <pre>
-     * optional filter used determine which members qualify for this message.
-     * </pre>
-     *
-     * <code>.io.Filter filter = 14;</code>
-     * @return Whether the filter field is set.
-     */
-    @java.lang.Override
-    public boolean hasFilter() {
-      return filter_ != null;
-    }
-    /**
-     * <pre>
-     * optional filter used determine which members qualify for this message.
-     * </pre>
-     *
-     * <code>.io.Filter filter = 14;</code>
-     * @return The filter.
-     */
-    @java.lang.Override
-    public com.passkit.grpc.PaginationOuterClass.Filter getFilter() {
-      return filter_ == null ? com.passkit.grpc.PaginationOuterClass.Filter.getDefaultInstance() : filter_;
-    }
-    /**
-     * <pre>
-     * optional filter used determine which members qualify for this message.
-     * </pre>
-     *
-     * <code>.io.Filter filter = 14;</code>
-     */
-    @java.lang.Override
-    public com.passkit.grpc.PaginationOuterClass.FilterOrBuilder getFilterOrBuilder() {
-      return getFilter();
+    public com.google.protobuf.ByteString
+        getRichTextContentBytes() {
+      java.lang.Object ref = richTextContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        richTextContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int RECORDSMATCHINGSEGMENT_FIELD_NUMBER = 15;
-    private int recordsMatchingSegment_;
+    public static final int LOCALIZEDRICHTEXTCONTENT_FIELD_NUMBER = 7;
+    private com.passkit.grpc.Localization.LocalizedString localizedRichTextContent_;
     /**
      * <pre>
-     * number of records this message will be sent to.
+     * Localized rich text content.
      * </pre>
      *
-     * <code>uint32 recordsMatchingSegment = 15;</code>
-     * @return The recordsMatchingSegment.
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @return Whether the localizedRichTextContent field is set.
      */
     @java.lang.Override
-    public int getRecordsMatchingSegment() {
-      return recordsMatchingSegment_;
+    public boolean hasLocalizedRichTextContent() {
+      return localizedRichTextContent_ != null;
+    }
+    /**
+     * <pre>
+     * Localized rich text content.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     * @return The localizedRichTextContent.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedRichTextContent() {
+      return localizedRichTextContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRichTextContent_;
+    }
+    /**
+     * <pre>
+     * Localized rich text content.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRichTextContentOrBuilder() {
+      return getLocalizedRichTextContent();
     }
 
-    public static final int RECORDSSUCCESSFULLYUPDATE_FIELD_NUMBER = 16;
-    private int recordsSuccessfullyUpdate_;
+    public static final int URLS_FIELD_NUMBER = 8;
+    private java.util.List<com.passkit.grpc.CommonObjects.Url> urls_;
     /**
      * <pre>
-     * number of records updated with this message.
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
      * </pre>
      *
-     * <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-     * @return The recordsSuccessfullyUpdate.
+     * <code>repeated .io.Url urls = 8;</code>
      */
     @java.lang.Override
-    public int getRecordsSuccessfullyUpdate() {
-      return recordsSuccessfullyUpdate_;
+    public java.util.List<com.passkit.grpc.CommonObjects.Url> getUrlsList() {
+      return urls_;
+    }
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.passkit.grpc.CommonObjects.UrlOrBuilder> 
+        getUrlsOrBuilderList() {
+      return urls_;
+    }
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    @java.lang.Override
+    public int getUrlsCount() {
+      return urls_.size();
+    }
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.Url getUrls(int index) {
+      return urls_.get(index);
+    }
+    /**
+     * <pre>
+     * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+     * </pre>
+     *
+     * <code>repeated .io.Url urls = 8;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.UrlOrBuilder getUrlsOrBuilder(
+        int index) {
+      return urls_.get(index);
     }
 
-    public static final int RECORDSFAILEDTOUPDATE_FIELD_NUMBER = 17;
-    private int recordsFailedToUpdate_;
+    public static final int IMAGES_FIELD_NUMBER = 9;
+    private com.passkit.grpc.Image.ImageIds images_;
     /**
      * <pre>
-     * number of records that failed updated with this message.
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
      * </pre>
      *
-     * <code>uint32 recordsFailedToUpdate = 17;</code>
-     * @return The recordsFailedToUpdate.
+     * <code>.io.ImageIds images = 9;</code>
+     * @return Whether the images field is set.
      */
     @java.lang.Override
-    public int getRecordsFailedToUpdate() {
-      return recordsFailedToUpdate_;
+    public boolean hasImages() {
+      return images_ != null;
+    }
+    /**
+     * <pre>
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     * </pre>
+     *
+     * <code>.io.ImageIds images = 9;</code>
+     * @return The images.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Image.ImageIds getImages() {
+      return images_ == null ? com.passkit.grpc.Image.ImageIds.getDefaultInstance() : images_;
+    }
+    /**
+     * <pre>
+     * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+     * </pre>
+     *
+     * <code>.io.ImageIds images = 9;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Image.ImageIdsOrBuilder getImagesOrBuilder() {
+      return getImages();
     }
 
-    public static final int CREATED_FIELD_NUMBER = 18;
-    private com.google.protobuf.Timestamp created_;
+    public static final int PRIORITY_FIELD_NUMBER = 10;
+    private int priority_;
     /**
      * <pre>
-     * The date the message was created in the PassKit system.
+     * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return Whether the created field is set.
+     * <code>uint32 priority = 10;</code>
+     * @return The priority.
      */
     @java.lang.Override
-    public boolean hasCreated() {
-      return created_ != null;
+    public int getPriority() {
+      return priority_;
+    }
+
+    public static final int DISPLAYFROM_FIELD_NUMBER = 11;
+    private volatile java.lang.Object displayFrom_;
+    /**
+     * <pre>
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
+     * </pre>
+     *
+     * <code>string displayFrom = 11;</code>
+     * @return The displayFrom.
+     */
+    @java.lang.Override
+    public java.lang.String getDisplayFrom() {
+      java.lang.Object ref = displayFrom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        displayFrom_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * The date the message was created in the PassKit system.
+     * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
-     * @return The created.
+     * <code>string displayFrom = 11;</code>
+     * @return The bytes for displayFrom.
      */
     @java.lang.Override
-    public com.google.protobuf.Timestamp getCreated() {
-      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
+    public com.google.protobuf.ByteString
+        getDisplayFromBytes() {
+      java.lang.Object ref = displayFrom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        displayFrom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISPLAYUNTIL_FIELD_NUMBER = 12;
+    private volatile java.lang.Object displayUntil_;
+    /**
+     * <pre>
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
+     * </pre>
+     *
+     * <code>string displayUntil = 12;</code>
+     * @return The displayUntil.
+     */
+    @java.lang.Override
+    public java.lang.String getDisplayUntil() {
+      java.lang.Object ref = displayUntil_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        displayUntil_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * The date the message was created in the PassKit system.
+     * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp created = 18;</code>
+     * <code>string displayUntil = 12;</code>
+     * @return The bytes for displayUntil.
      */
     @java.lang.Override
-    public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+    public com.google.protobuf.ByteString
+        getDisplayUntilBytes() {
+      java.lang.Object ref = displayUntil_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        displayUntil_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1385,59 +1126,41 @@ public final class MessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
-        output.writeEnum(1, protocol_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, companyId_);
-      }
-      if (!getClassIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
-      }
-      if (!getUuidBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, uuid_);
-      }
-      if (status_ != com.passkit.grpc.MessageOuterClass.MessageStatus.CREATED.getNumber()) {
-        output.writeEnum(5, status_);
-      }
-      if (!getWarningBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, warning_);
-      }
-      if (imageId_ != 0) {
-        output.writeUInt32(7, imageId_);
-      }
-      if (!getTitleBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, title_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, title_);
       }
       if (localizedTitle_ != null) {
-        output.writeMessage(9, getLocalizedTitle());
+        output.writeMessage(3, getLocalizedTitle());
       }
-      if (!getContentBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, content_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plainTextContent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, plainTextContent_);
       }
-      if (localizedContent_ != null) {
-        output.writeMessage(11, getLocalizedContent());
+      if (localizedPlainTextContent_ != null) {
+        output.writeMessage(5, getLocalizedPlainTextContent());
       }
-      if (startDate_ != null) {
-        output.writeMessage(12, getStartDate());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(richTextContent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, richTextContent_);
       }
-      if (endDate_ != null) {
-        output.writeMessage(13, getEndDate());
+      if (localizedRichTextContent_ != null) {
+        output.writeMessage(7, getLocalizedRichTextContent());
       }
-      if (filter_ != null) {
-        output.writeMessage(14, getFilter());
+      for (int i = 0; i < urls_.size(); i++) {
+        output.writeMessage(8, urls_.get(i));
       }
-      if (recordsMatchingSegment_ != 0) {
-        output.writeUInt32(15, recordsMatchingSegment_);
+      if (images_ != null) {
+        output.writeMessage(9, getImages());
       }
-      if (recordsSuccessfullyUpdate_ != 0) {
-        output.writeUInt32(16, recordsSuccessfullyUpdate_);
+      if (priority_ != 0) {
+        output.writeUInt32(10, priority_);
       }
-      if (recordsFailedToUpdate_ != 0) {
-        output.writeUInt32(17, recordsFailedToUpdate_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayFrom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, displayFrom_);
       }
-      if (created_ != null) {
-        output.writeMessage(18, getCreated());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayUntil_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, displayUntil_);
       }
       unknownFields.writeTo(output);
     }
@@ -1448,71 +1171,47 @@ public final class MessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, protocol_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, companyId_);
-      }
-      if (!getClassIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
-      }
-      if (!getUuidBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, uuid_);
-      }
-      if (status_ != com.passkit.grpc.MessageOuterClass.MessageStatus.CREATED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, status_);
-      }
-      if (!getWarningBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, warning_);
-      }
-      if (imageId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, imageId_);
-      }
-      if (!getTitleBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, title_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, title_);
       }
       if (localizedTitle_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getLocalizedTitle());
+          .computeMessageSize(3, getLocalizedTitle());
       }
-      if (!getContentBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, content_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plainTextContent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, plainTextContent_);
       }
-      if (localizedContent_ != null) {
+      if (localizedPlainTextContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getLocalizedContent());
+          .computeMessageSize(5, getLocalizedPlainTextContent());
       }
-      if (startDate_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(12, getStartDate());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(richTextContent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, richTextContent_);
       }
-      if (endDate_ != null) {
+      if (localizedRichTextContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getEndDate());
+          .computeMessageSize(7, getLocalizedRichTextContent());
       }
-      if (filter_ != null) {
+      for (int i = 0; i < urls_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getFilter());
+          .computeMessageSize(8, urls_.get(i));
       }
-      if (recordsMatchingSegment_ != 0) {
+      if (images_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, recordsMatchingSegment_);
+          .computeMessageSize(9, getImages());
       }
-      if (recordsSuccessfullyUpdate_ != 0) {
+      if (priority_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(16, recordsSuccessfullyUpdate_);
+          .computeUInt32Size(10, priority_);
       }
-      if (recordsFailedToUpdate_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(17, recordsFailedToUpdate_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayFrom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, displayFrom_);
       }
-      if (created_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(18, getCreated());
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayUntil_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, displayUntil_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1529,18 +1228,8 @@ public final class MessageOuterClass {
       }
       com.passkit.grpc.MessageOuterClass.Message other = (com.passkit.grpc.MessageOuterClass.Message) obj;
 
-      if (protocol_ != other.protocol_) return false;
-      if (!getCompanyId()
-          .equals(other.getCompanyId())) return false;
-      if (!getClassId()
-          .equals(other.getClassId())) return false;
-      if (!getUuid()
-          .equals(other.getUuid())) return false;
-      if (status_ != other.status_) return false;
-      if (!getWarning()
-          .equals(other.getWarning())) return false;
-      if (getImageId()
-          != other.getImageId()) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!getTitle()
           .equals(other.getTitle())) return false;
       if (hasLocalizedTitle() != other.hasLocalizedTitle()) return false;
@@ -1548,39 +1237,33 @@ public final class MessageOuterClass {
         if (!getLocalizedTitle()
             .equals(other.getLocalizedTitle())) return false;
       }
-      if (!getContent()
-          .equals(other.getContent())) return false;
-      if (hasLocalizedContent() != other.hasLocalizedContent()) return false;
-      if (hasLocalizedContent()) {
-        if (!getLocalizedContent()
-            .equals(other.getLocalizedContent())) return false;
+      if (!getPlainTextContent()
+          .equals(other.getPlainTextContent())) return false;
+      if (hasLocalizedPlainTextContent() != other.hasLocalizedPlainTextContent()) return false;
+      if (hasLocalizedPlainTextContent()) {
+        if (!getLocalizedPlainTextContent()
+            .equals(other.getLocalizedPlainTextContent())) return false;
       }
-      if (hasStartDate() != other.hasStartDate()) return false;
-      if (hasStartDate()) {
-        if (!getStartDate()
-            .equals(other.getStartDate())) return false;
+      if (!getRichTextContent()
+          .equals(other.getRichTextContent())) return false;
+      if (hasLocalizedRichTextContent() != other.hasLocalizedRichTextContent()) return false;
+      if (hasLocalizedRichTextContent()) {
+        if (!getLocalizedRichTextContent()
+            .equals(other.getLocalizedRichTextContent())) return false;
       }
-      if (hasEndDate() != other.hasEndDate()) return false;
-      if (hasEndDate()) {
-        if (!getEndDate()
-            .equals(other.getEndDate())) return false;
+      if (!getUrlsList()
+          .equals(other.getUrlsList())) return false;
+      if (hasImages() != other.hasImages()) return false;
+      if (hasImages()) {
+        if (!getImages()
+            .equals(other.getImages())) return false;
       }
-      if (hasFilter() != other.hasFilter()) return false;
-      if (hasFilter()) {
-        if (!getFilter()
-            .equals(other.getFilter())) return false;
-      }
-      if (getRecordsMatchingSegment()
-          != other.getRecordsMatchingSegment()) return false;
-      if (getRecordsSuccessfullyUpdate()
-          != other.getRecordsSuccessfullyUpdate()) return false;
-      if (getRecordsFailedToUpdate()
-          != other.getRecordsFailedToUpdate()) return false;
-      if (hasCreated() != other.hasCreated()) return false;
-      if (hasCreated()) {
-        if (!getCreated()
-            .equals(other.getCreated())) return false;
-      }
+      if (getPriority()
+          != other.getPriority()) return false;
+      if (!getDisplayFrom()
+          .equals(other.getDisplayFrom())) return false;
+      if (!getDisplayUntil()
+          .equals(other.getDisplayUntil())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1592,54 +1275,40 @@ public final class MessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
-      hash = (53 * hash) + protocol_;
-      hash = (37 * hash) + COMPANYID_FIELD_NUMBER;
-      hash = (53 * hash) + getCompanyId().hashCode();
-      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
-      hash = (53 * hash) + getClassId().hashCode();
-      hash = (37 * hash) + UUID_FIELD_NUMBER;
-      hash = (53 * hash) + getUuid().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      hash = (37 * hash) + WARNING_FIELD_NUMBER;
-      hash = (53 * hash) + getWarning().hashCode();
-      hash = (37 * hash) + IMAGEID_FIELD_NUMBER;
-      hash = (53 * hash) + getImageId();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + TITLE_FIELD_NUMBER;
       hash = (53 * hash) + getTitle().hashCode();
       if (hasLocalizedTitle()) {
         hash = (37 * hash) + LOCALIZEDTITLE_FIELD_NUMBER;
         hash = (53 * hash) + getLocalizedTitle().hashCode();
       }
-      hash = (37 * hash) + CONTENT_FIELD_NUMBER;
-      hash = (53 * hash) + getContent().hashCode();
-      if (hasLocalizedContent()) {
-        hash = (37 * hash) + LOCALIZEDCONTENT_FIELD_NUMBER;
-        hash = (53 * hash) + getLocalizedContent().hashCode();
+      hash = (37 * hash) + PLAINTEXTCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getPlainTextContent().hashCode();
+      if (hasLocalizedPlainTextContent()) {
+        hash = (37 * hash) + LOCALIZEDPLAINTEXTCONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedPlainTextContent().hashCode();
       }
-      if (hasStartDate()) {
-        hash = (37 * hash) + STARTDATE_FIELD_NUMBER;
-        hash = (53 * hash) + getStartDate().hashCode();
+      hash = (37 * hash) + RICHTEXTCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRichTextContent().hashCode();
+      if (hasLocalizedRichTextContent()) {
+        hash = (37 * hash) + LOCALIZEDRICHTEXTCONTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedRichTextContent().hashCode();
       }
-      if (hasEndDate()) {
-        hash = (37 * hash) + ENDDATE_FIELD_NUMBER;
-        hash = (53 * hash) + getEndDate().hashCode();
+      if (getUrlsCount() > 0) {
+        hash = (37 * hash) + URLS_FIELD_NUMBER;
+        hash = (53 * hash) + getUrlsList().hashCode();
       }
-      if (hasFilter()) {
-        hash = (37 * hash) + FILTER_FIELD_NUMBER;
-        hash = (53 * hash) + getFilter().hashCode();
+      if (hasImages()) {
+        hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getImages().hashCode();
       }
-      hash = (37 * hash) + RECORDSMATCHINGSEGMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordsMatchingSegment();
-      hash = (37 * hash) + RECORDSSUCCESSFULLYUPDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordsSuccessfullyUpdate();
-      hash = (37 * hash) + RECORDSFAILEDTOUPDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getRecordsFailedToUpdate();
-      if (hasCreated()) {
-        hash = (37 * hash) + CREATED_FIELD_NUMBER;
-        hash = (53 * hash) + getCreated().hashCode();
-      }
+      hash = (37 * hash) + PRIORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getPriority();
+      hash = (37 * hash) + DISPLAYFROM_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplayFrom().hashCode();
+      hash = (37 * hash) + DISPLAYUNTIL_FIELD_NUMBER;
+      hash = (53 * hash) + getDisplayUntil().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1768,24 +1437,13 @@ public final class MessageOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getUrlsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        protocol_ = 0;
-
-        companyId_ = "";
-
-        classId_ = "";
-
-        uuid_ = "";
-
-        status_ = 0;
-
-        warning_ = "";
-
-        imageId_ = 0;
+        id_ = "";
 
         title_ = "";
 
@@ -1795,44 +1453,40 @@ public final class MessageOuterClass {
           localizedTitle_ = null;
           localizedTitleBuilder_ = null;
         }
-        content_ = "";
+        plainTextContent_ = "";
 
-        if (localizedContentBuilder_ == null) {
-          localizedContent_ = null;
+        if (localizedPlainTextContentBuilder_ == null) {
+          localizedPlainTextContent_ = null;
         } else {
-          localizedContent_ = null;
-          localizedContentBuilder_ = null;
+          localizedPlainTextContent_ = null;
+          localizedPlainTextContentBuilder_ = null;
         }
-        if (startDateBuilder_ == null) {
-          startDate_ = null;
-        } else {
-          startDate_ = null;
-          startDateBuilder_ = null;
-        }
-        if (endDateBuilder_ == null) {
-          endDate_ = null;
-        } else {
-          endDate_ = null;
-          endDateBuilder_ = null;
-        }
-        if (filterBuilder_ == null) {
-          filter_ = null;
-        } else {
-          filter_ = null;
-          filterBuilder_ = null;
-        }
-        recordsMatchingSegment_ = 0;
+        richTextContent_ = "";
 
-        recordsSuccessfullyUpdate_ = 0;
-
-        recordsFailedToUpdate_ = 0;
-
-        if (createdBuilder_ == null) {
-          created_ = null;
+        if (localizedRichTextContentBuilder_ == null) {
+          localizedRichTextContent_ = null;
         } else {
-          created_ = null;
-          createdBuilder_ = null;
+          localizedRichTextContent_ = null;
+          localizedRichTextContentBuilder_ = null;
         }
+        if (urlsBuilder_ == null) {
+          urls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          urlsBuilder_.clear();
+        }
+        if (imagesBuilder_ == null) {
+          images_ = null;
+        } else {
+          images_ = null;
+          imagesBuilder_ = null;
+        }
+        priority_ = 0;
+
+        displayFrom_ = "";
+
+        displayUntil_ = "";
+
         return this;
       }
 
@@ -1859,48 +1513,43 @@ public final class MessageOuterClass {
       @java.lang.Override
       public com.passkit.grpc.MessageOuterClass.Message buildPartial() {
         com.passkit.grpc.MessageOuterClass.Message result = new com.passkit.grpc.MessageOuterClass.Message(this);
-        result.protocol_ = protocol_;
-        result.companyId_ = companyId_;
-        result.classId_ = classId_;
-        result.uuid_ = uuid_;
-        result.status_ = status_;
-        result.warning_ = warning_;
-        result.imageId_ = imageId_;
+        int from_bitField0_ = bitField0_;
+        result.id_ = id_;
         result.title_ = title_;
         if (localizedTitleBuilder_ == null) {
           result.localizedTitle_ = localizedTitle_;
         } else {
           result.localizedTitle_ = localizedTitleBuilder_.build();
         }
-        result.content_ = content_;
-        if (localizedContentBuilder_ == null) {
-          result.localizedContent_ = localizedContent_;
+        result.plainTextContent_ = plainTextContent_;
+        if (localizedPlainTextContentBuilder_ == null) {
+          result.localizedPlainTextContent_ = localizedPlainTextContent_;
         } else {
-          result.localizedContent_ = localizedContentBuilder_.build();
+          result.localizedPlainTextContent_ = localizedPlainTextContentBuilder_.build();
         }
-        if (startDateBuilder_ == null) {
-          result.startDate_ = startDate_;
+        result.richTextContent_ = richTextContent_;
+        if (localizedRichTextContentBuilder_ == null) {
+          result.localizedRichTextContent_ = localizedRichTextContent_;
         } else {
-          result.startDate_ = startDateBuilder_.build();
+          result.localizedRichTextContent_ = localizedRichTextContentBuilder_.build();
         }
-        if (endDateBuilder_ == null) {
-          result.endDate_ = endDate_;
+        if (urlsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            urls_ = java.util.Collections.unmodifiableList(urls_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.urls_ = urls_;
         } else {
-          result.endDate_ = endDateBuilder_.build();
+          result.urls_ = urlsBuilder_.build();
         }
-        if (filterBuilder_ == null) {
-          result.filter_ = filter_;
+        if (imagesBuilder_ == null) {
+          result.images_ = images_;
         } else {
-          result.filter_ = filterBuilder_.build();
+          result.images_ = imagesBuilder_.build();
         }
-        result.recordsMatchingSegment_ = recordsMatchingSegment_;
-        result.recordsSuccessfullyUpdate_ = recordsSuccessfullyUpdate_;
-        result.recordsFailedToUpdate_ = recordsFailedToUpdate_;
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
+        result.priority_ = priority_;
+        result.displayFrom_ = displayFrom_;
+        result.displayUntil_ = displayUntil_;
         onBuilt();
         return result;
       }
@@ -1949,30 +1598,9 @@ public final class MessageOuterClass {
 
       public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.Message other) {
         if (other == com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()) return this;
-        if (other.protocol_ != 0) {
-          setProtocolValue(other.getProtocolValue());
-        }
-        if (!other.getCompanyId().isEmpty()) {
-          companyId_ = other.companyId_;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
           onChanged();
-        }
-        if (!other.getClassId().isEmpty()) {
-          classId_ = other.classId_;
-          onChanged();
-        }
-        if (!other.getUuid().isEmpty()) {
-          uuid_ = other.uuid_;
-          onChanged();
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        if (!other.getWarning().isEmpty()) {
-          warning_ = other.warning_;
-          onChanged();
-        }
-        if (other.getImageId() != 0) {
-          setImageId(other.getImageId());
         }
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
@@ -1981,33 +1609,59 @@ public final class MessageOuterClass {
         if (other.hasLocalizedTitle()) {
           mergeLocalizedTitle(other.getLocalizedTitle());
         }
-        if (!other.getContent().isEmpty()) {
-          content_ = other.content_;
+        if (!other.getPlainTextContent().isEmpty()) {
+          plainTextContent_ = other.plainTextContent_;
           onChanged();
         }
-        if (other.hasLocalizedContent()) {
-          mergeLocalizedContent(other.getLocalizedContent());
+        if (other.hasLocalizedPlainTextContent()) {
+          mergeLocalizedPlainTextContent(other.getLocalizedPlainTextContent());
         }
-        if (other.hasStartDate()) {
-          mergeStartDate(other.getStartDate());
+        if (!other.getRichTextContent().isEmpty()) {
+          richTextContent_ = other.richTextContent_;
+          onChanged();
         }
-        if (other.hasEndDate()) {
-          mergeEndDate(other.getEndDate());
+        if (other.hasLocalizedRichTextContent()) {
+          mergeLocalizedRichTextContent(other.getLocalizedRichTextContent());
         }
-        if (other.hasFilter()) {
-          mergeFilter(other.getFilter());
+        if (urlsBuilder_ == null) {
+          if (!other.urls_.isEmpty()) {
+            if (urls_.isEmpty()) {
+              urls_ = other.urls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUrlsIsMutable();
+              urls_.addAll(other.urls_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.urls_.isEmpty()) {
+            if (urlsBuilder_.isEmpty()) {
+              urlsBuilder_.dispose();
+              urlsBuilder_ = null;
+              urls_ = other.urls_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              urlsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUrlsFieldBuilder() : null;
+            } else {
+              urlsBuilder_.addAllMessages(other.urls_);
+            }
+          }
         }
-        if (other.getRecordsMatchingSegment() != 0) {
-          setRecordsMatchingSegment(other.getRecordsMatchingSegment());
+        if (other.hasImages()) {
+          mergeImages(other.getImages());
         }
-        if (other.getRecordsSuccessfullyUpdate() != 0) {
-          setRecordsSuccessfullyUpdate(other.getRecordsSuccessfullyUpdate());
+        if (other.getPriority() != 0) {
+          setPriority(other.getPriority());
         }
-        if (other.getRecordsFailedToUpdate() != 0) {
-          setRecordsFailedToUpdate(other.getRecordsFailedToUpdate());
+        if (!other.getDisplayFrom().isEmpty()) {
+          displayFrom_ = other.displayFrom_;
+          onChanged();
         }
-        if (other.hasCreated()) {
-          mergeCreated(other.getCreated());
+        if (!other.getDisplayUntil().isEmpty()) {
+          displayUntil_ = other.displayUntil_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2037,578 +1691,80 @@ public final class MessageOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
-      private int protocol_ = 0;
+      private java.lang.Object id_ = "";
       /**
-       * <pre>
-       * the protocol that this message is associated with.
-       * </pre>
-       *
-       * <code>.io.PassProtocol protocol = 1;</code>
-       * @return The enum numeric value on the wire for protocol.
+       * <code>string id = 1;</code>
+       * @return The id.
        */
-      @java.lang.Override public int getProtocolValue() {
-        return protocol_;
-      }
-      /**
-       * <pre>
-       * the protocol that this message is associated with.
-       * </pre>
-       *
-       * <code>.io.PassProtocol protocol = 1;</code>
-       * @param value The enum numeric value on the wire for protocol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProtocolValue(int value) {
-        
-        protocol_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the protocol that this message is associated with.
-       * </pre>
-       *
-       * <code>.io.PassProtocol protocol = 1;</code>
-       * @return The protocol.
-       */
-      @java.lang.Override
-      public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
-        return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * the protocol that this message is associated with.
-       * </pre>
-       *
-       * <code>.io.PassProtocol protocol = 1;</code>
-       * @param value The protocol to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProtocol(com.passkit.grpc.Protocols.PassProtocol value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        protocol_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the protocol that this message is associated with.
-       * </pre>
-       *
-       * <code>.io.PassProtocol protocol = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProtocol() {
-        
-        protocol_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object companyId_ = "";
-      /**
-       * <pre>
-       * the id of the company that made the message
-       * </pre>
-       *
-       * <code>string companyId = 2;</code>
-       * @return The companyId.
-       */
-      public java.lang.String getCompanyId() {
-        java.lang.Object ref = companyId_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          companyId_ = s;
+          id_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <pre>
-       * the id of the company that made the message
-       * </pre>
-       *
-       * <code>string companyId = 2;</code>
-       * @return The bytes for companyId.
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
-          getCompanyIdBytes() {
-        java.lang.Object ref = companyId_;
+          getIdBytes() {
+        java.lang.Object ref = id_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          companyId_ = b;
+          id_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <pre>
-       * the id of the company that made the message
-       * </pre>
-       *
-       * <code>string companyId = 2;</code>
-       * @param value The companyId to set.
+       * <code>string id = 1;</code>
+       * @param value The id to set.
        * @return This builder for chaining.
        */
-      public Builder setCompanyId(
+      public Builder setId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        companyId_ = value;
+        id_ = value;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * the id of the company that made the message
-       * </pre>
-       *
-       * <code>string companyId = 2;</code>
+       * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCompanyId() {
+      public Builder clearId() {
         
-        companyId_ = getDefaultInstance().getCompanyId();
+        id_ = getDefaultInstance().getId();
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * the id of the company that made the message
-       * </pre>
-       *
-       * <code>string companyId = 2;</code>
-       * @param value The bytes for companyId to set.
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
-      public Builder setCompanyIdBytes(
+      public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        companyId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object classId_ = "";
-      /**
-       * <pre>
-       * the higher level class id for the protocol.
-       * </pre>
-       *
-       * <code>string classId = 3;</code>
-       * @return The classId.
-       */
-      public java.lang.String getClassId() {
-        java.lang.Object ref = classId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          classId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * the higher level class id for the protocol.
-       * </pre>
-       *
-       * <code>string classId = 3;</code>
-       * @return The bytes for classId.
-       */
-      public com.google.protobuf.ByteString
-          getClassIdBytes() {
-        java.lang.Object ref = classId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          classId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * the higher level class id for the protocol.
-       * </pre>
-       *
-       * <code>string classId = 3;</code>
-       * @param value The classId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClassId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        classId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the higher level class id for the protocol.
-       * </pre>
-       *
-       * <code>string classId = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearClassId() {
-        
-        classId_ = getDefaultInstance().getClassId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the higher level class id for the protocol.
-       * </pre>
-       *
-       * <code>string classId = 3;</code>
-       * @param value The bytes for classId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setClassIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        classId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object uuid_ = "";
-      /**
-       * <pre>
-       * the unique id for this message
-       * </pre>
-       *
-       * <code>string uuid = 4;</code>
-       * @return The uuid.
-       */
-      public java.lang.String getUuid() {
-        java.lang.Object ref = uuid_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          uuid_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * the unique id for this message
-       * </pre>
-       *
-       * <code>string uuid = 4;</code>
-       * @return The bytes for uuid.
-       */
-      public com.google.protobuf.ByteString
-          getUuidBytes() {
-        java.lang.Object ref = uuid_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          uuid_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * the unique id for this message
-       * </pre>
-       *
-       * <code>string uuid = 4;</code>
-       * @param value The uuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUuid(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the unique id for this message
-       * </pre>
-       *
-       * <code>string uuid = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearUuid() {
-        
-        uuid_ = getDefaultInstance().getUuid();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the unique id for this message
-       * </pre>
-       *
-       * <code>string uuid = 4;</code>
-       * @param value The bytes for uuid to set.
-       * @return This builder for chaining.
-       */
-      public Builder setUuidBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        uuid_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <pre>
-       * the status of the message.
-       * </pre>
-       *
-       * <code>.io.MessageStatus status = 5;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <pre>
-       * the status of the message.
-       * </pre>
-       *
-       * <code>.io.MessageStatus status = 5;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the status of the message.
-       * </pre>
-       *
-       * <code>.io.MessageStatus status = 5;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.passkit.grpc.MessageOuterClass.MessageStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.MessageOuterClass.MessageStatus result = com.passkit.grpc.MessageOuterClass.MessageStatus.valueOf(status_);
-        return result == null ? com.passkit.grpc.MessageOuterClass.MessageStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * the status of the message.
-       * </pre>
-       *
-       * <code>.io.MessageStatus status = 5;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.passkit.grpc.MessageOuterClass.MessageStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * the status of the message.
-       * </pre>
-       *
-       * <code>.io.MessageStatus status = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object warning_ = "";
-      /**
-       * <pre>
-       * warning of any errors that may have occurred.
-       * </pre>
-       *
-       * <code>string warning = 6;</code>
-       * @return The warning.
-       */
-      public java.lang.String getWarning() {
-        java.lang.Object ref = warning_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          warning_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * warning of any errors that may have occurred.
-       * </pre>
-       *
-       * <code>string warning = 6;</code>
-       * @return The bytes for warning.
-       */
-      public com.google.protobuf.ByteString
-          getWarningBytes() {
-        java.lang.Object ref = warning_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          warning_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * warning of any errors that may have occurred.
-       * </pre>
-       *
-       * <code>string warning = 6;</code>
-       * @param value The warning to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWarning(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        warning_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * warning of any errors that may have occurred.
-       * </pre>
-       *
-       * <code>string warning = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWarning() {
-        
-        warning_ = getDefaultInstance().getWarning();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * warning of any errors that may have occurred.
-       * </pre>
-       *
-       * <code>string warning = 6;</code>
-       * @param value The bytes for warning to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWarningBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        warning_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int imageId_ ;
-      /**
-       * <pre>
-       * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-       * </pre>
-       *
-       * <code>uint32 imageId = 7;</code>
-       * @return The imageId.
-       */
-      @java.lang.Override
-      public int getImageId() {
-        return imageId_;
-      }
-      /**
-       * <pre>
-       * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-       * </pre>
-       *
-       * <code>uint32 imageId = 7;</code>
-       * @param value The imageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setImageId(int value) {
-        
-        imageId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional Image ID; for the Main Image that will be shown in Google Pay (Google Pay only; no image is shown for Apple Wallet).
-       * </pre>
-       *
-       * <code>uint32 imageId = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearImageId() {
-        
-        imageId_ = 0;
+        id_ = value;
         onChanged();
         return this;
       }
@@ -2616,10 +1772,10 @@ public final class MessageOuterClass {
       private java.lang.Object title_ = "";
       /**
        * <pre>
-       * Title (summary) of the message.
+       * The message title. This is used as a label in iOS and as the title in Google Pay.
        * </pre>
        *
-       * <code>string title = 8;</code>
+       * <code>string title = 2;</code>
        * @return The title.
        */
       public java.lang.String getTitle() {
@@ -2636,10 +1792,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Title (summary) of the message.
+       * The message title. This is used as a label in iOS and as the title in Google Pay.
        * </pre>
        *
-       * <code>string title = 8;</code>
+       * <code>string title = 2;</code>
        * @return The bytes for title.
        */
       public com.google.protobuf.ByteString
@@ -2657,10 +1813,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Title (summary) of the message.
+       * The message title. This is used as a label in iOS and as the title in Google Pay.
        * </pre>
        *
-       * <code>string title = 8;</code>
+       * <code>string title = 2;</code>
        * @param value The title to set.
        * @return This builder for chaining.
        */
@@ -2676,10 +1832,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Title (summary) of the message.
+       * The message title. This is used as a label in iOS and as the title in Google Pay.
        * </pre>
        *
-       * <code>string title = 8;</code>
+       * <code>string title = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
@@ -2690,10 +1846,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Title (summary) of the message.
+       * The message title. This is used as a label in iOS and as the title in Google Pay.
        * </pre>
        *
-       * <code>string title = 8;</code>
+       * <code>string title = 2;</code>
        * @param value The bytes for title to set.
        * @return This builder for chaining.
        */
@@ -2714,10 +1870,10 @@ public final class MessageOuterClass {
           com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedTitleBuilder_;
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        * @return Whether the localizedTitle field is set.
        */
       public boolean hasLocalizedTitle() {
@@ -2725,10 +1881,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        * @return The localizedTitle.
        */
       public com.passkit.grpc.Localization.LocalizedString getLocalizedTitle() {
@@ -2740,10 +1896,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public Builder setLocalizedTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTitleBuilder_ == null) {
@@ -2760,10 +1916,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public Builder setLocalizedTitle(
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
@@ -2778,10 +1934,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public Builder mergeLocalizedTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTitleBuilder_ == null) {
@@ -2800,10 +1956,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public Builder clearLocalizedTitle() {
         if (localizedTitleBuilder_ == null) {
@@ -2818,10 +1974,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTitleBuilder() {
         
@@ -2830,10 +1986,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleOrBuilder() {
         if (localizedTitleBuilder_ != null) {
@@ -2845,10 +2001,10 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Localized title of the message.
+       * Localized message title.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedTitle = 9;</code>
+       * <code>.io.LocalizedString localizedTitle = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
@@ -2864,22 +2020,22 @@ public final class MessageOuterClass {
         return localizedTitleBuilder_;
       }
 
-      private java.lang.Object content_ = "";
+      private java.lang.Object plainTextContent_ = "";
       /**
        * <pre>
-       * Content of the message (finer details).
+       * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
        * </pre>
        *
-       * <code>string content = 10;</code>
-       * @return The content.
+       * <code>string plainTextContent = 4;</code>
+       * @return The plainTextContent.
        */
-      public java.lang.String getContent() {
-        java.lang.Object ref = content_;
+      public java.lang.String getPlainTextContent() {
+        java.lang.Object ref = plainTextContent_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          content_ = s;
+          plainTextContent_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2887,20 +2043,20 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Content of the message (finer details).
+       * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
        * </pre>
        *
-       * <code>string content = 10;</code>
-       * @return The bytes for content.
+       * <code>string plainTextContent = 4;</code>
+       * @return The bytes for plainTextContent.
        */
       public com.google.protobuf.ByteString
-          getContentBytes() {
-        java.lang.Object ref = content_;
+          getPlainTextContentBytes() {
+        java.lang.Object ref = plainTextContent_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          content_ = b;
+          plainTextContent_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -2908,960 +2064,1164 @@ public final class MessageOuterClass {
       }
       /**
        * <pre>
-       * Content of the message (finer details).
+       * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
        * </pre>
        *
-       * <code>string content = 10;</code>
-       * @param value The content to set.
+       * <code>string plainTextContent = 4;</code>
+       * @param value The plainTextContent to set.
        * @return This builder for chaining.
        */
-      public Builder setContent(
+      public Builder setPlainTextContent(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        content_ = value;
+        plainTextContent_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Content of the message (finer details).
+       * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
        * </pre>
        *
-       * <code>string content = 10;</code>
+       * <code>string plainTextContent = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearContent() {
+      public Builder clearPlainTextContent() {
         
-        content_ = getDefaultInstance().getContent();
+        plainTextContent_ = getDefaultInstance().getPlainTextContent();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Content of the message (finer details).
+       * Plain text content cannot contain hyperlinks. Google Pay messages cannot have links, use URLs instead.
        * </pre>
        *
-       * <code>string content = 10;</code>
-       * @param value The bytes for content to set.
+       * <code>string plainTextContent = 4;</code>
+       * @param value The bytes for plainTextContent to set.
        * @return This builder for chaining.
        */
-      public Builder setContentBytes(
+      public Builder setPlainTextContentBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        content_ = value;
+        plainTextContent_ = value;
         onChanged();
         return this;
       }
 
-      private com.passkit.grpc.Localization.LocalizedString localizedContent_;
+      private com.passkit.grpc.Localization.LocalizedString localizedPlainTextContent_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedContentBuilder_;
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedPlainTextContentBuilder_;
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
-       * @return Whether the localizedContent field is set.
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+       * @return Whether the localizedPlainTextContent field is set.
        */
-      public boolean hasLocalizedContent() {
-        return localizedContentBuilder_ != null || localizedContent_ != null;
+      public boolean hasLocalizedPlainTextContent() {
+        return localizedPlainTextContentBuilder_ != null || localizedPlainTextContent_ != null;
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
-       * @return The localizedContent.
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
+       * @return The localizedPlainTextContent.
        */
-      public com.passkit.grpc.Localization.LocalizedString getLocalizedContent() {
-        if (localizedContentBuilder_ == null) {
-          return localizedContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedContent_;
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedPlainTextContent() {
+        if (localizedPlainTextContentBuilder_ == null) {
+          return localizedPlainTextContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPlainTextContent_;
         } else {
-          return localizedContentBuilder_.getMessage();
+          return localizedPlainTextContentBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public Builder setLocalizedContent(com.passkit.grpc.Localization.LocalizedString value) {
-        if (localizedContentBuilder_ == null) {
+      public Builder setLocalizedPlainTextContent(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedPlainTextContentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          localizedContent_ = value;
+          localizedPlainTextContent_ = value;
           onChanged();
         } else {
-          localizedContentBuilder_.setMessage(value);
+          localizedPlainTextContentBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public Builder setLocalizedContent(
+      public Builder setLocalizedPlainTextContent(
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
-        if (localizedContentBuilder_ == null) {
-          localizedContent_ = builderForValue.build();
+        if (localizedPlainTextContentBuilder_ == null) {
+          localizedPlainTextContent_ = builderForValue.build();
           onChanged();
         } else {
-          localizedContentBuilder_.setMessage(builderForValue.build());
+          localizedPlainTextContentBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public Builder mergeLocalizedContent(com.passkit.grpc.Localization.LocalizedString value) {
-        if (localizedContentBuilder_ == null) {
-          if (localizedContent_ != null) {
-            localizedContent_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedContent_).mergeFrom(value).buildPartial();
+      public Builder mergeLocalizedPlainTextContent(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedPlainTextContentBuilder_ == null) {
+          if (localizedPlainTextContent_ != null) {
+            localizedPlainTextContent_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedPlainTextContent_).mergeFrom(value).buildPartial();
           } else {
-            localizedContent_ = value;
+            localizedPlainTextContent_ = value;
           }
           onChanged();
         } else {
-          localizedContentBuilder_.mergeFrom(value);
+          localizedPlainTextContentBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public Builder clearLocalizedContent() {
-        if (localizedContentBuilder_ == null) {
-          localizedContent_ = null;
+      public Builder clearLocalizedPlainTextContent() {
+        if (localizedPlainTextContentBuilder_ == null) {
+          localizedPlainTextContent_ = null;
           onChanged();
         } else {
-          localizedContent_ = null;
-          localizedContentBuilder_ = null;
+          localizedPlainTextContent_ = null;
+          localizedPlainTextContentBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedContentBuilder() {
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedPlainTextContentBuilder() {
         
         onChanged();
-        return getLocalizedContentFieldBuilder().getBuilder();
+        return getLocalizedPlainTextContentFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
-      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedContentOrBuilder() {
-        if (localizedContentBuilder_ != null) {
-          return localizedContentBuilder_.getMessageOrBuilder();
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPlainTextContentOrBuilder() {
+        if (localizedPlainTextContentBuilder_ != null) {
+          return localizedPlainTextContentBuilder_.getMessageOrBuilder();
         } else {
-          return localizedContent_ == null ?
-              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedContent_;
+          return localizedPlainTextContent_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPlainTextContent_;
         }
       }
       /**
        * <pre>
-       * Localized content of the message.
+       * Localized plain text content.
        * </pre>
        *
-       * <code>.io.LocalizedString localizedContent = 11;</code>
+       * <code>.io.LocalizedString localizedPlainTextContent = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
-          getLocalizedContentFieldBuilder() {
-        if (localizedContentBuilder_ == null) {
-          localizedContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getLocalizedPlainTextContentFieldBuilder() {
+        if (localizedPlainTextContentBuilder_ == null) {
+          localizedPlainTextContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
-                  getLocalizedContent(),
+                  getLocalizedPlainTextContent(),
                   getParentForChildren(),
                   isClean());
-          localizedContent_ = null;
+          localizedPlainTextContent_ = null;
         }
-        return localizedContentBuilder_;
+        return localizedPlainTextContentBuilder_;
       }
 
-      private com.google.protobuf.Timestamp startDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startDateBuilder_;
+      private java.lang.Object richTextContent_ = "";
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
-       * @return Whether the startDate field is set.
+       * <code>string richTextContent = 6;</code>
+       * @return The richTextContent.
        */
-      public boolean hasStartDate() {
-        return startDateBuilder_ != null || startDate_ != null;
-      }
-      /**
-       * <pre>
-       * Start date indicates when the message is shown on the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
-       * @return The startDate.
-       */
-      public com.google.protobuf.Timestamp getStartDate() {
-        if (startDateBuilder_ == null) {
-          return startDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+      public java.lang.String getRichTextContent() {
+        java.lang.Object ref = richTextContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          richTextContent_ = s;
+          return s;
         } else {
-          return startDateBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>string richTextContent = 6;</code>
+       * @return The bytes for richTextContent.
        */
-      public Builder setStartDate(com.google.protobuf.Timestamp value) {
-        if (startDateBuilder_ == null) {
+      public com.google.protobuf.ByteString
+          getRichTextContentBytes() {
+        java.lang.Object ref = richTextContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          richTextContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
+       * </pre>
+       *
+       * <code>string richTextContent = 6;</code>
+       * @param value The richTextContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRichTextContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        richTextContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
+       * </pre>
+       *
+       * <code>string richTextContent = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRichTextContent() {
+        
+        richTextContent_ = getDefaultInstance().getRichTextContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Rich text content that can contain hyperlinks. No other markup is accepted. Links will only function on iOS devices. Ignored for Google Pay.
+       * </pre>
+       *
+       * <code>string richTextContent = 6;</code>
+       * @param value The bytes for richTextContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRichTextContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        richTextContent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedRichTextContent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedRichTextContentBuilder_;
+      /**
+       * <pre>
+       * Localized rich text content.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+       * @return Whether the localizedRichTextContent field is set.
+       */
+      public boolean hasLocalizedRichTextContent() {
+        return localizedRichTextContentBuilder_ != null || localizedRichTextContent_ != null;
+      }
+      /**
+       * <pre>
+       * Localized rich text content.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+       * @return The localizedRichTextContent.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedRichTextContent() {
+        if (localizedRichTextContentBuilder_ == null) {
+          return localizedRichTextContent_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRichTextContent_;
+        } else {
+          return localizedRichTextContentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized rich text content.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
+       */
+      public Builder setLocalizedRichTextContent(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedRichTextContentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          startDate_ = value;
+          localizedRichTextContent_ = value;
           onChanged();
         } else {
-          startDateBuilder_.setMessage(value);
+          localizedRichTextContentBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
-      public Builder setStartDate(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (startDateBuilder_ == null) {
-          startDate_ = builderForValue.build();
+      public Builder setLocalizedRichTextContent(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedRichTextContentBuilder_ == null) {
+          localizedRichTextContent_ = builderForValue.build();
           onChanged();
         } else {
-          startDateBuilder_.setMessage(builderForValue.build());
+          localizedRichTextContentBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
-      public Builder mergeStartDate(com.google.protobuf.Timestamp value) {
-        if (startDateBuilder_ == null) {
-          if (startDate_ != null) {
-            startDate_ =
-              com.google.protobuf.Timestamp.newBuilder(startDate_).mergeFrom(value).buildPartial();
+      public Builder mergeLocalizedRichTextContent(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedRichTextContentBuilder_ == null) {
+          if (localizedRichTextContent_ != null) {
+            localizedRichTextContent_ =
+              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedRichTextContent_).mergeFrom(value).buildPartial();
           } else {
-            startDate_ = value;
+            localizedRichTextContent_ = value;
           }
           onChanged();
         } else {
-          startDateBuilder_.mergeFrom(value);
+          localizedRichTextContentBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
-      public Builder clearStartDate() {
-        if (startDateBuilder_ == null) {
-          startDate_ = null;
+      public Builder clearLocalizedRichTextContent() {
+        if (localizedRichTextContentBuilder_ == null) {
+          localizedRichTextContent_ = null;
           onChanged();
         } else {
-          startDate_ = null;
-          startDateBuilder_ = null;
+          localizedRichTextContent_ = null;
+          localizedRichTextContentBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
-      public com.google.protobuf.Timestamp.Builder getStartDateBuilder() {
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedRichTextContentBuilder() {
         
         onChanged();
-        return getStartDateFieldBuilder().getBuilder();
+        return getLocalizedRichTextContentFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
-      public com.google.protobuf.TimestampOrBuilder getStartDateOrBuilder() {
-        if (startDateBuilder_ != null) {
-          return startDateBuilder_.getMessageOrBuilder();
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRichTextContentOrBuilder() {
+        if (localizedRichTextContentBuilder_ != null) {
+          return localizedRichTextContentBuilder_.getMessageOrBuilder();
         } else {
-          return startDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : startDate_;
+          return localizedRichTextContent_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRichTextContent_;
         }
       }
       /**
        * <pre>
-       * Start date indicates when the message is shown on the pass.
+       * Localized rich text content.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp startDate = 12;</code>
+       * <code>.io.LocalizedString localizedRichTextContent = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getStartDateFieldBuilder() {
-        if (startDateBuilder_ == null) {
-          startDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getStartDate(),
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedRichTextContentFieldBuilder() {
+        if (localizedRichTextContentBuilder_ == null) {
+          localizedRichTextContentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedRichTextContent(),
                   getParentForChildren(),
                   isClean());
-          startDate_ = null;
+          localizedRichTextContent_ = null;
         }
-        return startDateBuilder_;
+        return localizedRichTextContentBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endDate_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endDateBuilder_;
-      /**
-       * <pre>
-       * End date indicates when the message is removed from the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       * @return Whether the endDate field is set.
-       */
-      public boolean hasEndDate() {
-        return endDateBuilder_ != null || endDate_ != null;
+      private java.util.List<com.passkit.grpc.CommonObjects.Url> urls_ =
+        java.util.Collections.emptyList();
+      private void ensureUrlsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          urls_ = new java.util.ArrayList<com.passkit.grpc.CommonObjects.Url>(urls_);
+          bitField0_ |= 0x00000001;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Url, com.passkit.grpc.CommonObjects.Url.Builder, com.passkit.grpc.CommonObjects.UrlOrBuilder> urlsBuilder_;
+
       /**
        * <pre>
-       * End date indicates when the message is removed from the pass.
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       * @return The endDate.
+       * <code>repeated .io.Url urls = 8;</code>
        */
-      public com.google.protobuf.Timestamp getEndDate() {
-        if (endDateBuilder_ == null) {
-          return endDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
+      public java.util.List<com.passkit.grpc.CommonObjects.Url> getUrlsList() {
+        if (urlsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(urls_);
         } else {
-          return endDateBuilder_.getMessage();
+          return urlsBuilder_.getMessageList();
         }
       }
       /**
        * <pre>
-       * End date indicates when the message is removed from the pass.
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
+       * <code>repeated .io.Url urls = 8;</code>
        */
-      public Builder setEndDate(com.google.protobuf.Timestamp value) {
-        if (endDateBuilder_ == null) {
+      public int getUrlsCount() {
+        if (urlsBuilder_ == null) {
+          return urls_.size();
+        } else {
+          return urlsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Url getUrls(int index) {
+        if (urlsBuilder_ == null) {
+          return urls_.get(index);
+        } else {
+          return urlsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder setUrls(
+          int index, com.passkit.grpc.CommonObjects.Url value) {
+        if (urlsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          endDate_ = value;
+          ensureUrlsIsMutable();
+          urls_.set(index, value);
           onChanged();
         } else {
-          endDateBuilder_.setMessage(value);
+          urlsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
        * <pre>
-       * End date indicates when the message is removed from the pass.
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
+       * <code>repeated .io.Url urls = 8;</code>
        */
-      public Builder setEndDate(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (endDateBuilder_ == null) {
-          endDate_ = builderForValue.build();
+      public Builder setUrls(
+          int index, com.passkit.grpc.CommonObjects.Url.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.set(index, builderForValue.build());
           onChanged();
         } else {
-          endDateBuilder_.setMessage(builderForValue.build());
+          urlsBuilder_.setMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
        * <pre>
-       * End date indicates when the message is removed from the pass.
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
+       * <code>repeated .io.Url urls = 8;</code>
        */
-      public Builder mergeEndDate(com.google.protobuf.Timestamp value) {
-        if (endDateBuilder_ == null) {
-          if (endDate_ != null) {
-            endDate_ =
-              com.google.protobuf.Timestamp.newBuilder(endDate_).mergeFrom(value).buildPartial();
-          } else {
-            endDate_ = value;
-          }
-          onChanged();
-        } else {
-          endDateBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * End date indicates when the message is removed from the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       */
-      public Builder clearEndDate() {
-        if (endDateBuilder_ == null) {
-          endDate_ = null;
-          onChanged();
-        } else {
-          endDate_ = null;
-          endDateBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * End date indicates when the message is removed from the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getEndDateBuilder() {
-        
-        onChanged();
-        return getEndDateFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * End date indicates when the message is removed from the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getEndDateOrBuilder() {
-        if (endDateBuilder_ != null) {
-          return endDateBuilder_.getMessageOrBuilder();
-        } else {
-          return endDate_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : endDate_;
-        }
-      }
-      /**
-       * <pre>
-       * End date indicates when the message is removed from the pass.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp endDate = 13;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getEndDateFieldBuilder() {
-        if (endDateBuilder_ == null) {
-          endDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getEndDate(),
-                  getParentForChildren(),
-                  isClean());
-          endDate_ = null;
-        }
-        return endDateBuilder_;
-      }
-
-      private com.passkit.grpc.PaginationOuterClass.Filter filter_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.passkit.grpc.PaginationOuterClass.Filter, com.passkit.grpc.PaginationOuterClass.Filter.Builder, com.passkit.grpc.PaginationOuterClass.FilterOrBuilder> filterBuilder_;
-      /**
-       * <pre>
-       * optional filter used determine which members qualify for this message.
-       * </pre>
-       *
-       * <code>.io.Filter filter = 14;</code>
-       * @return Whether the filter field is set.
-       */
-      public boolean hasFilter() {
-        return filterBuilder_ != null || filter_ != null;
-      }
-      /**
-       * <pre>
-       * optional filter used determine which members qualify for this message.
-       * </pre>
-       *
-       * <code>.io.Filter filter = 14;</code>
-       * @return The filter.
-       */
-      public com.passkit.grpc.PaginationOuterClass.Filter getFilter() {
-        if (filterBuilder_ == null) {
-          return filter_ == null ? com.passkit.grpc.PaginationOuterClass.Filter.getDefaultInstance() : filter_;
-        } else {
-          return filterBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * optional filter used determine which members qualify for this message.
-       * </pre>
-       *
-       * <code>.io.Filter filter = 14;</code>
-       */
-      public Builder setFilter(com.passkit.grpc.PaginationOuterClass.Filter value) {
-        if (filterBuilder_ == null) {
+      public Builder addUrls(com.passkit.grpc.CommonObjects.Url value) {
+        if (urlsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          filter_ = value;
+          ensureUrlsIsMutable();
+          urls_.add(value);
           onChanged();
         } else {
-          filterBuilder_.setMessage(value);
+          urlsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder addUrls(
+          int index, com.passkit.grpc.CommonObjects.Url value) {
+        if (urlsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUrlsIsMutable();
+          urls_.add(index, value);
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder addUrls(
+          com.passkit.grpc.CommonObjects.Url.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.add(builderForValue.build());
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder addUrls(
+          int index, com.passkit.grpc.CommonObjects.Url.Builder builderForValue) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          urlsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder addAllUrls(
+          java.lang.Iterable<? extends com.passkit.grpc.CommonObjects.Url> values) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, urls_);
+          onChanged();
+        } else {
+          urlsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder clearUrls() {
+        if (urlsBuilder_ == null) {
+          urls_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          urlsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public Builder removeUrls(int index) {
+        if (urlsBuilder_ == null) {
+          ensureUrlsIsMutable();
+          urls_.remove(index);
+          onChanged();
+        } else {
+          urlsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Url.Builder getUrlsBuilder(
+          int index) {
+        return getUrlsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public com.passkit.grpc.CommonObjects.UrlOrBuilder getUrlsOrBuilder(
+          int index) {
+        if (urlsBuilder_ == null) {
+          return urls_.get(index);  } else {
+          return urlsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public java.util.List<? extends com.passkit.grpc.CommonObjects.UrlOrBuilder> 
+           getUrlsOrBuilderList() {
+        if (urlsBuilder_ != null) {
+          return urlsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(urls_);
+        }
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Url.Builder addUrlsBuilder() {
+        return getUrlsFieldBuilder().addBuilder(
+            com.passkit.grpc.CommonObjects.Url.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Url.Builder addUrlsBuilder(
+          int index) {
+        return getUrlsFieldBuilder().addBuilder(
+            index, com.passkit.grpc.CommonObjects.Url.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Urls will be prioritized over existing urls on the Google Pay Pass. They are ignored for Apple Wallet.
+       * </pre>
+       *
+       * <code>repeated .io.Url urls = 8;</code>
+       */
+      public java.util.List<com.passkit.grpc.CommonObjects.Url.Builder> 
+           getUrlsBuilderList() {
+        return getUrlsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Url, com.passkit.grpc.CommonObjects.Url.Builder, com.passkit.grpc.CommonObjects.UrlOrBuilder> 
+          getUrlsFieldBuilder() {
+        if (urlsBuilder_ == null) {
+          urlsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.passkit.grpc.CommonObjects.Url, com.passkit.grpc.CommonObjects.Url.Builder, com.passkit.grpc.CommonObjects.UrlOrBuilder>(
+                  urls_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          urls_ = null;
+        }
+        return urlsBuilder_;
+      }
+
+      private com.passkit.grpc.Image.ImageIds images_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Image.ImageIds, com.passkit.grpc.Image.ImageIds.Builder, com.passkit.grpc.Image.ImageIdsOrBuilder> imagesBuilder_;
+      /**
+       * <pre>
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+       * </pre>
+       *
+       * <code>.io.ImageIds images = 9;</code>
+       * @return Whether the images field is set.
+       */
+      public boolean hasImages() {
+        return imagesBuilder_ != null || images_ != null;
+      }
+      /**
+       * <pre>
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+       * </pre>
+       *
+       * <code>.io.ImageIds images = 9;</code>
+       * @return The images.
+       */
+      public com.passkit.grpc.Image.ImageIds getImages() {
+        if (imagesBuilder_ == null) {
+          return images_ == null ? com.passkit.grpc.Image.ImageIds.getDefaultInstance() : images_;
+        } else {
+          return imagesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
+       * </pre>
+       *
+       * <code>.io.ImageIds images = 9;</code>
+       */
+      public Builder setImages(com.passkit.grpc.Image.ImageIds value) {
+        if (imagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          images_ = value;
+          onChanged();
+        } else {
+          imagesBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
-      public Builder setFilter(
-          com.passkit.grpc.PaginationOuterClass.Filter.Builder builderForValue) {
-        if (filterBuilder_ == null) {
-          filter_ = builderForValue.build();
+      public Builder setImages(
+          com.passkit.grpc.Image.ImageIds.Builder builderForValue) {
+        if (imagesBuilder_ == null) {
+          images_ = builderForValue.build();
           onChanged();
         } else {
-          filterBuilder_.setMessage(builderForValue.build());
+          imagesBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
-      public Builder mergeFilter(com.passkit.grpc.PaginationOuterClass.Filter value) {
-        if (filterBuilder_ == null) {
-          if (filter_ != null) {
-            filter_ =
-              com.passkit.grpc.PaginationOuterClass.Filter.newBuilder(filter_).mergeFrom(value).buildPartial();
+      public Builder mergeImages(com.passkit.grpc.Image.ImageIds value) {
+        if (imagesBuilder_ == null) {
+          if (images_ != null) {
+            images_ =
+              com.passkit.grpc.Image.ImageIds.newBuilder(images_).mergeFrom(value).buildPartial();
           } else {
-            filter_ = value;
+            images_ = value;
           }
           onChanged();
         } else {
-          filterBuilder_.mergeFrom(value);
+          imagesBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
-      public Builder clearFilter() {
-        if (filterBuilder_ == null) {
-          filter_ = null;
+      public Builder clearImages() {
+        if (imagesBuilder_ == null) {
+          images_ = null;
           onChanged();
         } else {
-          filter_ = null;
-          filterBuilder_ = null;
+          images_ = null;
+          imagesBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
-      public com.passkit.grpc.PaginationOuterClass.Filter.Builder getFilterBuilder() {
+      public com.passkit.grpc.Image.ImageIds.Builder getImagesBuilder() {
         
         onChanged();
-        return getFilterFieldBuilder().getBuilder();
+        return getImagesFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
-      public com.passkit.grpc.PaginationOuterClass.FilterOrBuilder getFilterOrBuilder() {
-        if (filterBuilder_ != null) {
-          return filterBuilder_.getMessageOrBuilder();
+      public com.passkit.grpc.Image.ImageIdsOrBuilder getImagesOrBuilder() {
+        if (imagesBuilder_ != null) {
+          return imagesBuilder_.getMessageOrBuilder();
         } else {
-          return filter_ == null ?
-              com.passkit.grpc.PaginationOuterClass.Filter.getDefaultInstance() : filter_;
+          return images_ == null ?
+              com.passkit.grpc.Image.ImageIds.getDefaultInstance() : images_;
         }
       }
       /**
        * <pre>
-       * optional filter used determine which members qualify for this message.
+       * Images to display for the duration of the message. For Google Pay, only a 'message' type image will be used. For Apple Wallet, any of strip, eventStrip, background, logo, thumbnail and footer can be used, depending on the underlying pass type.
        * </pre>
        *
-       * <code>.io.Filter filter = 14;</code>
+       * <code>.io.ImageIds images = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.passkit.grpc.PaginationOuterClass.Filter, com.passkit.grpc.PaginationOuterClass.Filter.Builder, com.passkit.grpc.PaginationOuterClass.FilterOrBuilder> 
-          getFilterFieldBuilder() {
-        if (filterBuilder_ == null) {
-          filterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.passkit.grpc.PaginationOuterClass.Filter, com.passkit.grpc.PaginationOuterClass.Filter.Builder, com.passkit.grpc.PaginationOuterClass.FilterOrBuilder>(
-                  getFilter(),
+          com.passkit.grpc.Image.ImageIds, com.passkit.grpc.Image.ImageIds.Builder, com.passkit.grpc.Image.ImageIdsOrBuilder> 
+          getImagesFieldBuilder() {
+        if (imagesBuilder_ == null) {
+          imagesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Image.ImageIds, com.passkit.grpc.Image.ImageIds.Builder, com.passkit.grpc.Image.ImageIdsOrBuilder>(
+                  getImages(),
                   getParentForChildren(),
                   isClean());
-          filter_ = null;
+          images_ = null;
         }
-        return filterBuilder_;
+        return imagesBuilder_;
       }
 
-      private int recordsMatchingSegment_ ;
+      private int priority_ ;
       /**
        * <pre>
-       * number of records this message will be sent to.
+       * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
        * </pre>
        *
-       * <code>uint32 recordsMatchingSegment = 15;</code>
-       * @return The recordsMatchingSegment.
+       * <code>uint32 priority = 10;</code>
+       * @return The priority.
        */
       @java.lang.Override
-      public int getRecordsMatchingSegment() {
-        return recordsMatchingSegment_;
+      public int getPriority() {
+        return priority_;
       }
       /**
        * <pre>
-       * number of records this message will be sent to.
+       * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
        * </pre>
        *
-       * <code>uint32 recordsMatchingSegment = 15;</code>
-       * @param value The recordsMatchingSegment to set.
+       * <code>uint32 priority = 10;</code>
+       * @param value The priority to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordsMatchingSegment(int value) {
+      public Builder setPriority(int value) {
         
-        recordsMatchingSegment_ = value;
+        priority_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * number of records this message will be sent to.
+       * Priority the lower the priority, the lower down the message will be rendered when there are multiple messages. Defaults to a value of 10.
        * </pre>
        *
-       * <code>uint32 recordsMatchingSegment = 15;</code>
+       * <code>uint32 priority = 10;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRecordsMatchingSegment() {
+      public Builder clearPriority() {
         
-        recordsMatchingSegment_ = 0;
+        priority_ = 0;
         onChanged();
         return this;
       }
 
-      private int recordsSuccessfullyUpdate_ ;
+      private java.lang.Object displayFrom_ = "";
       /**
        * <pre>
-       * number of records updated with this message.
+       * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
        * </pre>
        *
-       * <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-       * @return The recordsSuccessfullyUpdate.
+       * <code>string displayFrom = 11;</code>
+       * @return The displayFrom.
        */
-      @java.lang.Override
-      public int getRecordsSuccessfullyUpdate() {
-        return recordsSuccessfullyUpdate_;
+      public java.lang.String getDisplayFrom() {
+        java.lang.Object ref = displayFrom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          displayFrom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * number of records updated with this message.
+       * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
        * </pre>
        *
-       * <code>uint32 recordsSuccessfullyUpdate = 16;</code>
-       * @param value The recordsSuccessfullyUpdate to set.
+       * <code>string displayFrom = 11;</code>
+       * @return The bytes for displayFrom.
+       */
+      public com.google.protobuf.ByteString
+          getDisplayFromBytes() {
+        java.lang.Object ref = displayFrom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          displayFrom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
+       * </pre>
+       *
+       * <code>string displayFrom = 11;</code>
+       * @param value The displayFrom to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordsSuccessfullyUpdate(int value) {
-        
-        recordsSuccessfullyUpdate_ = value;
+      public Builder setDisplayFrom(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        displayFrom_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * number of records updated with this message.
+       * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
        * </pre>
        *
-       * <code>uint32 recordsSuccessfullyUpdate = 16;</code>
+       * <code>string displayFrom = 11;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRecordsSuccessfullyUpdate() {
+      public Builder clearDisplayFrom() {
         
-        recordsSuccessfullyUpdate_ = 0;
+        displayFrom_ = getDefaultInstance().getDisplayFrom();
         onChanged();
         return this;
       }
-
-      private int recordsFailedToUpdate_ ;
       /**
        * <pre>
-       * number of records that failed updated with this message.
+       * The date and time to display the message. The value must be in RFC3339 format. If omitted, the current timestamp will be used.
        * </pre>
        *
-       * <code>uint32 recordsFailedToUpdate = 17;</code>
-       * @return The recordsFailedToUpdate.
-       */
-      @java.lang.Override
-      public int getRecordsFailedToUpdate() {
-        return recordsFailedToUpdate_;
-      }
-      /**
-       * <pre>
-       * number of records that failed updated with this message.
-       * </pre>
-       *
-       * <code>uint32 recordsFailedToUpdate = 17;</code>
-       * @param value The recordsFailedToUpdate to set.
+       * <code>string displayFrom = 11;</code>
+       * @param value The bytes for displayFrom to set.
        * @return This builder for chaining.
        */
-      public Builder setRecordsFailedToUpdate(int value) {
+      public Builder setDisplayFromBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
-        recordsFailedToUpdate_ = value;
+        displayFrom_ = value;
         onChanged();
         return this;
       }
+
+      private java.lang.Object displayUntil_ = "";
       /**
        * <pre>
-       * number of records that failed updated with this message.
+       * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
        * </pre>
        *
-       * <code>uint32 recordsFailedToUpdate = 17;</code>
+       * <code>string displayUntil = 12;</code>
+       * @return The displayUntil.
+       */
+      public java.lang.String getDisplayUntil() {
+        java.lang.Object ref = displayUntil_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          displayUntil_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
+       * </pre>
+       *
+       * <code>string displayUntil = 12;</code>
+       * @return The bytes for displayUntil.
+       */
+      public com.google.protobuf.ByteString
+          getDisplayUntilBytes() {
+        java.lang.Object ref = displayUntil_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          displayUntil_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
+       * </pre>
+       *
+       * <code>string displayUntil = 12;</code>
+       * @param value The displayUntil to set.
        * @return This builder for chaining.
        */
-      public Builder clearRecordsFailedToUpdate() {
-        
-        recordsFailedToUpdate_ = 0;
+      public Builder setDisplayUntil(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        displayUntil_ = value;
         onChanged();
         return this;
       }
-
-      private com.google.protobuf.Timestamp created_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdBuilder_;
       /**
        * <pre>
-       * The date the message was created in the PassKit system.
+       * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       * @return Whether the created field is set.
+       * <code>string displayUntil = 12;</code>
+       * @return This builder for chaining.
        */
-      public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       * @return The created.
-       */
-      public com.google.protobuf.Timestamp getCreated() {
-        if (createdBuilder_ == null) {
-          return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
-        } else {
-          return createdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      public Builder setCreated(com.google.protobuf.Timestamp value) {
-        if (createdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          created_ = value;
-          onChanged();
-        } else {
-          createdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      public Builder setCreated(
-          com.google.protobuf.Timestamp.Builder builderForValue) {
-        if (createdBuilder_ == null) {
-          created_ = builderForValue.build();
-          onChanged();
-        } else {
-          createdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      public Builder mergeCreated(com.google.protobuf.Timestamp value) {
-        if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
-          } else {
-            created_ = value;
-          }
-          onChanged();
-        } else {
-          createdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
-          createdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
+      public Builder clearDisplayUntil() {
         
+        displayUntil_ = getDefaultInstance().getDisplayUntil();
         onChanged();
-        return getCreatedFieldBuilder().getBuilder();
+        return this;
       }
       /**
        * <pre>
-       * The date the message was created in the PassKit system.
+       * The date and time to remove the message. The value must be in RFC3339 format. If omitted, the message will be displayed indefinitely until it is cancelled.
        * </pre>
        *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
+       * <code>string displayUntil = 12;</code>
+       * @param value The bytes for displayUntil to set.
+       * @return This builder for chaining.
        */
-      public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-        if (createdBuilder_ != null) {
-          return createdBuilder_.getMessageOrBuilder();
-        } else {
-          return created_ == null ?
-              com.google.protobuf.Timestamp.getDefaultInstance() : created_;
-        }
-      }
-      /**
-       * <pre>
-       * The date the message was created in the PassKit system.
-       * </pre>
-       *
-       * <code>.google.protobuf.Timestamp created = 18;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-          getCreatedFieldBuilder() {
-        if (createdBuilder_ == null) {
-          createdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                  getCreated(),
-                  getParentForChildren(),
-                  isClean());
-          created_ = null;
-        }
-        return createdBuilder_;
+      public Builder setDisplayUntilBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        displayUntil_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3916,11 +3276,5103 @@ public final class MessageOuterClass {
 
   }
 
+  public interface GetMessagesForProtocolRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.GetMessagesForProtocolRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+     * &#64;tag "validateGeneric:required_with:ClassId"
+     * </pre>
+     *
+     * <code>string protocol = 1;</code>
+     * @return The protocol.
+     */
+    java.lang.String getProtocol();
+    /**
+     * <pre>
+     * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+     * &#64;tag "validateGeneric:required_with:ClassId"
+     * </pre>
+     *
+     * <code>string protocol = 1;</code>
+     * @return The bytes for protocol.
+     */
+    com.google.protobuf.ByteString
+        getProtocolBytes();
+
+    /**
+     * <pre>
+     * Optional class id must be provided if protocol is not empty.
+     * &#64;tag "validateGeneric:required_with:Protocol"
+     * </pre>
+     *
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <pre>
+     * Optional class id must be provided if protocol is not empty.
+     * &#64;tag "validateGeneric:required_with:Protocol"
+     * </pre>
+     *
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return The pagination.
+     */
+    com.passkit.grpc.PaginationOuterClass.Pagination getPagination();
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     */
+    com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * If no parameters are provided, all messages will be returned
+   * </pre>
+   *
+   * Protobuf type {@code io.GetMessagesForProtocolRequest}
+   */
+  public static final class GetMessagesForProtocolRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.GetMessagesForProtocolRequest)
+      GetMessagesForProtocolRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetMessagesForProtocolRequest.newBuilder() to construct.
+    private GetMessagesForProtocolRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetMessagesForProtocolRequest() {
+      protocol_ = "";
+      classId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetMessagesForProtocolRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetMessagesForProtocolRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              protocol_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 26: {
+              com.passkit.grpc.PaginationOuterClass.Pagination.Builder subBuilder = null;
+              if (pagination_ != null) {
+                subBuilder = pagination_.toBuilder();
+              }
+              pagination_ = input.readMessage(com.passkit.grpc.PaginationOuterClass.Pagination.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pagination_);
+                pagination_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessagesForProtocolRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessagesForProtocolRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.class, com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.Builder.class);
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object protocol_;
+    /**
+     * <pre>
+     * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+     * &#64;tag "validateGeneric:required_with:ClassId"
+     * </pre>
+     *
+     * <code>string protocol = 1;</code>
+     * @return The protocol.
+     */
+    @java.lang.Override
+    public java.lang.String getProtocol() {
+      java.lang.Object ref = protocol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        protocol_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+     * &#64;tag "validateGeneric:required_with:ClassId"
+     * </pre>
+     *
+     * <code>string protocol = 1;</code>
+     * @return The bytes for protocol.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProtocolBytes() {
+      java.lang.Object ref = protocol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        protocol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object classId_;
+    /**
+     * <pre>
+     * Optional class id must be provided if protocol is not empty.
+     * &#64;tag "validateGeneric:required_with:Protocol"
+     * </pre>
+     *
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional class id must be provided if protocol is not empty.
+     * &#64;tag "validateGeneric:required_with:Protocol"
+     * </pre>
+     *
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.passkit.grpc.PaginationOuterClass.Pagination pagination_;
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.PaginationOuterClass.Pagination getPagination() {
+      return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+     * </pre>
+     *
+     * <code>.io.Pagination pagination = 3;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
+      return getPagination();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, protocol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(protocol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, protocol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest other = (com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest) obj;
+
+      if (!getProtocol()
+          .equals(other.getProtocol())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+      hash = (53 * hash) + getProtocol().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * If no parameters are provided, all messages will be returned
+     * </pre>
+     *
+     * Protobuf type {@code io.GetMessagesForProtocolRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.GetMessagesForProtocolRequest)
+        com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessagesForProtocolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessagesForProtocolRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.class, com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        protocol_ = "";
+
+        classId_ = "";
+
+        if (paginationBuilder_ == null) {
+          pagination_ = null;
+        } else {
+          pagination_ = null;
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessagesForProtocolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest build() {
+        com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest buildPartial() {
+        com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest result = new com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest(this);
+        result.protocol_ = protocol_;
+        result.classId_ = classId_;
+        if (paginationBuilder_ == null) {
+          result.pagination_ = pagination_;
+        } else {
+          result.pagination_ = paginationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest) {
+          return mergeFrom((com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest other) {
+        if (other == com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.getDefaultInstance()) return this;
+        if (!other.getProtocol().isEmpty()) {
+          protocol_ = other.protocol_;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object protocol_ = "";
+      /**
+       * <pre>
+       * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+       * &#64;tag "validateGeneric:required_with:ClassId"
+       * </pre>
+       *
+       * <code>string protocol = 1;</code>
+       * @return The protocol.
+       */
+      public java.lang.String getProtocol() {
+        java.lang.Object ref = protocol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          protocol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+       * &#64;tag "validateGeneric:required_with:ClassId"
+       * </pre>
+       *
+       * <code>string protocol = 1;</code>
+       * @return The bytes for protocol.
+       */
+      public com.google.protobuf.ByteString
+          getProtocolBytes() {
+        java.lang.Object ref = protocol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          protocol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+       * &#64;tag "validateGeneric:required_with:ClassId"
+       * </pre>
+       *
+       * <code>string protocol = 1;</code>
+       * @param value The protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocol(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+       * &#64;tag "validateGeneric:required_with:ClassId"
+       * </pre>
+       *
+       * <code>string protocol = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocol() {
+        
+        protocol_ = getDefaultInstance().getProtocol();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional protocol.  If no protocol is provided, all messages for the company that meet the pagination criteria will be returned.
+       * &#64;tag "validateGeneric:required_with:ClassId"
+       * </pre>
+       *
+       * <code>string protocol = 1;</code>
+       * @param value The bytes for protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <pre>
+       * Optional class id must be provided if protocol is not empty.
+       * &#64;tag "validateGeneric:required_with:Protocol"
+       * </pre>
+       *
+       * <code>string classId = 2;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional class id must be provided if protocol is not empty.
+       * &#64;tag "validateGeneric:required_with:Protocol"
+       * </pre>
+       *
+       * <code>string classId = 2;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional class id must be provided if protocol is not empty.
+       * &#64;tag "validateGeneric:required_with:Protocol"
+       * </pre>
+       *
+       * <code>string classId = 2;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional class id must be provided if protocol is not empty.
+       * &#64;tag "validateGeneric:required_with:Protocol"
+       * </pre>
+       *
+       * <code>string classId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional class id must be provided if protocol is not empty.
+       * &#64;tag "validateGeneric:required_with:Protocol"
+       * </pre>
+       *
+       * <code>string classId = 2;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.PaginationOuterClass.Pagination pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return paginationBuilder_ != null || pagination_ != null;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       * @return The pagination.
+       */
+      public com.passkit.grpc.PaginationOuterClass.Pagination getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder setPagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+          onChanged();
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder setPagination(
+          com.passkit.grpc.PaginationOuterClass.Pagination.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+          onChanged();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder mergePagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
+        if (paginationBuilder_ == null) {
+          if (pagination_ != null) {
+            pagination_ =
+              com.passkit.grpc.PaginationOuterClass.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
+          } else {
+            pagination_ = value;
+          }
+          onChanged();
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public Builder clearPagination() {
+        if (paginationBuilder_ == null) {
+          pagination_ = null;
+          onChanged();
+        } else {
+          pagination_ = null;
+          paginationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public com.passkit.grpc.PaginationOuterClass.Pagination.Builder getPaginationBuilder() {
+        
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional pagination criteria. If not provided, then all messages for the class will be returned. Ignored if protocol not provided.
+       * </pre>
+       *
+       * <code>.io.Pagination pagination = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.PaginationOuterClass.Pagination, com.passkit.grpc.PaginationOuterClass.Pagination.Builder, com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.GetMessagesForProtocolRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.GetMessagesForProtocolRequest)
+    private static final com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest();
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetMessagesForProtocolRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetMessagesForProtocolRequest>() {
+      @java.lang.Override
+      public GetMessagesForProtocolRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetMessagesForProtocolRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetMessagesForProtocolRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetMessagesForProtocolRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetMessageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.GetMessageResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.io.Message message = 1;</code>
+     * @return Whether the message field is set.
+     */
+    boolean hasMessage();
+    /**
+     * <code>.io.Message message = 1;</code>
+     * @return The message.
+     */
+    com.passkit.grpc.MessageOuterClass.Message getMessage();
+    /**
+     * <code>.io.Message message = 1;</code>
+     */
+    com.passkit.grpc.MessageOuterClass.MessageOrBuilder getMessageOrBuilder();
+
+    /**
+     * <code>.io.MessageStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.io.MessageStatus status = 2;</code>
+     * @return The status.
+     */
+    com.passkit.grpc.MessageOuterClass.MessageStatus getStatus();
+
+    /**
+     * <code>uint32 recipients = 3;</code>
+     * @return The recipients.
+     */
+    int getRecipients();
+
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     * @return Whether the distributedAt field is set.
+     */
+    boolean hasDistributedAt();
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     * @return The distributedAt.
+     */
+    com.google.protobuf.Timestamp getDistributedAt();
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDistributedAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     * @return Whether the withdrawnAt field is set.
+     */
+    boolean hasWithdrawnAt();
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     * @return The withdrawnAt.
+     */
+    com.google.protobuf.Timestamp getWithdrawnAt();
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getWithdrawnAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code io.GetMessageResponse}
+   */
+  public static final class GetMessageResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.GetMessageResponse)
+      GetMessageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetMessageResponse.newBuilder() to construct.
+    private GetMessageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetMessageResponse() {
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetMessageResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetMessageResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.passkit.grpc.MessageOuterClass.Message.Builder subBuilder = null;
+              if (message_ != null) {
+                subBuilder = message_.toBuilder();
+              }
+              message_ = input.readMessage(com.passkit.grpc.MessageOuterClass.Message.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(message_);
+                message_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 24: {
+
+              recipients_ = input.readUInt32();
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (distributedAt_ != null) {
+                subBuilder = distributedAt_.toBuilder();
+              }
+              distributedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(distributedAt_);
+                distributedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (withdrawnAt_ != null) {
+                subBuilder = withdrawnAt_.toBuilder();
+              }
+              withdrawnAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(withdrawnAt_);
+                withdrawnAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.MessageOuterClass.GetMessageResponse.class, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder.class);
+    }
+
+    public static final int MESSAGE_FIELD_NUMBER = 1;
+    private com.passkit.grpc.MessageOuterClass.Message message_;
+    /**
+     * <code>.io.Message message = 1;</code>
+     * @return Whether the message field is set.
+     */
+    @java.lang.Override
+    public boolean hasMessage() {
+      return message_ != null;
+    }
+    /**
+     * <code>.io.Message message = 1;</code>
+     * @return The message.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.Message getMessage() {
+      return message_ == null ? com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance() : message_;
+    }
+    /**
+     * <code>.io.Message message = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.MessageOrBuilder getMessageOrBuilder() {
+      return getMessage();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 2;
+    private int status_;
+    /**
+     * <code>.io.MessageStatus status = 2;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.io.MessageStatus status = 2;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.passkit.grpc.MessageOuterClass.MessageStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.MessageOuterClass.MessageStatus result = com.passkit.grpc.MessageOuterClass.MessageStatus.valueOf(status_);
+      return result == null ? com.passkit.grpc.MessageOuterClass.MessageStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int RECIPIENTS_FIELD_NUMBER = 3;
+    private int recipients_;
+    /**
+     * <code>uint32 recipients = 3;</code>
+     * @return The recipients.
+     */
+    @java.lang.Override
+    public int getRecipients() {
+      return recipients_;
+    }
+
+    public static final int DISTRIBUTEDAT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp distributedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     * @return Whether the distributedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributedAt() {
+      return distributedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     * @return The distributedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDistributedAt() {
+      return distributedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : distributedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDistributedAtOrBuilder() {
+      return getDistributedAt();
+    }
+
+    public static final int WITHDRAWNAT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp withdrawnAt_;
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     * @return Whether the withdrawnAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasWithdrawnAt() {
+      return withdrawnAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     * @return The withdrawnAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getWithdrawnAt() {
+      return withdrawnAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : withdrawnAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getWithdrawnAtOrBuilder() {
+      return getWithdrawnAt();
+    }
+
+    public static final int CREATEDAT_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int UPDATEDAT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (message_ != null) {
+        output.writeMessage(1, getMessage());
+      }
+      if (status_ != com.passkit.grpc.MessageOuterClass.MessageStatus.MESSAGE_STATUS_DO_NOT_USE.getNumber()) {
+        output.writeEnum(2, status_);
+      }
+      if (recipients_ != 0) {
+        output.writeUInt32(3, recipients_);
+      }
+      if (distributedAt_ != null) {
+        output.writeMessage(4, getDistributedAt());
+      }
+      if (withdrawnAt_ != null) {
+        output.writeMessage(5, getWithdrawnAt());
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(6, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(7, getUpdatedAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (message_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMessage());
+      }
+      if (status_ != com.passkit.grpc.MessageOuterClass.MessageStatus.MESSAGE_STATUS_DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, status_);
+      }
+      if (recipients_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, recipients_);
+      }
+      if (distributedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDistributedAt());
+      }
+      if (withdrawnAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getWithdrawnAt());
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCreatedAt());
+      }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getUpdatedAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.MessageOuterClass.GetMessageResponse)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.MessageOuterClass.GetMessageResponse other = (com.passkit.grpc.MessageOuterClass.GetMessageResponse) obj;
+
+      if (hasMessage() != other.hasMessage()) return false;
+      if (hasMessage()) {
+        if (!getMessage()
+            .equals(other.getMessage())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (getRecipients()
+          != other.getRecipients()) return false;
+      if (hasDistributedAt() != other.hasDistributedAt()) return false;
+      if (hasDistributedAt()) {
+        if (!getDistributedAt()
+            .equals(other.getDistributedAt())) return false;
+      }
+      if (hasWithdrawnAt() != other.hasWithdrawnAt()) return false;
+      if (hasWithdrawnAt()) {
+        if (!getWithdrawnAt()
+            .equals(other.getWithdrawnAt())) return false;
+      }
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMessage()) {
+        hash = (37 * hash) + MESSAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getMessage().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + RECIPIENTS_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipients();
+      if (hasDistributedAt()) {
+        hash = (37 * hash) + DISTRIBUTEDAT_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributedAt().hashCode();
+      }
+      if (hasWithdrawnAt()) {
+        hash = (37 * hash) + WITHDRAWNAT_FIELD_NUMBER;
+        hash = (53 * hash) + getWithdrawnAt().hashCode();
+      }
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATEDAT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATEDAT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.MessageOuterClass.GetMessageResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.GetMessageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.GetMessageResponse)
+        com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.MessageOuterClass.GetMessageResponse.class, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.MessageOuterClass.GetMessageResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (messageBuilder_ == null) {
+          message_ = null;
+        } else {
+          message_ = null;
+          messageBuilder_ = null;
+        }
+        status_ = 0;
+
+        recipients_ = 0;
+
+        if (distributedAtBuilder_ == null) {
+          distributedAt_ = null;
+        } else {
+          distributedAt_ = null;
+          distributedAtBuilder_ = null;
+        }
+        if (withdrawnAtBuilder_ == null) {
+          withdrawnAt_ = null;
+        } else {
+          withdrawnAt_ = null;
+          withdrawnAtBuilder_ = null;
+        }
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse getDefaultInstanceForType() {
+        return com.passkit.grpc.MessageOuterClass.GetMessageResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse build() {
+        com.passkit.grpc.MessageOuterClass.GetMessageResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse buildPartial() {
+        com.passkit.grpc.MessageOuterClass.GetMessageResponse result = new com.passkit.grpc.MessageOuterClass.GetMessageResponse(this);
+        if (messageBuilder_ == null) {
+          result.message_ = message_;
+        } else {
+          result.message_ = messageBuilder_.build();
+        }
+        result.status_ = status_;
+        result.recipients_ = recipients_;
+        if (distributedAtBuilder_ == null) {
+          result.distributedAt_ = distributedAt_;
+        } else {
+          result.distributedAt_ = distributedAtBuilder_.build();
+        }
+        if (withdrawnAtBuilder_ == null) {
+          result.withdrawnAt_ = withdrawnAt_;
+        } else {
+          result.withdrawnAt_ = withdrawnAtBuilder_.build();
+        }
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.MessageOuterClass.GetMessageResponse) {
+          return mergeFrom((com.passkit.grpc.MessageOuterClass.GetMessageResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.GetMessageResponse other) {
+        if (other == com.passkit.grpc.MessageOuterClass.GetMessageResponse.getDefaultInstance()) return this;
+        if (other.hasMessage()) {
+          mergeMessage(other.getMessage());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.getRecipients() != 0) {
+          setRecipients(other.getRecipients());
+        }
+        if (other.hasDistributedAt()) {
+          mergeDistributedAt(other.getDistributedAt());
+        }
+        if (other.hasWithdrawnAt()) {
+          mergeWithdrawnAt(other.getWithdrawnAt());
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.MessageOuterClass.GetMessageResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessageResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.passkit.grpc.MessageOuterClass.Message message_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.MessageOuterClass.Message, com.passkit.grpc.MessageOuterClass.Message.Builder, com.passkit.grpc.MessageOuterClass.MessageOrBuilder> messageBuilder_;
+      /**
+       * <code>.io.Message message = 1;</code>
+       * @return Whether the message field is set.
+       */
+      public boolean hasMessage() {
+        return messageBuilder_ != null || message_ != null;
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       * @return The message.
+       */
+      public com.passkit.grpc.MessageOuterClass.Message getMessage() {
+        if (messageBuilder_ == null) {
+          return message_ == null ? com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance() : message_;
+        } else {
+          return messageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public Builder setMessage(com.passkit.grpc.MessageOuterClass.Message value) {
+        if (messageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          messageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public Builder setMessage(
+          com.passkit.grpc.MessageOuterClass.Message.Builder builderForValue) {
+        if (messageBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          messageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public Builder mergeMessage(com.passkit.grpc.MessageOuterClass.Message value) {
+        if (messageBuilder_ == null) {
+          if (message_ != null) {
+            message_ =
+              com.passkit.grpc.MessageOuterClass.Message.newBuilder(message_).mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          messageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public Builder clearMessage() {
+        if (messageBuilder_ == null) {
+          message_ = null;
+          onChanged();
+        } else {
+          message_ = null;
+          messageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.Message.Builder getMessageBuilder() {
+        
+        onChanged();
+        return getMessageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.MessageOrBuilder getMessageOrBuilder() {
+        if (messageBuilder_ != null) {
+          return messageBuilder_.getMessageOrBuilder();
+        } else {
+          return message_ == null ?
+              com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance() : message_;
+        }
+      }
+      /**
+       * <code>.io.Message message = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.MessageOuterClass.Message, com.passkit.grpc.MessageOuterClass.Message.Builder, com.passkit.grpc.MessageOuterClass.MessageOrBuilder> 
+          getMessageFieldBuilder() {
+        if (messageBuilder_ == null) {
+          messageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.MessageOuterClass.Message, com.passkit.grpc.MessageOuterClass.Message.Builder, com.passkit.grpc.MessageOuterClass.MessageOrBuilder>(
+                  getMessage(),
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        return messageBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.io.MessageStatus status = 2;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.io.MessageStatus status = 2;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.MessageStatus status = 2;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.MessageStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.MessageOuterClass.MessageStatus result = com.passkit.grpc.MessageOuterClass.MessageStatus.valueOf(status_);
+        return result == null ? com.passkit.grpc.MessageOuterClass.MessageStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.io.MessageStatus status = 2;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.passkit.grpc.MessageOuterClass.MessageStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.MessageStatus status = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int recipients_ ;
+      /**
+       * <code>uint32 recipients = 3;</code>
+       * @return The recipients.
+       */
+      @java.lang.Override
+      public int getRecipients() {
+        return recipients_;
+      }
+      /**
+       * <code>uint32 recipients = 3;</code>
+       * @param value The recipients to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipients(int value) {
+        
+        recipients_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 recipients = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipients() {
+        
+        recipients_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp distributedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> distributedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       * @return Whether the distributedAt field is set.
+       */
+      public boolean hasDistributedAt() {
+        return distributedAtBuilder_ != null || distributedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       * @return The distributedAt.
+       */
+      public com.google.protobuf.Timestamp getDistributedAt() {
+        if (distributedAtBuilder_ == null) {
+          return distributedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : distributedAt_;
+        } else {
+          return distributedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public Builder setDistributedAt(com.google.protobuf.Timestamp value) {
+        if (distributedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributedAt_ = value;
+          onChanged();
+        } else {
+          distributedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public Builder setDistributedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (distributedAtBuilder_ == null) {
+          distributedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          distributedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public Builder mergeDistributedAt(com.google.protobuf.Timestamp value) {
+        if (distributedAtBuilder_ == null) {
+          if (distributedAt_ != null) {
+            distributedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(distributedAt_).mergeFrom(value).buildPartial();
+          } else {
+            distributedAt_ = value;
+          }
+          onChanged();
+        } else {
+          distributedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public Builder clearDistributedAt() {
+        if (distributedAtBuilder_ == null) {
+          distributedAt_ = null;
+          onChanged();
+        } else {
+          distributedAt_ = null;
+          distributedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDistributedAtBuilder() {
+        
+        onChanged();
+        return getDistributedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDistributedAtOrBuilder() {
+        if (distributedAtBuilder_ != null) {
+          return distributedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return distributedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : distributedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp distributedAt = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDistributedAtFieldBuilder() {
+        if (distributedAtBuilder_ == null) {
+          distributedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDistributedAt(),
+                  getParentForChildren(),
+                  isClean());
+          distributedAt_ = null;
+        }
+        return distributedAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp withdrawnAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> withdrawnAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       * @return Whether the withdrawnAt field is set.
+       */
+      public boolean hasWithdrawnAt() {
+        return withdrawnAtBuilder_ != null || withdrawnAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       * @return The withdrawnAt.
+       */
+      public com.google.protobuf.Timestamp getWithdrawnAt() {
+        if (withdrawnAtBuilder_ == null) {
+          return withdrawnAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : withdrawnAt_;
+        } else {
+          return withdrawnAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public Builder setWithdrawnAt(com.google.protobuf.Timestamp value) {
+        if (withdrawnAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          withdrawnAt_ = value;
+          onChanged();
+        } else {
+          withdrawnAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public Builder setWithdrawnAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (withdrawnAtBuilder_ == null) {
+          withdrawnAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          withdrawnAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public Builder mergeWithdrawnAt(com.google.protobuf.Timestamp value) {
+        if (withdrawnAtBuilder_ == null) {
+          if (withdrawnAt_ != null) {
+            withdrawnAt_ =
+              com.google.protobuf.Timestamp.newBuilder(withdrawnAt_).mergeFrom(value).buildPartial();
+          } else {
+            withdrawnAt_ = value;
+          }
+          onChanged();
+        } else {
+          withdrawnAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public Builder clearWithdrawnAt() {
+        if (withdrawnAtBuilder_ == null) {
+          withdrawnAt_ = null;
+          onChanged();
+        } else {
+          withdrawnAt_ = null;
+          withdrawnAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getWithdrawnAtBuilder() {
+        
+        onChanged();
+        return getWithdrawnAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getWithdrawnAtOrBuilder() {
+        if (withdrawnAtBuilder_ != null) {
+          return withdrawnAtBuilder_.getMessageOrBuilder();
+        } else {
+          return withdrawnAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : withdrawnAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp withdrawnAt = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getWithdrawnAtFieldBuilder() {
+        if (withdrawnAtBuilder_ == null) {
+          withdrawnAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getWithdrawnAt(),
+                  getParentForChildren(),
+                  isClean());
+          withdrawnAt_ = null;
+        }
+        return withdrawnAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp createdAt = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updatedAt = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.GetMessageResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.GetMessageResponse)
+    private static final com.passkit.grpc.MessageOuterClass.GetMessageResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.MessageOuterClass.GetMessageResponse();
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetMessageResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetMessageResponse>() {
+      @java.lang.Override
+      public GetMessageResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetMessageResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetMessageResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetMessageResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.GetMessageResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetMessageHistoryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.GetMessageHistoryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse> 
+        getMessagesList();
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    com.passkit.grpc.MessageOuterClass.GetMessageResponse getMessages(int index);
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    int getMessagesCount();
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    java.util.List<? extends com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder> 
+        getMessagesOrBuilderList();
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder getMessagesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code io.GetMessageHistoryResponse}
+   */
+  public static final class GetMessageHistoryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.GetMessageHistoryResponse)
+      GetMessageHistoryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetMessageHistoryResponse.newBuilder() to construct.
+    private GetMessageHistoryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetMessageHistoryResponse() {
+      messages_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetMessageHistoryResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetMessageHistoryResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                messages_ = new java.util.ArrayList<com.passkit.grpc.MessageOuterClass.GetMessageResponse>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              messages_.add(
+                  input.readMessage(com.passkit.grpc.MessageOuterClass.GetMessageResponse.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          messages_ = java.util.Collections.unmodifiableList(messages_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.class, com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.Builder.class);
+    }
+
+    public static final int MESSAGES_FIELD_NUMBER = 1;
+    private java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse> messages_;
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse> getMessagesList() {
+      return messages_;
+    }
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder> 
+        getMessagesOrBuilderList() {
+      return messages_;
+    }
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    @java.lang.Override
+    public int getMessagesCount() {
+      return messages_.size();
+    }
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.GetMessageResponse getMessages(int index) {
+      return messages_.get(index);
+    }
+    /**
+     * <code>repeated .io.GetMessageResponse messages = 1;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder getMessagesOrBuilder(
+        int index) {
+      return messages_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < messages_.size(); i++) {
+        output.writeMessage(1, messages_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < messages_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, messages_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse other = (com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse) obj;
+
+      if (!getMessagesList()
+          .equals(other.getMessagesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMessagesCount() > 0) {
+        hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
+        hash = (53 * hash) + getMessagesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.GetMessageHistoryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.GetMessageHistoryResponse)
+        com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.class, com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getMessagesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (messagesBuilder_ == null) {
+          messages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          messagesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse getDefaultInstanceForType() {
+        return com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse build() {
+        com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse buildPartial() {
+        com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse result = new com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (messagesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            messages_ = java.util.Collections.unmodifiableList(messages_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.messages_ = messages_;
+        } else {
+          result.messages_ = messagesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse) {
+          return mergeFrom((com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse other) {
+        if (other == com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.getDefaultInstance()) return this;
+        if (messagesBuilder_ == null) {
+          if (!other.messages_.isEmpty()) {
+            if (messages_.isEmpty()) {
+              messages_ = other.messages_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureMessagesIsMutable();
+              messages_.addAll(other.messages_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.messages_.isEmpty()) {
+            if (messagesBuilder_.isEmpty()) {
+              messagesBuilder_.dispose();
+              messagesBuilder_ = null;
+              messages_ = other.messages_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              messagesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getMessagesFieldBuilder() : null;
+            } else {
+              messagesBuilder_.addAllMessages(other.messages_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse> messages_ =
+        java.util.Collections.emptyList();
+      private void ensureMessagesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          messages_ = new java.util.ArrayList<com.passkit.grpc.MessageOuterClass.GetMessageResponse>(messages_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.MessageOuterClass.GetMessageResponse, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder, com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder> messagesBuilder_;
+
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse> getMessagesList() {
+        if (messagesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(messages_);
+        } else {
+          return messagesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public int getMessagesCount() {
+        if (messagesBuilder_ == null) {
+          return messages_.size();
+        } else {
+          return messagesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse getMessages(int index) {
+        if (messagesBuilder_ == null) {
+          return messages_.get(index);
+        } else {
+          return messagesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder setMessages(
+          int index, com.passkit.grpc.MessageOuterClass.GetMessageResponse value) {
+        if (messagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagesIsMutable();
+          messages_.set(index, value);
+          onChanged();
+        } else {
+          messagesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder setMessages(
+          int index, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          messagesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder addMessages(com.passkit.grpc.MessageOuterClass.GetMessageResponse value) {
+        if (messagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagesIsMutable();
+          messages_.add(value);
+          onChanged();
+        } else {
+          messagesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder addMessages(
+          int index, com.passkit.grpc.MessageOuterClass.GetMessageResponse value) {
+        if (messagesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureMessagesIsMutable();
+          messages_.add(index, value);
+          onChanged();
+        } else {
+          messagesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder addMessages(
+          com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.add(builderForValue.build());
+          onChanged();
+        } else {
+          messagesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder addMessages(
+          int index, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder builderForValue) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          messagesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder addAllMessages(
+          java.lang.Iterable<? extends com.passkit.grpc.MessageOuterClass.GetMessageResponse> values) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, messages_);
+          onChanged();
+        } else {
+          messagesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder clearMessages() {
+        if (messagesBuilder_ == null) {
+          messages_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          messagesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public Builder removeMessages(int index) {
+        if (messagesBuilder_ == null) {
+          ensureMessagesIsMutable();
+          messages_.remove(index);
+          onChanged();
+        } else {
+          messagesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder getMessagesBuilder(
+          int index) {
+        return getMessagesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder getMessagesOrBuilder(
+          int index) {
+        if (messagesBuilder_ == null) {
+          return messages_.get(index);  } else {
+          return messagesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public java.util.List<? extends com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder> 
+           getMessagesOrBuilderList() {
+        if (messagesBuilder_ != null) {
+          return messagesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(messages_);
+        }
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder addMessagesBuilder() {
+        return getMessagesFieldBuilder().addBuilder(
+            com.passkit.grpc.MessageOuterClass.GetMessageResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder addMessagesBuilder(
+          int index) {
+        return getMessagesFieldBuilder().addBuilder(
+            index, com.passkit.grpc.MessageOuterClass.GetMessageResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .io.GetMessageResponse messages = 1;</code>
+       */
+      public java.util.List<com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder> 
+           getMessagesBuilderList() {
+        return getMessagesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.passkit.grpc.MessageOuterClass.GetMessageResponse, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder, com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder> 
+          getMessagesFieldBuilder() {
+        if (messagesBuilder_ == null) {
+          messagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.passkit.grpc.MessageOuterClass.GetMessageResponse, com.passkit.grpc.MessageOuterClass.GetMessageResponse.Builder, com.passkit.grpc.MessageOuterClass.GetMessageResponseOrBuilder>(
+                  messages_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          messages_ = null;
+        }
+        return messagesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.GetMessageHistoryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.GetMessageHistoryResponse)
+    private static final com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse();
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetMessageHistoryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetMessageHistoryResponse>() {
+      @java.lang.Override
+      public GetMessageHistoryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetMessageHistoryResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetMessageHistoryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetMessageHistoryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SendMessageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.SendMessageRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string messageId = 1;</code>
+     * @return The messageId.
+     */
+    java.lang.String getMessageId();
+    /**
+     * <code>string messageId = 1;</code>
+     * @return The bytes for messageId.
+     */
+    com.google.protobuf.ByteString
+        getMessageIdBytes();
+
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     * @return Whether the passIds field is set.
+     */
+    boolean hasPassIds();
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     * @return The passIds.
+     */
+    com.passkit.grpc.CommonObjects.PassIds getPassIds();
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     */
+    com.passkit.grpc.CommonObjects.PassIdsOrBuilder getPassIdsOrBuilder();
+
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     * @return Whether the protocol field is set.
+     */
+    boolean hasProtocol();
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     * @return The protocol.
+     */
+    com.passkit.grpc.CommonObjects.Protocol getProtocol();
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     */
+    com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder();
+
+    public com.passkit.grpc.MessageOuterClass.SendMessageRequest.TargetCase getTargetCase();
+  }
+  /**
+   * Protobuf type {@code io.SendMessageRequest}
+   */
+  public static final class SendMessageRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.SendMessageRequest)
+      SendMessageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SendMessageRequest.newBuilder() to construct.
+    private SendMessageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SendMessageRequest() {
+      messageId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SendMessageRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SendMessageRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              messageId_ = s;
+              break;
+            }
+            case 18: {
+              com.passkit.grpc.CommonObjects.PassIds.Builder subBuilder = null;
+              if (targetCase_ == 2) {
+                subBuilder = ((com.passkit.grpc.CommonObjects.PassIds) target_).toBuilder();
+              }
+              target_ =
+                  input.readMessage(com.passkit.grpc.CommonObjects.PassIds.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.PassIds) target_);
+                target_ = subBuilder.buildPartial();
+              }
+              targetCase_ = 2;
+              break;
+            }
+            case 26: {
+              com.passkit.grpc.CommonObjects.Protocol.Builder subBuilder = null;
+              if (targetCase_ == 3) {
+                subBuilder = ((com.passkit.grpc.CommonObjects.Protocol) target_).toBuilder();
+              }
+              target_ =
+                  input.readMessage(com.passkit.grpc.CommonObjects.Protocol.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Protocol) target_);
+                target_ = subBuilder.buildPartial();
+              }
+              targetCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.MessageOuterClass.SendMessageRequest.class, com.passkit.grpc.MessageOuterClass.SendMessageRequest.Builder.class);
+    }
+
+    private int targetCase_ = 0;
+    private java.lang.Object target_;
+    public enum TargetCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PASSIDS(2),
+      PROTOCOL(3),
+      TARGET_NOT_SET(0);
+      private final int value;
+      private TargetCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TargetCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TargetCase forNumber(int value) {
+        switch (value) {
+          case 2: return PASSIDS;
+          case 3: return PROTOCOL;
+          case 0: return TARGET_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TargetCase
+    getTargetCase() {
+      return TargetCase.forNumber(
+          targetCase_);
+    }
+
+    public static final int MESSAGEID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object messageId_;
+    /**
+     * <code>string messageId = 1;</code>
+     * @return The messageId.
+     */
+    @java.lang.Override
+    public java.lang.String getMessageId() {
+      java.lang.Object ref = messageId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        messageId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string messageId = 1;</code>
+     * @return The bytes for messageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMessageIdBytes() {
+      java.lang.Object ref = messageId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        messageId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSIDS_FIELD_NUMBER = 2;
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     * @return Whether the passIds field is set.
+     */
+    @java.lang.Override
+    public boolean hasPassIds() {
+      return targetCase_ == 2;
+    }
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     * @return The passIds.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.PassIds getPassIds() {
+      if (targetCase_ == 2) {
+         return (com.passkit.grpc.CommonObjects.PassIds) target_;
+      }
+      return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+    }
+    /**
+     * <code>.io.PassIds passIds = 2;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.PassIdsOrBuilder getPassIdsOrBuilder() {
+      if (targetCase_ == 2) {
+         return (com.passkit.grpc.CommonObjects.PassIds) target_;
+      }
+      return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 3;
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     * @return Whether the protocol field is set.
+     */
+    @java.lang.Override
+    public boolean hasProtocol() {
+      return targetCase_ == 3;
+    }
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     * @return The protocol.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.Protocol getProtocol() {
+      if (targetCase_ == 3) {
+         return (com.passkit.grpc.CommonObjects.Protocol) target_;
+      }
+      return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+    }
+    /**
+     * <code>.io.Protocol protocol = 3;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder() {
+      if (targetCase_ == 3) {
+         return (com.passkit.grpc.CommonObjects.Protocol) target_;
+      }
+      return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, messageId_);
+      }
+      if (targetCase_ == 2) {
+        output.writeMessage(2, (com.passkit.grpc.CommonObjects.PassIds) target_);
+      }
+      if (targetCase_ == 3) {
+        output.writeMessage(3, (com.passkit.grpc.CommonObjects.Protocol) target_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, messageId_);
+      }
+      if (targetCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.passkit.grpc.CommonObjects.PassIds) target_);
+      }
+      if (targetCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.passkit.grpc.CommonObjects.Protocol) target_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.MessageOuterClass.SendMessageRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.MessageOuterClass.SendMessageRequest other = (com.passkit.grpc.MessageOuterClass.SendMessageRequest) obj;
+
+      if (!getMessageId()
+          .equals(other.getMessageId())) return false;
+      if (!getTargetCase().equals(other.getTargetCase())) return false;
+      switch (targetCase_) {
+        case 2:
+          if (!getPassIds()
+              .equals(other.getPassIds())) return false;
+          break;
+        case 3:
+          if (!getProtocol()
+              .equals(other.getProtocol())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MESSAGEID_FIELD_NUMBER;
+      hash = (53 * hash) + getMessageId().hashCode();
+      switch (targetCase_) {
+        case 2:
+          hash = (37 * hash) + PASSIDS_FIELD_NUMBER;
+          hash = (53 * hash) + getPassIds().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+          hash = (53 * hash) + getProtocol().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.MessageOuterClass.SendMessageRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.SendMessageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.SendMessageRequest)
+        com.passkit.grpc.MessageOuterClass.SendMessageRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.MessageOuterClass.SendMessageRequest.class, com.passkit.grpc.MessageOuterClass.SendMessageRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.MessageOuterClass.SendMessageRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        messageId_ = "";
+
+        targetCase_ = 0;
+        target_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.MessageOuterClass.SendMessageRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageRequest build() {
+        com.passkit.grpc.MessageOuterClass.SendMessageRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageRequest buildPartial() {
+        com.passkit.grpc.MessageOuterClass.SendMessageRequest result = new com.passkit.grpc.MessageOuterClass.SendMessageRequest(this);
+        result.messageId_ = messageId_;
+        if (targetCase_ == 2) {
+          if (passIdsBuilder_ == null) {
+            result.target_ = target_;
+          } else {
+            result.target_ = passIdsBuilder_.build();
+          }
+        }
+        if (targetCase_ == 3) {
+          if (protocolBuilder_ == null) {
+            result.target_ = target_;
+          } else {
+            result.target_ = protocolBuilder_.build();
+          }
+        }
+        result.targetCase_ = targetCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.MessageOuterClass.SendMessageRequest) {
+          return mergeFrom((com.passkit.grpc.MessageOuterClass.SendMessageRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.SendMessageRequest other) {
+        if (other == com.passkit.grpc.MessageOuterClass.SendMessageRequest.getDefaultInstance()) return this;
+        if (!other.getMessageId().isEmpty()) {
+          messageId_ = other.messageId_;
+          onChanged();
+        }
+        switch (other.getTargetCase()) {
+          case PASSIDS: {
+            mergePassIds(other.getPassIds());
+            break;
+          }
+          case PROTOCOL: {
+            mergeProtocol(other.getProtocol());
+            break;
+          }
+          case TARGET_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.MessageOuterClass.SendMessageRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.MessageOuterClass.SendMessageRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int targetCase_ = 0;
+      private java.lang.Object target_;
+      public TargetCase
+          getTargetCase() {
+        return TargetCase.forNumber(
+            targetCase_);
+      }
+
+      public Builder clearTarget() {
+        targetCase_ = 0;
+        target_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object messageId_ = "";
+      /**
+       * <code>string messageId = 1;</code>
+       * @return The messageId.
+       */
+      public java.lang.String getMessageId() {
+        java.lang.Object ref = messageId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          messageId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string messageId = 1;</code>
+       * @return The bytes for messageId.
+       */
+      public com.google.protobuf.ByteString
+          getMessageIdBytes() {
+        java.lang.Object ref = messageId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          messageId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string messageId = 1;</code>
+       * @param value The messageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        messageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string messageId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMessageId() {
+        
+        messageId_ = getDefaultInstance().getMessageId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string messageId = 1;</code>
+       * @param value The bytes for messageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMessageIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        messageId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.PassIds, com.passkit.grpc.CommonObjects.PassIds.Builder, com.passkit.grpc.CommonObjects.PassIdsOrBuilder> passIdsBuilder_;
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       * @return Whether the passIds field is set.
+       */
+      @java.lang.Override
+      public boolean hasPassIds() {
+        return targetCase_ == 2;
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       * @return The passIds.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.PassIds getPassIds() {
+        if (passIdsBuilder_ == null) {
+          if (targetCase_ == 2) {
+            return (com.passkit.grpc.CommonObjects.PassIds) target_;
+          }
+          return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+        } else {
+          if (targetCase_ == 2) {
+            return passIdsBuilder_.getMessage();
+          }
+          return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      public Builder setPassIds(com.passkit.grpc.CommonObjects.PassIds value) {
+        if (passIdsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          passIdsBuilder_.setMessage(value);
+        }
+        targetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      public Builder setPassIds(
+          com.passkit.grpc.CommonObjects.PassIds.Builder builderForValue) {
+        if (passIdsBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          passIdsBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      public Builder mergePassIds(com.passkit.grpc.CommonObjects.PassIds value) {
+        if (passIdsBuilder_ == null) {
+          if (targetCase_ == 2 &&
+              target_ != com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance()) {
+            target_ = com.passkit.grpc.CommonObjects.PassIds.newBuilder((com.passkit.grpc.CommonObjects.PassIds) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 2) {
+            passIdsBuilder_.mergeFrom(value);
+          }
+          passIdsBuilder_.setMessage(value);
+        }
+        targetCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      public Builder clearPassIds() {
+        if (passIdsBuilder_ == null) {
+          if (targetCase_ == 2) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 2) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          passIdsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      public com.passkit.grpc.CommonObjects.PassIds.Builder getPassIdsBuilder() {
+        return getPassIdsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.PassIdsOrBuilder getPassIdsOrBuilder() {
+        if ((targetCase_ == 2) && (passIdsBuilder_ != null)) {
+          return passIdsBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 2) {
+            return (com.passkit.grpc.CommonObjects.PassIds) target_;
+          }
+          return com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.PassIds passIds = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.PassIds, com.passkit.grpc.CommonObjects.PassIds.Builder, com.passkit.grpc.CommonObjects.PassIdsOrBuilder> 
+          getPassIdsFieldBuilder() {
+        if (passIdsBuilder_ == null) {
+          if (!(targetCase_ == 2)) {
+            target_ = com.passkit.grpc.CommonObjects.PassIds.getDefaultInstance();
+          }
+          passIdsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.CommonObjects.PassIds, com.passkit.grpc.CommonObjects.PassIds.Builder, com.passkit.grpc.CommonObjects.PassIdsOrBuilder>(
+                  (com.passkit.grpc.CommonObjects.PassIds) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 2;
+        onChanged();;
+        return passIdsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder> protocolBuilder_;
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       * @return Whether the protocol field is set.
+       */
+      @java.lang.Override
+      public boolean hasProtocol() {
+        return targetCase_ == 3;
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       * @return The protocol.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.Protocol getProtocol() {
+        if (protocolBuilder_ == null) {
+          if (targetCase_ == 3) {
+            return (com.passkit.grpc.CommonObjects.Protocol) target_;
+          }
+          return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+        } else {
+          if (targetCase_ == 3) {
+            return protocolBuilder_.getMessage();
+          }
+          return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      public Builder setProtocol(com.passkit.grpc.CommonObjects.Protocol value) {
+        if (protocolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          target_ = value;
+          onChanged();
+        } else {
+          protocolBuilder_.setMessage(value);
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      public Builder setProtocol(
+          com.passkit.grpc.CommonObjects.Protocol.Builder builderForValue) {
+        if (protocolBuilder_ == null) {
+          target_ = builderForValue.build();
+          onChanged();
+        } else {
+          protocolBuilder_.setMessage(builderForValue.build());
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      public Builder mergeProtocol(com.passkit.grpc.CommonObjects.Protocol value) {
+        if (protocolBuilder_ == null) {
+          if (targetCase_ == 3 &&
+              target_ != com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance()) {
+            target_ = com.passkit.grpc.CommonObjects.Protocol.newBuilder((com.passkit.grpc.CommonObjects.Protocol) target_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            target_ = value;
+          }
+          onChanged();
+        } else {
+          if (targetCase_ == 3) {
+            protocolBuilder_.mergeFrom(value);
+          }
+          protocolBuilder_.setMessage(value);
+        }
+        targetCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      public Builder clearProtocol() {
+        if (protocolBuilder_ == null) {
+          if (targetCase_ == 3) {
+            targetCase_ = 0;
+            target_ = null;
+            onChanged();
+          }
+        } else {
+          if (targetCase_ == 3) {
+            targetCase_ = 0;
+            target_ = null;
+          }
+          protocolBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      public com.passkit.grpc.CommonObjects.Protocol.Builder getProtocolBuilder() {
+        return getProtocolFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      @java.lang.Override
+      public com.passkit.grpc.CommonObjects.ProtocolOrBuilder getProtocolOrBuilder() {
+        if ((targetCase_ == 3) && (protocolBuilder_ != null)) {
+          return protocolBuilder_.getMessageOrBuilder();
+        } else {
+          if (targetCase_ == 3) {
+            return (com.passkit.grpc.CommonObjects.Protocol) target_;
+          }
+          return com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.Protocol protocol = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder> 
+          getProtocolFieldBuilder() {
+        if (protocolBuilder_ == null) {
+          if (!(targetCase_ == 3)) {
+            target_ = com.passkit.grpc.CommonObjects.Protocol.getDefaultInstance();
+          }
+          protocolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.CommonObjects.Protocol, com.passkit.grpc.CommonObjects.Protocol.Builder, com.passkit.grpc.CommonObjects.ProtocolOrBuilder>(
+                  (com.passkit.grpc.CommonObjects.Protocol) target_,
+                  getParentForChildren(),
+                  isClean());
+          target_ = null;
+        }
+        targetCase_ = 3;
+        onChanged();;
+        return protocolBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.SendMessageRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.SendMessageRequest)
+    private static final com.passkit.grpc.MessageOuterClass.SendMessageRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.MessageOuterClass.SendMessageRequest();
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.SendMessageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SendMessageRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SendMessageRequest>() {
+      @java.lang.Override
+      public SendMessageRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SendMessageRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SendMessageRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SendMessageRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.SendMessageRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SendMessageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.SendMessageResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 count = 1;</code>
+     * @return The count.
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code io.SendMessageResponse}
+   */
+  public static final class SendMessageResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.SendMessageResponse)
+      SendMessageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SendMessageResponse.newBuilder() to construct.
+    private SendMessageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SendMessageResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SendMessageResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SendMessageResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              count_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.MessageOuterClass.SendMessageResponse.class, com.passkit.grpc.MessageOuterClass.SendMessageResponse.Builder.class);
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 1;
+    private int count_;
+    /**
+     * <code>int32 count = 1;</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (count_ != 0) {
+        output.writeInt32(1, count_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, count_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.MessageOuterClass.SendMessageResponse)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.MessageOuterClass.SendMessageResponse other = (com.passkit.grpc.MessageOuterClass.SendMessageResponse) obj;
+
+      if (getCount()
+          != other.getCount()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getCount();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.MessageOuterClass.SendMessageResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.SendMessageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.SendMessageResponse)
+        com.passkit.grpc.MessageOuterClass.SendMessageResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.MessageOuterClass.SendMessageResponse.class, com.passkit.grpc.MessageOuterClass.SendMessageResponse.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.MessageOuterClass.SendMessageResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        count_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageResponse getDefaultInstanceForType() {
+        return com.passkit.grpc.MessageOuterClass.SendMessageResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageResponse build() {
+        com.passkit.grpc.MessageOuterClass.SendMessageResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.MessageOuterClass.SendMessageResponse buildPartial() {
+        com.passkit.grpc.MessageOuterClass.SendMessageResponse result = new com.passkit.grpc.MessageOuterClass.SendMessageResponse(this);
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.MessageOuterClass.SendMessageResponse) {
+          return mergeFrom((com.passkit.grpc.MessageOuterClass.SendMessageResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.MessageOuterClass.SendMessageResponse other) {
+        if (other == com.passkit.grpc.MessageOuterClass.SendMessageResponse.getDefaultInstance()) return this;
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.MessageOuterClass.SendMessageResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.MessageOuterClass.SendMessageResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>int32 count = 1;</code>
+       * @return The count.
+       */
+      @java.lang.Override
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>int32 count = 1;</code>
+       * @param value The count to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 count = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.SendMessageResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.SendMessageResponse)
+    private static final com.passkit.grpc.MessageOuterClass.SendMessageResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.MessageOuterClass.SendMessageResponse();
+    }
+
+    public static com.passkit.grpc.MessageOuterClass.SendMessageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SendMessageResponse>
+        PARSER = new com.google.protobuf.AbstractParser<SendMessageResponse>() {
+      @java.lang.Override
+      public SendMessageResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SendMessageResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SendMessageResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SendMessageResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.MessageOuterClass.SendMessageResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Message_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_Message_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_GetMessagesForProtocolRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_GetMessagesForProtocolRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_GetMessageResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_GetMessageResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_GetMessageHistoryResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_GetMessageHistoryResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_SendMessageRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_SendMessageRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_SendMessageResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_SendMessageResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3932,47 +8384,89 @@ public final class MessageOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027io/common/message.proto\022\002io\032\034io/common" +
       "/localization.proto\032\032io/common/paginatio" +
-      "n.proto\032\037google/protobuf/timestamp.proto" +
-      "\032\031io/common/protocols.proto\"\247\004\n\007Message\022" +
-      "\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\021\n\tc" +
-      "ompanyId\030\002 \001(\t\022\017\n\007classId\030\003 \001(\t\022\014\n\004uuid\030" +
-      "\004 \001(\t\022!\n\006status\030\005 \001(\0162\021.io.MessageStatus" +
-      "\022\017\n\007warning\030\006 \001(\t\022\017\n\007imageId\030\007 \001(\r\022\r\n\005ti" +
-      "tle\030\010 \001(\t\022+\n\016localizedTitle\030\t \001(\0132\023.io.L" +
-      "ocalizedString\022\017\n\007content\030\n \001(\t\022-\n\020local" +
-      "izedContent\030\013 \001(\0132\023.io.LocalizedString\022-" +
-      "\n\tstartDate\030\014 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022+\n\007endDate\030\r \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\032\n\006filter\030\016 \001(\0132\n.io.Filter\022\036" +
-      "\n\026recordsMatchingSegment\030\017 \001(\r\022!\n\031record" +
-      "sSuccessfullyUpdate\030\020 \001(\r\022\035\n\025recordsFail" +
-      "edToUpdate\030\021 \001(\r\022+\n\007created\030\022 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp*\233\001\n\rMessageStatus\022" +
-      "\013\n\007CREATED\020\000\022\016\n\nPROCESSING\020\001\022\027\n\023ABORTED_" +
-      "WITH_ERRORS\020\002\022\033\n\027COMPLETED_WITH_WARNINGS" +
-      "\020\003\022\031\n\025COMPLETED_WITH_ERRORS\020\004\022\034\n\030COMPLET" +
-      "ED_WITHOUT_ERRORS\020\005BG\n\020com.passkit.grpcZ" +
-      "$stash.passkit.com/io/model/sdk/go/io\252\002\014" +
-      "PassKit.Grpcb\006proto3"
+      "n.proto\032\036io/common/common_objects.proto\032" +
+      "\024io/image/image.proto\032\037google/protobuf/t" +
+      "imestamp.proto\"\345\002\n\007Message\022\n\n\002id\030\001 \001(\t\022\r" +
+      "\n\005title\030\002 \001(\t\022+\n\016localizedTitle\030\003 \001(\0132\023." +
+      "io.LocalizedString\022\030\n\020plainTextContent\030\004" +
+      " \001(\t\0226\n\031localizedPlainTextContent\030\005 \001(\0132" +
+      "\023.io.LocalizedString\022\027\n\017richTextContent\030" +
+      "\006 \001(\t\0225\n\030localizedRichTextContent\030\007 \001(\0132" +
+      "\023.io.LocalizedString\022\025\n\004urls\030\010 \003(\0132\007.io." +
+      "Url\022\034\n\006images\030\t \001(\0132\014.io.ImageIds\022\020\n\010pri" +
+      "ority\030\n \001(\r\022\023\n\013displayFrom\030\013 \001(\t\022\024\n\014disp" +
+      "layUntil\030\014 \001(\t\"f\n\035GetMessagesForProtocol" +
+      "Request\022\020\n\010protocol\030\001 \001(\t\022\017\n\007classId\030\002 \001" +
+      "(\t\022\"\n\npagination\030\003 \001(\0132\016.io.Pagination\"\253" +
+      "\002\n\022GetMessageResponse\022\034\n\007message\030\001 \001(\0132\013" +
+      ".io.Message\022!\n\006status\030\002 \001(\0162\021.io.Message" +
+      "Status\022\022\n\nrecipients\030\003 \001(\r\0221\n\rdistribute" +
+      "dAt\030\004 \001(\0132\032.google.protobuf.Timestamp\022/\n" +
+      "\013withdrawnAt\030\005 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022-\n\tcreatedAt\030\006 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"E\n\031GetMessageHistor" +
+      "yResponse\022(\n\010messages\030\001 \003(\0132\026.io.GetMess" +
+      "ageResponse\"s\n\022SendMessageRequest\022\021\n\tmes" +
+      "sageId\030\001 \001(\t\022\036\n\007passIds\030\002 \001(\0132\013.io.PassI" +
+      "dsH\000\022 \n\010protocol\030\003 \001(\0132\014.io.ProtocolH\000B\010" +
+      "\n\006target\"$\n\023SendMessageResponse\022\r\n\005count" +
+      "\030\001 \001(\005*e\n\rMessageStatus\022\035\n\031MESSAGE_STATU" +
+      "S_DO_NOT_USE\020\000\022\r\n\tSCHEDULED\020\001\022\n\n\006ACTIVE\020" +
+      "\002\022\013\n\007EXPIRED\020\003\022\r\n\tCANCELLED\020\004BG\n\020com.pas" +
+      "skit.grpcZ$stash.passkit.com/io/model/sd" +
+      "k/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
           com.passkit.grpc.PaginationOuterClass.getDescriptor(),
+          com.passkit.grpc.CommonObjects.getDescriptor(),
+          com.passkit.grpc.Image.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.passkit.grpc.Protocols.getDescriptor(),
         });
     internal_static_io_Message_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_io_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Message_descriptor,
-        new java.lang.String[] { "Protocol", "CompanyId", "ClassId", "Uuid", "Status", "Warning", "ImageId", "Title", "LocalizedTitle", "Content", "LocalizedContent", "StartDate", "EndDate", "Filter", "RecordsMatchingSegment", "RecordsSuccessfullyUpdate", "RecordsFailedToUpdate", "Created", });
+        new java.lang.String[] { "Id", "Title", "LocalizedTitle", "PlainTextContent", "LocalizedPlainTextContent", "RichTextContent", "LocalizedRichTextContent", "Urls", "Images", "Priority", "DisplayFrom", "DisplayUntil", });
+    internal_static_io_GetMessagesForProtocolRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_io_GetMessagesForProtocolRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_GetMessagesForProtocolRequest_descriptor,
+        new java.lang.String[] { "Protocol", "ClassId", "Pagination", });
+    internal_static_io_GetMessageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_io_GetMessageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_GetMessageResponse_descriptor,
+        new java.lang.String[] { "Message", "Status", "Recipients", "DistributedAt", "WithdrawnAt", "CreatedAt", "UpdatedAt", });
+    internal_static_io_GetMessageHistoryResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_io_GetMessageHistoryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_GetMessageHistoryResponse_descriptor,
+        new java.lang.String[] { "Messages", });
+    internal_static_io_SendMessageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_io_SendMessageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_SendMessageRequest_descriptor,
+        new java.lang.String[] { "MessageId", "PassIds", "Protocol", "Target", });
+    internal_static_io_SendMessageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_io_SendMessageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_SendMessageResponse_descriptor,
+        new java.lang.String[] { "Count", });
     com.passkit.grpc.Localization.getDescriptor();
     com.passkit.grpc.PaginationOuterClass.getDescriptor();
+    com.passkit.grpc.CommonObjects.getDescriptor();
+    com.passkit.grpc.Image.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.passkit.grpc.Protocols.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

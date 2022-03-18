@@ -1018,7 +1018,7 @@ public final class CouponOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -1053,7 +1053,7 @@ public final class CouponOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1069,7 +1069,7 @@ public final class CouponOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -1408,16 +1408,16 @@ public final class CouponOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      if (!getOfferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, offerId_);
       }
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, campaignId_);
       }
       if (person_ != null) {
@@ -1429,7 +1429,7 @@ public final class CouponOuterClass {
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
           6);
-      if (!getSkuBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sku_);
       }
       if (optOut_ != false) {
@@ -1465,16 +1465,16 @@ public final class CouponOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      if (!getOfferIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(offerId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, offerId_);
       }
-      if (!getCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, campaignId_);
       }
       if (person_ != null) {
@@ -1491,7 +1491,7 @@ public final class CouponOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, metaData__);
       }
-      if (!getSkuBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sku_);
       }
       if (optOut_ != false) {
@@ -2639,7 +2639,7 @@ public final class CouponOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -2674,7 +2674,7 @@ public final class CouponOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2690,7 +2690,7 @@ public final class CouponOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -2714,7 +2714,7 @@ public final class CouponOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -2737,8 +2737,11 @@ public final class CouponOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -4641,7 +4644,7 @@ public final class CouponOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -4676,7 +4679,7 @@ public final class CouponOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -4692,7 +4695,7 @@ public final class CouponOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -4718,28 +4721,28 @@ public final class CouponOuterClass {
       if (redemptionDate_ != null) {
         output.writeMessage(1, getRedemptionDate());
       }
-      if (!getRedemptionCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, redemptionCode_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(3, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(4, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(5, alt_);
       }
-      if (!getRedemptionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, redemptionSource_);
       }
-      if (!getRedemptionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionReference_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, redemptionReference_);
       }
-      if (!getTransactionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionReference_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, transactionReference_);
       }
-      if (transactionAmount_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(transactionAmount_) != 0) {
         output.writeDouble(9, transactionAmount_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -4761,14 +4764,14 @@ public final class CouponOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRedemptionDate());
       }
-      if (!getRedemptionCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, redemptionCode_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, lon_);
       }
@@ -4776,16 +4779,16 @@ public final class CouponOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, alt_);
       }
-      if (!getRedemptionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, redemptionSource_);
       }
-      if (!getRedemptionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionReference_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, redemptionReference_);
       }
-      if (!getTransactionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionReference_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, transactionReference_);
       }
-      if (transactionAmount_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(transactionAmount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(9, transactionAmount_);
       }
@@ -5957,7 +5960,7 @@ public final class CouponOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -5992,7 +5995,7 @@ public final class CouponOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -6008,7 +6011,7 @@ public final class CouponOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -6032,7 +6035,7 @@ public final class CouponOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -6055,8 +6058,11 @@ public final class CouponOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -6369,10 +6375,10 @@ public final class CouponOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, couponCampaignId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
       unknownFields.writeTo(output);
@@ -6384,10 +6390,10 @@ public final class CouponOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, couponCampaignId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
       size += unknownFields.getSerializedSize();
@@ -7164,7 +7170,7 @@ public final class CouponOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, couponCampaignId_);
       }
       if (pagination_ != null) {
@@ -7179,7 +7185,7 @@ public final class CouponOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, couponCampaignId_);
       }
       if (pagination_ != null) {
@@ -8053,7 +8059,7 @@ public final class CouponOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, couponCampaignId_);
       }
       if (filters_ != null) {
@@ -8071,7 +8077,7 @@ public final class CouponOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, couponCampaignId_);
       }
       if (filters_ != null) {
@@ -9110,16 +9116,16 @@ public final class CouponOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, couponCampaignId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, externalId_);
       }
-      if (!getNewExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newExternalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newExternalId_);
       }
       unknownFields.writeTo(output);
@@ -9131,16 +9137,16 @@ public final class CouponOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getCouponCampaignIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(couponCampaignId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, couponCampaignId_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, externalId_);
       }
-      if (!getNewExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newExternalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newExternalId_);
       }
       size += unknownFields.getSerializedSize();

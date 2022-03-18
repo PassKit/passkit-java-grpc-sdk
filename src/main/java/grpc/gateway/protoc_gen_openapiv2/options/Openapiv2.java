@@ -1665,16 +1665,16 @@ public final class Openapiv2 {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getSwaggerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swagger_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, swagger_);
       }
       if (info_ != null) {
         output.writeMessage(2, getInfo());
       }
-      if (!getHostBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, host_);
       }
-      if (!getBasePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(basePath_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, basePath_);
       }
       if (getSchemesList().size() > 0) {
@@ -1720,17 +1720,17 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSwaggerBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(swagger_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, swagger_);
       }
       if (info_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getInfo());
       }
-      if (!getHostBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(host_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, host_);
       }
-      if (!getBasePathBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(basePath_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, basePath_);
       }
       {
@@ -5898,16 +5898,16 @@ public final class Openapiv2 {
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tags_.getRaw(i));
       }
-      if (!getSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, summary_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
       }
       if (externalDocs_ != null) {
         output.writeMessage(4, getExternalDocs());
       }
-      if (!getOperationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, operationId_);
       }
       for (int i = 0; i < consumes_.size(); i++) {
@@ -5958,17 +5958,17 @@ public final class Openapiv2 {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (!getSummaryBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(summary_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, summary_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
       }
       if (externalDocs_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExternalDocs());
       }
-      if (!getOperationIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, operationId_);
       }
       {
@@ -8505,6 +8505,1382 @@ public final class Openapiv2 {
 
   }
 
+  public interface HeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:grpc.gateway.protoc_gen_openapiv2.options.Header)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * `Description` is a short description of the header.
+     * </pre>
+     *
+     * <code>string description = 1;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * `Description` is a short description of the header.
+     * </pre>
+     *
+     * <code>string description = 1;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+     * </pre>
+     *
+     * <code>string type = 2;</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+     * </pre>
+     *
+     * <code>string type = 2;</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * `Format` The extending format for the previously mentioned type.
+     * </pre>
+     *
+     * <code>string format = 3;</code>
+     * @return The format.
+     */
+    java.lang.String getFormat();
+    /**
+     * <pre>
+     * `Format` The extending format for the previously mentioned type.
+     * </pre>
+     *
+     * <code>string format = 3;</code>
+     * @return The bytes for format.
+     */
+    com.google.protobuf.ByteString
+        getFormatBytes();
+
+    /**
+     * <pre>
+     * `Default` Declares the value of the header that the server will use if none is provided.
+     * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+     * Unlike JSON Schema this value MUST conform to the defined type for the header.
+     * </pre>
+     *
+     * <code>string default = 6;</code>
+     * @return The default.
+     */
+    java.lang.String getDefault();
+    /**
+     * <pre>
+     * `Default` Declares the value of the header that the server will use if none is provided.
+     * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+     * Unlike JSON Schema this value MUST conform to the defined type for the header.
+     * </pre>
+     *
+     * <code>string default = 6;</code>
+     * @return The bytes for default.
+     */
+    com.google.protobuf.ByteString
+        getDefaultBytes();
+
+    /**
+     * <pre>
+     * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+     * </pre>
+     *
+     * <code>string pattern = 13;</code>
+     * @return The pattern.
+     */
+    java.lang.String getPattern();
+    /**
+     * <pre>
+     * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+     * </pre>
+     *
+     * <code>string pattern = 13;</code>
+     * @return The bytes for pattern.
+     */
+    com.google.protobuf.ByteString
+        getPatternBytes();
+  }
+  /**
+   * <pre>
+   * `Header` is a representation of OpenAPI v2 specification's Header object.
+   * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#headerObject
+   * </pre>
+   *
+   * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Header}
+   */
+  public static final class Header extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:grpc.gateway.protoc_gen_openapiv2.options.Header)
+      HeaderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Header.newBuilder() to construct.
+    private Header(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Header() {
+      description_ = "";
+      type_ = "";
+      format_ = "";
+      default_ = "";
+      pattern_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Header();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Header(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              type_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              format_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              default_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pattern_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.Builder.class);
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 1;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * `Description` is a short description of the header.
+     * </pre>
+     *
+     * <code>string description = 1;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * `Description` is a short description of the header.
+     * </pre>
+     *
+     * <code>string description = 1;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object type_;
+    /**
+     * <pre>
+     * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+     * </pre>
+     *
+     * <code>string type = 2;</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+     * </pre>
+     *
+     * <code>string type = 2;</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FORMAT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object format_;
+    /**
+     * <pre>
+     * `Format` The extending format for the previously mentioned type.
+     * </pre>
+     *
+     * <code>string format = 3;</code>
+     * @return The format.
+     */
+    @java.lang.Override
+    public java.lang.String getFormat() {
+      java.lang.Object ref = format_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        format_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * `Format` The extending format for the previously mentioned type.
+     * </pre>
+     *
+     * <code>string format = 3;</code>
+     * @return The bytes for format.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormatBytes() {
+      java.lang.Object ref = format_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        format_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object default_;
+    /**
+     * <pre>
+     * `Default` Declares the value of the header that the server will use if none is provided.
+     * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+     * Unlike JSON Schema this value MUST conform to the defined type for the header.
+     * </pre>
+     *
+     * <code>string default = 6;</code>
+     * @return The default.
+     */
+    @java.lang.Override
+    public java.lang.String getDefault() {
+      java.lang.Object ref = default_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        default_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * `Default` Declares the value of the header that the server will use if none is provided.
+     * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+     * Unlike JSON Schema this value MUST conform to the defined type for the header.
+     * </pre>
+     *
+     * <code>string default = 6;</code>
+     * @return The bytes for default.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultBytes() {
+      java.lang.Object ref = default_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        default_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PATTERN_FIELD_NUMBER = 13;
+    private volatile java.lang.Object pattern_;
+    /**
+     * <pre>
+     * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+     * </pre>
+     *
+     * <code>string pattern = 13;</code>
+     * @return The pattern.
+     */
+    @java.lang.Override
+    public java.lang.String getPattern() {
+      java.lang.Object ref = pattern_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pattern_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+     * </pre>
+     *
+     * <code>string pattern = 13;</code>
+     * @return The bytes for pattern.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPatternBytes() {
+      java.lang.Object ref = pattern_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pattern_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, format_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, default_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, pattern_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, format_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, default_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, pattern_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header)) {
+        return super.equals(obj);
+      }
+      grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header other = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header) obj;
+
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getFormat()
+          .equals(other.getFormat())) return false;
+      if (!getDefault()
+          .equals(other.getDefault())) return false;
+      if (!getPattern()
+          .equals(other.getPattern())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + getFormat().hashCode();
+      hash = (37 * hash) + DEFAULT_FIELD_NUMBER;
+      hash = (53 * hash) + getDefault().hashCode();
+      hash = (37 * hash) + PATTERN_FIELD_NUMBER;
+      hash = (53 * hash) + getPattern().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * `Header` is a representation of OpenAPI v2 specification's Header object.
+     * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#headerObject
+     * </pre>
+     *
+     * Protobuf type {@code grpc.gateway.protoc_gen_openapiv2.options.Header}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:grpc.gateway.protoc_gen_openapiv2.options.Header)
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.HeaderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.class, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.Builder.class);
+      }
+
+      // Construct using grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        description_ = "";
+
+        type_ = "";
+
+        format_ = "";
+
+        default_ = "";
+
+        pattern_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor;
+      }
+
+      @java.lang.Override
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getDefaultInstanceForType() {
+        return grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header build() {
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header buildPartial() {
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header result = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header(this);
+        result.description_ = description_;
+        result.type_ = type_;
+        result.format_ = format_;
+        result.default_ = default_;
+        result.pattern_ = pattern_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header) {
+          return mergeFrom((grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header other) {
+        if (other == grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.getDefaultInstance()) return this;
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          onChanged();
+        }
+        if (!other.getFormat().isEmpty()) {
+          format_ = other.format_;
+          onChanged();
+        }
+        if (!other.getDefault().isEmpty()) {
+          default_ = other.default_;
+          onChanged();
+        }
+        if (!other.getPattern().isEmpty()) {
+          pattern_ = other.pattern_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * `Description` is a short description of the header.
+       * </pre>
+       *
+       * <code>string description = 1;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Description` is a short description of the header.
+       * </pre>
+       *
+       * <code>string description = 1;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Description` is a short description of the header.
+       * </pre>
+       *
+       * <code>string description = 1;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Description` is a short description of the header.
+       * </pre>
+       *
+       * <code>string description = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Description` is a short description of the header.
+       * </pre>
+       *
+       * <code>string description = 1;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = getDefaultInstance().getType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The type of the object. The value MUST be one of "string", "number", "integer", or "boolean". The "array" type is not supported.
+       * </pre>
+       *
+       * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object format_ = "";
+      /**
+       * <pre>
+       * `Format` The extending format for the previously mentioned type.
+       * </pre>
+       *
+       * <code>string format = 3;</code>
+       * @return The format.
+       */
+      public java.lang.String getFormat() {
+        java.lang.Object ref = format_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          format_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Format` The extending format for the previously mentioned type.
+       * </pre>
+       *
+       * <code>string format = 3;</code>
+       * @return The bytes for format.
+       */
+      public com.google.protobuf.ByteString
+          getFormatBytes() {
+        java.lang.Object ref = format_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          format_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Format` The extending format for the previously mentioned type.
+       * </pre>
+       *
+       * <code>string format = 3;</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        format_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Format` The extending format for the previously mentioned type.
+       * </pre>
+       *
+       * <code>string format = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormat() {
+        
+        format_ = getDefaultInstance().getFormat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Format` The extending format for the previously mentioned type.
+       * </pre>
+       *
+       * <code>string format = 3;</code>
+       * @param value The bytes for format to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        format_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object default_ = "";
+      /**
+       * <pre>
+       * `Default` Declares the value of the header that the server will use if none is provided.
+       * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+       * Unlike JSON Schema this value MUST conform to the defined type for the header.
+       * </pre>
+       *
+       * <code>string default = 6;</code>
+       * @return The default.
+       */
+      public java.lang.String getDefault() {
+        java.lang.Object ref = default_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          default_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Default` Declares the value of the header that the server will use if none is provided.
+       * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+       * Unlike JSON Schema this value MUST conform to the defined type for the header.
+       * </pre>
+       *
+       * <code>string default = 6;</code>
+       * @return The bytes for default.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultBytes() {
+        java.lang.Object ref = default_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          default_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Default` Declares the value of the header that the server will use if none is provided.
+       * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+       * Unlike JSON Schema this value MUST conform to the defined type for the header.
+       * </pre>
+       *
+       * <code>string default = 6;</code>
+       * @param value The default to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefault(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        default_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Default` Declares the value of the header that the server will use if none is provided.
+       * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+       * Unlike JSON Schema this value MUST conform to the defined type for the header.
+       * </pre>
+       *
+       * <code>string default = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefault() {
+        
+        default_ = getDefaultInstance().getDefault();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Default` Declares the value of the header that the server will use if none is provided.
+       * See: https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6.2.
+       * Unlike JSON Schema this value MUST conform to the defined type for the header.
+       * </pre>
+       *
+       * <code>string default = 6;</code>
+       * @param value The bytes for default to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        default_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pattern_ = "";
+      /**
+       * <pre>
+       * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+       * </pre>
+       *
+       * <code>string pattern = 13;</code>
+       * @return The pattern.
+       */
+      public java.lang.String getPattern() {
+        java.lang.Object ref = pattern_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pattern_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+       * </pre>
+       *
+       * <code>string pattern = 13;</code>
+       * @return The bytes for pattern.
+       */
+      public com.google.protobuf.ByteString
+          getPatternBytes() {
+        java.lang.Object ref = pattern_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pattern_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+       * </pre>
+       *
+       * <code>string pattern = 13;</code>
+       * @param value The pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPattern(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pattern_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+       * </pre>
+       *
+       * <code>string pattern = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPattern() {
+        
+        pattern_ = getDefaultInstance().getPattern();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'Pattern' See https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.2.3.
+       * </pre>
+       *
+       * <code>string pattern = 13;</code>
+       * @param value The bytes for pattern to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPatternBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pattern_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:grpc.gateway.protoc_gen_openapiv2.options.Header)
+    }
+
+    // @@protoc_insertion_point(class_scope:grpc.gateway.protoc_gen_openapiv2.options.Header)
+    private static final grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header();
+    }
+
+    public static grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Header>
+        PARSER = new com.google.protobuf.AbstractParser<Header>() {
+      @java.lang.Override
+      public Header parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Header(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Header> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Header> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:grpc.gateway.protoc_gen_openapiv2.options.Response)
       com.google.protobuf.MessageOrBuilder {
@@ -8560,6 +9936,70 @@ public final class Openapiv2 {
      * <code>.grpc.gateway.protoc_gen_openapiv2.options.Schema schema = 2;</code>
      */
     grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder getSchemaOrBuilder();
+
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    int getHeadersCount();
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    boolean containsHeaders(
+        java.lang.String key);
+    /**
+     * Use {@link #getHeadersMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+    getHeaders();
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+    getHeadersMap();
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+
+    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
+        java.lang.String key,
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue);
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+
+    grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
+        java.lang.String key);
 
     /**
      * <pre>
@@ -8725,11 +10165,24 @@ public final class Openapiv2 {
 
               break;
             }
-            case 34: {
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                headers_ = com.google.protobuf.MapField.newMapField(
+                    HeadersDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+              headers__ = input.readMessage(
+                  HeadersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              headers_.getMutableMap().put(
+                  headers__.getKey(), headers__.getValue());
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 examples_ = com.google.protobuf.MapField.newMapField(
                     ExamplesDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               examples__ = input.readMessage(
@@ -8739,10 +10192,10 @@ public final class Openapiv2 {
               break;
             }
             case 42: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 extensions_ = com.google.protobuf.MapField.newMapField(
                     ExtensionsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000002;
+                mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.Value>
               extensions__ = input.readMessage(
@@ -8780,6 +10233,8 @@ public final class Openapiv2 {
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
+        case 3:
+          return internalGetHeaders();
         case 4:
           return internalGetExamples();
         case 5:
@@ -8884,6 +10339,111 @@ public final class Openapiv2 {
     @java.lang.Override
     public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SchemaOrBuilder getSchemaOrBuilder() {
       return getSchema();
+    }
+
+    public static final int HEADERS_FIELD_NUMBER = 3;
+    private static final class HeadersDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>newDefaultInstance(
+                  grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> headers_;
+    private com.google.protobuf.MapField<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+    internalGetHeaders() {
+      if (headers_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            HeadersDefaultEntryHolder.defaultEntry);
+      }
+      return headers_;
+    }
+
+    public int getHeadersCount() {
+      return internalGetHeaders().getMap().size();
+    }
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsHeaders(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetHeaders().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getHeadersMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeaders() {
+      return getHeadersMap();
+    }
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeadersMap() {
+      return internalGetHeaders().getMap();
+    }
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    @java.lang.Override
+
+    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
+        java.lang.String key,
+        grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
+          internalGetHeaders().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * `Headers` A list of headers that are sent with the response.
+     * `Header` name is expected to be a string in the canonical format of the MIME header key
+     * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+     * </pre>
+     *
+     * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+     */
+    @java.lang.Override
+
+    public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
+          internalGetHeaders().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     public static final int EXAMPLES_FIELD_NUMBER = 4;
@@ -9082,12 +10642,18 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
       if (schema_ != null) {
         output.writeMessage(2, getSchema());
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetHeaders(),
+          HeadersDefaultEntryHolder.defaultEntry,
+          3);
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
@@ -9109,12 +10675,22 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
       if (schema_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSchema());
+      }
+      for (java.util.Map.Entry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> entry
+           : internalGetHeaders().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+        headers__ = HeadersDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, headers__);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
            : internalGetExamples().getMap().entrySet()) {
@@ -9158,6 +10734,8 @@ public final class Openapiv2 {
         if (!getSchema()
             .equals(other.getSchema())) return false;
       }
+      if (!internalGetHeaders().equals(
+          other.internalGetHeaders())) return false;
       if (!internalGetExamples().equals(
           other.internalGetExamples())) return false;
       if (!internalGetExtensions().equals(
@@ -9178,6 +10756,10 @@ public final class Openapiv2 {
       if (hasSchema()) {
         hash = (37 * hash) + SCHEMA_FIELD_NUMBER;
         hash = (53 * hash) + getSchema().hashCode();
+      }
+      if (!internalGetHeaders().getMap().isEmpty()) {
+        hash = (37 * hash) + HEADERS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetHeaders().hashCode();
       }
       if (!internalGetExamples().getMap().isEmpty()) {
         hash = (37 * hash) + EXAMPLES_FIELD_NUMBER;
@@ -9303,6 +10885,8 @@ public final class Openapiv2 {
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
+          case 3:
+            return internalGetHeaders();
           case 4:
             return internalGetExamples();
           case 5:
@@ -9316,6 +10900,8 @@ public final class Openapiv2 {
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
+          case 3:
+            return internalGetMutableHeaders();
           case 4:
             return internalGetMutableExamples();
           case 5:
@@ -9359,6 +10945,7 @@ public final class Openapiv2 {
           schema_ = null;
           schemaBuilder_ = null;
         }
+        internalGetMutableHeaders().clear();
         internalGetMutableExamples().clear();
         internalGetMutableExtensions().clear();
         return this;
@@ -9394,6 +10981,8 @@ public final class Openapiv2 {
         } else {
           result.schema_ = schemaBuilder_.build();
         }
+        result.headers_ = internalGetHeaders();
+        result.headers_.makeImmutable();
         result.examples_ = internalGetExamples();
         result.examples_.makeImmutable();
         result.extensions_ = internalGetExtensions();
@@ -9453,6 +11042,8 @@ public final class Openapiv2 {
         if (other.hasSchema()) {
           mergeSchema(other.getSchema());
         }
+        internalGetMutableHeaders().mergeFrom(
+            other.internalGetHeaders());
         internalGetMutableExamples().mergeFrom(
             other.internalGetExamples());
         internalGetMutableExtensions().mergeFrom(
@@ -9750,6 +11341,176 @@ public final class Openapiv2 {
           schema_ = null;
         }
         return schemaBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> headers_;
+      private com.google.protobuf.MapField<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+      internalGetHeaders() {
+        if (headers_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              HeadersDefaultEntryHolder.defaultEntry);
+        }
+        return headers_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+      internalGetMutableHeaders() {
+        onChanged();;
+        if (headers_ == null) {
+          headers_ = com.google.protobuf.MapField.newMapField(
+              HeadersDefaultEntryHolder.defaultEntry);
+        }
+        if (!headers_.isMutable()) {
+          headers_ = headers_.copy();
+        }
+        return headers_;
+      }
+
+      public int getHeadersCount() {
+        return internalGetHeaders().getMap().size();
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsHeaders(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetHeaders().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getHeadersMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeaders() {
+        return getHeadersMap();
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> getHeadersMap() {
+        return internalGetHeaders().getMap();
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+      @java.lang.Override
+
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrDefault(
+          java.lang.String key,
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
+            internalGetHeaders().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+      @java.lang.Override
+
+      public grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header getHeadersOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> map =
+            internalGetHeaders().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearHeaders() {
+        internalGetMutableHeaders().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+
+      public Builder removeHeaders(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableHeaders().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header>
+      getMutableHeaders() {
+        return internalGetMutableHeaders().getMutableMap();
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+      public Builder putHeaders(
+          java.lang.String key,
+          grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableHeaders().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * `Headers` A list of headers that are sent with the response.
+       * `Header` name is expected to be a string in the canonical format of the MIME header key
+       * See: https://golang.org/pkg/net/textproto/#CanonicalMIMEHeaderKey
+       * </pre>
+       *
+       * <code>map&lt;string, .grpc.gateway.protoc_gen_openapiv2.options.Header&gt; headers = 3;</code>
+       */
+
+      public Builder putAllHeaders(
+          java.util.Map<java.lang.String, grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.Header> values) {
+        internalGetMutableHeaders().getMutableMap()
+            .putAll(values);
+        return this;
       }
 
       private com.google.protobuf.MapField<
@@ -10810,13 +12571,13 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getTermsOfServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, termsOfService_);
       }
       if (contact_ != null) {
@@ -10825,7 +12586,7 @@ public final class Openapiv2 {
       if (license_ != null) {
         output.writeMessage(5, getLicense());
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, version_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -10843,13 +12604,13 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getTermsOfServiceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(termsOfService_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, termsOfService_);
       }
       if (contact_ != null) {
@@ -10860,7 +12621,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getLicense());
       }
-      if (!getVersionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(version_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, version_);
       }
       for (java.util.Map.Entry<java.lang.String, com.google.protobuf.Value> entry
@@ -12507,13 +14268,13 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, email_);
       }
       unknownFields.writeTo(output);
@@ -12525,13 +14286,13 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, email_);
       }
       size += unknownFields.getSerializedSize();
@@ -13455,10 +15216,10 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       unknownFields.writeTo(output);
@@ -13470,10 +15231,10 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       size += unknownFields.getSerializedSize();
@@ -14285,10 +16046,10 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
       }
       unknownFields.writeTo(output);
@@ -14300,10 +16061,10 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
       }
-      if (!getUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
       }
       size += unknownFields.getSerializedSize();
@@ -15298,7 +17059,7 @@ public final class Openapiv2 {
       if (jsonSchema_ != null) {
         output.writeMessage(1, getJsonSchema());
       }
-      if (!getDiscriminatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discriminator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, discriminator_);
       }
       if (readOnly_ != false) {
@@ -15307,7 +17068,7 @@ public final class Openapiv2 {
       if (externalDocs_ != null) {
         output.writeMessage(5, getExternalDocs());
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, example_);
       }
       unknownFields.writeTo(output);
@@ -15323,7 +17084,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getJsonSchema());
       }
-      if (!getDiscriminatorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(discriminator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, discriminator_);
       }
       if (readOnly_ != false) {
@@ -15334,7 +17095,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getExternalDocs());
       }
-      if (!getExampleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, example_);
       }
       size += unknownFields.getSerializedSize();
@@ -16374,6 +18135,30 @@ public final class Openapiv2 {
     boolean getReadOnly();
 
     /**
+     * <pre>
+     * A free-form property to include a JSON example of this field. This is copied
+     * verbatim to the output swagger.json. Quotes must be escaped.
+     * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+     * </pre>
+     *
+     * <code>string example = 9;</code>
+     * @return The example.
+     */
+    java.lang.String getExample();
+    /**
+     * <pre>
+     * A free-form property to include a JSON example of this field. This is copied
+     * verbatim to the output swagger.json. Quotes must be escaped.
+     * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+     * </pre>
+     *
+     * <code>string example = 9;</code>
+     * @return The bytes for example.
+     */
+    com.google.protobuf.ByteString
+        getExampleBytes();
+
+    /**
      * <code>double multiple_of = 10;</code>
      * @return The multipleOf.
      */
@@ -16561,6 +18346,67 @@ public final class Openapiv2 {
      * @return The enum numeric value on the wire of type at the given index.
      */
     int getTypeValue(int index);
+
+    /**
+     * <pre>
+     * `Format`
+     * </pre>
+     *
+     * <code>string format = 36;</code>
+     * @return The format.
+     */
+    java.lang.String getFormat();
+    /**
+     * <pre>
+     * `Format`
+     * </pre>
+     *
+     * <code>string format = 36;</code>
+     * @return The bytes for format.
+     */
+    com.google.protobuf.ByteString
+        getFormatBytes();
+
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @return A list containing the enum.
+     */
+    java.util.List<java.lang.String>
+        getEnumList();
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @return The count of enum.
+     */
+    int getEnumCount();
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @param index The index of the element to return.
+     * @return The enum at the given index.
+     */
+    java.lang.String getEnum(int index);
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the enum at the given index.
+     */
+    com.google.protobuf.ByteString
+        getEnumBytes(int index);
   }
   /**
    * <pre>
@@ -16582,7 +18428,7 @@ public final class Openapiv2 {
    *    // Id represents the message identifier.
    *    string id = 1; [
    *        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-   *          {description: "The unique identifier of the simple message."
+   *          description: "The unique identifier of the simple message."
    *        }];
    *  }
    * </pre>
@@ -16603,10 +18449,13 @@ public final class Openapiv2 {
       title_ = "";
       description_ = "";
       default_ = "";
+      example_ = "";
       pattern_ = "";
       required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       type_ = java.util.Collections.emptyList();
+      format_ = "";
+      enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -16667,6 +18516,12 @@ public final class Openapiv2 {
             case 64: {
 
               readOnly_ = input.readBool();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              example_ = s;
               break;
             }
             case 81: {
@@ -16776,6 +18631,21 @@ public final class Openapiv2 {
               input.popLimit(oldLimit);
               break;
             }
+            case 290: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              format_ = s;
+              break;
+            }
+            case 370: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                enum_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              enum_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -16799,6 +18669,9 @@ public final class Openapiv2 {
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           type_ = java.util.Collections.unmodifiableList(type_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          enum_ = enum_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -17176,6 +19049,56 @@ public final class Openapiv2 {
       return readOnly_;
     }
 
+    public static final int EXAMPLE_FIELD_NUMBER = 9;
+    private volatile java.lang.Object example_;
+    /**
+     * <pre>
+     * A free-form property to include a JSON example of this field. This is copied
+     * verbatim to the output swagger.json. Quotes must be escaped.
+     * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+     * </pre>
+     *
+     * <code>string example = 9;</code>
+     * @return The example.
+     */
+    @java.lang.Override
+    public java.lang.String getExample() {
+      java.lang.Object ref = example_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        example_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A free-form property to include a JSON example of this field. This is copied
+     * verbatim to the output swagger.json. Quotes must be escaped.
+     * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+     * </pre>
+     *
+     * <code>string example = 9;</code>
+     * @return The bytes for example.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExampleBytes() {
+      java.lang.Object ref = example_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        example_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int MULTIPLE_OF_FIELD_NUMBER = 10;
     private double multipleOf_;
     /**
@@ -17500,6 +19423,103 @@ public final class Openapiv2 {
     }
     private int typeMemoizedSerializedSize;
 
+    public static final int FORMAT_FIELD_NUMBER = 36;
+    private volatile java.lang.Object format_;
+    /**
+     * <pre>
+     * `Format`
+     * </pre>
+     *
+     * <code>string format = 36;</code>
+     * @return The format.
+     */
+    @java.lang.Override
+    public java.lang.String getFormat() {
+      java.lang.Object ref = format_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        format_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * `Format`
+     * </pre>
+     *
+     * <code>string format = 36;</code>
+     * @return The bytes for format.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFormatBytes() {
+      java.lang.Object ref = format_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        format_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENUM_FIELD_NUMBER = 46;
+    private com.google.protobuf.LazyStringList enum_;
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @return A list containing the enum.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getEnumList() {
+      return enum_;
+    }
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @return The count of enum.
+     */
+    public int getEnumCount() {
+      return enum_.size();
+    }
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @param index The index of the element to return.
+     * @return The enum at the given index.
+     */
+    public java.lang.String getEnum(int index) {
+      return enum_.get(index);
+    }
+    /**
+     * <pre>
+     * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+     * </pre>
+     *
+     * <code>repeated string enum = 46;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the enum at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getEnumBytes(int index) {
+      return enum_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17515,20 +19535,23 @@ public final class Openapiv2 {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ref_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ref_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, default_);
       }
       if (readOnly_ != false) {
         output.writeBool(8, readOnly_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, example_);
       }
       if (multipleOf_ != 0D) {
         output.writeDouble(10, multipleOf_);
@@ -17551,7 +19574,7 @@ public final class Openapiv2 {
       if (minLength_ != 0L) {
         output.writeUInt64(16, minLength_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pattern_);
       }
       if (maxItems_ != 0L) {
@@ -17582,6 +19605,12 @@ public final class Openapiv2 {
       for (int i = 0; i < type_.size(); i++) {
         output.writeEnumNoTag(type_.get(i));
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, format_);
+      }
+      for (int i = 0; i < enum_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 46, enum_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -17591,21 +19620,24 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getRefBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ref_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ref_);
       }
-      if (!getTitleBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, title_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
       }
-      if (!getDefaultBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(default_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, default_);
       }
       if (readOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, readOnly_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(example_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, example_);
       }
       if (multipleOf_ != 0D) {
         size += com.google.protobuf.CodedOutputStream
@@ -17635,7 +19667,7 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(16, minLength_);
       }
-      if (!getPatternBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pattern_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, pattern_);
       }
       if (maxItems_ != 0L) {
@@ -17686,6 +19718,17 @@ public final class Openapiv2 {
             .computeUInt32SizeNoTag(dataSize);
         }typeMemoizedSerializedSize = dataSize;
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(format_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, format_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < enum_.size(); i++) {
+          dataSize += computeStringSizeNoTag(enum_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getEnumList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17711,6 +19754,8 @@ public final class Openapiv2 {
           .equals(other.getDefault())) return false;
       if (getReadOnly()
           != other.getReadOnly()) return false;
+      if (!getExample()
+          .equals(other.getExample())) return false;
       if (java.lang.Double.doubleToLongBits(getMultipleOf())
           != java.lang.Double.doubleToLongBits(
               other.getMultipleOf())) return false;
@@ -17745,6 +19790,10 @@ public final class Openapiv2 {
       if (!getArrayList()
           .equals(other.getArrayList())) return false;
       if (!type_.equals(other.type_)) return false;
+      if (!getFormat()
+          .equals(other.getFormat())) return false;
+      if (!getEnumList()
+          .equals(other.getEnumList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17767,6 +19816,8 @@ public final class Openapiv2 {
       hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReadOnly());
+      hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
+      hash = (53 * hash) + getExample().hashCode();
       hash = (37 * hash) + MULTIPLE_OF_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getMultipleOf()));
@@ -17816,6 +19867,12 @@ public final class Openapiv2 {
       if (getTypeCount() > 0) {
         hash = (37 * hash) + TYPE_FIELD_NUMBER;
         hash = (53 * hash) + type_.hashCode();
+      }
+      hash = (37 * hash) + FORMAT_FIELD_NUMBER;
+      hash = (53 * hash) + getFormat().hashCode();
+      if (getEnumCount() > 0) {
+        hash = (37 * hash) + ENUM_FIELD_NUMBER;
+        hash = (53 * hash) + getEnumList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17932,7 +19989,7 @@ public final class Openapiv2 {
      *    // Id represents the message identifier.
      *    string id = 1; [
      *        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
-     *          {description: "The unique identifier of the simple message."
+     *          description: "The unique identifier of the simple message."
      *        }];
      *  }
      * </pre>
@@ -17984,6 +20041,8 @@ public final class Openapiv2 {
 
         readOnly_ = false;
 
+        example_ = "";
+
         multipleOf_ = 0D;
 
         maximum_ = 0D;
@@ -18016,6 +20075,10 @@ public final class Openapiv2 {
         bitField0_ = (bitField0_ & ~0x00000002);
         type_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
+        format_ = "";
+
+        enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -18048,6 +20111,7 @@ public final class Openapiv2 {
         result.description_ = description_;
         result.default_ = default_;
         result.readOnly_ = readOnly_;
+        result.example_ = example_;
         result.multipleOf_ = multipleOf_;
         result.maximum_ = maximum_;
         result.exclusiveMaximum_ = exclusiveMaximum_;
@@ -18076,6 +20140,12 @@ public final class Openapiv2 {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.type_ = type_;
+        result.format_ = format_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          enum_ = enum_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.enum_ = enum_;
         onBuilt();
         return result;
       }
@@ -18142,6 +20212,10 @@ public final class Openapiv2 {
         }
         if (other.getReadOnly() != false) {
           setReadOnly(other.getReadOnly());
+        }
+        if (!other.getExample().isEmpty()) {
+          example_ = other.example_;
+          onChanged();
         }
         if (other.getMultipleOf() != 0D) {
           setMultipleOf(other.getMultipleOf());
@@ -18210,6 +20284,20 @@ public final class Openapiv2 {
           } else {
             ensureTypeIsMutable();
             type_.addAll(other.type_);
+          }
+          onChanged();
+        }
+        if (!other.getFormat().isEmpty()) {
+          format_ = other.format_;
+          onChanged();
+        }
+        if (!other.enum_.isEmpty()) {
+          if (enum_.isEmpty()) {
+            enum_ = other.enum_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureEnumIsMutable();
+            enum_.addAll(other.enum_);
           }
           onChanged();
         }
@@ -18659,6 +20747,112 @@ public final class Openapiv2 {
       public Builder clearReadOnly() {
         
         readOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object example_ = "";
+      /**
+       * <pre>
+       * A free-form property to include a JSON example of this field. This is copied
+       * verbatim to the output swagger.json. Quotes must be escaped.
+       * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+       * </pre>
+       *
+       * <code>string example = 9;</code>
+       * @return The example.
+       */
+      public java.lang.String getExample() {
+        java.lang.Object ref = example_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          example_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A free-form property to include a JSON example of this field. This is copied
+       * verbatim to the output swagger.json. Quotes must be escaped.
+       * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+       * </pre>
+       *
+       * <code>string example = 9;</code>
+       * @return The bytes for example.
+       */
+      public com.google.protobuf.ByteString
+          getExampleBytes() {
+        java.lang.Object ref = example_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          example_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A free-form property to include a JSON example of this field. This is copied
+       * verbatim to the output swagger.json. Quotes must be escaped.
+       * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+       * </pre>
+       *
+       * <code>string example = 9;</code>
+       * @param value The example to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExample(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        example_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A free-form property to include a JSON example of this field. This is copied
+       * verbatim to the output swagger.json. Quotes must be escaped.
+       * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+       * </pre>
+       *
+       * <code>string example = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExample() {
+        
+        example_ = getDefaultInstance().getExample();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A free-form property to include a JSON example of this field. This is copied
+       * verbatim to the output swagger.json. Quotes must be escaped.
+       * This property is the same for 2.0 and 3.0.0 https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/3.0.0.md#schemaObject  https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+       * </pre>
+       *
+       * <code>string example = 9;</code>
+       * @param value The bytes for example to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExampleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        example_ = value;
         onChanged();
         return this;
       }
@@ -19536,6 +21730,248 @@ public final class Openapiv2 {
         onChanged();
         return this;
       }
+
+      private java.lang.Object format_ = "";
+      /**
+       * <pre>
+       * `Format`
+       * </pre>
+       *
+       * <code>string format = 36;</code>
+       * @return The format.
+       */
+      public java.lang.String getFormat() {
+        java.lang.Object ref = format_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          format_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Format`
+       * </pre>
+       *
+       * <code>string format = 36;</code>
+       * @return The bytes for format.
+       */
+      public com.google.protobuf.ByteString
+          getFormatBytes() {
+        java.lang.Object ref = format_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          format_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * `Format`
+       * </pre>
+       *
+       * <code>string format = 36;</code>
+       * @param value The format to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormat(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        format_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Format`
+       * </pre>
+       *
+       * <code>string format = 36;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFormat() {
+        
+        format_ = getDefaultInstance().getFormat();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * `Format`
+       * </pre>
+       *
+       * <code>string format = 36;</code>
+       * @param value The bytes for format to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFormatBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        format_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureEnumIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          enum_ = new com.google.protobuf.LazyStringArrayList(enum_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @return A list containing the enum.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getEnumList() {
+        return enum_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @return The count of enum.
+       */
+      public int getEnumCount() {
+        return enum_.size();
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param index The index of the element to return.
+       * @return The enum at the given index.
+       */
+      public java.lang.String getEnum(int index) {
+        return enum_.get(index);
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the enum at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getEnumBytes(int index) {
+        return enum_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param index The index to set the value at.
+       * @param value The enum to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnum(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEnumIsMutable();
+        enum_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param value The enum to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEnum(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureEnumIsMutable();
+        enum_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param values The enum to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEnum(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureEnumIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, enum_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnum() {
+        enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
+       * </pre>
+       *
+       * <code>repeated string enum = 46;</code>
+       * @param value The bytes of the enum to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEnumBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureEnumIsMutable();
+        enum_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19844,7 +22280,7 @@ public final class Openapiv2 {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
       if (externalDocs_ != null) {
@@ -19859,7 +22295,7 @@ public final class Openapiv2 {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
       if (externalDocs_ != null) {
@@ -22527,10 +24963,10 @@ public final class Openapiv2 {
       if (type_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Type.TYPE_INVALID.getNumber()) {
         output.writeEnum(1, type_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (in_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.IN_INVALID.getNumber()) {
@@ -22539,10 +24975,10 @@ public final class Openapiv2 {
       if (flow_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.Flow.FLOW_INVALID.getNumber()) {
         output.writeEnum(5, flow_);
       }
-      if (!getAuthorizationUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizationUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, authorizationUrl_);
       }
-      if (!getTokenUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, tokenUrl_);
       }
       if (scopes_ != null) {
@@ -22567,10 +25003,10 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (!getDescriptionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (in_ != grpc.gateway.protoc_gen_openapiv2.options.Openapiv2.SecurityScheme.In.IN_INVALID.getNumber()) {
@@ -22581,10 +25017,10 @@ public final class Openapiv2 {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(5, flow_);
       }
-      if (!getAuthorizationUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authorizationUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, authorizationUrl_);
       }
-      if (!getTokenUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, tokenUrl_);
       }
       if (scopes_ != null) {
@@ -26385,10 +28821,20 @@ public final class Openapiv2 {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_grpc_gateway_protoc_gen_openapiv2_options_Operation_ExtensionsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExamplesEntry_descriptor;
   private static final 
@@ -26536,98 +28982,108 @@ public final class Openapiv2 {
       "teway.protoc_gen_openapiv2.options.Respo" +
       "nse:\0028\001\032I\n\017ExtensionsEntry\022\013\n\003key\030\001 \001(\t\022" +
       "%\n\005value\030\002 \001(\0132\026.google.protobuf.Value:\002" +
-      "8\001J\004\010\010\020\t\"\222\003\n\010Response\022\023\n\013description\030\001 \001" +
-      "(\t\022A\n\006schema\030\002 \001(\01321.grpc.gateway.protoc" +
-      "_gen_openapiv2.options.Schema\022S\n\010example" +
-      "s\030\004 \003(\0132A.grpc.gateway.protoc_gen_openap" +
-      "iv2.options.Response.ExamplesEntry\022W\n\nex" +
-      "tensions\030\005 \003(\0132C.grpc.gateway.protoc_gen" +
-      "_openapiv2.options.Response.ExtensionsEn" +
-      "try\032/\n\rExamplesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\032I\n\017ExtensionsEntry\022\013\n\003key\030\001" +
-      " \001(\t\022%\n\005value\030\002 \001(\0132\026.google.protobuf.Va" +
-      "lue:\0028\001J\004\010\003\020\004\"\377\002\n\004Info\022\r\n\005title\030\001 \001(\t\022\023\n" +
-      "\013description\030\002 \001(\t\022\030\n\020terms_of_service\030\003" +
-      " \001(\t\022C\n\007contact\030\004 \001(\01322.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.Contact\022C\n\007lic" +
-      "ense\030\005 \001(\01322.grpc.gateway.protoc_gen_ope" +
-      "napiv2.options.License\022\017\n\007version\030\006 \001(\t\022" +
-      "S\n\nextensions\030\007 \003(\0132?.grpc.gateway.proto" +
-      "c_gen_openapiv2.options.Info.ExtensionsE" +
-      "ntry\032I\n\017ExtensionsEntry\022\013\n\003key\030\001 \001(\t\022%\n\005" +
-      "value\030\002 \001(\0132\026.google.protobuf.Value:\0028\001\"" +
-      "3\n\007Contact\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\022\r\n" +
-      "\005email\030\003 \001(\t\"$\n\007License\022\014\n\004name\030\001 \001(\t\022\013\n" +
-      "\003url\030\002 \001(\t\"9\n\025ExternalDocumentation\022\023\n\013d" +
-      "escription\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"\356\001\n\006Schema" +
-      "\022J\n\013json_schema\030\001 \001(\01325.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.JSONSchema\022\025\n\r" +
-      "discriminator\030\002 \001(\t\022\021\n\tread_only\030\003 \001(\010\022W" +
-      "\n\rexternal_docs\030\005 \001(\0132@.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.ExternalDocume" +
-      "ntation\022\017\n\007example\030\006 \001(\tJ\004\010\004\020\005\"\274\005\n\nJSONS" +
-      "chema\022\013\n\003ref\030\003 \001(\t\022\r\n\005title\030\005 \001(\t\022\023\n\013des" +
-      "cription\030\006 \001(\t\022\017\n\007default\030\007 \001(\t\022\021\n\tread_" +
-      "only\030\010 \001(\010\022\023\n\013multiple_of\030\n \001(\001\022\017\n\007maxim" +
-      "um\030\013 \001(\001\022\031\n\021exclusive_maximum\030\014 \001(\010\022\017\n\007m" +
-      "inimum\030\r \001(\001\022\031\n\021exclusive_minimum\030\016 \001(\010\022" +
-      "\022\n\nmax_length\030\017 \001(\004\022\022\n\nmin_length\030\020 \001(\004\022" +
-      "\017\n\007pattern\030\021 \001(\t\022\021\n\tmax_items\030\024 \001(\004\022\021\n\tm" +
-      "in_items\030\025 \001(\004\022\024\n\014unique_items\030\026 \001(\010\022\026\n\016" +
-      "max_properties\030\030 \001(\004\022\026\n\016min_properties\030\031" +
-      " \001(\004\022\020\n\010required\030\032 \003(\t\022\r\n\005array\030\" \003(\t\022Y\n" +
-      "\004type\030# \003(\0162K.grpc.gateway.protoc_gen_op" +
-      "enapiv2.options.JSONSchema.JSONSchemaSim" +
-      "pleTypes\"w\n\025JSONSchemaSimpleTypes\022\013\n\007UNK" +
-      "NOWN\020\000\022\t\n\005ARRAY\020\001\022\013\n\007BOOLEAN\020\002\022\013\n\007INTEGE" +
-      "R\020\003\022\010\n\004NULL\020\004\022\n\n\006NUMBER\020\005\022\n\n\006OBJECT\020\006\022\n\n" +
-      "\006STRING\020\007J\004\010\001\020\002J\004\010\002\020\003J\004\010\004\020\005J\004\010\t\020\nJ\004\010\022\020\023J" +
-      "\004\010\023\020\024J\004\010\027\020\030J\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J\004\010\036\020\"J\004\010$\020" +
-      "*J\004\010*\020+J\004\010+\020.\"y\n\003Tag\022\023\n\013description\030\002 \001(" +
-      "\t\022W\n\rexternal_docs\030\003 \001(\0132@.grpc.gateway." +
-      "protoc_gen_openapiv2.options.ExternalDoc" +
-      "umentationJ\004\010\001\020\002\"\341\001\n\023SecurityDefinitions" +
-      "\022^\n\010security\030\001 \003(\0132L.grpc.gateway.protoc" +
-      "_gen_openapiv2.options.SecurityDefinitio" +
-      "ns.SecurityEntry\032j\n\rSecurityEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022H\n\005value\030\002 \001(\01329.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.SecurityScheme" +
-      ":\0028\001\"\240\006\n\016SecurityScheme\022L\n\004type\030\001 \001(\0162>." +
-      "grpc.gateway.protoc_gen_openapiv2.option" +
-      "s.SecurityScheme.Type\022\023\n\013description\030\002 \001" +
-      "(\t\022\014\n\004name\030\003 \001(\t\022H\n\002in\030\004 \001(\0162<.grpc.gate" +
+      "8\001J\004\010\010\020\t\"\253\001\n\006Header\022\023\n\013description\030\001 \001(\t" +
+      "\022\014\n\004type\030\002 \001(\t\022\016\n\006format\030\003 \001(\t\022\017\n\007defaul" +
+      "t\030\006 \001(\t\022\017\n\007pattern\030\r \001(\tJ\004\010\004\020\005J\004\010\005\020\006J\004\010\007" +
+      "\020\010J\004\010\010\020\tJ\004\010\t\020\nJ\004\010\n\020\013J\004\010\013\020\014J\004\010\014\020\rJ\004\010\016\020\017J\004" +
+      "\010\017\020\020J\004\010\020\020\021J\004\010\021\020\022J\004\010\022\020\023\"\302\004\n\010Response\022\023\n\013d" +
+      "escription\030\001 \001(\t\022A\n\006schema\030\002 \001(\01321.grpc." +
+      "gateway.protoc_gen_openapiv2.options.Sch" +
+      "ema\022Q\n\007headers\030\003 \003(\0132@.grpc.gateway.prot" +
+      "oc_gen_openapiv2.options.Response.Header" +
+      "sEntry\022S\n\010examples\030\004 \003(\0132A.grpc.gateway." +
+      "protoc_gen_openapiv2.options.Response.Ex" +
+      "amplesEntry\022W\n\nextensions\030\005 \003(\0132C.grpc.g" +
+      "ateway.protoc_gen_openapiv2.options.Resp" +
+      "onse.ExtensionsEntry\032a\n\014HeadersEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022@\n\005value\030\002 \001(\01321.grpc.gateway." +
+      "protoc_gen_openapiv2.options.Header:\0028\001\032" +
+      "/\n\rExamplesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\032I\n\017ExtensionsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022%\n\005value\030\002 \001(\0132\026.google.protobuf.Value:" +
+      "\0028\001\"\377\002\n\004Info\022\r\n\005title\030\001 \001(\t\022\023\n\013descripti" +
+      "on\030\002 \001(\t\022\030\n\020terms_of_service\030\003 \001(\t\022C\n\007co" +
+      "ntact\030\004 \001(\01322.grpc.gateway.protoc_gen_op" +
+      "enapiv2.options.Contact\022C\n\007license\030\005 \001(\013" +
+      "22.grpc.gateway.protoc_gen_openapiv2.opt" +
+      "ions.License\022\017\n\007version\030\006 \001(\t\022S\n\nextensi" +
+      "ons\030\007 \003(\0132?.grpc.gateway.protoc_gen_open" +
+      "apiv2.options.Info.ExtensionsEntry\032I\n\017Ex" +
+      "tensionsEntry\022\013\n\003key\030\001 \001(\t\022%\n\005value\030\002 \001(" +
+      "\0132\026.google.protobuf.Value:\0028\001\"3\n\007Contact" +
+      "\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\022\r\n\005email\030\003 \001" +
+      "(\t\"$\n\007License\022\014\n\004name\030\001 \001(\t\022\013\n\003url\030\002 \001(\t" +
+      "\"9\n\025ExternalDocumentation\022\023\n\013description" +
+      "\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\"\356\001\n\006Schema\022J\n\013json_s" +
+      "chema\030\001 \001(\01325.grpc.gateway.protoc_gen_op" +
+      "enapiv2.options.JSONSchema\022\025\n\rdiscrimina" +
+      "tor\030\002 \001(\t\022\021\n\tread_only\030\003 \001(\010\022W\n\rexternal" +
+      "_docs\030\005 \001(\0132@.grpc.gateway.protoc_gen_op" +
+      "enapiv2.options.ExternalDocumentation\022\017\n" +
+      "\007example\030\006 \001(\tJ\004\010\004\020\005\"\345\005\n\nJSONSchema\022\013\n\003r" +
+      "ef\030\003 \001(\t\022\r\n\005title\030\005 \001(\t\022\023\n\013description\030\006" +
+      " \001(\t\022\017\n\007default\030\007 \001(\t\022\021\n\tread_only\030\010 \001(\010" +
+      "\022\017\n\007example\030\t \001(\t\022\023\n\013multiple_of\030\n \001(\001\022\017" +
+      "\n\007maximum\030\013 \001(\001\022\031\n\021exclusive_maximum\030\014 \001" +
+      "(\010\022\017\n\007minimum\030\r \001(\001\022\031\n\021exclusive_minimum" +
+      "\030\016 \001(\010\022\022\n\nmax_length\030\017 \001(\004\022\022\n\nmin_length" +
+      "\030\020 \001(\004\022\017\n\007pattern\030\021 \001(\t\022\021\n\tmax_items\030\024 \001" +
+      "(\004\022\021\n\tmin_items\030\025 \001(\004\022\024\n\014unique_items\030\026 " +
+      "\001(\010\022\026\n\016max_properties\030\030 \001(\004\022\026\n\016min_prope" +
+      "rties\030\031 \001(\004\022\020\n\010required\030\032 \003(\t\022\r\n\005array\030\"" +
+      " \003(\t\022Y\n\004type\030# \003(\0162K.grpc.gateway.protoc" +
+      "_gen_openapiv2.options.JSONSchema.JSONSc" +
+      "hemaSimpleTypes\022\016\n\006format\030$ \001(\t\022\014\n\004enum\030" +
+      ". \003(\t\"w\n\025JSONSchemaSimpleTypes\022\013\n\007UNKNOW" +
+      "N\020\000\022\t\n\005ARRAY\020\001\022\013\n\007BOOLEAN\020\002\022\013\n\007INTEGER\020\003" +
+      "\022\010\n\004NULL\020\004\022\n\n\006NUMBER\020\005\022\n\n\006OBJECT\020\006\022\n\n\006ST" +
+      "RING\020\007J\004\010\001\020\002J\004\010\002\020\003J\004\010\004\020\005J\004\010\022\020\023J\004\010\023\020\024J\004\010\027" +
+      "\020\030J\004\010\033\020\034J\004\010\034\020\035J\004\010\035\020\036J\004\010\036\020\"J\004\010%\020*J\004\010*\020+J\004" +
+      "\010+\020.\"y\n\003Tag\022\023\n\013description\030\002 \001(\t\022W\n\rexte" +
+      "rnal_docs\030\003 \001(\0132@.grpc.gateway.protoc_ge" +
+      "n_openapiv2.options.ExternalDocumentatio" +
+      "nJ\004\010\001\020\002\"\341\001\n\023SecurityDefinitions\022^\n\010secur" +
+      "ity\030\001 \003(\0132L.grpc.gateway.protoc_gen_open" +
+      "apiv2.options.SecurityDefinitions.Securi" +
+      "tyEntry\032j\n\rSecurityEntry\022\013\n\003key\030\001 \001(\t\022H\n" +
+      "\005value\030\002 \001(\01329.grpc.gateway.protoc_gen_o" +
+      "penapiv2.options.SecurityScheme:\0028\001\"\240\006\n\016" +
+      "SecurityScheme\022L\n\004type\030\001 \001(\0162>.grpc.gate" +
       "way.protoc_gen_openapiv2.options.Securit" +
-      "yScheme.In\022L\n\004flow\030\005 \001(\0162>.grpc.gateway." +
-      "protoc_gen_openapiv2.options.SecuritySch" +
-      "eme.Flow\022\031\n\021authorization_url\030\006 \001(\t\022\021\n\tt" +
-      "oken_url\030\007 \001(\t\022A\n\006scopes\030\010 \001(\01321.grpc.ga" +
-      "teway.protoc_gen_openapiv2.options.Scope" +
-      "s\022]\n\nextensions\030\t \003(\0132I.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.SecurityScheme" +
-      ".ExtensionsEntry\032I\n\017ExtensionsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022%\n\005value\030\002 \001(\0132\026.google.protobu" +
-      "f.Value:\0028\001\"K\n\004Type\022\020\n\014TYPE_INVALID\020\000\022\016\n" +
-      "\nTYPE_BASIC\020\001\022\020\n\014TYPE_API_KEY\020\002\022\017\n\013TYPE_" +
-      "OAUTH2\020\003\"1\n\002In\022\016\n\nIN_INVALID\020\000\022\014\n\010IN_QUE" +
-      "RY\020\001\022\r\n\tIN_HEADER\020\002\"j\n\004Flow\022\020\n\014FLOW_INVA" +
-      "LID\020\000\022\021\n\rFLOW_IMPLICIT\020\001\022\021\n\rFLOW_PASSWOR" +
-      "D\020\002\022\024\n\020FLOW_APPLICATION\020\003\022\024\n\020FLOW_ACCESS" +
-      "_CODE\020\004\"\315\002\n\023SecurityRequirement\022u\n\024secur" +
-      "ity_requirement\030\001 \003(\0132W.grpc.gateway.pro" +
-      "toc_gen_openapiv2.options.SecurityRequir" +
-      "ement.SecurityRequirementEntry\032)\n\030Securi" +
-      "tyRequirementValue\022\r\n\005scope\030\001 \003(\t\032\223\001\n\030Se" +
-      "curityRequirementEntry\022\013\n\003key\030\001 \001(\t\022f\n\005v" +
-      "alue\030\002 \001(\0132W.grpc.gateway.protoc_gen_ope" +
-      "napiv2.options.SecurityRequirement.Secur" +
-      "ityRequirementValue:\0028\001\"\203\001\n\006Scopes\022K\n\005sc" +
-      "ope\030\001 \003(\0132<.grpc.gateway.protoc_gen_open" +
-      "apiv2.options.Scopes.ScopeEntry\032,\n\nScope" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*;\n" +
-      "\006Scheme\022\013\n\007UNKNOWN\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020" +
-      "\002\022\006\n\002WS\020\003\022\007\n\003WSS\020\004BHZFgithub.com/grpc-ec" +
-      "osystem/grpc-gateway/v2/protoc-gen-opena" +
-      "piv2/optionsb\006proto3"
+      "yScheme.Type\022\023\n\013description\030\002 \001(\t\022\014\n\004nam" +
+      "e\030\003 \001(\t\022H\n\002in\030\004 \001(\0162<.grpc.gateway.proto" +
+      "c_gen_openapiv2.options.SecurityScheme.I" +
+      "n\022L\n\004flow\030\005 \001(\0162>.grpc.gateway.protoc_ge" +
+      "n_openapiv2.options.SecurityScheme.Flow\022" +
+      "\031\n\021authorization_url\030\006 \001(\t\022\021\n\ttoken_url\030" +
+      "\007 \001(\t\022A\n\006scopes\030\010 \001(\01321.grpc.gateway.pro" +
+      "toc_gen_openapiv2.options.Scopes\022]\n\nexte" +
+      "nsions\030\t \003(\0132I.grpc.gateway.protoc_gen_o" +
+      "penapiv2.options.SecurityScheme.Extensio" +
+      "nsEntry\032I\n\017ExtensionsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "%\n\005value\030\002 \001(\0132\026.google.protobuf.Value:\002" +
+      "8\001\"K\n\004Type\022\020\n\014TYPE_INVALID\020\000\022\016\n\nTYPE_BAS" +
+      "IC\020\001\022\020\n\014TYPE_API_KEY\020\002\022\017\n\013TYPE_OAUTH2\020\003\"" +
+      "1\n\002In\022\016\n\nIN_INVALID\020\000\022\014\n\010IN_QUERY\020\001\022\r\n\tI" +
+      "N_HEADER\020\002\"j\n\004Flow\022\020\n\014FLOW_INVALID\020\000\022\021\n\r" +
+      "FLOW_IMPLICIT\020\001\022\021\n\rFLOW_PASSWORD\020\002\022\024\n\020FL" +
+      "OW_APPLICATION\020\003\022\024\n\020FLOW_ACCESS_CODE\020\004\"\315" +
+      "\002\n\023SecurityRequirement\022u\n\024security_requi" +
+      "rement\030\001 \003(\0132W.grpc.gateway.protoc_gen_o" +
+      "penapiv2.options.SecurityRequirement.Sec" +
+      "urityRequirementEntry\032)\n\030SecurityRequire" +
+      "mentValue\022\r\n\005scope\030\001 \003(\t\032\223\001\n\030SecurityReq" +
+      "uirementEntry\022\013\n\003key\030\001 \001(\t\022f\n\005value\030\002 \001(" +
+      "\0132W.grpc.gateway.protoc_gen_openapiv2.op" +
+      "tions.SecurityRequirement.SecurityRequir" +
+      "ementValue:\0028\001\"\203\001\n\006Scopes\022K\n\005scope\030\001 \003(\013" +
+      "2<.grpc.gateway.protoc_gen_openapiv2.opt" +
+      "ions.Scopes.ScopeEntry\032,\n\nScopeEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*;\n\006Scheme\022\013" +
+      "\n\007UNKNOWN\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020\002\022\006\n\002WS\020\003" +
+      "\022\007\n\003WSS\020\004BHZFgithub.com/grpc-ecosystem/g" +
+      "rpc-gateway/v2/protoc-gen-openapiv2/opti" +
+      "onsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -26670,26 +29126,38 @@ public final class Openapiv2 {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Operation_ExtensionsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor =
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_grpc_gateway_protoc_gen_openapiv2_options_Header_descriptor,
+        new java.lang.String[] { "Description", "Type", "Format", "Default", "Pattern", });
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor,
-        new java.lang.String[] { "Description", "Schema", "Examples", "Extensions", });
-    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExamplesEntry_descriptor =
+        new java.lang.String[] { "Description", "Schema", "Headers", "Examples", "Extensions", });
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_descriptor =
       internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor.getNestedTypes().get(0);
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_HeadersEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExamplesEntry_descriptor =
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor.getNestedTypes().get(1);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExamplesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExamplesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExtensionsEntry_descriptor =
-      internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor.getNestedTypes().get(1);
+      internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_descriptor.getNestedTypes().get(2);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExtensionsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Response_ExtensionsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Info_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Info_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Info_descriptor,
@@ -26701,43 +29169,43 @@ public final class Openapiv2 {
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Info_ExtensionsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Contact_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Contact_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Contact_descriptor,
         new java.lang.String[] { "Name", "Url", "Email", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_License_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_License_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_License_descriptor,
         new java.lang.String[] { "Name", "Url", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_ExternalDocumentation_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_ExternalDocumentation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_ExternalDocumentation_descriptor,
         new java.lang.String[] { "Description", "Url", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Schema_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Schema_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Schema_descriptor,
         new java.lang.String[] { "JsonSchema", "Discriminator", "ReadOnly", "ExternalDocs", "Example", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor,
-        new java.lang.String[] { "Ref", "Title", "Description", "Default", "ReadOnly", "MultipleOf", "Maximum", "ExclusiveMaximum", "Minimum", "ExclusiveMinimum", "MaxLength", "MinLength", "Pattern", "MaxItems", "MinItems", "UniqueItems", "MaxProperties", "MinProperties", "Required", "Array", "Type", });
+        new java.lang.String[] { "Ref", "Title", "Description", "Default", "ReadOnly", "Example", "MultipleOf", "Maximum", "ExclusiveMaximum", "Minimum", "ExclusiveMinimum", "MaxLength", "MinLength", "Pattern", "MaxItems", "MinItems", "UniqueItems", "MaxProperties", "MinProperties", "Required", "Array", "Type", "Format", "Enum", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Tag_descriptor,
         new java.lang.String[] { "Description", "ExternalDocs", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityDefinitions_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityDefinitions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityDefinitions_descriptor,
@@ -26749,7 +29217,7 @@ public final class Openapiv2 {
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityDefinitions_SecurityEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityScheme_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityScheme_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityScheme_descriptor,
@@ -26761,7 +29229,7 @@ public final class Openapiv2 {
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityScheme_ExtensionsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_descriptor,
@@ -26779,7 +29247,7 @@ public final class Openapiv2 {
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_SecurityRequirementEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Scopes_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_grpc_gateway_protoc_gen_openapiv2_options_Scopes_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_grpc_gateway_protoc_gen_openapiv2_options_Scopes_descriptor,

@@ -5,8 +5,9 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.37.0)",
+    value = "by gRPC proto compiler (version 1.44.1)",
     comments = "Source: io/core/a_rpc_distribution.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class DistributionGrpc {
 
   private DistributionGrpc() {}
@@ -138,6 +139,37 @@ public final class DistributionGrpc {
     return getUploadSmartPassCsvMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.ImportProtocolRequest,
+      com.google.protobuf.Empty> getImportProtocolCsvMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "importProtocolCsv",
+      requestType = com.passkit.grpc.Distribution.ImportProtocolRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.ImportProtocolRequest,
+      com.google.protobuf.Empty> getImportProtocolCsvMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.ImportProtocolRequest, com.google.protobuf.Empty> getImportProtocolCsvMethod;
+    if ((getImportProtocolCsvMethod = DistributionGrpc.getImportProtocolCsvMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getImportProtocolCsvMethod = DistributionGrpc.getImportProtocolCsvMethod) == null) {
+          DistributionGrpc.getImportProtocolCsvMethod = getImportProtocolCsvMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Distribution.ImportProtocolRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "importProtocolCsv"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Distribution.ImportProtocolRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("importProtocolCsv"))
+              .build();
+        }
+      }
+    }
+    return getImportProtocolCsvMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -214,6 +246,13 @@ public final class DistributionGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadSmartPassCsvMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportProtocolCsvMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -244,6 +283,13 @@ public final class DistributionGrpc {
                 com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_UPLOAD_SMART_PASS_CSV)))
+          .addMethod(
+            getImportProtocolCsvMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.Distribution.ImportProtocolRequest,
+                com.google.protobuf.Empty>(
+                  this, METHODID_IMPORT_PROTOCOL_CSV)))
           .build();
     }
   }
@@ -293,6 +339,14 @@ public final class DistributionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUploadSmartPassCsvMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getImportProtocolCsvMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -335,6 +389,13 @@ public final class DistributionGrpc {
     public com.google.protobuf.Empty uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUploadSmartPassCsvMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getImportProtocolCsvMethod(), getCallOptions(), request);
     }
   }
 
@@ -383,12 +444,21 @@ public final class DistributionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUploadSmartPassCsvMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> importProtocolCsv(
+        com.passkit.grpc.Distribution.ImportProtocolRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getImportProtocolCsvMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_WELCOME_EMAIL = 0;
   private static final int METHODID_GET_SMART_PASS_LINK = 1;
   private static final int METHODID_GET_DATA_COLLECTION_PAGE_FIELDS = 2;
   private static final int METHODID_UPLOAD_SMART_PASS_CSV = 3;
+  private static final int METHODID_IMPORT_PROTOCOL_CSV = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -421,6 +491,10 @@ public final class DistributionGrpc {
           break;
         case METHODID_UPLOAD_SMART_PASS_CSV:
           serviceImpl.uploadSmartPassCsv((com.passkit.grpc.Distribution.SmartPassCsvUploadRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_IMPORT_PROTOCOL_CSV:
+          serviceImpl.importProtocolCsv((com.passkit.grpc.Distribution.ImportProtocolRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -488,6 +562,7 @@ public final class DistributionGrpc {
               .addMethod(getGetSmartPassLinkMethod())
               .addMethod(getGetDataCollectionPageFieldsMethod())
               .addMethod(getUploadSmartPassCsvMethod())
+              .addMethod(getImportProtocolCsvMethod())
               .build();
         }
       }

@@ -688,19 +688,19 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         output.writeEnum(4, protocol_);
       }
-      if (!getAlternativeEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alternativeEmail_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, alternativeEmail_);
       }
       unknownFields.writeTo(output);
@@ -712,20 +712,20 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getExternalIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      if (!getClassIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, classId_);
       }
       if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, protocol_);
       }
-      if (!getAlternativeEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(alternativeEmail_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, alternativeEmail_);
       }
       size += unknownFields.getSerializedSize();
@@ -1789,7 +1789,7 @@ public final class Distribution {
     @java.lang.Override
     public boolean containsFields(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetFields().getMap().containsKey(key);
     }
     /**
@@ -1824,7 +1824,7 @@ public final class Distribution {
     public java.lang.String getFieldsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetFields().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1840,7 +1840,7 @@ public final class Distribution {
 
     public java.lang.String getFieldsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetFields().getMap();
       if (!map.containsKey(key)) {
@@ -2407,7 +2407,7 @@ public final class Distribution {
       @java.lang.Override
       public boolean containsFields(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetFields().getMap().containsKey(key);
       }
       /**
@@ -2442,7 +2442,7 @@ public final class Distribution {
       public java.lang.String getFieldsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetFields().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2458,7 +2458,7 @@ public final class Distribution {
 
       public java.lang.String getFieldsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetFields().getMap();
         if (!map.containsKey(key)) {
@@ -2482,7 +2482,7 @@ public final class Distribution {
 
       public Builder removeFields(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableFields().getMutableMap()
             .remove(key);
         return this;
@@ -2505,8 +2505,11 @@ public final class Distribution {
       public Builder putFields(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableFields().getMutableMap()
             .put(key, value);
         return this;
@@ -5230,19 +5233,19 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSubjectBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subject_);
       }
       if (localizedSubject_ != null) {
         output.writeMessage(2, getLocalizedSubject());
       }
-      if (!getBodyTextContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bodyTextContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, bodyTextContent_);
       }
       if (localizedBodyTextContent_ != null) {
         output.writeMessage(4, getLocalizedBodyTextContent());
       }
-      if (!getBodyHtmlContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bodyHtmlContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, bodyHtmlContent_);
       }
       if (localizedBodyHtmlContent_ != null) {
@@ -5251,34 +5254,34 @@ public final class Distribution {
       if (configuration_ != null) {
         output.writeMessage(7, getConfiguration());
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, buttonText_);
       }
-      if (!getButtonTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonTextColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, buttonTextColor_);
       }
-      if (!getButtonBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonBackgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, buttonBackgroundColor_);
       }
-      if (!getButtonBorderRadiusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonBorderRadius_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, buttonBorderRadius_);
       }
-      if (!getFooterTextContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerTextContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, footerTextContent_);
       }
       if (localizedFooterTextContent_ != null) {
         output.writeMessage(13, getLocalizedFooterTextContent());
       }
-      if (!getFooterHtmlContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerHtmlContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, footerHtmlContent_);
       }
       if (localizedFooterHtmlContent_ != null) {
         output.writeMessage(15, getLocalizedFooterHtmlContent());
       }
-      if (!getMessageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBackgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 16, messageBackgroundColor_);
       }
-      if (!getPageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageBackgroundColor_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, pageBackgroundColor_);
       }
       if (templateOptions_ != 0) {
@@ -5293,21 +5296,21 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSubjectBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subject_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subject_);
       }
       if (localizedSubject_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedSubject());
       }
-      if (!getBodyTextContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bodyTextContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, bodyTextContent_);
       }
       if (localizedBodyTextContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedBodyTextContent());
       }
-      if (!getBodyHtmlContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bodyHtmlContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, bodyHtmlContent_);
       }
       if (localizedBodyHtmlContent_ != null) {
@@ -5318,36 +5321,36 @@ public final class Distribution {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getConfiguration());
       }
-      if (!getButtonTextBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonText_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, buttonText_);
       }
-      if (!getButtonTextColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonTextColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, buttonTextColor_);
       }
-      if (!getButtonBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, buttonBackgroundColor_);
       }
-      if (!getButtonBorderRadiusBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(buttonBorderRadius_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, buttonBorderRadius_);
       }
-      if (!getFooterTextContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerTextContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, footerTextContent_);
       }
       if (localizedFooterTextContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLocalizedFooterTextContent());
       }
-      if (!getFooterHtmlContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(footerHtmlContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, footerHtmlContent_);
       }
       if (localizedFooterHtmlContent_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, getLocalizedFooterHtmlContent());
       }
-      if (!getMessageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, messageBackgroundColor_);
       }
-      if (!getPageBackgroundColorBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, pageBackgroundColor_);
       }
       if (templateOptions_ != 0) {
@@ -8024,6 +8027,16 @@ public final class Distribution {
      * @return The emailFromVerifiedForSending.
      */
     boolean getEmailFromVerifiedForSending();
+
+    /**
+     * <pre>
+     * Indicated that bodyHtmlContent is custom HTML provided by the user.
+     * </pre>
+     *
+     * <code>bool useCustomHtml = 4;</code>
+     * @return The useCustomHtml.
+     */
+    boolean getUseCustomHtml();
   }
   /**
    * Protobuf type {@code io.EmailConfiguration}
@@ -8087,6 +8100,11 @@ public final class Distribution {
             case 24: {
 
               emailFromVerifiedForSending_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              useCustomHtml_ = input.readBool();
               break;
             }
             default: {
@@ -8228,6 +8246,21 @@ public final class Distribution {
       return emailFromVerifiedForSending_;
     }
 
+    public static final int USECUSTOMHTML_FIELD_NUMBER = 4;
+    private boolean useCustomHtml_;
+    /**
+     * <pre>
+     * Indicated that bodyHtmlContent is custom HTML provided by the user.
+     * </pre>
+     *
+     * <code>bool useCustomHtml = 4;</code>
+     * @return The useCustomHtml.
+     */
+    @java.lang.Override
+    public boolean getUseCustomHtml() {
+      return useCustomHtml_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8242,14 +8275,17 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEmailFromBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailFrom_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, emailFrom_);
       }
-      if (!getEmailFromNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailFromName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, emailFromName_);
       }
       if (emailFromVerifiedForSending_ != false) {
         output.writeBool(3, emailFromVerifiedForSending_);
+      }
+      if (useCustomHtml_ != false) {
+        output.writeBool(4, useCustomHtml_);
       }
       unknownFields.writeTo(output);
     }
@@ -8260,15 +8296,19 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEmailFromBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailFrom_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, emailFrom_);
       }
-      if (!getEmailFromNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailFromName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, emailFromName_);
       }
       if (emailFromVerifiedForSending_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, emailFromVerifiedForSending_);
+      }
+      if (useCustomHtml_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, useCustomHtml_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8291,6 +8331,8 @@ public final class Distribution {
           .equals(other.getEmailFromName())) return false;
       if (getEmailFromVerifiedForSending()
           != other.getEmailFromVerifiedForSending()) return false;
+      if (getUseCustomHtml()
+          != other.getUseCustomHtml()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8309,6 +8351,9 @@ public final class Distribution {
       hash = (37 * hash) + EMAILFROMVERIFIEDFORSENDING_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEmailFromVerifiedForSending());
+      hash = (37 * hash) + USECUSTOMHTML_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUseCustomHtml());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8448,6 +8493,8 @@ public final class Distribution {
 
         emailFromVerifiedForSending_ = false;
 
+        useCustomHtml_ = false;
+
         return this;
       }
 
@@ -8477,6 +8524,7 @@ public final class Distribution {
         result.emailFrom_ = emailFrom_;
         result.emailFromName_ = emailFromName_;
         result.emailFromVerifiedForSending_ = emailFromVerifiedForSending_;
+        result.useCustomHtml_ = useCustomHtml_;
         onBuilt();
         return result;
       }
@@ -8535,6 +8583,9 @@ public final class Distribution {
         }
         if (other.getEmailFromVerifiedForSending() != false) {
           setEmailFromVerifiedForSending(other.getEmailFromVerifiedForSending());
+        }
+        if (other.getUseCustomHtml() != false) {
+          setUseCustomHtml(other.getUseCustomHtml());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8796,6 +8847,49 @@ public final class Distribution {
       public Builder clearEmailFromVerifiedForSending() {
         
         emailFromVerifiedForSending_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean useCustomHtml_ ;
+      /**
+       * <pre>
+       * Indicated that bodyHtmlContent is custom HTML provided by the user.
+       * </pre>
+       *
+       * <code>bool useCustomHtml = 4;</code>
+       * @return The useCustomHtml.
+       */
+      @java.lang.Override
+      public boolean getUseCustomHtml() {
+        return useCustomHtml_;
+      }
+      /**
+       * <pre>
+       * Indicated that bodyHtmlContent is custom HTML provided by the user.
+       * </pre>
+       *
+       * <code>bool useCustomHtml = 4;</code>
+       * @param value The useCustomHtml to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUseCustomHtml(boolean value) {
+        
+        useCustomHtml_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicated that bodyHtmlContent is custom HTML provided by the user.
+       * </pre>
+       *
+       * <code>bool useCustomHtml = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUseCustomHtml() {
+        
+        useCustomHtml_ = false;
         onChanged();
         return this;
       }
@@ -9103,7 +9197,7 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, content_);
       }
       if (localizedContent_ != null) {
@@ -9118,7 +9212,7 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(content_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, content_);
       }
       if (localizedContent_ != null) {
@@ -10142,7 +10236,7 @@ public final class Distribution {
     @java.lang.Override
     public boolean containsTierEnrolmentUrls(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTierEnrolmentUrls().getMap().containsKey(key);
     }
     /**
@@ -10177,7 +10271,7 @@ public final class Distribution {
     public java.lang.String getTierEnrolmentUrlsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTierEnrolmentUrls().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10193,7 +10287,7 @@ public final class Distribution {
 
     public java.lang.String getTierEnrolmentUrlsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTierEnrolmentUrls().getMap();
       if (!map.containsKey(key)) {
@@ -10239,7 +10333,7 @@ public final class Distribution {
     @java.lang.Override
     public boolean containsTierEnrolmentQRs(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetTierEnrolmentQRs().getMap().containsKey(key);
     }
     /**
@@ -10274,7 +10368,7 @@ public final class Distribution {
     public java.lang.String getTierEnrolmentQRsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTierEnrolmentQRs().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10290,7 +10384,7 @@ public final class Distribution {
 
     public java.lang.String getTierEnrolmentQRsOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTierEnrolmentQRs().getMap();
       if (!map.containsKey(key)) {
@@ -10313,10 +10407,10 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getPageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pageUrl_);
       }
-      if (!getQrCodeUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(qrCodeUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, qrCodeUrl_);
       }
       com.google.protobuf.GeneratedMessageV3
@@ -10340,10 +10434,10 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getPageUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pageUrl_);
       }
-      if (!getQrCodeUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(qrCodeUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, qrCodeUrl_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
@@ -10929,7 +11023,7 @@ public final class Distribution {
       @java.lang.Override
       public boolean containsTierEnrolmentUrls(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTierEnrolmentUrls().getMap().containsKey(key);
       }
       /**
@@ -10964,7 +11058,7 @@ public final class Distribution {
       public java.lang.String getTierEnrolmentUrlsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTierEnrolmentUrls().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -10980,7 +11074,7 @@ public final class Distribution {
 
       public java.lang.String getTierEnrolmentUrlsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTierEnrolmentUrls().getMap();
         if (!map.containsKey(key)) {
@@ -11004,7 +11098,7 @@ public final class Distribution {
 
       public Builder removeTierEnrolmentUrls(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTierEnrolmentUrls().getMutableMap()
             .remove(key);
         return this;
@@ -11027,8 +11121,11 @@ public final class Distribution {
       public Builder putTierEnrolmentUrls(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTierEnrolmentUrls().getMutableMap()
             .put(key, value);
         return this;
@@ -11085,7 +11182,7 @@ public final class Distribution {
       @java.lang.Override
       public boolean containsTierEnrolmentQRs(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetTierEnrolmentQRs().getMap().containsKey(key);
       }
       /**
@@ -11120,7 +11217,7 @@ public final class Distribution {
       public java.lang.String getTierEnrolmentQRsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTierEnrolmentQRs().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -11136,7 +11233,7 @@ public final class Distribution {
 
       public java.lang.String getTierEnrolmentQRsOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTierEnrolmentQRs().getMap();
         if (!map.containsKey(key)) {
@@ -11160,7 +11257,7 @@ public final class Distribution {
 
       public Builder removeTierEnrolmentQRs(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableTierEnrolmentQRs().getMutableMap()
             .remove(key);
         return this;
@@ -11183,8 +11280,11 @@ public final class Distribution {
       public Builder putTierEnrolmentQRs(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableTierEnrolmentQRs().getMutableMap()
             .put(key, value);
         return this;
@@ -12892,7 +12992,7 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uniqueName_);
       }
       if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
@@ -12901,7 +13001,7 @@ public final class Distribution {
       if (isRequired_ != false) {
         output.writeBool(3, isRequired_);
       }
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, label_);
       }
       if (localizedLabel_ != null) {
@@ -12910,22 +13010,22 @@ public final class Distribution {
       if (dataType_ != com.passkit.grpc.Template.DataType.DATA_TYPE_NONE.getNumber()) {
         output.writeEnum(6, dataType_);
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         output.writeMessage(8, getLocalizedDefaultValue());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, validation_);
       }
       if (userCanSetValue_ != false) {
         output.writeBool(10, userCanSetValue_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, currencyCode_);
       }
-      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTelCountryCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, defaultTelCountryCode_);
       }
       unknownFields.writeTo(output);
@@ -12937,7 +13037,7 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUniqueNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uniqueName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uniqueName_);
       }
       if (fieldType_ != com.passkit.grpc.Template.FieldType.FIELD_TYPE_NONE.getNumber()) {
@@ -12948,7 +13048,7 @@ public final class Distribution {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, isRequired_);
       }
-      if (!getLabelBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, label_);
       }
       if (localizedLabel_ != null) {
@@ -12959,24 +13059,24 @@ public final class Distribution {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, dataType_);
       }
-      if (!getDefaultValueBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultValue_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, defaultValue_);
       }
       if (localizedDefaultValue_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getLocalizedDefaultValue());
       }
-      if (!getValidationBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validation_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, validation_);
       }
       if (userCanSetValue_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(10, userCanSetValue_);
       }
-      if (!getCurrencyCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, currencyCode_);
       }
-      if (!getDefaultTelCountryCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultTelCountryCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, defaultTelCountryCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -14775,10 +14875,10 @@ public final class Distribution {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDistributionUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributionUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, distributionUrl_);
       }
-      if (!getCsvContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvContent_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, csvContent_);
       }
       unknownFields.writeTo(output);
@@ -14790,10 +14890,10 @@ public final class Distribution {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDistributionUrlBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributionUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, distributionUrl_);
       }
-      if (!getCsvContentBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvContent_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, csvContent_);
       }
       size += unknownFields.getSerializedSize();
@@ -15304,6 +15404,831 @@ public final class Distribution {
 
   }
 
+  public interface ImportProtocolRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.ImportProtocolRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string csvContent = 1;</code>
+     * @return The csvContent.
+     */
+    java.lang.String getCsvContent();
+    /**
+     * <code>string csvContent = 1;</code>
+     * @return The bytes for csvContent.
+     */
+    com.google.protobuf.ByteString
+        getCsvContentBytes();
+
+    /**
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    java.lang.String getClassId();
+    /**
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    com.google.protobuf.ByteString
+        getClassIdBytes();
+
+    /**
+     * <code>.io.PassProtocol protocol = 3;</code>
+     * @return The enum numeric value on the wire for protocol.
+     */
+    int getProtocolValue();
+    /**
+     * <code>.io.PassProtocol protocol = 3;</code>
+     * @return The protocol.
+     */
+    com.passkit.grpc.Protocols.PassProtocol getProtocol();
+  }
+  /**
+   * Protobuf type {@code io.ImportProtocolRequest}
+   */
+  public static final class ImportProtocolRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.ImportProtocolRequest)
+      ImportProtocolRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ImportProtocolRequest.newBuilder() to construct.
+    private ImportProtocolRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ImportProtocolRequest() {
+      csvContent_ = "";
+      classId_ = "";
+      protocol_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ImportProtocolRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ImportProtocolRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              csvContent_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classId_ = s;
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              protocol_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Distribution.internal_static_io_ImportProtocolRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Distribution.internal_static_io_ImportProtocolRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Distribution.ImportProtocolRequest.class, com.passkit.grpc.Distribution.ImportProtocolRequest.Builder.class);
+    }
+
+    public static final int CSVCONTENT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object csvContent_;
+    /**
+     * <code>string csvContent = 1;</code>
+     * @return The csvContent.
+     */
+    @java.lang.Override
+    public java.lang.String getCsvContent() {
+      java.lang.Object ref = csvContent_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        csvContent_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string csvContent = 1;</code>
+     * @return The bytes for csvContent.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCsvContentBytes() {
+      java.lang.Object ref = csvContent_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        csvContent_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLASSID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object classId_;
+    /**
+     * <code>string classId = 2;</code>
+     * @return The classId.
+     */
+    @java.lang.Override
+    public java.lang.String getClassId() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string classId = 2;</code>
+     * @return The bytes for classId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassIdBytes() {
+      java.lang.Object ref = classId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROTOCOL_FIELD_NUMBER = 3;
+    private int protocol_;
+    /**
+     * <code>.io.PassProtocol protocol = 3;</code>
+     * @return The enum numeric value on the wire for protocol.
+     */
+    @java.lang.Override public int getProtocolValue() {
+      return protocol_;
+    }
+    /**
+     * <code>.io.PassProtocol protocol = 3;</code>
+     * @return The protocol.
+     */
+    @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
+      @SuppressWarnings("deprecation")
+      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+      return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvContent_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, csvContent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, classId_);
+      }
+      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
+        output.writeEnum(3, protocol_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csvContent_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, csvContent_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, classId_);
+      }
+      if (protocol_ != com.passkit.grpc.Protocols.PassProtocol.PASS_PROTOCOL_DO_NOT_USE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, protocol_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Distribution.ImportProtocolRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Distribution.ImportProtocolRequest other = (com.passkit.grpc.Distribution.ImportProtocolRequest) obj;
+
+      if (!getCsvContent()
+          .equals(other.getCsvContent())) return false;
+      if (!getClassId()
+          .equals(other.getClassId())) return false;
+      if (protocol_ != other.protocol_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CSVCONTENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCsvContent().hashCode();
+      hash = (37 * hash) + CLASSID_FIELD_NUMBER;
+      hash = (53 * hash) + getClassId().hashCode();
+      hash = (37 * hash) + PROTOCOL_FIELD_NUMBER;
+      hash = (53 * hash) + protocol_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Distribution.ImportProtocolRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.ImportProtocolRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.ImportProtocolRequest)
+        com.passkit.grpc.Distribution.ImportProtocolRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Distribution.internal_static_io_ImportProtocolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Distribution.internal_static_io_ImportProtocolRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Distribution.ImportProtocolRequest.class, com.passkit.grpc.Distribution.ImportProtocolRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Distribution.ImportProtocolRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        csvContent_ = "";
+
+        classId_ = "";
+
+        protocol_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Distribution.internal_static_io_ImportProtocolRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.ImportProtocolRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.Distribution.ImportProtocolRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.ImportProtocolRequest build() {
+        com.passkit.grpc.Distribution.ImportProtocolRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Distribution.ImportProtocolRequest buildPartial() {
+        com.passkit.grpc.Distribution.ImportProtocolRequest result = new com.passkit.grpc.Distribution.ImportProtocolRequest(this);
+        result.csvContent_ = csvContent_;
+        result.classId_ = classId_;
+        result.protocol_ = protocol_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Distribution.ImportProtocolRequest) {
+          return mergeFrom((com.passkit.grpc.Distribution.ImportProtocolRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Distribution.ImportProtocolRequest other) {
+        if (other == com.passkit.grpc.Distribution.ImportProtocolRequest.getDefaultInstance()) return this;
+        if (!other.getCsvContent().isEmpty()) {
+          csvContent_ = other.csvContent_;
+          onChanged();
+        }
+        if (!other.getClassId().isEmpty()) {
+          classId_ = other.classId_;
+          onChanged();
+        }
+        if (other.protocol_ != 0) {
+          setProtocolValue(other.getProtocolValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Distribution.ImportProtocolRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Distribution.ImportProtocolRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object csvContent_ = "";
+      /**
+       * <code>string csvContent = 1;</code>
+       * @return The csvContent.
+       */
+      public java.lang.String getCsvContent() {
+        java.lang.Object ref = csvContent_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          csvContent_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string csvContent = 1;</code>
+       * @return The bytes for csvContent.
+       */
+      public com.google.protobuf.ByteString
+          getCsvContentBytes() {
+        java.lang.Object ref = csvContent_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          csvContent_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string csvContent = 1;</code>
+       * @param value The csvContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsvContent(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        csvContent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string csvContent = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCsvContent() {
+        
+        csvContent_ = getDefaultInstance().getCsvContent();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string csvContent = 1;</code>
+       * @param value The bytes for csvContent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCsvContentBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        csvContent_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object classId_ = "";
+      /**
+       * <code>string classId = 2;</code>
+       * @return The classId.
+       */
+      public java.lang.String getClassId() {
+        java.lang.Object ref = classId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @return The bytes for classId.
+       */
+      public com.google.protobuf.ByteString
+          getClassIdBytes() {
+        java.lang.Object ref = classId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @param value The classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassId() {
+        
+        classId_ = getDefaultInstance().getClassId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string classId = 2;</code>
+       * @param value The bytes for classId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int protocol_ = 0;
+      /**
+       * <code>.io.PassProtocol protocol = 3;</code>
+       * @return The enum numeric value on the wire for protocol.
+       */
+      @java.lang.Override public int getProtocolValue() {
+        return protocol_;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 3;</code>
+       * @param value The enum numeric value on the wire for protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocolValue(int value) {
+        
+        protocol_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 3;</code>
+       * @return The protocol.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
+        @SuppressWarnings("deprecation")
+        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+        return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 3;</code>
+       * @param value The protocol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProtocol(com.passkit.grpc.Protocols.PassProtocol value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        protocol_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.PassProtocol protocol = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProtocol() {
+        
+        protocol_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.ImportProtocolRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.ImportProtocolRequest)
+    private static final com.passkit.grpc.Distribution.ImportProtocolRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Distribution.ImportProtocolRequest();
+    }
+
+    public static com.passkit.grpc.Distribution.ImportProtocolRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ImportProtocolRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ImportProtocolRequest>() {
+      @java.lang.Override
+      public ImportProtocolRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ImportProtocolRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ImportProtocolRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ImportProtocolRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Distribution.ImportProtocolRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_EmailDistributionRequest_descriptor;
   private static final 
@@ -15369,6 +16294,11 @@ public final class Distribution {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_SmartPassCsvUploadRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_ImportProtocolRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_ImportProtocolRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -15410,39 +16340,42 @@ public final class Distribution {
       "\030\016 \001(\t\0227\n\032localizedFooterHtmlContent\030\017 \001" +
       "(\0132\023.io.LocalizedString\022\036\n\026messageBackgr" +
       "oundColor\030\020 \001(\t\022\033\n\023pageBackgroundColor\030\021" +
-      " \001(\t\022\027\n\017templateOptions\030\022 \001(\005\"c\n\022EmailCo" +
+      " \001(\t\022\027\n\017templateOptions\030\022 \001(\005\"z\n\022EmailCo" +
       "nfiguration\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailF" +
       "romName\030\002 \001(\t\022#\n\033EmailFromVerifiedForSen" +
-      "ding\030\003 \001(\010\"a\n\013SmsTemplate\022\026\n\007content\030\001 \001" +
-      "(\tB\005\222A\002xF\0224\n\020localizedContent\030\002 \001(\0132\023.io" +
-      ".LocalizedStringB\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolm" +
-      "entUrls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 " +
-      "\001(\t\022C\n\021tierEnrolmentUrls\030\003 \003(\0132(.io.Enro" +
-      "lmentUrls.TierEnrolmentUrlsEntry\022A\n\020tier" +
-      "EnrolmentQRs\030\004 \003(\0132\'.io.EnrolmentUrls.Ti" +
-      "erEnrolmentQRsEntry\0328\n\026TierEnrolmentUrls" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n" +
-      "\025TierEnrolmentQRsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\"?\n\024DataCollectionFields\022\'" +
-      "\n\006fields\030\001 \003(\0132\027.io.DataCollectionField\"" +
-      "\347\002\n\023DataCollectionField\022\022\n\nuniqueName\030\001 " +
-      "\001(\t\022 \n\tfieldType\030\002 \001(\0162\r.io.FieldType\022\022\n" +
-      "\nisRequired\030\003 \001(\010\022\r\n\005label\030\004 \001(\t\022+\n\016loca" +
-      "lizedLabel\030\005 \001(\0132\023.io.LocalizedString\022\036\n" +
-      "\010dataType\030\006 \001(\0162\014.io.DataType\022\024\n\014default" +
-      "Value\030\007 \001(\t\0222\n\025localizedDefaultValue\030\010 \001" +
-      "(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\t " +
-      "\001(\t\022\027\n\017userCanSetValue\030\n \001(\010\022\024\n\014currency" +
-      "Code\030\013 \001(\t\022\035\n\025defaultTelCountryCode\030\014 \001(" +
-      "\t\"H\n\031SmartPassCsvUploadRequest\022\027\n\017distri" +
-      "butionUrl\030\001 \001(\t\022\022\n\ncsvContent\030\002 \001(\t*N\n\023D" +
-      "istributionChannel\022\023\n\017NO_DISTRIBUTION\020\000\022" +
-      "\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*x\n\024E" +
-      "mailTemplateOptions\022\027\n\023EMAIL_TEMP_OPT_NO" +
-      "NE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID\020\001\022!\n\035" +
-      "EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010\004\020\004BG\n" +
-      "\020com.passkit.grpcZ$stash.passkit.com/io/" +
-      "model/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "ding\030\003 \001(\010\022\025\n\ruseCustomHtml\030\004 \001(\010\"a\n\013Sms" +
+      "Template\022\026\n\007content\030\001 \001(\tB\005\222A\002xF\0224\n\020loca" +
+      "lizedContent\030\002 \001(\0132\023.io.LocalizedStringB" +
+      "\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolmentUrls\022\017\n\007pageUr" +
+      "l\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001(\t\022C\n\021tierEnrolm" +
+      "entUrls\030\003 \003(\0132(.io.EnrolmentUrls.TierEnr" +
+      "olmentUrlsEntry\022A\n\020tierEnrolmentQRs\030\004 \003(" +
+      "\0132\'.io.EnrolmentUrls.TierEnrolmentQRsEnt" +
+      "ry\0328\n\026TierEnrolmentUrlsEntry\022\013\n\003key\030\001 \001(" +
+      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025TierEnrolmentQRs" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n" +
+      "\024DataCollectionFields\022\'\n\006fields\030\001 \003(\0132\027." +
+      "io.DataCollectionField\"\347\002\n\023DataCollectio" +
+      "nField\022\022\n\nuniqueName\030\001 \001(\t\022 \n\tfieldType\030" +
+      "\002 \001(\0162\r.io.FieldType\022\022\n\nisRequired\030\003 \001(\010" +
+      "\022\r\n\005label\030\004 \001(\t\022+\n\016localizedLabel\030\005 \001(\0132" +
+      "\023.io.LocalizedString\022\036\n\010dataType\030\006 \001(\0162\014" +
+      ".io.DataType\022\024\n\014defaultValue\030\007 \001(\t\0222\n\025lo" +
+      "calizedDefaultValue\030\010 \001(\0132\023.io.Localized" +
+      "String\022\022\n\nvalidation\030\t \001(\t\022\027\n\017userCanSet" +
+      "Value\030\n \001(\010\022\024\n\014currencyCode\030\013 \001(\t\022\035\n\025def" +
+      "aultTelCountryCode\030\014 \001(\t\"H\n\031SmartPassCsv" +
+      "UploadRequest\022\027\n\017distributionUrl\030\001 \001(\t\022\022" +
+      "\n\ncsvContent\030\002 \001(\t\"`\n\025ImportProtocolRequ" +
+      "est\022\022\n\ncsvContent\030\001 \001(\t\022\017\n\007classId\030\002 \001(\t" +
+      "\022\"\n\010protocol\030\003 \001(\0162\020.io.PassProtocol*N\n\023" +
+      "DistributionChannel\022\023\n\017NO_DISTRIBUTION\020\000" +
+      "\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*x\n\024" +
+      "EmailTemplateOptions\022\027\n\023EMAIL_TEMP_OPT_N" +
+      "ONE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID\020\001\022!\n" +
+      "\035EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010\004\020\004BG" +
+      "\n\020com.passkit.grpcZ$stash.passkit.com/io" +
+      "/model/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15488,7 +16421,7 @@ public final class Distribution {
     internal_static_io_EmailConfiguration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_EmailConfiguration_descriptor,
-        new java.lang.String[] { "EmailFrom", "EmailFromName", "EmailFromVerifiedForSending", });
+        new java.lang.String[] { "EmailFrom", "EmailFromName", "EmailFromVerifiedForSending", "UseCustomHtml", });
     internal_static_io_SmsTemplate_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_io_SmsTemplate_fieldAccessorTable = new
@@ -15531,6 +16464,12 @@ public final class Distribution {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_SmartPassCsvUploadRequest_descriptor,
         new java.lang.String[] { "DistributionUrl", "CsvContent", });
+    internal_static_io_ImportProtocolRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_io_ImportProtocolRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_ImportProtocolRequest_descriptor,
+        new java.lang.String[] { "CsvContent", "ClassId", "Protocol", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Field);

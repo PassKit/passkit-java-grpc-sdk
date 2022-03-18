@@ -1421,10 +1421,10 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketNumber_);
       }
       unknownFields.writeTo(output);
@@ -1436,10 +1436,10 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketNumber_);
       }
       size += unknownFields.getSerializedSize();
@@ -3276,7 +3276,7 @@ public final class TicketOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -3311,7 +3311,7 @@ public final class TicketOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3327,7 +3327,7 @@ public final class TicketOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -3692,10 +3692,10 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketNumber_);
       }
       if (event_ != null) {
@@ -3704,13 +3704,13 @@ public final class TicketOuterClass {
       if (ticketType_ != null) {
         output.writeMessage(4, getTicketType());
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -3764,10 +3764,10 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketNumber_);
       }
       if (event_ != null) {
@@ -3778,13 +3778,13 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getTicketType());
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -5812,7 +5812,7 @@ public final class TicketOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -5847,7 +5847,7 @@ public final class TicketOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -5863,7 +5863,7 @@ public final class TicketOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -5887,7 +5887,7 @@ public final class TicketOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -5910,8 +5910,11 @@ public final class TicketOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -7785,19 +7788,19 @@ public final class TicketOuterClass {
       if (validateDate_ != null) {
         output.writeMessage(1, getValidateDate());
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(3, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(4, alt_);
       }
-      if (!getValidateSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validateSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, validateSource_);
       }
-      if (!getValidateReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validateReference_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, validateReference_);
       }
       unknownFields.writeTo(output);
@@ -7813,11 +7816,11 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getValidateDate());
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, lon_);
       }
@@ -7825,10 +7828,10 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, alt_);
       }
-      if (!getValidateSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validateSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, validateSource_);
       }
-      if (!getValidateReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(validateReference_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, validateReference_);
       }
       size += unknownFields.getSerializedSize();
@@ -9112,19 +9115,19 @@ public final class TicketOuterClass {
       if (redemptionDate_ != null) {
         output.writeMessage(1, getRedemptionDate());
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(3, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(4, alt_);
       }
-      if (!getRedemptionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, redemptionSource_);
       }
-      if (!getRedemptionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionReference_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, redemptionReference_);
       }
       unknownFields.writeTo(output);
@@ -9140,11 +9143,11 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getRedemptionDate());
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(2, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, lon_);
       }
@@ -9152,10 +9155,10 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(4, alt_);
       }
-      if (!getRedemptionSourceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, redemptionSource_);
       }
-      if (!getRedemptionReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionReference_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, redemptionReference_);
       }
       size += unknownFields.getSerializedSize();
@@ -10225,10 +10228,10 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         output.writeFloat(1, amount_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, currency_);
       }
       unknownFields.writeTo(output);
@@ -10240,11 +10243,11 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != 0F) {
+      if (java.lang.Float.floatToRawIntBits(amount_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(1, amount_);
       }
-      if (!getCurrencyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currency_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, currency_);
       }
       size += unknownFields.getSerializedSize();
@@ -11422,25 +11425,25 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getSeatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seat_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, seat_);
       }
       if (localizedSeat_ != null) {
         output.writeMessage(2, getLocalizedSeat());
       }
-      if (!getRowBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(row_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, row_);
       }
       if (localizedRow_ != null) {
         output.writeMessage(4, getLocalizedRow());
       }
-      if (!getSectionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(section_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, section_);
       }
       if (localizedSection_ != null) {
         output.writeMessage(6, getLocalizedSection());
       }
-      if (!getGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, gate_);
       }
       if (localizedGate_ != null) {
@@ -11455,28 +11458,28 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getSeatBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(seat_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, seat_);
       }
       if (localizedSeat_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getLocalizedSeat());
       }
-      if (!getRowBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(row_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, row_);
       }
       if (localizedRow_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedRow());
       }
-      if (!getSectionBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(section_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, section_);
       }
       if (localizedSection_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedSection());
       }
-      if (!getGateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, gate_);
       }
       if (localizedGate_ != null) {
@@ -15604,10 +15607,10 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, venueId_);
       }
-      if (!getVenueUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, venueUid_);
       }
       if (scheduledStartDate_ != null) {
@@ -15622,10 +15625,10 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, venueId_);
       }
-      if (!getVenueUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, venueUid_);
       }
       if (scheduledStartDate_ != null) {
@@ -16652,13 +16655,13 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productionUid_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketNumber_);
       }
       unknownFields.writeTo(output);
@@ -16670,13 +16673,13 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productionUid_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ticketNumber_);
       }
       size += unknownFields.getSerializedSize();
@@ -17628,13 +17631,13 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productionUid_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, orderNumber_);
       }
       unknownFields.writeTo(output);
@@ -17646,13 +17649,13 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productionUid_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, orderNumber_);
       }
       size += unknownFields.getSerializedSize();
@@ -18682,13 +18685,13 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productionUid_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, orderNumber_);
       }
       if (redemptionDetails_ != null) {
@@ -18703,13 +18706,13 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productionId_);
       }
-      if (!getProductionUidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionUid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productionUid_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, orderNumber_);
       }
       if (redemptionDetails_ != null) {
@@ -25424,7 +25427,7 @@ public final class TicketOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -25459,7 +25462,7 @@ public final class TicketOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -25475,7 +25478,7 @@ public final class TicketOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -25828,10 +25831,10 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ticketNumber_);
       }
       if (production_ != null) {
@@ -25846,13 +25849,13 @@ public final class TicketOuterClass {
       if (ticketType_ != null) {
         output.writeMessage(6, getTicketType());
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -25906,10 +25909,10 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ticketNumber_);
       }
       if (production_ != null) {
@@ -25928,13 +25931,13 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTicketType());
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -28316,7 +28319,7 @@ public final class TicketOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -28351,7 +28354,7 @@ public final class TicketOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -28367,7 +28370,7 @@ public final class TicketOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -28391,7 +28394,7 @@ public final class TicketOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -28414,8 +28417,11 @@ public final class TicketOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -31207,7 +31213,7 @@ public final class TicketOuterClass {
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetMetaData().getMap().containsKey(key);
     }
     /**
@@ -31242,7 +31248,7 @@ public final class TicketOuterClass {
     public java.lang.String getMetaDataOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -31258,7 +31264,7 @@ public final class TicketOuterClass {
 
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
       if (!map.containsKey(key)) {
@@ -31617,19 +31623,19 @@ public final class TicketOuterClass {
       if (eventInfoCase_ == 2) {
         output.writeMessage(2, (com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsRequest) eventInfo_);
       }
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, ticketTypeId_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ticketNumber_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -31690,19 +31696,19 @@ public final class TicketOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, (com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsRequest) eventInfo_);
       }
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, ticketTypeId_);
       }
-      if (!getTicketNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ticketNumber_);
       }
-      if (!getOrderNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderNumber_);
       }
-      if (!getGroupingIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupingId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, groupingId_);
       }
-      if (!getBarcodeContentsBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(barcodeContents_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, barcodeContents_);
       }
       if (seatInfo_ != null) {
@@ -33738,7 +33744,7 @@ public final class TicketOuterClass {
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetMetaData().getMap().containsKey(key);
       }
       /**
@@ -33773,7 +33779,7 @@ public final class TicketOuterClass {
       public java.lang.String getMetaDataOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -33789,7 +33795,7 @@ public final class TicketOuterClass {
 
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
         if (!map.containsKey(key)) {
@@ -33813,7 +33819,7 @@ public final class TicketOuterClass {
 
       public Builder removeMetaData(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableMetaData().getMutableMap()
             .remove(key);
         return this;
@@ -33836,8 +33842,11 @@ public final class TicketOuterClass {
       public Builder putMetaData(
           java.lang.String key,
           java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
         return this;
@@ -35728,19 +35737,19 @@ public final class TicketOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTicketIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ticketId_);
       }
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, productionId_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, venueId_);
       }
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, ticketTypeId_);
       }
-      if (!getEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, eventId_);
       }
       unknownFields.writeTo(output);
@@ -35752,19 +35761,19 @@ public final class TicketOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTicketIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ticketId_);
       }
-      if (!getProductionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, productionId_);
       }
-      if (!getVenueIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(venueId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, venueId_);
       }
-      if (!getTicketTypeIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ticketTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, ticketTypeId_);
       }
-      if (!getEventIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(eventId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, eventId_);
       }
       size += unknownFields.getSerializedSize();

@@ -28,7 +28,7 @@ public final class ARpc {
       "roto\032\036io/common/common_objects.proto\032\024io" +
       "/raw/project.proto\032\021io/raw/pass.proto\032.p" +
       "rotoc-gen-openapiv2/options/annotations." +
-      "proto2\333\017\n\003Raw\022\177\n\021createPassProject\022\020.raw" +
+      "proto2\330\017\n\003Raw\022\177\n\021createPassProject\022\020.raw" +
       ".PassProject\032\006.io.Id\"P\202\323\344\223\002\025\"\020/raw/passP" +
       "roject:\001*\222A2\n\003Raw\022\023Create Pass Project\032\026" +
       "Creates a Pass Project\022\223\001\n\021updatePassPro" +
@@ -42,66 +42,66 @@ public final class ARpc {
       "oject\022\033.raw.PassProjectCopyRequest\032\006.io." +
       "Id\"\\\202\323\344\223\002\032\"\025/raw/passProject/copy:\001*\222A9\n" +
       "\003Raw\022\021Copy Pass Project\032\037Copies an exist" +
-      "ing Pass Project\022\207\002\n\021deletePassProject\022\006" +
-      ".io.Id\032\026.google.protobuf.Empty\"\321\001\202\323\344\223\002\032*" +
-      "\025/raw/passProject/{id}:\001*\222A\255\001\n\003Raw\022\023Dele" +
-      "te Pass Project\032\220\001Deletes an existing Pa" +
-      "ss Project by id. Deleting a Pass Projec" +
-      "t results in all passes being invalidate" +
-      "d and removed. Needs to be used with car" +
-      "e.\022e\n\ncreatePass\022\t.raw.Pass\032\006.io.Id\"D\202\323\344" +
-      "\223\002\016\"\t/raw/pass:\001*\222A-\n\003Raw\022\013Create Pass\032\031" +
-      "Creates a new Pass record\022k\n\nupdatePass\022" +
-      "\t.raw.Pass\032\006.io.Id\"J\202\323\344\223\002\016\032\t/raw/pass:\001*" +
-      "\222A3\n\003Raw\022\013Update Pass\032\037Updates an existi" +
-      "ng Pass record\022\222\001\n\021streamPassUpdates\022\t.r" +
-      "aw.Pass\032\006.io.Id\"f\222Ac\n\003Raw\0222Stream Pass U" +
-      "pdates (official SDK\'s only, no REST)\032(U" +
-      "pdates existing Pass records via stream(" +
-      "\0010\001\022d\n\013getPassById\022\006.io.Id\032\t.raw.Pass\"B\202" +
-      "\323\344\223\002\020\022\016/raw/pass/{id}\222A)\n\003Raw\022\016Get Pass " +
-      "by ID\032\022Gets a pass record\022\303\001\n\023getPassByE" +
-      "xternalId\022\".raw.PassRecordByExternalIdRe" +
-      "quest\032\t.raw.Pass\"}\202\323\344\223\0023\0221/raw/pass/exte" +
-      "rnalId/{passProjectId}/{externalId}\222AA\n\003" +
-      "Raw\022\027Get Pass by External ID\032!Gets a pas" +
-      "s record by External ID\022v\n\ndeletePass\022\t." +
-      "raw.Pass\032\026.google.protobuf.Empty\"E\202\323\344\223\002\023" +
-      "*\016/raw/pass/{id}:\001*\222A)\n\003Raw\022\013Delete Pass" +
-      "\032\025Deletes a pass record\022\300\001\n\027listPassesBy" +
-      "PassProject\022#.raw.ListPassesByPassProjec" +
-      "tRequest\032\t.raw.Pass\"s\202\323\344\223\002 \"\033/raw/pass/l" +
-      "istByPassProject:\001*\222AJ\n\003Raw\022\013List Passes" +
-      "\0326List all passes for pass project. Supp" +
-      "orts pagination.0\001\022\306\001\n\030listPassesByPassT" +
-      "emplate\022$.raw.ListPassesByPassTemplateRe" +
-      "quest\032\t.raw.Pass\"w\202\323\344\223\002!\"\034/raw/pass/list" +
-      "ByPassTemplate:\001*\222AM\n\003Raw\022\013List Passes\0329" +
-      "List all passes for a pass template. Sup" +
-      "ports pagination.0\001B\212\007\n\024com.passkit.grpc" +
-      ".RawZ(stash.passkit.com/io/model/sdk/go/" +
-      "io/raw\252\002\020PassKit.Grpc.Raw\222A\263\006\022\300\002\n\026PassKi" +
-      "t Raw Passes API\022\245\001This protocol is suit" +
-      " for cases where the business logic is h" +
-      "andled elsewhere, and the purpose is pur" +
-      "ely to issue and update content for Appl" +
-      "e Wallet and Google Pay.\0328https://passki" +
-      "t.com/legal/terms-of-subscription-servic" +
-      "e/\"?\n\017PassKit Support\022\027https://docs.pass" +
-      "kit.io\032\023support@passkit.com2\0030.1*\001\0022\020app" +
-      "lication/json:\020application/jsonR9\n\003200\0222" +
-      "\n(Returned when the request is successfu" +
-      "l.\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when wrong" +
-      " user input is provided.R0\n\003401\022)\n\'Retur" +
-      "ned when the user is unauthorized.RP\n\00340" +
-      "3\022I\nGReturned when the user does not hav" +
-      "e permission to access the resource.R;\n\003" +
-      "404\0224\n*Returned when the resource does n" +
-      "ot exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned whe" +
-      "n there is an unexpected error.\022\006\n\004\232\002\001\007R" +
-      "W\n\003503\022P\nNServer is unavailable. Back of" +
-      "f for 250ms and repeat request until suc" +
-      "cessful.b\006proto3"
+      "ing Pass Project\022\204\002\n\021deletePassProject\022\006" +
+      ".io.Id\032\026.google.protobuf.Empty\"\316\001\202\323\344\223\002\027*" +
+      "\025/raw/passProject/{id}\222A\255\001\n\003Raw\022\023Delete " +
+      "Pass Project\032\220\001Deletes an existing Pass " +
+      "Project by id. Deleting a Pass Project r" +
+      "esults in all passes being invalidated a" +
+      "nd removed. Needs to be used with care.\022" +
+      "e\n\ncreatePass\022\t.raw.Pass\032\006.io.Id\"D\202\323\344\223\002\016" +
+      "\"\t/raw/pass:\001*\222A-\n\003Raw\022\013Create Pass\032\031Cre" +
+      "ates a new Pass record\022k\n\nupdatePass\022\t.r" +
+      "aw.Pass\032\006.io.Id\"J\202\323\344\223\002\016\032\t/raw/pass:\001*\222A3" +
+      "\n\003Raw\022\013Update Pass\032\037Updates an existing " +
+      "Pass record\022\222\001\n\021streamPassUpdates\022\t.raw." +
+      "Pass\032\006.io.Id\"f\222Ac\n\003Raw\0222Stream Pass Upda" +
+      "tes (official SDK\'s only, no REST)\032(Upda" +
+      "tes existing Pass records via stream(\0010\001" +
+      "\022d\n\013getPassById\022\006.io.Id\032\t.raw.Pass\"B\202\323\344\223" +
+      "\002\020\022\016/raw/pass/{id}\222A)\n\003Raw\022\016Get Pass by " +
+      "ID\032\022Gets a pass record\022\303\001\n\023getPassByExte" +
+      "rnalId\022\".raw.PassRecordByExternalIdReque" +
+      "st\032\t.raw.Pass\"}\202\323\344\223\0023\0221/raw/pass/externa" +
+      "lId/{passProjectId}/{externalId}\222AA\n\003Raw" +
+      "\022\027Get Pass by External ID\032!Gets a pass r" +
+      "ecord by External ID\022v\n\ndeletePass\022\t.raw" +
+      ".Pass\032\026.google.protobuf.Empty\"E\202\323\344\223\002\023*\016/" +
+      "raw/pass/{id}:\001*\222A)\n\003Raw\022\013Delete Pass\032\025D" +
+      "eletes a pass record\022\300\001\n\027listPassesByPas" +
+      "sProject\022#.raw.ListPassesByPassProjectRe" +
+      "quest\032\t.raw.Pass\"s\202\323\344\223\002 \"\033/raw/pass/list" +
+      "ByPassProject:\001*\222AJ\n\003Raw\022\013List Passes\0326L" +
+      "ist all passes for pass project. Support" +
+      "s pagination.0\001\022\306\001\n\030listPassesByPassTemp" +
+      "late\022$.raw.ListPassesByPassTemplateReque" +
+      "st\032\t.raw.Pass\"w\202\323\344\223\002!\"\034/raw/pass/listByP" +
+      "assTemplate:\001*\222AM\n\003Raw\022\013List Passes\0329Lis" +
+      "t all passes for a pass template. Suppor" +
+      "ts pagination.0\001B\212\007\n\024com.passkit.grpc.Ra" +
+      "wZ(stash.passkit.com/io/model/sdk/go/io/" +
+      "raw\252\002\020PassKit.Grpc.Raw\222A\263\006\022\300\002\n\026PassKit R" +
+      "aw Passes API\022\245\001This protocol is suit fo" +
+      "r cases where the business logic is hand" +
+      "led elsewhere, and the purpose is purely" +
+      " to issue and update content for Apple W" +
+      "allet and Google Pay.\0328https://passkit.c" +
+      "om/legal/terms-of-subscription-service/\"" +
+      "?\n\017PassKit Support\022\027https://docs.passkit" +
+      ".io\032\023support@passkit.com2\0030.1*\001\0022\020applic" +
+      "ation/json:\020application/jsonR9\n\003200\0222\n(R" +
+      "eturned when the request is successful.\022" +
+      "\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when wrong us" +
+      "er input is provided.R0\n\003401\022)\n\'Returned" +
+      " when the user is unauthorized.RP\n\003403\022I" +
+      "\nGReturned when the user does not have p" +
+      "ermission to access the resource.R;\n\003404" +
+      "\0224\n*Returned when the resource does not " +
+      "exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when t" +
+      "here is an unexpected error.\022\006\n\004\232\002\001\007RW\n\003" +
+      "503\022P\nNServer is unavailable. Back off f" +
+      "or 250ms and repeat request until succes" +
+      "sful.b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

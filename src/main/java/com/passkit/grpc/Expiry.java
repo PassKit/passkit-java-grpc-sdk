@@ -332,8 +332,8 @@ public final class Expiry {
               break;
             }
             case 24: {
-              expiryOneofCase_ = 3;
               expiryOneof_ = input.readUInt32();
+              expiryOneofCase_ = 3;
               break;
             }
             default: {

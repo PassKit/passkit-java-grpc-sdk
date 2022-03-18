@@ -795,10 +795,10 @@ public final class Campaign {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (localizedName_ != null) {
@@ -811,10 +811,10 @@ public final class Campaign {
       for (int i = 0; i < status_.size(); i++) {
         output.writeEnumNoTag(status_.get(i));
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, passTypeIdentifier_);
       }
-      if (!getIanaTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ianaTimezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, ianaTimezone_);
       }
       if (created_ != null) {
@@ -832,10 +832,10 @@ public final class Campaign {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       if (localizedName_ != null) {
@@ -854,10 +854,10 @@ public final class Campaign {
             .computeUInt32SizeNoTag(dataSize);
         }statusMemoizedSerializedSize = dataSize;
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, passTypeIdentifier_);
       }
-      if (!getIanaTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ianaTimezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, ianaTimezone_);
       }
       if (created_ != null) {
@@ -2780,7 +2780,7 @@ public final class Campaign {
     @java.lang.Override
     public boolean containsSources(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       return internalGetSources().getMap().containsKey(key);
     }
     /**
@@ -2815,7 +2815,7 @@ public final class Campaign {
     public int getSourcesOrDefault(
         java.lang.String key,
         int defaultValue) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetSources().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2831,7 +2831,7 @@ public final class Campaign {
 
     public int getSourcesOrThrow(
         java.lang.String key) {
-      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.Integer> map =
           internalGetSources().getMap();
       if (!map.containsKey(key)) {
@@ -3667,7 +3667,7 @@ public final class Campaign {
       @java.lang.Override
       public boolean containsSources(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         return internalGetSources().getMap().containsKey(key);
       }
       /**
@@ -3702,7 +3702,7 @@ public final class Campaign {
       public int getSourcesOrDefault(
           java.lang.String key,
           int defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetSources().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -3718,7 +3718,7 @@ public final class Campaign {
 
       public int getSourcesOrThrow(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.Integer> map =
             internalGetSources().getMap();
         if (!map.containsKey(key)) {
@@ -3742,7 +3742,7 @@ public final class Campaign {
 
       public Builder removeSources(
           java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         internalGetMutableSources().getMutableMap()
             .remove(key);
         return this;
@@ -3765,7 +3765,7 @@ public final class Campaign {
       public Builder putSources(
           java.lang.String key,
           int value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (key == null) { throw new NullPointerException("map key"); }
         
         internalGetMutableSources().getMutableMap()
             .put(key, value);
@@ -4624,10 +4624,10 @@ public final class Campaign {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
       if (getStatusList().size() > 0) {
@@ -4637,7 +4637,7 @@ public final class Campaign {
       for (int i = 0; i < status_.size(); i++) {
         output.writeEnumNoTag(status_.get(i));
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, passTypeIdentifier_);
       }
       unknownFields.writeTo(output);
@@ -4649,10 +4649,10 @@ public final class Campaign {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
       {
@@ -4667,7 +4667,7 @@ public final class Campaign {
             .computeUInt32SizeNoTag(dataSize);
         }statusMemoizedSerializedSize = dataSize;
       }
-      if (!getPassTypeIdentifierBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeIdentifier_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, passTypeIdentifier_);
       }
       size += unknownFields.getSerializedSize();

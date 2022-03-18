@@ -573,13 +573,13 @@ public final class Proximity {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uuid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (major_ != 0) {
@@ -588,7 +588,7 @@ public final class Proximity {
       if (minor_ != 0) {
         output.writeUInt32(5, minor_);
       }
-      if (!getLockScreenMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockScreenMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lockScreenMessage_);
       }
       if (localizedLockScreenMessage_ != null) {
@@ -606,13 +606,13 @@ public final class Proximity {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getUuidBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uuid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uuid_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (major_ != 0) {
@@ -623,7 +623,7 @@ public final class Proximity {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(5, minor_);
       }
-      if (!getLockScreenMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockScreenMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lockScreenMessage_);
       }
       if (localizedLockScreenMessage_ != null) {
@@ -2233,22 +2233,22 @@ public final class Proximity {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         output.writeDouble(3, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         output.writeDouble(4, lon_);
       }
       if (alt_ != 0) {
         output.writeInt32(5, alt_);
       }
-      if (!getLockScreenMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockScreenMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, lockScreenMessage_);
       }
       if (localizedLockScreenMessage_ != null) {
@@ -2266,17 +2266,17 @@ public final class Proximity {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
       }
-      if (lat_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lat_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, lat_);
       }
-      if (lon_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(lon_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(4, lon_);
       }
@@ -2284,7 +2284,7 @@ public final class Proximity {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, alt_);
       }
-      if (!getLockScreenMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lockScreenMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, lockScreenMessage_);
       }
       if (localizedLockScreenMessage_ != null) {

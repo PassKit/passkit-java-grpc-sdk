@@ -51,6 +51,14 @@ public final class User {
      * <code>OAUTH_MAILCHIMP = 100;</code>
      */
     OAUTH_MAILCHIMP(100),
+    /**
+     * <pre>
+     * Accounting 150-199
+     * </pre>
+     *
+     * <code>OAUTH_XERO = 150;</code>
+     */
+    OAUTH_XERO(150),
     UNRECOGNIZED(-1),
     ;
 
@@ -86,6 +94,14 @@ public final class User {
      * <code>OAUTH_MAILCHIMP = 100;</code>
      */
     public static final int OAUTH_MAILCHIMP_VALUE = 100;
+    /**
+     * <pre>
+     * Accounting 150-199
+     * </pre>
+     *
+     * <code>OAUTH_XERO = 150;</code>
+     */
+    public static final int OAUTH_XERO_VALUE = 150;
 
 
     public final int getNumber() {
@@ -116,6 +132,7 @@ public final class User {
         case 10: return OAUTH_PATREON;
         case 50: return OAUTH_SPROUT;
         case 100: return OAUTH_MAILCHIMP;
+        case 150: return OAUTH_XERO;
         default: return null;
       }
     }
@@ -1652,34 +1669,34 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUserIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, companyId_);
       }
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, username_);
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, emailAddress_);
       }
-      if (!getSecretBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, secret_);
       }
-      if (!getCertificateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificate_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, certificate_);
       }
-      if (!getPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privateKey_);
       }
-      if (!getJavaPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPrivateKey_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, javaPrivateKey_);
       }
       if (expiresAt_ != null) {
         output.writeMessage(9, getExpiresAt());
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, regionId_);
       }
       unknownFields.writeTo(output);
@@ -1691,35 +1708,35 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUserIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, companyId_);
       }
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, username_);
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, emailAddress_);
       }
-      if (!getSecretBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secret_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, secret_);
       }
-      if (!getCertificateBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(certificate_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, certificate_);
       }
-      if (!getPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privateKey_);
       }
-      if (!getJavaPrivateKeyBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(javaPrivateKey_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, javaPrivateKey_);
       }
       if (expiresAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getExpiresAt());
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, regionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -3449,22 +3466,22 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emailAddress_);
       }
       if (sendEmail_ != false) {
         output.writeBool(4, sendEmail_);
       }
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, companyName_);
       }
-      if (!getMobileNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mobileNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, mobileNumber_);
       }
       if (twoFactorAuth_ != false) {
@@ -3485,23 +3502,23 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
-      if (!getEmailAddressBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emailAddress_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emailAddress_);
       }
       if (sendEmail_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, sendEmail_);
       }
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, companyName_);
       }
-      if (!getMobileNumberBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mobileNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, mobileNumber_);
       }
       if (twoFactorAuth_ != false) {
@@ -4980,16 +4997,16 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
       }
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, username_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, companyId_);
       }
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, companyName_);
       }
       if (companyStatus_ != 0L) {
@@ -5001,7 +5018,7 @@ public final class User {
       if (expiresAt_ != null) {
         output.writeMessage(7, getExpiresAt());
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, regionId_);
       }
       unknownFields.writeTo(output);
@@ -5013,16 +5030,16 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
       }
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, username_);
       }
-      if (!getCompanyIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, companyId_);
       }
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, companyName_);
       }
       if (companyStatus_ != 0L) {
@@ -5037,7 +5054,7 @@ public final class User {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getExpiresAt());
       }
-      if (!getRegionIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(regionId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, regionId_);
       }
       size += unknownFields.getSerializedSize();
@@ -6451,13 +6468,13 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, companyName_);
       }
-      if (!getTaxIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taxId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, taxId_);
       }
-      if (!getReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reference_);
       }
       if (billingAddress_ != null) {
@@ -6472,13 +6489,13 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, companyName_);
       }
-      if (!getTaxIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(taxId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, taxId_);
       }
-      if (!getReferenceBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reference_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, reference_);
       }
       if (billingAddress_ != null) {
@@ -7411,10 +7428,10 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
       unknownFields.writeTo(output);
@@ -7426,10 +7443,10 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
       size += unknownFields.getSerializedSize();
@@ -7920,6 +7937,804 @@ public final class User {
 
   }
 
+  public interface VerifyRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.VerifyRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 22 character passkit user Id.
+     * </pre>
+     *
+     * <code>string uid = 1;</code>
+     * @return The uid.
+     */
+    java.lang.String getUid();
+    /**
+     * <pre>
+     * 22 character passkit user Id.
+     * </pre>
+     *
+     * <code>string uid = 1;</code>
+     * @return The bytes for uid.
+     */
+    com.google.protobuf.ByteString
+        getUidBytes();
+
+    /**
+     * <pre>
+     * Token supplied by email to the account email.
+     * </pre>
+     *
+     * <code>string token = 2;</code>
+     * @return The token.
+     */
+    java.lang.String getToken();
+    /**
+     * <pre>
+     * Token supplied by email to the account email.
+     * </pre>
+     *
+     * <code>string token = 2;</code>
+     * @return The bytes for token.
+     */
+    com.google.protobuf.ByteString
+        getTokenBytes();
+  }
+  /**
+   * <pre>
+   * Verify request is used to validate a email address for a passkit account.
+   * </pre>
+   *
+   * Protobuf type {@code io.VerifyRequest}
+   */
+  public static final class VerifyRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.VerifyRequest)
+      VerifyRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VerifyRequest.newBuilder() to construct.
+    private VerifyRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VerifyRequest() {
+      uid_ = "";
+      token_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VerifyRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VerifyRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              uid_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              token_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.User.internal_static_io_VerifyRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.User.internal_static_io_VerifyRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.User.VerifyRequest.class, com.passkit.grpc.User.VerifyRequest.Builder.class);
+    }
+
+    public static final int UID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object uid_;
+    /**
+     * <pre>
+     * 22 character passkit user Id.
+     * </pre>
+     *
+     * <code>string uid = 1;</code>
+     * @return The uid.
+     */
+    @java.lang.Override
+    public java.lang.String getUid() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uid_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 22 character passkit user Id.
+     * </pre>
+     *
+     * <code>string uid = 1;</code>
+     * @return The bytes for uid.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUidBytes() {
+      java.lang.Object ref = uid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object token_;
+    /**
+     * <pre>
+     * Token supplied by email to the account email.
+     * </pre>
+     *
+     * <code>string token = 2;</code>
+     * @return The token.
+     */
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        token_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token supplied by email to the account email.
+     * </pre>
+     *
+     * <code>string token = 2;</code>
+     * @return The bytes for token.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        token_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, token_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, uid_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, token_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.User.VerifyRequest)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.User.VerifyRequest other = (com.passkit.grpc.User.VerifyRequest) obj;
+
+      if (!getUid()
+          .equals(other.getUid())) return false;
+      if (!getToken()
+          .equals(other.getToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UID_FIELD_NUMBER;
+      hash = (53 * hash) + getUid().hashCode();
+      hash = (37 * hash) + TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.User.VerifyRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.User.VerifyRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Verify request is used to validate a email address for a passkit account.
+     * </pre>
+     *
+     * Protobuf type {@code io.VerifyRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.VerifyRequest)
+        com.passkit.grpc.User.VerifyRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.User.internal_static_io_VerifyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.User.internal_static_io_VerifyRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.User.VerifyRequest.class, com.passkit.grpc.User.VerifyRequest.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.User.VerifyRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        uid_ = "";
+
+        token_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.User.internal_static_io_VerifyRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.User.VerifyRequest getDefaultInstanceForType() {
+        return com.passkit.grpc.User.VerifyRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.User.VerifyRequest build() {
+        com.passkit.grpc.User.VerifyRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.User.VerifyRequest buildPartial() {
+        com.passkit.grpc.User.VerifyRequest result = new com.passkit.grpc.User.VerifyRequest(this);
+        result.uid_ = uid_;
+        result.token_ = token_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.User.VerifyRequest) {
+          return mergeFrom((com.passkit.grpc.User.VerifyRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.User.VerifyRequest other) {
+        if (other == com.passkit.grpc.User.VerifyRequest.getDefaultInstance()) return this;
+        if (!other.getUid().isEmpty()) {
+          uid_ = other.uid_;
+          onChanged();
+        }
+        if (!other.getToken().isEmpty()) {
+          token_ = other.token_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.User.VerifyRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.User.VerifyRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object uid_ = "";
+      /**
+       * <pre>
+       * 22 character passkit user Id.
+       * </pre>
+       *
+       * <code>string uid = 1;</code>
+       * @return The uid.
+       */
+      public java.lang.String getUid() {
+        java.lang.Object ref = uid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          uid_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 22 character passkit user Id.
+       * </pre>
+       *
+       * <code>string uid = 1;</code>
+       * @return The bytes for uid.
+       */
+      public com.google.protobuf.ByteString
+          getUidBytes() {
+        java.lang.Object ref = uid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          uid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 22 character passkit user Id.
+       * </pre>
+       *
+       * <code>string uid = 1;</code>
+       * @param value The uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 22 character passkit user Id.
+       * </pre>
+       *
+       * <code>string uid = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUid() {
+        
+        uid_ = getDefaultInstance().getUid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 22 character passkit user Id.
+       * </pre>
+       *
+       * <code>string uid = 1;</code>
+       * @param value The bytes for uid to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        uid_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object token_ = "";
+      /**
+       * <pre>
+       * Token supplied by email to the account email.
+       * </pre>
+       *
+       * <code>string token = 2;</code>
+       * @return The token.
+       */
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          token_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token supplied by email to the account email.
+       * </pre>
+       *
+       * <code>string token = 2;</code>
+       * @return The bytes for token.
+       */
+      public com.google.protobuf.ByteString
+          getTokenBytes() {
+        java.lang.Object ref = token_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          token_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token supplied by email to the account email.
+       * </pre>
+       *
+       * <code>string token = 2;</code>
+       * @param value The token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token supplied by email to the account email.
+       * </pre>
+       *
+       * <code>string token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToken() {
+        
+        token_ = getDefaultInstance().getToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token supplied by email to the account email.
+       * </pre>
+       *
+       * <code>string token = 2;</code>
+       * @param value The bytes for token to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.VerifyRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.VerifyRequest)
+    private static final com.passkit.grpc.User.VerifyRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.User.VerifyRequest();
+    }
+
+    public static com.passkit.grpc.User.VerifyRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VerifyRequest>
+        PARSER = new com.google.protobuf.AbstractParser<VerifyRequest>() {
+      @java.lang.Override
+      public VerifyRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VerifyRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VerifyRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VerifyRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.User.VerifyRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface JWTOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.JWT)
       com.google.protobuf.MessageOrBuilder {
@@ -8072,7 +8887,7 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
       }
       unknownFields.writeTo(output);
@@ -8084,7 +8899,7 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, token_);
       }
       size += unknownFields.getSerializedSize();
@@ -8811,16 +9626,16 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getRegisteredEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registeredEmail_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, registeredEmail_);
       }
-      if (!getNewPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newPassword_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, newPassword_);
       }
-      if (!getConfirmNewPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmNewPassword_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, confirmNewPassword_);
       }
       unknownFields.writeTo(output);
@@ -8832,16 +9647,16 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getRegisteredEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registeredEmail_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, registeredEmail_);
       }
-      if (!getNewPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newPassword_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, newPassword_);
       }
-      if (!getConfirmNewPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(confirmNewPassword_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, confirmNewPassword_);
       }
       size += unknownFields.getSerializedSize();
@@ -9658,7 +10473,7 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
       unknownFields.writeTo(output);
@@ -9670,7 +10485,7 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
       size += unknownFields.getSerializedSize();
@@ -10372,13 +11187,13 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getClientCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, clientCode_);
       }
       if (provider_ != com.passkit.grpc.User.OAuth2Provider.OAUTH_DO_NOT_USE.getNumber()) {
         output.writeEnum(2, provider_);
       }
-      if (!getRedirectUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redirectUri_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, redirectUri_);
       }
       unknownFields.writeTo(output);
@@ -10390,14 +11205,14 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getClientCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, clientCode_);
       }
       if (provider_ != com.passkit.grpc.User.OAuth2Provider.OAUTH_DO_NOT_USE.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, provider_);
       }
-      if (!getRedirectUriBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redirectUri_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, redirectUri_);
       }
       size += unknownFields.getSerializedSize();
@@ -12777,7 +13592,7 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
       }
       unknownFields.writeTo(output);
@@ -12789,7 +13604,7 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getEmailBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
       }
       size += unknownFields.getSerializedSize();
@@ -13459,13 +14274,13 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, token_);
       }
       unknownFields.writeTo(output);
@@ -13477,13 +14292,13 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
-      if (!getTokenBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, token_);
       }
       size += unknownFields.getSerializedSize();
@@ -14213,7 +15028,7 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, companyName_);
       }
       unknownFields.writeTo(output);
@@ -14225,7 +15040,7 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getCompanyNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, companyName_);
       }
       size += unknownFields.getSerializedSize();
@@ -14900,10 +15715,10 @@ public final class User {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, password_);
       }
       if (confirmPermanentDelete_ != false) {
@@ -14918,10 +15733,10 @@ public final class User {
       if (size != -1) return size;
 
       size = 0;
-      if (!getUsernameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, username_);
       }
-      if (!getPasswordBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, password_);
       }
       if (confirmPermanentDelete_ != false) {
@@ -15536,6 +16351,11 @@ public final class User {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_Credentials_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_VerifyRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_VerifyRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_JWT_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -15611,56 +16431,58 @@ public final class User {
       "\013companyName\030\001 \001(\t\022\r\n\005taxId\030\002 \001(\t\022\021\n\tref" +
       "erence\030\003 \001(\t\022#\n\016billingAddress\030\004 \001(\0132\013.i" +
       "o.Address\"1\n\013Credentials\022\020\n\010username\030\001 \001" +
-      "(\t\022\020\n\010password\030\002 \001(\t\"\024\n\003JWT\022\r\n\005token\030\001 \001" +
-      "(\t\"j\n\022PasswordResetInput\022\n\n\002id\030\001 \001(\t\022\027\n\017" +
-      "registeredEmail\030\002 \001(\t\022\023\n\013newPassword\030\003 \001" +
-      "(\t\022\032\n\022confirmNewPassword\030\004 \001(\t\"\034\n\010Userna" +
-      "me\022\020\n\010username\030\001 \001(\t\"k\n\032OAuth2Authorizat" +
-      "ionRequest\022\022\n\nclientCode\030\001 \001(\t\022$\n\010provid" +
-      "er\030\002 \001(\0162\022.io.OAuth2Provider\022\023\n\013redirect" +
-      "Uri\030\003 \001(\t\"\214\002\n\024ScannerConfiguration\022?\n\025me" +
-      "mbershipPermissions\030\001 \003(\0162 .io.ScannerMe" +
-      "mbershipPermissions\0227\n\021couponPermissions" +
-      "\030\002 \003(\0162\034.io.ScannerCouponPermissions\022@\n\027" +
-      "defaultMembershipAction\030\003 \003(\0162\037.io.Defau" +
-      "ltMembershipScanAction\0228\n\023defaultCouponA" +
-      "ction\030\004 \003(\0162\033.io.DefaultCouponScanAction" +
-      "\"\026\n\005Email\022\r\n\005email\030\001 \001(\t\"L\n\027ConfirmEmail" +
-      "ChangeInput\022\020\n\010username\030\001 \001(\t\022\020\n\010passwor" +
-      "d\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\"\"\n\013CompanyName\022\023\n" +
-      "\013companyName\030\001 \001(\t\"Z\n\024DeleteAccountReque" +
-      "st\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\036" +
-      "\n\026confirmPermanentDelete\030\003 \001(\010*`\n\016OAuth2" +
-      "Provider\022\024\n\020OAUTH_DO_NOT_USE\020\000\022\021\n\rOAUTH_" +
-      "PATREON\020\n\022\020\n\014OAUTH_SPROUT\0202\022\023\n\017OAUTH_MAI" +
-      "LCHIMP\020d*\306\003\n\034ScannerMembershipPermission" +
-      "s\022\036\n\032MEMBERSHIP_PERMISSION_NONE\020\000\022%\n!MEM" +
-      "BERSHIP_PERMISSION_VIEW_MEMBER\020\001\022%\n!MEMB" +
-      "ERSHIP_PERMISSION_EDIT_MEMBER\020\002\022%\n!MEMBE" +
-      "RSHIP_PERMISSION_EARN_POINTS\020\004\022%\n!MEMBER" +
-      "SHIP_PERMISSION_BURN_POINTS\020\010\022$\n MEMBERS" +
-      "HIP_PERMISSION_SET_POINTS\020\020\022%\n!MEMBERSHI" +
-      "P_PERMISSION_CHANGE_TIER\020 \022%\n!MEMBERSHIP" +
-      "_PERMISSION_VIEW_EVENTS\020@\022(\n#MEMBERSHIP_" +
-      "PERMISSION_CHANGE_EXPIRY\020\200\001\022\'\n\"MEMBERSHI" +
-      "P_PERMISSION_CHECK_IN_OUT\020\200\002\022#\n\036MEMBERSH" +
-      "IP_PERMISSION_VALIDATE\020\200\004*\202\002\n\030ScannerCou" +
-      "ponPermissions\022\032\n\026COUPON_PERMISSION_NONE" +
-      "\020\000\022!\n\035COUPON_PERMISSION_VIEW_COUPON\020\001\022!\n" +
-      "\035COUPON_PERMISSION_EDIT_COUPON\020\002\022\034\n\030COUP" +
-      "ON_PERMISSION_REDEEM\020\004\022!\n\035COUPON_PERMISS" +
-      "ION_VIEW_EVENTS\020\010\022#\n\037COUPON_PERMISSION_C" +
-      "HANGE_EXPIRY\020\020\022\036\n\032COUPON_PERMISSION_VALI" +
-      "DATE\020 *\310\001\n\033DefaultMembershipScanAction\022\033" +
-      "\n\027MEMBERSHIP_DEFAULT_NONE\020\000\022\"\n\036MEMBERSHI" +
-      "P_DEFAULT_EARN_POINTS\020\001\022\"\n\036MEMBERSHIP_DE" +
-      "FAULT_BURN_POINTS\020\002\022#\n\037MEMBERSHIP_DEFAUL" +
-      "T_CHECK_IN_OUT\020\004\022\037\n\033MEMBERSHIP_DEFAULT_V" +
-      "ALIDATE\020\010*j\n\027DefaultCouponScanAction\022\027\n\023" +
-      "COUPON_DEFAULT_NONE\020\000\022\031\n\025COUPON_DEFAULT_" +
-      "REDEEM\020\001\022\033\n\027COUPON_DEFAULT_VALIDATE\020\002BG\n" +
-      "\020com.passkit.grpcZ$stash.passkit.com/io/" +
-      "model/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "(\t\022\020\n\010password\030\002 \001(\t\"+\n\rVerifyRequest\022\013\n" +
+      "\003uid\030\001 \001(\t\022\r\n\005token\030\002 \001(\t\"\024\n\003JWT\022\r\n\005toke" +
+      "n\030\001 \001(\t\"j\n\022PasswordResetInput\022\n\n\002id\030\001 \001(" +
+      "\t\022\027\n\017registeredEmail\030\002 \001(\t\022\023\n\013newPasswor" +
+      "d\030\003 \001(\t\022\032\n\022confirmNewPassword\030\004 \001(\t\"\034\n\010U" +
+      "sername\022\020\n\010username\030\001 \001(\t\"k\n\032OAuth2Autho" +
+      "rizationRequest\022\022\n\nclientCode\030\001 \001(\t\022$\n\010p" +
+      "rovider\030\002 \001(\0162\022.io.OAuth2Provider\022\023\n\013red" +
+      "irectUri\030\003 \001(\t\"\214\002\n\024ScannerConfiguration\022" +
+      "?\n\025membershipPermissions\030\001 \003(\0162 .io.Scan" +
+      "nerMembershipPermissions\0227\n\021couponPermis" +
+      "sions\030\002 \003(\0162\034.io.ScannerCouponPermission" +
+      "s\022@\n\027defaultMembershipAction\030\003 \003(\0162\037.io." +
+      "DefaultMembershipScanAction\0228\n\023defaultCo" +
+      "uponAction\030\004 \003(\0162\033.io.DefaultCouponScanA" +
+      "ction\"\026\n\005Email\022\r\n\005email\030\001 \001(\t\"L\n\027Confirm" +
+      "EmailChangeInput\022\020\n\010username\030\001 \001(\t\022\020\n\010pa" +
+      "ssword\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\"\"\n\013CompanyNa" +
+      "me\022\023\n\013companyName\030\001 \001(\t\"Z\n\024DeleteAccount" +
+      "Request\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 " +
+      "\001(\t\022\036\n\026confirmPermanentDelete\030\003 \001(\010*q\n\016O" +
+      "Auth2Provider\022\024\n\020OAUTH_DO_NOT_USE\020\000\022\021\n\rO" +
+      "AUTH_PATREON\020\n\022\020\n\014OAUTH_SPROUT\0202\022\023\n\017OAUT" +
+      "H_MAILCHIMP\020d\022\017\n\nOAUTH_XERO\020\226\001*\306\003\n\034Scann" +
+      "erMembershipPermissions\022\036\n\032MEMBERSHIP_PE" +
+      "RMISSION_NONE\020\000\022%\n!MEMBERSHIP_PERMISSION" +
+      "_VIEW_MEMBER\020\001\022%\n!MEMBERSHIP_PERMISSION_" +
+      "EDIT_MEMBER\020\002\022%\n!MEMBERSHIP_PERMISSION_E" +
+      "ARN_POINTS\020\004\022%\n!MEMBERSHIP_PERMISSION_BU" +
+      "RN_POINTS\020\010\022$\n MEMBERSHIP_PERMISSION_SET" +
+      "_POINTS\020\020\022%\n!MEMBERSHIP_PERMISSION_CHANG" +
+      "E_TIER\020 \022%\n!MEMBERSHIP_PERMISSION_VIEW_E" +
+      "VENTS\020@\022(\n#MEMBERSHIP_PERMISSION_CHANGE_" +
+      "EXPIRY\020\200\001\022\'\n\"MEMBERSHIP_PERMISSION_CHECK" +
+      "_IN_OUT\020\200\002\022#\n\036MEMBERSHIP_PERMISSION_VALI" +
+      "DATE\020\200\004*\202\002\n\030ScannerCouponPermissions\022\032\n\026" +
+      "COUPON_PERMISSION_NONE\020\000\022!\n\035COUPON_PERMI" +
+      "SSION_VIEW_COUPON\020\001\022!\n\035COUPON_PERMISSION" +
+      "_EDIT_COUPON\020\002\022\034\n\030COUPON_PERMISSION_REDE" +
+      "EM\020\004\022!\n\035COUPON_PERMISSION_VIEW_EVENTS\020\010\022" +
+      "#\n\037COUPON_PERMISSION_CHANGE_EXPIRY\020\020\022\036\n\032" +
+      "COUPON_PERMISSION_VALIDATE\020 *\310\001\n\033Default" +
+      "MembershipScanAction\022\033\n\027MEMBERSHIP_DEFAU" +
+      "LT_NONE\020\000\022\"\n\036MEMBERSHIP_DEFAULT_EARN_POI" +
+      "NTS\020\001\022\"\n\036MEMBERSHIP_DEFAULT_BURN_POINTS\020" +
+      "\002\022#\n\037MEMBERSHIP_DEFAULT_CHECK_IN_OUT\020\004\022\037" +
+      "\n\033MEMBERSHIP_DEFAULT_VALIDATE\020\010*j\n\027Defau" +
+      "ltCouponScanAction\022\027\n\023COUPON_DEFAULT_NON" +
+      "E\020\000\022\031\n\025COUPON_DEFAULT_REDEEM\020\001\022\033\n\027COUPON" +
+      "_DEFAULT_VALIDATE\020\002BG\n\020com.passkit.grpcZ" +
+      "$stash.passkit.com/io/model/sdk/go/io\252\002\014" +
+      "PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15698,56 +16520,62 @@ public final class User {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Credentials_descriptor,
         new java.lang.String[] { "Username", "Password", });
-    internal_static_io_JWT_descriptor =
+    internal_static_io_VerifyRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_io_VerifyRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_VerifyRequest_descriptor,
+        new java.lang.String[] { "Uid", "Token", });
+    internal_static_io_JWT_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_io_JWT_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_JWT_descriptor,
         new java.lang.String[] { "Token", });
     internal_static_io_PasswordResetInput_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_io_PasswordResetInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PasswordResetInput_descriptor,
         new java.lang.String[] { "Id", "RegisteredEmail", "NewPassword", "ConfirmNewPassword", });
     internal_static_io_Username_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_io_Username_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Username_descriptor,
         new java.lang.String[] { "Username", });
     internal_static_io_OAuth2AuthorizationRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_io_OAuth2AuthorizationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_OAuth2AuthorizationRequest_descriptor,
         new java.lang.String[] { "ClientCode", "Provider", "RedirectUri", });
     internal_static_io_ScannerConfiguration_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_io_ScannerConfiguration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ScannerConfiguration_descriptor,
         new java.lang.String[] { "MembershipPermissions", "CouponPermissions", "DefaultMembershipAction", "DefaultCouponAction", });
     internal_static_io_Email_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_io_Email_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Email_descriptor,
         new java.lang.String[] { "Email", });
     internal_static_io_ConfirmEmailChangeInput_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_io_ConfirmEmailChangeInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_ConfirmEmailChangeInput_descriptor,
         new java.lang.String[] { "Username", "Password", "Token", });
     internal_static_io_CompanyName_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_io_CompanyName_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_CompanyName_descriptor,
         new java.lang.String[] { "CompanyName", });
     internal_static_io_DeleteAccountRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_io_DeleteAccountRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DeleteAccountRequest_descriptor,

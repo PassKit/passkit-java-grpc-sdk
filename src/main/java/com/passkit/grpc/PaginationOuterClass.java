@@ -603,7 +603,7 @@ public final class PaginationOuterClass {
       for (int i = 0; i < filterOperator_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filterOperator_.getRaw(i));
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, orderBy_);
       }
       if (orderAsc_ != false) {
@@ -650,7 +650,7 @@ public final class PaginationOuterClass {
         size += dataSize;
         size += 1 * getFilterOperatorList().size();
       }
-      if (!getOrderByBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, orderBy_);
       }
       if (orderAsc_ != false) {

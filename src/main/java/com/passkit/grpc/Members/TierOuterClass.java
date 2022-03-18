@@ -1484,37 +1484,37 @@ public final class TierOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
       if (tierIndex_ != 0) {
         output.writeUInt32(2, tierIndex_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
       if (localizedName_ != null) {
         output.writeMessage(4, getLocalizedName());
       }
-      if (!getSecondaryTierNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondaryTierName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, secondaryTierName_);
       }
       if (localizedSecondaryTierName_ != null) {
         output.writeMessage(6, getLocalizedSecondaryTierName());
       }
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, programId_);
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, passTemplateId_);
       }
-      if (!getTierUpgradeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierUpgradeMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, tierUpgradeMessage_);
       }
       if (localizedTierUpgradeMessage_ != null) {
         output.writeMessage(10, getLocalizedTierUpgradeMessage());
       }
-      if (!getTierDowngradeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierDowngradeMessage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, tierDowngradeMessage_);
       }
       if (localizedTierDowngradeMessage_ != null) {
@@ -1535,13 +1535,13 @@ public final class TierOuterClass {
       if (expirySettings_ != null) {
         output.writeMessage(17, getExpirySettings());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 18, timezone_);
       }
       if (allowTierEnrolment_ != null) {
         output.writeMessage(19, getAllowTierEnrolment());
       }
-      if (!getShortCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 20, shortCode_);
       }
       unknownFields.writeTo(output);
@@ -1553,41 +1553,41 @@ public final class TierOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
       if (tierIndex_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, tierIndex_);
       }
-      if (!getNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
       if (localizedName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedName());
       }
-      if (!getSecondaryTierNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secondaryTierName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, secondaryTierName_);
       }
       if (localizedSecondaryTierName_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getLocalizedSecondaryTierName());
       }
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, programId_);
       }
-      if (!getPassTemplateIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTemplateId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, passTemplateId_);
       }
-      if (!getTierUpgradeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierUpgradeMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, tierUpgradeMessage_);
       }
       if (localizedTierUpgradeMessage_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getLocalizedTierUpgradeMessage());
       }
-      if (!getTierDowngradeMessageBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierDowngradeMessage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, tierDowngradeMessage_);
       }
       if (localizedTierDowngradeMessage_ != null) {
@@ -1614,14 +1614,14 @@ public final class TierOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(17, getExpirySettings());
       }
-      if (!getTimezoneBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, timezone_);
       }
       if (allowTierEnrolment_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getAllowTierEnrolment());
       }
-      if (!getShortCodeBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(shortCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, shortCode_);
       }
       size += unknownFields.getSerializedSize();
@@ -4735,10 +4735,10 @@ public final class TierOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, programId_);
       }
-      if (!getTierIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tierId_);
       }
       unknownFields.writeTo(output);
@@ -4750,10 +4750,10 @@ public final class TierOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getProgramIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, programId_);
       }
-      if (!getTierIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tierId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tierId_);
       }
       size += unknownFields.getSerializedSize();
