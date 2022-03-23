@@ -1,4 +1,4 @@
-package io.passkit.PKio;
+package com.passkit.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -519,7 +519,7 @@ public final class MessagesGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return io.passkit.PKio.ARpcMessages.getDescriptor();
+      return com.passkit.grpc.ARpcMessages.getDescriptor();
     }
 
     @java.lang.Override
