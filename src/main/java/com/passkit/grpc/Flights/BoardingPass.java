@@ -1192,6 +1192,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8285,6 +8287,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9240,6 +9244,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10633,6 +10639,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11447,8 +11455,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 1) {
             ticketNumberBuilder_.mergeFrom(value);
+          } else {
+            ticketNumberBuilder_.setMessage(value);
           }
-          ticketNumberBuilder_.setMessage(value);
         }
         requestCase_ = 1;
         return this;
@@ -11588,8 +11597,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 2) {
             indexBuilder_.mergeFrom(value);
+          } else {
+            indexBuilder_.setMessage(value);
           }
-          indexBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;
@@ -11729,8 +11739,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 3) {
             pnrBuilder_.mergeFrom(value);
+          } else {
+            pnrBuilder_.setMessage(value);
           }
-          pnrBuilder_.setMessage(value);
         }
         requestCase_ = 3;
         return this;
@@ -11870,8 +11881,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 4) {
             passIdBuilder_.mergeFrom(value);
+          } else {
+            passIdBuilder_.setMessage(value);
           }
-          passIdBuilder_.setMessage(value);
         }
         requestCase_ = 4;
         return this;
@@ -12080,8 +12092,8 @@ public final class BoardingPass {
        * </pre>
        *
        * <code>repeated .io.PassBundleFormat format = 5;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of format at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for format to set.
        * @return This builder for chaining.
        */
       public Builder setFormatValue(
@@ -12330,6 +12342,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -12960,8 +12974,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 1) {
             ticketNumberBuilder_.mergeFrom(value);
+          } else {
+            ticketNumberBuilder_.setMessage(value);
           }
-          ticketNumberBuilder_.setMessage(value);
         }
         requestCase_ = 1;
         return this;
@@ -13101,8 +13116,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 2) {
             indexBuilder_.mergeFrom(value);
+          } else {
+            indexBuilder_.setMessage(value);
           }
-          indexBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;
@@ -13242,8 +13258,9 @@ public final class BoardingPass {
         } else {
           if (requestCase_ == 3) {
             passIdBuilder_.mergeFrom(value);
+          } else {
+            passIdBuilder_.setMessage(value);
           }
-          passIdBuilder_.setMessage(value);
         }
         requestCase_ = 3;
         return this;
@@ -13494,6 +13511,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14368,6 +14387,8 @@ public final class BoardingPass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

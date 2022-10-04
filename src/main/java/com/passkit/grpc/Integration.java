@@ -218,6 +218,18 @@ public final class Integration {
      */
     TESSITURA(9),
     /**
+     * <code>ITERABLE = 10;</code>
+     */
+    ITERABLE(10),
+    /**
+     * <code>MOENGAGE = 11;</code>
+     */
+    MOENGAGE(11),
+    /**
+     * <code>ORACLE_RESPONSYS = 12;</code>
+     */
+    ORACLE_RESPONSYS(12),
+    /**
      * <code>_CONFIG_TYPE_1 = 100;</code>
      */
     _CONFIG_TYPE_1(100),
@@ -265,6 +277,18 @@ public final class Integration {
      */
     public static final int TESSITURA_VALUE = 9;
     /**
+     * <code>ITERABLE = 10;</code>
+     */
+    public static final int ITERABLE_VALUE = 10;
+    /**
+     * <code>MOENGAGE = 11;</code>
+     */
+    public static final int MOENGAGE_VALUE = 11;
+    /**
+     * <code>ORACLE_RESPONSYS = 12;</code>
+     */
+    public static final int ORACLE_RESPONSYS_VALUE = 12;
+    /**
      * <code>_CONFIG_TYPE_1 = 100;</code>
      */
     public static final int _CONFIG_TYPE_1_VALUE = 100;
@@ -304,6 +328,9 @@ public final class Integration {
         case 7: return MAILCHIMP;
         case 8: return SPROUT;
         case 9: return TESSITURA;
+        case 10: return ITERABLE;
+        case 11: return MOENGAGE;
+        case 12: return ORACLE_RESPONSYS;
         case 100: return _CONFIG_TYPE_1;
         default: return null;
       }
@@ -1784,6 +1811,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2302,8 +2331,8 @@ public final class Integration {
       }
       /**
        * <code>repeated .io.MembershipEventId ids = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of ids at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for ids to set.
        * @return This builder for chaining.
        */
       public Builder setIdsValue(
@@ -2509,6 +2538,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3027,8 +3058,8 @@ public final class Integration {
       }
       /**
        * <code>repeated .io.CouponEventId ids = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of ids at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for ids to set.
        * @return This builder for chaining.
        */
       public Builder setIdsValue(
@@ -3180,9 +3211,11 @@ public final class Integration {
      * <code>map&lt;int32, string&gt; configurations = 2;</code>
      */
 
-    java.lang.String getConfigurationsOrDefault(
+    /* nullable */
+java.lang.String getConfigurationsOrDefault(
         int key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Key string is enum of ConfigurationType (e.g. WEBHOOK, DB_MYSQL, ZOHO). Value string is a json string of configuration object.
@@ -3275,6 +3308,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4228,6 +4263,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4975,6 +5012,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5844,6 +5883,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7284,6 +7325,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8302,6 +8345,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9246,6 +9291,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10355,6 +10402,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11820,8 +11869,8 @@ public final class Integration {
        * </pre>
        *
        * <code>repeated .io.PassEventId passEventId = 4;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of passEventId at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for passEventId to set.
        * @return This builder for chaining.
        */
       public Builder setPassEventIdValue(
@@ -12401,8 +12450,9 @@ public final class Integration {
         } else {
           if (protocolEventIdCase_ == 10) {
             membershipEventsBuilder_.mergeFrom(value);
+          } else {
+            membershipEventsBuilder_.setMessage(value);
           }
-          membershipEventsBuilder_.setMessage(value);
         }
         protocolEventIdCase_ = 10;
         return this;
@@ -12578,8 +12628,9 @@ public final class Integration {
         } else {
           if (protocolEventIdCase_ == 11) {
             couponEventsBuilder_.mergeFrom(value);
+          } else {
+            couponEventsBuilder_.setMessage(value);
           }
-          couponEventsBuilder_.setMessage(value);
         }
         protocolEventIdCase_ = 11;
         return this;
@@ -12828,6 +12879,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -13584,9 +13637,11 @@ public final class Integration {
      * <code>map&lt;string, string&gt; params = 2;</code>
      */
 
-    java.lang.String getParamsOrDefault(
+    /* nullable */
+java.lang.String getParamsOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Variables placed within the path of an endpoint.
@@ -13702,6 +13757,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14788,6 +14845,8 @@ public final class Integration {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -15448,56 +15507,57 @@ public final class Integration {
       " platform.*}\n\021IntegrationStatus\022\033\n\027INTEG" +
       "RATION_STATUS_NONE\020\000\022\030\n\024INTEGRATION_DISA" +
       "BLED\020\001\022\026\n\022INTEGRATION_ACTIVE\020\002\022\031\n\025INTEGR" +
-      "ATION_SUSPENDED\020\003*\264\001\n\021ConfigurationType\022" +
+      "ATION_SUSPENDED\020\003*\346\001\n\021ConfigurationType\022" +
       "\026\n\022CONFIGURATION_NONE\020\000\022\013\n\007WEBHOOK\020\001\022\014\n\010" +
       "DB_MYSQL\020\002\022\010\n\004ZOHO\020\003\022\t\n\005BRAZE\020\004\022\r\n\tCODER" +
       "EADR\020\005\022\n\n\006ZAPIER\020\006\022\r\n\tMAILCHIMP\020\007\022\n\n\006SPR" +
-      "OUT\020\010\022\r\n\tTESSITURA\020\t\022\022\n\016_CONFIG_TYPE_1\020d" +
-      "*\243\004\n\017IntegrationType\022\031\n\025INTEGRATION_TYPE" +
-      "_NONE\020\000\022\026\n\022SOURCE_INTEGRATION\020\001\022&\n\"HOOK_" +
-      "BEFORE_OBJECT_RECORD_CREATION\020\004\022%\n!HOOK_" +
-      "AFTER_OBJECT_RECORD_CREATION\020\010\022\032\n\026HOOK_B" +
-      "EFORE_PASS_ISSUE\020\020\022\031\n\025HOOK_AFTER_PASS_IS" +
-      "SUE\020 \022\033\n\027HOOK_AFTER_PASS_INSTALL\020@\022\036\n\031HO" +
-      "OK_AFTER_PASS_UNINSTALL\020\200\001\022%\n HOOK_BEFOR" +
-      "E_OBJECT_RECORD_UPDATE\020\200\002\022$\n\037HOOK_AFTER_" +
-      "OBJECT_RECORD_UPDATE\020\200\004\022#\n\036HOOK_BEFORE_P" +
-      "ASS_RECORD_UPDATE\020\200\010\022\"\n\035HOOK_AFTER_PASS_" +
-      "RECORD_UPDATE\020\200\020\022\034\n\027HOOK_BEFORE_PASS_UPD" +
-      "ATE\020\200 \022\033\n\026HOOK_AFTER_PASS_UPDATE\020\200@\022$\n\036H" +
-      "OOK_BEFORE_PASS_RECORD_DELETE\020\200\200\001\022#\n\035HOO" +
-      "K_AFTER_PASS_RECORD_DELETE\020\200\200\002*\334\004\n\020Proto" +
-      "colIntgType\022\033\n\027PROTOCOL_INTG_TYPE_NONE\020\000" +
-      "\022$\n HOOK_BEFORE_MEMBER_UPDATE_POINTS\020\001\022#" +
-      "\n\037HOOK_AFTER_MEMBER_UPDATE_POINTS\020\004\022\"\n\036H" +
-      "OOK_BEFORE_MEMBER_TIER_UPDATE\020\010\022!\n\035HOOK_" +
-      "AFTER_MEMBER_TIER_UPDATE\020\020\022\037\n\033HOOK_BEFOR" +
-      "E_MEMBER_CHECK_IN\020 \022\036\n\032HOOK_AFTER_MEMBER" +
-      "_CHECK_IN\020@\022!\n\034HOOK_BEFORE_MEMBER_CHECK_" +
-      "OUT\020\200\001\022 \n\033HOOK_AFTER_MEMBER_CHECK_OUT\020\200\002" +
-      "\022\036\n\031HOOK_BEFORE_COUPON_REDEEM\020\200\020\022\035\n\030HOOK" +
-      "_AFTER_COUPON_REDEEM\020\200 \022$\n\037HOOK_BEFORE_U" +
-      "PDATE_COUPON_OFFER\020\200@\022$\n\036HOOK_AFTER_UPDA" +
-      "TE_COUPON_OFFER\020\200\200\001\022%\n\037HOOK_BEFORE_CREAT" +
-      "E_COUPON_OFFER\020\200\200\002\022$\n\036HOOK_AFTER_CREATE_" +
-      "COUPON_OFFER\020\200\200\004\022\035\n\026HOOK_BEFORE_UPDATE_P" +
-      "II\020\200\200\200\001\022\034\n\025HOOK_AFTER_UPDATE_PII\020\200\200\200\002*\321\001" +
-      "\n\013PassEventId\022\023\n\017PASS_EVENT_NONE\020\000\022\035\n\031PA" +
-      "SS_EVENT_RECORD_CREATED\020\001\022\030\n\024PASS_EVENT_" +
-      "INSTALLED\020\002\022\035\n\031PASS_EVENT_RECORD_UPDATED" +
-      "\020\004\022\032\n\026PASS_EVENT_UNINSTALLED\020\010\022\032\n\026PASS_E" +
-      "VENT_INVALIDATED\020\020\022\035\n\031PASS_EVENT_RECORD_" +
-      "DELETED\020 *_\n\021MembershipEventId\022\025\n\021MEMBER" +
-      "_EVENT_NONE\020\000\022\031\n\025MEMBER_EVENT_ENROLLED\020\001" +
-      "\022\030\n\024MEMBER_EVENT_UPDATED\020\002*\217\001\n\rCouponEve" +
-      "ntId\022\025\n\021COUPON_EVENT_NONE\020\000\022\030\n\024COUPON_EV" +
-      "ENT_CREATED\020\001\022\031\n\025COUPON_EVENT_REDEEMED\020\002" +
-      "\022\030\n\024COUPON_EVENT_UPDATED\020\004\022\030\n\024COUPON_EVE" +
-      "NT_DELETED\020\010*S\n\014ActionMethod\022\017\n\013METHOD_N" +
-      "ONE\020\000\022\017\n\013METHOD_POST\020\001\022\016\n\nMETHOD_PUT\020\002\022\021" +
-      "\n\rMETHOD_DELETE\020\003BG\n\020com.passkit.grpcZ$s" +
-      "tash.passkit.com/io/model/sdk/go/io\252\002\014Pa" +
-      "ssKit.Grpcb\006proto3"
+      "OUT\020\010\022\r\n\tTESSITURA\020\t\022\014\n\010ITERABLE\020\n\022\014\n\010MO" +
+      "ENGAGE\020\013\022\024\n\020ORACLE_RESPONSYS\020\014\022\022\n\016_CONFI" +
+      "G_TYPE_1\020d*\243\004\n\017IntegrationType\022\031\n\025INTEGR" +
+      "ATION_TYPE_NONE\020\000\022\026\n\022SOURCE_INTEGRATION\020" +
+      "\001\022&\n\"HOOK_BEFORE_OBJECT_RECORD_CREATION\020" +
+      "\004\022%\n!HOOK_AFTER_OBJECT_RECORD_CREATION\020\010" +
+      "\022\032\n\026HOOK_BEFORE_PASS_ISSUE\020\020\022\031\n\025HOOK_AFT" +
+      "ER_PASS_ISSUE\020 \022\033\n\027HOOK_AFTER_PASS_INSTA" +
+      "LL\020@\022\036\n\031HOOK_AFTER_PASS_UNINSTALL\020\200\001\022%\n " +
+      "HOOK_BEFORE_OBJECT_RECORD_UPDATE\020\200\002\022$\n\037H" +
+      "OOK_AFTER_OBJECT_RECORD_UPDATE\020\200\004\022#\n\036HOO" +
+      "K_BEFORE_PASS_RECORD_UPDATE\020\200\010\022\"\n\035HOOK_A" +
+      "FTER_PASS_RECORD_UPDATE\020\200\020\022\034\n\027HOOK_BEFOR" +
+      "E_PASS_UPDATE\020\200 \022\033\n\026HOOK_AFTER_PASS_UPDA" +
+      "TE\020\200@\022$\n\036HOOK_BEFORE_PASS_RECORD_DELETE\020" +
+      "\200\200\001\022#\n\035HOOK_AFTER_PASS_RECORD_DELETE\020\200\200\002" +
+      "*\334\004\n\020ProtocolIntgType\022\033\n\027PROTOCOL_INTG_T" +
+      "YPE_NONE\020\000\022$\n HOOK_BEFORE_MEMBER_UPDATE_" +
+      "POINTS\020\001\022#\n\037HOOK_AFTER_MEMBER_UPDATE_POI" +
+      "NTS\020\004\022\"\n\036HOOK_BEFORE_MEMBER_TIER_UPDATE\020" +
+      "\010\022!\n\035HOOK_AFTER_MEMBER_TIER_UPDATE\020\020\022\037\n\033" +
+      "HOOK_BEFORE_MEMBER_CHECK_IN\020 \022\036\n\032HOOK_AF" +
+      "TER_MEMBER_CHECK_IN\020@\022!\n\034HOOK_BEFORE_MEM" +
+      "BER_CHECK_OUT\020\200\001\022 \n\033HOOK_AFTER_MEMBER_CH" +
+      "ECK_OUT\020\200\002\022\036\n\031HOOK_BEFORE_COUPON_REDEEM\020" +
+      "\200\020\022\035\n\030HOOK_AFTER_COUPON_REDEEM\020\200 \022$\n\037HOO" +
+      "K_BEFORE_UPDATE_COUPON_OFFER\020\200@\022$\n\036HOOK_" +
+      "AFTER_UPDATE_COUPON_OFFER\020\200\200\001\022%\n\037HOOK_BE" +
+      "FORE_CREATE_COUPON_OFFER\020\200\200\002\022$\n\036HOOK_AFT" +
+      "ER_CREATE_COUPON_OFFER\020\200\200\004\022\035\n\026HOOK_BEFOR" +
+      "E_UPDATE_PII\020\200\200\200\001\022\034\n\025HOOK_AFTER_UPDATE_P" +
+      "II\020\200\200\200\002*\321\001\n\013PassEventId\022\023\n\017PASS_EVENT_NO" +
+      "NE\020\000\022\035\n\031PASS_EVENT_RECORD_CREATED\020\001\022\030\n\024P" +
+      "ASS_EVENT_INSTALLED\020\002\022\035\n\031PASS_EVENT_RECO" +
+      "RD_UPDATED\020\004\022\032\n\026PASS_EVENT_UNINSTALLED\020\010" +
+      "\022\032\n\026PASS_EVENT_INVALIDATED\020\020\022\035\n\031PASS_EVE" +
+      "NT_RECORD_DELETED\020 *_\n\021MembershipEventId" +
+      "\022\025\n\021MEMBER_EVENT_NONE\020\000\022\031\n\025MEMBER_EVENT_" +
+      "ENROLLED\020\001\022\030\n\024MEMBER_EVENT_UPDATED\020\002*\217\001\n" +
+      "\rCouponEventId\022\025\n\021COUPON_EVENT_NONE\020\000\022\030\n" +
+      "\024COUPON_EVENT_CREATED\020\001\022\031\n\025COUPON_EVENT_" +
+      "REDEEMED\020\002\022\030\n\024COUPON_EVENT_UPDATED\020\004\022\030\n\024" +
+      "COUPON_EVENT_DELETED\020\010*S\n\014ActionMethod\022\017" +
+      "\n\013METHOD_NONE\020\000\022\017\n\013METHOD_POST\020\001\022\016\n\nMETH" +
+      "OD_PUT\020\002\022\021\n\rMETHOD_DELETE\020\003BG\n\020com.passk" +
+      "it.grpcZ$stash.passkit.com/io/model/sdk/" +
+      "go/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

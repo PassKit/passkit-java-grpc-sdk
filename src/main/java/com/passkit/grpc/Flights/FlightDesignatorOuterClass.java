@@ -1164,7 +1164,8 @@ public final class FlightDesignatorOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated flights.FlightDesignator.autoInvalidateCancelledPasses is deprecated.
+     *     See io/flights/flight_designator.proto;l=118
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Deprecated boolean getAutoInvalidateCancelledPasses();
@@ -1637,6 +1638,8 @@ public final class FlightDesignatorOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2507,7 +2510,8 @@ public final class FlightDesignatorOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated flights.FlightDesignator.autoInvalidateCancelledPasses is deprecated.
+     *     See io/flights/flight_designator.proto;l=118
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Override
@@ -5642,8 +5646,8 @@ public final class FlightDesignatorOuterClass {
        * </pre>
        *
        * <code>repeated .flights.FlightAlerts alerts = 18;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of alerts at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for alerts to set.
        * @return This builder for chaining.
        */
       public Builder setAlertsValue(
@@ -5833,7 +5837,8 @@ public final class FlightDesignatorOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.FlightDesignator.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight_designator.proto;l=118
        * @return The autoInvalidateCancelledPasses.
        */
       @java.lang.Override
@@ -5846,7 +5851,8 @@ public final class FlightDesignatorOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.FlightDesignator.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight_designator.proto;l=118
        * @param value The autoInvalidateCancelledPasses to set.
        * @return This builder for chaining.
        */
@@ -5862,7 +5868,8 @@ public final class FlightDesignatorOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 21 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.FlightDesignator.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight_designator.proto;l=118
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAutoInvalidateCancelledPasses() {
@@ -7202,6 +7209,8 @@ public final class FlightDesignatorOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8213,6 +8222,8 @@ public final class FlightDesignatorOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10020,6 +10031,8 @@ public final class FlightDesignatorOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

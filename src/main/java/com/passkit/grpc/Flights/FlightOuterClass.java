@@ -953,7 +953,8 @@ public final class FlightOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated flights.Flight.autoInvalidateCancelledPasses is deprecated.
+     *     See io/flights/flight.proto;l=111
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Deprecated boolean getAutoInvalidateCancelledPasses();
@@ -1626,6 +1627,8 @@ public final class FlightOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2551,7 +2554,8 @@ public final class FlightOuterClass {
      * </pre>
      *
      * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
-     * @deprecated
+     * @deprecated flights.Flight.autoInvalidateCancelledPasses is deprecated.
+     *     See io/flights/flight.proto;l=111
      * @return The autoInvalidateCancelledPasses.
      */
     @java.lang.Override
@@ -6582,7 +6586,8 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.Flight.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight.proto;l=111
        * @return The autoInvalidateCancelledPasses.
        */
       @java.lang.Override
@@ -6595,7 +6600,8 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.Flight.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight.proto;l=111
        * @param value The autoInvalidateCancelledPasses to set.
        * @return This builder for chaining.
        */
@@ -6611,7 +6617,8 @@ public final class FlightOuterClass {
        * </pre>
        *
        * <code>bool autoInvalidateCancelledPasses = 23 [deprecated = true];</code>
-       * @deprecated
+       * @deprecated flights.Flight.autoInvalidateCancelledPasses is deprecated.
+       *     See io/flights/flight.proto;l=111
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAutoInvalidateCancelledPasses() {
@@ -8624,6 +8631,8 @@ public final class FlightOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

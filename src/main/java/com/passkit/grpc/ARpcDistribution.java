@@ -28,7 +28,7 @@ public final class ARpcDistribution {
       "tobuf/empty.proto\032.protoc-gen-openapiv2/" +
       "options/annotations.proto\032\036io/common/com" +
       "mon_objects.proto\032\034io/common/distributio" +
-      "n.proto2\345\t\n\014Distribution\022\257\001\n\020sendWelcome" +
+      "n.proto2\242\r\n\014Distribution\022\257\001\n\020sendWelcome" +
       "Email\022\034.io.EmailDistributionRequest\032\026.go" +
       "ogle.protobuf.Empty\"e\202\323\344\223\002\030\"\023/distributi" +
       "on/email:\001*\222AD\022\022Send Welcome Email\032.Send" +
@@ -59,30 +59,41 @@ public final class ARpcDistribution {
       "\030/distribution/csv-import:\001*\222Ap\022\023Import " +
       "Protocol Csv\032YImport protocol csv takes " +
       "a formatted CSV and creates billable pro" +
-      "tocol specific records.B\201\007\n\020com.passkit." +
-      "grpcZ$stash.passkit.com/io/model/sdk/go/" +
-      "io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030PassKit Distri" +
-      "bution API\022ZAPI for generating SmartPass" +
-      " links and distribution of your passes v" +
-      "ia different channels.\0328https://passkit." +
-      "com/legal/terms-of-subscription-service/" +
-      "\"?\n\017PassKit Support\022\027https://docs.passki" +
-      "t.io\032\023support@passkit.com*\001\0022\020applicatio" +
-      "n/json:\020application/jsonR9\n\003200\0222\n(Retur" +
-      "ned when the request is successful.\022\006\n\004\232" +
-      "\002\001\007R4\n\003400\022-\n+Returned when wrong user i" +
-      "nput is provided.R0\n\003401\022)\n\'Returned whe" +
-      "n the user is unauthorized.RP\n\003403\022I\nGRe" +
-      "turned when the user does not have permi" +
-      "ssion to access the resource.R;\n\003404\0224\n*" +
-      "Returned when the resource does not exis" +
-      "t.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when there" +
-      " is an unexpected error.\022\006\n\004\232\002\001\007RW\n\003503\022" +
-      "P\nNServer is unavailable. Back off for 2" +
-      "50ms and repeat request until successful" +
-      ".Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenticatio" +
-      "n token.\032\rAuthorization \002b\020\n\016\n\napiKeyAut" +
-      "h\022\000b\006proto3"
+      "tocol specific records.\022\272\003\n\017validateBarc" +
+      "ode\022\013.io.Payload\032\013.io.Payload\"\214\003\202\323\344\223\002\"\"\035" +
+      "/distribution/validateBarcode:\001*\222A\340\002\022\020Va" +
+      "lidate Barcode\032\270\001Validate a TOTP barcode" +
+      ". Send the full barcode format {{payload" +
+      "}}||{{key}||{{timestamp}}||{{totp}}. If " +
+      "TOTP is valid and recent, the barcode pa" +
+      "yload without TOTP data will be returned" +
+      ".JL\n\003400\022E\nCBarcode payload provided was" +
+      " not in a format recognized by PassKit.J" +
+      "C\n\003401\022<\n:The barcode TOTP was not valid" +
+      " and should not be accepted.B\201\007\n\020com.pas" +
+      "skit.grpcZ$stash.passkit.com/io/model/sd" +
+      "k/go/io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030PassKit D" +
+      "istribution API\022ZAPI for generating Smar" +
+      "tPass links and distribution of your pas" +
+      "ses via different channels.\0328https://pas" +
+      "skit.com/legal/terms-of-subscription-ser" +
+      "vice/\"?\n\017PassKit Support\022\027https://docs.p" +
+      "asskit.io\032\023support@passkit.com*\001\0022\020appli" +
+      "cation/json:\020application/jsonR9\n\003200\0222\n(" +
+      "Returned when the request is successful." +
+      "\022\006\n\004\232\002\001\007R4\n\003400\022-\n+Returned when wrong u" +
+      "ser input is provided.R0\n\003401\022)\n\'Returne" +
+      "d when the user is unauthorized.RP\n\003403\022" +
+      "I\nGReturned when the user does not have " +
+      "permission to access the resource.R;\n\00340" +
+      "4\0224\n*Returned when the resource does not" +
+      " exist.\022\006\n\004\232\002\001\007R<\n\003500\0225\n+Returned when " +
+      "there is an unexpected error.\022\006\n\004\232\002\001\007RW\n" +
+      "\003503\022P\nNServer is unavailable. Back off " +
+      "for 250ms and repeat request until succe" +
+      "ssful.Z>\n<\n\napiKeyAuth\022.\010\002\022\031JWT Authenti" +
+      "cation token.\032\rAuthorization \002b\020\n\016\n\napiK" +
+      "eyAuth\022\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

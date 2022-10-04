@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.44.1)",
+    value = "by gRPC proto compiler (version 1.48.0)",
     comments = "Source: io/core/a_rpc_distribution.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DistributionGrpc {
@@ -170,6 +170,37 @@ public final class DistributionGrpc {
     return getImportProtocolCsvMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Payload,
+      com.passkit.grpc.CommonObjects.Payload> getValidateBarcodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "validateBarcode",
+      requestType = com.passkit.grpc.CommonObjects.Payload.class,
+      responseType = com.passkit.grpc.CommonObjects.Payload.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Payload,
+      com.passkit.grpc.CommonObjects.Payload> getValidateBarcodeMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Payload, com.passkit.grpc.CommonObjects.Payload> getValidateBarcodeMethod;
+    if ((getValidateBarcodeMethod = DistributionGrpc.getValidateBarcodeMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getValidateBarcodeMethod = DistributionGrpc.getValidateBarcodeMethod) == null) {
+          DistributionGrpc.getValidateBarcodeMethod = getValidateBarcodeMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Payload, com.passkit.grpc.CommonObjects.Payload>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "validateBarcode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Payload.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Payload.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("validateBarcode"))
+              .build();
+        }
+      }
+    }
+    return getValidateBarcodeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -253,6 +284,13 @@ public final class DistributionGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportProtocolCsvMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateBarcodeMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -290,6 +328,13 @@ public final class DistributionGrpc {
                 com.passkit.grpc.Distribution.ImportProtocolRequest,
                 com.google.protobuf.Empty>(
                   this, METHODID_IMPORT_PROTOCOL_CSV)))
+          .addMethod(
+            getValidateBarcodeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.passkit.grpc.CommonObjects.Payload,
+                com.passkit.grpc.CommonObjects.Payload>(
+                  this, METHODID_VALIDATE_BARCODE)))
           .build();
     }
   }
@@ -347,6 +392,14 @@ public final class DistributionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getImportProtocolCsvMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getValidateBarcodeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -396,6 +449,13 @@ public final class DistributionGrpc {
     public com.google.protobuf.Empty importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getImportProtocolCsvMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Payload validateBarcode(com.passkit.grpc.CommonObjects.Payload request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getValidateBarcodeMethod(), getCallOptions(), request);
     }
   }
 
@@ -452,6 +512,14 @@ public final class DistributionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getImportProtocolCsvMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Payload> validateBarcode(
+        com.passkit.grpc.CommonObjects.Payload request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getValidateBarcodeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_WELCOME_EMAIL = 0;
@@ -459,6 +527,7 @@ public final class DistributionGrpc {
   private static final int METHODID_GET_DATA_COLLECTION_PAGE_FIELDS = 2;
   private static final int METHODID_UPLOAD_SMART_PASS_CSV = 3;
   private static final int METHODID_IMPORT_PROTOCOL_CSV = 4;
+  private static final int METHODID_VALIDATE_BARCODE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -496,6 +565,10 @@ public final class DistributionGrpc {
         case METHODID_IMPORT_PROTOCOL_CSV:
           serviceImpl.importProtocolCsv((com.passkit.grpc.Distribution.ImportProtocolRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_VALIDATE_BARCODE:
+          serviceImpl.validateBarcode((com.passkit.grpc.CommonObjects.Payload) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -563,6 +636,7 @@ public final class DistributionGrpc {
               .addMethod(getGetDataCollectionPageFieldsMethod())
               .addMethod(getUploadSmartPassCsvMethod())
               .addMethod(getImportProtocolCsvMethod())
+              .addMethod(getValidateBarcodeMethod())
               .build();
         }
       }

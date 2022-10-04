@@ -58,9 +58,11 @@ public final class Billing {
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
 
-    com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
+    /* nullable */
+com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
         int key,
-        com.passkit.grpc.Billing.QuotaDetails defaultValue);
+        /* nullable */
+com.passkit.grpc.Billing.QuotaDetails defaultValue);
     /**
      * <pre>
      * key is one of pk.MeteredEventType
@@ -142,6 +144,8 @@ public final class Billing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -905,6 +909,8 @@ public final class Billing {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

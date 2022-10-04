@@ -3848,6 +3848,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4778,16 +4780,996 @@ public final class Template {
 
   }
 
+  public interface TOPTParametersOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.TOPTParameters)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The key used to generate the TOPT, provided as a Base16 string
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    java.lang.String getKey();
+    /**
+     * <pre>
+     * The key used to generate the TOPT, provided as a Base16 string
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+
+    /**
+     * <pre>
+     * Time in milliseconds between key generation.
+     * </pre>
+     *
+     * <code>uint32 milliseconds = 2;</code>
+     * @return The milliseconds.
+     */
+    int getMilliseconds();
+
+    /**
+     * <pre>
+     * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+     * </pre>
+     *
+     * <code>string valueString = 3;</code>
+     * @return The valueString.
+     */
+    java.lang.String getValueString();
+    /**
+     * <pre>
+     * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+     * </pre>
+     *
+     * <code>string valueString = 3;</code>
+     * @return The bytes for valueString.
+     */
+    com.google.protobuf.ByteString
+        getValueStringBytes();
+
+    /**
+     * <pre>
+     * NUmber of digits for the OTP
+     * </pre>
+     *
+     * <code>uint32 digits = 4;</code>
+     * @return The digits.
+     */
+    int getDigits();
+  }
+  /**
+   * Protobuf type {@code io.TOPTParameters}
+   */
+  public static final class TOPTParameters extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.TOPTParameters)
+      TOPTParametersOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TOPTParameters.newBuilder() to construct.
+    private TOPTParameters(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TOPTParameters() {
+      key_ = "";
+      valueString_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TOPTParameters();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TOPTParameters(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              key_ = s;
+              break;
+            }
+            case 16: {
+
+              milliseconds_ = input.readUInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              valueString_ = s;
+              break;
+            }
+            case 32: {
+
+              digits_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.passkit.grpc.Template.internal_static_io_TOPTParameters_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.passkit.grpc.Template.internal_static_io_TOPTParameters_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.passkit.grpc.Template.TOPTParameters.class, com.passkit.grpc.Template.TOPTParameters.Builder.class);
+    }
+
+    public static final int KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object key_;
+    /**
+     * <pre>
+     * The key used to generate the TOPT, provided as a Base16 string
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The key.
+     */
+    @java.lang.Override
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        key_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The key used to generate the TOPT, provided as a Base16 string
+     * </pre>
+     *
+     * <code>string key = 1;</code>
+     * @return The bytes for key.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MILLISECONDS_FIELD_NUMBER = 2;
+    private int milliseconds_;
+    /**
+     * <pre>
+     * Time in milliseconds between key generation.
+     * </pre>
+     *
+     * <code>uint32 milliseconds = 2;</code>
+     * @return The milliseconds.
+     */
+    @java.lang.Override
+    public int getMilliseconds() {
+      return milliseconds_;
+    }
+
+    public static final int VALUESTRING_FIELD_NUMBER = 3;
+    private volatile java.lang.Object valueString_;
+    /**
+     * <pre>
+     * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+     * </pre>
+     *
+     * <code>string valueString = 3;</code>
+     * @return The valueString.
+     */
+    @java.lang.Override
+    public java.lang.String getValueString() {
+      java.lang.Object ref = valueString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueString_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+     * </pre>
+     *
+     * <code>string valueString = 3;</code>
+     * @return The bytes for valueString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueStringBytes() {
+      java.lang.Object ref = valueString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueString_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DIGITS_FIELD_NUMBER = 4;
+    private int digits_;
+    /**
+     * <pre>
+     * NUmber of digits for the OTP
+     * </pre>
+     *
+     * <code>uint32 digits = 4;</code>
+     * @return The digits.
+     */
+    @java.lang.Override
+    public int getDigits() {
+      return digits_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, key_);
+      }
+      if (milliseconds_ != 0) {
+        output.writeUInt32(2, milliseconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueString_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valueString_);
+      }
+      if (digits_ != 0) {
+        output.writeUInt32(4, digits_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, key_);
+      }
+      if (milliseconds_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, milliseconds_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueString_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valueString_);
+      }
+      if (digits_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, digits_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.passkit.grpc.Template.TOPTParameters)) {
+        return super.equals(obj);
+      }
+      com.passkit.grpc.Template.TOPTParameters other = (com.passkit.grpc.Template.TOPTParameters) obj;
+
+      if (!getKey()
+          .equals(other.getKey())) return false;
+      if (getMilliseconds()
+          != other.getMilliseconds()) return false;
+      if (!getValueString()
+          .equals(other.getValueString())) return false;
+      if (getDigits()
+          != other.getDigits()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getKey().hashCode();
+      hash = (37 * hash) + MILLISECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + getMilliseconds();
+      hash = (37 * hash) + VALUESTRING_FIELD_NUMBER;
+      hash = (53 * hash) + getValueString().hashCode();
+      hash = (37 * hash) + DIGITS_FIELD_NUMBER;
+      hash = (53 * hash) + getDigits();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.passkit.grpc.Template.TOPTParameters parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.passkit.grpc.Template.TOPTParameters prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.TOPTParameters}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.TOPTParameters)
+        com.passkit.grpc.Template.TOPTParametersOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.passkit.grpc.Template.internal_static_io_TOPTParameters_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.passkit.grpc.Template.internal_static_io_TOPTParameters_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.passkit.grpc.Template.TOPTParameters.class, com.passkit.grpc.Template.TOPTParameters.Builder.class);
+      }
+
+      // Construct using com.passkit.grpc.Template.TOPTParameters.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        key_ = "";
+
+        milliseconds_ = 0;
+
+        valueString_ = "";
+
+        digits_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.passkit.grpc.Template.internal_static_io_TOPTParameters_descriptor;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.TOPTParameters getDefaultInstanceForType() {
+        return com.passkit.grpc.Template.TOPTParameters.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.TOPTParameters build() {
+        com.passkit.grpc.Template.TOPTParameters result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.passkit.grpc.Template.TOPTParameters buildPartial() {
+        com.passkit.grpc.Template.TOPTParameters result = new com.passkit.grpc.Template.TOPTParameters(this);
+        result.key_ = key_;
+        result.milliseconds_ = milliseconds_;
+        result.valueString_ = valueString_;
+        result.digits_ = digits_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.passkit.grpc.Template.TOPTParameters) {
+          return mergeFrom((com.passkit.grpc.Template.TOPTParameters)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.passkit.grpc.Template.TOPTParameters other) {
+        if (other == com.passkit.grpc.Template.TOPTParameters.getDefaultInstance()) return this;
+        if (!other.getKey().isEmpty()) {
+          key_ = other.key_;
+          onChanged();
+        }
+        if (other.getMilliseconds() != 0) {
+          setMilliseconds(other.getMilliseconds());
+        }
+        if (!other.getValueString().isEmpty()) {
+          valueString_ = other.valueString_;
+          onChanged();
+        }
+        if (other.getDigits() != 0) {
+          setDigits(other.getDigits());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.passkit.grpc.Template.TOPTParameters parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.passkit.grpc.Template.TOPTParameters) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object key_ = "";
+      /**
+       * <pre>
+       * The key used to generate the TOPT, provided as a Base16 string
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return The key.
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The key used to generate the TOPT, provided as a Base16 string
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return The bytes for key.
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The key used to generate the TOPT, provided as a Base16 string
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @param value The key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The key used to generate the TOPT, provided as a Base16 string
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKey() {
+        
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The key used to generate the TOPT, provided as a Base16 string
+       * </pre>
+       *
+       * <code>string key = 1;</code>
+       * @param value The bytes for key to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int milliseconds_ ;
+      /**
+       * <pre>
+       * Time in milliseconds between key generation.
+       * </pre>
+       *
+       * <code>uint32 milliseconds = 2;</code>
+       * @return The milliseconds.
+       */
+      @java.lang.Override
+      public int getMilliseconds() {
+        return milliseconds_;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds between key generation.
+       * </pre>
+       *
+       * <code>uint32 milliseconds = 2;</code>
+       * @param value The milliseconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMilliseconds(int value) {
+        
+        milliseconds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Time in milliseconds between key generation.
+       * </pre>
+       *
+       * <code>uint32 milliseconds = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMilliseconds() {
+        
+        milliseconds_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueString_ = "";
+      /**
+       * <pre>
+       * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+       * </pre>
+       *
+       * <code>string valueString = 3;</code>
+       * @return The valueString.
+       */
+      public java.lang.String getValueString() {
+        java.lang.Object ref = valueString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valueString_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+       * </pre>
+       *
+       * <code>string valueString = 3;</code>
+       * @return The bytes for valueString.
+       */
+      public com.google.protobuf.ByteString
+          getValueStringBytes() {
+        java.lang.Object ref = valueString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+       * </pre>
+       *
+       * <code>string valueString = 3;</code>
+       * @param value The valueString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        valueString_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+       * </pre>
+       *
+       * <code>string valueString = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueString() {
+        
+        valueString_ = getDefaultInstance().getValueString();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * String to encode in the barcode. The string {{timestamp}} will be replaced with the timestamp of the code and {{totp}} will be replaced by the TOTP value.  E.g. `${pid}-myCustomText-{{timestamp}}-{{totp}}`
+       * </pre>
+       *
+       * <code>string valueString = 3;</code>
+       * @param value The bytes for valueString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        valueString_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int digits_ ;
+      /**
+       * <pre>
+       * NUmber of digits for the OTP
+       * </pre>
+       *
+       * <code>uint32 digits = 4;</code>
+       * @return The digits.
+       */
+      @java.lang.Override
+      public int getDigits() {
+        return digits_;
+      }
+      /**
+       * <pre>
+       * NUmber of digits for the OTP
+       * </pre>
+       *
+       * <code>uint32 digits = 4;</code>
+       * @param value The digits to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDigits(int value) {
+        
+        digits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NUmber of digits for the OTP
+       * </pre>
+       *
+       * <code>uint32 digits = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDigits() {
+        
+        digits_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.TOPTParameters)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.TOPTParameters)
+    private static final com.passkit.grpc.Template.TOPTParameters DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.passkit.grpc.Template.TOPTParameters();
+    }
+
+    public static com.passkit.grpc.Template.TOPTParameters getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TOPTParameters>
+        PARSER = new com.google.protobuf.AbstractParser<TOPTParameters>() {
+      @java.lang.Override
+      public TOPTParameters parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TOPTParameters(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TOPTParameters> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TOPTParameters> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.passkit.grpc.Template.TOPTParameters getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BarcodeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.Barcode)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Data to be encoded into the barcode.
+     * </pre>
+     *
      * <code>string payload = 1;</code>
      * @return The payload.
      */
     java.lang.String getPayload();
     /**
+     * <pre>
+     * Data to be encoded into the barcode.
+     * </pre>
+     *
      * <code>string payload = 1;</code>
      * @return The bytes for payload.
      */
@@ -4806,11 +5788,19 @@ public final class Template {
     com.passkit.grpc.Template.BarcodeType getFormat();
 
     /**
+     * <pre>
+     * Text to display underneath the barcode.
+     * </pre>
+     *
      * <code>string altText = 3;</code>
      * @return The altText.
      */
     java.lang.String getAltText();
     /**
+     * <pre>
+     * Text to display underneath the barcode.
+     * </pre>
+     *
      * <code>string altText = 3;</code>
      * @return The bytes for altText.
      */
@@ -4843,6 +5833,53 @@ public final class Template {
      */
     com.google.protobuf.ByteString
         getMessageEncodingBytes();
+
+    /**
+     * <pre>
+     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     * </pre>
+     *
+     * <code>bool suppressSecurity = 6;</code>
+     * @return The suppressSecurity.
+     */
+    boolean getSuppressSecurity();
+
+    /**
+     * <pre>
+     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     * </pre>
+     *
+     * <code>bool rotatingBarcode = 7;</code>
+     * @return The rotatingBarcode.
+     */
+    boolean getRotatingBarcode();
+
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @return Whether the totpParameters field is set.
+     */
+    boolean hasTotpParameters();
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @return The totpParameters.
+     */
+    com.passkit.grpc.Template.TOPTParameters getTotpParameters();
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     */
+    com.passkit.grpc.Template.TOPTParametersOrBuilder getTotpParametersOrBuilder();
   }
   /**
    * Protobuf type {@code io.Barcode}
@@ -4930,6 +5967,29 @@ public final class Template {
               messageEncoding_ = s;
               break;
             }
+            case 48: {
+
+              suppressSecurity_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              rotatingBarcode_ = input.readBool();
+              break;
+            }
+            case 66: {
+              com.passkit.grpc.Template.TOPTParameters.Builder subBuilder = null;
+              if (totpParameters_ != null) {
+                subBuilder = totpParameters_.toBuilder();
+              }
+              totpParameters_ = input.readMessage(com.passkit.grpc.Template.TOPTParameters.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(totpParameters_);
+                totpParameters_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4941,6 +6001,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4965,6 +6027,10 @@ public final class Template {
     public static final int PAYLOAD_FIELD_NUMBER = 1;
     private volatile java.lang.Object payload_;
     /**
+     * <pre>
+     * Data to be encoded into the barcode.
+     * </pre>
+     *
      * <code>string payload = 1;</code>
      * @return The payload.
      */
@@ -4982,6 +6048,10 @@ public final class Template {
       }
     }
     /**
+     * <pre>
+     * Data to be encoded into the barcode.
+     * </pre>
+     *
      * <code>string payload = 1;</code>
      * @return The bytes for payload.
      */
@@ -5022,6 +6092,10 @@ public final class Template {
     public static final int ALTTEXT_FIELD_NUMBER = 3;
     private volatile java.lang.Object altText_;
     /**
+     * <pre>
+     * Text to display underneath the barcode.
+     * </pre>
+     *
      * <code>string altText = 3;</code>
      * @return The altText.
      */
@@ -5039,6 +6113,10 @@ public final class Template {
       }
     }
     /**
+     * <pre>
+     * Text to display underneath the barcode.
+     * </pre>
+     *
      * <code>string altText = 3;</code>
      * @return The bytes for altText.
      */
@@ -5121,6 +6199,74 @@ public final class Template {
       }
     }
 
+    public static final int SUPPRESSSECURITY_FIELD_NUMBER = 6;
+    private boolean suppressSecurity_;
+    /**
+     * <pre>
+     * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+     * </pre>
+     *
+     * <code>bool suppressSecurity = 6;</code>
+     * @return The suppressSecurity.
+     */
+    @java.lang.Override
+    public boolean getSuppressSecurity() {
+      return suppressSecurity_;
+    }
+
+    public static final int ROTATINGBARCODE_FIELD_NUMBER = 7;
+    private boolean rotatingBarcode_;
+    /**
+     * <pre>
+     * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+     * </pre>
+     *
+     * <code>bool rotatingBarcode = 7;</code>
+     * @return The rotatingBarcode.
+     */
+    @java.lang.Override
+    public boolean getRotatingBarcode() {
+      return rotatingBarcode_;
+    }
+
+    public static final int TOTPPARAMETERS_FIELD_NUMBER = 8;
+    private com.passkit.grpc.Template.TOPTParameters totpParameters_;
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @return Whether the totpParameters field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotpParameters() {
+      return totpParameters_ != null;
+    }
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     * @return The totpParameters.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Template.TOPTParameters getTotpParameters() {
+      return totpParameters_ == null ? com.passkit.grpc.Template.TOPTParameters.getDefaultInstance() : totpParameters_;
+    }
+    /**
+     * <pre>
+     * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+     * </pre>
+     *
+     * <code>.io.TOPTParameters totpParameters = 8;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Template.TOPTParametersOrBuilder getTotpParametersOrBuilder() {
+      return getTotpParameters();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5150,6 +6296,15 @@ public final class Template {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageEncoding_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, messageEncoding_);
       }
+      if (suppressSecurity_ != false) {
+        output.writeBool(6, suppressSecurity_);
+      }
+      if (rotatingBarcode_ != false) {
+        output.writeBool(7, rotatingBarcode_);
+      }
+      if (totpParameters_ != null) {
+        output.writeMessage(8, getTotpParameters());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5175,6 +6330,18 @@ public final class Template {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(messageEncoding_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, messageEncoding_);
+      }
+      if (suppressSecurity_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, suppressSecurity_);
+      }
+      if (rotatingBarcode_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, rotatingBarcode_);
+      }
+      if (totpParameters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getTotpParameters());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5203,6 +6370,15 @@ public final class Template {
       }
       if (!getMessageEncoding()
           .equals(other.getMessageEncoding())) return false;
+      if (getSuppressSecurity()
+          != other.getSuppressSecurity()) return false;
+      if (getRotatingBarcode()
+          != other.getRotatingBarcode()) return false;
+      if (hasTotpParameters() != other.hasTotpParameters()) return false;
+      if (hasTotpParameters()) {
+        if (!getTotpParameters()
+            .equals(other.getTotpParameters())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5226,6 +6402,16 @@ public final class Template {
       }
       hash = (37 * hash) + MESSAGEENCODING_FIELD_NUMBER;
       hash = (53 * hash) + getMessageEncoding().hashCode();
+      hash = (37 * hash) + SUPPRESSSECURITY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuppressSecurity());
+      hash = (37 * hash) + ROTATINGBARCODE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRotatingBarcode());
+      if (hasTotpParameters()) {
+        hash = (37 * hash) + TOTPPARAMETERS_FIELD_NUMBER;
+        hash = (53 * hash) + getTotpParameters().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5373,6 +6559,16 @@ public final class Template {
         }
         messageEncoding_ = "";
 
+        suppressSecurity_ = false;
+
+        rotatingBarcode_ = false;
+
+        if (totpParametersBuilder_ == null) {
+          totpParameters_ = null;
+        } else {
+          totpParameters_ = null;
+          totpParametersBuilder_ = null;
+        }
         return this;
       }
 
@@ -5408,6 +6604,13 @@ public final class Template {
           result.localizedAltText_ = localizedAltTextBuilder_.build();
         }
         result.messageEncoding_ = messageEncoding_;
+        result.suppressSecurity_ = suppressSecurity_;
+        result.rotatingBarcode_ = rotatingBarcode_;
+        if (totpParametersBuilder_ == null) {
+          result.totpParameters_ = totpParameters_;
+        } else {
+          result.totpParameters_ = totpParametersBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -5474,6 +6677,15 @@ public final class Template {
           messageEncoding_ = other.messageEncoding_;
           onChanged();
         }
+        if (other.getSuppressSecurity() != false) {
+          setSuppressSecurity(other.getSuppressSecurity());
+        }
+        if (other.getRotatingBarcode() != false) {
+          setRotatingBarcode(other.getRotatingBarcode());
+        }
+        if (other.hasTotpParameters()) {
+          mergeTotpParameters(other.getTotpParameters());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -5505,6 +6717,10 @@ public final class Template {
 
       private java.lang.Object payload_ = "";
       /**
+       * <pre>
+       * Data to be encoded into the barcode.
+       * </pre>
+       *
        * <code>string payload = 1;</code>
        * @return The payload.
        */
@@ -5521,6 +6737,10 @@ public final class Template {
         }
       }
       /**
+       * <pre>
+       * Data to be encoded into the barcode.
+       * </pre>
+       *
        * <code>string payload = 1;</code>
        * @return The bytes for payload.
        */
@@ -5538,6 +6758,10 @@ public final class Template {
         }
       }
       /**
+       * <pre>
+       * Data to be encoded into the barcode.
+       * </pre>
+       *
        * <code>string payload = 1;</code>
        * @param value The payload to set.
        * @return This builder for chaining.
@@ -5553,6 +6777,10 @@ public final class Template {
         return this;
       }
       /**
+       * <pre>
+       * Data to be encoded into the barcode.
+       * </pre>
+       *
        * <code>string payload = 1;</code>
        * @return This builder for chaining.
        */
@@ -5563,6 +6791,10 @@ public final class Template {
         return this;
       }
       /**
+       * <pre>
+       * Data to be encoded into the barcode.
+       * </pre>
+       *
        * <code>string payload = 1;</code>
        * @param value The bytes for payload to set.
        * @return This builder for chaining.
@@ -5635,6 +6867,10 @@ public final class Template {
 
       private java.lang.Object altText_ = "";
       /**
+       * <pre>
+       * Text to display underneath the barcode.
+       * </pre>
+       *
        * <code>string altText = 3;</code>
        * @return The altText.
        */
@@ -5651,6 +6887,10 @@ public final class Template {
         }
       }
       /**
+       * <pre>
+       * Text to display underneath the barcode.
+       * </pre>
+       *
        * <code>string altText = 3;</code>
        * @return The bytes for altText.
        */
@@ -5668,6 +6908,10 @@ public final class Template {
         }
       }
       /**
+       * <pre>
+       * Text to display underneath the barcode.
+       * </pre>
+       *
        * <code>string altText = 3;</code>
        * @param value The altText to set.
        * @return This builder for chaining.
@@ -5683,6 +6927,10 @@ public final class Template {
         return this;
       }
       /**
+       * <pre>
+       * Text to display underneath the barcode.
+       * </pre>
+       *
        * <code>string altText = 3;</code>
        * @return This builder for chaining.
        */
@@ -5693,6 +6941,10 @@ public final class Template {
         return this;
       }
       /**
+       * <pre>
+       * Text to display underneath the barcode.
+       * </pre>
+       *
        * <code>string altText = 3;</code>
        * @param value The bytes for altText to set.
        * @return This builder for chaining.
@@ -5902,6 +7154,247 @@ public final class Template {
         messageEncoding_ = value;
         onChanged();
         return this;
+      }
+
+      private boolean suppressSecurity_ ;
+      /**
+       * <pre>
+       * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+       * </pre>
+       *
+       * <code>bool suppressSecurity = 6;</code>
+       * @return The suppressSecurity.
+       */
+      @java.lang.Override
+      public boolean getSuppressSecurity() {
+        return suppressSecurity_;
+      }
+      /**
+       * <pre>
+       * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+       * </pre>
+       *
+       * <code>bool suppressSecurity = 6;</code>
+       * @param value The suppressSecurity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuppressSecurity(boolean value) {
+        
+        suppressSecurity_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set to true if you do not wish Google Pay passes to display the security shimmer animation.
+       * </pre>
+       *
+       * <code>bool suppressSecurity = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuppressSecurity() {
+        
+        suppressSecurity_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean rotatingBarcode_ ;
+      /**
+       * <pre>
+       * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+       * </pre>
+       *
+       * <code>bool rotatingBarcode = 7;</code>
+       * @return The rotatingBarcode.
+       */
+      @java.lang.Override
+      public boolean getRotatingBarcode() {
+        return rotatingBarcode_;
+      }
+      /**
+       * <pre>
+       * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+       * </pre>
+       *
+       * <code>bool rotatingBarcode = 7;</code>
+       * @param value The rotatingBarcode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRotatingBarcode(boolean value) {
+        
+        rotatingBarcode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set to true to enable TOTP rotating barcode support to Google Pay Passes.
+       * </pre>
+       *
+       * <code>bool rotatingBarcode = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRotatingBarcode() {
+        
+        rotatingBarcode_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Template.TOPTParameters totpParameters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Template.TOPTParameters, com.passkit.grpc.Template.TOPTParameters.Builder, com.passkit.grpc.Template.TOPTParametersOrBuilder> totpParametersBuilder_;
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       * @return Whether the totpParameters field is set.
+       */
+      public boolean hasTotpParameters() {
+        return totpParametersBuilder_ != null || totpParameters_ != null;
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       * @return The totpParameters.
+       */
+      public com.passkit.grpc.Template.TOPTParameters getTotpParameters() {
+        if (totpParametersBuilder_ == null) {
+          return totpParameters_ == null ? com.passkit.grpc.Template.TOPTParameters.getDefaultInstance() : totpParameters_;
+        } else {
+          return totpParametersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public Builder setTotpParameters(com.passkit.grpc.Template.TOPTParameters value) {
+        if (totpParametersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totpParameters_ = value;
+          onChanged();
+        } else {
+          totpParametersBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public Builder setTotpParameters(
+          com.passkit.grpc.Template.TOPTParameters.Builder builderForValue) {
+        if (totpParametersBuilder_ == null) {
+          totpParameters_ = builderForValue.build();
+          onChanged();
+        } else {
+          totpParametersBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public Builder mergeTotpParameters(com.passkit.grpc.Template.TOPTParameters value) {
+        if (totpParametersBuilder_ == null) {
+          if (totpParameters_ != null) {
+            totpParameters_ =
+              com.passkit.grpc.Template.TOPTParameters.newBuilder(totpParameters_).mergeFrom(value).buildPartial();
+          } else {
+            totpParameters_ = value;
+          }
+          onChanged();
+        } else {
+          totpParametersBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public Builder clearTotpParameters() {
+        if (totpParametersBuilder_ == null) {
+          totpParameters_ = null;
+          onChanged();
+        } else {
+          totpParameters_ = null;
+          totpParametersBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public com.passkit.grpc.Template.TOPTParameters.Builder getTotpParametersBuilder() {
+        
+        onChanged();
+        return getTotpParametersFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      public com.passkit.grpc.Template.TOPTParametersOrBuilder getTotpParametersOrBuilder() {
+        if (totpParametersBuilder_ != null) {
+          return totpParametersBuilder_.getMessageOrBuilder();
+        } else {
+          return totpParameters_ == null ?
+              com.passkit.grpc.Template.TOPTParameters.getDefaultInstance() : totpParameters_;
+        }
+      }
+      /**
+       * <pre>
+       * Optional TOTP parameters. Note that if custom parameters are provided, the PassKit Pass Scanner App will not be able to validate the pass and the user will be responsible for implementing their own validation.
+       * </pre>
+       *
+       * <code>.io.TOPTParameters totpParameters = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.passkit.grpc.Template.TOPTParameters, com.passkit.grpc.Template.TOPTParameters.Builder, com.passkit.grpc.Template.TOPTParametersOrBuilder> 
+          getTotpParametersFieldBuilder() {
+        if (totpParametersBuilder_ == null) {
+          totpParametersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.passkit.grpc.Template.TOPTParameters, com.passkit.grpc.Template.TOPTParameters.Builder, com.passkit.grpc.Template.TOPTParametersOrBuilder>(
+                  getTotpParameters(),
+                  getParentForChildren(),
+                  isClean());
+          totpParameters_ = null;
+        }
+        return totpParametersBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6861,6 +8354,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10005,8 +11500,9 @@ public final class Template {
         } else {
           if (imageAssetsCase_ == 11) {
             imageIdsBuilder_.mergeFrom(value);
+          } else {
+            imageIdsBuilder_.setMessage(value);
           }
-          imageIdsBuilder_.setMessage(value);
         }
         imageAssetsCase_ = 11;
         return this;
@@ -10182,8 +11678,9 @@ public final class Template {
         } else {
           if (imageAssetsCase_ == 12) {
             imagesBuilder_.mergeFrom(value);
+          } else {
+            imagesBuilder_.setMessage(value);
           }
-          imagesBuilder_.setMessage(value);
         }
         imageAssetsCase_ = 12;
         return this;
@@ -12744,6 +14241,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14605,6 +16104,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -16287,8 +17788,8 @@ public final class Template {
        * </pre>
        *
        * <code>repeated .io.LanguageCode languageOverrides = 7;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of languageOverrides at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for languageOverrides to set.
        * @return This builder for chaining.
        */
       public Builder setLanguageOverridesValue(
@@ -16689,6 +18190,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -18584,6 +20087,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -19755,9 +21260,11 @@ public final class Template {
      * <code>map&lt;string, .io.LocalizedString&gt; localizedTextOverrides = 4;</code>
      */
 
-    com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrDefault(
+    /* nullable */
+com.passkit.grpc.Localization.LocalizedString getLocalizedTextOverridesOrDefault(
         java.lang.String key,
-        com.passkit.grpc.Localization.LocalizedString defaultValue);
+        /* nullable */
+com.passkit.grpc.Localization.LocalizedString defaultValue);
     /**
      * <pre>
      * Override landing page text, note that the localized string must contain the template default language, or "EN" - please contact support for dictionary keys and further usage details.
@@ -19877,6 +21384,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -20695,8 +22204,8 @@ public final class Template {
        * </pre>
        *
        * <code>repeated .io.LanguageCode landingLocalizationOverride = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of landingLocalizationOverride at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for landingLocalizationOverride to set.
        * @return This builder for chaining.
        */
       public Builder setLandingLocalizationOverrideValue(
@@ -21781,6 +23290,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -26144,6 +27655,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -28903,6 +30416,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -30368,6 +31883,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -31464,6 +32981,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -32193,6 +33712,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -33441,6 +34962,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -36254,8 +37777,8 @@ public final class Template {
        * </pre>
        *
        * <code>repeated .io.UsageType usage = 15;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of usage at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for usage to set.
        * @return This builder for chaining.
        */
       public Builder setUsageValue(
@@ -36889,6 +38412,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -38414,8 +39939,8 @@ public final class Template {
       }
       /**
        * <code>repeated .io.LinkDetector suppressLinkDetection = 9;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of suppressLinkDetection at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for suppressLinkDetection to set.
        * @return This builder for chaining.
        */
       public Builder setSuppressLinkDetectionValue(
@@ -38696,6 +40221,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -39362,6 +40889,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -40320,6 +41849,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -43259,6 +44790,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -46850,6 +48383,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -47918,6 +49453,8 @@ public final class Template {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -48430,6 +49967,11 @@ public final class Template {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_SelectOption_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_TOPTParameters_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_TOPTParameters_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_Barcode_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -48559,312 +50101,317 @@ public final class Template {
       "to\"w\n\014SelectOption\022\024\n\014listPriority\030\001 \001(\r" +
       "\022\021\n\ttextLabel\030\002 \001(\t\022/\n\022localizedTextLabe" +
       "l\030\003 \001(\0132\023.io.LocalizedString\022\r\n\005value\030\004 " +
-      "\001(\t\"\224\001\n\007Barcode\022\017\n\007payload\030\001 \001(\t\022\037\n\006form" +
-      "at\030\002 \001(\0162\017.io.BarcodeType\022\017\n\007altText\030\003 \001" +
-      "(\t\022-\n\020localizedAltText\030\004 \001(\0132\023.io.Locali" +
-      "zedString\022\027\n\017messageEncoding\030\005 \001(\t\"\251\007\n\014P" +
-      "assTemplate\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\"\n" +
-      "\010protocol\030\003 \001(\0162\020.io.PassProtocol\022\020\n\010rev" +
-      "ision\030\004 \001(\r\022)\n\017defaultLanguage\030\005 \001(\0162\020.i" +
-      "o.LanguageCode\022\030\n\020organizationName\030\006 \001(\t" +
-      "\0226\n\031localizedOrganizationName\030\007 \001(\0132\023.io" +
-      ".LocalizedString\022\023\n\013description\030\010 \001(\t\0221\n" +
-      "\024localizedDescription\030\t \001(\0132\023.io.Localiz" +
-      "edString\022\026\n\004data\030\n \001(\0132\010.io.Data\022 \n\010imag" +
-      "eIds\030\013 \001(\0132\014.io.ImageIdsH\000\022\037\n\006images\030\014 \001" +
-      "(\0132\r.io.ImageDataH\000\022\032\n\006colors\030\r \001(\0132\n.io" +
-      ".Colors\022\034\n\007barcode\030\016 \001(\0132\013.io.Barcode\022\033\n" +
-      "\nnfcEnabled\030\017 \001(\0132\007.io.NFC\022\034\n\007sharing\030\020 " +
-      "\001(\0132\013.io.Sharing\0224\n\023appleWalletSettings\030" +
-      "\021 \001(\0132\027.io.AppleWalletSettings\0220\n\021google" +
-      "PaySettings\030\022 \001(\0132\025.io.GooglePaySettings" +
-      "\022*\n\tlocations\030\023 \003(\0132\017.io.GPSLocationB\006\222A" +
-      "\003\240\001\n\022#\n\007beacons\030\024 \003(\0132\n.io.BeaconB\006\222A\003\240\001" +
-      "\n\022\027\n\005links\030\025 \003(\0132\010.io.Link\022\020\n\010timezone\030\026" +
-      " \001(\t\022*\n\016expirySettings\030\027 \001(\0132\022.io.Expiry" +
-      "Settings\0224\n\023landingPageSettings\030\030 \001(\0132\027." +
-      "io.LandingPageSettings:_\222A\\\nZ*\013Pass Desi" +
-      "gn29Design record for the Apple Wallet a" +
-      "nd Google Pay passes.\322\001\017defaultLanguageB" +
-      "\r\n\013ImageAssets\"\370\001\n\023AppleWalletSettings\022#" +
-      "\n\010passType\030\001 \001(\0162\021.io.ApplePassType\022\020\n\010u" +
-      "serInfo\030\002 \001(\t\022\024\n\014appLaunchUrl\030\003 \001(\t\022\"\n\032a" +
-      "ssociatedStoreIdentifiers\030\004 \003(\r\022\023\n\013maxDi" +
-      "stance\030\005 \001(\r\022\031\n\021appStoreCountries\030\006 \003(\t\022" +
-      "$\n\013transitType\030\007 \001(\0162\017.io.TransitType\022\032\n" +
-      "\022groupingIdentifier\030\010 \001(\t\"\207\002\n\021GooglePayS" +
-      "ettings\022\'\n\010passType\030\001 \001(\0162\025.io.GooglePay" +
-      "PassType\022$\n\nandroidApp\030\002 \001(\0132\020.io.Google" +
-      "PayApp\022 \n\006iosApp\030\003 \001(\0132\020.io.GooglePayApp" +
-      "\022 \n\006webApp\030\004 \001(\0132\020.io.GooglePayApp\022\031\n\021cl" +
-      "assTemplateInfo\030\005 \001(\t\022\027\n\017backgroundColor" +
-      "\030\006 \001(\t\022+\n\021languageOverrides\030\007 \003(\0162\020.io.L" +
-      "anguageCode\"\366\001\n\014GooglePayApp\022\024\n\003url\030\001 \001(" +
-      "\0132\007.io.Url\022\r\n\005title\030\002 \001(\t\022+\n\016localizedTi" +
-      "tle\030\003 \001(\0132\023.io.LocalizedString\022\023\n\013descri" +
-      "ption\030\004 \001(\t\0221\n\024localizedDescription\030\005 \001(" +
-      "\0132\023.io.LocalizedString\022\026\n\016urlDescription" +
-      "\030\006 \001(\t\0224\n\027localizedUrlDescription\030\007 \001(\0132" +
-      "\023.io.LocalizedString\"m\n\004Data\022!\n\ndataFiel" +
-      "ds\030\001 \003(\0132\r.io.DataField\022B\n\032dataCollectio" +
-      "nPageSettings\030\002 \001(\0132\036.io.DataCollectionP" +
-      "ageSettings\"\344\002\n\023LandingPageSettings\0225\n\033l" +
-      "andingLocalizationOverride\030\001 \003(\0162\020.io.La" +
-      "nguageCode\0221\n\035preferThirdPartyAndroidWal" +
-      "let\030\002 \001(\0162\n.io.Toggle\022:\n\026preferredAndroi" +
-      "dWallet\030\003 \001(\0162\032.io.SupportedAndroidWalle" +
-      "t\022S\n\026localizedTextOverrides\030\004 \003(\01323.io.L" +
-      "andingPageSettings.LocalizedTextOverride" +
-      "sEntry\032R\n\033LocalizedTextOverridesEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\"\n\005value\030\002 \001(\0132\023.io.Localized" +
-      "String:\0028\001\"\334\005\n\032DataCollectionPageSetting" +
-      "s\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(\013" +
-      "2\023.io.LocalizedString\022\023\n\013description\030\003 \001" +
-      "(\t\0221\n\024localizedDescription\030\004 \001(\0132\023.io.Lo" +
-      "calizedString\022\030\n\020submitButtonText\030\005 \001(\t\022" +
-      "6\n\031localizedSubmitButtonText\030\006 \001(\0132\023.io." +
-      "LocalizedString\022\023\n\013loadingText\030\007 \001(\t\0221\n\024" +
-      "localizedLoadingText\030\010 \001(\0132\023.io.Localize" +
-      "dString\022\024\n\014thankYouText\030\t \001(\t\0222\n\025localiz" +
-      "edThankYouText\030\n \001(\0132\023.io.LocalizedStrin" +
-      "g\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229\n\034locali" +
-      "zedPageBackgroundColor\030\014 \001(\0132\023.io.Locali" +
-      "zedString\022.\n\020trackingSettings\030\r \001(\0132\024.io" +
-      ".TrackingSettings\022\035\n\025submitButtonTextCol" +
-      "or\030\016 \001(\t\022#\n\033submitButtonBackgroundColor\030" +
-      "\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023localizedFo" +
-      "oterText\030\021 \001(\0132\023.io.LocalizedString\022\024\n\014c" +
-      "ssOverrides\030\022 \001(\t\022.\n\020passwordSettings\030\023 " +
-      "\001(\0132\024.io.PasswordSettings\"\256\003\n\020PasswordSe" +
-      "ttings\022&\n\014passwordType\030\001 \001(\0162\020.io.Passwo" +
-      "rdType\022\020\n\010password\030\002 \001(\t\022\026\n\016inputLabelTe" +
-      "xt\030\003 \001(\t\0224\n\027localizedInputLabelText\030\004 \001(" +
-      "\0132\023.io.LocalizedString\022\021\n\terrorText\030\005 \001(" +
-      "\t\022/\n\022localizedErrorText\030\006 \001(\0132\023.io.Local" +
-      "izedString\022\022\n\nheaderText\030\007 \001(\t\0220\n\023locali" +
-      "zedHeaderText\030\010 \001(\0132\023.io.LocalizedString" +
-      "\022\022\n\nbuttonText\030\t \001(\t\0220\n\023localizedButtonT" +
-      "ext\030\n \001(\0132\023.io.LocalizedString\022\021\n\ttitleT" +
-      "ext\030\013 \001(\t\022/\n\022localizedTitleText\030\014 \001(\0132\023." +
-      "io.LocalizedString\"\363\001\n\024PassTemplateRespo" +
-      "nse\022\"\n\010template\030\001 \001(\0132\020.io.PassTemplate\022" +
-      "\014\n\004Name\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010" +
-      "protocol\030\004 \001(\0162\020.io.PassProtocol\022\020\n\010revi" +
-      "sion\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\"\\\n\006Colors\022\027\n\017ba" +
-      "ckgroundColor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022" +
-      "\021\n\ttextColor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\"." +
-      "\n\017CopyObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName" +
-      "\030\002 \001(\t\">\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertif" +
-      "icateId\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\"\357\004\n\tDataF" +
-      "ield\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002" +
-      " \001(\t\022 \n\tfieldType\030\003 \001(\0162\r.io.FieldType\022\022" +
-      "\n\nisRequired\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016loc" +
-      "alizedLabel\030\006 \001(\0132\023.io.LocalizedString\022\036" +
-      "\n\010dataType\030\007 \001(\0162\014.io.DataType\022\024\n\014defaul" +
-      "tValue\030\010 \001(\t\0222\n\025localizedDefaultValue\030\t " +
-      "\001(\0132\023.io.LocalizedString\022\022\n\nvalidation\030\n" +
-      " \001(\t\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014currenc" +
-      "yCode\030\014 \001(\t\022H\n\035appleWalletFieldRenderOpt" +
-      "ions\030\r \001(\0132!.io.AppleWalletFieldRenderOp" +
-      "tions\022N\n dataCollectionFieldRenderOption" +
-      "s\030\016 \001(\0132$.io.DataCollectionFieldRenderOp" +
-      "tions\022\034\n\005usage\030\017 \003(\0162\r.io.UsageType\022D\n\033g" +
-      "ooglePayFieldRenderOptions\030\020 \001(\0132\037.io.Go" +
-      "oglePayFieldRenderOptions\022\035\n\025defaultTelC" +
-      "ountryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRen" +
-      "derOptions\022(\n\rtextAlignment\030\002 \001(\0162\021.io.T" +
-      "extAlignment\022.\n\020positionSettings\030\003 \001(\0132\024" +
-      ".io.PositionSettings\022\025\n\rchangeMessage\030\004 " +
-      "\001(\t\0223\n\026localizedChangeMessage\030\005 \001(\0132\023.io" +
-      ".LocalizedString\022$\n\tdateStyle\030\006 \001(\0162\021.io" +
-      ".DateTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162\021.io.D" +
-      "ateTimeStyle\022$\n\013numberStyle\030\010 \001(\0162\017.io.N" +
-      "umberStyle\022/\n\025suppressLinkDetection\030\t \003(" +
-      "\0162\020.io.LinkDetector\022\026\n\016ignoreTimezone\030\n " +
-      "\001(\010\022\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033GooglePay" +
-      "FieldRenderOptions\022-\n\021googlePayPosition\030" +
-      "\001 \001(\0162\022.io.GooglePayField\022\032\n\022textModuleP" +
-      "riority\030\002 \001(\r\"G\n\020PositionSettings\022!\n\007sec" +
-      "tion\030\001 \001(\0162\020.io.FieldSection\022\020\n\010priority" +
-      "\030\002 \001(\r\"\237\003\n DataCollectionFieldRenderOpti" +
-      "ons\022\020\n\010helpText\030\001 \001(\t\022.\n\021localizedHelpTe" +
-      "xt\030\002 \001(\0132\023.io.LocalizedString\022\024\n\014display" +
-      "Order\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rsele" +
-      "ctOptions\030\006 \003(\0132\020.io.SelectOption\0221\n\024loc" +
-      "alizedPlaceholder\030\007 \001(\0132\023.io.LocalizedSt" +
-      "ring\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addressRen" +
-      "derOptions\030\t \001(\0132\030.io.AddressRenderOptio" +
-      "ns\022 \n\030localizedYearPlaceholder\030\n \001(\t\022!\n\031" +
-      "localizedMonthPlaceholder\030\013 \001(\t\022\037\n\027local" +
-      "izedDayPlaceholder\030\014 \001(\t\"\242\006\n\024AddressRend" +
-      "erOptions\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddr" +
-      "ess2Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014co" +
-      "untryLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023ad" +
-      "dress1Placeholder\030\006 \001(\t\022\033\n\023address2Place" +
-      "holder\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n" +
-      "\022countryPlaceholder\030\t \001(\t\022\026\n\016zipPlacehol" +
-      "der\030\n \001(\t\0223\n\026localizedAddress1Label\030\013 \001(" +
-      "\0132\023.io.LocalizedString\0223\n\026localizedAddre" +
-      "ss2Label\030\014 \001(\0132\023.io.LocalizedString\022/\n\022l" +
-      "ocalizedCityLabel\030\r \001(\0132\023.io.LocalizedSt" +
-      "ring\0222\n\025localizedCountryLabel\030\016 \001(\0132\023.io" +
-      ".LocalizedString\022.\n\021localizedZipLabel\030\017 " +
-      "\001(\0132\023.io.LocalizedString\0229\n\034localizedAdd" +
-      "ress1Placeholder\030\020 \001(\0132\023.io.LocalizedStr" +
-      "ing\0229\n\034localizedAddress2Placeholder\030\021 \001(" +
-      "\0132\023.io.LocalizedString\0225\n\030localizedCityP" +
-      "laceholder\030\022 \001(\0132\023.io.LocalizedString\0228\n" +
-      "\033localizedCountryPlaceholder\030\023 \001(\0132\023.io." +
-      "LocalizedString\0224\n\027localizedZipPlacehold" +
-      "er\030\024 \001(\0132\023.io.LocalizedString\"\267\001\n\007Sharin" +
-      "g\022\027\n\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022" +
-      "\023\n\013description\030\003 \001(\t\0221\n\024localizedDescrip" +
-      "tion\030\004 \001(\0132\023.io.LocalizedString:>\222A;\n9*\007" +
-      "Sharing2.Controls the sharing settings f" +
-      "or the program.\"N\n\026DefaultTemplateReques" +
-      "t\022\"\n\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n" +
-      "\010revision\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPL" +
-      "E_NOT_SUPPORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006" +
-      "COUPON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022" +
-      "\016\n\nSTORE_CARD\020\005*w\n\021GooglePayPassType\022\034\n\030" +
-      "GOOGLE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n" +
-      "\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFE" +
-      "R\020\005\022\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCO" +
-      "DE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022" +
-      "\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFi" +
-      "eldType\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007" +
-      "\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCO" +
-      "L_FIELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016Standa" +
-      "rdFields\022\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000" +
-      "\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGA" +
-      "L\020\002\022\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDAR" +
-      "D_USEFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026" +
-      "\n\022STANDARD_LOCATIONS\020\006*\\\n\rTextAlignment\022" +
-      "\035\n\031TEXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001" +
-      "\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n" +
-      "\rDateTimeStyle\022\036\n\032DATE_TIME_STYLE_DO_NOT" +
-      "_USE\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DAT" +
-      "E_TIME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE" +
-      "_LONG\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014Li" +
-      "nkDetector\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000" +
-      "\022\031\n\025LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETE" +
-      "CTOR_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LI" +
-      "NK_DETECTOR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027N" +
-      "UMBER_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE" +
-      "_DECIMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027" +
-      "NUMBER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYL" +
-      "E_SPELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYP" +
-      "E_DO_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021" +
-      "TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020" +
-      "\003\022\030\n\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_T" +
-      "YPE_TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010D" +
-      "ataType\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n" +
-      "\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_" +
-      "YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDAT" +
-      "E_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n" +
-      "\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE" +
-      "\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS" +
-      "\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010N" +
-      "O_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM" +
-      "\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME" +
-      "_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007" +
-      "\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020" +
-      "DATE_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022" +
-      "\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220" +
-      "\001\n\014FieldSection\022\034\n\030FIELD_SECTION_DO_NOT_" +
-      "USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS" +
-      "\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FI" +
-      "ELDS\020\004\022\021\n\rHEADER_FIELDS\020\005*\216\031\n\016GooglePayF" +
-      "ield\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n" +
-      " GOOGLE_PAY_BOARDING_AIRLINE_NAME\020\001\022$\n G" +
-      "OOGLE_PAY_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOO" +
-      "GLE_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_" +
-      "BOARDING_DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOA" +
-      "RDING_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BO" +
-      "ARDING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARD" +
-      "ING_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDI" +
-      "NG_PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDI" +
-      "NG_ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_S" +
-      "EAT\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARDING_PO" +
-      "SITION\020\013\022)\n%GOOGLE_PAY_BOARDING_BOARDING" +
-      "_SEQUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARD" +
-      "ING_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT" +
-      "_NUMBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_CONFIRM" +
-      "ATION_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARDING_TI" +
-      "CKET_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDING_FRE" +
-      "QUENT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARD" +
-      "ING_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING" +
-      "_DEPARTURE_TIME\020\023\022$\n GOOGLE_PAY_BOARDING" +
-      "_ARRIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_A" +
-      "RRIVAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BOARDING" +
-      "_ARRIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME" +
-      "\020d\022\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036G" +
-      "OOGLE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGL" +
-      "E_PAY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_S" +
-      "ECTION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GO" +
-      "OGLE_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVEN" +
-      "T_TICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DO" +
-      "ORS_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030" +
-      "\n\024GOOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_E" +
-      "VENT_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_T" +
-      "ICKET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT_CONFI" +
-      "RMATION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FAC" +
-      "E_VALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT" +
-      "\020s\022\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034" +
-      "\n\027GOOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_P" +
-      "AY_GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIF" +
-      "T_BALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_G" +
-      "IFT_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMB" +
-      "ER\020\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRAM_NAME" +
-      "\020\254\002\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#G" +
-      "OOGLE_PAY_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n" +
-      "\037GOOGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035G" +
-      "OOGLE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGL" +
-      "E_PAY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_" +
-      "PAY_LOYALTY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n" +
-      "\026GOOGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY" +
-      "_OFFER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_D" +
-      "ETAILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT" +
-      "\020\223\003\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#" +
-      "\n\036GOOGLE_PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034G" +
-      "OOGLE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE" +
-      "_PAY_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE" +
-      "_PAY_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY" +
-      "_TRANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TR" +
-      "ANSIT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_P" +
-      "ASSENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_" +
-      "CARRIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020" +
-      "\374\003\022\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOG" +
-      "LE_PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGL" +
-      "E_PAY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE" +
-      "_PAY_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_" +
-      "TRANSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSI" +
-      "T_ZONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLA" +
-      "SS\020\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCESSION_C" +
-      "ATEGORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_R" +
-      "ESTRICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROU" +
-      "TE_RESTRICTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_" +
-      "TRANSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_P" +
-      "AY_TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOG" +
-      "LE_PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOG" +
-      "LE_PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGL" +
-      "E_PAY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PA" +
-      "Y_TRANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE" +
-      "_PAY_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY" +
-      "_TRANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY" +
-      "_TRANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_P" +
-      "AY_TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_N" +
-      "AME\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_MODULE\020" +
-      "\352\007*l\n\014PasswordType\022\034\n\030PASSWORD_TYPE_DO_N" +
-      "OT_USE\020\000\022\035\n\031PASSWORD_TYPE_NO_PASSWORD\020\001\022" +
-      "\037\n\033PASSWORD_TYPE_PASSWORD_ONLY\020\002*w\n\026Supp" +
-      "ortedAndroidWallet\022\035\n\031ANDROID_WALLET_DO_" +
-      "NOT_USE\020\000\022\035\n\031ANDROID_WALLET_PASSWALLET\020\001" +
-      "\022\037\n\033ANDROID_WALLET_WALLETPASSES\020\002BG\n\020com" +
-      ".passkit.grpcZ$stash.passkit.com/io/mode" +
-      "l/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "\001(\t\"X\n\016TOPTParameters\022\013\n\003key\030\001 \001(\t\022\024\n\014mi" +
+      "lliseconds\030\002 \001(\r\022\023\n\013valueString\030\003 \001(\t\022\016\n" +
+      "\006digits\030\004 \001(\r\"\363\001\n\007Barcode\022\017\n\007payload\030\001 \001" +
+      "(\t\022\037\n\006format\030\002 \001(\0162\017.io.BarcodeType\022\017\n\007a" +
+      "ltText\030\003 \001(\t\022-\n\020localizedAltText\030\004 \001(\0132\023" +
+      ".io.LocalizedString\022\027\n\017messageEncoding\030\005" +
+      " \001(\t\022\030\n\020suppressSecurity\030\006 \001(\010\022\027\n\017rotati" +
+      "ngBarcode\030\007 \001(\010\022*\n\016totpParameters\030\010 \001(\0132" +
+      "\022.io.TOPTParameters\"\251\007\n\014PassTemplate\022\n\n\002" +
+      "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\016" +
+      "2\020.io.PassProtocol\022\020\n\010revision\030\004 \001(\r\022)\n\017" +
+      "defaultLanguage\030\005 \001(\0162\020.io.LanguageCode\022" +
+      "\030\n\020organizationName\030\006 \001(\t\0226\n\031localizedOr" +
+      "ganizationName\030\007 \001(\0132\023.io.LocalizedStrin" +
+      "g\022\023\n\013description\030\010 \001(\t\0221\n\024localizedDescr" +
+      "iption\030\t \001(\0132\023.io.LocalizedString\022\026\n\004dat" +
+      "a\030\n \001(\0132\010.io.Data\022 \n\010imageIds\030\013 \001(\0132\014.io" +
+      ".ImageIdsH\000\022\037\n\006images\030\014 \001(\0132\r.io.ImageDa" +
+      "taH\000\022\032\n\006colors\030\r \001(\0132\n.io.Colors\022\034\n\007barc" +
+      "ode\030\016 \001(\0132\013.io.Barcode\022\033\n\nnfcEnabled\030\017 \001" +
+      "(\0132\007.io.NFC\022\034\n\007sharing\030\020 \001(\0132\013.io.Sharin" +
+      "g\0224\n\023appleWalletSettings\030\021 \001(\0132\027.io.Appl" +
+      "eWalletSettings\0220\n\021googlePaySettings\030\022 \001" +
+      "(\0132\025.io.GooglePaySettings\022*\n\tlocations\030\023" +
+      " \003(\0132\017.io.GPSLocationB\006\222A\003\240\001\n\022#\n\007beacons" +
+      "\030\024 \003(\0132\n.io.BeaconB\006\222A\003\240\001\n\022\027\n\005links\030\025 \003(" +
+      "\0132\010.io.Link\022\020\n\010timezone\030\026 \001(\t\022*\n\016expiryS" +
+      "ettings\030\027 \001(\0132\022.io.ExpirySettings\0224\n\023lan" +
+      "dingPageSettings\030\030 \001(\0132\027.io.LandingPageS" +
+      "ettings:_\222A\\\nZ*\013Pass Design29Design reco" +
+      "rd for the Apple Wallet and Google Pay p" +
+      "asses.\322\001\017defaultLanguageB\r\n\013ImageAssets\"" +
+      "\370\001\n\023AppleWalletSettings\022#\n\010passType\030\001 \001(" +
+      "\0162\021.io.ApplePassType\022\020\n\010userInfo\030\002 \001(\t\022\024" +
+      "\n\014appLaunchUrl\030\003 \001(\t\022\"\n\032associatedStoreI" +
+      "dentifiers\030\004 \003(\r\022\023\n\013maxDistance\030\005 \001(\r\022\031\n" +
+      "\021appStoreCountries\030\006 \003(\t\022$\n\013transitType\030" +
+      "\007 \001(\0162\017.io.TransitType\022\032\n\022groupingIdenti" +
+      "fier\030\010 \001(\t\"\207\002\n\021GooglePaySettings\022\'\n\010pass" +
+      "Type\030\001 \001(\0162\025.io.GooglePayPassType\022$\n\nand" +
+      "roidApp\030\002 \001(\0132\020.io.GooglePayApp\022 \n\006iosAp" +
+      "p\030\003 \001(\0132\020.io.GooglePayApp\022 \n\006webApp\030\004 \001(" +
+      "\0132\020.io.GooglePayApp\022\031\n\021classTemplateInfo" +
+      "\030\005 \001(\t\022\027\n\017backgroundColor\030\006 \001(\t\022+\n\021langu" +
+      "ageOverrides\030\007 \003(\0162\020.io.LanguageCode\"\366\001\n" +
+      "\014GooglePayApp\022\024\n\003url\030\001 \001(\0132\007.io.Url\022\r\n\005t" +
+      "itle\030\002 \001(\t\022+\n\016localizedTitle\030\003 \001(\0132\023.io." +
+      "LocalizedString\022\023\n\013description\030\004 \001(\t\0221\n\024" +
+      "localizedDescription\030\005 \001(\0132\023.io.Localize" +
+      "dString\022\026\n\016urlDescription\030\006 \001(\t\0224\n\027local" +
+      "izedUrlDescription\030\007 \001(\0132\023.io.LocalizedS" +
+      "tring\"m\n\004Data\022!\n\ndataFields\030\001 \003(\0132\r.io.D" +
+      "ataField\022B\n\032dataCollectionPageSettings\030\002" +
+      " \001(\0132\036.io.DataCollectionPageSettings\"\344\002\n" +
+      "\023LandingPageSettings\0225\n\033landingLocalizat" +
+      "ionOverride\030\001 \003(\0162\020.io.LanguageCode\0221\n\035p" +
+      "referThirdPartyAndroidWallet\030\002 \001(\0162\n.io." +
+      "Toggle\022:\n\026preferredAndroidWallet\030\003 \001(\0162\032" +
+      ".io.SupportedAndroidWallet\022S\n\026localizedT" +
+      "extOverrides\030\004 \003(\01323.io.LandingPageSetti" +
+      "ngs.LocalizedTextOverridesEntry\032R\n\033Local" +
+      "izedTextOverridesEntry\022\013\n\003key\030\001 \001(\t\022\"\n\005v" +
+      "alue\030\002 \001(\0132\023.io.LocalizedString:\0028\001\"\334\005\n\032" +
+      "DataCollectionPageSettings\022\r\n\005title\030\001 \001(" +
+      "\t\022+\n\016localizedTitle\030\002 \001(\0132\023.io.Localized" +
+      "String\022\023\n\013description\030\003 \001(\t\0221\n\024localized" +
+      "Description\030\004 \001(\0132\023.io.LocalizedString\022\030" +
+      "\n\020submitButtonText\030\005 \001(\t\0226\n\031localizedSub" +
+      "mitButtonText\030\006 \001(\0132\023.io.LocalizedString" +
+      "\022\023\n\013loadingText\030\007 \001(\t\0221\n\024localizedLoadin" +
+      "gText\030\010 \001(\0132\023.io.LocalizedString\022\024\n\014than" +
+      "kYouText\030\t \001(\t\0222\n\025localizedThankYouText\030" +
+      "\n \001(\0132\023.io.LocalizedString\022\033\n\023pageBackgr" +
+      "oundColor\030\013 \001(\t\0229\n\034localizedPageBackgrou" +
+      "ndColor\030\014 \001(\0132\023.io.LocalizedString\022.\n\020tr" +
+      "ackingSettings\030\r \001(\0132\024.io.TrackingSettin" +
+      "gs\022\035\n\025submitButtonTextColor\030\016 \001(\t\022#\n\033sub" +
+      "mitButtonBackgroundColor\030\017 \001(\t\022\022\n\nfooter" +
+      "Text\030\020 \001(\t\0220\n\023localizedFooterText\030\021 \001(\0132" +
+      "\023.io.LocalizedString\022\024\n\014cssOverrides\030\022 \001" +
+      "(\t\022.\n\020passwordSettings\030\023 \001(\0132\024.io.Passwo" +
+      "rdSettings\"\256\003\n\020PasswordSettings\022&\n\014passw" +
+      "ordType\030\001 \001(\0162\020.io.PasswordType\022\020\n\010passw" +
+      "ord\030\002 \001(\t\022\026\n\016inputLabelText\030\003 \001(\t\0224\n\027loc" +
+      "alizedInputLabelText\030\004 \001(\0132\023.io.Localize" +
+      "dString\022\021\n\terrorText\030\005 \001(\t\022/\n\022localizedE" +
+      "rrorText\030\006 \001(\0132\023.io.LocalizedString\022\022\n\nh" +
+      "eaderText\030\007 \001(\t\0220\n\023localizedHeaderText\030\010" +
+      " \001(\0132\023.io.LocalizedString\022\022\n\nbuttonText\030" +
+      "\t \001(\t\0220\n\023localizedButtonText\030\n \001(\0132\023.io." +
+      "LocalizedString\022\021\n\ttitleText\030\013 \001(\t\022/\n\022lo" +
+      "calizedTitleText\030\014 \001(\0132\023.io.LocalizedStr" +
+      "ing\"\363\001\n\024PassTemplateResponse\022\"\n\010template" +
+      "\030\001 \001(\0132\020.io.PassTemplate\022\014\n\004Name\030\002 \001(\t\022\025" +
+      "\n\rownerUsername\030\003 \001(\t\022\"\n\010protocol\030\004 \001(\0162" +
+      "\020.io.PassProtocol\022\020\n\010revision\030\005 \001(\r\022-\n\tc" +
+      "reatedAt\030\006 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022-\n\tupdatedAt\030\007 \001(\0132\032.google.protobuf." +
+      "Timestamp\"\\\n\006Colors\022\027\n\017backgroundColor\030\001" +
+      " \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022\021\n\ttextColor\030\003 " +
+      "\001(\t\022\022\n\nstripColor\030\004 \001(\t\".\n\017CopyObjectInp" +
+      "ut\022\n\n\002id\030\001 \001(\t\022\017\n\007newName\030\002 \001(\t\">\n\003NFC\022\017" +
+      "\n\007enabled\030\001 \001(\010\022\025\n\rcertificateId\030\002 \001(\t\022\017" +
+      "\n\007payload\030\003 \001(\t\"\357\004\n\tDataField\022\022\n\nuniqueN" +
+      "ame\030\001 \001(\t\022\022\n\ntemplateId\030\002 \001(\t\022 \n\tfieldTy" +
+      "pe\030\003 \001(\0162\r.io.FieldType\022\022\n\nisRequired\030\004 " +
+      "\001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016localizedLabel\030\006 \001" +
+      "(\0132\023.io.LocalizedString\022\036\n\010dataType\030\007 \001(" +
+      "\0162\014.io.DataType\022\024\n\014defaultValue\030\010 \001(\t\0222\n" +
+      "\025localizedDefaultValue\030\t \001(\0132\023.io.Locali" +
+      "zedString\022\022\n\nvalidation\030\n \001(\t\022\027\n\017userCan" +
+      "SetValue\030\013 \001(\010\022\024\n\014currencyCode\030\014 \001(\t\022H\n\035" +
+      "appleWalletFieldRenderOptions\030\r \001(\0132!.io" +
+      ".AppleWalletFieldRenderOptions\022N\n dataCo" +
+      "llectionFieldRenderOptions\030\016 \001(\0132$.io.Da" +
+      "taCollectionFieldRenderOptions\022\034\n\005usage\030" +
+      "\017 \003(\0162\r.io.UsageType\022D\n\033googlePayFieldRe" +
+      "nderOptions\030\020 \001(\0132\037.io.GooglePayFieldRen" +
+      "derOptions\022\035\n\025defaultTelCountryCode\030\021 \001(" +
+      "\t\"\230\003\n\035AppleWalletFieldRenderOptions\022(\n\rt" +
+      "extAlignment\030\002 \001(\0162\021.io.TextAlignment\022.\n" +
+      "\020positionSettings\030\003 \001(\0132\024.io.PositionSet" +
+      "tings\022\025\n\rchangeMessage\030\004 \001(\t\0223\n\026localize" +
+      "dChangeMessage\030\005 \001(\0132\023.io.LocalizedStrin" +
+      "g\022$\n\tdateStyle\030\006 \001(\0162\021.io.DateTimeStyle\022" +
+      "$\n\ttimeStyle\030\007 \001(\0162\021.io.DateTimeStyle\022$\n" +
+      "\013numberStyle\030\010 \001(\0162\017.io.NumberStyle\022/\n\025s" +
+      "uppressLinkDetection\030\t \003(\0162\020.io.LinkDete" +
+      "ctor\022\026\n\016ignoreTimezone\030\n \001(\010\022\026\n\016isRelati" +
+      "veDate\030\013 \001(\010\"h\n\033GooglePayFieldRenderOpti" +
+      "ons\022-\n\021googlePayPosition\030\001 \001(\0162\022.io.Goog" +
+      "lePayField\022\032\n\022textModulePriority\030\002 \001(\r\"G" +
+      "\n\020PositionSettings\022!\n\007section\030\001 \001(\0162\020.io" +
+      ".FieldSection\022\020\n\010priority\030\002 \001(\r\"\237\003\n Data" +
+      "CollectionFieldRenderOptions\022\020\n\010helpText" +
+      "\030\001 \001(\t\022.\n\021localizedHelpText\030\002 \001(\0132\023.io.L" +
+      "ocalizedString\022\024\n\014displayOrder\030\003 \001(\005\022\023\n\013" +
+      "placeholder\030\005 \001(\t\022\'\n\rselectOptions\030\006 \003(\013" +
+      "2\020.io.SelectOption\0221\n\024localizedPlacehold" +
+      "er\030\007 \001(\0132\023.io.LocalizedString\022\024\n\014autocom" +
+      "plete\030\010 \001(\010\0226\n\024addressRenderOptions\030\t \001(" +
+      "\0132\030.io.AddressRenderOptions\022 \n\030localized" +
+      "YearPlaceholder\030\n \001(\t\022!\n\031localizedMonthP" +
+      "laceholder\030\013 \001(\t\022\037\n\027localizedDayPlacehol" +
+      "der\030\014 \001(\t\"\242\006\n\024AddressRenderOptions\022\025\n\rad" +
+      "dress1Label\030\001 \001(\t\022\025\n\raddress2Label\030\002 \001(\t" +
+      "\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014countryLabel\030\004 \001(" +
+      "\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023address1Placehold" +
+      "er\030\006 \001(\t\022\033\n\023address2Placeholder\030\007 \001(\t\022\027\n" +
+      "\017cityPlaceholder\030\010 \001(\t\022\032\n\022countryPlaceho" +
+      "lder\030\t \001(\t\022\026\n\016zipPlaceholder\030\n \001(\t\0223\n\026lo" +
+      "calizedAddress1Label\030\013 \001(\0132\023.io.Localize" +
+      "dString\0223\n\026localizedAddress2Label\030\014 \001(\0132" +
+      "\023.io.LocalizedString\022/\n\022localizedCityLab" +
+      "el\030\r \001(\0132\023.io.LocalizedString\0222\n\025localiz" +
+      "edCountryLabel\030\016 \001(\0132\023.io.LocalizedStrin" +
+      "g\022.\n\021localizedZipLabel\030\017 \001(\0132\023.io.Locali" +
+      "zedString\0229\n\034localizedAddress1Placeholde" +
+      "r\030\020 \001(\0132\023.io.LocalizedString\0229\n\034localize" +
+      "dAddress2Placeholder\030\021 \001(\0132\023.io.Localize" +
+      "dString\0225\n\030localizedCityPlaceholder\030\022 \001(" +
+      "\0132\023.io.LocalizedString\0228\n\033localizedCount" +
+      "ryPlaceholder\030\023 \001(\0132\023.io.LocalizedString" +
+      "\0224\n\027localizedZipPlaceholder\030\024 \001(\0132\023.io.L" +
+      "ocalizedString\"\267\001\n\007Sharing\022\027\n\017prohibitSh" +
+      "aring\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\023\n\013description\030" +
+      "\003 \001(\t\0221\n\024localizedDescription\030\004 \001(\0132\023.io" +
+      ".LocalizedString:>\222A;\n9*\007Sharing2.Contro" +
+      "ls the sharing settings for the program." +
+      "\"N\n\026DefaultTemplateRequest\022\"\n\010protocol\030\001" +
+      " \001(\0162\020.io.PassProtocol\022\020\n\010revision\030\002 \001(\r" +
+      "*v\n\rApplePassType\022\027\n\023APPLE_NOT_SUPPORTED" +
+      "\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006COUPON\020\002\022\020\n\014EVE" +
+      "NT_TICKET\020\003\022\013\n\007GENERIC\020\004\022\016\n\nSTORE_CARD\020\005" +
+      "*w\n\021GooglePayPassType\022\034\n\030GOOGLE_PAY_NOT_" +
+      "SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n\006FLIGHT\020\002\022\010\n\004GI" +
+      "FT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFER\020\005\022\013\n\007TRANSIT\020" +
+      "\006*`\n\013BarcodeType\022\033\n\027BARCODE_TYPE_DO_NOT_" +
+      "USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022\n\n\006PDF417\020\003\022\013\n\007" +
+      "CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFieldType\022\023\n\017FIEL" +
+      "D_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007\n\003PII\020\002\022\024\n\020UNIV" +
+      "ERSAL_FIELDS\020\003\022\023\n\017PROTOCOL_FIELDS\020\004\022\021\n\rC" +
+      "USTOM_FIELDS\020\005*\276\001\n\016StandardFields\022\036\n\032STA" +
+      "NDARD_FIELDS_DO_NOT_USE\020\000\022\025\n\021STANDARD_ME" +
+      "SSAGES\020\001\022\022\n\016STANDARD_LEGAL\020\002\022\030\n\024STANDARD" +
+      "_EXPIRY_DATE\020\003\022\031\n\025STANDARD_USEFUL_LINKS\020" +
+      "\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026\n\022STANDARD_LOCA" +
+      "TIONS\020\006*\\\n\rTextAlignment\022\035\n\031TEXT_ALIGNME" +
+      "NT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001\022\n\n\006CENTER\020\002\022\t\n" +
+      "\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n\rDateTimeStyle\022" +
+      "\036\n\032DATE_TIME_STYLE_DO_NOT_USE\020\000\022\031\n\025DATE_" +
+      "TIME_STYLE_SHORT\020\001\022\032\n\026DATE_TIME_STYLE_ME" +
+      "DIUM\020\002\022\030\n\024DATE_TIME_STYLE_LONG\020\003\022\030\n\024DATE" +
+      "_TIME_STYLE_FULL\020\004*\217\001\n\014LinkDetector\022\034\n\030L" +
+      "INK_DETECTOR_DO_NOT_USE\020\000\022\031\n\025LINK_DETECT" +
+      "OR_ADDRESS\020\001\022\026\n\022LINK_DETECTOR_DATE\020\002\022\025\n\021" +
+      "LINK_DETECTOR_URL\020\003\022\027\n\023LINK_DETECTOR_PHO" +
+      "NE\020\004*\223\001\n\013NumberStyle\022\033\n\027NUMBER_STYLE_DO_" +
+      "NOT_USE\020\000\022\030\n\024NUMBER_STYLE_DECIMAL\020\001\022\030\n\024N" +
+      "UMBER_STYLE_PERCENT\020\002\022\033\n\027NUMBER_STYLE_SC" +
+      "IENTIFIC\020\003\022\026\n\022NUMBER_STYLE_SPELL\020\004*\266\001\n\013T" +
+      "ransitType\022\033\n\027TRANSIT_TYPE_DO_NOT_USE\020\000\022" +
+      "\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021TRANSIT_TYPE_BO" +
+      "AT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020\003\022\030\n\024TRANSIT_TY" +
+      "PE_GENERIC\020\004\022\026\n\022TRANSIT_TYPE_TRAIN\020\005\022\025\n\021" +
+      "TRANSIT_TYPE_TRAM\020\006*\210\002\n\010DataType\022\022\n\016DATA" +
+      "_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n\tTEXT_LONG\020\002\022\021\n" +
+      "\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_YYYYMM\020\004\022\r\n\tDAT" +
+      "E_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDATE_TIME\020\007\022\007\n\003INT" +
+      "\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n\022\007\n\003URL\020\013\022\007\n\003TE" +
+      "L\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE\020\017\022\014\n\010CURRENCY\020" +
+      "\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS\020\022\022\013\n\007DATE_MM\020\023" +
+      "\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010NO_STYLE\020\000\022\016\n\nDA" +
+      "TE_SHORT\020\001\022\017\n\013DATE_MEDIUM\020\002\022\r\n\tDATE_LONG" +
+      "\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME_SHORT\020\005\022\017\n\013TIM" +
+      "E_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007\022\r\n\tTIME_FULL\020\010" +
+      "\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020DATE_TIME_MEDIU" +
+      "M\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022\n\016DATE_TIME_FUL" +
+      "L\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\220\001\n\014FieldSection" +
+      "\022\034\n\030FIELD_SECTION_DO_NOT_USE\020\000\022\017\n\013BACK_F" +
+      "IELDS\020\001\022\022\n\016PRIMARY_FIELDS\020\002\022\024\n\020SECONDARY" +
+      "_FIELDS\020\003\022\024\n\020AUXILIARY_FIELDS\020\004\022\021\n\rHEADE" +
+      "R_FIELDS\020\005*\216\031\n\016GooglePayField\022\037\n\033GOOGLE_" +
+      "PAY_FIELD_DO_NOT_USE\020\000\022$\n GOOGLE_PAY_BOA" +
+      "RDING_AIRLINE_NAME\020\001\022$\n GOOGLE_PAY_BOARD" +
+      "ING_AIRLINE_CODE\020\002\022\036\n\032GOOGLE_PAY_BOARDIN" +
+      "G_ORIGIN\020\003\022#\n\037GOOGLE_PAY_BOARDING_DESTIN" +
+      "ATION\020\004\022\'\n#GOOGLE_PAY_BOARDING_ORIGIN_TE" +
+      "RMINAL\020\005\022#\n\037GOOGLE_PAY_BOARDING_ORIGIN_G" +
+      "ATE\020\006\022%\n!GOOGLE_PAY_BOARDING_BOARDING_TI" +
+      "ME\020\007\022&\n\"GOOGLE_PAY_BOARDING_PASSENGER_NA" +
+      "ME\020\010\022\"\n\036GOOGLE_PAY_BOARDING_ZONE_GROUP\020\t" +
+      "\022\034\n\030GOOGLE_PAY_BOARDING_SEAT\020\n\022)\n%GOOGLE" +
+      "_PAY_BOARDING_BOARDING_POSITION\020\013\022)\n%GOO" +
+      "GLE_PAY_BOARDING_BOARDING_SEQUENCE\020\014\022%\n!" +
+      "GOOGLE_PAY_BOARDING_BOARDING_DOOR\020\r\022%\n!G" +
+      "OOGLE_PAY_BOARDING_FLIGHT_NUMBER\020\016\022+\n\'GO" +
+      "OGLE_PAY_BOARDING_CONFIRMATION_NUMBER\020\017\022" +
+      "%\n!GOOGLE_PAY_BOARDING_TICKET_NUMBER\020\020\022-" +
+      "\n)GOOGLE_PAY_BOARDING_FREQUENT_FLYER_NUM" +
+      "BER\020\021\022#\n\037GOOGLE_PAY_BOARDING_GATE_CLOSES" +
+      "\020\022\022&\n\"GOOGLE_PAY_BOARDING_DEPARTURE_TIME" +
+      "\020\023\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_TIME\020\024" +
+      "\022(\n$GOOGLE_PAY_BOARDING_ARRIVAL_TERMINAL" +
+      "\020\025\022$\n GOOGLE_PAY_BOARDING_ARRIVAL_GATE\020\026" +
+      "\022\031\n\025GOOGLE_PAY_EVENT_NAME\020d\022\037\n\033GOOGLE_PA" +
+      "Y_EVENT_VENUE_NAME\020e\022\"\n\036GOOGLE_PAY_EVENT" +
+      "_VENUE_ADDRESS\020f\022\031\n\025GOOGLE_PAY_EVENT_GAT" +
+      "E\020g\022\034\n\030GOOGLE_PAY_EVENT_SECTION\020h\022\030\n\024GOO" +
+      "GLE_PAY_EVENT_ROW\020i\022\031\n\025GOOGLE_PAY_EVENT_" +
+      "SEAT\020j\022\"\n\036GOOGLE_PAY_EVENT_TICKET_HOLDER" +
+      "\020k\022\037\n\033GOOGLE_PAY_EVENT_DOORS_OPEN\020l\022\032\n\026G" +
+      "OOGLE_PAY_EVENT_START\020m\022\030\n\024GOOGLE_PAY_EV" +
+      "ENT_END\020n\022 \n\034GOOGLE_PAY_EVENT_TICKET_TYP" +
+      "E\020o\022\"\n\036GOOGLE_PAY_EVENT_TICKET_NUMBER\020p\022" +
+      "(\n$GOOGLE_PAY_EVENT_CONFIRMATION_NUMBER\020" +
+      "q\022\037\n\033GOOGLE_PAY_EVENT_FACE_VALUE\020r\022\037\n\033GO" +
+      "OGLE_PAY_EVENT_FINE_PRINT\020s\022\"\n\035GOOGLE_PA" +
+      "Y_GIFT_MERCHANT_NAME\020\310\001\022\034\n\027GOOGLE_PAY_GI" +
+      "FT_BALANCE\020\311\001\022 \n\033GOOGLE_PAY_GIFT_CARD_NU" +
+      "MBER\020\312\001\022(\n#GOOGLE_PAY_GIFT_BALANCE_UPDAT" +
+      "E_TIME\020\313\001\022\030\n\023GOOGLE_PAY_GIFT_PIN\020\314\001\022!\n\034G" +
+      "OOGLE_PAY_GIFT_EVENT_NUMBER\020\315\001\022$\n\037GOOGLE" +
+      "_PAY_LOYALTY_PROGRAM_NAME\020\254\002\022\036\n\031GOOGLE_P" +
+      "AY_LOYALTY_POINTS\020\255\002\022(\n#GOOGLE_PAY_LOYAL" +
+      "TY_SECONDARY_POINTS\020\256\002\022$\n\037GOOGLE_PAY_LOY" +
+      "ALTY_ACCOUNT_NAME\020\257\002\022\"\n\035GOOGLE_PAY_LOYAL" +
+      "TY_ACCOUNT_ID\020\260\002\022$\n\037GOOGLE_PAY_LOYALTY_R" +
+      "EWARDS_TIER\020\261\002\022.\n)GOOGLE_PAY_LOYALTY_SEC" +
+      "ONDARY_REWARDS_TIER\020\262\002\022\033\n\026GOOGLE_PAY_OFF" +
+      "ER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY_OFFER_PROVIDER" +
+      "\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_DETAILS\020\222\003\022 \n\033GO" +
+      "OGLE_PAY_OFFER_FINE_PRINT\020\223\003\022!\n\034GOOGLE_P" +
+      "AY_OFFER_SHORT_TITLE\020\224\003\022#\n\036GOOGLE_PAY_TR" +
+      "ANSIT_ISSUER_NAME\020\364\003\022!\n\034GOOGLE_PAY_TRANS" +
+      "IT_DEPARTURE\020\365\003\022&\n!GOOGLE_PAY_TRANSIT_DE" +
+      "PARTURE_TIME\020\366\003\022\"\n\035GOOGLE_PAY_TRANSIT_VA" +
+      "LID_FROM\020\367\003\022#\n\036GOOGLE_PAY_TRANSIT_VALID_" +
+      "UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TRANSIT_ARRIVAL\020\371" +
+      "\003\022\'\n\"GOOGLE_PAY_TRANSIT_PASSENGER_NAMES\020" +
+      "\372\003\022 \n\033GOOGLE_PAY_TRANSIT_CARRIAGE\020\373\003\022\035\n\030" +
+      "GOOGLE_PAY_TRANSIT_COACH\020\374\003\022\034\n\027GOOGLE_PA" +
+      "Y_TRANSIT_SEAT\020\375\003\022%\n GOOGLE_PAY_TRANSIT_" +
+      "TICKET_NUMBER\020\376\003\022%\n GOOGLE_PAY_TRANSIT_T" +
+      "ICKET_STATUS\020\377\003\022!\n\034GOOGLE_PAY_TRANSIT_FA" +
+      "RE_NAME\020\200\004\022 \n\033GOOGLE_PAY_TRANSIT_PLATFOR" +
+      "M\020\201\004\022\034\n\027GOOGLE_PAY_TRANSIT_ZONE\020\202\004\022\"\n\035GO" +
+      "OGLE_PAY_TRANSIT_FARE_CLASS\020\203\004\022+\n&GOOGLE" +
+      "_PAY_TRANSIT_CONCESSION_CATEGORY\020\204\004\022*\n%G" +
+      "OOGLE_PAY_TRANSIT_ROUTE_RESTRICTIONS\020\205\004\022" +
+      "1\n,GOOGLE_PAY_TRANSIT_ROUTE_RESTRICTION_" +
+      "DETAILS\020\206\004\022)\n$GOOGLE_PAY_TRANSIT_TIME_RE" +
+      "STRICTIONS\020\207\004\022*\n%GOOGLE_PAY_TRANSIT_OTHE" +
+      "R_RESTRICTIONS\020\210\004\022&\n!GOOGLE_PAY_TRANSIT_" +
+      "RECEIPT_NUMBER\020\211\004\022%\n GOOGLE_PAY_TRANSIT_" +
+      "PURCHASE_DATE\020\212\004\022\"\n\035GOOGLE_PAY_TRANSIT_A" +
+      "CCOUNT_ID\020\213\004\022)\n$GOOGLE_PAY_TRANSIT_CONFI" +
+      "RMATION_CODE\020\214\004\022\"\n\035GOOGLE_PAY_TRANSIT_FA" +
+      "CE_VALUE\020\215\004\022&\n!GOOGLE_PAY_TRANSIT_PURCHA" +
+      "SE_PRICE\020\216\004\022(\n#GOOGLE_PAY_TRANSIT_DISCOU" +
+      "NT_MESSAGE\020\217\004\022\033\n\026GOOGLE_PAY_TEXT_MODULE\020" +
+      "\350\007\022\033\n\026GOOGLE_PAY_ISSUER_NAME\020\351\007\022\"\n\035GOOGL" +
+      "E_PAY_STATIC_TEXT_MODULE\020\352\007*l\n\014PasswordT" +
+      "ype\022\034\n\030PASSWORD_TYPE_DO_NOT_USE\020\000\022\035\n\031PAS" +
+      "SWORD_TYPE_NO_PASSWORD\020\001\022\037\n\033PASSWORD_TYP" +
+      "E_PASSWORD_ONLY\020\002*w\n\026SupportedAndroidWal" +
+      "let\022\035\n\031ANDROID_WALLET_DO_NOT_USE\020\000\022\035\n\031AN" +
+      "DROID_WALLET_PASSWALLET\020\001\022\037\n\033ANDROID_WAL" +
+      "LET_WALLETPASSES\020\002BG\n\020com.passkit.grpcZ$" +
+      "stash.passkit.com/io/model/sdk/go/io\252\002\014P" +
+      "assKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48886,44 +50433,50 @@ public final class Template {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_SelectOption_descriptor,
         new java.lang.String[] { "ListPriority", "TextLabel", "LocalizedTextLabel", "Value", });
-    internal_static_io_Barcode_descriptor =
+    internal_static_io_TOPTParameters_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_io_TOPTParameters_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_TOPTParameters_descriptor,
+        new java.lang.String[] { "Key", "Milliseconds", "ValueString", "Digits", });
+    internal_static_io_Barcode_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_io_Barcode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Barcode_descriptor,
-        new java.lang.String[] { "Payload", "Format", "AltText", "LocalizedAltText", "MessageEncoding", });
+        new java.lang.String[] { "Payload", "Format", "AltText", "LocalizedAltText", "MessageEncoding", "SuppressSecurity", "RotatingBarcode", "TotpParameters", });
     internal_static_io_PassTemplate_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_io_PassTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PassTemplate_descriptor,
         new java.lang.String[] { "Id", "Name", "Protocol", "Revision", "DefaultLanguage", "OrganizationName", "LocalizedOrganizationName", "Description", "LocalizedDescription", "Data", "ImageIds", "Images", "Colors", "Barcode", "NfcEnabled", "Sharing", "AppleWalletSettings", "GooglePaySettings", "Locations", "Beacons", "Links", "Timezone", "ExpirySettings", "LandingPageSettings", "ImageAssets", });
     internal_static_io_AppleWalletSettings_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_io_AppleWalletSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_AppleWalletSettings_descriptor,
         new java.lang.String[] { "PassType", "UserInfo", "AppLaunchUrl", "AssociatedStoreIdentifiers", "MaxDistance", "AppStoreCountries", "TransitType", "GroupingIdentifier", });
     internal_static_io_GooglePaySettings_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_io_GooglePaySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_GooglePaySettings_descriptor,
         new java.lang.String[] { "PassType", "AndroidApp", "IosApp", "WebApp", "ClassTemplateInfo", "BackgroundColor", "LanguageOverrides", });
     internal_static_io_GooglePayApp_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_io_GooglePayApp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_GooglePayApp_descriptor,
         new java.lang.String[] { "Url", "Title", "LocalizedTitle", "Description", "LocalizedDescription", "UrlDescription", "LocalizedUrlDescription", });
     internal_static_io_Data_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_io_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Data_descriptor,
         new java.lang.String[] { "DataFields", "DataCollectionPageSettings", });
     internal_static_io_LandingPageSettings_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_io_LandingPageSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_LandingPageSettings_descriptor,
@@ -48935,85 +50488,85 @@ public final class Template {
         internal_static_io_LandingPageSettings_LocalizedTextOverridesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_io_DataCollectionPageSettings_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_io_DataCollectionPageSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataCollectionPageSettings_descriptor,
         new java.lang.String[] { "Title", "LocalizedTitle", "Description", "LocalizedDescription", "SubmitButtonText", "LocalizedSubmitButtonText", "LoadingText", "LocalizedLoadingText", "ThankYouText", "LocalizedThankYouText", "PageBackgroundColor", "LocalizedPageBackgroundColor", "TrackingSettings", "SubmitButtonTextColor", "SubmitButtonBackgroundColor", "FooterText", "LocalizedFooterText", "CssOverrides", "PasswordSettings", });
     internal_static_io_PasswordSettings_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_io_PasswordSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PasswordSettings_descriptor,
         new java.lang.String[] { "PasswordType", "Password", "InputLabelText", "LocalizedInputLabelText", "ErrorText", "LocalizedErrorText", "HeaderText", "LocalizedHeaderText", "ButtonText", "LocalizedButtonText", "TitleText", "LocalizedTitleText", });
     internal_static_io_PassTemplateResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_io_PassTemplateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PassTemplateResponse_descriptor,
         new java.lang.String[] { "Template", "Name", "OwnerUsername", "Protocol", "Revision", "CreatedAt", "UpdatedAt", });
     internal_static_io_Colors_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_io_Colors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Colors_descriptor,
         new java.lang.String[] { "BackgroundColor", "LabelColor", "TextColor", "StripColor", });
     internal_static_io_CopyObjectInput_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_io_CopyObjectInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_CopyObjectInput_descriptor,
         new java.lang.String[] { "Id", "NewName", });
     internal_static_io_NFC_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_io_NFC_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_NFC_descriptor,
         new java.lang.String[] { "Enabled", "CertificateId", "Payload", });
     internal_static_io_DataField_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_io_DataField_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataField_descriptor,
         new java.lang.String[] { "UniqueName", "TemplateId", "FieldType", "IsRequired", "Label", "LocalizedLabel", "DataType", "DefaultValue", "LocalizedDefaultValue", "Validation", "UserCanSetValue", "CurrencyCode", "AppleWalletFieldRenderOptions", "DataCollectionFieldRenderOptions", "Usage", "GooglePayFieldRenderOptions", "DefaultTelCountryCode", });
     internal_static_io_AppleWalletFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_io_AppleWalletFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_AppleWalletFieldRenderOptions_descriptor,
         new java.lang.String[] { "TextAlignment", "PositionSettings", "ChangeMessage", "LocalizedChangeMessage", "DateStyle", "TimeStyle", "NumberStyle", "SuppressLinkDetection", "IgnoreTimezone", "IsRelativeDate", });
     internal_static_io_GooglePayFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_io_GooglePayFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_GooglePayFieldRenderOptions_descriptor,
         new java.lang.String[] { "GooglePayPosition", "TextModulePriority", });
     internal_static_io_PositionSettings_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_io_PositionSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PositionSettings_descriptor,
         new java.lang.String[] { "Section", "Priority", });
     internal_static_io_DataCollectionFieldRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_io_DataCollectionFieldRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DataCollectionFieldRenderOptions_descriptor,
         new java.lang.String[] { "HelpText", "LocalizedHelpText", "DisplayOrder", "Placeholder", "SelectOptions", "LocalizedPlaceholder", "Autocomplete", "AddressRenderOptions", "LocalizedYearPlaceholder", "LocalizedMonthPlaceholder", "LocalizedDayPlaceholder", });
     internal_static_io_AddressRenderOptions_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_io_AddressRenderOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_AddressRenderOptions_descriptor,
         new java.lang.String[] { "Address1Label", "Address2Label", "CityLabel", "CountryLabel", "ZipLabel", "Address1Placeholder", "Address2Placeholder", "CityPlaceholder", "CountryPlaceholder", "ZipPlaceholder", "LocalizedAddress1Label", "LocalizedAddress2Label", "LocalizedCityLabel", "LocalizedCountryLabel", "LocalizedZipLabel", "LocalizedAddress1Placeholder", "LocalizedAddress2Placeholder", "LocalizedCityPlaceholder", "LocalizedCountryPlaceholder", "LocalizedZipPlaceholder", });
     internal_static_io_Sharing_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_io_Sharing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_Sharing_descriptor,
         new java.lang.String[] { "ProhibitSharing", "Url", "Description", "LocalizedDescription", });
     internal_static_io_DefaultTemplateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_io_DefaultTemplateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_DefaultTemplateRequest_descriptor,

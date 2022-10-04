@@ -290,6 +290,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1045,8 +1047,9 @@ public final class TicketOuterClass {
         } else {
           if (idCase_ == 2) {
             ticketNumberBuilder_.mergeFrom(value);
+          } else {
+            ticketNumberBuilder_.setMessage(value);
           }
-          ticketNumberBuilder_.setMessage(value);
         }
         idCase_ = 2;
         return this;
@@ -1294,6 +1297,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2249,9 +2254,11 @@ public final class TicketOuterClass {
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
 
-    java.lang.String getMetaDataOrDefault(
+    /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Any other meta fields for the ticket that are not covered in the Ticket Object / API (i.e. you might want to capture ticket information specific to your process).
@@ -2783,6 +2790,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7575,6 +7584,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8902,6 +8913,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10132,6 +10145,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11054,6 +11069,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -13250,6 +13267,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14772,8 +14791,9 @@ public final class TicketOuterClass {
         } else {
           if (eventCase_ == 4) {
             eventFilterByVenueAndStartBuilder_.mergeFrom(value);
+          } else {
+            eventFilterByVenueAndStartBuilder_.setMessage(value);
           }
-          eventFilterByVenueAndStartBuilder_.setMessage(value);
         }
         eventCase_ = 4;
         return this;
@@ -15442,6 +15462,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -16482,6 +16504,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -17458,6 +17482,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -18474,6 +18500,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -19627,6 +19655,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -20440,6 +20470,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -21385,6 +21417,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -22379,6 +22413,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -23176,6 +23212,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -24313,9 +24351,11 @@ public final class TicketOuterClass {
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
 
-    java.lang.String getMetaDataOrDefault(
+    /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Any other meta fields for the ticket that are not covered in the Ticket Object / API (i.e. you might want to capture ticket information specific to your process).
@@ -24858,6 +24898,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -30133,9 +30175,11 @@ public final class TicketOuterClass {
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
 
-    java.lang.String getMetaDataOrDefault(
+    /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Any other meta fields for the ticket that are not covered in the Ticket Object / API (i.e. you might want to capture ticket information specific to your process).
@@ -30648,6 +30692,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -32679,8 +32725,9 @@ public final class TicketOuterClass {
         } else {
           if (eventInfoCase_ == 2) {
             eventBuilder_.mergeFrom(value);
+          } else {
+            eventBuilder_.setMessage(value);
           }
-          eventBuilder_.setMessage(value);
         }
         eventInfoCase_ = 2;
         return this;
@@ -35472,6 +35519,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -36848,6 +36897,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -37599,8 +37650,9 @@ public final class TicketOuterClass {
         } else {
           if (requestCase_ == 1) {
             ticketIdBuilder_.mergeFrom(value);
+          } else {
+            ticketIdBuilder_.setMessage(value);
           }
-          ticketIdBuilder_.setMessage(value);
         }
         requestCase_ = 1;
         return this;
@@ -37740,8 +37792,9 @@ public final class TicketOuterClass {
         } else {
           if (requestCase_ == 2) {
             ticketNumberBuilder_.mergeFrom(value);
+          } else {
+            ticketNumberBuilder_.setMessage(value);
           }
-          ticketNumberBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;
@@ -37881,8 +37934,9 @@ public final class TicketOuterClass {
         } else {
           if (requestCase_ == 3) {
             orderNumberBuilder_.mergeFrom(value);
+          } else {
+            orderNumberBuilder_.setMessage(value);
           }
-          orderNumberBuilder_.setMessage(value);
         }
         requestCase_ = 3;
         return this;
@@ -38091,8 +38145,8 @@ public final class TicketOuterClass {
        * </pre>
        *
        * <code>repeated .io.PassBundleFormat format = 4;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of format at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for format to set.
        * @return This builder for chaining.
        */
       public Builder setFormatValue(
@@ -38336,6 +38390,8 @@ public final class TicketOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -38959,8 +39015,9 @@ public final class TicketOuterClass {
         } else {
           if (requestCase_ == 1) {
             ticketIdBuilder_.mergeFrom(value);
+          } else {
+            ticketIdBuilder_.setMessage(value);
           }
-          ticketIdBuilder_.setMessage(value);
         }
         requestCase_ = 1;
         return this;
@@ -39100,8 +39157,9 @@ public final class TicketOuterClass {
         } else {
           if (requestCase_ == 2) {
             ticketNumberBuilder_.mergeFrom(value);
+          } else {
+            ticketNumberBuilder_.setMessage(value);
           }
-          ticketNumberBuilder_.setMessage(value);
         }
         requestCase_ = 2;
         return this;

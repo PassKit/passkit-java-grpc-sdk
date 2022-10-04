@@ -650,6 +650,8 @@ public final class MetricsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1815,6 +1817,8 @@ public final class MetricsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3139,6 +3143,8 @@ public final class MetricsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5000,6 +5006,8 @@ public final class MetricsOuterClass {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6997,8 +7005,8 @@ public final class MetricsOuterClass {
        * </pre>
        *
        * <code>repeated .io.LifecycleEvents lifecycleEvents = 2;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of lifecycleEvents at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for lifecycleEvents to set.
        * @return This builder for chaining.
        */
       public Builder setLifecycleEventsValue(
@@ -8071,8 +8079,8 @@ public final class MetricsOuterClass {
        * </pre>
        *
        * <code>repeated .io.DeviceAttributes installDeviceAttributes = 11;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of installDeviceAttributes at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for installDeviceAttributes to set.
        * @return This builder for chaining.
        */
       public Builder setInstallDeviceAttributesValue(
@@ -8259,8 +8267,8 @@ public final class MetricsOuterClass {
        * </pre>
        *
        * <code>repeated .io.DeviceAttributes renderDeviceAttributes = 12;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of renderDeviceAttributes at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for renderDeviceAttributes to set.
        * @return This builder for chaining.
        */
       public Builder setRenderDeviceAttributesValue(

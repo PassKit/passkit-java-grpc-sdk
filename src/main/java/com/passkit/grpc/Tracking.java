@@ -1132,6 +1132,8 @@ public final class Tracking {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4344,6 +4346,8 @@ public final class Tracking {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5092,6 +5096,8 @@ public final class Tracking {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6099,6 +6105,8 @@ public final class Tracking {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7151,8 +7159,8 @@ public final class Tracking {
        * </pre>
        *
        * <code>repeated .io.GoogleAnalyticsDataCollectionPageEvent dataCollectionPageEvents = 2;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of dataCollectionPageEvents at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for dataCollectionPageEvents to set.
        * @return This builder for chaining.
        */
       public Builder setDataCollectionPageEventsValue(
@@ -7339,8 +7347,8 @@ public final class Tracking {
        * </pre>
        *
        * <code>repeated .io.GoogleAnalyticsPassRenderPageEvent passRenderPageEvents = 3;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of passRenderPageEvents at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for passRenderPageEvents to set.
        * @return This builder for chaining.
        */
       public Builder setPassRenderPageEventsValue(
@@ -7527,8 +7535,8 @@ public final class Tracking {
        * </pre>
        *
        * <code>repeated .io.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent customerInitiatedRedemption = 4;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of customerInitiatedRedemption at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for customerInitiatedRedemption to set.
        * @return This builder for chaining.
        */
       public Builder setCustomerInitiatedRedemptionValue(
@@ -7764,6 +7772,8 @@ public final class Tracking {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

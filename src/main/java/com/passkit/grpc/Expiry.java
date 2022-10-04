@@ -347,6 +347,8 @@ public final class Expiry {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1045,8 +1047,9 @@ public final class Expiry {
         } else {
           if (expiryOneofCase_ == 2) {
             fixedExpiryDateBuilder_.mergeFrom(value);
+          } else {
+            fixedExpiryDateBuilder_.setMessage(value);
           }
-          fixedExpiryDateBuilder_.setMessage(value);
         }
         expiryOneofCase_ = 2;
         return this;

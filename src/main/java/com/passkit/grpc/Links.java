@@ -550,6 +550,8 @@ public final class Links {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2200,8 +2202,8 @@ public final class Links {
        * </pre>
        *
        * <code>repeated .io.UsageType usage = 7;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of usage at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for usage to set.
        * @return This builder for chaining.
        */
       public Builder setUsageValue(
@@ -2435,6 +2437,8 @@ public final class Links {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

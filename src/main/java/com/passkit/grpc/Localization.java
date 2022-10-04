@@ -883,9 +883,11 @@ public final class Localization {
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
 
-    java.lang.String getTranslationsOrDefault(
+    /* nullable */
+java.lang.String getTranslationsOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue);
+        /* nullable */
+java.lang.String defaultValue);
     /**
      * <pre>
      * Translations key is a valid LanguageCode. The value represents the translated string.
@@ -971,6 +973,8 @@ public final class Localization {
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
