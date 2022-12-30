@@ -461,151 +461,6 @@ public final class MessageOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Message(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              title_ = s;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedTitle_ != null) {
-                subBuilder = localizedTitle_.toBuilder();
-              }
-              localizedTitle_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedTitle_);
-                localizedTitle_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              plainTextContent_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedPlainTextContent_ != null) {
-                subBuilder = localizedPlainTextContent_.toBuilder();
-              }
-              localizedPlainTextContent_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedPlainTextContent_);
-                localizedPlainTextContent_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              richTextContent_ = s;
-              break;
-            }
-            case 58: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedRichTextContent_ != null) {
-                subBuilder = localizedRichTextContent_.toBuilder();
-              }
-              localizedRichTextContent_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedRichTextContent_);
-                localizedRichTextContent_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                urls_ = new java.util.ArrayList<com.passkit.grpc.CommonObjects.Url>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              urls_.add(
-                  input.readMessage(com.passkit.grpc.CommonObjects.Url.parser(), extensionRegistry));
-              break;
-            }
-            case 74: {
-              com.passkit.grpc.Image.ImageIds.Builder subBuilder = null;
-              if (images_ != null) {
-                subBuilder = images_.toBuilder();
-              }
-              images_ = input.readMessage(com.passkit.grpc.Image.ImageIds.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(images_);
-                images_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 80: {
-
-              priority_ = input.readUInt32();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              displayFrom_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              displayUntil_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          urls_ = java.util.Collections.unmodifiableList(urls_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.MessageOuterClass.internal_static_io_Message_descriptor;
@@ -1164,7 +1019,7 @@ public final class MessageOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayUntil_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, displayUntil_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1215,7 +1070,7 @@ public final class MessageOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayUntil_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, displayUntil_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1266,7 +1121,7 @@ public final class MessageOuterClass {
           .equals(other.getDisplayFrom())) return false;
       if (!getDisplayUntil()
           .equals(other.getDisplayUntil())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1311,7 +1166,7 @@ public final class MessageOuterClass {
       hash = (53 * hash) + getDisplayFrom().hashCode();
       hash = (37 * hash) + DISPLAYUNTIL_FIELD_NUMBER;
       hash = (53 * hash) + getDisplayUntil().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1428,19 +1283,13 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.Message.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getUrlsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1473,10 +1322,11 @@ public final class MessageOuterClass {
         }
         if (urlsBuilder_ == null) {
           urls_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          urls_ = null;
           urlsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (imagesBuilder_ == null) {
           images_ = null;
         } else {
@@ -1665,7 +1515,7 @@ public final class MessageOuterClass {
           displayUntil_ = other.displayUntil_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1680,17 +1530,106 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.Message parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                title_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getLocalizedTitleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                plainTextContent_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getLocalizedPlainTextContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                richTextContent_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getLocalizedRichTextContentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              case 66: {
+                com.passkit.grpc.CommonObjects.Url m =
+                    input.readMessage(
+                        com.passkit.grpc.CommonObjects.Url.parser(),
+                        extensionRegistry);
+                if (urlsBuilder_ == null) {
+                  ensureUrlsIsMutable();
+                  urls_.add(m);
+                } else {
+                  urlsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getImagesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 80: {
+                priority_ = input.readUInt32();
+
+                break;
+              } // case 80
+              case 90: {
+                displayFrom_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                displayUntil_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.Message) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3258,7 +3197,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Message(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3385,70 +3335,6 @@ public final class MessageOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private GetMessagesForProtocolRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              protocol_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              classId_ = s;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.PaginationOuterClass.Pagination.Builder subBuilder = null;
-              if (pagination_ != null) {
-                subBuilder = pagination_.toBuilder();
-              }
-              pagination_ = input.readMessage(com.passkit.grpc.PaginationOuterClass.Pagination.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pagination_);
-                pagination_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -3620,7 +3506,7 @@ public final class MessageOuterClass {
       if (pagination_ != null) {
         output.writeMessage(3, getPagination());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3639,7 +3525,7 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getPagination());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3663,7 +3549,7 @@ public final class MessageOuterClass {
         if (!getPagination()
             .equals(other.getPagination())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3682,7 +3568,7 @@ public final class MessageOuterClass {
         hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
         hash = (53 * hash) + getPagination().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3803,18 +3689,13 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3921,7 +3802,7 @@ public final class MessageOuterClass {
         if (other.hasPagination()) {
           mergePagination(other.getPagination());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3936,17 +3817,47 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                protocol_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                classId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessagesForProtocolRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -4339,7 +4250,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetMessagesForProtocolRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4482,121 +4404,6 @@ public final class MessageOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private GetMessageResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.MessageOuterClass.Message.Builder subBuilder = null;
-              if (message_ != null) {
-                subBuilder = message_.toBuilder();
-              }
-              message_ = input.readMessage(com.passkit.grpc.MessageOuterClass.Message.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(message_);
-                message_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 24: {
-
-              recipients_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (distributedAt_ != null) {
-                subBuilder = distributedAt_.toBuilder();
-              }
-              distributedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(distributedAt_);
-                distributedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (withdrawnAt_ != null) {
-                subBuilder = withdrawnAt_.toBuilder();
-              }
-              withdrawnAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(withdrawnAt_);
-                withdrawnAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createdAt_ != null) {
-                subBuilder = createdAt_.toBuilder();
-              }
-              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createdAt_);
-                createdAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updatedAt_ != null) {
-                subBuilder = updatedAt_.toBuilder();
-              }
-              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updatedAt_);
-                updatedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4806,7 +4613,7 @@ public final class MessageOuterClass {
       if (updatedAt_ != null) {
         output.writeMessage(7, getUpdatedAt());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4843,7 +4650,7 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getUpdatedAt());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4886,7 +4693,7 @@ public final class MessageOuterClass {
         if (!getUpdatedAt()
             .equals(other.getUpdatedAt())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4921,7 +4728,7 @@ public final class MessageOuterClass {
         hash = (37 * hash) + UPDATEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedAt().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5038,18 +4845,13 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.GetMessageResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5210,7 +5012,7 @@ public final class MessageOuterClass {
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5225,17 +5027,75 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.GetMessageResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 24: {
+                recipients_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getDistributedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getWithdrawnAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getUpdatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessageResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5951,7 +5811,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetMessageResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6027,58 +5898,6 @@ public final class MessageOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private GetMessageHistoryResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                messages_ = new java.util.ArrayList<com.passkit.grpc.MessageOuterClass.GetMessageResponse>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              messages_.add(
-                  input.readMessage(com.passkit.grpc.MessageOuterClass.GetMessageResponse.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          messages_ = java.util.Collections.unmodifiableList(messages_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.MessageOuterClass.internal_static_io_GetMessageHistoryResponse_descriptor;
@@ -6149,7 +5968,7 @@ public final class MessageOuterClass {
       for (int i = 0; i < messages_.size(); i++) {
         output.writeMessage(1, messages_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6162,7 +5981,7 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, messages_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6179,7 +5998,7 @@ public final class MessageOuterClass {
 
       if (!getMessagesList()
           .equals(other.getMessagesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6194,7 +6013,7 @@ public final class MessageOuterClass {
         hash = (37 * hash) + MESSAGES_FIELD_NUMBER;
         hash = (53 * hash) + getMessagesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6311,29 +6130,24 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getMessagesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (messagesBuilder_ == null) {
           messages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          messages_ = null;
           messagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6444,7 +6258,7 @@ public final class MessageOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6459,17 +6273,43 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.passkit.grpc.MessageOuterClass.GetMessageResponse m =
+                    input.readMessage(
+                        com.passkit.grpc.MessageOuterClass.GetMessageResponse.parser(),
+                        extensionRegistry);
+                if (messagesBuilder_ == null) {
+                  ensureMessagesIsMutable();
+                  messages_.add(m);
+                } else {
+                  messagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.GetMessageHistoryResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -6746,7 +6586,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetMessageHistoryResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6841,79 +6692,6 @@ public final class MessageOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private SendMessageRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              messageId_ = s;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.CommonObjects.PassIds.Builder subBuilder = null;
-              if (targetCase_ == 2) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.PassIds) target_).toBuilder();
-              }
-              target_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.PassIds.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.PassIds) target_);
-                target_ = subBuilder.buildPartial();
-              }
-              targetCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.CommonObjects.Protocol.Builder subBuilder = null;
-              if (targetCase_ == 3) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.Protocol) target_).toBuilder();
-              }
-              target_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.Protocol.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Protocol) target_);
-                target_ = subBuilder.buildPartial();
-              }
-              targetCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -7092,7 +6870,7 @@ public final class MessageOuterClass {
       if (targetCase_ == 3) {
         output.writeMessage(3, (com.passkit.grpc.CommonObjects.Protocol) target_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7112,7 +6890,7 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.passkit.grpc.CommonObjects.Protocol) target_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7142,7 +6920,7 @@ public final class MessageOuterClass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7167,7 +6945,7 @@ public final class MessageOuterClass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7284,24 +7062,25 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.SendMessageRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         messageId_ = "";
 
+        if (passIdsBuilder_ != null) {
+          passIdsBuilder_.clear();
+        }
+        if (protocolBuilder_ != null) {
+          protocolBuilder_.clear();
+        }
         targetCase_ = 0;
         target_ = null;
         return this;
@@ -7411,7 +7190,7 @@ public final class MessageOuterClass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7426,17 +7205,49 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.SendMessageRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                messageId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPassIdsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                targetCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getProtocolFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                targetCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.SendMessageRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int targetCase_ = 0;
@@ -7847,7 +7658,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SendMessageRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7904,50 +7726,6 @@ public final class MessageOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SendMessageResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              count_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.MessageOuterClass.internal_static_io_SendMessageResponse_descriptor;
@@ -7989,7 +7767,7 @@ public final class MessageOuterClass {
       if (count_ != 0) {
         output.writeInt32(1, count_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8002,7 +7780,7 @@ public final class MessageOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, count_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8019,7 +7797,7 @@ public final class MessageOuterClass {
 
       if (getCount()
           != other.getCount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8032,7 +7810,7 @@ public final class MessageOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getCount();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8149,18 +7927,13 @@ public final class MessageOuterClass {
 
       // Construct using com.passkit.grpc.MessageOuterClass.SendMessageResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8245,7 +8018,7 @@ public final class MessageOuterClass {
         if (other.getCount() != 0) {
           setCount(other.getCount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8260,17 +8033,35 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.MessageOuterClass.SendMessageResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                count_ = input.readInt32();
+
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.MessageOuterClass.SendMessageResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8337,7 +8128,18 @@ public final class MessageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SendMessageResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

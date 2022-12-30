@@ -618,172 +618,6 @@ public final class Scheduler {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private SchedulingJob(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobFunction_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobPayload_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-            case 50: {
-              com.passkit.grpc.ct.Scheduler.Schedule.Builder subBuilder = null;
-              if (schedule_ != null) {
-                subBuilder = schedule_.toBuilder();
-              }
-              schedule_ = input.readMessage(com.passkit.grpc.ct.Scheduler.Schedule.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(schedule_);
-                schedule_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 66: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (nextRunDatetime_ != null) {
-                subBuilder = nextRunDatetime_.toBuilder();
-              }
-              nextRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nextRunDatetime_);
-                nextRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (lastRunDatetime_ != null) {
-                subBuilder = lastRunDatetime_.toBuilder();
-              }
-              lastRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(lastRunDatetime_);
-                lastRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                logs_ = new java.util.ArrayList<com.passkit.grpc.ct.Scheduler.JobHistory>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              logs_.add(
-                  input.readMessage(com.passkit.grpc.ct.Scheduler.JobHistory.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updated_ != null) {
-                subBuilder = updated_.toBuilder();
-              }
-              updated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updated_);
-                updated_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          logs_ = java.util.Collections.unmodifiableList(logs_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ct.Scheduler.internal_static_ct_SchedulingJob_descriptor;
@@ -1401,7 +1235,7 @@ public final class Scheduler {
       if (expiry_ != null) {
         output.writeMessage(13, getExpiry());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1457,7 +1291,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getExpiry());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1515,7 +1349,7 @@ public final class Scheduler {
         if (!getExpiry()
             .equals(other.getExpiry())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1566,7 +1400,7 @@ public final class Scheduler {
         hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
         hash = (53 * hash) + getExpiry().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1683,19 +1517,13 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.SchedulingJob.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLogsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1732,10 +1560,11 @@ public final class Scheduler {
         }
         if (logsBuilder_ == null) {
           logs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          logs_ = null;
           logsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (createdBuilder_ == null) {
           created_ = null;
         } else {
@@ -1941,7 +1770,7 @@ public final class Scheduler {
         if (other.hasExpiry()) {
           mergeExpiry(other.getExpiry());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1956,17 +1785,115 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.SchedulingJob parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                jobFunction_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                jobPayload_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                description_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getScheduleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 56: {
+                status_ = input.readEnum();
+
+                break;
+              } // case 56
+              case 66: {
+                input.readMessage(
+                    getNextRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getLastRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 82: {
+                com.passkit.grpc.ct.Scheduler.JobHistory m =
+                    input.readMessage(
+                        com.passkit.grpc.ct.Scheduler.JobHistory.parser(),
+                        extensionRegistry);
+                if (logsBuilder_ == null) {
+                  ensureLogsIsMutable();
+                  logs_.add(m);
+                } else {
+                  logsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getUpdatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.SchedulingJob) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3814,7 +3741,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SchedulingJob(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3991,89 +3929,6 @@ public final class Scheduler {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private Schedule(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              schedule_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              timezone_ = s;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startsAt_ != null) {
-                subBuilder = startsAt_.toBuilder();
-              }
-              startsAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(startsAt_);
-                startsAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 120: {
-              expiry_ = input.readSInt32();
-              expiryCase_ = 15;
-              break;
-            }
-            case 130: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiryCase_ == 16) {
-                subBuilder = ((com.google.protobuf.Timestamp) expiry_).toBuilder();
-              }
-              expiry_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.protobuf.Timestamp) expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-              expiryCase_ = 16;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4371,7 +4226,7 @@ public final class Scheduler {
       if (expiryCase_ == 16) {
         output.writeMessage(16, (com.google.protobuf.Timestamp) expiry_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4399,7 +4254,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, (com.google.protobuf.Timestamp) expiry_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4436,7 +4291,7 @@ public final class Scheduler {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4467,7 +4322,7 @@ public final class Scheduler {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4584,18 +4439,13 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.Schedule.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4609,6 +4459,9 @@ public final class Scheduler {
         } else {
           startsAt_ = null;
           startsAtBuilder_ = null;
+        }
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.clear();
         }
         expiryCase_ = 0;
         expiry_ = null;
@@ -4728,7 +4581,7 @@ public final class Scheduler {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4743,17 +4596,59 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.Schedule parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                schedule_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                timezone_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStartsAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 120: {
+                expiry_ = input.readSInt32();
+                expiryCase_ = 15;
+                break;
+              } // case 120
+              case 130: {
+                input.readMessage(
+                    getExpiryDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                expiryCase_ = 16;
+                break;
+              } // case 130
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.Schedule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int expiryCase_ = 0;
@@ -5410,7 +5305,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Schedule(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5555,83 +5461,6 @@ public final class Scheduler {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private SchedulingJobResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (nextRunDatetime_ != null) {
-                subBuilder = nextRunDatetime_.toBuilder();
-              }
-              nextRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nextRunDatetime_);
-                nextRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -5821,7 +5650,7 @@ public final class Scheduler {
       if (expiry_ != null) {
         output.writeMessage(4, getExpiry());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5845,7 +5674,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5873,7 +5702,7 @@ public final class Scheduler {
         if (!getExpiry()
             .equals(other.getExpiry())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5896,7 +5725,7 @@ public final class Scheduler {
         hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
         hash = (53 * hash) + getExpiry().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6013,18 +5842,13 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6144,7 +5968,7 @@ public final class Scheduler {
         if (other.hasExpiry()) {
           mergeExpiry(other.getExpiry());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6159,17 +5983,54 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.SchedulingJobResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getNextRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.SchedulingJobResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6685,7 +6546,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SchedulingJobResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6872,99 +6744,6 @@ public final class Scheduler {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private JobHistory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobId_ = s;
-              break;
-            }
-            case 24: {
-
-              success_ = input.readBool();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              log_ = s;
-              break;
-            }
-            case 40: {
-
-              statusCode_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (scheduledRunDateTime_ != null) {
-                subBuilder = scheduledRunDateTime_.toBuilder();
-              }
-              scheduledRunDateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledRunDateTime_);
-                scheduledRunDateTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (completedAt_ != null) {
-                subBuilder = completedAt_.toBuilder();
-              }
-              completedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(completedAt_);
-                completedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -7258,7 +7037,7 @@ public final class Scheduler {
       if (completedAt_ != null) {
         output.writeMessage(7, getCompletedAt());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7292,7 +7071,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCompletedAt());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7327,7 +7106,7 @@ public final class Scheduler {
         if (!getCompletedAt()
             .equals(other.getCompletedAt())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7357,7 +7136,7 @@ public final class Scheduler {
         hash = (37 * hash) + COMPLETEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getCompletedAt().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7474,18 +7253,13 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.JobHistory.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7625,7 +7399,7 @@ public final class Scheduler {
         if (other.hasCompletedAt()) {
           mergeCompletedAt(other.getCompletedAt());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7640,17 +7414,69 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.JobHistory parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                jobId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 24: {
+                success_ = input.readBool();
+
+                break;
+              } // case 24
+              case 34: {
+                log_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 40: {
+                statusCode_ = input.readUInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getScheduledRunDateTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getCompletedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.JobHistory) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8370,7 +8196,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new JobHistory(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

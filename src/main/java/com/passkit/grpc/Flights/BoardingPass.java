@@ -904,319 +904,6 @@ public final class BoardingPass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BoardingPassRecord(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operatingCarrierPNR_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                relatedPNRs_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              relatedPNRs_.add(s);
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ticketNumber_ = s;
-              break;
-            }
-            case 40: {
-
-              ticketLeg_ = input.readInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deplaningPoint_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 90: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.passkit.grpc.Flights.PassengerOuterClass.Passenger.Builder subBuilder = null;
-              if (passenger_ != null) {
-                subBuilder = passenger_.toBuilder();
-              }
-              passenger_ = input.readMessage(com.passkit.grpc.Flights.PassengerOuterClass.Passenger.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(passenger_);
-                passenger_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              class__ = s;
-              break;
-            }
-            case 112: {
-              int rawValue = input.readEnum();
-
-              compartmentCode_ = rawValue;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              seatNumber_ = s;
-              break;
-            }
-            case 128: {
-
-              sequenceNumber_ = input.readInt32();
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingGroup_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPosition_ = s;
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              freeBaggageAllowance_ = s;
-              break;
-            }
-            case 162: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carryOnAllowance_ = s;
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                ssrCodes_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              ssrCodes_.add(s);
-              break;
-            }
-            case 178: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              osi_ = s;
-              break;
-            }
-            case 186: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              remarks_ = s;
-              break;
-            }
-            case 192: {
-              int rawValue = input.readEnum();
-
-              passengerStatus_ = rawValue;
-              break;
-            }
-            case 202: {
-              com.passkit.grpc.Flights.Barcode.ConditionalItems.Builder subBuilder = null;
-              if (conditionalItems_ != null) {
-                subBuilder = conditionalItems_.toBuilder();
-              }
-              conditionalItems_ = input.readMessage(com.passkit.grpc.Flights.Barcode.ConditionalItems.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(conditionalItems_);
-                conditionalItems_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 210: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              barcodePayload_ = s;
-              break;
-            }
-            case 218: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              securityImage_ = s;
-              break;
-            }
-            case 226: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privilegeImage_ = s;
-              break;
-            }
-            case 234: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              footerImage_ = s;
-              break;
-            }
-            case 242: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                locationMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              locationMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.GPSLocation.parser(), extensionRegistry));
-              break;
-            }
-            case 250: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                beaconMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              beaconMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.Beacon.parser(), extensionRegistry));
-              break;
-            }
-            case 258: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              links_.add(
-                  input.readMessage(com.passkit.grpc.Links.Link.parser(), extensionRegistry));
-              break;
-            }
-            case 266: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              barcodeAdditionalData_ = s;
-              break;
-            }
-            case 274: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              infantPassId_ = s;
-              break;
-            }
-            case 282: {
-              com.passkit.grpc.CommonObjects.DataItems.Builder subBuilder = null;
-              if (additionalDataItems_ != null) {
-                subBuilder = additionalDataItems_.toBuilder();
-              }
-              additionalDataItems_ = input.readMessage(com.passkit.grpc.CommonObjects.DataItems.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(additionalDataItems_);
-                additionalDataItems_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 290: {
-              com.passkit.grpc.MetricsOuterClass.Metadata.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(com.passkit.grpc.MetricsOuterClass.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          relatedPNRs_ = relatedPNRs_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          ssrCodes_ = ssrCodes_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          locationMessages_ = java.util.Collections.unmodifiableList(locationMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          beaconMessages_ = java.util.Collections.unmodifiableList(beaconMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          links_ = java.util.Collections.unmodifiableList(links_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.BoardingPass.internal_static_flights_BoardingPassRecord_descriptor;
@@ -2871,7 +2558,7 @@ public final class BoardingPass {
       if (metadata_ != null) {
         output.writeMessage(36, getMetadata());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3007,7 +2694,7 @@ public final class BoardingPass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(36, getMetadata());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3105,7 +2792,7 @@ public final class BoardingPass {
         if (!getMetadata()
             .equals(other.getMetadata())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3206,7 +2893,7 @@ public final class BoardingPass {
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getMetadata().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3327,21 +3014,13 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationMessagesFieldBuilder();
-          getBeaconMessagesFieldBuilder();
-          getLinksFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3416,22 +3095,25 @@ public final class BoardingPass {
 
         if (locationMessagesBuilder_ == null) {
           locationMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          locationMessages_ = null;
           locationMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (beaconMessagesBuilder_ == null) {
           beaconMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          beaconMessages_ = null;
           beaconMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
+          links_ = null;
           linksBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         barcodeAdditionalData_ = "";
 
         infantPassId_ = "";
@@ -3819,7 +3501,7 @@ public final class BoardingPass {
         if (other.hasMetadata()) {
           mergeMetadata(other.getMetadata());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3834,17 +3516,241 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                operatingCarrierPNR_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureRelatedPNRsIsMutable();
+                relatedPNRs_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                ticketNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 40: {
+                ticketLeg_ = input.readInt32();
+
+                break;
+              } // case 40
+              case 50: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                deplaningPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                carrierCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                flightNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 90: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getPassengerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 106: {
+                class__ = input.readStringRequireUtf8();
+
+                break;
+              } // case 106
+              case 112: {
+                compartmentCode_ = input.readEnum();
+
+                break;
+              } // case 112
+              case 122: {
+                seatNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 122
+              case 128: {
+                sequenceNumber_ = input.readInt32();
+
+                break;
+              } // case 128
+              case 138: {
+                boardingGroup_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 138
+              case 146: {
+                boardingPosition_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 146
+              case 154: {
+                freeBaggageAllowance_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 154
+              case 162: {
+                carryOnAllowance_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 162
+              case 170: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSsrCodesIsMutable();
+                ssrCodes_.add(s);
+                break;
+              } // case 170
+              case 178: {
+                osi_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 178
+              case 186: {
+                remarks_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 186
+              case 192: {
+                passengerStatus_ = input.readEnum();
+
+                break;
+              } // case 192
+              case 202: {
+                input.readMessage(
+                    getConditionalItemsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 202
+              case 210: {
+                barcodePayload_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 210
+              case 218: {
+                securityImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 218
+              case 226: {
+                privilegeImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 226
+              case 234: {
+                footerImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 234
+              case 242: {
+                com.passkit.grpc.Proximity.GPSLocation m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.GPSLocation.parser(),
+                        extensionRegistry);
+                if (locationMessagesBuilder_ == null) {
+                  ensureLocationMessagesIsMutable();
+                  locationMessages_.add(m);
+                } else {
+                  locationMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 242
+              case 250: {
+                com.passkit.grpc.Proximity.Beacon m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.Beacon.parser(),
+                        extensionRegistry);
+                if (beaconMessagesBuilder_ == null) {
+                  ensureBeaconMessagesIsMutable();
+                  beaconMessages_.add(m);
+                } else {
+                  beaconMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 250
+              case 258: {
+                com.passkit.grpc.Links.Link m =
+                    input.readMessage(
+                        com.passkit.grpc.Links.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 258
+              case 266: {
+                barcodeAdditionalData_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 266
+              case 274: {
+                infantPassId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 274
+              case 282: {
+                input.readMessage(
+                    getAdditionalDataItemsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 282
+              case 290: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 290
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -8134,7 +8040,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassRecord(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8240,62 +8157,6 @@ public final class BoardingPass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private BoardingPassRecordRequestByTicketNumber(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ticketNumber_ = s;
-              break;
-            }
-            case 16: {
-
-              ticketLeg_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -8440,7 +8301,7 @@ public final class BoardingPass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, boardingPoint_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8459,7 +8320,7 @@ public final class BoardingPass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, boardingPoint_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8480,7 +8341,7 @@ public final class BoardingPass {
           != other.getTicketLeg()) return false;
       if (!getBoardingPoint()
           .equals(other.getBoardingPoint())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8497,7 +8358,7 @@ public final class BoardingPass {
       hash = (53 * hash) + getTicketLeg();
       hash = (37 * hash) + BOARDINGPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getBoardingPoint().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8618,18 +8479,13 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8728,7 +8584,7 @@ public final class BoardingPass {
           boardingPoint_ = other.boardingPoint_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8743,17 +8599,45 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                ticketNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                ticketLeg_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -9024,7 +8908,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassRecordRequestByTicketNumber(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -9178,81 +9073,6 @@ public final class BoardingPass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private BoardingPassRecordRequestByIndex(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 40: {
-
-              sequenceNumber_ = input.readInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -9487,7 +9307,7 @@ public final class BoardingPass {
       if (sequenceNumber_ != 0) {
         output.writeInt32(5, sequenceNumber_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -9513,7 +9333,7 @@ public final class BoardingPass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, sequenceNumber_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -9541,7 +9361,7 @@ public final class BoardingPass {
           .equals(other.getBoardingPoint())) return false;
       if (getSequenceNumber()
           != other.getSequenceNumber()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -9564,7 +9384,7 @@ public final class BoardingPass {
       hash = (53 * hash) + getBoardingPoint().hashCode();
       hash = (37 * hash) + SEQUENCENUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getSequenceNumber();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9685,18 +9505,13 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9816,7 +9631,7 @@ public final class BoardingPass {
         if (other.getSequenceNumber() != 0) {
           setSequenceNumber(other.getSequenceNumber());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9831,17 +9646,57 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                flightNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 40: {
+                sequenceNumber_ = input.readInt32();
+
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -10363,7 +10218,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassRecordRequestByIndex(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -10529,128 +10395,6 @@ public final class BoardingPass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private BoardingPassRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber.Builder subBuilder = null;
-              if (requestCase_ == 1) {
-                subBuilder = ((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 1;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex.Builder subBuilder = null;
-              if (requestCase_ == 2) {
-                subBuilder = ((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest.Builder subBuilder = null;
-              if (requestCase_ == 3) {
-                subBuilder = ((com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 3;
-              break;
-            }
-            case 34: {
-              com.passkit.grpc.CommonObjects.Id.Builder subBuilder = null;
-              if (requestCase_ == 4) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.Id) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.Id.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Id) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 4;
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                format_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              format_.add(rawValue);
-              break;
-            }
-            case 42: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  format_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                format_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          format_ = java.util.Collections.unmodifiableList(format_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -10946,7 +10690,7 @@ public final class BoardingPass {
       for (int i = 0; i < format_.size(); i++) {
         output.writeEnumNoTag(format_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -10983,7 +10727,7 @@ public final class BoardingPass {
             .computeUInt32SizeNoTag(dataSize);
         }formatMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -11020,7 +10764,7 @@ public final class BoardingPass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -11055,7 +10799,7 @@ public final class BoardingPass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -11176,22 +10920,29 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (ticketNumberBuilder_ != null) {
+          ticketNumberBuilder_.clear();
+        }
+        if (indexBuilder_ != null) {
+          indexBuilder_.clear();
+        }
+        if (pnrBuilder_ != null) {
+          pnrBuilder_.clear();
+        }
+        if (passIdBuilder_ != null) {
+          passIdBuilder_.clear();
+        }
         format_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         requestCase_ = 0;
@@ -11336,7 +11087,7 @@ public final class BoardingPass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -11351,17 +11102,75 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTicketNumberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getIndexFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPnrFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getPassIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 4;
+                break;
+              } // case 34
+              case 40: {
+                int tmpRaw = input.readEnum();
+                ensureFormatIsMutable();
+                format_.add(tmpRaw);
+                break;
+              } // case 40
+              case 42: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureFormatIsMutable();
+                  format_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int requestCase_ = 0;
@@ -12169,7 +11978,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -12270,87 +12090,6 @@ public final class BoardingPass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private BoardingPassRecordRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber.Builder subBuilder = null;
-              if (requestCase_ == 1) {
-                subBuilder = ((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByTicketNumber) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 1;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex.Builder subBuilder = null;
-              if (requestCase_ == 2) {
-                subBuilder = ((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequestByIndex) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 2;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.CommonObjects.Id.Builder subBuilder = null;
-              if (requestCase_ == 3) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.Id) request_).toBuilder();
-              }
-              request_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.Id.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Id) request_);
-                request_ = subBuilder.buildPartial();
-              }
-              requestCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -12524,7 +12263,7 @@ public final class BoardingPass {
       if (requestCase_ == 3) {
         output.writeMessage(3, (com.passkit.grpc.CommonObjects.Id) request_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12545,7 +12284,7 @@ public final class BoardingPass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.passkit.grpc.CommonObjects.Id) request_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -12577,7 +12316,7 @@ public final class BoardingPass {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -12604,7 +12343,7 @@ public final class BoardingPass {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12725,22 +12464,26 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (ticketNumberBuilder_ != null) {
+          ticketNumberBuilder_.clear();
+        }
+        if (indexBuilder_ != null) {
+          indexBuilder_.clear();
+        }
+        if (passIdBuilder_ != null) {
+          passIdBuilder_.clear();
+        }
         requestCase_ = 0;
         request_ = null;
         return this;
@@ -12856,7 +12599,7 @@ public final class BoardingPass {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -12871,17 +12614,51 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTicketNumberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getIndexFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPassIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                requestCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int requestCase_ = 0;
@@ -13358,7 +13135,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassRecordRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -13464,62 +13252,6 @@ public final class BoardingPass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private BoardingPassesForBookingRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pnr_ = s;
-              break;
-            }
-            case 16: {
-
-              ticketLeg_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -13664,7 +13396,7 @@ public final class BoardingPass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, boardingPoint_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -13683,7 +13415,7 @@ public final class BoardingPass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(boardingPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, boardingPoint_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -13704,7 +13436,7 @@ public final class BoardingPass {
           != other.getTicketLeg()) return false;
       if (!getBoardingPoint()
           .equals(other.getBoardingPoint())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -13721,7 +13453,7 @@ public final class BoardingPass {
       hash = (53 * hash) + getTicketLeg();
       hash = (37 * hash) + BOARDINGPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getBoardingPoint().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -13842,18 +13574,13 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13952,7 +13679,7 @@ public final class BoardingPass {
           boardingPoint_ = other.boardingPoint_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -13967,17 +13694,45 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pnr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                ticketLeg_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassesForBookingRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -14248,7 +14003,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassesForBookingRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -14348,58 +14114,6 @@ public final class BoardingPass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private BoardingPassesResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                boardingPasses_ = new java.util.ArrayList<com.passkit.grpc.CommonObjects.PassBundle>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              boardingPasses_.add(
-                  input.readMessage(com.passkit.grpc.CommonObjects.PassBundle.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          boardingPasses_ = java.util.Collections.unmodifiableList(boardingPasses_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.BoardingPass.internal_static_flights_BoardingPassesResponse_descriptor;
@@ -14490,7 +14204,7 @@ public final class BoardingPass {
       for (int i = 0; i < boardingPasses_.size(); i++) {
         output.writeMessage(1, boardingPasses_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -14503,7 +14217,7 @@ public final class BoardingPass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, boardingPasses_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -14520,7 +14234,7 @@ public final class BoardingPass {
 
       if (!getBoardingPassesList()
           .equals(other.getBoardingPassesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -14535,7 +14249,7 @@ public final class BoardingPass {
         hash = (37 * hash) + BOARDINGPASSES_FIELD_NUMBER;
         hash = (53 * hash) + getBoardingPassesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14656,29 +14370,24 @@ public final class BoardingPass {
 
       // Construct using com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getBoardingPassesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (boardingPassesBuilder_ == null) {
           boardingPasses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          boardingPasses_ = null;
           boardingPassesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -14789,7 +14498,7 @@ public final class BoardingPass {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -14804,17 +14513,43 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.passkit.grpc.CommonObjects.PassBundle m =
+                    input.readMessage(
+                        com.passkit.grpc.CommonObjects.PassBundle.parser(),
+                        extensionRegistry);
+                if (boardingPassesBuilder_ == null) {
+                  ensureBoardingPassesIsMutable();
+                  boardingPasses_.add(m);
+                } else {
+                  boardingPassesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -15163,7 +14898,18 @@ public final class BoardingPass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new BoardingPassesResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

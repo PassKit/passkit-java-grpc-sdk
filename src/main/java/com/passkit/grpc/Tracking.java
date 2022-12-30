@@ -1042,124 +1042,6 @@ public final class Tracking {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private FacebookPixelSettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              pixelId_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                dataCollectionPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              dataCollectionPageStandardEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.StandardEvent.parser(), extensionRegistry));
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                dataCollectionPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              dataCollectionPageCustomEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.CustomEvent.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                passPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              passPageStandardEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.StandardEvent.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                passPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              passPageCustomEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.CustomEvent.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                customerInitiatedRedemptionPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              customerInitiatedRedemptionPageStandardEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.StandardEvent.parser(), extensionRegistry));
-              break;
-            }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                customerInitiatedRedemptionPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              customerInitiatedRedemptionPageCustomEvents_.add(
-                  input.readMessage(com.passkit.grpc.Tracking.CustomEvent.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          dataCollectionPageStandardEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageStandardEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          dataCollectionPageCustomEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageCustomEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          passPageStandardEvents_ = java.util.Collections.unmodifiableList(passPageStandardEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          passPageCustomEvents_ = java.util.Collections.unmodifiableList(passPageCustomEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000010) != 0)) {
-          customerInitiatedRedemptionPageStandardEvents_ = java.util.Collections.unmodifiableList(customerInitiatedRedemptionPageStandardEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          customerInitiatedRedemptionPageCustomEvents_ = java.util.Collections.unmodifiableList(customerInitiatedRedemptionPageCustomEvents_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_FacebookPixelSettings_descriptor;
@@ -1614,7 +1496,7 @@ public final class Tracking {
       for (int i = 0; i < customerInitiatedRedemptionPageCustomEvents_.size(); i++) {
         output.writeMessage(7, customerInitiatedRedemptionPageCustomEvents_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1650,7 +1532,7 @@ public final class Tracking {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, customerInitiatedRedemptionPageCustomEvents_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1679,7 +1561,7 @@ public final class Tracking {
           .equals(other.getCustomerInitiatedRedemptionPageStandardEventsList())) return false;
       if (!getCustomerInitiatedRedemptionPageCustomEventsList()
           .equals(other.getCustomerInitiatedRedemptionPageCustomEventsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1716,7 +1598,7 @@ public final class Tracking {
         hash = (37 * hash) + CUSTOMERINITIATEDREDEMPTIONPAGECUSTOMEVENTS_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerInitiatedRedemptionPageCustomEventsList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1833,24 +1715,13 @@ public final class Tracking {
 
       // Construct using com.passkit.grpc.Tracking.FacebookPixelSettings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getDataCollectionPageStandardEventsFieldBuilder();
-          getDataCollectionPageCustomEventsFieldBuilder();
-          getPassPageStandardEventsFieldBuilder();
-          getPassPageCustomEventsFieldBuilder();
-          getCustomerInitiatedRedemptionPageStandardEventsFieldBuilder();
-          getCustomerInitiatedRedemptionPageCustomEventsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1859,40 +1730,46 @@ public final class Tracking {
 
         if (dataCollectionPageStandardEventsBuilder_ == null) {
           dataCollectionPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          dataCollectionPageStandardEvents_ = null;
           dataCollectionPageStandardEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (dataCollectionPageCustomEventsBuilder_ == null) {
           dataCollectionPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          dataCollectionPageCustomEvents_ = null;
           dataCollectionPageCustomEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (passPageStandardEventsBuilder_ == null) {
           passPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          passPageStandardEvents_ = null;
           passPageStandardEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (passPageCustomEventsBuilder_ == null) {
           passPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          passPageCustomEvents_ = null;
           passPageCustomEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (customerInitiatedRedemptionPageStandardEventsBuilder_ == null) {
           customerInitiatedRedemptionPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
+          customerInitiatedRedemptionPageStandardEvents_ = null;
           customerInitiatedRedemptionPageStandardEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (customerInitiatedRedemptionPageCustomEventsBuilder_ == null) {
           customerInitiatedRedemptionPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
         } else {
+          customerInitiatedRedemptionPageCustomEvents_ = null;
           customerInitiatedRedemptionPageCustomEventsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -2183,7 +2060,7 @@ public final class Tracking {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2198,17 +2075,113 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Tracking.FacebookPixelSettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                pixelId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                com.passkit.grpc.Tracking.StandardEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.StandardEvent.parser(),
+                        extensionRegistry);
+                if (dataCollectionPageStandardEventsBuilder_ == null) {
+                  ensureDataCollectionPageStandardEventsIsMutable();
+                  dataCollectionPageStandardEvents_.add(m);
+                } else {
+                  dataCollectionPageStandardEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.passkit.grpc.Tracking.CustomEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.CustomEvent.parser(),
+                        extensionRegistry);
+                if (dataCollectionPageCustomEventsBuilder_ == null) {
+                  ensureDataCollectionPageCustomEventsIsMutable();
+                  dataCollectionPageCustomEvents_.add(m);
+                } else {
+                  dataCollectionPageCustomEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.passkit.grpc.Tracking.StandardEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.StandardEvent.parser(),
+                        extensionRegistry);
+                if (passPageStandardEventsBuilder_ == null) {
+                  ensurePassPageStandardEventsIsMutable();
+                  passPageStandardEvents_.add(m);
+                } else {
+                  passPageStandardEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.passkit.grpc.Tracking.CustomEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.CustomEvent.parser(),
+                        extensionRegistry);
+                if (passPageCustomEventsBuilder_ == null) {
+                  ensurePassPageCustomEventsIsMutable();
+                  passPageCustomEvents_.add(m);
+                } else {
+                  passPageCustomEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.passkit.grpc.Tracking.StandardEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.StandardEvent.parser(),
+                        extensionRegistry);
+                if (customerInitiatedRedemptionPageStandardEventsBuilder_ == null) {
+                  ensureCustomerInitiatedRedemptionPageStandardEventsIsMutable();
+                  customerInitiatedRedemptionPageStandardEvents_.add(m);
+                } else {
+                  customerInitiatedRedemptionPageStandardEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.passkit.grpc.Tracking.CustomEvent m =
+                    input.readMessage(
+                        com.passkit.grpc.Tracking.CustomEvent.parser(),
+                        extensionRegistry);
+                if (customerInitiatedRedemptionPageCustomEventsBuilder_ == null) {
+                  ensureCustomerInitiatedRedemptionPageCustomEventsIsMutable();
+                  customerInitiatedRedemptionPageCustomEvents_.add(m);
+                } else {
+                  customerInitiatedRedemptionPageCustomEventsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Tracking.FacebookPixelSettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4213,7 +4186,18 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FacebookPixelSettings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4304,57 +4288,6 @@ public final class Tracking {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private StandardEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              event_ = rawValue;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              properties_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4462,7 +4395,7 @@ public final class Tracking {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, properties_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4478,7 +4411,7 @@ public final class Tracking {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, properties_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4496,7 +4429,7 @@ public final class Tracking {
       if (event_ != other.event_) return false;
       if (!getProperties()
           .equals(other.getProperties())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4511,7 +4444,7 @@ public final class Tracking {
       hash = (53 * hash) + event_;
       hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
       hash = (53 * hash) + getProperties().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4628,18 +4561,13 @@ public final class Tracking {
 
       // Construct using com.passkit.grpc.Tracking.StandardEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4731,7 +4659,7 @@ public final class Tracking {
           properties_ = other.properties_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4746,17 +4674,40 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Tracking.StandardEvent parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                event_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 26: {
+                properties_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Tracking.StandardEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -4962,7 +4913,18 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StandardEvent(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5054,57 +5016,6 @@ public final class Tracking {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CustomEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              event_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              properties_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -5231,7 +5142,7 @@ public final class Tracking {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, properties_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5246,7 +5157,7 @@ public final class Tracking {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(properties_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, properties_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5265,7 +5176,7 @@ public final class Tracking {
           .equals(other.getEvent())) return false;
       if (!getProperties()
           .equals(other.getProperties())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5280,7 +5191,7 @@ public final class Tracking {
       hash = (53 * hash) + getEvent().hashCode();
       hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
       hash = (53 * hash) + getProperties().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5397,18 +5308,13 @@ public final class Tracking {
 
       // Construct using com.passkit.grpc.Tracking.CustomEvent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -5501,7 +5407,7 @@ public final class Tracking {
           properties_ = other.properties_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5516,17 +5422,40 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Tracking.CustomEvent parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                event_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 26: {
+                properties_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Tracking.CustomEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5754,7 +5683,18 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CustomEvent(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5996,136 +5936,6 @@ public final class Tracking {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private GoogleAnalyticsSettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                trackingIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              trackingIds_.add(s);
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                dataCollectionPageEvents_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              dataCollectionPageEvents_.add(rawValue);
-              break;
-            }
-            case 18: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                  dataCollectionPageEvents_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                dataCollectionPageEvents_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                passRenderPageEvents_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              passRenderPageEvents_.add(rawValue);
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                  passRenderPageEvents_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000004;
-                }
-                passRenderPageEvents_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                customerInitiatedRedemption_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              customerInitiatedRedemption_.add(rawValue);
-              break;
-            }
-            case 34: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                  customerInitiatedRedemption_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                customerInitiatedRedemption_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          trackingIds_ = trackingIds_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          dataCollectionPageEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          passRenderPageEvents_ = java.util.Collections.unmodifiableList(passRenderPageEvents_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          customerInitiatedRedemption_ = java.util.Collections.unmodifiableList(customerInitiatedRedemption_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -6464,7 +6274,7 @@ public final class Tracking {
       for (int i = 0; i < customerInitiatedRedemption_.size(); i++) {
         output.writeEnumNoTag(customerInitiatedRedemption_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6517,7 +6327,7 @@ public final class Tracking {
             .computeUInt32SizeNoTag(dataSize);
         }customerInitiatedRedemptionMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6537,7 +6347,7 @@ public final class Tracking {
       if (!dataCollectionPageEvents_.equals(other.dataCollectionPageEvents_)) return false;
       if (!passRenderPageEvents_.equals(other.passRenderPageEvents_)) return false;
       if (!customerInitiatedRedemption_.equals(other.customerInitiatedRedemption_)) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6564,7 +6374,7 @@ public final class Tracking {
         hash = (37 * hash) + CUSTOMERINITIATEDREDEMPTION_FIELD_NUMBER;
         hash = (53 * hash) + customerInitiatedRedemption_.hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6681,18 +6491,13 @@ public final class Tracking {
 
       // Construct using com.passkit.grpc.Tracking.GoogleAnalyticsSettings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -6840,7 +6645,7 @@ public final class Tracking {
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6855,17 +6660,87 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Tracking.GoogleAnalyticsSettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTrackingIdsIsMutable();
+                trackingIds_.add(s);
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                ensureDataCollectionPageEventsIsMutable();
+                dataCollectionPageEvents_.add(tmpRaw);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureDataCollectionPageEventsIsMutable();
+                  dataCollectionPageEvents_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 18
+              case 24: {
+                int tmpRaw = input.readEnum();
+                ensurePassRenderPageEventsIsMutable();
+                passRenderPageEvents_.add(tmpRaw);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensurePassRenderPageEventsIsMutable();
+                  passRenderPageEvents_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 26
+              case 32: {
+                int tmpRaw = input.readEnum();
+                ensureCustomerInitiatedRedemptionIsMutable();
+                customerInitiatedRedemption_.add(tmpRaw);
+                break;
+              } // case 32
+              case 34: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureCustomerInitiatedRedemptionIsMutable();
+                  customerInitiatedRedemption_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Tracking.GoogleAnalyticsSettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -7612,7 +7487,18 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GoogleAnalyticsSettings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7716,71 +7602,6 @@ public final class Tracking {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private TrackingSettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.Tracking.FacebookPixelSettings.Builder subBuilder = null;
-              if (facebookPixelSettings_ != null) {
-                subBuilder = facebookPixelSettings_.toBuilder();
-              }
-              facebookPixelSettings_ = input.readMessage(com.passkit.grpc.Tracking.FacebookPixelSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(facebookPixelSettings_);
-                facebookPixelSettings_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Tracking.GoogleAnalyticsSettings.Builder subBuilder = null;
-              if (googleAnalyticsSettings_ != null) {
-                subBuilder = googleAnalyticsSettings_.toBuilder();
-              }
-              googleAnalyticsSettings_ = input.readMessage(com.passkit.grpc.Tracking.GoogleAnalyticsSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(googleAnalyticsSettings_);
-                googleAnalyticsSettings_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -7891,7 +7712,7 @@ public final class Tracking {
       if (googleAnalyticsSettings_ != null) {
         output.writeMessage(2, getGoogleAnalyticsSettings());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7908,7 +7729,7 @@ public final class Tracking {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGoogleAnalyticsSettings());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7933,7 +7754,7 @@ public final class Tracking {
         if (!getGoogleAnalyticsSettings()
             .equals(other.getGoogleAnalyticsSettings())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7952,7 +7773,7 @@ public final class Tracking {
         hash = (37 * hash) + GOOGLEANALYTICSSETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getGoogleAnalyticsSettings().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8069,18 +7890,13 @@ public final class Tracking {
 
       // Construct using com.passkit.grpc.Tracking.TrackingSettings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -8187,7 +8003,7 @@ public final class Tracking {
         if (other.hasGoogleAnalyticsSettings()) {
           mergeGoogleAnalyticsSettings(other.getGoogleAnalyticsSettings());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8202,17 +8018,44 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Tracking.TrackingSettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFacebookPixelSettingsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGoogleAnalyticsSettingsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Tracking.TrackingSettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8558,7 +8401,18 @@ public final class Tracking {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrackingSettings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

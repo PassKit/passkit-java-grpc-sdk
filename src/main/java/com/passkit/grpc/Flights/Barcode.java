@@ -1969,125 +1969,6 @@ public final class Barcode {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ConditionalItems(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              passengerDescription_ = rawValue;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              checkInSource_ = rawValue;
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              boardingPassIssuanceSource_ = rawValue;
-              break;
-            }
-            case 34: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (boardingPassIssueDate_ != null) {
-                subBuilder = boardingPassIssueDate_.toBuilder();
-              }
-              boardingPassIssueDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(boardingPassIssueDate_);
-                boardingPassIssueDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              documentType_ = rawValue;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPassIssuer_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                baggageTagNumber_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              baggageTagNumber_.add(s);
-              break;
-            }
-            case 64: {
-              int rawValue = input.readEnum();
-
-              selecteeIndicator_ = rawValue;
-              break;
-            }
-            case 72: {
-              int rawValue = input.readEnum();
-
-              internationalDocVerification_ = rawValue;
-              break;
-            }
-            case 80: {
-              int rawValue = input.readEnum();
-
-              idadIndicator_ = rawValue;
-              break;
-            }
-            case 88: {
-              int rawValue = input.readEnum();
-
-              fastTrack_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          baggageTagNumber_ = baggageTagNumber_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.Barcode.internal_static_flights_ConditionalItems_descriptor;
@@ -2499,7 +2380,7 @@ public final class Barcode {
       if (fastTrack_ != com.passkit.grpc.Flights.Barcode.FastTrack.N.getNumber()) {
         output.writeEnum(11, fastTrack_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2555,7 +2436,7 @@ public final class Barcode {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(11, fastTrack_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2587,7 +2468,7 @@ public final class Barcode {
       if (internationalDocVerification_ != other.internationalDocVerification_) return false;
       if (idadIndicator_ != other.idadIndicator_) return false;
       if (fastTrack_ != other.fastTrack_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2624,7 +2505,7 @@ public final class Barcode {
       hash = (53 * hash) + idadIndicator_;
       hash = (37 * hash) + FASTTRACK_FIELD_NUMBER;
       hash = (53 * hash) + fastTrack_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2745,18 +2626,13 @@ public final class Barcode {
 
       // Construct using com.passkit.grpc.Flights.Barcode.ConditionalItems.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2922,7 +2798,7 @@ public final class Barcode {
         if (other.fastTrack_ != 0) {
           setFastTrackValue(other.getFastTrackValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2937,17 +2813,88 @@ public final class Barcode {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.Barcode.ConditionalItems parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                passengerDescription_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 16: {
+                checkInSource_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 24: {
+                boardingPassIssuanceSource_ = input.readEnum();
+
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getBoardingPassIssueDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 40: {
+                documentType_ = input.readEnum();
+
+                break;
+              } // case 40
+              case 50: {
+                boardingPassIssuer_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureBaggageTagNumberIsMutable();
+                baggageTagNumber_.add(s);
+                break;
+              } // case 58
+              case 64: {
+                selecteeIndicator_ = input.readEnum();
+
+                break;
+              } // case 64
+              case 72: {
+                internationalDocVerification_ = input.readEnum();
+
+                break;
+              } // case 72
+              case 80: {
+                idadIndicator_ = input.readEnum();
+
+                break;
+              } // case 80
+              case 88: {
+                fastTrack_ = input.readEnum();
+
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.Barcode.ConditionalItems) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3973,7 +3920,18 @@ public final class Barcode {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ConditionalItems(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

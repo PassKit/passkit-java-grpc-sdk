@@ -753,165 +753,6 @@ public final class Image {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ImageIds(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              icon_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              logo_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              appleLogo_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              hero_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eventStrip_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              strip_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              thumbnail_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              background_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              footer_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              security_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privilege_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              airlineAlliance_ = s;
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              personalization_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              banner_ = s;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              profile_ = s;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              appImage_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              stampedImage_ = s;
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              unstampedImage_ = s;
-              break;
-            }
-            case 162: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              stampImage_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageIds_descriptor;
@@ -1759,7 +1600,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stampImage_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 20, stampImage_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1828,7 +1669,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stampImage_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, stampImage_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1883,7 +1724,7 @@ public final class Image {
           .equals(other.getUnstampedImage())) return false;
       if (!getStampImage()
           .equals(other.getStampImage())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1934,7 +1775,7 @@ public final class Image {
       hash = (53 * hash) + getUnstampedImage().hashCode();
       hash = (37 * hash) + STAMPIMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getStampImage().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2055,18 +1896,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.ImageIds.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2285,7 +2121,7 @@ public final class Image {
           stampImage_ = other.stampImage_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2300,17 +2136,130 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.ImageIds parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                icon_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                logo_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                appleLogo_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                hero_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                eventStrip_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                strip_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                thumbnail_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                background_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                footer_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 82: {
+                security_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 82
+              case 90: {
+                privilege_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                airlineAlliance_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              case 106: {
+                personalization_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 106
+              case 114: {
+                banner_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 114
+              case 122: {
+                message_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 122
+              case 130: {
+                profile_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 130
+              case 138: {
+                appImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 138
+              case 146: {
+                stampedImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 146
+              case 154: {
+                unstampedImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 154
+              case 162: {
+                stampImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 162
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.ImageIds) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -3866,7 +3815,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ImageIds(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4751,367 +4711,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ImageData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              icon_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              logo_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              appleLogo_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              hero_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              eventStrip_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              strip_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              thumbnail_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              background_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              footer_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              security_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privilege_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              airlineAlliance_ = s;
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              personalization_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              banner_ = s;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              profile_ = s;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              appImage_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              stampedImage_ = s;
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              unstampedImage_ = s;
-              break;
-            }
-            case 162: {
-              com.passkit.grpc.Image.StampImageConfig.Builder subBuilder = null;
-              if (stampConfig_ != null) {
-                subBuilder = stampConfig_.toBuilder();
-              }
-              stampConfig_ = input.readMessage(com.passkit.grpc.Image.StampImageConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(stampConfig_);
-                stampConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 250: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedIcon_ != null) {
-                subBuilder = localizedIcon_.toBuilder();
-              }
-              localizedIcon_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedIcon_);
-                localizedIcon_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 258: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedLogo_ != null) {
-                subBuilder = localizedLogo_.toBuilder();
-              }
-              localizedLogo_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedLogo_);
-                localizedLogo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 266: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedAppleLogo_ != null) {
-                subBuilder = localizedAppleLogo_.toBuilder();
-              }
-              localizedAppleLogo_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedAppleLogo_);
-                localizedAppleLogo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 274: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedHero_ != null) {
-                subBuilder = localizedHero_.toBuilder();
-              }
-              localizedHero_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedHero_);
-                localizedHero_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 282: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedEventStrip_ != null) {
-                subBuilder = localizedEventStrip_.toBuilder();
-              }
-              localizedEventStrip_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedEventStrip_);
-                localizedEventStrip_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 290: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedStrip_ != null) {
-                subBuilder = localizedStrip_.toBuilder();
-              }
-              localizedStrip_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedStrip_);
-                localizedStrip_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 298: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedThumbnail_ != null) {
-                subBuilder = localizedThumbnail_.toBuilder();
-              }
-              localizedThumbnail_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedThumbnail_);
-                localizedThumbnail_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 306: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedBackground_ != null) {
-                subBuilder = localizedBackground_.toBuilder();
-              }
-              localizedBackground_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedBackground_);
-                localizedBackground_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 314: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedFooter_ != null) {
-                subBuilder = localizedFooter_.toBuilder();
-              }
-              localizedFooter_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedFooter_);
-                localizedFooter_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 322: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedSecurity_ != null) {
-                subBuilder = localizedSecurity_.toBuilder();
-              }
-              localizedSecurity_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedSecurity_);
-                localizedSecurity_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 330: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedPrivilege_ != null) {
-                subBuilder = localizedPrivilege_.toBuilder();
-              }
-              localizedPrivilege_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedPrivilege_);
-                localizedPrivilege_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 338: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedAirlineAlliance_ != null) {
-                subBuilder = localizedAirlineAlliance_.toBuilder();
-              }
-              localizedAirlineAlliance_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedAirlineAlliance_);
-                localizedAirlineAlliance_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 346: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedPersonalization_ != null) {
-                subBuilder = localizedPersonalization_.toBuilder();
-              }
-              localizedPersonalization_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedPersonalization_);
-                localizedPersonalization_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 354: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedBanner_ != null) {
-                subBuilder = localizedBanner_.toBuilder();
-              }
-              localizedBanner_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedBanner_);
-                localizedBanner_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 362: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedMessage_ != null) {
-                subBuilder = localizedMessage_.toBuilder();
-              }
-              localizedMessage_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedMessage_);
-                localizedMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -6727,7 +6326,7 @@ public final class Image {
       if (localizedMessage_ != null) {
         output.writeMessage(45, getLocalizedMessage());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6857,7 +6456,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(45, getLocalizedMessage());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6990,7 +6589,7 @@ public final class Image {
         if (!getLocalizedMessage()
             .equals(other.getLocalizedMessage())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7103,7 +6702,7 @@ public final class Image {
         hash = (37 * hash) + LOCALIZEDMESSAGE_FIELD_NUMBER;
         hash = (53 * hash) + getLocalizedMessage().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7224,18 +6823,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.ImageData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -7671,7 +7265,7 @@ public final class Image {
         if (other.hasLocalizedMessage()) {
           mergeLocalizedMessage(other.getLocalizedMessage());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7686,17 +7280,237 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.ImageData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                icon_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                logo_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                appleLogo_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                hero_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                eventStrip_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                strip_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                thumbnail_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                background_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                footer_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 82: {
+                security_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 82
+              case 90: {
+                privilege_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 98: {
+                airlineAlliance_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              case 106: {
+                personalization_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 106
+              case 114: {
+                banner_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 114
+              case 122: {
+                message_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 122
+              case 130: {
+                profile_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 130
+              case 138: {
+                appImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 138
+              case 146: {
+                stampedImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 146
+              case 154: {
+                unstampedImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 154
+              case 162: {
+                input.readMessage(
+                    getStampConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 162
+              case 250: {
+                input.readMessage(
+                    getLocalizedIconFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 250
+              case 258: {
+                input.readMessage(
+                    getLocalizedLogoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 258
+              case 266: {
+                input.readMessage(
+                    getLocalizedAppleLogoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 266
+              case 274: {
+                input.readMessage(
+                    getLocalizedHeroFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 274
+              case 282: {
+                input.readMessage(
+                    getLocalizedEventStripFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 282
+              case 290: {
+                input.readMessage(
+                    getLocalizedStripFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 290
+              case 298: {
+                input.readMessage(
+                    getLocalizedThumbnailFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 298
+              case 306: {
+                input.readMessage(
+                    getLocalizedBackgroundFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 306
+              case 314: {
+                input.readMessage(
+                    getLocalizedFooterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 314
+              case 322: {
+                input.readMessage(
+                    getLocalizedSecurityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 322
+              case 330: {
+                input.readMessage(
+                    getLocalizedPrivilegeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 330
+              case 338: {
+                input.readMessage(
+                    getLocalizedAirlineAllianceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 338
+              case 346: {
+                input.readMessage(
+                    getLocalizedPersonalizationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 346
+              case 354: {
+                input.readMessage(
+                    getLocalizedBannerFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 354
+              case 362: {
+                input.readMessage(
+                    getLocalizedMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 362
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.ImageData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -12036,7 +11850,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ImageData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -12210,128 +12035,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ImageRecord(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            case 40: {
-              int rawValue = input.readEnum();
-
-              use_ = rawValue;
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                languages_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              languages_.add(rawValue);
-              break;
-            }
-            case 50: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  languages_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                languages_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ownerUsername_ = s;
-              break;
-            }
-            case 66: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (createdAt_ != null) {
-                subBuilder = createdAt_.toBuilder();
-              }
-              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(createdAt_);
-                createdAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updatedAt_ != null) {
-                subBuilder = updatedAt_.toBuilder();
-              }
-              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updatedAt_);
-                updatedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          languages_ = java.util.Collections.unmodifiableList(languages_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -12670,7 +12373,7 @@ public final class Image {
       if (updatedAt_ != null) {
         output.writeMessage(9, getUpdatedAt());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -12715,7 +12418,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getUpdatedAt());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -12750,7 +12453,7 @@ public final class Image {
         if (!getUpdatedAt()
             .equals(other.getUpdatedAt())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -12783,7 +12486,7 @@ public final class Image {
         hash = (37 * hash) + UPDATEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedAt().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -12900,18 +12603,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.ImageRecord.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -13070,7 +12768,7 @@ public final class Image {
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -13085,17 +12783,86 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.ImageRecord parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                url_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 40: {
+                use_ = input.readEnum();
+
+                break;
+              } // case 40
+              case 48: {
+                int tmpRaw = input.readEnum();
+                ensureLanguagesIsMutable();
+                languages_.add(tmpRaw);
+                break;
+              } // case 48
+              case 50: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureLanguagesIsMutable();
+                  languages_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 50
+              case 58: {
+                ownerUsername_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getUpdatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.ImageRecord) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -13868,7 +13635,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ImageRecord(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -13939,51 +13717,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ProfileImageInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              imageData_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -14061,7 +13794,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageData_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, imageData_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -14073,7 +13806,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageData_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, imageData_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -14090,7 +13823,7 @@ public final class Image {
 
       if (!getImageData()
           .equals(other.getImageData())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -14103,7 +13836,7 @@ public final class Image {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + IMAGEDATA_FIELD_NUMBER;
       hash = (53 * hash) + getImageData().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14220,18 +13953,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.ProfileImageInput.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -14317,7 +14045,7 @@ public final class Image {
           imageData_ = other.imageData_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -14332,17 +14060,35 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.ProfileImageInput parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                imageData_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.ProfileImageInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -14474,7 +14220,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProfileImageInput(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -14550,58 +14307,6 @@ public final class Image {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private MultipleImages(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                images_ = new java.util.ArrayList<com.passkit.grpc.Image.ImageRecord>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              images_.add(
-                  input.readMessage(com.passkit.grpc.Image.ImageRecord.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          images_ = java.util.Collections.unmodifiableList(images_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_MultipleImages_descriptor;
@@ -14672,7 +14377,7 @@ public final class Image {
       for (int i = 0; i < images_.size(); i++) {
         output.writeMessage(1, images_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -14685,7 +14390,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, images_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -14702,7 +14407,7 @@ public final class Image {
 
       if (!getImagesList()
           .equals(other.getImagesList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -14717,7 +14422,7 @@ public final class Image {
         hash = (37 * hash) + IMAGES_FIELD_NUMBER;
         hash = (53 * hash) + getImagesList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -14834,29 +14539,24 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.MultipleImages.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getImagesFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         if (imagesBuilder_ == null) {
           images_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          images_ = null;
           imagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -14967,7 +14667,7 @@ public final class Image {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -14982,17 +14682,43 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.MultipleImages parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.passkit.grpc.Image.ImageRecord m =
+                    input.readMessage(
+                        com.passkit.grpc.Image.ImageRecord.parser(),
+                        extensionRegistry);
+                if (imagesBuilder_ == null) {
+                  ensureImagesIsMutable();
+                  images_.add(m);
+                } else {
+                  imagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.MultipleImages) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -15269,7 +14995,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new MultipleImages(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -15350,56 +15087,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private StampImageRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 16: {
-
-              status_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -15495,7 +15182,7 @@ public final class Image {
       if (status_ != 0L) {
         output.writeUInt64(2, status_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -15511,7 +15198,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, status_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -15530,7 +15217,7 @@ public final class Image {
           .equals(other.getId())) return false;
       if (getStatus()
           != other.getStatus()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -15546,7 +15233,7 @@ public final class Image {
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStatus());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -15663,18 +15350,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.StampImageRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -15766,7 +15448,7 @@ public final class Image {
         if (other.getStatus() != 0L) {
           setStatus(other.getStatus());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -15781,17 +15463,40 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.StampImageRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readUInt64();
+
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.StampImageRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -15966,7 +15671,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StampImageRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -16064,64 +15780,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private CreateImageInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Image.ImageData.Builder subBuilder = null;
-              if (imageData_ != null) {
-                subBuilder = imageData_.toBuilder();
-              }
-              imageData_ = input.readMessage(com.passkit.grpc.Image.ImageData.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(imageData_);
-                imageData_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -16240,7 +15898,7 @@ public final class Image {
       if (imageData_ != null) {
         output.writeMessage(2, getImageData());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -16256,7 +15914,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getImageData());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -16278,7 +15936,7 @@ public final class Image {
         if (!getImageData()
             .equals(other.getImageData())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -16295,7 +15953,7 @@ public final class Image {
         hash = (37 * hash) + IMAGEDATA_FIELD_NUMBER;
         hash = (53 * hash) + getImageData().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -16412,18 +16070,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.CreateImageInput.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -16523,7 +16176,7 @@ public final class Image {
         if (other.hasImageData()) {
           mergeImageData(other.getImageData());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -16538,17 +16191,42 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.CreateImageInput parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getImageDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.CreateImageInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -16835,7 +16513,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CreateImageInput(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -16975,76 +16664,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private UpdateImageInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              imageData_ = s;
-              break;
-            }
-            case 34: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedImageData_ != null) {
-                subBuilder = localizedImageData_.toBuilder();
-              }
-              localizedImageData_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedImageData_);
-                localizedImageData_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -17261,7 +16880,7 @@ public final class Image {
       if (localizedImageData_ != null) {
         output.writeMessage(4, getLocalizedImageData());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -17283,7 +16902,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getLocalizedImageData());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -17309,7 +16928,7 @@ public final class Image {
         if (!getLocalizedImageData()
             .equals(other.getLocalizedImageData())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -17330,7 +16949,7 @@ public final class Image {
         hash = (37 * hash) + LOCALIZEDIMAGEDATA_FIELD_NUMBER;
         hash = (53 * hash) + getLocalizedImageData().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -17447,18 +17066,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.UpdateImageInput.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -17572,7 +17186,7 @@ public final class Image {
         if (other.hasLocalizedImageData()) {
           mergeLocalizedImageData(other.getLocalizedImageData());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -17587,17 +17201,52 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.UpdateImageInput parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                imageData_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getLocalizedImageDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.UpdateImageInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -18076,7 +17725,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UpdateImageInput(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -18134,50 +17794,6 @@ public final class Image {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ImageBundle(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              image_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageBundle_descriptor;
@@ -18219,7 +17835,7 @@ public final class Image {
       if (!image_.isEmpty()) {
         output.writeBytes(1, image_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -18232,7 +17848,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, image_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -18249,7 +17865,7 @@ public final class Image {
 
       if (!getImage()
           .equals(other.getImage())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -18262,7 +17878,7 @@ public final class Image {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -18379,18 +17995,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.ImageBundle.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -18475,7 +18086,7 @@ public final class Image {
         if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
           setImage(other.getImage());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -18490,17 +18101,35 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.ImageBundle parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                image_ = input.readBytes();
+
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.ImageBundle) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -18570,7 +18199,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ImageBundle(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -18662,57 +18302,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private LocalizedImageInput(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              languageCode_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -18839,7 +18428,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, languageCode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -18854,7 +18443,7 @@ public final class Image {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, languageCode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -18873,7 +18462,7 @@ public final class Image {
           .equals(other.getId())) return false;
       if (!getLanguageCode()
           .equals(other.getLanguageCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -18888,7 +18477,7 @@ public final class Image {
       hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + LANGUAGECODE_FIELD_NUMBER;
       hash = (53 * hash) + getLanguageCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -19005,18 +18594,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.LocalizedImageInput.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -19109,7 +18693,7 @@ public final class Image {
           languageCode_ = other.languageCode_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -19124,17 +18708,40 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.LocalizedImageInput parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                languageCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.LocalizedImageInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -19362,7 +18969,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new LocalizedImageInput(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -19631,171 +19249,6 @@ public final class Image {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private StampImageConfig(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 21: {
-
-              padding_ = input.readFloat();
-              break;
-            }
-            case 24: {
-
-              totalStamps_ = input.readUInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              stampImage_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              unstampImage_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              backgroundImage_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              backgroundColor_ = s;
-              break;
-            }
-            case 69: {
-
-              backgroundOpacity_ = input.readFloat();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              stampColor_ = s;
-              break;
-            }
-            case 85: {
-
-              stampOpacity_ = input.readFloat();
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              unstampColor_ = s;
-              break;
-            }
-            case 101: {
-
-              unstampOpacity_ = input.readFloat();
-              break;
-            }
-            case 104: {
-
-              placeholders_ = input.readBool();
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              placeholderColor_ = s;
-              break;
-            }
-            case 125: {
-
-              placeholderOpacity_ = input.readFloat();
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              placeholderBorderColor_ = s;
-              break;
-            }
-            case 141: {
-
-              placeholderBorderOpacity_ = input.readFloat();
-              break;
-            }
-            case 144: {
-
-              rewardPlaceholders_ = input.readBool();
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              rewardBorderColor_ = s;
-              break;
-            }
-            case 165: {
-
-              rewardBorderOpacity_ = input.readFloat();
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              rewardBackgroundColor_ = s;
-              break;
-            }
-            case 181: {
-
-              rewardBackgroundOpacity_ = input.readFloat();
-              break;
-            }
-            case 184: {
-
-              rewardPositions_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -20447,7 +19900,7 @@ public final class Image {
       if (rewardPositions_ != 0L) {
         output.writeUInt64(23, rewardPositions_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -20537,7 +19990,7 @@ public final class Image {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(23, rewardPositions_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -20606,7 +20059,7 @@ public final class Image {
               other.getRewardBackgroundOpacity())) return false;
       if (getRewardPositions()
           != other.getRewardPositions()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -20674,7 +20127,7 @@ public final class Image {
       hash = (37 * hash) + REWARDPOSITIONS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getRewardPositions());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -20791,18 +20244,13 @@ public final class Image {
 
       // Construct using com.passkit.grpc.Image.StampImageConfig.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -21030,7 +20478,7 @@ public final class Image {
         if (other.getRewardPositions() != 0L) {
           setRewardPositions(other.getRewardPositions());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -21045,17 +20493,145 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Image.StampImageConfig parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 21: {
+                padding_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 24: {
+                totalStamps_ = input.readUInt32();
+
+                break;
+              } // case 24
+              case 34: {
+                stampImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                unstampImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                backgroundImage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                backgroundColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 69: {
+                backgroundOpacity_ = input.readFloat();
+
+                break;
+              } // case 69
+              case 74: {
+                stampColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 85: {
+                stampOpacity_ = input.readFloat();
+
+                break;
+              } // case 85
+              case 90: {
+                unstampColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+              case 101: {
+                unstampOpacity_ = input.readFloat();
+
+                break;
+              } // case 101
+              case 104: {
+                placeholders_ = input.readBool();
+
+                break;
+              } // case 104
+              case 114: {
+                placeholderColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 114
+              case 125: {
+                placeholderOpacity_ = input.readFloat();
+
+                break;
+              } // case 125
+              case 130: {
+                placeholderBorderColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 130
+              case 141: {
+                placeholderBorderOpacity_ = input.readFloat();
+
+                break;
+              } // case 141
+              case 144: {
+                rewardPlaceholders_ = input.readBool();
+
+                break;
+              } // case 144
+              case 154: {
+                rewardBorderColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 154
+              case 165: {
+                rewardBorderOpacity_ = input.readFloat();
+
+                break;
+              } // case 165
+              case 170: {
+                rewardBackgroundColor_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 170
+              case 181: {
+                rewardBackgroundOpacity_ = input.readFloat();
+
+                break;
+              } // case 181
+              case 184: {
+                rewardPositions_ = input.readUInt64();
+
+                break;
+              } // case 184
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Image.StampImageConfig) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -22311,7 +21887,18 @@ public final class Image {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new StampImageConfig(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

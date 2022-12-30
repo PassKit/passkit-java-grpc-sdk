@@ -293,70 +293,6 @@ public final class Expiry {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ExpirySettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              expiryType_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (expiryOneofCase_ == 2) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.Date) expiryOneof_).toBuilder();
-              }
-              expiryOneof_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Date) expiryOneof_);
-                expiryOneof_ = subBuilder.buildPartial();
-              }
-              expiryOneofCase_ = 2;
-              break;
-            }
-            case 24: {
-              expiryOneof_ = input.readUInt32();
-              expiryOneofCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Expiry.internal_static_io_ExpirySettings_descriptor;
@@ -531,7 +467,7 @@ public final class Expiry {
         output.writeUInt32(
             3, (int)((java.lang.Integer) expiryOneof_));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -553,7 +489,7 @@ public final class Expiry {
           .computeUInt32Size(
               3, (int)((java.lang.Integer) expiryOneof_));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -582,7 +518,7 @@ public final class Expiry {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -607,7 +543,7 @@ public final class Expiry {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -728,24 +664,22 @@ public final class Expiry {
 
       // Construct using com.passkit.grpc.Expiry.ExpirySettings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         expiryType_ = 0;
 
+        if (fixedExpiryDateBuilder_ != null) {
+          fixedExpiryDateBuilder_.clear();
+        }
         expiryOneofCase_ = 0;
         expiryOneof_ = null;
         return this;
@@ -850,7 +784,7 @@ public final class Expiry {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -865,17 +799,47 @@ public final class Expiry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Expiry.ExpirySettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                expiryType_ = input.readEnum();
+
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getFixedExpiryDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                expiryOneofCase_ = 2;
+                break;
+              } // case 18
+              case 24: {
+                expiryOneof_ = input.readUInt32();
+                expiryOneofCase_ = 3;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Expiry.ExpirySettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int expiryOneofCase_ = 0;
@@ -1228,7 +1192,18 @@ public final class Expiry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ExpirySettings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

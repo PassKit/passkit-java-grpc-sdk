@@ -326,149 +326,6 @@ public final class TransactionOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Transaction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              referenceId_ = s;
-              break;
-            }
-            case 21: {
-
-              totalPrice_ = input.readFloat();
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                orderItems_ = new java.util.ArrayList<com.passkit.grpc.TransactionOuterClass.OrderItem>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              orderItems_.add(
-                  input.readMessage(com.passkit.grpc.TransactionOuterClass.OrderItem.parser(), extensionRegistry));
-              break;
-            }
-            case 37: {
-
-              discount_ = input.readFloat();
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                discountItems_ = new java.util.ArrayList<com.passkit.grpc.TransactionOuterClass.DiscountItem>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              discountItems_.add(
-                  input.readMessage(com.passkit.grpc.TransactionOuterClass.DiscountItem.parser(), extensionRegistry));
-              break;
-            }
-            case 53: {
-
-              serviceCharge_ = input.readFloat();
-              break;
-            }
-            case 61: {
-
-              totalTax_ = input.readFloat();
-              break;
-            }
-            case 69: {
-
-              finalPrice_ = input.readFloat();
-              break;
-            }
-            case 77: {
-
-              roundingDifference_ = input.readFloat();
-              break;
-            }
-            case 80: {
-
-              isRefunded_ = input.readBool();
-              break;
-            }
-            case 90: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (timestamp_ != null) {
-                subBuilder = timestamp_.toBuilder();
-              }
-              timestamp_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timestamp_);
-                timestamp_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              currency_ = s;
-              break;
-            }
-            case 106: {
-              com.passkit.grpc.Proximity.GPSLocation.Builder subBuilder = null;
-              if (location_ != null) {
-                subBuilder = location_.toBuilder();
-              }
-              location_ = input.readMessage(com.passkit.grpc.Proximity.GPSLocation.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(location_);
-                location_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              transactionSource_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          orderItems_ = java.util.Collections.unmodifiableList(orderItems_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          discountItems_ = java.util.Collections.unmodifiableList(discountItems_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.TransactionOuterClass.internal_static_io_Transaction_descriptor;
@@ -977,7 +834,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionSource_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 14, transactionSource_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1039,7 +896,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transactionSource_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, transactionSource_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1094,7 +951,7 @@ public final class TransactionOuterClass {
       }
       if (!getTransactionSource()
           .equals(other.getTransactionSource())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1148,7 +1005,7 @@ public final class TransactionOuterClass {
       }
       hash = (37 * hash) + TRANSACTIONSOURCE_FIELD_NUMBER;
       hash = (53 * hash) + getTransactionSource().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1269,20 +1126,13 @@ public final class TransactionOuterClass {
 
       // Construct using com.passkit.grpc.TransactionOuterClass.Transaction.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getOrderItemsFieldBuilder();
-          getDiscountItemsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1293,18 +1143,20 @@ public final class TransactionOuterClass {
 
         if (orderItemsBuilder_ == null) {
           orderItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          orderItems_ = null;
           orderItemsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         discount_ = 0F;
 
         if (discountItemsBuilder_ == null) {
           discountItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          discountItems_ = null;
           discountItemsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         serviceCharge_ = 0F;
 
         totalTax_ = 0F;
@@ -1535,7 +1387,7 @@ public final class TransactionOuterClass {
           transactionSource_ = other.transactionSource_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1550,17 +1402,120 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.TransactionOuterClass.Transaction parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                referenceId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 21: {
+                totalPrice_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 26: {
+                com.passkit.grpc.TransactionOuterClass.OrderItem m =
+                    input.readMessage(
+                        com.passkit.grpc.TransactionOuterClass.OrderItem.parser(),
+                        extensionRegistry);
+                if (orderItemsBuilder_ == null) {
+                  ensureOrderItemsIsMutable();
+                  orderItems_.add(m);
+                } else {
+                  orderItemsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 37: {
+                discount_ = input.readFloat();
+
+                break;
+              } // case 37
+              case 42: {
+                com.passkit.grpc.TransactionOuterClass.DiscountItem m =
+                    input.readMessage(
+                        com.passkit.grpc.TransactionOuterClass.DiscountItem.parser(),
+                        extensionRegistry);
+                if (discountItemsBuilder_ == null) {
+                  ensureDiscountItemsIsMutable();
+                  discountItems_.add(m);
+                } else {
+                  discountItemsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 53: {
+                serviceCharge_ = input.readFloat();
+
+                break;
+              } // case 53
+              case 61: {
+                totalTax_ = input.readFloat();
+
+                break;
+              } // case 61
+              case 69: {
+                finalPrice_ = input.readFloat();
+
+                break;
+              } // case 69
+              case 77: {
+                roundingDifference_ = input.readFloat();
+
+                break;
+              } // case 77
+              case 80: {
+                isRefunded_ = input.readBool();
+
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getTimestampFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                currency_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getLocationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              case 114: {
+                transactionSource_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 114
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.TransactionOuterClass.Transaction) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3120,7 +3075,18 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Transaction(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3243,68 +3209,6 @@ public final class TransactionOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private DiscountItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              discountCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              voucherCode_ = s;
-              break;
-            }
-            case 37: {
-
-              amount_ = input.readFloat();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              itemName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -3498,7 +3402,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, itemName_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3520,7 +3424,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, itemName_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3544,7 +3448,7 @@ public final class TransactionOuterClass {
               other.getAmount())) return false;
       if (!getItemName()
           .equals(other.getItemName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3564,7 +3468,7 @@ public final class TransactionOuterClass {
           getAmount());
       hash = (37 * hash) + ITEMNAME_FIELD_NUMBER;
       hash = (53 * hash) + getItemName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3681,18 +3585,13 @@ public final class TransactionOuterClass {
 
       // Construct using com.passkit.grpc.TransactionOuterClass.DiscountItem.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3798,7 +3697,7 @@ public final class TransactionOuterClass {
           itemName_ = other.itemName_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3813,17 +3712,50 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.TransactionOuterClass.DiscountItem parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                discountCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                voucherCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 37: {
+                amount_ = input.readFloat();
+
+                break;
+              } // case 37
+              case 42: {
+                itemName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.TransactionOuterClass.DiscountItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -4190,7 +4122,18 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DiscountItem(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4312,72 +4255,6 @@ public final class TransactionOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private OrderItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 13: {
-
-              amount_ = input.readFloat();
-              break;
-            }
-            case 21: {
-
-              tax_ = input.readFloat();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              itemName_ = s;
-              break;
-            }
-            case 32: {
-
-              quantity_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sku_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -4558,7 +4435,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, sku_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4585,7 +4462,7 @@ public final class TransactionOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sku_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, sku_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4612,7 +4489,7 @@ public final class TransactionOuterClass {
           != other.getQuantity()) return false;
       if (!getSku()
           .equals(other.getSku())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4635,7 +4512,7 @@ public final class TransactionOuterClass {
       hash = (53 * hash) + getQuantity();
       hash = (37 * hash) + SKU_FIELD_NUMBER;
       hash = (53 * hash) + getSku().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4752,18 +4629,13 @@ public final class TransactionOuterClass {
 
       // Construct using com.passkit.grpc.TransactionOuterClass.OrderItem.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -4874,7 +4746,7 @@ public final class TransactionOuterClass {
           sku_ = other.sku_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4889,17 +4761,55 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.TransactionOuterClass.OrderItem parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                amount_ = input.readFloat();
+
+                break;
+              } // case 13
+              case 21: {
+                tax_ = input.readFloat();
+
+                break;
+              } // case 21
+              case 26: {
+                itemName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 32: {
+                quantity_ = input.readInt32();
+
+                break;
+              } // case 32
+              case 42: {
+                sku_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.TransactionOuterClass.OrderItem) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5256,7 +5166,18 @@ public final class TransactionOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new OrderItem(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

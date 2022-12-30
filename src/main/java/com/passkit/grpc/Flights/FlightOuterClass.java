@@ -1323,332 +1323,6 @@ public final class FlightOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Flight(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deplaningPoint_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              departureTerminal_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              arrivalTerminal_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              departureGate_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              arrivalGate_ = s;
-              break;
-            }
-            case 82: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (scheduledDepartureTime_ != null) {
-                subBuilder = scheduledDepartureTime_.toBuilder();
-              }
-              scheduledDepartureTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledDepartureTime_);
-                scheduledDepartureTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 90: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (estimatedDepartureTime_ != null) {
-                subBuilder = estimatedDepartureTime_.toBuilder();
-              }
-              estimatedDepartureTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(estimatedDepartureTime_);
-                estimatedDepartureTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (boardingTime_ != null) {
-                subBuilder = boardingTime_.toBuilder();
-              }
-              boardingTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(boardingTime_);
-                boardingTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (gateClosingTime_ != null) {
-                subBuilder = gateClosingTime_.toBuilder();
-              }
-              gateClosingTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(gateClosingTime_);
-                gateClosingTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (scheduledArrivalTime_ != null) {
-                subBuilder = scheduledArrivalTime_.toBuilder();
-              }
-              scheduledArrivalTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledArrivalTime_);
-                scheduledArrivalTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 122: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (estimatedArrivalTime_ != null) {
-                subBuilder = estimatedArrivalTime_.toBuilder();
-              }
-              estimatedArrivalTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(estimatedArrivalTime_);
-                estimatedArrivalTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operatingCarrierCode_ = s;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operatingFlightNumber_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                codeShareFlightNumbers_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              codeShareFlightNumbers_.add(s);
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              passTemplateId_ = s;
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              baggageBelt_ = s;
-              break;
-            }
-            case 176: {
-
-              autoInvalidateAfter_ = input.readUInt32();
-              break;
-            }
-            case 184: {
-
-              autoInvalidateCancelledPasses_ = input.readBool();
-              break;
-            }
-            case 194: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                locationMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              locationMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.GPSLocation.parser(), extensionRegistry));
-              break;
-            }
-            case 202: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                beaconMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              beaconMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.Beacon.parser(), extensionRegistry));
-              break;
-            }
-            case 210: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              links_.add(
-                  input.readMessage(com.passkit.grpc.Links.Link.parser(), extensionRegistry));
-              break;
-            }
-            case 216: {
-
-              suspendAutomaticUpdates_ = input.readBool();
-              break;
-            }
-            case 224: {
-              int rawValue = input.readEnum();
-
-              boardingPolicy_ = rawValue;
-              break;
-            }
-            case 232: {
-              int rawValue = input.readEnum();
-
-              seatingPolicy_ = rawValue;
-              break;
-            }
-            case 240: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 248: {
-
-              conditionalItems_ = input.readBool();
-              break;
-            }
-            case 258: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              barcodeAdditionalData_ = s;
-              break;
-            }
-            case 266: {
-              com.passkit.grpc.MetricsOuterClass.Metrics.Builder subBuilder = null;
-              if (metrics_ != null) {
-                subBuilder = metrics_.toBuilder();
-              }
-              metrics_ = input.readMessage(com.passkit.grpc.MetricsOuterClass.Metrics.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metrics_);
-                metrics_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 272: {
-              int rawValue = input.readEnum();
-
-              createMethod_ = rawValue;
-              break;
-            }
-            case 282: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              designatorId_ = s;
-              break;
-            }
-            case 288: {
-              int rawValue = input.readEnum();
-
-              invalidateCancelledPasses_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          codeShareFlightNumbers_ = codeShareFlightNumbers_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          locationMessages_ = java.util.Collections.unmodifiableList(locationMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          beaconMessages_ = java.util.Collections.unmodifiableList(beaconMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          links_ = java.util.Collections.unmodifiableList(links_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.FlightOuterClass.internal_static_flights_Flight_descriptor;
@@ -3157,7 +2831,7 @@ public final class FlightOuterClass {
       if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
         output.writeEnum(36, invalidateCancelledPasses_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3296,7 +2970,7 @@ public final class FlightOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(36, invalidateCancelledPasses_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3400,7 +3074,7 @@ public final class FlightOuterClass {
       if (!getDesignatorId()
           .equals(other.getDesignatorId())) return false;
       if (invalidateCancelledPasses_ != other.invalidateCancelledPasses_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3508,7 +3182,7 @@ public final class FlightOuterClass {
       hash = (53 * hash) + getDesignatorId().hashCode();
       hash = (37 * hash) + INVALIDATECANCELLEDPASSES_FIELD_NUMBER;
       hash = (53 * hash) + invalidateCancelledPasses_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3625,21 +3299,13 @@ public final class FlightOuterClass {
 
       // Construct using com.passkit.grpc.Flights.FlightOuterClass.Flight.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationMessagesFieldBuilder();
-          getBeaconMessagesFieldBuilder();
-          getLinksFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3718,22 +3384,25 @@ public final class FlightOuterClass {
 
         if (locationMessagesBuilder_ == null) {
           locationMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          locationMessages_ = null;
           locationMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (beaconMessagesBuilder_ == null) {
           beaconMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          beaconMessages_ = null;
           beaconMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          links_ = null;
           linksBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000008);
         suspendAutomaticUpdates_ = false;
 
         boardingPolicy_ = 0;
@@ -4123,7 +3792,7 @@ public final class FlightOuterClass {
         if (other.invalidateCancelledPasses_ != 0) {
           setInvalidateCancelledPassesValue(other.getInvalidateCancelledPassesValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4138,17 +3807,246 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.FlightOuterClass.Flight parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                flightNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              case 34: {
+                deplaningPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                departureTerminal_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              case 58: {
+                arrivalTerminal_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+              case 66: {
+                departureGate_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                arrivalGate_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getScheduledDepartureTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getEstimatedDepartureTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getBoardingTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getGateClosingTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getScheduledArrivalTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getEstimatedArrivalTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 122
+              case 130: {
+                operatingCarrierCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 130
+              case 138: {
+                operatingFlightNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 138
+              case 146: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCodeShareFlightNumbersIsMutable();
+                codeShareFlightNumbers_.add(s);
+                break;
+              } // case 146
+              case 154: {
+                passTemplateId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 154
+              case 170: {
+                baggageBelt_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 170
+              case 176: {
+                autoInvalidateAfter_ = input.readUInt32();
+
+                break;
+              } // case 176
+              case 184: {
+                autoInvalidateCancelledPasses_ = input.readBool();
+
+                break;
+              } // case 184
+              case 194: {
+                com.passkit.grpc.Proximity.GPSLocation m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.GPSLocation.parser(),
+                        extensionRegistry);
+                if (locationMessagesBuilder_ == null) {
+                  ensureLocationMessagesIsMutable();
+                  locationMessages_.add(m);
+                } else {
+                  locationMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 194
+              case 202: {
+                com.passkit.grpc.Proximity.Beacon m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.Beacon.parser(),
+                        extensionRegistry);
+                if (beaconMessagesBuilder_ == null) {
+                  ensureBeaconMessagesIsMutable();
+                  beaconMessages_.add(m);
+                } else {
+                  beaconMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 202
+              case 210: {
+                com.passkit.grpc.Links.Link m =
+                    input.readMessage(
+                        com.passkit.grpc.Links.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 210
+              case 216: {
+                suspendAutomaticUpdates_ = input.readBool();
+
+                break;
+              } // case 216
+              case 224: {
+                boardingPolicy_ = input.readEnum();
+
+                break;
+              } // case 224
+              case 232: {
+                seatingPolicy_ = input.readEnum();
+
+                break;
+              } // case 232
+              case 240: {
+                status_ = input.readEnum();
+
+                break;
+              } // case 240
+              case 248: {
+                conditionalItems_ = input.readBool();
+
+                break;
+              } // case 248
+              case 258: {
+                barcodeAdditionalData_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 258
+              case 266: {
+                input.readMessage(
+                    getMetricsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 266
+              case 272: {
+                createMethod_ = input.readEnum();
+
+                break;
+              } // case 272
+              case 282: {
+                designatorId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 282
+              case 288: {
+                invalidateCancelledPasses_ = input.readEnum();
+
+                break;
+              } // case 288
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.FlightOuterClass.Flight) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -8399,7 +8297,18 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Flight(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8564,82 +8473,6 @@ public final class FlightOuterClass {
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private FlightRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deplaningPoint_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -8905,7 +8738,7 @@ public final class FlightOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, deplaningPoint_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8930,7 +8763,7 @@ public final class FlightOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, deplaningPoint_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8958,7 +8791,7 @@ public final class FlightOuterClass {
           .equals(other.getBoardingPoint())) return false;
       if (!getDeplaningPoint()
           .equals(other.getDeplaningPoint())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8981,7 +8814,7 @@ public final class FlightOuterClass {
       hash = (53 * hash) + getBoardingPoint().hashCode();
       hash = (37 * hash) + DEPLANINGPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getDeplaningPoint().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9102,18 +8935,13 @@ public final class FlightOuterClass {
 
       // Construct using com.passkit.grpc.Flights.FlightOuterClass.FlightRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -9234,7 +9062,7 @@ public final class FlightOuterClass {
           deplaningPoint_ = other.deplaningPoint_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9249,17 +9077,57 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.FlightOuterClass.FlightRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                flightNumber_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 42: {
+                boardingPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+              case 50: {
+                deplaningPoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.FlightOuterClass.FlightRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -9834,7 +9702,18 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FlightRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
