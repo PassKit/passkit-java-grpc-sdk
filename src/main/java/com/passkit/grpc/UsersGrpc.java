@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.1)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UsersGrpc {
@@ -867,165 +867,165 @@ public final class UsersGrpc {
 
   /**
    */
-  public static abstract class UsersImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createUser(com.passkit.grpc.User.NewUser request,
+    default void createUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.NewUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void newUser(com.passkit.grpc.User.NewUser request,
+    default void newUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getNewUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void verify(com.passkit.grpc.User.VerifyRequest request,
+    default void verify(com.passkit.grpc.User.VerifyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVerifyMethod(), responseObserver);
     }
 
     /**
      */
-    public void resendVerificationEmail(com.google.protobuf.Empty request,
+    default void resendVerificationEmail(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResendVerificationEmailMethod(), responseObserver);
     }
 
     /**
      */
-    public void getUser(com.google.protobuf.Empty request,
+    default void getUser(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetUserResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void login(com.passkit.grpc.User.Credentials request,
+    default void login(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
     }
 
     /**
      */
-    public void resetPassword(com.passkit.grpc.User.Credentials request,
+    default void resetPassword(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResetPasswordMethod(), responseObserver);
     }
 
     /**
      */
-    public void sendPasswordResetLink(com.passkit.grpc.User.Username request,
+    default void sendPasswordResetLink(com.passkit.grpc.User.Username request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendPasswordResetLinkMethod(), responseObserver);
     }
 
     /**
      */
-    public void changePassword(com.passkit.grpc.User.PasswordResetInput request,
+    default void changePassword(com.passkit.grpc.User.PasswordResetInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangePasswordMethod(), responseObserver);
     }
 
     /**
      */
-    public void changeEmail(com.passkit.grpc.User.Email request,
+    default void changeEmail(com.passkit.grpc.User.Email request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangeEmailMethod(), responseObserver);
     }
 
     /**
      */
-    public void confirmEmailChange(com.passkit.grpc.User.ConfirmEmailChangeInput request,
+    default void confirmEmailChange(com.passkit.grpc.User.ConfirmEmailChangeInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getConfirmEmailChangeMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateCompanyName(com.passkit.grpc.User.CompanyName request,
+    default void updateCompanyName(com.passkit.grpc.User.CompanyName request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCompanyNameMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectsForUserQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
+    default void getProjectsForUserQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsForUserQueryDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectsQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
+    default void getProjectsQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsQueryDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectsForUserQuery(com.passkit.grpc.Filter.Filters request,
+    default void getProjectsForUserQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsForUserQueryMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectsQuery(com.passkit.grpc.Filter.Filters request,
+    default void getProjectsQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsQueryMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectByUuid(com.passkit.grpc.CommonObjects.Id request,
+    default void getProjectByUuid(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectByUuidMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectAndTemplateByShortCode(com.passkit.grpc.CommonObjects.Id request,
+    default void getProjectAndTemplateByShortCode(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectAndTemplateByShortCodeMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjectsForUser(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
+    default void getProjectsForUser(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsForUserMethod(), responseObserver);
     }
 
     /**
      */
-    public void getProjects(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
+    default void getProjects(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProjectsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getScannerConfig(com.google.protobuf.Empty request,
+    default void getScannerConfig(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetScannerConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void createScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
+    default void createScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateScannerConfigMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
+    default void updateScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateScannerConfigMethod(), responseObserver);
     }
@@ -1035,216 +1035,42 @@ public final class UsersGrpc {
      * Creates a new oauth2 resource, the returned id is NOT the access token used to make requests on the users behalf.
      * </pre>
      */
-    public void createAuthorizationResource(com.passkit.grpc.User.OAuth2AuthorizationRequest request,
+    default void createAuthorizationResource(com.passkit.grpc.User.OAuth2AuthorizationRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAuthorizationResourceMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteAuthorizationResource(com.passkit.grpc.CommonObjects.Id request,
+    default void deleteAuthorizationResource(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAuthorizationResourceMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
+    default void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAccountMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.NewUser,
-                com.passkit.grpc.User.NewUserResponse>(
-                  this, METHODID_CREATE_USER)))
-          .addMethod(
-            getNewUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.NewUser,
-                com.passkit.grpc.User.JWT>(
-                  this, METHODID_NEW_USER)))
-          .addMethod(
-            getVerifyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.VerifyRequest,
-                com.passkit.grpc.CommonObjects.Boolean>(
-                  this, METHODID_VERIFY)))
-          .addMethod(
-            getResendVerificationEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.protobuf.Empty,
-                com.passkit.grpc.CommonObjects.Boolean>(
-                  this, METHODID_RESEND_VERIFICATION_EMAIL)))
-          .addMethod(
-            getGetUserMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.protobuf.Empty,
-                com.passkit.grpc.User.GetUserResponse>(
-                  this, METHODID_GET_USER)))
-          .addMethod(
-            getLoginMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.Credentials,
-                com.passkit.grpc.User.JWT>(
-                  this, METHODID_LOGIN)))
-          .addMethod(
-            getResetPasswordMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.Credentials,
-                com.google.protobuf.Empty>(
-                  this, METHODID_RESET_PASSWORD)))
-          .addMethod(
-            getSendPasswordResetLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.Username,
-                com.google.protobuf.Empty>(
-                  this, METHODID_SEND_PASSWORD_RESET_LINK)))
-          .addMethod(
-            getChangePasswordMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.PasswordResetInput,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CHANGE_PASSWORD)))
-          .addMethod(
-            getChangeEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.Email,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CHANGE_EMAIL)))
-          .addMethod(
-            getConfirmEmailChangeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.ConfirmEmailChangeInput,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CONFIRM_EMAIL_CHANGE)))
-          .addMethod(
-            getUpdateCompanyNameMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.CompanyName,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UPDATE_COMPANY_NAME)))
-          .addMethod(
-            getGetProjectsForUserQueryDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.PaginationOuterClass.Pagination,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED)))
-          .addMethod(
-            getGetProjectsQueryDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.PaginationOuterClass.Pagination,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS_QUERY_DEPRECATED)))
-          .addMethod(
-            getGetProjectsForUserQueryMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.Filter.Filters,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS_FOR_USER_QUERY)))
-          .addMethod(
-            getGetProjectsQueryMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.Filter.Filters,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS_QUERY)))
-          .addMethod(
-            getGetProjectByUuidMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECT_BY_UUID)))
-          .addMethod(
-            getGetProjectAndTemplateByShortCodeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult>(
-                  this, METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE)))
-          .addMethod(
-            getGetProjectsForUserMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS_FOR_USER)))
-          .addMethod(
-            getGetProjectsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
-                com.passkit.grpc.ProjectOuterClass.Project>(
-                  this, METHODID_GET_PROJECTS)))
-          .addMethod(
-            getGetScannerConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.protobuf.Empty,
-                com.passkit.grpc.User.ScannerConfiguration>(
-                  this, METHODID_GET_SCANNER_CONFIG)))
-          .addMethod(
-            getCreateScannerConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.ScannerConfiguration,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_SCANNER_CONFIG)))
-          .addMethod(
-            getUpdateScannerConfigMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.ScannerConfiguration,
-                com.passkit.grpc.User.ScannerConfiguration>(
-                  this, METHODID_UPDATE_SCANNER_CONFIG)))
-          .addMethod(
-            getCreateAuthorizationResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.OAuth2AuthorizationRequest,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_AUTHORIZATION_RESOURCE)))
-          .addMethod(
-            getDeleteAuthorizationResourceMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_AUTHORIZATION_RESOURCE)))
-          .addMethod(
-            getDeleteAccountMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.User.DeleteAccountRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_ACCOUNT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Users.
    */
-  public static final class UsersStub extends io.grpc.stub.AbstractAsyncStub<UsersStub> {
+  public static abstract class UsersImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return UsersGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Users.
+   */
+  public static final class UsersStub
+      extends io.grpc.stub.AbstractAsyncStub<UsersStub> {
     private UsersStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1469,8 +1295,10 @@ public final class UsersGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Users.
    */
-  public static final class UsersBlockingStub extends io.grpc.stub.AbstractBlockingStub<UsersBlockingStub> {
+  public static final class UsersBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<UsersBlockingStub> {
     private UsersBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1675,8 +1503,10 @@ public final class UsersGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Users.
    */
-  public static final class UsersFutureStub extends io.grpc.stub.AbstractFutureStub<UsersFutureStub> {
+  public static final class UsersFutureStub
+      extends io.grpc.stub.AbstractFutureStub<UsersFutureStub> {
     private UsersFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1884,10 +1714,10 @@ public final class UsersGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final UsersImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(UsersImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -2014,6 +1844,193 @@ public final class UsersGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.NewUser,
+              com.passkit.grpc.User.NewUserResponse>(
+                service, METHODID_CREATE_USER)))
+        .addMethod(
+          getNewUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.NewUser,
+              com.passkit.grpc.User.JWT>(
+                service, METHODID_NEW_USER)))
+        .addMethod(
+          getVerifyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.VerifyRequest,
+              com.passkit.grpc.CommonObjects.Boolean>(
+                service, METHODID_VERIFY)))
+        .addMethod(
+          getResendVerificationEmailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.CommonObjects.Boolean>(
+                service, METHODID_RESEND_VERIFICATION_EMAIL)))
+        .addMethod(
+          getGetUserMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.User.GetUserResponse>(
+                service, METHODID_GET_USER)))
+        .addMethod(
+          getLoginMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.Credentials,
+              com.passkit.grpc.User.JWT>(
+                service, METHODID_LOGIN)))
+        .addMethod(
+          getResetPasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.Credentials,
+              com.google.protobuf.Empty>(
+                service, METHODID_RESET_PASSWORD)))
+        .addMethod(
+          getSendPasswordResetLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.Username,
+              com.google.protobuf.Empty>(
+                service, METHODID_SEND_PASSWORD_RESET_LINK)))
+        .addMethod(
+          getChangePasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.PasswordResetInput,
+              com.google.protobuf.Empty>(
+                service, METHODID_CHANGE_PASSWORD)))
+        .addMethod(
+          getChangeEmailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.Email,
+              com.google.protobuf.Empty>(
+                service, METHODID_CHANGE_EMAIL)))
+        .addMethod(
+          getConfirmEmailChangeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.ConfirmEmailChangeInput,
+              com.google.protobuf.Empty>(
+                service, METHODID_CONFIRM_EMAIL_CHANGE)))
+        .addMethod(
+          getUpdateCompanyNameMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.CompanyName,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPDATE_COMPANY_NAME)))
+        .addMethod(
+          getGetProjectsForUserQueryDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.PaginationOuterClass.Pagination,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED)))
+        .addMethod(
+          getGetProjectsQueryDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.PaginationOuterClass.Pagination,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS_QUERY_DEPRECATED)))
+        .addMethod(
+          getGetProjectsForUserQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.Filter.Filters,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS_FOR_USER_QUERY)))
+        .addMethod(
+          getGetProjectsQueryMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.Filter.Filters,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS_QUERY)))
+        .addMethod(
+          getGetProjectByUuidMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECT_BY_UUID)))
+        .addMethod(
+          getGetProjectAndTemplateByShortCodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult>(
+                service, METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE)))
+        .addMethod(
+          getGetProjectsForUserMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS_FOR_USER)))
+        .addMethod(
+          getGetProjectsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter,
+              com.passkit.grpc.ProjectOuterClass.Project>(
+                service, METHODID_GET_PROJECTS)))
+        .addMethod(
+          getGetScannerConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.User.ScannerConfiguration>(
+                service, METHODID_GET_SCANNER_CONFIG)))
+        .addMethod(
+          getCreateScannerConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.ScannerConfiguration,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_SCANNER_CONFIG)))
+        .addMethod(
+          getUpdateScannerConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.ScannerConfiguration,
+              com.passkit.grpc.User.ScannerConfiguration>(
+                service, METHODID_UPDATE_SCANNER_CONFIG)))
+        .addMethod(
+          getCreateAuthorizationResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.OAuth2AuthorizationRequest,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_AUTHORIZATION_RESOURCE)))
+        .addMethod(
+          getDeleteAuthorizationResourceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_AUTHORIZATION_RESOURCE)))
+        .addMethod(
+          getDeleteAccountMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.DeleteAccountRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_ACCOUNT)))
+        .build();
   }
 
   private static abstract class UsersBaseDescriptorSupplier

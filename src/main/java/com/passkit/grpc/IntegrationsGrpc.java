@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.1)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/core/a_rpc_others.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class IntegrationsGrpc {
@@ -433,185 +433,109 @@ public final class IntegrationsGrpc {
 
   /**
    */
-  public static abstract class IntegrationsImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
+    default void createIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateIntegrationsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
+    default void getIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.IntegrationConfigs> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetIntegrationsMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
+    default void updateIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateIntegrationsMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
+    default void deleteIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteIntegrationsMethod(), responseObserver);
     }
 
     /**
      */
-    public void createSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
+    default void createSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSinkSubscriptionMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
+    default void getSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSinkSubscriptionMethod(), responseObserver);
     }
 
     /**
      */
-    public void listSinkSubscriptionsDeprecated(com.passkit.grpc.CommonObjects.ListRequestDeprecated request,
+    default void listSinkSubscriptionsDeprecated(com.passkit.grpc.CommonObjects.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSinkSubscriptionsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void listSinkSubscriptions(com.passkit.grpc.CommonObjects.ListRequest request,
+    default void listSinkSubscriptions(com.passkit.grpc.CommonObjects.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSinkSubscriptionsMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
+    default void updateSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSinkSubscriptionMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
+    default void deleteSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSinkSubscriptionMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSampleSubscriptionEvent(com.passkit.grpc.CommonObjects.Id request,
+    default void getSampleSubscriptionEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSampleSubscriptionEventMethod(), responseObserver);
     }
 
     /**
      */
-    public void callDynamicApi(com.passkit.grpc.Integration.DynamicApiInput request,
+    default void callDynamicApi(com.passkit.grpc.Integration.DynamicApiInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.DynamicApiResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallDynamicApiMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateIntegrationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.IntegrationConfigs,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_INTEGRATIONS)))
-          .addMethod(
-            getGetIntegrationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.ProtocolIdInput,
-                com.passkit.grpc.Integration.IntegrationConfigs>(
-                  this, METHODID_GET_INTEGRATIONS)))
-          .addMethod(
-            getUpdateIntegrationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.IntegrationConfigs,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_UPDATE_INTEGRATIONS)))
-          .addMethod(
-            getDeleteIntegrationsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.ProtocolIdInput,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_INTEGRATIONS)))
-          .addMethod(
-            getCreateSinkSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.SinkSubscription,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_SINK_SUBSCRIPTION)))
-          .addMethod(
-            getGetSinkSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.SubscriptionRequest,
-                com.passkit.grpc.Integration.SinkSubscription>(
-                  this, METHODID_GET_SINK_SUBSCRIPTION)))
-          .addMethod(
-            getListSinkSubscriptionsDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.ListRequestDeprecated,
-                com.passkit.grpc.Integration.SinkSubscription>(
-                  this, METHODID_LIST_SINK_SUBSCRIPTIONS_DEPRECATED)))
-          .addMethod(
-            getListSinkSubscriptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.ListRequest,
-                com.passkit.grpc.Integration.SinkSubscription>(
-                  this, METHODID_LIST_SINK_SUBSCRIPTIONS)))
-          .addMethod(
-            getUpdateSinkSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.SinkSubscription,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_UPDATE_SINK_SUBSCRIPTION)))
-          .addMethod(
-            getDeleteSinkSubscriptionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.SubscriptionRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_SINK_SUBSCRIPTION)))
-          .addMethod(
-            getGetSampleSubscriptionEventMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.Integration.SinkSubscription>(
-                  this, METHODID_GET_SAMPLE_SUBSCRIPTION_EVENT)))
-          .addMethod(
-            getCallDynamicApiMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Integration.DynamicApiInput,
-                com.passkit.grpc.Integration.DynamicApiResponse>(
-                  this, METHODID_CALL_DYNAMIC_API)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Integrations.
    */
-  public static final class IntegrationsStub extends io.grpc.stub.AbstractAsyncStub<IntegrationsStub> {
+  public static abstract class IntegrationsImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return IntegrationsGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Integrations.
+   */
+  public static final class IntegrationsStub
+      extends io.grpc.stub.AbstractAsyncStub<IntegrationsStub> {
     private IntegrationsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -721,8 +645,10 @@ public final class IntegrationsGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Integrations.
    */
-  public static final class IntegrationsBlockingStub extends io.grpc.stub.AbstractBlockingStub<IntegrationsBlockingStub> {
+  public static final class IntegrationsBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<IntegrationsBlockingStub> {
     private IntegrationsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -822,8 +748,10 @@ public final class IntegrationsGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Integrations.
    */
-  public static final class IntegrationsFutureStub extends io.grpc.stub.AbstractFutureStub<IntegrationsFutureStub> {
+  public static final class IntegrationsFutureStub
+      extends io.grpc.stub.AbstractFutureStub<IntegrationsFutureStub> {
     private IntegrationsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -934,10 +862,10 @@ public final class IntegrationsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final IntegrationsImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(IntegrationsImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1008,6 +936,95 @@ public final class IntegrationsGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateIntegrationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.IntegrationConfigs,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_INTEGRATIONS)))
+        .addMethod(
+          getGetIntegrationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.ProtocolIdInput,
+              com.passkit.grpc.Integration.IntegrationConfigs>(
+                service, METHODID_GET_INTEGRATIONS)))
+        .addMethod(
+          getUpdateIntegrationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.IntegrationConfigs,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_UPDATE_INTEGRATIONS)))
+        .addMethod(
+          getDeleteIntegrationsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.ProtocolIdInput,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_INTEGRATIONS)))
+        .addMethod(
+          getCreateSinkSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.SinkSubscription,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_SINK_SUBSCRIPTION)))
+        .addMethod(
+          getGetSinkSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.SubscriptionRequest,
+              com.passkit.grpc.Integration.SinkSubscription>(
+                service, METHODID_GET_SINK_SUBSCRIPTION)))
+        .addMethod(
+          getListSinkSubscriptionsDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.ListRequestDeprecated,
+              com.passkit.grpc.Integration.SinkSubscription>(
+                service, METHODID_LIST_SINK_SUBSCRIPTIONS_DEPRECATED)))
+        .addMethod(
+          getListSinkSubscriptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.ListRequest,
+              com.passkit.grpc.Integration.SinkSubscription>(
+                service, METHODID_LIST_SINK_SUBSCRIPTIONS)))
+        .addMethod(
+          getUpdateSinkSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.SinkSubscription,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_UPDATE_SINK_SUBSCRIPTION)))
+        .addMethod(
+          getDeleteSinkSubscriptionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.SubscriptionRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_SINK_SUBSCRIPTION)))
+        .addMethod(
+          getGetSampleSubscriptionEventMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.Integration.SinkSubscription>(
+                service, METHODID_GET_SAMPLE_SUBSCRIPTION_EVENT)))
+        .addMethod(
+          getCallDynamicApiMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Integration.DynamicApiInput,
+              com.passkit.grpc.Integration.DynamicApiResponse>(
+                service, METHODID_CALL_DYNAMIC_API)))
+        .build();
   }
 
   private static abstract class IntegrationsBaseDescriptorSupplier

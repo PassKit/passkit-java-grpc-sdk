@@ -479,11 +479,6 @@ public final class TierOuterClass {
       return new Tier();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Members.TierOuterClass.internal_static_members_Tier_descriptor;
@@ -498,7 +493,8 @@ public final class TierOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Tier identifier (could just be: blue, gold, etc); needs to be lower case. Tier ID needs to be uique within the program.
@@ -544,7 +540,7 @@ public final class TierOuterClass {
     }
 
     public static final int TIERINDEX_FIELD_NUMBER = 2;
-    private int tierIndex_;
+    private int tierIndex_ = 0;
     /**
      * <pre>
      * Index of the tier; can be used for managing downgrades / upgrade messaging; needs to be unique within the program.
@@ -559,7 +555,8 @@ public final class TierOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of tier.
@@ -639,11 +636,12 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedNameOrBuilder() {
-      return getLocalizedName();
+      return localizedName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedName_;
     }
 
     public static final int SECONDARYTIERNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object secondaryTierName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secondaryTierName_ = "";
     /**
      * <pre>
      * Name of the secondary reward tier.
@@ -723,11 +721,12 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedSecondaryTierNameOrBuilder() {
-      return getLocalizedSecondaryTierName();
+      return localizedSecondaryTierName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedSecondaryTierName_;
     }
 
     public static final int PROGRAMID_FIELD_NUMBER = 7;
-    private volatile java.lang.Object programId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object programId_ = "";
     /**
      * <pre>
      * The program id that the tier belongs to.
@@ -773,7 +772,8 @@ public final class TierOuterClass {
     }
 
     public static final int PASSTEMPLATEID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object passTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTemplateId_ = "";
     /**
      * <pre>
      * Identifier of pass template which identifies design and data elements for this tier.
@@ -819,7 +819,8 @@ public final class TierOuterClass {
     }
 
     public static final int TIERUPGRADEMESSAGE_FIELD_NUMBER = 9;
-    private volatile java.lang.Object tierUpgradeMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tierUpgradeMessage_ = "";
     /**
      * <pre>
      * Notification to be shown when someone upgrades tier.
@@ -899,11 +900,12 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTierUpgradeMessageOrBuilder() {
-      return getLocalizedTierUpgradeMessage();
+      return localizedTierUpgradeMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTierUpgradeMessage_;
     }
 
     public static final int TIERDOWNGRADEMESSAGE_FIELD_NUMBER = 11;
-    private volatile java.lang.Object tierDowngradeMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tierDowngradeMessage_ = "";
     /**
      * <pre>
      * Notification to be shown when someone downgrades tier.
@@ -983,7 +985,7 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTierDowngradeMessageOrBuilder() {
-      return getLocalizedTierDowngradeMessage();
+      return localizedTierDowngradeMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTierDowngradeMessage_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 13;
@@ -1021,7 +1023,7 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 14;
@@ -1059,11 +1061,11 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     public static final int POINTSOVERDRAWN_FIELD_NUMBER = 15;
-    private boolean pointsOverdrawn_;
+    private boolean pointsOverdrawn_ = false;
     /**
      * <pre>
      * Set true to accept a negative point balance. Default is false.
@@ -1078,7 +1080,7 @@ public final class TierOuterClass {
     }
 
     public static final int SECONDARYPOINTSOVERDRAWN_FIELD_NUMBER = 16;
-    private boolean secondaryPointsOverdrawn_;
+    private boolean secondaryPointsOverdrawn_ = false;
     /**
      * <pre>
      * Set true to accept a negative secondary point balance. Default is false.
@@ -1127,11 +1129,12 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Expiry.ExpirySettingsOrBuilder getExpirySettingsOrBuilder() {
-      return getExpirySettings();
+      return expirySettings_ == null ? com.passkit.grpc.Expiry.ExpirySettings.getDefaultInstance() : expirySettings_;
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 18;
-    private volatile java.lang.Object timezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timezone_ = "";
     /**
      * <pre>
      * Timezone string in IANA timezone format. If not provided defaults to Etc/UTC.
@@ -1211,11 +1214,12 @@ public final class TierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.PkBoolOrBuilder getAllowTierEnrolmentOrBuilder() {
-      return getAllowTierEnrolment();
+      return allowTierEnrolment_ == null ? com.passkit.grpc.CommonObjects.PkBool.getDefaultInstance() : allowTierEnrolment_;
     }
 
     public static final int SHORTCODE_FIELD_NUMBER = 20;
-    private volatile java.lang.Object shortCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object shortCode_ = "";
     /**
      * <pre>
      * Tier shortcode is used in public enrolment URLs, that enrol members into the tier if the program is set to public and allowTierEnrolment = true for this tier. System generated.
@@ -1694,78 +1698,59 @@ public final class TierOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         tierIndex_ = 0;
-
         name_ = "";
-
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-        } else {
-          localizedName_ = null;
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
         secondaryTierName_ = "";
-
-        if (localizedSecondaryTierNameBuilder_ == null) {
-          localizedSecondaryTierName_ = null;
-        } else {
-          localizedSecondaryTierName_ = null;
+        localizedSecondaryTierName_ = null;
+        if (localizedSecondaryTierNameBuilder_ != null) {
+          localizedSecondaryTierNameBuilder_.dispose();
           localizedSecondaryTierNameBuilder_ = null;
         }
         programId_ = "";
-
         passTemplateId_ = "";
-
         tierUpgradeMessage_ = "";
-
-        if (localizedTierUpgradeMessageBuilder_ == null) {
-          localizedTierUpgradeMessage_ = null;
-        } else {
-          localizedTierUpgradeMessage_ = null;
+        localizedTierUpgradeMessage_ = null;
+        if (localizedTierUpgradeMessageBuilder_ != null) {
+          localizedTierUpgradeMessageBuilder_.dispose();
           localizedTierUpgradeMessageBuilder_ = null;
         }
         tierDowngradeMessage_ = "";
-
-        if (localizedTierDowngradeMessageBuilder_ == null) {
-          localizedTierDowngradeMessage_ = null;
-        } else {
-          localizedTierDowngradeMessage_ = null;
+        localizedTierDowngradeMessage_ = null;
+        if (localizedTierDowngradeMessageBuilder_ != null) {
+          localizedTierDowngradeMessageBuilder_.dispose();
           localizedTierDowngradeMessageBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         pointsOverdrawn_ = false;
-
         secondaryPointsOverdrawn_ = false;
-
-        if (expirySettingsBuilder_ == null) {
-          expirySettings_ = null;
-        } else {
-          expirySettings_ = null;
+        expirySettings_ = null;
+        if (expirySettingsBuilder_ != null) {
+          expirySettingsBuilder_.dispose();
           expirySettingsBuilder_ = null;
         }
         timezone_ = "";
-
-        if (allowTierEnrolmentBuilder_ == null) {
-          allowTierEnrolment_ = null;
-        } else {
-          allowTierEnrolment_ = null;
+        allowTierEnrolment_ = null;
+        if (allowTierEnrolmentBuilder_ != null) {
+          allowTierEnrolmentBuilder_.dispose();
           allowTierEnrolmentBuilder_ = null;
         }
         shortCode_ = "";
-
         return this;
       }
 
@@ -1792,94 +1777,91 @@ public final class TierOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Members.TierOuterClass.Tier buildPartial() {
         com.passkit.grpc.Members.TierOuterClass.Tier result = new com.passkit.grpc.Members.TierOuterClass.Tier(this);
-        result.id_ = id_;
-        result.tierIndex_ = tierIndex_;
-        result.name_ = name_;
-        if (localizedNameBuilder_ == null) {
-          result.localizedName_ = localizedName_;
-        } else {
-          result.localizedName_ = localizedNameBuilder_.build();
-        }
-        result.secondaryTierName_ = secondaryTierName_;
-        if (localizedSecondaryTierNameBuilder_ == null) {
-          result.localizedSecondaryTierName_ = localizedSecondaryTierName_;
-        } else {
-          result.localizedSecondaryTierName_ = localizedSecondaryTierNameBuilder_.build();
-        }
-        result.programId_ = programId_;
-        result.passTemplateId_ = passTemplateId_;
-        result.tierUpgradeMessage_ = tierUpgradeMessage_;
-        if (localizedTierUpgradeMessageBuilder_ == null) {
-          result.localizedTierUpgradeMessage_ = localizedTierUpgradeMessage_;
-        } else {
-          result.localizedTierUpgradeMessage_ = localizedTierUpgradeMessageBuilder_.build();
-        }
-        result.tierDowngradeMessage_ = tierDowngradeMessage_;
-        if (localizedTierDowngradeMessageBuilder_ == null) {
-          result.localizedTierDowngradeMessage_ = localizedTierDowngradeMessage_;
-        } else {
-          result.localizedTierDowngradeMessage_ = localizedTierDowngradeMessageBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        result.pointsOverdrawn_ = pointsOverdrawn_;
-        result.secondaryPointsOverdrawn_ = secondaryPointsOverdrawn_;
-        if (expirySettingsBuilder_ == null) {
-          result.expirySettings_ = expirySettings_;
-        } else {
-          result.expirySettings_ = expirySettingsBuilder_.build();
-        }
-        result.timezone_ = timezone_;
-        if (allowTierEnrolmentBuilder_ == null) {
-          result.allowTierEnrolment_ = allowTierEnrolment_;
-        } else {
-          result.allowTierEnrolment_ = allowTierEnrolmentBuilder_.build();
-        }
-        result.shortCode_ = shortCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Members.TierOuterClass.Tier result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tierIndex_ = tierIndex_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedName_ = localizedNameBuilder_ == null
+              ? localizedName_
+              : localizedNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.secondaryTierName_ = secondaryTierName_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedSecondaryTierName_ = localizedSecondaryTierNameBuilder_ == null
+              ? localizedSecondaryTierName_
+              : localizedSecondaryTierNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.programId_ = programId_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.passTemplateId_ = passTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.tierUpgradeMessage_ = tierUpgradeMessage_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.localizedTierUpgradeMessage_ = localizedTierUpgradeMessageBuilder_ == null
+              ? localizedTierUpgradeMessage_
+              : localizedTierUpgradeMessageBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.tierDowngradeMessage_ = tierDowngradeMessage_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.localizedTierDowngradeMessage_ = localizedTierDowngradeMessageBuilder_ == null
+              ? localizedTierDowngradeMessage_
+              : localizedTierDowngradeMessageBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.pointsOverdrawn_ = pointsOverdrawn_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.secondaryPointsOverdrawn_ = secondaryPointsOverdrawn_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.expirySettings_ = expirySettingsBuilder_ == null
+              ? expirySettings_
+              : expirySettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.timezone_ = timezone_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.allowTierEnrolment_ = allowTierEnrolmentBuilder_ == null
+              ? allowTierEnrolment_
+              : allowTierEnrolmentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.shortCode_ = shortCode_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Members.TierOuterClass.Tier) {
@@ -1894,6 +1876,7 @@ public final class TierOuterClass {
         if (other == com.passkit.grpc.Members.TierOuterClass.Tier.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getTierIndex() != 0) {
@@ -1901,6 +1884,7 @@ public final class TierOuterClass {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedName()) {
@@ -1908,6 +1892,7 @@ public final class TierOuterClass {
         }
         if (!other.getSecondaryTierName().isEmpty()) {
           secondaryTierName_ = other.secondaryTierName_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedSecondaryTierName()) {
@@ -1915,14 +1900,17 @@ public final class TierOuterClass {
         }
         if (!other.getProgramId().isEmpty()) {
           programId_ = other.programId_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getPassTemplateId().isEmpty()) {
           passTemplateId_ = other.passTemplateId_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getTierUpgradeMessage().isEmpty()) {
           tierUpgradeMessage_ = other.tierUpgradeMessage_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasLocalizedTierUpgradeMessage()) {
@@ -1930,6 +1918,7 @@ public final class TierOuterClass {
         }
         if (!other.getTierDowngradeMessage().isEmpty()) {
           tierDowngradeMessage_ = other.tierDowngradeMessage_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (other.hasLocalizedTierDowngradeMessage()) {
@@ -1952,6 +1941,7 @@ public final class TierOuterClass {
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          bitField0_ |= 0x00020000;
           onChanged();
         }
         if (other.hasAllowTierEnrolment()) {
@@ -1959,6 +1949,7 @@ public final class TierOuterClass {
         }
         if (!other.getShortCode().isEmpty()) {
           shortCode_ = other.shortCode_;
+          bitField0_ |= 0x00080000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1989,118 +1980,118 @@ public final class TierOuterClass {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 tierIndex_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 secondaryTierName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getLocalizedSecondaryTierNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 programId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 passTemplateId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 tierUpgradeMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getLocalizedTierUpgradeMessageFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 tierDowngradeMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     getLocalizedTierDowngradeMessageFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 120: {
                 pointsOverdrawn_ = input.readBool();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 120
               case 128: {
                 secondaryPointsOverdrawn_ = input.readBool();
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 128
               case 138: {
                 input.readMessage(
                     getExpirySettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 timezone_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 input.readMessage(
                     getAllowTierEnrolmentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 shortCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               default: {
@@ -2118,6 +2109,7 @@ public final class TierOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -2172,11 +2164,9 @@ public final class TierOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2189,8 +2179,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2205,12 +2195,10 @@ public final class TierOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2238,8 +2226,9 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTierIndex(int value) {
-        
+
         tierIndex_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2252,7 +2241,7 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTierIndex() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         tierIndex_ = 0;
         onChanged();
         return this;
@@ -2311,11 +2300,9 @@ public final class TierOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2328,8 +2315,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2344,12 +2331,10 @@ public final class TierOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2366,7 +2351,7 @@ public final class TierOuterClass {
        * @return Whether the localizedName field is set.
        */
       public boolean hasLocalizedName() {
-        return localizedNameBuilder_ != null || localizedName_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -2396,11 +2381,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           localizedName_ = value;
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2414,11 +2399,11 @@ public final class TierOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedNameBuilder_ == null) {
           localizedName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2430,17 +2415,18 @@ public final class TierOuterClass {
        */
       public Builder mergeLocalizedName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedNameBuilder_ == null) {
-          if (localizedName_ != null) {
-            localizedName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedName_ != null &&
+            localizedName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedNameBuilder().mergeFrom(value);
           } else {
             localizedName_ = value;
           }
-          onChanged();
         } else {
           localizedNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2451,14 +2437,13 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedName = 4;</code>
        */
       public Builder clearLocalizedName() {
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-          onChanged();
-        } else {
-          localizedName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2469,7 +2454,7 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedName = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedNameBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedNameFieldBuilder().getBuilder();
       }
@@ -2562,11 +2547,9 @@ public final class TierOuterClass {
        */
       public Builder setSecondaryTierName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         secondaryTierName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2579,8 +2562,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSecondaryTierName() {
-        
         secondaryTierName_ = getDefaultInstance().getSecondaryTierName();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2595,12 +2578,10 @@ public final class TierOuterClass {
        */
       public Builder setSecondaryTierNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         secondaryTierName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2617,7 +2598,7 @@ public final class TierOuterClass {
        * @return Whether the localizedSecondaryTierName field is set.
        */
       public boolean hasLocalizedSecondaryTierName() {
-        return localizedSecondaryTierNameBuilder_ != null || localizedSecondaryTierName_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -2647,11 +2628,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           localizedSecondaryTierName_ = value;
-          onChanged();
         } else {
           localizedSecondaryTierNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2665,11 +2646,11 @@ public final class TierOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedSecondaryTierNameBuilder_ == null) {
           localizedSecondaryTierName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedSecondaryTierNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2681,17 +2662,18 @@ public final class TierOuterClass {
        */
       public Builder mergeLocalizedSecondaryTierName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedSecondaryTierNameBuilder_ == null) {
-          if (localizedSecondaryTierName_ != null) {
-            localizedSecondaryTierName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedSecondaryTierName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedSecondaryTierName_ != null &&
+            localizedSecondaryTierName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedSecondaryTierNameBuilder().mergeFrom(value);
           } else {
             localizedSecondaryTierName_ = value;
           }
-          onChanged();
         } else {
           localizedSecondaryTierNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2702,14 +2684,13 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedSecondaryTierName = 6;</code>
        */
       public Builder clearLocalizedSecondaryTierName() {
-        if (localizedSecondaryTierNameBuilder_ == null) {
-          localizedSecondaryTierName_ = null;
-          onChanged();
-        } else {
-          localizedSecondaryTierName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedSecondaryTierName_ = null;
+        if (localizedSecondaryTierNameBuilder_ != null) {
+          localizedSecondaryTierNameBuilder_.dispose();
           localizedSecondaryTierNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2720,7 +2701,7 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedSecondaryTierName = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedSecondaryTierNameBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedSecondaryTierNameFieldBuilder().getBuilder();
       }
@@ -2813,11 +2794,9 @@ public final class TierOuterClass {
        */
       public Builder setProgramId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         programId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2830,8 +2809,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgramId() {
-        
         programId_ = getDefaultInstance().getProgramId();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2846,12 +2825,10 @@ public final class TierOuterClass {
        */
       public Builder setProgramIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         programId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2909,11 +2886,9 @@ public final class TierOuterClass {
        */
       public Builder setPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTemplateId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2926,8 +2901,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPassTemplateId() {
-        
         passTemplateId_ = getDefaultInstance().getPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2942,12 +2917,10 @@ public final class TierOuterClass {
        */
       public Builder setPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTemplateId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -3005,11 +2978,9 @@ public final class TierOuterClass {
        */
       public Builder setTierUpgradeMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tierUpgradeMessage_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -3022,8 +2993,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTierUpgradeMessage() {
-        
         tierUpgradeMessage_ = getDefaultInstance().getTierUpgradeMessage();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -3038,12 +3009,10 @@ public final class TierOuterClass {
        */
       public Builder setTierUpgradeMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tierUpgradeMessage_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -3060,7 +3029,7 @@ public final class TierOuterClass {
        * @return Whether the localizedTierUpgradeMessage field is set.
        */
       public boolean hasLocalizedTierUpgradeMessage() {
-        return localizedTierUpgradeMessageBuilder_ != null || localizedTierUpgradeMessage_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -3090,11 +3059,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           localizedTierUpgradeMessage_ = value;
-          onChanged();
         } else {
           localizedTierUpgradeMessageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3108,11 +3077,11 @@ public final class TierOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTierUpgradeMessageBuilder_ == null) {
           localizedTierUpgradeMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTierUpgradeMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3124,17 +3093,18 @@ public final class TierOuterClass {
        */
       public Builder mergeLocalizedTierUpgradeMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTierUpgradeMessageBuilder_ == null) {
-          if (localizedTierUpgradeMessage_ != null) {
-            localizedTierUpgradeMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTierUpgradeMessage_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            localizedTierUpgradeMessage_ != null &&
+            localizedTierUpgradeMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTierUpgradeMessageBuilder().mergeFrom(value);
           } else {
             localizedTierUpgradeMessage_ = value;
           }
-          onChanged();
         } else {
           localizedTierUpgradeMessageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3145,14 +3115,13 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedTierUpgradeMessage = 10;</code>
        */
       public Builder clearLocalizedTierUpgradeMessage() {
-        if (localizedTierUpgradeMessageBuilder_ == null) {
-          localizedTierUpgradeMessage_ = null;
-          onChanged();
-        } else {
-          localizedTierUpgradeMessage_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        localizedTierUpgradeMessage_ = null;
+        if (localizedTierUpgradeMessageBuilder_ != null) {
+          localizedTierUpgradeMessageBuilder_.dispose();
           localizedTierUpgradeMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3163,7 +3132,7 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedTierUpgradeMessage = 10;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTierUpgradeMessageBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getLocalizedTierUpgradeMessageFieldBuilder().getBuilder();
       }
@@ -3256,11 +3225,9 @@ public final class TierOuterClass {
        */
       public Builder setTierDowngradeMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tierDowngradeMessage_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3273,8 +3240,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTierDowngradeMessage() {
-        
         tierDowngradeMessage_ = getDefaultInstance().getTierDowngradeMessage();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -3289,12 +3256,10 @@ public final class TierOuterClass {
        */
       public Builder setTierDowngradeMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tierDowngradeMessage_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3311,7 +3276,7 @@ public final class TierOuterClass {
        * @return Whether the localizedTierDowngradeMessage field is set.
        */
       public boolean hasLocalizedTierDowngradeMessage() {
-        return localizedTierDowngradeMessageBuilder_ != null || localizedTierDowngradeMessage_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -3341,11 +3306,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           localizedTierDowngradeMessage_ = value;
-          onChanged();
         } else {
           localizedTierDowngradeMessageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3359,11 +3324,11 @@ public final class TierOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTierDowngradeMessageBuilder_ == null) {
           localizedTierDowngradeMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTierDowngradeMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3375,17 +3340,18 @@ public final class TierOuterClass {
        */
       public Builder mergeLocalizedTierDowngradeMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTierDowngradeMessageBuilder_ == null) {
-          if (localizedTierDowngradeMessage_ != null) {
-            localizedTierDowngradeMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTierDowngradeMessage_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            localizedTierDowngradeMessage_ != null &&
+            localizedTierDowngradeMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTierDowngradeMessageBuilder().mergeFrom(value);
           } else {
             localizedTierDowngradeMessage_ = value;
           }
-          onChanged();
         } else {
           localizedTierDowngradeMessageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3396,14 +3362,13 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedTierDowngradeMessage = 12;</code>
        */
       public Builder clearLocalizedTierDowngradeMessage() {
-        if (localizedTierDowngradeMessageBuilder_ == null) {
-          localizedTierDowngradeMessage_ = null;
-          onChanged();
-        } else {
-          localizedTierDowngradeMessage_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        localizedTierDowngradeMessage_ = null;
+        if (localizedTierDowngradeMessageBuilder_ != null) {
+          localizedTierDowngradeMessageBuilder_.dispose();
           localizedTierDowngradeMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3414,7 +3379,7 @@ public final class TierOuterClass {
        * <code>.io.LocalizedString localizedTierDowngradeMessage = 12;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTierDowngradeMessageBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getLocalizedTierDowngradeMessageFieldBuilder().getBuilder();
       }
@@ -3466,7 +3431,7 @@ public final class TierOuterClass {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -3496,11 +3461,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3514,11 +3479,11 @@ public final class TierOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3530,17 +3495,18 @@ public final class TierOuterClass {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3551,14 +3517,13 @@ public final class TierOuterClass {
        * <code>.google.protobuf.Timestamp created = 13;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3569,7 +3534,7 @@ public final class TierOuterClass {
        * <code>.google.protobuf.Timestamp created = 13;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -3621,7 +3586,7 @@ public final class TierOuterClass {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -3651,11 +3616,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3669,11 +3634,11 @@ public final class TierOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3685,17 +3650,18 @@ public final class TierOuterClass {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3706,14 +3672,13 @@ public final class TierOuterClass {
        * <code>.google.protobuf.Timestamp updated = 14;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3724,7 +3689,7 @@ public final class TierOuterClass {
        * <code>.google.protobuf.Timestamp updated = 14;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -3787,8 +3752,9 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder setPointsOverdrawn(boolean value) {
-        
+
         pointsOverdrawn_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3801,7 +3767,7 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPointsOverdrawn() {
-        
+        bitField0_ = (bitField0_ & ~0x00004000);
         pointsOverdrawn_ = false;
         onChanged();
         return this;
@@ -3830,8 +3796,9 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSecondaryPointsOverdrawn(boolean value) {
-        
+
         secondaryPointsOverdrawn_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -3844,7 +3811,7 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSecondaryPointsOverdrawn() {
-        
+        bitField0_ = (bitField0_ & ~0x00008000);
         secondaryPointsOverdrawn_ = false;
         onChanged();
         return this;
@@ -3862,7 +3829,7 @@ public final class TierOuterClass {
        * @return Whether the expirySettings field is set.
        */
       public boolean hasExpirySettings() {
-        return expirySettingsBuilder_ != null || expirySettings_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -3892,11 +3859,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           expirySettings_ = value;
-          onChanged();
         } else {
           expirySettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -3910,11 +3877,11 @@ public final class TierOuterClass {
           com.passkit.grpc.Expiry.ExpirySettings.Builder builderForValue) {
         if (expirySettingsBuilder_ == null) {
           expirySettings_ = builderForValue.build();
-          onChanged();
         } else {
           expirySettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -3926,17 +3893,18 @@ public final class TierOuterClass {
        */
       public Builder mergeExpirySettings(com.passkit.grpc.Expiry.ExpirySettings value) {
         if (expirySettingsBuilder_ == null) {
-          if (expirySettings_ != null) {
-            expirySettings_ =
-              com.passkit.grpc.Expiry.ExpirySettings.newBuilder(expirySettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            expirySettings_ != null &&
+            expirySettings_ != com.passkit.grpc.Expiry.ExpirySettings.getDefaultInstance()) {
+            getExpirySettingsBuilder().mergeFrom(value);
           } else {
             expirySettings_ = value;
           }
-          onChanged();
         } else {
           expirySettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -3947,14 +3915,13 @@ public final class TierOuterClass {
        * <code>.io.ExpirySettings expirySettings = 17;</code>
        */
       public Builder clearExpirySettings() {
-        if (expirySettingsBuilder_ == null) {
-          expirySettings_ = null;
-          onChanged();
-        } else {
-          expirySettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        expirySettings_ = null;
+        if (expirySettingsBuilder_ != null) {
+          expirySettingsBuilder_.dispose();
           expirySettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3965,7 +3932,7 @@ public final class TierOuterClass {
        * <code>.io.ExpirySettings expirySettings = 17;</code>
        */
       public com.passkit.grpc.Expiry.ExpirySettings.Builder getExpirySettingsBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getExpirySettingsFieldBuilder().getBuilder();
       }
@@ -4058,11 +4025,9 @@ public final class TierOuterClass {
        */
       public Builder setTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timezone_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -4075,8 +4040,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTimezone() {
-        
         timezone_ = getDefaultInstance().getTimezone();
+        bitField0_ = (bitField0_ & ~0x00020000);
         onChanged();
         return this;
       }
@@ -4091,12 +4056,10 @@ public final class TierOuterClass {
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timezone_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -4113,7 +4076,7 @@ public final class TierOuterClass {
        * @return Whether the allowTierEnrolment field is set.
        */
       public boolean hasAllowTierEnrolment() {
-        return allowTierEnrolmentBuilder_ != null || allowTierEnrolment_ != null;
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <pre>
@@ -4143,11 +4106,11 @@ public final class TierOuterClass {
             throw new NullPointerException();
           }
           allowTierEnrolment_ = value;
-          onChanged();
         } else {
           allowTierEnrolmentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -4161,11 +4124,11 @@ public final class TierOuterClass {
           com.passkit.grpc.CommonObjects.PkBool.Builder builderForValue) {
         if (allowTierEnrolmentBuilder_ == null) {
           allowTierEnrolment_ = builderForValue.build();
-          onChanged();
         } else {
           allowTierEnrolmentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -4177,17 +4140,18 @@ public final class TierOuterClass {
        */
       public Builder mergeAllowTierEnrolment(com.passkit.grpc.CommonObjects.PkBool value) {
         if (allowTierEnrolmentBuilder_ == null) {
-          if (allowTierEnrolment_ != null) {
-            allowTierEnrolment_ =
-              com.passkit.grpc.CommonObjects.PkBool.newBuilder(allowTierEnrolment_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00040000) != 0) &&
+            allowTierEnrolment_ != null &&
+            allowTierEnrolment_ != com.passkit.grpc.CommonObjects.PkBool.getDefaultInstance()) {
+            getAllowTierEnrolmentBuilder().mergeFrom(value);
           } else {
             allowTierEnrolment_ = value;
           }
-          onChanged();
         } else {
           allowTierEnrolmentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -4198,14 +4162,13 @@ public final class TierOuterClass {
        * <code>.io.PkBool allowTierEnrolment = 19;</code>
        */
       public Builder clearAllowTierEnrolment() {
-        if (allowTierEnrolmentBuilder_ == null) {
-          allowTierEnrolment_ = null;
-          onChanged();
-        } else {
-          allowTierEnrolment_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        allowTierEnrolment_ = null;
+        if (allowTierEnrolmentBuilder_ != null) {
+          allowTierEnrolmentBuilder_.dispose();
           allowTierEnrolmentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4216,7 +4179,7 @@ public final class TierOuterClass {
        * <code>.io.PkBool allowTierEnrolment = 19;</code>
        */
       public com.passkit.grpc.CommonObjects.PkBool.Builder getAllowTierEnrolmentBuilder() {
-        
+        bitField0_ |= 0x00040000;
         onChanged();
         return getAllowTierEnrolmentFieldBuilder().getBuilder();
       }
@@ -4309,11 +4272,9 @@ public final class TierOuterClass {
        */
       public Builder setShortCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         shortCode_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -4326,8 +4287,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearShortCode() {
-        
         shortCode_ = getDefaultInstance().getShortCode();
+        bitField0_ = (bitField0_ & ~0x00080000);
         onChanged();
         return this;
       }
@@ -4342,12 +4303,10 @@ public final class TierOuterClass {
        */
       public Builder setShortCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         shortCode_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -4487,11 +4446,6 @@ public final class TierOuterClass {
       return new TierRequestInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Members.TierOuterClass.internal_static_members_TierRequestInput_descriptor;
@@ -4506,7 +4460,8 @@ public final class TierOuterClass {
     }
 
     public static final int PROGRAMID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object programId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object programId_ = "";
     /**
      * <pre>
      * Program ID.
@@ -4552,7 +4507,8 @@ public final class TierOuterClass {
     }
 
     public static final int TIERID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object tierId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tierId_ = "";
     /**
      * <pre>
      * Tier ID.
@@ -4798,10 +4754,9 @@ public final class TierOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         programId_ = "";
-
         tierId_ = "";
-
         return this;
       }
 
@@ -4828,44 +4783,21 @@ public final class TierOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Members.TierOuterClass.TierRequestInput buildPartial() {
         com.passkit.grpc.Members.TierOuterClass.TierRequestInput result = new com.passkit.grpc.Members.TierOuterClass.TierRequestInput(this);
-        result.programId_ = programId_;
-        result.tierId_ = tierId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Members.TierOuterClass.TierRequestInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.programId_ = programId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tierId_ = tierId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Members.TierOuterClass.TierRequestInput) {
@@ -4880,10 +4812,12 @@ public final class TierOuterClass {
         if (other == com.passkit.grpc.Members.TierOuterClass.TierRequestInput.getDefaultInstance()) return this;
         if (!other.getProgramId().isEmpty()) {
           programId_ = other.programId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTierId().isEmpty()) {
           tierId_ = other.tierId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4914,12 +4848,12 @@ public final class TierOuterClass {
                 break;
               case 10: {
                 programId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 tierId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -4937,6 +4871,7 @@ public final class TierOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object programId_ = "";
       /**
@@ -4991,11 +4926,9 @@ public final class TierOuterClass {
        */
       public Builder setProgramId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         programId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5008,8 +4941,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgramId() {
-        
         programId_ = getDefaultInstance().getProgramId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5024,12 +4957,10 @@ public final class TierOuterClass {
        */
       public Builder setProgramIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         programId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5087,11 +5018,9 @@ public final class TierOuterClass {
        */
       public Builder setTierId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tierId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5104,8 +5033,8 @@ public final class TierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTierId() {
-        
         tierId_ = getDefaultInstance().getTierId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5120,12 +5049,10 @@ public final class TierOuterClass {
        */
       public Builder setTierIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tierId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

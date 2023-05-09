@@ -298,11 +298,6 @@ public final class VenueOuterClass {
       return new Venue();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.VenueOuterClass.internal_static_event_tickets_Venue_descriptor;
@@ -317,7 +312,8 @@ public final class VenueOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated venue id (22 characters).
@@ -363,7 +359,8 @@ public final class VenueOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * User generated venue id; unique within the user account.
@@ -409,7 +406,8 @@ public final class VenueOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * The venue name.
@@ -489,11 +487,12 @@ public final class VenueOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedNameOrBuilder() {
-      return getLocalizedName();
+      return localizedName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedName_;
     }
 
     public static final int ADDRESS_FIELD_NUMBER = 5;
-    private volatile java.lang.Object address_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
     /**
      * <pre>
      * The venue address.
@@ -573,11 +572,12 @@ public final class VenueOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAddressOrBuilder() {
-      return getLocalizedAddress();
+      return localizedAddress_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAddress_;
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object timezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timezone_ = "";
     /**
      * <pre>
      * Timezone applied for the event dates. e.g. America/New_York, Asia/Singapore, Europe/London.
@@ -623,6 +623,7 @@ public final class VenueOuterClass {
     }
 
     public static final int GPSCOORDS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> gpsCoords_;
     /**
      * <pre>
@@ -717,7 +718,7 @@ public final class VenueOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 10;
@@ -755,7 +756,7 @@ public final class VenueOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1062,45 +1063,37 @@ public final class VenueOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         uid_ = "";
-
         name_ = "";
-
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-        } else {
-          localizedName_ = null;
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
         address_ = "";
-
-        if (localizedAddressBuilder_ == null) {
-          localizedAddress_ = null;
-        } else {
-          localizedAddress_ = null;
+        localizedAddress_ = null;
+        if (localizedAddressBuilder_ != null) {
+          localizedAddressBuilder_.dispose();
           localizedAddressBuilder_ = null;
         }
         timezone_ = "";
-
         if (gpsCoordsBuilder_ == null) {
           gpsCoords_ = java.util.Collections.emptyList();
         } else {
           gpsCoords_ = null;
           gpsCoordsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -1129,77 +1122,63 @@ public final class VenueOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.VenueOuterClass.Venue buildPartial() {
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue result = new com.passkit.grpc.EventTickets.VenueOuterClass.Venue(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.uid_ = uid_;
-        result.name_ = name_;
-        if (localizedNameBuilder_ == null) {
-          result.localizedName_ = localizedName_;
-        } else {
-          result.localizedName_ = localizedNameBuilder_.build();
-        }
-        result.address_ = address_;
-        if (localizedAddressBuilder_ == null) {
-          result.localizedAddress_ = localizedAddress_;
-        } else {
-          result.localizedAddress_ = localizedAddressBuilder_.build();
-        }
-        result.timezone_ = timezone_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.VenueOuterClass.Venue result) {
         if (gpsCoordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             gpsCoords_ = java.util.Collections.unmodifiableList(gpsCoords_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.gpsCoords_ = gpsCoords_;
         } else {
           result.gpsCoords_ = gpsCoordsBuilder_.build();
         }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.VenueOuterClass.Venue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedName_ = localizedNameBuilder_ == null
+              ? localizedName_
+              : localizedNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedAddress_ = localizedAddressBuilder_ == null
+              ? localizedAddress_
+              : localizedAddressBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.timezone_ = timezone_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.VenueOuterClass.Venue) {
@@ -1214,14 +1193,17 @@ public final class VenueOuterClass {
         if (other == com.passkit.grpc.EventTickets.VenueOuterClass.Venue.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedName()) {
@@ -1229,6 +1211,7 @@ public final class VenueOuterClass {
         }
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedAddress()) {
@@ -1236,13 +1219,14 @@ public final class VenueOuterClass {
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (gpsCoordsBuilder_ == null) {
           if (!other.gpsCoords_.isEmpty()) {
             if (gpsCoords_.isEmpty()) {
               gpsCoords_ = other.gpsCoords_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureGpsCoordsIsMutable();
               gpsCoords_.addAll(other.gpsCoords_);
@@ -1255,7 +1239,7 @@ public final class VenueOuterClass {
               gpsCoordsBuilder_.dispose();
               gpsCoordsBuilder_ = null;
               gpsCoords_ = other.gpsCoords_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000080);
               gpsCoordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getGpsCoordsFieldBuilder() : null;
@@ -1298,41 +1282,41 @@ public final class VenueOuterClass {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 uid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 address_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getLocalizedAddressFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 timezone_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
@@ -1352,14 +1336,14 @@ public final class VenueOuterClass {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               default: {
@@ -1432,11 +1416,9 @@ public final class VenueOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1449,8 +1431,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1465,12 +1447,10 @@ public final class VenueOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1528,11 +1508,9 @@ public final class VenueOuterClass {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1545,8 +1523,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1561,12 +1539,10 @@ public final class VenueOuterClass {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1624,11 +1600,9 @@ public final class VenueOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1641,8 +1615,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1657,12 +1631,10 @@ public final class VenueOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1679,7 +1651,7 @@ public final class VenueOuterClass {
        * @return Whether the localizedName field is set.
        */
       public boolean hasLocalizedName() {
-        return localizedNameBuilder_ != null || localizedName_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -1709,11 +1681,11 @@ public final class VenueOuterClass {
             throw new NullPointerException();
           }
           localizedName_ = value;
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1727,11 +1699,11 @@ public final class VenueOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedNameBuilder_ == null) {
           localizedName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1743,17 +1715,18 @@ public final class VenueOuterClass {
        */
       public Builder mergeLocalizedName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedNameBuilder_ == null) {
-          if (localizedName_ != null) {
-            localizedName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedName_ != null &&
+            localizedName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedNameBuilder().mergeFrom(value);
           } else {
             localizedName_ = value;
           }
-          onChanged();
         } else {
           localizedNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1764,14 +1737,13 @@ public final class VenueOuterClass {
        * <code>.io.LocalizedString localizedName = 4;</code>
        */
       public Builder clearLocalizedName() {
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-          onChanged();
-        } else {
-          localizedName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1782,7 +1754,7 @@ public final class VenueOuterClass {
        * <code>.io.LocalizedString localizedName = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedNameBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedNameFieldBuilder().getBuilder();
       }
@@ -1875,11 +1847,9 @@ public final class VenueOuterClass {
        */
       public Builder setAddress(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         address_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1892,8 +1862,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAddress() {
-        
         address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1908,12 +1878,10 @@ public final class VenueOuterClass {
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         address_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1930,7 +1898,7 @@ public final class VenueOuterClass {
        * @return Whether the localizedAddress field is set.
        */
       public boolean hasLocalizedAddress() {
-        return localizedAddressBuilder_ != null || localizedAddress_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -1960,11 +1928,11 @@ public final class VenueOuterClass {
             throw new NullPointerException();
           }
           localizedAddress_ = value;
-          onChanged();
         } else {
           localizedAddressBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1978,11 +1946,11 @@ public final class VenueOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAddressBuilder_ == null) {
           localizedAddress_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAddressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1994,17 +1962,18 @@ public final class VenueOuterClass {
        */
       public Builder mergeLocalizedAddress(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAddressBuilder_ == null) {
-          if (localizedAddress_ != null) {
-            localizedAddress_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAddress_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedAddress_ != null &&
+            localizedAddress_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAddressBuilder().mergeFrom(value);
           } else {
             localizedAddress_ = value;
           }
-          onChanged();
         } else {
           localizedAddressBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2015,14 +1984,13 @@ public final class VenueOuterClass {
        * <code>.io.LocalizedString localizedAddress = 6;</code>
        */
       public Builder clearLocalizedAddress() {
-        if (localizedAddressBuilder_ == null) {
-          localizedAddress_ = null;
-          onChanged();
-        } else {
-          localizedAddress_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedAddress_ = null;
+        if (localizedAddressBuilder_ != null) {
+          localizedAddressBuilder_.dispose();
           localizedAddressBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2033,7 +2001,7 @@ public final class VenueOuterClass {
        * <code>.io.LocalizedString localizedAddress = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAddressBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedAddressFieldBuilder().getBuilder();
       }
@@ -2126,11 +2094,9 @@ public final class VenueOuterClass {
        */
       public Builder setTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timezone_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2143,8 +2109,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTimezone() {
-        
         timezone_ = getDefaultInstance().getTimezone();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2159,12 +2125,10 @@ public final class VenueOuterClass {
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timezone_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2172,9 +2136,9 @@ public final class VenueOuterClass {
       private java.util.List<com.passkit.grpc.Proximity.GPSLocation> gpsCoords_ =
         java.util.Collections.emptyList();
       private void ensureGpsCoordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           gpsCoords_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>(gpsCoords_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -2368,7 +2332,7 @@ public final class VenueOuterClass {
       public Builder clearGpsCoords() {
         if (gpsCoordsBuilder_ == null) {
           gpsCoords_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           gpsCoordsBuilder_.clear();
@@ -2473,7 +2437,7 @@ public final class VenueOuterClass {
           gpsCoordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Proximity.GPSLocation, com.passkit.grpc.Proximity.GPSLocation.Builder, com.passkit.grpc.Proximity.GPSLocationOrBuilder>(
                   gpsCoords_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           gpsCoords_ = null;
@@ -2493,7 +2457,7 @@ public final class VenueOuterClass {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -2523,11 +2487,11 @@ public final class VenueOuterClass {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2541,11 +2505,11 @@ public final class VenueOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2557,17 +2521,18 @@ public final class VenueOuterClass {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2578,14 +2543,13 @@ public final class VenueOuterClass {
        * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2596,7 +2560,7 @@ public final class VenueOuterClass {
        * <code>.google.protobuf.Timestamp created = 9 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -2648,7 +2612,7 @@ public final class VenueOuterClass {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -2678,11 +2642,11 @@ public final class VenueOuterClass {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2696,11 +2660,11 @@ public final class VenueOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2712,17 +2676,18 @@ public final class VenueOuterClass {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2733,14 +2698,13 @@ public final class VenueOuterClass {
        * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2751,7 +2715,7 @@ public final class VenueOuterClass {
        * <code>.google.protobuf.Timestamp updated = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -2943,11 +2907,6 @@ public final class VenueOuterClass {
       return new VenueLimitedFieldsResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.VenueOuterClass.internal_static_event_tickets_VenueLimitedFieldsResponse_descriptor;
@@ -2962,7 +2921,8 @@ public final class VenueOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated venue id (22 characters).
@@ -3008,7 +2968,8 @@ public final class VenueOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * User generated venue id; unique within the user account.
@@ -3054,7 +3015,8 @@ public final class VenueOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * The venue name.
@@ -3306,12 +3268,10 @@ public final class VenueOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         uid_ = "";
-
         name_ = "";
-
         return this;
       }
 
@@ -3338,45 +3298,24 @@ public final class VenueOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse buildPartial() {
         com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse result = new com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse(this);
-        result.id_ = id_;
-        result.uid_ = uid_;
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse) {
@@ -3391,14 +3330,17 @@ public final class VenueOuterClass {
         if (other == com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3429,17 +3371,17 @@ public final class VenueOuterClass {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 uid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -3457,6 +3399,7 @@ public final class VenueOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -3511,11 +3454,9 @@ public final class VenueOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3528,8 +3469,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3544,12 +3485,10 @@ public final class VenueOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3607,11 +3546,9 @@ public final class VenueOuterClass {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3624,8 +3561,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3640,12 +3577,10 @@ public final class VenueOuterClass {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3703,11 +3638,9 @@ public final class VenueOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3720,8 +3653,8 @@ public final class VenueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3736,12 +3669,10 @@ public final class VenueOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }

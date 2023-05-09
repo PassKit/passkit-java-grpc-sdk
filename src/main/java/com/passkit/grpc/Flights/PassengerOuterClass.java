@@ -379,11 +379,6 @@ public final class PassengerOuterClass {
       return new Passenger();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.PassengerOuterClass.internal_static_flights_Passenger_descriptor;
@@ -432,7 +427,7 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPassengerDetailsOrBuilder() {
-      return getPassengerDetails();
+      return passengerDetails_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : passengerDetails_;
     }
 
     public static final int FREQUENTFLYERINFO_FIELD_NUMBER = 2;
@@ -470,7 +465,7 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfoOrBuilder getFrequentFlyerInfoOrBuilder() {
-      return getFrequentFlyerInfo();
+      return frequentFlyerInfo_ == null ? com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.getDefaultInstance() : frequentFlyerInfo_;
     }
 
     public static final int IDENTITYDETAILS_FIELD_NUMBER = 3;
@@ -508,11 +503,11 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetailsOrBuilder getIdentityDetailsOrBuilder() {
-      return getIdentityDetails();
+      return identityDetails_ == null ? com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.getDefaultInstance() : identityDetails_;
     }
 
     public static final int WITHINFANT_FIELD_NUMBER = 4;
-    private boolean withInfant_;
+    private boolean withInfant_ = false;
     /**
      * <pre>
      * If the passenger is travelling with an infant under 2 years old, not occupying a seat, set to true.
@@ -561,11 +556,12 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Flights.PassengerOuterClass.InfantOrBuilder getInfantDetailsOrBuilder() {
-      return getInfantDetails();
+      return infantDetails_ == null ? com.passkit.grpc.Flights.PassengerOuterClass.Infant.getDefaultInstance() : infantDetails_;
     }
 
     public static final int KNOWNTRAVELERNUMBER_FIELD_NUMBER = 7;
-    private volatile java.lang.Object knownTravelerNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object knownTravelerNumber_ = "";
     /**
      * <pre>
      * If a passenger has a Known Traveler Number (KTN) or trusted traveler number, record it here.
@@ -877,34 +873,29 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (passengerDetailsBuilder_ == null) {
-          passengerDetails_ = null;
-        } else {
-          passengerDetails_ = null;
+        bitField0_ = 0;
+        passengerDetails_ = null;
+        if (passengerDetailsBuilder_ != null) {
+          passengerDetailsBuilder_.dispose();
           passengerDetailsBuilder_ = null;
         }
-        if (frequentFlyerInfoBuilder_ == null) {
-          frequentFlyerInfo_ = null;
-        } else {
-          frequentFlyerInfo_ = null;
+        frequentFlyerInfo_ = null;
+        if (frequentFlyerInfoBuilder_ != null) {
+          frequentFlyerInfoBuilder_.dispose();
           frequentFlyerInfoBuilder_ = null;
         }
-        if (identityDetailsBuilder_ == null) {
-          identityDetails_ = null;
-        } else {
-          identityDetails_ = null;
+        identityDetails_ = null;
+        if (identityDetailsBuilder_ != null) {
+          identityDetailsBuilder_.dispose();
           identityDetailsBuilder_ = null;
         }
         withInfant_ = false;
-
-        if (infantDetailsBuilder_ == null) {
-          infantDetails_ = null;
-        } else {
-          infantDetails_ = null;
+        infantDetails_ = null;
+        if (infantDetailsBuilder_ != null) {
+          infantDetailsBuilder_.dispose();
           infantDetailsBuilder_ = null;
         }
         knownTravelerNumber_ = "";
-
         return this;
       }
 
@@ -931,64 +922,41 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.PassengerOuterClass.Passenger buildPartial() {
         com.passkit.grpc.Flights.PassengerOuterClass.Passenger result = new com.passkit.grpc.Flights.PassengerOuterClass.Passenger(this);
-        if (passengerDetailsBuilder_ == null) {
-          result.passengerDetails_ = passengerDetails_;
-        } else {
-          result.passengerDetails_ = passengerDetailsBuilder_.build();
-        }
-        if (frequentFlyerInfoBuilder_ == null) {
-          result.frequentFlyerInfo_ = frequentFlyerInfo_;
-        } else {
-          result.frequentFlyerInfo_ = frequentFlyerInfoBuilder_.build();
-        }
-        if (identityDetailsBuilder_ == null) {
-          result.identityDetails_ = identityDetails_;
-        } else {
-          result.identityDetails_ = identityDetailsBuilder_.build();
-        }
-        result.withInfant_ = withInfant_;
-        if (infantDetailsBuilder_ == null) {
-          result.infantDetails_ = infantDetails_;
-        } else {
-          result.infantDetails_ = infantDetailsBuilder_.build();
-        }
-        result.knownTravelerNumber_ = knownTravelerNumber_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.PassengerOuterClass.Passenger result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.passengerDetails_ = passengerDetailsBuilder_ == null
+              ? passengerDetails_
+              : passengerDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.frequentFlyerInfo_ = frequentFlyerInfoBuilder_ == null
+              ? frequentFlyerInfo_
+              : frequentFlyerInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.identityDetails_ = identityDetailsBuilder_ == null
+              ? identityDetails_
+              : identityDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.withInfant_ = withInfant_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.infantDetails_ = infantDetailsBuilder_ == null
+              ? infantDetails_
+              : infantDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.knownTravelerNumber_ = knownTravelerNumber_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.PassengerOuterClass.Passenger) {
@@ -1018,6 +986,7 @@ public final class PassengerOuterClass {
         }
         if (!other.getKnownTravelerNumber().isEmpty()) {
           knownTravelerNumber_ = other.knownTravelerNumber_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1050,38 +1019,38 @@ public final class PassengerOuterClass {
                 input.readMessage(
                     getPassengerDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getFrequentFlyerInfoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getIdentityDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
                 withInfant_ = input.readBool();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 42: {
                 input.readMessage(
                     getInfantDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 58: {
                 knownTravelerNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               default: {
@@ -1099,6 +1068,7 @@ public final class PassengerOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.Personal.Person passengerDetails_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1112,7 +1082,7 @@ public final class PassengerOuterClass {
        * @return Whether the passengerDetails field is set.
        */
       public boolean hasPassengerDetails() {
-        return passengerDetailsBuilder_ != null || passengerDetails_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -1142,11 +1112,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           passengerDetails_ = value;
-          onChanged();
         } else {
           passengerDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1160,11 +1130,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (passengerDetailsBuilder_ == null) {
           passengerDetails_ = builderForValue.build();
-          onChanged();
         } else {
           passengerDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1176,17 +1146,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergePassengerDetails(com.passkit.grpc.Personal.Person value) {
         if (passengerDetailsBuilder_ == null) {
-          if (passengerDetails_ != null) {
-            passengerDetails_ =
-              com.passkit.grpc.Personal.Person.newBuilder(passengerDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            passengerDetails_ != null &&
+            passengerDetails_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPassengerDetailsBuilder().mergeFrom(value);
           } else {
             passengerDetails_ = value;
           }
-          onChanged();
         } else {
           passengerDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1197,14 +1168,13 @@ public final class PassengerOuterClass {
        * <code>.io.Person passengerDetails = 1;</code>
        */
       public Builder clearPassengerDetails() {
-        if (passengerDetailsBuilder_ == null) {
-          passengerDetails_ = null;
-          onChanged();
-        } else {
-          passengerDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        passengerDetails_ = null;
+        if (passengerDetailsBuilder_ != null) {
+          passengerDetailsBuilder_.dispose();
           passengerDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1215,7 +1185,7 @@ public final class PassengerOuterClass {
        * <code>.io.Person passengerDetails = 1;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPassengerDetailsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPassengerDetailsFieldBuilder().getBuilder();
       }
@@ -1267,7 +1237,7 @@ public final class PassengerOuterClass {
        * @return Whether the frequentFlyerInfo field is set.
        */
       public boolean hasFrequentFlyerInfo() {
-        return frequentFlyerInfoBuilder_ != null || frequentFlyerInfo_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -1297,11 +1267,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           frequentFlyerInfo_ = value;
-          onChanged();
         } else {
           frequentFlyerInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1315,11 +1285,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.Builder builderForValue) {
         if (frequentFlyerInfoBuilder_ == null) {
           frequentFlyerInfo_ = builderForValue.build();
-          onChanged();
         } else {
           frequentFlyerInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1331,17 +1301,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeFrequentFlyerInfo(com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo value) {
         if (frequentFlyerInfoBuilder_ == null) {
-          if (frequentFlyerInfo_ != null) {
-            frequentFlyerInfo_ =
-              com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.newBuilder(frequentFlyerInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            frequentFlyerInfo_ != null &&
+            frequentFlyerInfo_ != com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.getDefaultInstance()) {
+            getFrequentFlyerInfoBuilder().mergeFrom(value);
           } else {
             frequentFlyerInfo_ = value;
           }
-          onChanged();
         } else {
           frequentFlyerInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1352,14 +1323,13 @@ public final class PassengerOuterClass {
        * <code>.flights.FrequentFlyerInfo frequentFlyerInfo = 2;</code>
        */
       public Builder clearFrequentFlyerInfo() {
-        if (frequentFlyerInfoBuilder_ == null) {
-          frequentFlyerInfo_ = null;
-          onChanged();
-        } else {
-          frequentFlyerInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        frequentFlyerInfo_ = null;
+        if (frequentFlyerInfoBuilder_ != null) {
+          frequentFlyerInfoBuilder_.dispose();
           frequentFlyerInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1370,7 +1340,7 @@ public final class PassengerOuterClass {
        * <code>.flights.FrequentFlyerInfo frequentFlyerInfo = 2;</code>
        */
       public com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.Builder getFrequentFlyerInfoBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFrequentFlyerInfoFieldBuilder().getBuilder();
       }
@@ -1422,7 +1392,7 @@ public final class PassengerOuterClass {
        * @return Whether the identityDetails field is set.
        */
       public boolean hasIdentityDetails() {
-        return identityDetailsBuilder_ != null || identityDetails_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -1452,11 +1422,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           identityDetails_ = value;
-          onChanged();
         } else {
           identityDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1470,11 +1440,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.Builder builderForValue) {
         if (identityDetailsBuilder_ == null) {
           identityDetails_ = builderForValue.build();
-          onChanged();
         } else {
           identityDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1486,17 +1456,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeIdentityDetails(com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails value) {
         if (identityDetailsBuilder_ == null) {
-          if (identityDetails_ != null) {
-            identityDetails_ =
-              com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.newBuilder(identityDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            identityDetails_ != null &&
+            identityDetails_ != com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.getDefaultInstance()) {
+            getIdentityDetailsBuilder().mergeFrom(value);
           } else {
             identityDetails_ = value;
           }
-          onChanged();
         } else {
           identityDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1507,14 +1478,13 @@ public final class PassengerOuterClass {
        * <code>.flights.IdentityDetails identityDetails = 3;</code>
        */
       public Builder clearIdentityDetails() {
-        if (identityDetailsBuilder_ == null) {
-          identityDetails_ = null;
-          onChanged();
-        } else {
-          identityDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        identityDetails_ = null;
+        if (identityDetailsBuilder_ != null) {
+          identityDetailsBuilder_.dispose();
           identityDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1525,7 +1495,7 @@ public final class PassengerOuterClass {
        * <code>.flights.IdentityDetails identityDetails = 3;</code>
        */
       public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.Builder getIdentityDetailsBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getIdentityDetailsFieldBuilder().getBuilder();
       }
@@ -1588,8 +1558,9 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder setWithInfant(boolean value) {
-        
+
         withInfant_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1602,7 +1573,7 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearWithInfant() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         withInfant_ = false;
         onChanged();
         return this;
@@ -1620,7 +1591,7 @@ public final class PassengerOuterClass {
        * @return Whether the infantDetails field is set.
        */
       public boolean hasInfantDetails() {
-        return infantDetailsBuilder_ != null || infantDetails_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1650,11 +1621,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           infantDetails_ = value;
-          onChanged();
         } else {
           infantDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1668,11 +1639,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.PassengerOuterClass.Infant.Builder builderForValue) {
         if (infantDetailsBuilder_ == null) {
           infantDetails_ = builderForValue.build();
-          onChanged();
         } else {
           infantDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1684,17 +1655,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeInfantDetails(com.passkit.grpc.Flights.PassengerOuterClass.Infant value) {
         if (infantDetailsBuilder_ == null) {
-          if (infantDetails_ != null) {
-            infantDetails_ =
-              com.passkit.grpc.Flights.PassengerOuterClass.Infant.newBuilder(infantDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            infantDetails_ != null &&
+            infantDetails_ != com.passkit.grpc.Flights.PassengerOuterClass.Infant.getDefaultInstance()) {
+            getInfantDetailsBuilder().mergeFrom(value);
           } else {
             infantDetails_ = value;
           }
-          onChanged();
         } else {
           infantDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1705,14 +1677,13 @@ public final class PassengerOuterClass {
        * <code>.flights.Infant infantDetails = 5;</code>
        */
       public Builder clearInfantDetails() {
-        if (infantDetailsBuilder_ == null) {
-          infantDetails_ = null;
-          onChanged();
-        } else {
-          infantDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        infantDetails_ = null;
+        if (infantDetailsBuilder_ != null) {
+          infantDetailsBuilder_.dispose();
           infantDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1723,7 +1694,7 @@ public final class PassengerOuterClass {
        * <code>.flights.Infant infantDetails = 5;</code>
        */
       public com.passkit.grpc.Flights.PassengerOuterClass.Infant.Builder getInfantDetailsBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getInfantDetailsFieldBuilder().getBuilder();
       }
@@ -1816,11 +1787,9 @@ public final class PassengerOuterClass {
        */
       public Builder setKnownTravelerNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         knownTravelerNumber_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1833,8 +1802,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKnownTravelerNumber() {
-        
         knownTravelerNumber_ = getDefaultInstance().getKnownTravelerNumber();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1849,12 +1818,10 @@ public final class PassengerOuterClass {
        */
       public Builder setKnownTravelerNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         knownTravelerNumber_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2036,11 +2003,6 @@ public final class PassengerOuterClass {
       return new FrequentFlyerInfo();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.PassengerOuterClass.internal_static_flights_FrequentFlyerInfo_descriptor;
@@ -2055,7 +2017,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int PROGRAMNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object programName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object programName_ = "";
     /**
      * <pre>
      * The the marketing name for the frequent flyer program, e.g. KrisFlyer, Miles &amp; More, Skymiles, etc.
@@ -2101,7 +2064,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int AIRLINEDESIGNATOR_FIELD_NUMBER = 2;
-    private volatile java.lang.Object airlineDesignator_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airlineDesignator_ = "";
     /**
      * <pre>
      * The airline designator of the traveler's frequent flyer program.
@@ -2147,7 +2111,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int NUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object number_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object number_ = "";
     /**
      * <pre>
      * The traveler frequent flyer number.
@@ -2193,7 +2158,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int TIER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object tier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tier_ = "";
     /**
      * <pre>
      * An optional code to represent the tier of the traveler, if known. This field may be used to render a tier specific logo on the boarding pass.
@@ -2459,14 +2425,11 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         programName_ = "";
-
         airlineDesignator_ = "";
-
         number_ = "";
-
         tier_ = "";
-
         return this;
       }
 
@@ -2493,46 +2456,27 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo buildPartial() {
         com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo result = new com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo(this);
-        result.programName_ = programName_;
-        result.airlineDesignator_ = airlineDesignator_;
-        result.number_ = number_;
-        result.tier_ = tier_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.programName_ = programName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.airlineDesignator_ = airlineDesignator_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.number_ = number_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tier_ = tier_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo) {
@@ -2547,18 +2491,22 @@ public final class PassengerOuterClass {
         if (other == com.passkit.grpc.Flights.PassengerOuterClass.FrequentFlyerInfo.getDefaultInstance()) return this;
         if (!other.getProgramName().isEmpty()) {
           programName_ = other.programName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getAirlineDesignator().isEmpty()) {
           airlineDesignator_ = other.airlineDesignator_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getNumber().isEmpty()) {
           number_ = other.number_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getTier().isEmpty()) {
           tier_ = other.tier_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2589,22 +2537,22 @@ public final class PassengerOuterClass {
                 break;
               case 10: {
                 programName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 airlineDesignator_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 number_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 tier_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -2622,6 +2570,7 @@ public final class PassengerOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object programName_ = "";
       /**
@@ -2676,11 +2625,9 @@ public final class PassengerOuterClass {
        */
       public Builder setProgramName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         programName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2693,8 +2640,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProgramName() {
-        
         programName_ = getDefaultInstance().getProgramName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2709,12 +2656,10 @@ public final class PassengerOuterClass {
        */
       public Builder setProgramNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         programName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2772,11 +2717,9 @@ public final class PassengerOuterClass {
        */
       public Builder setAirlineDesignator(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airlineDesignator_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2789,8 +2732,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAirlineDesignator() {
-        
         airlineDesignator_ = getDefaultInstance().getAirlineDesignator();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2805,12 +2748,10 @@ public final class PassengerOuterClass {
        */
       public Builder setAirlineDesignatorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airlineDesignator_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2868,11 +2809,9 @@ public final class PassengerOuterClass {
        */
       public Builder setNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         number_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2885,8 +2824,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
-        
         number_ = getDefaultInstance().getNumber();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2901,12 +2840,10 @@ public final class PassengerOuterClass {
        */
       public Builder setNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         number_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2964,11 +2901,9 @@ public final class PassengerOuterClass {
        */
       public Builder setTier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2981,8 +2916,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTier() {
-        
         tier_ = getDefaultInstance().getTier();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2997,12 +2932,10 @@ public final class PassengerOuterClass {
        */
       public Builder setTierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3284,11 +3217,6 @@ public final class PassengerOuterClass {
       return new IdentityDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.PassengerOuterClass.internal_static_flights_IdentityDetails_descriptor;
@@ -3303,7 +3231,7 @@ public final class PassengerOuterClass {
     }
 
     public static final int IDENTITYDOCUMENT_FIELD_NUMBER = 1;
-    private int identityDocument_;
+    private int identityDocument_ = 0;
     /**
      * <pre>
      * Type of document used to validate the traveler's identity.
@@ -3324,13 +3252,13 @@ public final class PassengerOuterClass {
      * @return The identityDocument.
      */
     @java.lang.Override public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument getIdentityDocument() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument result = com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.valueOf(identityDocument_);
+      com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument result = com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.forNumber(identityDocument_);
       return result == null ? com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.UNRECOGNIZED : result;
     }
 
     public static final int ISSUINGCOUNTRY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object issuingCountry_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object issuingCountry_ = "";
     /**
      * <pre>
      * The two digit ISO 3166 country code of the country of the travel document issuing authority.
@@ -3376,7 +3304,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int NATIONALITY_FIELD_NUMBER = 3;
-    private volatile java.lang.Object nationality_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nationality_ = "";
     /**
      * <pre>
      * The two digit ISO 3166 country code of the traveler's nationality.
@@ -3422,7 +3351,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int DOCUMENTNUMBER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object documentNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object documentNumber_ = "";
     /**
      * <pre>
      * The number or other unique identifying reference of the traveler's document.
@@ -3502,11 +3432,11 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getDateOfBirthOrBuilder() {
-      return getDateOfBirth();
+      return dateOfBirth_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : dateOfBirth_;
     }
 
     public static final int GENDER_FIELD_NUMBER = 6;
-    private int gender_;
+    private int gender_ = 0;
     /**
      * <pre>
      * The gender as marked on the traveler's identity document.
@@ -3527,8 +3457,7 @@ public final class PassengerOuterClass {
      * @return The gender.
      */
     @java.lang.Override public com.passkit.grpc.Personal.Gender getGender() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.valueOf(gender_);
+      com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.forNumber(gender_);
       return result == null ? com.passkit.grpc.Personal.Gender.UNRECOGNIZED : result;
     }
 
@@ -3567,7 +3496,7 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getIssuedDateOrBuilder() {
-      return getIssuedDate();
+      return issuedDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : issuedDate_;
     }
 
     public static final int EXPIRYDATE_FIELD_NUMBER = 8;
@@ -3605,7 +3534,7 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getExpiryDateOrBuilder() {
-      return getExpiryDate();
+      return expiryDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : expiryDate_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3887,32 +3816,25 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         identityDocument_ = 0;
-
         issuingCountry_ = "";
-
         nationality_ = "";
-
         documentNumber_ = "";
-
-        if (dateOfBirthBuilder_ == null) {
-          dateOfBirth_ = null;
-        } else {
-          dateOfBirth_ = null;
+        dateOfBirth_ = null;
+        if (dateOfBirthBuilder_ != null) {
+          dateOfBirthBuilder_.dispose();
           dateOfBirthBuilder_ = null;
         }
         gender_ = 0;
-
-        if (issuedDateBuilder_ == null) {
-          issuedDate_ = null;
-        } else {
-          issuedDate_ = null;
+        issuedDate_ = null;
+        if (issuedDateBuilder_ != null) {
+          issuedDateBuilder_.dispose();
           issuedDateBuilder_ = null;
         }
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-        } else {
-          expiryDate_ = null;
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
         return this;
@@ -3941,62 +3863,45 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails buildPartial() {
         com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails result = new com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails(this);
-        result.identityDocument_ = identityDocument_;
-        result.issuingCountry_ = issuingCountry_;
-        result.nationality_ = nationality_;
-        result.documentNumber_ = documentNumber_;
-        if (dateOfBirthBuilder_ == null) {
-          result.dateOfBirth_ = dateOfBirth_;
-        } else {
-          result.dateOfBirth_ = dateOfBirthBuilder_.build();
-        }
-        result.gender_ = gender_;
-        if (issuedDateBuilder_ == null) {
-          result.issuedDate_ = issuedDate_;
-        } else {
-          result.issuedDate_ = issuedDateBuilder_.build();
-        }
-        if (expiryDateBuilder_ == null) {
-          result.expiryDate_ = expiryDate_;
-        } else {
-          result.expiryDate_ = expiryDateBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.identityDocument_ = identityDocument_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.issuingCountry_ = issuingCountry_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nationality_ = nationality_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.documentNumber_ = documentNumber_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.dateOfBirth_ = dateOfBirthBuilder_ == null
+              ? dateOfBirth_
+              : dateOfBirthBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.gender_ = gender_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.issuedDate_ = issuedDateBuilder_ == null
+              ? issuedDate_
+              : issuedDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.expiryDate_ = expiryDateBuilder_ == null
+              ? expiryDate_
+              : expiryDateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails) {
@@ -4014,14 +3919,17 @@ public final class PassengerOuterClass {
         }
         if (!other.getIssuingCountry().isEmpty()) {
           issuingCountry_ = other.issuingCountry_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getNationality().isEmpty()) {
           nationality_ = other.nationality_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDocumentNumber().isEmpty()) {
           documentNumber_ = other.documentNumber_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasDateOfBirth()) {
@@ -4064,48 +3972,48 @@ public final class PassengerOuterClass {
                 break;
               case 8: {
                 identityDocument_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 issuingCountry_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 nationality_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 documentNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getDateOfBirthFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 48: {
                 gender_ = input.readEnum();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 58: {
                 input.readMessage(
                     getIssuedDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getExpiryDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -4123,6 +4031,7 @@ public final class PassengerOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int identityDocument_ = 0;
       /**
@@ -4146,8 +4055,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder setIdentityDocumentValue(int value) {
-        
         identityDocument_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4161,8 +4070,7 @@ public final class PassengerOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument getIdentityDocument() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument result = com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.valueOf(identityDocument_);
+        com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument result = com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.forNumber(identityDocument_);
         return result == null ? com.passkit.grpc.Flights.PassengerOuterClass.IdentityDocument.UNRECOGNIZED : result;
       }
       /**
@@ -4178,7 +4086,7 @@ public final class PassengerOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         identityDocument_ = value.getNumber();
         onChanged();
         return this;
@@ -4192,7 +4100,7 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIdentityDocument() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         identityDocument_ = 0;
         onChanged();
         return this;
@@ -4251,11 +4159,9 @@ public final class PassengerOuterClass {
        */
       public Builder setIssuingCountry(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         issuingCountry_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4268,8 +4174,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIssuingCountry() {
-        
         issuingCountry_ = getDefaultInstance().getIssuingCountry();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4284,12 +4190,10 @@ public final class PassengerOuterClass {
        */
       public Builder setIssuingCountryBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         issuingCountry_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4347,11 +4251,9 @@ public final class PassengerOuterClass {
        */
       public Builder setNationality(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         nationality_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4364,8 +4266,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNationality() {
-        
         nationality_ = getDefaultInstance().getNationality();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4380,12 +4282,10 @@ public final class PassengerOuterClass {
        */
       public Builder setNationalityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         nationality_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4443,11 +4343,9 @@ public final class PassengerOuterClass {
        */
       public Builder setDocumentNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         documentNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4460,8 +4358,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDocumentNumber() {
-        
         documentNumber_ = getDefaultInstance().getDocumentNumber();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4476,12 +4374,10 @@ public final class PassengerOuterClass {
        */
       public Builder setDocumentNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         documentNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4498,7 +4394,7 @@ public final class PassengerOuterClass {
        * @return Whether the dateOfBirth field is set.
        */
       public boolean hasDateOfBirth() {
-        return dateOfBirthBuilder_ != null || dateOfBirth_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -4528,11 +4424,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           dateOfBirth_ = value;
-          onChanged();
         } else {
           dateOfBirthBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4546,11 +4442,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (dateOfBirthBuilder_ == null) {
           dateOfBirth_ = builderForValue.build();
-          onChanged();
         } else {
           dateOfBirthBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4562,17 +4458,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeDateOfBirth(com.passkit.grpc.CommonObjects.Date value) {
         if (dateOfBirthBuilder_ == null) {
-          if (dateOfBirth_ != null) {
-            dateOfBirth_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(dateOfBirth_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            dateOfBirth_ != null &&
+            dateOfBirth_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getDateOfBirthBuilder().mergeFrom(value);
           } else {
             dateOfBirth_ = value;
           }
-          onChanged();
         } else {
           dateOfBirthBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4583,14 +4480,13 @@ public final class PassengerOuterClass {
        * <code>.io.Date dateOfBirth = 5;</code>
        */
       public Builder clearDateOfBirth() {
-        if (dateOfBirthBuilder_ == null) {
-          dateOfBirth_ = null;
-          onChanged();
-        } else {
-          dateOfBirth_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dateOfBirth_ = null;
+        if (dateOfBirthBuilder_ != null) {
+          dateOfBirthBuilder_.dispose();
           dateOfBirthBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4601,7 +4497,7 @@ public final class PassengerOuterClass {
        * <code>.io.Date dateOfBirth = 5;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getDateOfBirthBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getDateOfBirthFieldBuilder().getBuilder();
       }
@@ -4663,8 +4559,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder setGenderValue(int value) {
-        
         gender_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4678,8 +4574,7 @@ public final class PassengerOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Personal.Gender getGender() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.valueOf(gender_);
+        com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.forNumber(gender_);
         return result == null ? com.passkit.grpc.Personal.Gender.UNRECOGNIZED : result;
       }
       /**
@@ -4695,7 +4590,7 @@ public final class PassengerOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000020;
         gender_ = value.getNumber();
         onChanged();
         return this;
@@ -4709,7 +4604,7 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGender() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         gender_ = 0;
         onChanged();
         return this;
@@ -4727,7 +4622,7 @@ public final class PassengerOuterClass {
        * @return Whether the issuedDate field is set.
        */
       public boolean hasIssuedDate() {
-        return issuedDateBuilder_ != null || issuedDate_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -4757,11 +4652,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           issuedDate_ = value;
-          onChanged();
         } else {
           issuedDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -4775,11 +4670,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (issuedDateBuilder_ == null) {
           issuedDate_ = builderForValue.build();
-          onChanged();
         } else {
           issuedDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -4791,17 +4686,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeIssuedDate(com.passkit.grpc.CommonObjects.Date value) {
         if (issuedDateBuilder_ == null) {
-          if (issuedDate_ != null) {
-            issuedDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(issuedDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            issuedDate_ != null &&
+            issuedDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getIssuedDateBuilder().mergeFrom(value);
           } else {
             issuedDate_ = value;
           }
-          onChanged();
         } else {
           issuedDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -4812,14 +4708,13 @@ public final class PassengerOuterClass {
        * <code>.io.Date issuedDate = 7;</code>
        */
       public Builder clearIssuedDate() {
-        if (issuedDateBuilder_ == null) {
-          issuedDate_ = null;
-          onChanged();
-        } else {
-          issuedDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        issuedDate_ = null;
+        if (issuedDateBuilder_ != null) {
+          issuedDateBuilder_.dispose();
           issuedDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4830,7 +4725,7 @@ public final class PassengerOuterClass {
        * <code>.io.Date issuedDate = 7;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getIssuedDateBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getIssuedDateFieldBuilder().getBuilder();
       }
@@ -4882,7 +4777,7 @@ public final class PassengerOuterClass {
        * @return Whether the expiryDate field is set.
        */
       public boolean hasExpiryDate() {
-        return expiryDateBuilder_ != null || expiryDate_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -4912,11 +4807,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           expiryDate_ = value;
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -4930,11 +4825,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (expiryDateBuilder_ == null) {
           expiryDate_ = builderForValue.build();
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -4946,17 +4841,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeExpiryDate(com.passkit.grpc.CommonObjects.Date value) {
         if (expiryDateBuilder_ == null) {
-          if (expiryDate_ != null) {
-            expiryDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(expiryDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            expiryDate_ != null &&
+            expiryDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getExpiryDateBuilder().mergeFrom(value);
           } else {
             expiryDate_ = value;
           }
-          onChanged();
         } else {
           expiryDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -4967,14 +4863,13 @@ public final class PassengerOuterClass {
        * <code>.io.Date expiryDate = 8;</code>
        */
       public Builder clearExpiryDate() {
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-          onChanged();
-        } else {
-          expiryDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4985,7 +4880,7 @@ public final class PassengerOuterClass {
        * <code>.io.Date expiryDate = 8;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getExpiryDateBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getExpiryDateFieldBuilder().getBuilder();
       }
@@ -5304,11 +5199,6 @@ public final class PassengerOuterClass {
       return new Infant();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.PassengerOuterClass.internal_static_flights_Infant_descriptor;
@@ -5357,7 +5247,7 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getInfantDetailsOrBuilder() {
-      return getInfantDetails();
+      return infantDetails_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : infantDetails_;
     }
 
     public static final int IDENTITYDETAILS_FIELD_NUMBER = 2;
@@ -5395,11 +5285,12 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetailsOrBuilder getIdentityDetailsOrBuilder() {
-      return getIdentityDetails();
+      return identityDetails_ == null ? com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.getDefaultInstance() : identityDetails_;
     }
 
     public static final int BARCODEPAYLOAD_FIELD_NUMBER = 3;
-    private volatile java.lang.Object barcodePayload_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodePayload_ = "";
     /**
      * <pre>
      * The barcode payload to be rendered on the infant boarding pass. If not provided, an IATA barcode will be compiled, based on the adult boarding pass barcode data.
@@ -5479,11 +5370,12 @@ public final class PassengerOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Flights.Barcode.ConditionalItemsOrBuilder getConditionalItemsOrBuilder() {
-      return getConditionalItems();
+      return conditionalItems_ == null ? com.passkit.grpc.Flights.Barcode.ConditionalItems.getDefaultInstance() : conditionalItems_;
     }
 
     public static final int BARCODEADDITIONALDATA_FIELD_NUMBER = 5;
-    private volatile java.lang.Object barcodeAdditionalData_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodeAdditionalData_ = "";
     /**
      * <pre>
      * Optional additional barcode data. If PassKit are generating barcodes, airline use data (IATA item 4) to be included in the infant barcode.
@@ -5529,7 +5421,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int SECURITYIMAGE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object securityImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object securityImage_ = "";
     /**
      * <pre>
      * Security image id for display above the barcode on a Google Pay pass.
@@ -5575,7 +5468,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int PRIVILEGEIMAGE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object privilegeImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privilegeImage_ = "";
     /**
      * <pre>
      * Privilege image id for display above the barcode on a Google Pay pass.
@@ -5621,7 +5515,8 @@ public final class PassengerOuterClass {
     }
 
     public static final int FOOTERIMAGE_FIELD_NUMBER = 8;
-    private volatile java.lang.Object footerImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object footerImage_ = "";
     /**
      * <pre>
      * Footer image id for display above the barcode on iOS devices.
@@ -5945,34 +5840,27 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (infantDetailsBuilder_ == null) {
-          infantDetails_ = null;
-        } else {
-          infantDetails_ = null;
+        bitField0_ = 0;
+        infantDetails_ = null;
+        if (infantDetailsBuilder_ != null) {
+          infantDetailsBuilder_.dispose();
           infantDetailsBuilder_ = null;
         }
-        if (identityDetailsBuilder_ == null) {
-          identityDetails_ = null;
-        } else {
-          identityDetails_ = null;
+        identityDetails_ = null;
+        if (identityDetailsBuilder_ != null) {
+          identityDetailsBuilder_.dispose();
           identityDetailsBuilder_ = null;
         }
         barcodePayload_ = "";
-
-        if (conditionalItemsBuilder_ == null) {
-          conditionalItems_ = null;
-        } else {
-          conditionalItems_ = null;
+        conditionalItems_ = null;
+        if (conditionalItemsBuilder_ != null) {
+          conditionalItemsBuilder_.dispose();
           conditionalItemsBuilder_ = null;
         }
         barcodeAdditionalData_ = "";
-
         securityImage_ = "";
-
         privilegeImage_ = "";
-
         footerImage_ = "";
-
         return this;
       }
 
@@ -5999,62 +5887,45 @@ public final class PassengerOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.PassengerOuterClass.Infant buildPartial() {
         com.passkit.grpc.Flights.PassengerOuterClass.Infant result = new com.passkit.grpc.Flights.PassengerOuterClass.Infant(this);
-        if (infantDetailsBuilder_ == null) {
-          result.infantDetails_ = infantDetails_;
-        } else {
-          result.infantDetails_ = infantDetailsBuilder_.build();
-        }
-        if (identityDetailsBuilder_ == null) {
-          result.identityDetails_ = identityDetails_;
-        } else {
-          result.identityDetails_ = identityDetailsBuilder_.build();
-        }
-        result.barcodePayload_ = barcodePayload_;
-        if (conditionalItemsBuilder_ == null) {
-          result.conditionalItems_ = conditionalItems_;
-        } else {
-          result.conditionalItems_ = conditionalItemsBuilder_.build();
-        }
-        result.barcodeAdditionalData_ = barcodeAdditionalData_;
-        result.securityImage_ = securityImage_;
-        result.privilegeImage_ = privilegeImage_;
-        result.footerImage_ = footerImage_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.PassengerOuterClass.Infant result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.infantDetails_ = infantDetailsBuilder_ == null
+              ? infantDetails_
+              : infantDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.identityDetails_ = identityDetailsBuilder_ == null
+              ? identityDetails_
+              : identityDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.barcodePayload_ = barcodePayload_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.conditionalItems_ = conditionalItemsBuilder_ == null
+              ? conditionalItems_
+              : conditionalItemsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.barcodeAdditionalData_ = barcodeAdditionalData_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.securityImage_ = securityImage_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.privilegeImage_ = privilegeImage_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.footerImage_ = footerImage_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.PassengerOuterClass.Infant) {
@@ -6075,6 +5946,7 @@ public final class PassengerOuterClass {
         }
         if (!other.getBarcodePayload().isEmpty()) {
           barcodePayload_ = other.barcodePayload_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasConditionalItems()) {
@@ -6082,18 +5954,22 @@ public final class PassengerOuterClass {
         }
         if (!other.getBarcodeAdditionalData().isEmpty()) {
           barcodeAdditionalData_ = other.barcodeAdditionalData_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getSecurityImage().isEmpty()) {
           securityImage_ = other.securityImage_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getPrivilegeImage().isEmpty()) {
           privilegeImage_ = other.privilegeImage_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getFooterImage().isEmpty()) {
           footerImage_ = other.footerImage_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6126,46 +6002,46 @@ public final class PassengerOuterClass {
                 input.readMessage(
                     getInfantDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getIdentityDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 barcodePayload_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getConditionalItemsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 barcodeAdditionalData_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 securityImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 privilegeImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 footerImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -6183,6 +6059,7 @@ public final class PassengerOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.Personal.Person infantDetails_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6196,7 +6073,7 @@ public final class PassengerOuterClass {
        * @return Whether the infantDetails field is set.
        */
       public boolean hasInfantDetails() {
-        return infantDetailsBuilder_ != null || infantDetails_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -6226,11 +6103,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           infantDetails_ = value;
-          onChanged();
         } else {
           infantDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6244,11 +6121,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (infantDetailsBuilder_ == null) {
           infantDetails_ = builderForValue.build();
-          onChanged();
         } else {
           infantDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6260,17 +6137,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeInfantDetails(com.passkit.grpc.Personal.Person value) {
         if (infantDetailsBuilder_ == null) {
-          if (infantDetails_ != null) {
-            infantDetails_ =
-              com.passkit.grpc.Personal.Person.newBuilder(infantDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            infantDetails_ != null &&
+            infantDetails_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getInfantDetailsBuilder().mergeFrom(value);
           } else {
             infantDetails_ = value;
           }
-          onChanged();
         } else {
           infantDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6281,14 +6159,13 @@ public final class PassengerOuterClass {
        * <code>.io.Person infantDetails = 1;</code>
        */
       public Builder clearInfantDetails() {
-        if (infantDetailsBuilder_ == null) {
-          infantDetails_ = null;
-          onChanged();
-        } else {
-          infantDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        infantDetails_ = null;
+        if (infantDetailsBuilder_ != null) {
+          infantDetailsBuilder_.dispose();
           infantDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6299,7 +6176,7 @@ public final class PassengerOuterClass {
        * <code>.io.Person infantDetails = 1;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getInfantDetailsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getInfantDetailsFieldBuilder().getBuilder();
       }
@@ -6351,7 +6228,7 @@ public final class PassengerOuterClass {
        * @return Whether the identityDetails field is set.
        */
       public boolean hasIdentityDetails() {
-        return identityDetailsBuilder_ != null || identityDetails_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -6381,11 +6258,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           identityDetails_ = value;
-          onChanged();
         } else {
           identityDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6399,11 +6276,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.Builder builderForValue) {
         if (identityDetailsBuilder_ == null) {
           identityDetails_ = builderForValue.build();
-          onChanged();
         } else {
           identityDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6415,17 +6292,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeIdentityDetails(com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails value) {
         if (identityDetailsBuilder_ == null) {
-          if (identityDetails_ != null) {
-            identityDetails_ =
-              com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.newBuilder(identityDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            identityDetails_ != null &&
+            identityDetails_ != com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.getDefaultInstance()) {
+            getIdentityDetailsBuilder().mergeFrom(value);
           } else {
             identityDetails_ = value;
           }
-          onChanged();
         } else {
           identityDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6436,14 +6314,13 @@ public final class PassengerOuterClass {
        * <code>.flights.IdentityDetails identityDetails = 2;</code>
        */
       public Builder clearIdentityDetails() {
-        if (identityDetailsBuilder_ == null) {
-          identityDetails_ = null;
-          onChanged();
-        } else {
-          identityDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        identityDetails_ = null;
+        if (identityDetailsBuilder_ != null) {
+          identityDetailsBuilder_.dispose();
           identityDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6454,7 +6331,7 @@ public final class PassengerOuterClass {
        * <code>.flights.IdentityDetails identityDetails = 2;</code>
        */
       public com.passkit.grpc.Flights.PassengerOuterClass.IdentityDetails.Builder getIdentityDetailsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getIdentityDetailsFieldBuilder().getBuilder();
       }
@@ -6547,11 +6424,9 @@ public final class PassengerOuterClass {
        */
       public Builder setBarcodePayload(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodePayload_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6564,8 +6439,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBarcodePayload() {
-        
         barcodePayload_ = getDefaultInstance().getBarcodePayload();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -6580,12 +6455,10 @@ public final class PassengerOuterClass {
        */
       public Builder setBarcodePayloadBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodePayload_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6602,7 +6475,7 @@ public final class PassengerOuterClass {
        * @return Whether the conditionalItems field is set.
        */
       public boolean hasConditionalItems() {
-        return conditionalItemsBuilder_ != null || conditionalItems_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -6632,11 +6505,11 @@ public final class PassengerOuterClass {
             throw new NullPointerException();
           }
           conditionalItems_ = value;
-          onChanged();
         } else {
           conditionalItemsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6650,11 +6523,11 @@ public final class PassengerOuterClass {
           com.passkit.grpc.Flights.Barcode.ConditionalItems.Builder builderForValue) {
         if (conditionalItemsBuilder_ == null) {
           conditionalItems_ = builderForValue.build();
-          onChanged();
         } else {
           conditionalItemsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6666,17 +6539,18 @@ public final class PassengerOuterClass {
        */
       public Builder mergeConditionalItems(com.passkit.grpc.Flights.Barcode.ConditionalItems value) {
         if (conditionalItemsBuilder_ == null) {
-          if (conditionalItems_ != null) {
-            conditionalItems_ =
-              com.passkit.grpc.Flights.Barcode.ConditionalItems.newBuilder(conditionalItems_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            conditionalItems_ != null &&
+            conditionalItems_ != com.passkit.grpc.Flights.Barcode.ConditionalItems.getDefaultInstance()) {
+            getConditionalItemsBuilder().mergeFrom(value);
           } else {
             conditionalItems_ = value;
           }
-          onChanged();
         } else {
           conditionalItemsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6687,14 +6561,13 @@ public final class PassengerOuterClass {
        * <code>.flights.ConditionalItems conditionalItems = 4;</code>
        */
       public Builder clearConditionalItems() {
-        if (conditionalItemsBuilder_ == null) {
-          conditionalItems_ = null;
-          onChanged();
-        } else {
-          conditionalItems_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        conditionalItems_ = null;
+        if (conditionalItemsBuilder_ != null) {
+          conditionalItemsBuilder_.dispose();
           conditionalItemsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6705,7 +6578,7 @@ public final class PassengerOuterClass {
        * <code>.flights.ConditionalItems conditionalItems = 4;</code>
        */
       public com.passkit.grpc.Flights.Barcode.ConditionalItems.Builder getConditionalItemsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getConditionalItemsFieldBuilder().getBuilder();
       }
@@ -6798,11 +6671,9 @@ public final class PassengerOuterClass {
        */
       public Builder setBarcodeAdditionalData(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodeAdditionalData_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6815,8 +6686,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBarcodeAdditionalData() {
-        
         barcodeAdditionalData_ = getDefaultInstance().getBarcodeAdditionalData();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -6831,12 +6702,10 @@ public final class PassengerOuterClass {
        */
       public Builder setBarcodeAdditionalDataBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodeAdditionalData_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6894,11 +6763,9 @@ public final class PassengerOuterClass {
        */
       public Builder setSecurityImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         securityImage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6911,8 +6778,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSecurityImage() {
-        
         securityImage_ = getDefaultInstance().getSecurityImage();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -6927,12 +6794,10 @@ public final class PassengerOuterClass {
        */
       public Builder setSecurityImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         securityImage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -6990,11 +6855,9 @@ public final class PassengerOuterClass {
        */
       public Builder setPrivilegeImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privilegeImage_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7007,8 +6870,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPrivilegeImage() {
-        
         privilegeImage_ = getDefaultInstance().getPrivilegeImage();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -7023,12 +6886,10 @@ public final class PassengerOuterClass {
        */
       public Builder setPrivilegeImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privilegeImage_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -7086,11 +6947,9 @@ public final class PassengerOuterClass {
        */
       public Builder setFooterImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         footerImage_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -7103,8 +6962,8 @@ public final class PassengerOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFooterImage() {
-        
         footerImage_ = getDefaultInstance().getFooterImage();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -7119,12 +6978,10 @@ public final class PassengerOuterClass {
        */
       public Builder setFooterImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         footerImage_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }

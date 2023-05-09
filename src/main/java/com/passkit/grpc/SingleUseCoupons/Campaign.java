@@ -259,11 +259,6 @@ public final class Campaign {
       return new CouponCampaign();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Campaign.internal_static_single_use_coupons_CouponCampaign_descriptor;
@@ -278,7 +273,8 @@ public final class Campaign {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated program id (22 characters).
@@ -324,7 +320,8 @@ public final class Campaign {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of the coupon campaign; used in the portal / API. Not shown to the end-customer.
@@ -404,18 +401,18 @@ public final class Campaign {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedNameOrBuilder() {
-      return getLocalizedName();
+      return localizedName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedName_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> status_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus> status_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus>() {
               public com.passkit.grpc.ProjectOuterClass.ProjectStatus convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(from);
+                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(from);
                 return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
               }
             };
@@ -486,7 +483,8 @@ public final class Campaign {
     private int statusMemoizedSerializedSize;
 
     public static final int PASSTYPEIDENTIFIER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object passTypeIdentifier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeIdentifier_ = "";
     /**
      * <pre>
      * Leave empty for draft campaigns. Needs to be set for campaigns where status contains PROJECT_PUBLISHED.
@@ -532,7 +530,8 @@ public final class Campaign {
     }
 
     public static final int IANATIMEZONE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object ianaTimezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ianaTimezone_ = "";
     /**
      * <pre>
      * The campaign timezone.
@@ -612,7 +611,7 @@ public final class Campaign {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 11;
@@ -650,7 +649,7 @@ public final class Campaign {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -947,32 +946,26 @@ public final class Campaign {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-        } else {
-          localizedName_ = null;
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         passTypeIdentifier_ = "";
-
         ianaTimezone_ = "";
-
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -1001,67 +994,51 @@ public final class Campaign {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign result = new com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.name_ = name_;
-        if (localizedNameBuilder_ == null) {
-          result.localizedName_ = localizedName_;
-        } else {
-          result.localizedName_ = localizedNameBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          status_ = java.util.Collections.unmodifiableList(status_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.status_ = status_;
-        result.passTypeIdentifier_ = passTypeIdentifier_;
-        result.ianaTimezone_ = ianaTimezone_;
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.status_ = status_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localizedName_ = localizedNameBuilder_ == null
+              ? localizedName_
+              : localizedNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.passTypeIdentifier_ = passTypeIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.ianaTimezone_ = ianaTimezone_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign) {
@@ -1076,10 +1053,12 @@ public final class Campaign {
         if (other == com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasLocalizedName()) {
@@ -1088,7 +1067,7 @@ public final class Campaign {
         if (!other.status_.isEmpty()) {
           if (status_.isEmpty()) {
             status_ = other.status_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStatusIsMutable();
             status_.addAll(other.status_);
@@ -1097,10 +1076,12 @@ public final class Campaign {
         }
         if (!other.getPassTypeIdentifier().isEmpty()) {
           passTypeIdentifier_ = other.passTypeIdentifier_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getIanaTimezone().isEmpty()) {
           ianaTimezone_ = other.ianaTimezone_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasCreated()) {
@@ -1137,19 +1118,19 @@ public final class Campaign {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getLocalizedNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 40: {
@@ -1171,26 +1152,26 @@ public final class Campaign {
               } // case 42
               case 50: {
                 passTypeIdentifier_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 50
               case 58: {
                 ianaTimezone_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               case 82: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 82
               case 90: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 90
               default: {
@@ -1263,11 +1244,9 @@ public final class Campaign {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1280,8 +1259,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1296,12 +1275,10 @@ public final class Campaign {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1359,11 +1336,9 @@ public final class Campaign {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1376,8 +1351,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1392,12 +1367,10 @@ public final class Campaign {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1414,7 +1387,7 @@ public final class Campaign {
        * @return Whether the localizedName field is set.
        */
       public boolean hasLocalizedName() {
-        return localizedNameBuilder_ != null || localizedName_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -1444,11 +1417,11 @@ public final class Campaign {
             throw new NullPointerException();
           }
           localizedName_ = value;
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1462,11 +1435,11 @@ public final class Campaign {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedNameBuilder_ == null) {
           localizedName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1478,17 +1451,18 @@ public final class Campaign {
        */
       public Builder mergeLocalizedName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedNameBuilder_ == null) {
-          if (localizedName_ != null) {
-            localizedName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            localizedName_ != null &&
+            localizedName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedNameBuilder().mergeFrom(value);
           } else {
             localizedName_ = value;
           }
-          onChanged();
         } else {
           localizedNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1499,14 +1473,13 @@ public final class Campaign {
        * <code>.io.LocalizedString localizedName = 3;</code>
        */
       public Builder clearLocalizedName() {
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-          onChanged();
-        } else {
-          localizedName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1517,7 +1490,7 @@ public final class Campaign {
        * <code>.io.LocalizedString localizedName = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedNameBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getLocalizedNameFieldBuilder().getBuilder();
       }
@@ -1560,9 +1533,9 @@ public final class Campaign {
       private java.util.List<java.lang.Integer> status_ =
         java.util.Collections.emptyList();
       private void ensureStatusIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           status_ = new java.util.ArrayList<java.lang.Integer>(status_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
         }
       }
       /**
@@ -1666,7 +1639,7 @@ public final class Campaign {
        */
       public Builder clearStatus() {
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1798,11 +1771,9 @@ public final class Campaign {
        */
       public Builder setPassTypeIdentifier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1815,8 +1786,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeIdentifier() {
-        
         passTypeIdentifier_ = getDefaultInstance().getPassTypeIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1831,12 +1802,10 @@ public final class Campaign {
        */
       public Builder setPassTypeIdentifierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1894,11 +1863,9 @@ public final class Campaign {
        */
       public Builder setIanaTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ianaTimezone_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1911,8 +1878,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearIanaTimezone() {
-        
         ianaTimezone_ = getDefaultInstance().getIanaTimezone();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1927,12 +1894,10 @@ public final class Campaign {
        */
       public Builder setIanaTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ianaTimezone_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1949,7 +1914,7 @@ public final class Campaign {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -1979,11 +1944,11 @@ public final class Campaign {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1997,11 +1962,11 @@ public final class Campaign {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2013,17 +1978,18 @@ public final class Campaign {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2034,14 +2000,13 @@ public final class Campaign {
        * <code>.google.protobuf.Timestamp created = 10;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2052,7 +2017,7 @@ public final class Campaign {
        * <code>.google.protobuf.Timestamp created = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -2104,7 +2069,7 @@ public final class Campaign {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -2134,11 +2099,11 @@ public final class Campaign {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2152,11 +2117,11 @@ public final class Campaign {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2168,17 +2133,18 @@ public final class Campaign {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2189,14 +2155,13 @@ public final class Campaign {
        * <code>.google.protobuf.Timestamp updated = 11;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2207,7 +2172,7 @@ public final class Campaign {
        * <code>.google.protobuf.Timestamp updated = 11;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -2409,7 +2374,6 @@ public final class Campaign {
      *
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
-
     int getSourcesOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -2420,7 +2384,6 @@ public final class Campaign {
      *
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
-
     int getSourcesOrThrow(
         java.lang.String key);
 
@@ -2496,11 +2459,6 @@ public final class Campaign {
       return new CouponCampaignAnalyticsResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Campaign.internal_static_single_use_coupons_CouponCampaignAnalyticsResponse_descriptor;
@@ -2527,7 +2485,7 @@ public final class Campaign {
     }
 
     public static final int PERIOD_FIELD_NUMBER = 1;
-    private int period_;
+    private int period_ = 0;
     /**
      * <pre>
      * Period unit of data returned (day, month or year).
@@ -2548,13 +2506,12 @@ public final class Campaign {
      * @return The period.
      */
     @java.lang.Override public com.passkit.grpc.Reporting.Period getPeriod() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
       return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
     }
 
     public static final int REDEEMED_FIELD_NUMBER = 2;
-    private int redeemed_;
+    private int redeemed_ = 0;
     /**
      * <pre>
      * Passes redeemed in this period.
@@ -2603,7 +2560,7 @@ public final class Campaign {
      */
     @java.lang.Override
     public com.passkit.grpc.Reporting.DeviceBreakdownOrBuilder getDevicesOrBuilder() {
-      return getDevices();
+      return devices_ == null ? com.passkit.grpc.Reporting.DeviceBreakdown.getDefaultInstance() : devices_;
     }
 
     public static final int SOURCES_FIELD_NUMBER = 4;
@@ -2618,6 +2575,7 @@ public final class Campaign {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> sources_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -2628,7 +2586,6 @@ public final class Campaign {
       }
       return sources_;
     }
-
     public int getSourcesCount() {
       return internalGetSources().getMap().size();
     }
@@ -2639,7 +2596,6 @@ public final class Campaign {
      *
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
-
     @java.lang.Override
     public boolean containsSources(
         java.lang.String key) {
@@ -2662,7 +2618,6 @@ public final class Campaign {
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getSourcesMap() {
       return internalGetSources().getMap();
     }
@@ -2674,7 +2629,6 @@ public final class Campaign {
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
     @java.lang.Override
-
     public int getSourcesOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -2691,7 +2645,6 @@ public final class Campaign {
      * <code>map&lt;string, uint32&gt; sources = 4;</code>
      */
     @java.lang.Override
-
     public int getSourcesOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -2704,6 +2657,7 @@ public final class Campaign {
     }
 
     public static final int DATA_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Reporting.ChartDataPoints> data_;
     /**
      * <pre>
@@ -3038,14 +2992,12 @@ public final class Campaign {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         period_ = 0;
-
         redeemed_ = 0;
-
-        if (devicesBuilder_ == null) {
-          devices_ = null;
-        } else {
-          devices_ = null;
+        devices_ = null;
+        if (devicesBuilder_ != null) {
+          devicesBuilder_.dispose();
           devicesBuilder_ = null;
         }
         internalGetMutableSources().clear();
@@ -3055,7 +3007,7 @@ public final class Campaign {
           data_ = null;
           dataBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -3082,61 +3034,43 @@ public final class Campaign {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse result = new com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.period_ = period_;
-        result.redeemed_ = redeemed_;
-        if (devicesBuilder_ == null) {
-          result.devices_ = devices_;
-        } else {
-          result.devices_ = devicesBuilder_.build();
-        }
-        result.sources_ = internalGetSources();
-        result.sources_.makeImmutable();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse result) {
         if (dataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             data_ = java.util.Collections.unmodifiableList(data_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.data_ = data_;
         } else {
           result.data_ = dataBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.period_ = period_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.redeemed_ = redeemed_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.devices_ = devicesBuilder_ == null
+              ? devices_
+              : devicesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sources_ = internalGetSources();
+          result.sources_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse) {
@@ -3160,11 +3094,12 @@ public final class Campaign {
         }
         internalGetMutableSources().mergeFrom(
             other.internalGetSources());
+        bitField0_ |= 0x00000008;
         if (dataBuilder_ == null) {
           if (!other.data_.isEmpty()) {
             if (data_.isEmpty()) {
               data_ = other.data_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureDataIsMutable();
               data_.addAll(other.data_);
@@ -3177,7 +3112,7 @@ public final class Campaign {
               dataBuilder_.dispose();
               dataBuilder_ = null;
               data_ = other.data_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               dataBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDataFieldBuilder() : null;
@@ -3214,19 +3149,19 @@ public final class Campaign {
                 break;
               case 8: {
                 period_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 redeemed_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 input.readMessage(
                     getDevicesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -3235,6 +3170,7 @@ public final class Campaign {
                     SourcesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableSources().getMutableMap().put(
                     sources__.getKey(), sources__.getValue());
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -3289,8 +3225,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder setPeriodValue(int value) {
-        
         period_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3304,8 +3240,7 @@ public final class Campaign {
        */
       @java.lang.Override
       public com.passkit.grpc.Reporting.Period getPeriod() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
         return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
       }
       /**
@@ -3321,7 +3256,7 @@ public final class Campaign {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         period_ = value.getNumber();
         onChanged();
         return this;
@@ -3335,7 +3270,7 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearPeriod() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         period_ = 0;
         onChanged();
         return this;
@@ -3364,8 +3299,9 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder setRedeemed(int value) {
-        
+
         redeemed_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3378,7 +3314,7 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearRedeemed() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         redeemed_ = 0;
         onChanged();
         return this;
@@ -3396,7 +3332,7 @@ public final class Campaign {
        * @return Whether the devices field is set.
        */
       public boolean hasDevices() {
-        return devicesBuilder_ != null || devices_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -3426,11 +3362,11 @@ public final class Campaign {
             throw new NullPointerException();
           }
           devices_ = value;
-          onChanged();
         } else {
           devicesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3444,11 +3380,11 @@ public final class Campaign {
           com.passkit.grpc.Reporting.DeviceBreakdown.Builder builderForValue) {
         if (devicesBuilder_ == null) {
           devices_ = builderForValue.build();
-          onChanged();
         } else {
           devicesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3460,17 +3396,18 @@ public final class Campaign {
        */
       public Builder mergeDevices(com.passkit.grpc.Reporting.DeviceBreakdown value) {
         if (devicesBuilder_ == null) {
-          if (devices_ != null) {
-            devices_ =
-              com.passkit.grpc.Reporting.DeviceBreakdown.newBuilder(devices_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            devices_ != null &&
+            devices_ != com.passkit.grpc.Reporting.DeviceBreakdown.getDefaultInstance()) {
+            getDevicesBuilder().mergeFrom(value);
           } else {
             devices_ = value;
           }
-          onChanged();
         } else {
           devicesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3481,14 +3418,13 @@ public final class Campaign {
        * <code>.io.DeviceBreakdown devices = 3;</code>
        */
       public Builder clearDevices() {
-        if (devicesBuilder_ == null) {
-          devices_ = null;
-          onChanged();
-        } else {
-          devices_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        devices_ = null;
+        if (devicesBuilder_ != null) {
+          devicesBuilder_.dispose();
           devicesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3499,7 +3435,7 @@ public final class Campaign {
        * <code>.io.DeviceBreakdown devices = 3;</code>
        */
       public com.passkit.grpc.Reporting.DeviceBreakdown.Builder getDevicesBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getDevicesFieldBuilder().getBuilder();
       }
@@ -3542,7 +3478,7 @@ public final class Campaign {
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> sources_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetSources() {
+          internalGetSources() {
         if (sources_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SourcesDefaultEntryHolder.defaultEntry);
@@ -3550,8 +3486,7 @@ public final class Campaign {
         return sources_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableSources() {
-        onChanged();;
+          internalGetMutableSources() {
         if (sources_ == null) {
           sources_ = com.google.protobuf.MapField.newMapField(
               SourcesDefaultEntryHolder.defaultEntry);
@@ -3559,9 +3494,10 @@ public final class Campaign {
         if (!sources_.isMutable()) {
           sources_ = sources_.copy();
         }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return sources_;
       }
-
       public int getSourcesCount() {
         return internalGetSources().getMap().size();
       }
@@ -3572,7 +3508,6 @@ public final class Campaign {
        *
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
-
       @java.lang.Override
       public boolean containsSources(
           java.lang.String key) {
@@ -3595,7 +3530,6 @@ public final class Campaign {
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getSourcesMap() {
         return internalGetSources().getMap();
       }
@@ -3607,7 +3541,6 @@ public final class Campaign {
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
       @java.lang.Override
-
       public int getSourcesOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -3624,7 +3557,6 @@ public final class Campaign {
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
       @java.lang.Override
-
       public int getSourcesOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3635,8 +3567,8 @@ public final class Campaign {
         }
         return map.get(key);
       }
-
       public Builder clearSources() {
+        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableSources().getMutableMap()
             .clear();
         return this;
@@ -3648,7 +3580,6 @@ public final class Campaign {
        *
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
-
       public Builder removeSources(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3661,7 +3592,8 @@ public final class Campaign {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableSources() {
+          getMutableSources() {
+        bitField0_ |= 0x00000008;
         return internalGetMutableSources().getMutableMap();
       }
       /**
@@ -3675,9 +3607,10 @@ public final class Campaign {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableSources().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -3687,20 +3620,20 @@ public final class Campaign {
        *
        * <code>map&lt;string, uint32&gt; sources = 4;</code>
        */
-
       public Builder putAllSources(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableSources().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000008;
         return this;
       }
 
       private java.util.List<com.passkit.grpc.Reporting.ChartDataPoints> data_ =
         java.util.Collections.emptyList();
       private void ensureDataIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           data_ = new java.util.ArrayList<com.passkit.grpc.Reporting.ChartDataPoints>(data_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -3894,7 +3827,7 @@ public final class Campaign {
       public Builder clearData() {
         if (dataBuilder_ == null) {
           data_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           dataBuilder_.clear();
@@ -3999,7 +3932,7 @@ public final class Campaign {
           dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Reporting.ChartDataPoints, com.passkit.grpc.Reporting.ChartDataPoints.Builder, com.passkit.grpc.Reporting.ChartDataPointsOrBuilder>(
                   data_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -4213,11 +4146,6 @@ public final class Campaign {
       return new CampaignCopyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Campaign.internal_static_single_use_coupons_CampaignCopyRequest_descriptor;
@@ -4232,7 +4160,8 @@ public final class Campaign {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * uuid of the campaign to copy.
@@ -4278,7 +4207,8 @@ public final class Campaign {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Optional name for the new campaign.
@@ -4324,14 +4254,14 @@ public final class Campaign {
     }
 
     public static final int STATUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> status_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus> status_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus>() {
               public com.passkit.grpc.ProjectOuterClass.ProjectStatus convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(from);
+                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(from);
                 return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
               }
             };
@@ -4402,7 +4332,8 @@ public final class Campaign {
     private int statusMemoizedSerializedSize;
 
     public static final int PASSTYPEIDENTIFIER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object passTypeIdentifier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeIdentifier_ = "";
     /**
      * <pre>
      * Can optionally be provided if setting status to published (requires a prod cert).
@@ -4683,14 +4614,12 @@ public final class Campaign {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         passTypeIdentifier_ = "";
-
         return this;
       }
 
@@ -4717,51 +4646,33 @@ public final class Campaign {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest result = new com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.name_ = name_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          status_ = java.util.Collections.unmodifiableList(status_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.status_ = status_;
-        result.passTypeIdentifier_ = passTypeIdentifier_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.status_ = status_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.passTypeIdentifier_ = passTypeIdentifier_;
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest) {
@@ -4776,16 +4687,18 @@ public final class Campaign {
         if (other == com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.status_.isEmpty()) {
           if (status_.isEmpty()) {
             status_ = other.status_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureStatusIsMutable();
             status_.addAll(other.status_);
@@ -4794,6 +4707,7 @@ public final class Campaign {
         }
         if (!other.getPassTypeIdentifier().isEmpty()) {
           passTypeIdentifier_ = other.passTypeIdentifier_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4824,12 +4738,12 @@ public final class Campaign {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
@@ -4851,7 +4765,7 @@ public final class Campaign {
               } // case 26
               case 34: {
                 passTypeIdentifier_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -4924,11 +4838,9 @@ public final class Campaign {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4941,8 +4853,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4957,12 +4869,10 @@ public final class Campaign {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5020,11 +4930,9 @@ public final class Campaign {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5037,8 +4945,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5053,12 +4961,10 @@ public final class Campaign {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5066,9 +4972,9 @@ public final class Campaign {
       private java.util.List<java.lang.Integer> status_ =
         java.util.Collections.emptyList();
       private void ensureStatusIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           status_ = new java.util.ArrayList<java.lang.Integer>(status_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
@@ -5172,7 +5078,7 @@ public final class Campaign {
        */
       public Builder clearStatus() {
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -5304,11 +5210,9 @@ public final class Campaign {
        */
       public Builder setPassTypeIdentifier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5321,8 +5225,8 @@ public final class Campaign {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeIdentifier() {
-        
         passTypeIdentifier_ = getDefaultInstance().getPassTypeIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -5337,12 +5241,10 @@ public final class Campaign {
        */
       public Builder setPassTypeIdentifierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }

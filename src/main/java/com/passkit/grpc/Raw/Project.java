@@ -292,11 +292,6 @@ public final class Project {
       return new PassProject();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Raw.Project.internal_static_raw_PassProject_descriptor;
@@ -311,7 +306,8 @@ public final class Project {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated project id (22 characters)
@@ -357,7 +353,8 @@ public final class Project {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of the pass project; will be shown on the data collection page (if set) and as pass issuer name.
@@ -437,18 +434,18 @@ public final class Project {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedNameOrBuilder() {
-      return getLocalizedName();
+      return localizedName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedName_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> status_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus> status_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus>() {
               public com.passkit.grpc.ProjectOuterClass.ProjectStatus convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(from);
+                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(from);
                 return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
               }
             };
@@ -553,11 +550,12 @@ public final class Project {
      */
     @java.lang.Override
     public com.passkit.grpc.Billing.QuotaOrBuilder getQuotaOrBuilder() {
-      return getQuota();
+      return quota_ == null ? com.passkit.grpc.Billing.Quota.getDefaultInstance() : quota_;
     }
 
     public static final int PASSTYPEIDENTIFIER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object passTypeIdentifier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeIdentifier_ = "";
     /**
      * <pre>
      * Leave empty for draft projects. Mandatory for projects where status contains PROJECT_PUBLISHED. Certificate to be used for signing the Apple passes.
@@ -637,7 +635,7 @@ public final class Project {
      */
     @java.lang.Override
     public com.passkit.grpc.Distribution.DistributionSettingsOrBuilder getDistributionSettingsOrBuilder() {
-      return getDistributionSettings();
+      return distributionSettings_ == null ? com.passkit.grpc.Distribution.DistributionSettings.getDefaultInstance() : distributionSettings_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 8;
@@ -675,7 +673,7 @@ public final class Project {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 9;
@@ -713,7 +711,7 @@ public final class Project {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1032,42 +1030,35 @@ public final class Project {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-        } else {
-          localizedName_ = null;
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (quotaBuilder_ == null) {
-          quota_ = null;
-        } else {
-          quota_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quota_ = null;
+        if (quotaBuilder_ != null) {
+          quotaBuilder_.dispose();
           quotaBuilder_ = null;
         }
         passTypeIdentifier_ = "";
-
-        if (distributionSettingsBuilder_ == null) {
-          distributionSettings_ = null;
-        } else {
-          distributionSettings_ = null;
+        distributionSettings_ = null;
+        if (distributionSettingsBuilder_ != null) {
+          distributionSettingsBuilder_.dispose();
           distributionSettingsBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -1096,76 +1087,58 @@ public final class Project {
       @java.lang.Override
       public com.passkit.grpc.Raw.Project.PassProject buildPartial() {
         com.passkit.grpc.Raw.Project.PassProject result = new com.passkit.grpc.Raw.Project.PassProject(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.name_ = name_;
-        if (localizedNameBuilder_ == null) {
-          result.localizedName_ = localizedName_;
-        } else {
-          result.localizedName_ = localizedNameBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          status_ = java.util.Collections.unmodifiableList(status_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.status_ = status_;
-        if (quotaBuilder_ == null) {
-          result.quota_ = quota_;
-        } else {
-          result.quota_ = quotaBuilder_.build();
-        }
-        result.passTypeIdentifier_ = passTypeIdentifier_;
-        if (distributionSettingsBuilder_ == null) {
-          result.distributionSettings_ = distributionSettings_;
-        } else {
-          result.distributionSettings_ = distributionSettingsBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.Raw.Project.PassProject result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.status_ = status_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.Raw.Project.PassProject result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localizedName_ = localizedNameBuilder_ == null
+              ? localizedName_
+              : localizedNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.quota_ = quotaBuilder_ == null
+              ? quota_
+              : quotaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.passTypeIdentifier_ = passTypeIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.distributionSettings_ = distributionSettingsBuilder_ == null
+              ? distributionSettings_
+              : distributionSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Raw.Project.PassProject) {
@@ -1180,10 +1153,12 @@ public final class Project {
         if (other == com.passkit.grpc.Raw.Project.PassProject.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasLocalizedName()) {
@@ -1192,7 +1167,7 @@ public final class Project {
         if (!other.status_.isEmpty()) {
           if (status_.isEmpty()) {
             status_ = other.status_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureStatusIsMutable();
             status_.addAll(other.status_);
@@ -1204,6 +1179,7 @@ public final class Project {
         }
         if (!other.getPassTypeIdentifier().isEmpty()) {
           passTypeIdentifier_ = other.passTypeIdentifier_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasDistributionSettings()) {
@@ -1243,19 +1219,19 @@ public final class Project {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getLocalizedNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
@@ -1279,33 +1255,33 @@ public final class Project {
                 input.readMessage(
                     getQuotaFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 passTypeIdentifier_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getDistributionSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               default: {
@@ -1378,11 +1354,9 @@ public final class Project {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1395,8 +1369,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1411,12 +1385,10 @@ public final class Project {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1474,11 +1446,9 @@ public final class Project {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1491,8 +1461,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1507,12 +1477,10 @@ public final class Project {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1529,7 +1497,7 @@ public final class Project {
        * @return Whether the localizedName field is set.
        */
       public boolean hasLocalizedName() {
-        return localizedNameBuilder_ != null || localizedName_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -1559,11 +1527,11 @@ public final class Project {
             throw new NullPointerException();
           }
           localizedName_ = value;
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1577,11 +1545,11 @@ public final class Project {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedNameBuilder_ == null) {
           localizedName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1593,17 +1561,18 @@ public final class Project {
        */
       public Builder mergeLocalizedName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedNameBuilder_ == null) {
-          if (localizedName_ != null) {
-            localizedName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            localizedName_ != null &&
+            localizedName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedNameBuilder().mergeFrom(value);
           } else {
             localizedName_ = value;
           }
-          onChanged();
         } else {
           localizedNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1614,14 +1583,13 @@ public final class Project {
        * <code>.io.LocalizedString localizedName = 3;</code>
        */
       public Builder clearLocalizedName() {
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-          onChanged();
-        } else {
-          localizedName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1632,7 +1600,7 @@ public final class Project {
        * <code>.io.LocalizedString localizedName = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedNameBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getLocalizedNameFieldBuilder().getBuilder();
       }
@@ -1675,9 +1643,9 @@ public final class Project {
       private java.util.List<java.lang.Integer> status_ =
         java.util.Collections.emptyList();
       private void ensureStatusIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           status_ = new java.util.ArrayList<java.lang.Integer>(status_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
         }
       }
       /**
@@ -1781,7 +1749,7 @@ public final class Project {
        */
       public Builder clearStatus() {
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1872,7 +1840,7 @@ public final class Project {
        * @return Whether the quota field is set.
        */
       public boolean hasQuota() {
-        return quotaBuilder_ != null || quota_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1902,11 +1870,11 @@ public final class Project {
             throw new NullPointerException();
           }
           quota_ = value;
-          onChanged();
         } else {
           quotaBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1920,11 +1888,11 @@ public final class Project {
           com.passkit.grpc.Billing.Quota.Builder builderForValue) {
         if (quotaBuilder_ == null) {
           quota_ = builderForValue.build();
-          onChanged();
         } else {
           quotaBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1936,17 +1904,18 @@ public final class Project {
        */
       public Builder mergeQuota(com.passkit.grpc.Billing.Quota value) {
         if (quotaBuilder_ == null) {
-          if (quota_ != null) {
-            quota_ =
-              com.passkit.grpc.Billing.Quota.newBuilder(quota_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            quota_ != null &&
+            quota_ != com.passkit.grpc.Billing.Quota.getDefaultInstance()) {
+            getQuotaBuilder().mergeFrom(value);
           } else {
             quota_ = value;
           }
-          onChanged();
         } else {
           quotaBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1957,14 +1926,13 @@ public final class Project {
        * <code>.io.Quota quota = 5;</code>
        */
       public Builder clearQuota() {
-        if (quotaBuilder_ == null) {
-          quota_ = null;
-          onChanged();
-        } else {
-          quota_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        quota_ = null;
+        if (quotaBuilder_ != null) {
+          quotaBuilder_.dispose();
           quotaBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1975,7 +1943,7 @@ public final class Project {
        * <code>.io.Quota quota = 5;</code>
        */
       public com.passkit.grpc.Billing.Quota.Builder getQuotaBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getQuotaFieldBuilder().getBuilder();
       }
@@ -2068,11 +2036,9 @@ public final class Project {
        */
       public Builder setPassTypeIdentifier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2085,8 +2051,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeIdentifier() {
-        
         passTypeIdentifier_ = getDefaultInstance().getPassTypeIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2101,12 +2067,10 @@ public final class Project {
        */
       public Builder setPassTypeIdentifierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2123,7 +2087,7 @@ public final class Project {
        * @return Whether the distributionSettings field is set.
        */
       public boolean hasDistributionSettings() {
-        return distributionSettingsBuilder_ != null || distributionSettings_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -2153,11 +2117,11 @@ public final class Project {
             throw new NullPointerException();
           }
           distributionSettings_ = value;
-          onChanged();
         } else {
           distributionSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2171,11 +2135,11 @@ public final class Project {
           com.passkit.grpc.Distribution.DistributionSettings.Builder builderForValue) {
         if (distributionSettingsBuilder_ == null) {
           distributionSettings_ = builderForValue.build();
-          onChanged();
         } else {
           distributionSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2187,17 +2151,18 @@ public final class Project {
        */
       public Builder mergeDistributionSettings(com.passkit.grpc.Distribution.DistributionSettings value) {
         if (distributionSettingsBuilder_ == null) {
-          if (distributionSettings_ != null) {
-            distributionSettings_ =
-              com.passkit.grpc.Distribution.DistributionSettings.newBuilder(distributionSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            distributionSettings_ != null &&
+            distributionSettings_ != com.passkit.grpc.Distribution.DistributionSettings.getDefaultInstance()) {
+            getDistributionSettingsBuilder().mergeFrom(value);
           } else {
             distributionSettings_ = value;
           }
-          onChanged();
         } else {
           distributionSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2208,14 +2173,13 @@ public final class Project {
        * <code>.io.DistributionSettings distributionSettings = 7;</code>
        */
       public Builder clearDistributionSettings() {
-        if (distributionSettingsBuilder_ == null) {
-          distributionSettings_ = null;
-          onChanged();
-        } else {
-          distributionSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        distributionSettings_ = null;
+        if (distributionSettingsBuilder_ != null) {
+          distributionSettingsBuilder_.dispose();
           distributionSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2226,7 +2190,7 @@ public final class Project {
        * <code>.io.DistributionSettings distributionSettings = 7;</code>
        */
       public com.passkit.grpc.Distribution.DistributionSettings.Builder getDistributionSettingsBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getDistributionSettingsFieldBuilder().getBuilder();
       }
@@ -2278,7 +2242,7 @@ public final class Project {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -2308,11 +2272,11 @@ public final class Project {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2326,11 +2290,11 @@ public final class Project {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2342,17 +2306,18 @@ public final class Project {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2363,14 +2328,13 @@ public final class Project {
        * <code>.google.protobuf.Timestamp created = 8;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2381,7 +2345,7 @@ public final class Project {
        * <code>.google.protobuf.Timestamp created = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -2433,7 +2397,7 @@ public final class Project {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -2463,11 +2427,11 @@ public final class Project {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2481,11 +2445,11 @@ public final class Project {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2497,17 +2461,18 @@ public final class Project {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2518,14 +2483,13 @@ public final class Project {
        * <code>.google.protobuf.Timestamp updated = 9;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2536,7 +2500,7 @@ public final class Project {
        * <code>.google.protobuf.Timestamp updated = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -2782,11 +2746,6 @@ public final class Project {
       return new PassProjectCopyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Raw.Project.internal_static_raw_PassProjectCopyRequest_descriptor;
@@ -2801,7 +2760,8 @@ public final class Project {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * uuid of the pass project to copy
@@ -2847,7 +2807,8 @@ public final class Project {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * optional name for the new pass project
@@ -2893,14 +2854,14 @@ public final class Project {
     }
 
     public static final int STATUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> status_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus> status_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.ProjectOuterClass.ProjectStatus>() {
               public com.passkit.grpc.ProjectOuterClass.ProjectStatus convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(from);
+                com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(from);
                 return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
               }
             };
@@ -2971,7 +2932,8 @@ public final class Project {
     private int statusMemoizedSerializedSize;
 
     public static final int PASSTYPEIDENTIFIER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object passTypeIdentifier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeIdentifier_ = "";
     /**
      * <pre>
      * Can optionally be provided if setting status to published (requires a prod cert)
@@ -3252,14 +3214,12 @@ public final class Project {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         passTypeIdentifier_ = "";
-
         return this;
       }
 
@@ -3286,51 +3246,33 @@ public final class Project {
       @java.lang.Override
       public com.passkit.grpc.Raw.Project.PassProjectCopyRequest buildPartial() {
         com.passkit.grpc.Raw.Project.PassProjectCopyRequest result = new com.passkit.grpc.Raw.Project.PassProjectCopyRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.name_ = name_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          status_ = java.util.Collections.unmodifiableList(status_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.status_ = status_;
-        result.passTypeIdentifier_ = passTypeIdentifier_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.Raw.Project.PassProjectCopyRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          status_ = java.util.Collections.unmodifiableList(status_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.status_ = status_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.Raw.Project.PassProjectCopyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.passTypeIdentifier_ = passTypeIdentifier_;
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Raw.Project.PassProjectCopyRequest) {
@@ -3345,16 +3287,18 @@ public final class Project {
         if (other == com.passkit.grpc.Raw.Project.PassProjectCopyRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.status_.isEmpty()) {
           if (status_.isEmpty()) {
             status_ = other.status_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureStatusIsMutable();
             status_.addAll(other.status_);
@@ -3363,6 +3307,7 @@ public final class Project {
         }
         if (!other.getPassTypeIdentifier().isEmpty()) {
           passTypeIdentifier_ = other.passTypeIdentifier_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3393,12 +3338,12 @@ public final class Project {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
@@ -3420,7 +3365,7 @@ public final class Project {
               } // case 26
               case 34: {
                 passTypeIdentifier_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -3493,11 +3438,9 @@ public final class Project {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3510,8 +3453,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3526,12 +3469,10 @@ public final class Project {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3589,11 +3530,9 @@ public final class Project {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3606,8 +3545,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3622,12 +3561,10 @@ public final class Project {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3635,9 +3572,9 @@ public final class Project {
       private java.util.List<java.lang.Integer> status_ =
         java.util.Collections.emptyList();
       private void ensureStatusIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           status_ = new java.util.ArrayList<java.lang.Integer>(status_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
@@ -3741,7 +3678,7 @@ public final class Project {
        */
       public Builder clearStatus() {
         status_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3873,11 +3810,9 @@ public final class Project {
        */
       public Builder setPassTypeIdentifier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3890,8 +3825,8 @@ public final class Project {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeIdentifier() {
-        
         passTypeIdentifier_ = getDefaultInstance().getPassTypeIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -3906,12 +3841,10 @@ public final class Project {
        */
       public Builder setPassTypeIdentifierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }

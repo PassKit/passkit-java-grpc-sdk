@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.1)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/analytics/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AnalyticsGrpc {
@@ -92,34 +92,35 @@ public final class AnalyticsGrpc {
 
   /**
    */
-  public static abstract class AnalyticsImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Retrieve a daily, monthly or yearly record.
      * </pre>
      */
-    public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
+    default void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Reporting.AnalyticsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetAnalyticsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Reporting.AnalyticsRequest,
-                com.passkit.grpc.Reporting.AnalyticsResponse>(
-                  this, METHODID_GET_ANALYTICS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Analytics.
    */
-  public static final class AnalyticsStub extends io.grpc.stub.AbstractAsyncStub<AnalyticsStub> {
+  public static abstract class AnalyticsImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AnalyticsGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Analytics.
+   */
+  public static final class AnalyticsStub
+      extends io.grpc.stub.AbstractAsyncStub<AnalyticsStub> {
     private AnalyticsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -144,8 +145,10 @@ public final class AnalyticsGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Analytics.
    */
-  public static final class AnalyticsBlockingStub extends io.grpc.stub.AbstractBlockingStub<AnalyticsBlockingStub> {
+  public static final class AnalyticsBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AnalyticsBlockingStub> {
     private AnalyticsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -169,8 +172,10 @@ public final class AnalyticsGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Analytics.
    */
-  public static final class AnalyticsFutureStub extends io.grpc.stub.AbstractFutureStub<AnalyticsFutureStub> {
+  public static final class AnalyticsFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AnalyticsFutureStub> {
     private AnalyticsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -201,10 +206,10 @@ public final class AnalyticsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AnalyticsImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AnalyticsImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -231,6 +236,18 @@ public final class AnalyticsGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetAnalyticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Reporting.AnalyticsRequest,
+              com.passkit.grpc.Reporting.AnalyticsResponse>(
+                service, METHODID_GET_ANALYTICS)))
+        .build();
   }
 
   private static abstract class AnalyticsBaseDescriptorSupplier

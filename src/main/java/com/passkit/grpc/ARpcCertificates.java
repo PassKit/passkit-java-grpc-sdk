@@ -31,53 +31,53 @@ public final class ARpcCertificates {
       "on/filter.proto\032.protoc-gen-openapiv2/op" +
       "tions/annotations.proto2\350\016\n\014Certificates" +
       "\022\334\001\n\027getAppleCertificateData\022\026.io.PassTy" +
-      "peIdentifier\032\023.io.CertificateData\"\223\001\202\323\344\223" +
-      "\002\033\022\031/certificate/{passTypeId}\222Ao\022\032Get Ap" +
-      "ple pass certificate\032QGets the certifica" +
-      "te data for certificate with Pass Type I" +
-      "dentifier {passTypeId}.\022\325\001\n\034getCertifica" +
+      "peIdentifier\032\023.io.CertificateData\"\223\001\222Ao\022" +
+      "\032Get Apple pass certificate\032QGets the ce" +
+      "rtificate data for certificate with Pass" +
+      " Type Identifier {passTypeId}.\202\323\344\223\002\033\022\031/c" +
+      "ertificate/{passTypeId}\022\325\001\n\034getCertifica" +
       "teSigningRequest\022\026.google.protobuf.Empty" +
-      "\032\035.io.CertificateSigningRequest\"~\202\323\344\223\002*\022" +
-      "(/certificate/certificate_signing_reques" +
-      "t\222AK\022%Get CSR (Certificate Signing Reque" +
-      "st)\032\"Gets a CSR for the logged in user.\022" +
+      "\032\035.io.CertificateSigningRequest\"~\222AK\022%Ge" +
+      "t CSR (Certificate Signing Request)\032\"Get" +
+      "s a CSR for the logged in user.\202\323\344\223\002*\022(/" +
+      "certificate/certificate_signing_request\022" +
       "\242\001\n\023addAppleCertificate\022\r.io.FileBytes\032\023" +
-      ".io.CertificateData\"g\202\323\344\223\002#\"\036/certificat" +
-      "e/apple_certificate:\001*\222A;\022\025Add Apple cer" +
-      "tificate\032\"Uploads an Apple pass certific" +
-      "ate.\022\273\001\n\026updateAppleCertificate\022\r.io.Fil" +
-      "eBytes\032\023.io.CertificateData\"}\202\323\344\223\002#\032\036/ce" +
-      "rtificate/apple_certificate:\001*\222AQ\022\030Updat" +
-      "e Apple certificate\0325Updates or renews a" +
-      "n existing Apple pass certificate.\022\273\001\n\037l" +
+      ".io.CertificateData\"g\222A;\022\025Add Apple cert" +
+      "ificate\032\"Uploads an Apple pass certifica" +
+      "te.\202\323\344\223\002#\"\036/certificate/apple_certificat" +
+      "e:\001*\022\273\001\n\026updateAppleCertificate\022\r.io.Fil" +
+      "eBytes\032\023.io.CertificateData\"}\222AQ\022\030Update" +
+      " Apple certificate\0325Updates or renews an" +
+      " existing Apple pass certificate.\202\323\344\223\002#\032" +
+      "\036/certificate/apple_certificate:\001*\022\273\001\n\037l" +
       "istAppleCertificatesDeprecated\022\016.io.Pagi" +
-      "nation\032\023.io.CertificateData\"q\202\323\344\223\002\017\022\r/ce" +
-      "rtificates\222AY\022)List Apple pass certifica" +
-      "tes [DEPRECATED]\032,Retrieves a users cert" +
-      "ificates [DEPRECATED].0\001\022\241\001\n\025listAppleCe" +
+      "nation\032\023.io.CertificateData\"q\222AY\022)List A" +
+      "pple pass certificates [DEPRECATED]\032,Ret" +
+      "rieves a users certificates [DEPRECATED]" +
+      ".\202\323\344\223\002\017\022\r/certificates0\001\022\241\001\n\025listAppleCe" +
       "rtificates\022\013.io.Filters\032\023.io.Certificate" +
-      "Data\"d\202\323\344\223\002\035\"\030/certificates/apple/list:\001" +
-      "*\222A>\022\034List Apple pass certificates\032\036Retr" +
-      "ieves a users certificates0\001\022\340\001\n countAp" +
+      "Data\"d\222A>\022\034List Apple pass certificates\032" +
+      "\036Retrieves a users certificates\202\323\344\223\002\035\"\030/" +
+      "certificates/apple/list:\001*0\001\022\340\001\n countAp" +
       "pleCertificatesDeprecated\022\016.io.Paginatio" +
-      "n\032\t.io.Count\"\240\001\202\323\344\223\002\025\022\023/certificates/cou" +
-      "nt\222A\201\001\022*Count Apple pass certificates [D" +
-      "EPRECATED]\032SRetrieves the total count of" +
-      " pass certificates for the logged in use" +
-      "r [DEPRECATED].\022\301\001\n\026countAppleCertificat" +
-      "es\022\013.io.Filters\032\t.io.Count\"\216\001\202\323\344\223\002\036\"\031/ce" +
-      "rtificates/apple/count:\001*\222Ag\022\035Count Appl" +
-      "e pass certificates\032FRetrieves the total" +
-      " count of pass certificates for the logg" +
-      "ed in user.\022\264\002\n\031sendNFCSigningCredential" +
+      "n\032\t.io.Count\"\240\001\222A\201\001\022*Count Apple pass ce" +
+      "rtificates [DEPRECATED]\032SRetrieves the t" +
+      "otal count of pass certificates for the " +
+      "logged in user [DEPRECATED].\202\323\344\223\002\025\022\023/cer" +
+      "tificates/count\022\301\001\n\026countAppleCertificat" +
+      "es\022\013.io.Filters\032\t.io.Count\"\216\001\222Ag\022\035Count " +
+      "Apple pass certificates\032FRetrieves the t" +
+      "otal count of pass certificates for the " +
+      "logged in user.\202\323\344\223\002\036\"\031/certificates/app" +
+      "le/count:\001*\022\264\002\n\031sendNFCSigningCredential" +
       "s\022 .io.NFCSigningCredentialsRequest\032\026.go" +
-      "ogle.protobuf.Empty\"\334\001\202\323\344\223\002\'\"\"/certifica" +
-      "tes/nfc/credentials/send:\001*\222A\253\001\022\034Send NF" +
-      "C signing credentials\032\212\001Sends the NFC si" +
-      "gning credentials for a certificate to t" +
-      "he registered email address of the user." +
-      " Only works with NFC enabled certificate" +
-      "s.B\330\006\n\020com.passkit.grpcZ$stash.passkit.c" +
+      "ogle.protobuf.Empty\"\334\001\222A\253\001\022\034Send NFC sig" +
+      "ning credentials\032\212\001Sends the NFC signing" +
+      " credentials for a certificate to the re" +
+      "gistered email address of the user. Only" +
+      " works with NFC enabled certificates.\202\323\344" +
+      "\223\002\'\"\"/certificates/nfc/credentials/send:" +
+      "\001*B\330\006\n\020com.passkit.grpcZ$stash.passkit.c" +
       "om/io/model/sdk/go/io\252\002\014PassKit.Grpc\222A\215\006" +
       "\022\332\001\n\030PassKit Certificates API\022CAPI for m" +
       "anaging Apple Wallet Pass Type Identifie" +

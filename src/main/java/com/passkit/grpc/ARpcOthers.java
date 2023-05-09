@@ -81,122 +81,122 @@ public final class ARpcOthers {
       "Configuration\032\030.io.ScannerConfiguration\"" +
       "\030\202\323\344\223\002\022\032\r/user/scanner:\001*\022\255\002\n\033createAuth" +
       "orizationResource\022\036.io.OAuth2Authorizati" +
-      "onRequest\032\006.io.Id\"\345\001\202\323\344\223\002\020\"\013/user/oauth:" +
-      "\001*\222A\313\001\022-Requests an access token from an" +
-      " external API\0322Creates a record of an oa" +
-      "uth2 access token requestJ0\n\003400\022)\n\'Ther" +
-      "e is a problem with the input data.J4\n\0034" +
-      "03\022-\n+Returned when the user lacks autho" +
-      "rization.\022\371\001\n\033deleteAuthorizationResourc" +
-      "e\022\006.io.Id\032\026.google.protobuf.Empty\"\271\001\202\323\344\223" +
-      "\002\022*\020/user/oauth/{id}\222A\235\001\022\035Delete Authori" +
-      "zation Resource\032:Deletes an oauth2 autho" +
-      "rization resource from the databaseJ!\n\0034" +
-      "03\022\032\n\030User lacks authorizationJ\035\n\003404\022\026\n" +
-      "\024Record was not found\022\277\005\n\rdeleteAccount\022" +
+      "onRequest\032\006.io.Id\"\345\001\222A\313\001\022-Requests an ac" +
+      "cess token from an external API\0322Creates" +
+      " a record of an oauth2 access token requ" +
+      "estJ0\n\003400\022)\n\'There is a problem with th" +
+      "e input data.J4\n\003403\022-\n+Returned when th" +
+      "e user lacks authorization.\202\323\344\223\002\020\"\013/user" +
+      "/oauth:\001*\022\371\001\n\033deleteAuthorizationResourc" +
+      "e\022\006.io.Id\032\026.google.protobuf.Empty\"\271\001\222A\235\001" +
+      "\022\035Delete Authorization Resource\032:Deletes" +
+      " an oauth2 authorization resource from t" +
+      "he databaseJ!\n\003403\022\032\n\030User lacks authori" +
+      "zationJ\035\n\003404\022\026\n\024Record was not found\202\323\344" +
+      "\223\002\022*\020/user/oauth/{id}\022\277\005\n\rdeleteAccount\022" +
       "\030.io.DeleteAccountRequest\032\026.google.proto" +
-      "buf.Empty\"\373\004\202\323\344\223\002\022*\r/user/account:\001*\222A\337\004" +
-      "\022\016Delete Account\032\323\003Permanently and irrec" +
-      "overably delete a PassKit account, inclu" +
-      "ding all projects, assets, passes and pa" +
-      "ss holder information. All current passe" +
-      "s will be invalidated making them imposs" +
-      "ible to be reactivate. This action canno" +
-      "t be undone. A confirmation will be sent" +
-      " by email once the request has been exec" +
-      "uted. To delete your account, please del" +
-      "ete all of projects belong to the owner " +
-      "and subusers\' accounts. Only users with " +
-      "owner permission can execute account del" +
-      "etion.J0\n\003400\022)\n\'There is a problem with" +
-      " the input data.J\036\n\003404\022\027\n\025Record was no" +
-      "t found.J%\n\003500\022\036\n\034There was an internal" +
-      " error.2\303\032\n\014Integrations\022\201\002\n\022createInteg" +
+      "buf.Empty\"\373\004\222A\337\004\022\016Delete Account\032\323\003Perma" +
+      "nently and irrecoverably delete a PassKi" +
+      "t account, including all projects, asset" +
+      "s, passes and pass holder information. A" +
+      "ll current passes will be invalidated ma" +
+      "king them impossible to be reactivate. T" +
+      "his action cannot be undone. A confirmat" +
+      "ion will be sent by email once the reque" +
+      "st has been executed. To delete your acc" +
+      "ount, please delete all of projects belo" +
+      "ng to the owner and subusers\' accounts. " +
+      "Only users with owner permission can exe" +
+      "cute account deletion.J0\n\003400\022)\n\'There i" +
+      "s a problem with the input data.J\036\n\003404\022" +
+      "\027\n\025Record was not found.J%\n\003500\022\036\n\034There" +
+      " was an internal error.\202\323\344\223\002\022*\r/user/acc" +
+      "ount:\001*2\303\032\n\014Integrations\022\201\002\n\022createInteg" +
       "rations\022\026.io.IntegrationConfigs\032\006.io.Id\"" +
-      "\312\001\202\323\344\223\002\036\"\031/integrations/integration:\001*\222A" +
-      "\242\001\022\023Create Integrations\032#Sets up integra" +
-      "tion configurations.J0\n\003400\022)\n\'There is " +
-      "a problem with the input data.J4\n\003403\022-\n" +
-      "+Returned when the user lacks authorizat" +
-      "ion.\022\367\001\n\017getIntegrations\022\023.io.ProtocolId" +
-      "Input\032\026.io.IntegrationConfigs\"\266\001\202\323\344\223\0020\022." +
-      "/integrations/integration/{protocol}/{cl" +
-      "assId}\222A}\022\020Get Integrations\032%Retrieves i" +
-      "ntegration configurations.J\"\n\003403\022\033\n\031Use" +
-      "r lacks authorization.J\036\n\003404\022\027\n\025Record " +
-      "was not found.\022\343\002\n\022updateIntegrations\022\026." +
-      "io.IntegrationConfigs\032\006.io.Id\"\254\002\202\323\344\223\002\036\032\031" +
-      "/integrations/integration:\001*\222A\204\002\022\023Update" +
-      " Integrations\032\036Updates an integration re" +
-      "cord.J0\n\003400\022)\n\'There is a problem with " +
-      "the input data.J\"\n\003403\022\033\n\031User lacks aut" +
-      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
-      "nd.JW\n\003503\022P\nNServer is unavailable. Bac" +
-      "k off for 250ms and repeat request until" +
-      " successful.\022\365\001\n\022deleteIntegrations\022\023.io" +
+      "\312\001\222A\242\001\022\023Create Integrations\032#Sets up int" +
+      "egration configurations.J0\n\003400\022)\n\'There" +
+      " is a problem with the input data.J4\n\00340" +
+      "3\022-\n+Returned when the user lacks author" +
+      "ization.\202\323\344\223\002\036\"\031/integrations/integratio" +
+      "n:\001*\022\367\001\n\017getIntegrations\022\023.io.ProtocolId" +
+      "Input\032\026.io.IntegrationConfigs\"\266\001\222A}\022\020Get" +
+      " Integrations\032%Retrieves integration con" +
+      "figurations.J\"\n\003403\022\033\n\031User lacks author" +
+      "ization.J\036\n\003404\022\027\n\025Record was not found." +
+      "\202\323\344\223\0020\022./integrations/integration/{proto" +
+      "col}/{classId}\022\343\002\n\022updateIntegrations\022\026." +
+      "io.IntegrationConfigs\032\006.io.Id\"\254\002\222A\204\002\022\023Up" +
+      "date Integrations\032\036Updates an integratio" +
+      "n record.J0\n\003400\022)\n\'There is a problem w" +
+      "ith the input data.J\"\n\003403\022\033\n\031User lacks" +
+      " authorization.J\036\n\003404\022\027\n\025Record was not" +
+      " found.JW\n\003503\022P\nNServer is unavailable." +
+      " Back off for 250ms and repeat request u" +
+      "ntil successful.\202\323\344\223\002\036\032\031/integrations/in" +
+      "tegration:\001*\022\365\001\n\022deleteIntegrations\022\023.io" +
       ".ProtocolIdInput\032\026.google.protobuf.Empty" +
-      "\"\261\001\202\323\344\223\0020*./integrations/integration/{pr" +
-      "otocol}/{classId}\222Ax\022\023Delete Integration" +
-      "s\032\035Deletes an integration recordJ\"\n\003403\022" +
-      "\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025R" +
-      "ecord was not found.\022\310\002\n\026createSinkSubsc" +
+      "\"\261\001\222Ax\022\023Delete Integrations\032\035Deletes an " +
+      "integration recordJ\"\n\003403\022\033\n\031User lacks " +
+      "authorization.J\036\n\003404\022\027\n\025Record was not " +
+      "found.\202\323\344\223\0020*./integrations/integration/" +
+      "{protocol}/{classId}\022\310\002\n\026createSinkSubsc" +
       "ription\022\024.io.SinkSubscription\032\006.io.Id\"\217\002" +
-      "\202\323\344\223\002\027\"\022/integrations/sink:\001*\222A\356\001\022\030Creat" +
-      "e Sink Subscription\032jCreates a sink subs" +
-      "cription so that PassKit can send a mess" +
-      "age to a URL after certain event has com" +
-      "pleted.J0\n\003400\022)\n\'There is a problem wit" +
-      "h the input data.J4\n\003403\022-\n+Returned whe" +
-      "n the user lacks authorization.\022\203\002\n\023getS" +
+      "\222A\356\001\022\030Create Sink Subscription\032jCreates " +
+      "a sink subscription so that PassKit can " +
+      "send a message to a URL after certain ev" +
+      "ent has completed.J0\n\003400\022)\n\'There is a " +
+      "problem with the input data.J4\n\003403\022-\n+R" +
+      "eturned when the user lacks authorizatio" +
+      "n.\202\323\344\223\002\027\"\022/integrations/sink:\001*\022\203\002\n\023getS" +
       "inkSubscription\022\027.io.SubscriptionRequest" +
-      "\032\024.io.SinkSubscription\"\274\001\202\323\344\223\0020\022./integr" +
-      "ations/sink/{protocol}/{subscriptionId}\222" +
-      "A\202\001\022\025Get Sink Subscription\032%Retrieves a " +
-      "sink subscription config.J\"\n\003403\022\033\n\031User" +
-      " lacks authorization.J\036\n\003404\022\027\n\025Record w" +
-      "as not found.\022\326\002\n\037listSinkSubscriptionsD" +
+      "\032\024.io.SinkSubscription\"\274\001\222A\202\001\022\025Get Sink " +
+      "Subscription\032%Retrieves a sink subscript" +
+      "ion config.J\"\n\003403\022\033\n\031User lacks authori" +
+      "zation.J\036\n\003404\022\027\n\025Record was not found.\202" +
+      "\323\344\223\0020\022./integrations/sink/{protocol}/{su" +
+      "bscriptionId}\022\326\002\n\037listSinkSubscriptionsD" +
       "eprecated\022\031.io.ListRequestDeprecated\032\024.i" +
-      "o.SinkSubscription\"\377\001\202\323\344\223\002\032\022\030/integratio" +
-      "ns/sinks/list\222A\333\001\022$List Sink Subscriptio" +
-      "ns [DEPRECATED]\032o[DEPRECATED: OR operato" +
-      "r is not supported] List all sink subscr" +
-      "iptions for a given segment. Support pag" +
-      "ination.J\"\n\003403\022\033\n\031User lacks authorizat" +
-      "ion.J\036\n\003404\022\027\n\025Record was not found.0\001\022\215" +
+      "o.SinkSubscription\"\377\001\222A\333\001\022$List Sink Sub" +
+      "scriptions [DEPRECATED]\032o[DEPRECATED: OR" +
+      " operator is not supported] List all sin" +
+      "k subscriptions for a given segment. Sup" +
+      "port pagination.J\"\n\003403\022\033\n\031User lacks au" +
+      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
+      "und.\202\323\344\223\002\032\022\030/integrations/sinks/list0\001\022\215" +
       "\002\n\025listSinkSubscriptions\022\017.io.ListReques" +
-      "t\032\024.io.SinkSubscription\"\312\001\202\323\344\223\002\035\"\030/integ" +
-      "rations/sinks/list:\001*\222A\243\001\022\027List Sink Sub" +
-      "scriptions\032DList all sink subscriptions " +
-      "for a given segment. Support pagination." +
-      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
-      "404\022\027\n\025Record was not found.0\001\022\350\002\n\026updat" +
+      "t\032\024.io.SinkSubscription\"\312\001\222A\243\001\022\027List Sin" +
+      "k Subscriptions\032DList all sink subscript" +
+      "ions for a given segment. Support pagina" +
+      "tion.J\"\n\003403\022\033\n\031User lacks authorization" +
+      ".J\036\n\003404\022\027\n\025Record was not found.\202\323\344\223\002\035\"" +
+      "\030/integrations/sinks/list:\001*0\001\022\350\002\n\026updat" +
       "eSinkSubscription\022\024.io.SinkSubscription\032" +
-      "\006.io.Id\"\257\002\202\323\344\223\002\027\032\022/integrations/sink:\001*\222" +
-      "A\216\002\022\030Update Sink Subscription\032#Updates a" +
-      " sink subscription record.J0\n\003400\022)\n\'The" +
-      "re is a problem with the input data.J\"\n\003" +
-      "403\022\033\n\031User lacks authorization.J\036\n\003404\022" +
-      "\027\n\025Record was not found.JW\n\003503\022P\nNServe" +
-      "r is unavailable. Back off for 250ms and" +
-      " repeat request until successful.\022\211\002\n\026de" +
+      "\006.io.Id\"\257\002\222A\216\002\022\030Update Sink Subscription" +
+      "\032#Updates a sink subscription record.J0\n" +
+      "\003400\022)\n\'There is a problem with the inpu" +
+      "t data.J\"\n\003403\022\033\n\031User lacks authorizati" +
+      "on.J\036\n\003404\022\027\n\025Record was not found.JW\n\0035" +
+      "03\022P\nNServer is unavailable. Back off fo" +
+      "r 250ms and repeat request until success" +
+      "ful.\202\323\344\223\002\027\032\022/integrations/sink:\001*\022\211\002\n\026de" +
       "leteSinkSubscription\022\027.io.SubscriptionRe" +
-      "quest\032\026.google.protobuf.Empty\"\275\001\202\323\344\223\0020*." +
-      "/integrations/sink/{protocol}/{subscript" +
-      "ionId}\222A\203\001\022\030Delete Sink Subscription\032#De" +
-      "letes an sink subscription recordJ\"\n\003403" +
-      "\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025" +
-      "Record was not found.\022\357\001\n\032getSampleSubsc" +
+      "quest\032\026.google.protobuf.Empty\"\275\001\222A\203\001\022\030De" +
+      "lete Sink Subscription\032#Deletes an sink " +
+      "subscription recordJ\"\n\003403\022\033\n\031User lacks" +
+      " authorization.J\036\n\003404\022\027\n\025Record was not" +
+      " found.\202\323\344\223\0020*./integrations/sink/{proto" +
+      "col}/{subscriptionId}\022\357\001\n\032getSampleSubsc" +
       "riptionEvent\022\006.io.Id\032\024.io.SinkSubscripti" +
-      "on\"\262\001\202\323\344\223\002\033\022\031/integrations/sink/sample\222A" +
-      "\215\001\022\035Get Sample Subscription Event\032(Retri" +
-      "eves a sample subscription payload.J\"\n\0034" +
-      "03\022\033\n\031User lacks authorization.J\036\n\003404\022\027" +
-      "\n\025Record was not found.\022\263\001\n\016callDynamicA" +
+      "on\"\262\001\222A\215\001\022\035Get Sample Subscription Event" +
+      "\032(Retrieves a sample subscription payloa" +
+      "d.J\"\n\003403\022\033\n\031User lacks authorization.J\036" +
+      "\n\003404\022\027\n\025Record was not found.\202\323\344\223\002\033\022\031/i" +
+      "ntegrations/sink/sample\022\263\001\n\016callDynamicA" +
       "pi\022\023.io.DynamicApiInput\032\026.io.DynamicApiR" +
-      "esponse\"t\202\323\344\223\002\026\"\021/integrations/api:\001*\222AU" +
-      "\022\020Call Dynamic API\032AMakes an API call to" +
-      " the third party app integrated with Pas" +
-      "sKit.BG\n\020com.passkit.grpcZ$stash.passkit" +
+      "esponse\"t\222AU\022\020Call Dynamic API\032AMakes an" +
+      " API call to the third party app integra" +
+      "ted with PassKit.\202\323\344\223\002\026\"\021/integrations/a" +
+      "pi:\001*BG\n\020com.passkit.grpcZ$stash.passkit" +
       ".com/io/model/sdk/go/io\252\002\014PassKit.Grpcb\006" +
       "proto3"
     };

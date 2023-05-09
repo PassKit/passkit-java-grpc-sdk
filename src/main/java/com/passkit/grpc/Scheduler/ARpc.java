@@ -31,60 +31,60 @@ public final class ARpc {
       ".proto\032\034ct/scheduler/scheduler.proto2\254\021\n" +
       "\tScheduler\022\217\002\n\023createSchedulingJob\022\021.ct." +
       "SchedulingJob\032\031.ct.SchedulingJobResponse" +
-      "\"\311\001\202\323\344\223\002\024\"\017/scheduling/job:\001*\222A\253\001\n\017Sched" +
-      "uling Jobs\022\025Create Scheduling Job\032\031Creat" +
-      "es a scheduling job.J0\n\003400\022)\n\'There is " +
-      "a problem with the input data.J4\n\003403\022-\n" +
-      "+Returned when the user lacks authorizat" +
-      "ion.\022\210\002\n\020getSchedulingJob\022\006.io.Id\032\021.ct.S" +
-      "chedulingJob\"\330\001\202\323\344\223\002\026\022\024/scheduling/job/{" +
-      "id}\222A\270\001\n\017Scheduling Jobs\022\022Get Scheduling" +
-      " Job\032MRetrieves a scheduling job. Delete" +
-      "d job will return history logs only if a" +
-      "ny.J\"\n\003403\022\033\n\031User lacks authorization.J" +
-      "\036\n\003404\022\027\n\025Record was not found.\022\325\003\n\023upda" +
+      "\"\311\001\222A\253\001\n\017Scheduling Jobs\022\025Create Schedul" +
+      "ing Job\032\031Creates a scheduling job.J0\n\00340" +
+      "0\022)\n\'There is a problem with the input d" +
+      "ata.J4\n\003403\022-\n+Returned when the user la" +
+      "cks authorization.\202\323\344\223\002\024\"\017/scheduling/jo" +
+      "b:\001*\022\210\002\n\020getSchedulingJob\022\006.io.Id\032\021.ct.S" +
+      "chedulingJob\"\330\001\222A\270\001\n\017Scheduling Jobs\022\022Ge" +
+      "t Scheduling Job\032MRetrieves a scheduling" +
+      " job. Deleted job will return history lo" +
+      "gs only if any.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.\202\323\344\223\002\026\022\024/scheduling/job/{id}\022\325\003\n\023upda" +
       "teSchedulingJob\022\021.ct.SchedulingJob\032\031.ct." +
-      "SchedulingJobResponse\"\217\003\202\323\344\223\002\024\032\017/schedul" +
-      "ing/job:\001*\222A\361\002\n\017Scheduling Jobs\022\025Update " +
-      "Scheduling Job\032xUpdates a scheduling job" +
-      ". Full SchedulerJob object is required. " +
-      "An empty or null value will override any" +
-      " existing value.J0\n\003400\022)\n\'There is a pr" +
-      "oblem with the input data.J\"\n\003403\022\033\n\031Use" +
-      "r lacks authorization.J\036\n\003404\022\027\n\025Record " +
-      "was not found.JW\n\003503\022P\nNServer is unava" +
-      "ilable. Back off for 250ms and repeat re" +
-      "quest until successful.\022\372\002\n\022patchSchedul" +
+      "SchedulingJobResponse\"\217\003\222A\361\002\n\017Scheduling" +
+      " Jobs\022\025Update Scheduling Job\032xUpdates a " +
+      "scheduling job. Full SchedulerJob object" +
+      " is required. An empty or null value wil" +
+      "l override any existing value.J0\n\003400\022)\n" +
+      "\'There is a problem with the input data." +
+      "J\"\n\003403\022\033\n\031User lacks authorization.J\036\n\003" +
+      "404\022\027\n\025Record was not found.JW\n\003503\022P\nNS" +
+      "erver is unavailable. Back off for 250ms" +
+      " and repeat request until successful.\202\323\344" +
+      "\223\002\024\032\017/scheduling/job:\001*\022\372\002\n\022patchSchedul" +
       "ingJob\022\021.ct.SchedulingJob\032\031.ct.Schedulin" +
-      "gJobResponse\"\265\002\202\323\344\223\002\0242\017/scheduling/job:\001" +
-      "*\222A\227\002\n\017Scheduling Jobs\022\024Patch Scheduling" +
-      " Job\032\037Patch updates a scheduling job.J0\n" +
-      "\003400\022)\n\'There is a problem with the inpu" +
-      "t data.J\"\n\003403\022\033\n\031User lacks authorizati" +
-      "on.J\036\n\003404\022\027\n\025Record was not found.JW\n\0035" +
-      "03\022P\nNServer is unavailable. Back off fo" +
-      "r 250ms and repeat request until success" +
-      "ful.\022\252\002\n\023deleteSchedulingJob\022\006.io.Id\032\026.g" +
-      "oogle.protobuf.Empty\"\362\001\202\323\344\223\002\026*\024/scheduli" +
-      "ng/job/{id}\222A\322\001\n\017Scheduling Jobs\022\025Delete" +
-      " Scheduling Job\032RDeletes a scheduling jo" +
-      "b. History logs are still available afte" +
-      "r deleting the job.J4\n\003403\022-\n+Returned w" +
-      "hen the user lacks authorization.J\036\n\003404" +
-      "\022\027\n\025Record was not found.\022\372\001\n\027getSchedul" +
+      "gJobResponse\"\265\002\222A\227\002\n\017Scheduling Jobs\022\024Pa" +
+      "tch Scheduling Job\032\037Patch updates a sche" +
+      "duling job.J0\n\003400\022)\n\'There is a problem" +
+      " with the input data.J\"\n\003403\022\033\n\031User lac" +
+      "ks authorization.J\036\n\003404\022\027\n\025Record was n" +
+      "ot found.JW\n\003503\022P\nNServer is unavailabl" +
+      "e. Back off for 250ms and repeat request" +
+      " until successful.\202\323\344\223\002\0242\017/scheduling/jo" +
+      "b:\001*\022\252\002\n\023deleteSchedulingJob\022\006.io.Id\032\026.g" +
+      "oogle.protobuf.Empty\"\362\001\222A\322\001\n\017Scheduling " +
+      "Jobs\022\025Delete Scheduling Job\032RDeletes a s" +
+      "cheduling job. History logs are still av" +
+      "ailable after deleting the job.J4\n\003403\022-" +
+      "\n+Returned when the user lacks authoriza" +
+      "tion.J\036\n\003404\022\027\n\025Record was not found.\202\323\344" +
+      "\223\002\026*\024/scheduling/job/{id}\022\372\001\n\027getSchedul" +
       "ingJobHistory\022\006.io.Id\032\016.ct.JobHistory\"\306\001" +
-      "\202\323\344\223\002\032\022\030/scheduling/history/{id}\222A\242\001\n\rJo" +
-      "b Histories\022\032Get Scheduling Job History\032" +
-      "1Retrieves a scheduling job history by t" +
-      "he log id.J\"\n\003403\022\033\n\031User lacks authoriz" +
-      "ation.J\036\n\003404\022\027\n\025Record was not found.\022\202" +
+      "\222A\242\001\n\rJob Histories\022\032Get Scheduling Job " +
+      "History\0321Retrieves a scheduling job hist" +
+      "ory by the log id.J\"\n\003403\022\033\n\031User lacks " +
+      "authorization.J\036\n\003404\022\027\n\025Record was not " +
+      "found.\202\323\344\223\002\032\022\030/scheduling/history/{id}\022\202" +
       "\002\n\032listSchedulingJobHistories\022\026.schedule" +
-      "r.ListRequest\032\016.ct.JobHistory\"\271\001\202\323\344\223\002\035\"\030" +
-      "/scheduling/history/list:\001*\222A\222\001\n\rJob His" +
-      "tories\022\035List Scheduling Job Histories\032\036L" +
-      "ist scheduling job histories.J\"\n\003403\022\033\n\031" +
-      "User lacks authorization.J\036\n\003404\022\027\n\025Reco" +
-      "rd was not found.0\001B\335\002\n\032com.passkit.grpc" +
+      "r.ListRequest\032\016.ct.JobHistory\"\271\001\222A\222\001\n\rJo" +
+      "b Histories\022\035List Scheduling Job Histori" +
+      "es\032\036List scheduling job histories.J\"\n\00340" +
+      "3\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n" +
+      "\025Record was not found.\202\323\344\223\002\035\"\030/schedulin" +
+      "g/history/list:\001*0\001B\335\002\n\032com.passkit.grpc" +
       ".SchedulerZ.stash.passkit.com/io/model/s" +
       "dk/go/io/scheduler\252\002\026PassKit.Grpc.Schedu" +
       "ler\222A\364\001\022\312\001\n\025PassKit Scheduler API\0221This " +

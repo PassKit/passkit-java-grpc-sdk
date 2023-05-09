@@ -748,11 +748,6 @@ public final class Image {
       return new ImageIds();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageIds_descriptor;
@@ -767,7 +762,8 @@ public final class Image {
     }
 
     public static final int ICON_FIELD_NUMBER = 1;
-    private volatile java.lang.Object icon_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object icon_ = "";
     /**
      * <code>string icon = 1;</code>
      * @return The icon.
@@ -805,7 +801,8 @@ public final class Image {
     }
 
     public static final int LOGO_FIELD_NUMBER = 2;
-    private volatile java.lang.Object logo_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object logo_ = "";
     /**
      * <code>string logo = 2;</code>
      * @return The logo.
@@ -843,7 +840,8 @@ public final class Image {
     }
 
     public static final int APPLELOGO_FIELD_NUMBER = 3;
-    private volatile java.lang.Object appleLogo_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object appleLogo_ = "";
     /**
      * <code>string appleLogo = 3;</code>
      * @return The appleLogo.
@@ -881,7 +879,8 @@ public final class Image {
     }
 
     public static final int HERO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object hero_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hero_ = "";
     /**
      * <code>string hero = 4;</code>
      * @return The hero.
@@ -919,7 +918,8 @@ public final class Image {
     }
 
     public static final int EVENTSTRIP_FIELD_NUMBER = 5;
-    private volatile java.lang.Object eventStrip_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventStrip_ = "";
     /**
      * <code>string eventStrip = 5;</code>
      * @return The eventStrip.
@@ -957,7 +957,8 @@ public final class Image {
     }
 
     public static final int STRIP_FIELD_NUMBER = 6;
-    private volatile java.lang.Object strip_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object strip_ = "";
     /**
      * <code>string strip = 6;</code>
      * @return The strip.
@@ -995,7 +996,8 @@ public final class Image {
     }
 
     public static final int THUMBNAIL_FIELD_NUMBER = 7;
-    private volatile java.lang.Object thumbnail_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object thumbnail_ = "";
     /**
      * <code>string thumbnail = 7;</code>
      * @return The thumbnail.
@@ -1033,7 +1035,8 @@ public final class Image {
     }
 
     public static final int BACKGROUND_FIELD_NUMBER = 8;
-    private volatile java.lang.Object background_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object background_ = "";
     /**
      * <code>string background = 8;</code>
      * @return The background.
@@ -1071,7 +1074,8 @@ public final class Image {
     }
 
     public static final int FOOTER_FIELD_NUMBER = 9;
-    private volatile java.lang.Object footer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object footer_ = "";
     /**
      * <code>string footer = 9;</code>
      * @return The footer.
@@ -1109,7 +1113,8 @@ public final class Image {
     }
 
     public static final int SECURITY_FIELD_NUMBER = 10;
-    private volatile java.lang.Object security_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object security_ = "";
     /**
      * <code>string security = 10;</code>
      * @return The security.
@@ -1147,7 +1152,8 @@ public final class Image {
     }
 
     public static final int PRIVILEGE_FIELD_NUMBER = 11;
-    private volatile java.lang.Object privilege_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privilege_ = "";
     /**
      * <code>string privilege = 11;</code>
      * @return The privilege.
@@ -1185,7 +1191,8 @@ public final class Image {
     }
 
     public static final int AIRLINEALLIANCE_FIELD_NUMBER = 12;
-    private volatile java.lang.Object airlineAlliance_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airlineAlliance_ = "";
     /**
      * <code>string airlineAlliance = 12;</code>
      * @return The airlineAlliance.
@@ -1223,7 +1230,8 @@ public final class Image {
     }
 
     public static final int PERSONALIZATION_FIELD_NUMBER = 13;
-    private volatile java.lang.Object personalization_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object personalization_ = "";
     /**
      * <code>string personalization = 13;</code>
      * @return The personalization.
@@ -1261,7 +1269,8 @@ public final class Image {
     }
 
     public static final int BANNER_FIELD_NUMBER = 14;
-    private volatile java.lang.Object banner_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object banner_ = "";
     /**
      * <code>string banner = 14;</code>
      * @return The banner.
@@ -1299,7 +1308,8 @@ public final class Image {
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 15;
-    private volatile java.lang.Object message_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
     /**
      * <code>string message = 15;</code>
      * @return The message.
@@ -1337,7 +1347,8 @@ public final class Image {
     }
 
     public static final int PROFILE_FIELD_NUMBER = 16;
-    private volatile java.lang.Object profile_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object profile_ = "";
     /**
      * <code>string profile = 16;</code>
      * @return The profile.
@@ -1375,7 +1386,8 @@ public final class Image {
     }
 
     public static final int APPIMAGE_FIELD_NUMBER = 17;
-    private volatile java.lang.Object appImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object appImage_ = "";
     /**
      * <code>string appImage = 17;</code>
      * @return The appImage.
@@ -1413,7 +1425,8 @@ public final class Image {
     }
 
     public static final int STAMPEDIMAGE_FIELD_NUMBER = 18;
-    private volatile java.lang.Object stampedImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stampedImage_ = "";
     /**
      * <code>string stampedImage = 18;</code>
      * @return The stampedImage.
@@ -1451,7 +1464,8 @@ public final class Image {
     }
 
     public static final int UNSTAMPEDIMAGE_FIELD_NUMBER = 19;
-    private volatile java.lang.Object unstampedImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unstampedImage_ = "";
     /**
      * <code>string unstampedImage = 19;</code>
      * @return The unstampedImage.
@@ -1489,7 +1503,8 @@ public final class Image {
     }
 
     public static final int STAMPIMAGE_FIELD_NUMBER = 20;
-    private volatile java.lang.Object stampImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stampImage_ = "";
     /**
      * <code>string stampImage = 20;</code>
      * @return The stampImage.
@@ -1907,46 +1922,27 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         icon_ = "";
-
         logo_ = "";
-
         appleLogo_ = "";
-
         hero_ = "";
-
         eventStrip_ = "";
-
         strip_ = "";
-
         thumbnail_ = "";
-
         background_ = "";
-
         footer_ = "";
-
         security_ = "";
-
         privilege_ = "";
-
         airlineAlliance_ = "";
-
         personalization_ = "";
-
         banner_ = "";
-
         message_ = "";
-
         profile_ = "";
-
         appImage_ = "";
-
         stampedImage_ = "";
-
         unstampedImage_ = "";
-
         stampImage_ = "";
-
         return this;
       }
 
@@ -1973,62 +1969,75 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.ImageIds buildPartial() {
         com.passkit.grpc.Image.ImageIds result = new com.passkit.grpc.Image.ImageIds(this);
-        result.icon_ = icon_;
-        result.logo_ = logo_;
-        result.appleLogo_ = appleLogo_;
-        result.hero_ = hero_;
-        result.eventStrip_ = eventStrip_;
-        result.strip_ = strip_;
-        result.thumbnail_ = thumbnail_;
-        result.background_ = background_;
-        result.footer_ = footer_;
-        result.security_ = security_;
-        result.privilege_ = privilege_;
-        result.airlineAlliance_ = airlineAlliance_;
-        result.personalization_ = personalization_;
-        result.banner_ = banner_;
-        result.message_ = message_;
-        result.profile_ = profile_;
-        result.appImage_ = appImage_;
-        result.stampedImage_ = stampedImage_;
-        result.unstampedImage_ = unstampedImage_;
-        result.stampImage_ = stampImage_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.ImageIds result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.icon_ = icon_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.logo_ = logo_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.appleLogo_ = appleLogo_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.hero_ = hero_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.eventStrip_ = eventStrip_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.strip_ = strip_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.thumbnail_ = thumbnail_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.background_ = background_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.footer_ = footer_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.security_ = security_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.privilege_ = privilege_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.airlineAlliance_ = airlineAlliance_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.personalization_ = personalization_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.banner_ = banner_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.profile_ = profile_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.appImage_ = appImage_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.stampedImage_ = stampedImage_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.unstampedImage_ = unstampedImage_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.stampImage_ = stampImage_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.ImageIds) {
@@ -2043,82 +2052,102 @@ public final class Image {
         if (other == com.passkit.grpc.Image.ImageIds.getDefaultInstance()) return this;
         if (!other.getIcon().isEmpty()) {
           icon_ = other.icon_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getLogo().isEmpty()) {
           logo_ = other.logo_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getAppleLogo().isEmpty()) {
           appleLogo_ = other.appleLogo_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getHero().isEmpty()) {
           hero_ = other.hero_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEventStrip().isEmpty()) {
           eventStrip_ = other.eventStrip_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getStrip().isEmpty()) {
           strip_ = other.strip_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getThumbnail().isEmpty()) {
           thumbnail_ = other.thumbnail_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getBackground().isEmpty()) {
           background_ = other.background_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getFooter().isEmpty()) {
           footer_ = other.footer_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getSecurity().isEmpty()) {
           security_ = other.security_;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getPrivilege().isEmpty()) {
           privilege_ = other.privilege_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (!other.getAirlineAlliance().isEmpty()) {
           airlineAlliance_ = other.airlineAlliance_;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (!other.getPersonalization().isEmpty()) {
           personalization_ = other.personalization_;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         if (!other.getBanner().isEmpty()) {
           banner_ = other.banner_;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
+          bitField0_ |= 0x00004000;
           onChanged();
         }
         if (!other.getProfile().isEmpty()) {
           profile_ = other.profile_;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         if (!other.getAppImage().isEmpty()) {
           appImage_ = other.appImage_;
+          bitField0_ |= 0x00010000;
           onChanged();
         }
         if (!other.getStampedImage().isEmpty()) {
           stampedImage_ = other.stampedImage_;
+          bitField0_ |= 0x00020000;
           onChanged();
         }
         if (!other.getUnstampedImage().isEmpty()) {
           unstampedImage_ = other.unstampedImage_;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         if (!other.getStampImage().isEmpty()) {
           stampImage_ = other.stampImage_;
+          bitField0_ |= 0x00080000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2149,102 +2178,102 @@ public final class Image {
                 break;
               case 10: {
                 icon_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 logo_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 appleLogo_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 hero_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 eventStrip_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 strip_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 thumbnail_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 background_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 footer_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 security_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 privilege_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 airlineAlliance_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 personalization_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 banner_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 message_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
                 profile_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 138: {
                 appImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 stampedImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 unstampedImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 stampImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               default: {
@@ -2262,6 +2291,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object icon_ = "";
       /**
@@ -2304,11 +2334,9 @@ public final class Image {
        */
       public Builder setIcon(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         icon_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2317,8 +2345,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearIcon() {
-        
         icon_ = getDefaultInstance().getIcon();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2329,12 +2357,10 @@ public final class Image {
        */
       public Builder setIconBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         icon_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2380,11 +2406,9 @@ public final class Image {
        */
       public Builder setLogo(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         logo_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2393,8 +2417,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearLogo() {
-        
         logo_ = getDefaultInstance().getLogo();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2405,12 +2429,10 @@ public final class Image {
        */
       public Builder setLogoBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         logo_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2456,11 +2478,9 @@ public final class Image {
        */
       public Builder setAppleLogo(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         appleLogo_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2469,8 +2489,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAppleLogo() {
-        
         appleLogo_ = getDefaultInstance().getAppleLogo();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2481,12 +2501,10 @@ public final class Image {
        */
       public Builder setAppleLogoBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         appleLogo_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2532,11 +2550,9 @@ public final class Image {
        */
       public Builder setHero(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         hero_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2545,8 +2561,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearHero() {
-        
         hero_ = getDefaultInstance().getHero();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2557,12 +2573,10 @@ public final class Image {
        */
       public Builder setHeroBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         hero_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2608,11 +2622,9 @@ public final class Image {
        */
       public Builder setEventStrip(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         eventStrip_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2621,8 +2633,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearEventStrip() {
-        
         eventStrip_ = getDefaultInstance().getEventStrip();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2633,12 +2645,10 @@ public final class Image {
        */
       public Builder setEventStripBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventStrip_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2684,11 +2694,9 @@ public final class Image {
        */
       public Builder setStrip(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         strip_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2697,8 +2705,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStrip() {
-        
         strip_ = getDefaultInstance().getStrip();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2709,12 +2717,10 @@ public final class Image {
        */
       public Builder setStripBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         strip_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2760,11 +2766,9 @@ public final class Image {
        */
       public Builder setThumbnail(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         thumbnail_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2773,8 +2777,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearThumbnail() {
-        
         thumbnail_ = getDefaultInstance().getThumbnail();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2785,12 +2789,10 @@ public final class Image {
        */
       public Builder setThumbnailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         thumbnail_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2836,11 +2838,9 @@ public final class Image {
        */
       public Builder setBackground(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         background_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2849,8 +2849,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBackground() {
-        
         background_ = getDefaultInstance().getBackground();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2861,12 +2861,10 @@ public final class Image {
        */
       public Builder setBackgroundBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         background_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2912,11 +2910,9 @@ public final class Image {
        */
       public Builder setFooter(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         footer_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2925,8 +2921,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearFooter() {
-        
         footer_ = getDefaultInstance().getFooter();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -2937,12 +2933,10 @@ public final class Image {
        */
       public Builder setFooterBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         footer_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2988,11 +2982,9 @@ public final class Image {
        */
       public Builder setSecurity(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         security_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -3001,8 +2993,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearSecurity() {
-        
         security_ = getDefaultInstance().getSecurity();
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -3013,12 +3005,10 @@ public final class Image {
        */
       public Builder setSecurityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         security_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -3064,11 +3054,9 @@ public final class Image {
        */
       public Builder setPrivilege(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privilege_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3077,8 +3065,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPrivilege() {
-        
         privilege_ = getDefaultInstance().getPrivilege();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -3089,12 +3077,10 @@ public final class Image {
        */
       public Builder setPrivilegeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privilege_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3140,11 +3126,9 @@ public final class Image {
        */
       public Builder setAirlineAlliance(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airlineAlliance_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -3153,8 +3137,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAirlineAlliance() {
-        
         airlineAlliance_ = getDefaultInstance().getAirlineAlliance();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -3165,12 +3149,10 @@ public final class Image {
        */
       public Builder setAirlineAllianceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airlineAlliance_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -3216,11 +3198,9 @@ public final class Image {
        */
       public Builder setPersonalization(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         personalization_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -3229,8 +3209,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPersonalization() {
-        
         personalization_ = getDefaultInstance().getPersonalization();
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
@@ -3241,12 +3221,10 @@ public final class Image {
        */
       public Builder setPersonalizationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         personalization_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -3292,11 +3270,9 @@ public final class Image {
        */
       public Builder setBanner(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         banner_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -3305,8 +3281,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBanner() {
-        
         banner_ = getDefaultInstance().getBanner();
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -3317,12 +3293,10 @@ public final class Image {
        */
       public Builder setBannerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         banner_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -3368,11 +3342,9 @@ public final class Image {
        */
       public Builder setMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         message_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3381,8 +3353,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
         message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
         return this;
       }
@@ -3393,12 +3365,10 @@ public final class Image {
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         message_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -3444,11 +3414,9 @@ public final class Image {
        */
       public Builder setProfile(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         profile_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -3457,8 +3425,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearProfile() {
-        
         profile_ = getDefaultInstance().getProfile();
+        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -3469,12 +3437,10 @@ public final class Image {
        */
       public Builder setProfileBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         profile_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -3520,11 +3486,9 @@ public final class Image {
        */
       public Builder setAppImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         appImage_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -3533,8 +3497,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAppImage() {
-        
         appImage_ = getDefaultInstance().getAppImage();
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
         return this;
       }
@@ -3545,12 +3509,10 @@ public final class Image {
        */
       public Builder setAppImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         appImage_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -3596,11 +3558,9 @@ public final class Image {
        */
       public Builder setStampedImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stampedImage_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -3609,8 +3569,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampedImage() {
-        
         stampedImage_ = getDefaultInstance().getStampedImage();
+        bitField0_ = (bitField0_ & ~0x00020000);
         onChanged();
         return this;
       }
@@ -3621,12 +3581,10 @@ public final class Image {
        */
       public Builder setStampedImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stampedImage_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -3672,11 +3630,9 @@ public final class Image {
        */
       public Builder setUnstampedImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         unstampedImage_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -3685,8 +3641,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUnstampedImage() {
-        
         unstampedImage_ = getDefaultInstance().getUnstampedImage();
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
         return this;
       }
@@ -3697,12 +3653,10 @@ public final class Image {
        */
       public Builder setUnstampedImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         unstampedImage_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -3748,11 +3702,9 @@ public final class Image {
        */
       public Builder setStampImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stampImage_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -3761,8 +3713,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampImage() {
-        
         stampImage_ = getDefaultInstance().getStampImage();
+        bitField0_ = (bitField0_ & ~0x00080000);
         onChanged();
         return this;
       }
@@ -3773,12 +3725,10 @@ public final class Image {
        */
       public Builder setStampImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stampImage_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -4707,11 +4657,6 @@ public final class Image {
       return new ImageData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageData_descriptor;
@@ -4726,7 +4671,8 @@ public final class Image {
     }
 
     public static final int ICON_FIELD_NUMBER = 1;
-    private volatile java.lang.Object icon_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object icon_ = "";
     /**
      * <pre>
      * Mandatory icon, used in Apple Wallet lock screen (87px x 87px).
@@ -4772,7 +4718,8 @@ public final class Image {
     }
 
     public static final int LOGO_FIELD_NUMBER = 2;
-    private volatile java.lang.Object logo_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object logo_ = "";
     /**
      * <pre>
      * Logo is circle-cropped by Google Pay, a 15% safety margin is recommended (660px x 660px).
@@ -4818,7 +4765,8 @@ public final class Image {
     }
 
     public static final int APPLELOGO_FIELD_NUMBER = 3;
-    private volatile java.lang.Object appleLogo_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object appleLogo_ = "";
     /**
      * <pre>
      * Apple logo can be used where a rectangular design is preferred for Apple Passes only.  If ommitted, the square logo image will be used.  (&lt;=480px x 150px).
@@ -4864,7 +4812,8 @@ public final class Image {
     }
 
     public static final int HERO_FIELD_NUMBER = 4;
-    private volatile java.lang.Object hero_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hero_ = "";
     /**
      * <pre>
      * Hero is the Google Pay strip and is also used in the dialog box when installing (1032px x 336px).
@@ -4910,7 +4859,8 @@ public final class Image {
     }
 
     public static final int EVENTSTRIP_FIELD_NUMBER = 5;
-    private volatile java.lang.Object eventStrip_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventStrip_ = "";
     /**
      * <pre>
      * Apple Wallet strip image for EventTicket pass types (1125px x 294px).
@@ -4956,7 +4906,8 @@ public final class Image {
     }
 
     public static final int STRIP_FIELD_NUMBER = 6;
-    private volatile java.lang.Object strip_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object strip_ = "";
     /**
      * <pre>
      * Apple Wallet strip image for other pass types with a  strip image (1125px x 432px).
@@ -5002,7 +4953,8 @@ public final class Image {
     }
 
     public static final int THUMBNAIL_FIELD_NUMBER = 7;
-    private volatile java.lang.Object thumbnail_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object thumbnail_ = "";
     /**
      * <pre>
      * Used on Membership passes and Apple event tickets with a background image (&gt;=270px x &gt;=270px in a ratio range of 2:3-3:2).
@@ -5048,7 +5000,8 @@ public final class Image {
     }
 
     public static final int BACKGROUND_FIELD_NUMBER = 8;
-    private volatile java.lang.Object background_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object background_ = "";
     /**
      * <pre>
      * Used only be Apple Event Ticket designs, this image is blurred to form a background and so can be a low quality image.  Note it may also be slightly cropped on some devices (180px x 220px).
@@ -5094,7 +5047,8 @@ public final class Image {
     }
 
     public static final int FOOTER_FIELD_NUMBER = 9;
-    private volatile java.lang.Object footer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object footer_ = "";
     /**
      * <pre>
      * Displays above the barcode for Apple Wallet Boarding pass tickets (858px x 45px)
@@ -5140,7 +5094,8 @@ public final class Image {
     }
 
     public static final int SECURITY_FIELD_NUMBER = 10;
-    private volatile java.lang.Object security_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object security_ = "";
     /**
      * <pre>
      * Google Pay - used to denote a security program on boarding pass types (E.g. TSA PreCheck®).  Width of 1600px is shared with the boarding privilege logo (&lt;=1600px x 80px).
@@ -5186,7 +5141,8 @@ public final class Image {
     }
 
     public static final int PRIVILEGE_FIELD_NUMBER = 11;
-    private volatile java.lang.Object privilege_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privilege_ = "";
     /**
      * <pre>
      * Google Pay - used to denote a boarding privilege.  Width of 1600px is shared with the security program logo (&lt;=1600px x 80px).
@@ -5232,7 +5188,8 @@ public final class Image {
     }
 
     public static final int AIRLINEALLIANCE_FIELD_NUMBER = 12;
-    private volatile java.lang.Object airlineAlliance_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airlineAlliance_ = "";
     /**
      * <pre>
      * Google Pay - used to denote airline alliance on boarding pass types (&lt;=1600px x 80px).
@@ -5278,7 +5235,8 @@ public final class Image {
     }
 
     public static final int PERSONALIZATION_FIELD_NUMBER = 13;
-    private volatile java.lang.Object personalization_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object personalization_ = "";
     /**
      * <pre>
      * For Apple Pay NFC passes whitelisted for personalization. Image is displayed after terms are presented (&lt;=450px x 120px).
@@ -5324,7 +5282,8 @@ public final class Image {
     }
 
     public static final int BANNER_FIELD_NUMBER = 14;
-    private volatile java.lang.Object banner_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object banner_ = "";
     /**
      * <pre>
      * Used on a landing page or email.  Image has no size constraints and will be treated as &#64;2x pixel density.
@@ -5370,7 +5329,8 @@ public final class Image {
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 15;
-    private volatile java.lang.Object message_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
     /**
      * <pre>
      * Used for Google Pay in wallet promotional messages - for Apple Pay, the message will be rendered on a mobile website (1860px x &lt;=930px).
@@ -5416,7 +5376,8 @@ public final class Image {
     }
 
     public static final int PROFILE_FIELD_NUMBER = 16;
-    private volatile java.lang.Object profile_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object profile_ = "";
     /**
      * <pre>
      * Used for user Profile images (300px x 300px). Cannot be localized.
@@ -5462,7 +5423,8 @@ public final class Image {
     }
 
     public static final int APPIMAGE_FIELD_NUMBER = 17;
-    private volatile java.lang.Object appImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object appImage_ = "";
     /**
      * <pre>
      * Used for user app images in Google Pay Passes (300px x 300px). Cannot be localized.
@@ -5508,7 +5470,8 @@ public final class Image {
     }
 
     public static final int STAMPEDIMAGE_FIELD_NUMBER = 18;
-    private volatile java.lang.Object stampedImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stampedImage_ = "";
     /**
      * <pre>
      * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
@@ -5554,7 +5517,8 @@ public final class Image {
     }
 
     public static final int UNSTAMPEDIMAGE_FIELD_NUMBER = 19;
-    private volatile java.lang.Object unstampedImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unstampedImage_ = "";
     /**
      * <pre>
      * Used for stamp and unstamped images for use with stamp/punch cards. Cannot be localized.
@@ -5634,7 +5598,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Image.StampImageConfigOrBuilder getStampConfigOrBuilder() {
-      return getStampConfig();
+      return stampConfig_ == null ? com.passkit.grpc.Image.StampImageConfig.getDefaultInstance() : stampConfig_;
     }
 
     public static final int LOCALIZEDICON_FIELD_NUMBER = 31;
@@ -5672,7 +5636,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedIconOrBuilder() {
-      return getLocalizedIcon();
+      return localizedIcon_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedIcon_;
     }
 
     public static final int LOCALIZEDLOGO_FIELD_NUMBER = 32;
@@ -5710,7 +5674,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLogoOrBuilder() {
-      return getLocalizedLogo();
+      return localizedLogo_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLogo_;
     }
 
     public static final int LOCALIZEDAPPLELOGO_FIELD_NUMBER = 33;
@@ -5748,7 +5712,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAppleLogoOrBuilder() {
-      return getLocalizedAppleLogo();
+      return localizedAppleLogo_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAppleLogo_;
     }
 
     public static final int LOCALIZEDHERO_FIELD_NUMBER = 34;
@@ -5786,7 +5750,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeroOrBuilder() {
-      return getLocalizedHero();
+      return localizedHero_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHero_;
     }
 
     public static final int LOCALIZEDEVENTSTRIP_FIELD_NUMBER = 35;
@@ -5824,7 +5788,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedEventStripOrBuilder() {
-      return getLocalizedEventStrip();
+      return localizedEventStrip_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedEventStrip_;
     }
 
     public static final int LOCALIZEDSTRIP_FIELD_NUMBER = 36;
@@ -5862,7 +5826,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedStripOrBuilder() {
-      return getLocalizedStrip();
+      return localizedStrip_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedStrip_;
     }
 
     public static final int LOCALIZEDTHUMBNAIL_FIELD_NUMBER = 37;
@@ -5900,7 +5864,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedThumbnailOrBuilder() {
-      return getLocalizedThumbnail();
+      return localizedThumbnail_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedThumbnail_;
     }
 
     public static final int LOCALIZEDBACKGROUND_FIELD_NUMBER = 38;
@@ -5938,7 +5902,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedBackgroundOrBuilder() {
-      return getLocalizedBackground();
+      return localizedBackground_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedBackground_;
     }
 
     public static final int LOCALIZEDFOOTER_FIELD_NUMBER = 39;
@@ -5976,7 +5940,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedFooterOrBuilder() {
-      return getLocalizedFooter();
+      return localizedFooter_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedFooter_;
     }
 
     public static final int LOCALIZEDSECURITY_FIELD_NUMBER = 40;
@@ -6014,7 +5978,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedSecurityOrBuilder() {
-      return getLocalizedSecurity();
+      return localizedSecurity_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedSecurity_;
     }
 
     public static final int LOCALIZEDPRIVILEGE_FIELD_NUMBER = 41;
@@ -6052,7 +6016,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPrivilegeOrBuilder() {
-      return getLocalizedPrivilege();
+      return localizedPrivilege_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPrivilege_;
     }
 
     public static final int LOCALIZEDAIRLINEALLIANCE_FIELD_NUMBER = 42;
@@ -6090,7 +6054,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAirlineAllianceOrBuilder() {
-      return getLocalizedAirlineAlliance();
+      return localizedAirlineAlliance_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAirlineAlliance_;
     }
 
     public static final int LOCALIZEDPERSONALIZATION_FIELD_NUMBER = 43;
@@ -6128,7 +6092,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPersonalizationOrBuilder() {
-      return getLocalizedPersonalization();
+      return localizedPersonalization_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPersonalization_;
     }
 
     public static final int LOCALIZEDBANNER_FIELD_NUMBER = 44;
@@ -6166,7 +6130,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedBannerOrBuilder() {
-      return getLocalizedBanner();
+      return localizedBanner_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedBanner_;
     }
 
     public static final int LOCALIZEDMESSAGE_FIELD_NUMBER = 45;
@@ -6204,7 +6168,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedMessageOrBuilder() {
-      return getLocalizedMessage();
+      return localizedMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedMessage_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6834,138 +6798,105 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         icon_ = "";
-
         logo_ = "";
-
         appleLogo_ = "";
-
         hero_ = "";
-
         eventStrip_ = "";
-
         strip_ = "";
-
         thumbnail_ = "";
-
         background_ = "";
-
         footer_ = "";
-
         security_ = "";
-
         privilege_ = "";
-
         airlineAlliance_ = "";
-
         personalization_ = "";
-
         banner_ = "";
-
         message_ = "";
-
         profile_ = "";
-
         appImage_ = "";
-
         stampedImage_ = "";
-
         unstampedImage_ = "";
-
-        if (stampConfigBuilder_ == null) {
-          stampConfig_ = null;
-        } else {
-          stampConfig_ = null;
+        stampConfig_ = null;
+        if (stampConfigBuilder_ != null) {
+          stampConfigBuilder_.dispose();
           stampConfigBuilder_ = null;
         }
-        if (localizedIconBuilder_ == null) {
-          localizedIcon_ = null;
-        } else {
-          localizedIcon_ = null;
+        localizedIcon_ = null;
+        if (localizedIconBuilder_ != null) {
+          localizedIconBuilder_.dispose();
           localizedIconBuilder_ = null;
         }
-        if (localizedLogoBuilder_ == null) {
-          localizedLogo_ = null;
-        } else {
-          localizedLogo_ = null;
+        localizedLogo_ = null;
+        if (localizedLogoBuilder_ != null) {
+          localizedLogoBuilder_.dispose();
           localizedLogoBuilder_ = null;
         }
-        if (localizedAppleLogoBuilder_ == null) {
-          localizedAppleLogo_ = null;
-        } else {
-          localizedAppleLogo_ = null;
+        localizedAppleLogo_ = null;
+        if (localizedAppleLogoBuilder_ != null) {
+          localizedAppleLogoBuilder_.dispose();
           localizedAppleLogoBuilder_ = null;
         }
-        if (localizedHeroBuilder_ == null) {
-          localizedHero_ = null;
-        } else {
-          localizedHero_ = null;
+        localizedHero_ = null;
+        if (localizedHeroBuilder_ != null) {
+          localizedHeroBuilder_.dispose();
           localizedHeroBuilder_ = null;
         }
-        if (localizedEventStripBuilder_ == null) {
-          localizedEventStrip_ = null;
-        } else {
-          localizedEventStrip_ = null;
+        localizedEventStrip_ = null;
+        if (localizedEventStripBuilder_ != null) {
+          localizedEventStripBuilder_.dispose();
           localizedEventStripBuilder_ = null;
         }
-        if (localizedStripBuilder_ == null) {
-          localizedStrip_ = null;
-        } else {
-          localizedStrip_ = null;
+        localizedStrip_ = null;
+        if (localizedStripBuilder_ != null) {
+          localizedStripBuilder_.dispose();
           localizedStripBuilder_ = null;
         }
-        if (localizedThumbnailBuilder_ == null) {
-          localizedThumbnail_ = null;
-        } else {
-          localizedThumbnail_ = null;
+        localizedThumbnail_ = null;
+        if (localizedThumbnailBuilder_ != null) {
+          localizedThumbnailBuilder_.dispose();
           localizedThumbnailBuilder_ = null;
         }
-        if (localizedBackgroundBuilder_ == null) {
-          localizedBackground_ = null;
-        } else {
-          localizedBackground_ = null;
+        localizedBackground_ = null;
+        if (localizedBackgroundBuilder_ != null) {
+          localizedBackgroundBuilder_.dispose();
           localizedBackgroundBuilder_ = null;
         }
-        if (localizedFooterBuilder_ == null) {
-          localizedFooter_ = null;
-        } else {
-          localizedFooter_ = null;
+        localizedFooter_ = null;
+        if (localizedFooterBuilder_ != null) {
+          localizedFooterBuilder_.dispose();
           localizedFooterBuilder_ = null;
         }
-        if (localizedSecurityBuilder_ == null) {
-          localizedSecurity_ = null;
-        } else {
-          localizedSecurity_ = null;
+        localizedSecurity_ = null;
+        if (localizedSecurityBuilder_ != null) {
+          localizedSecurityBuilder_.dispose();
           localizedSecurityBuilder_ = null;
         }
-        if (localizedPrivilegeBuilder_ == null) {
-          localizedPrivilege_ = null;
-        } else {
-          localizedPrivilege_ = null;
+        localizedPrivilege_ = null;
+        if (localizedPrivilegeBuilder_ != null) {
+          localizedPrivilegeBuilder_.dispose();
           localizedPrivilegeBuilder_ = null;
         }
-        if (localizedAirlineAllianceBuilder_ == null) {
-          localizedAirlineAlliance_ = null;
-        } else {
-          localizedAirlineAlliance_ = null;
+        localizedAirlineAlliance_ = null;
+        if (localizedAirlineAllianceBuilder_ != null) {
+          localizedAirlineAllianceBuilder_.dispose();
           localizedAirlineAllianceBuilder_ = null;
         }
-        if (localizedPersonalizationBuilder_ == null) {
-          localizedPersonalization_ = null;
-        } else {
-          localizedPersonalization_ = null;
+        localizedPersonalization_ = null;
+        if (localizedPersonalizationBuilder_ != null) {
+          localizedPersonalizationBuilder_.dispose();
           localizedPersonalizationBuilder_ = null;
         }
-        if (localizedBannerBuilder_ == null) {
-          localizedBanner_ = null;
-        } else {
-          localizedBanner_ = null;
+        localizedBanner_ = null;
+        if (localizedBannerBuilder_ != null) {
+          localizedBannerBuilder_.dispose();
           localizedBannerBuilder_ = null;
         }
-        if (localizedMessageBuilder_ == null) {
-          localizedMessage_ = null;
-        } else {
-          localizedMessage_ = null;
+        localizedMessage_ = null;
+        if (localizedMessageBuilder_ != null) {
+          localizedMessageBuilder_.dispose();
           localizedMessageBuilder_ = null;
         }
         return this;
@@ -6994,141 +6925,157 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.ImageData buildPartial() {
         com.passkit.grpc.Image.ImageData result = new com.passkit.grpc.Image.ImageData(this);
-        result.icon_ = icon_;
-        result.logo_ = logo_;
-        result.appleLogo_ = appleLogo_;
-        result.hero_ = hero_;
-        result.eventStrip_ = eventStrip_;
-        result.strip_ = strip_;
-        result.thumbnail_ = thumbnail_;
-        result.background_ = background_;
-        result.footer_ = footer_;
-        result.security_ = security_;
-        result.privilege_ = privilege_;
-        result.airlineAlliance_ = airlineAlliance_;
-        result.personalization_ = personalization_;
-        result.banner_ = banner_;
-        result.message_ = message_;
-        result.profile_ = profile_;
-        result.appImage_ = appImage_;
-        result.stampedImage_ = stampedImage_;
-        result.unstampedImage_ = unstampedImage_;
-        if (stampConfigBuilder_ == null) {
-          result.stampConfig_ = stampConfig_;
-        } else {
-          result.stampConfig_ = stampConfigBuilder_.build();
-        }
-        if (localizedIconBuilder_ == null) {
-          result.localizedIcon_ = localizedIcon_;
-        } else {
-          result.localizedIcon_ = localizedIconBuilder_.build();
-        }
-        if (localizedLogoBuilder_ == null) {
-          result.localizedLogo_ = localizedLogo_;
-        } else {
-          result.localizedLogo_ = localizedLogoBuilder_.build();
-        }
-        if (localizedAppleLogoBuilder_ == null) {
-          result.localizedAppleLogo_ = localizedAppleLogo_;
-        } else {
-          result.localizedAppleLogo_ = localizedAppleLogoBuilder_.build();
-        }
-        if (localizedHeroBuilder_ == null) {
-          result.localizedHero_ = localizedHero_;
-        } else {
-          result.localizedHero_ = localizedHeroBuilder_.build();
-        }
-        if (localizedEventStripBuilder_ == null) {
-          result.localizedEventStrip_ = localizedEventStrip_;
-        } else {
-          result.localizedEventStrip_ = localizedEventStripBuilder_.build();
-        }
-        if (localizedStripBuilder_ == null) {
-          result.localizedStrip_ = localizedStrip_;
-        } else {
-          result.localizedStrip_ = localizedStripBuilder_.build();
-        }
-        if (localizedThumbnailBuilder_ == null) {
-          result.localizedThumbnail_ = localizedThumbnail_;
-        } else {
-          result.localizedThumbnail_ = localizedThumbnailBuilder_.build();
-        }
-        if (localizedBackgroundBuilder_ == null) {
-          result.localizedBackground_ = localizedBackground_;
-        } else {
-          result.localizedBackground_ = localizedBackgroundBuilder_.build();
-        }
-        if (localizedFooterBuilder_ == null) {
-          result.localizedFooter_ = localizedFooter_;
-        } else {
-          result.localizedFooter_ = localizedFooterBuilder_.build();
-        }
-        if (localizedSecurityBuilder_ == null) {
-          result.localizedSecurity_ = localizedSecurity_;
-        } else {
-          result.localizedSecurity_ = localizedSecurityBuilder_.build();
-        }
-        if (localizedPrivilegeBuilder_ == null) {
-          result.localizedPrivilege_ = localizedPrivilege_;
-        } else {
-          result.localizedPrivilege_ = localizedPrivilegeBuilder_.build();
-        }
-        if (localizedAirlineAllianceBuilder_ == null) {
-          result.localizedAirlineAlliance_ = localizedAirlineAlliance_;
-        } else {
-          result.localizedAirlineAlliance_ = localizedAirlineAllianceBuilder_.build();
-        }
-        if (localizedPersonalizationBuilder_ == null) {
-          result.localizedPersonalization_ = localizedPersonalization_;
-        } else {
-          result.localizedPersonalization_ = localizedPersonalizationBuilder_.build();
-        }
-        if (localizedBannerBuilder_ == null) {
-          result.localizedBanner_ = localizedBanner_;
-        } else {
-          result.localizedBanner_ = localizedBannerBuilder_.build();
-        }
-        if (localizedMessageBuilder_ == null) {
-          result.localizedMessage_ = localizedMessage_;
-        } else {
-          result.localizedMessage_ = localizedMessageBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.ImageData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.icon_ = icon_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.logo_ = logo_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.appleLogo_ = appleLogo_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.hero_ = hero_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.eventStrip_ = eventStrip_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.strip_ = strip_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.thumbnail_ = thumbnail_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.background_ = background_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.footer_ = footer_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.security_ = security_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.privilege_ = privilege_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.airlineAlliance_ = airlineAlliance_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.personalization_ = personalization_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.banner_ = banner_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.profile_ = profile_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.appImage_ = appImage_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.stampedImage_ = stampedImage_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.unstampedImage_ = unstampedImage_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.stampConfig_ = stampConfigBuilder_ == null
+              ? stampConfig_
+              : stampConfigBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.localizedIcon_ = localizedIconBuilder_ == null
+              ? localizedIcon_
+              : localizedIconBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.localizedLogo_ = localizedLogoBuilder_ == null
+              ? localizedLogo_
+              : localizedLogoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.localizedAppleLogo_ = localizedAppleLogoBuilder_ == null
+              ? localizedAppleLogo_
+              : localizedAppleLogoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.localizedHero_ = localizedHeroBuilder_ == null
+              ? localizedHero_
+              : localizedHeroBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.localizedEventStrip_ = localizedEventStripBuilder_ == null
+              ? localizedEventStrip_
+              : localizedEventStripBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.localizedStrip_ = localizedStripBuilder_ == null
+              ? localizedStrip_
+              : localizedStripBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.localizedThumbnail_ = localizedThumbnailBuilder_ == null
+              ? localizedThumbnail_
+              : localizedThumbnailBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.localizedBackground_ = localizedBackgroundBuilder_ == null
+              ? localizedBackground_
+              : localizedBackgroundBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.localizedFooter_ = localizedFooterBuilder_ == null
+              ? localizedFooter_
+              : localizedFooterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.localizedSecurity_ = localizedSecurityBuilder_ == null
+              ? localizedSecurity_
+              : localizedSecurityBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.localizedPrivilege_ = localizedPrivilegeBuilder_ == null
+              ? localizedPrivilege_
+              : localizedPrivilegeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.localizedAirlineAlliance_ = localizedAirlineAllianceBuilder_ == null
+              ? localizedAirlineAlliance_
+              : localizedAirlineAllianceBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial1(com.passkit.grpc.Image.ImageData result) {
+        int from_bitField1_ = bitField1_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.localizedPersonalization_ = localizedPersonalizationBuilder_ == null
+              ? localizedPersonalization_
+              : localizedPersonalizationBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.localizedBanner_ = localizedBannerBuilder_ == null
+              ? localizedBanner_
+              : localizedBannerBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000004) != 0)) {
+          result.localizedMessage_ = localizedMessageBuilder_ == null
+              ? localizedMessage_
+              : localizedMessageBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.ImageData) {
@@ -7143,78 +7090,97 @@ public final class Image {
         if (other == com.passkit.grpc.Image.ImageData.getDefaultInstance()) return this;
         if (!other.getIcon().isEmpty()) {
           icon_ = other.icon_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getLogo().isEmpty()) {
           logo_ = other.logo_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getAppleLogo().isEmpty()) {
           appleLogo_ = other.appleLogo_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getHero().isEmpty()) {
           hero_ = other.hero_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEventStrip().isEmpty()) {
           eventStrip_ = other.eventStrip_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getStrip().isEmpty()) {
           strip_ = other.strip_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getThumbnail().isEmpty()) {
           thumbnail_ = other.thumbnail_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getBackground().isEmpty()) {
           background_ = other.background_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getFooter().isEmpty()) {
           footer_ = other.footer_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getSecurity().isEmpty()) {
           security_ = other.security_;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getPrivilege().isEmpty()) {
           privilege_ = other.privilege_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (!other.getAirlineAlliance().isEmpty()) {
           airlineAlliance_ = other.airlineAlliance_;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (!other.getPersonalization().isEmpty()) {
           personalization_ = other.personalization_;
+          bitField0_ |= 0x00001000;
           onChanged();
         }
         if (!other.getBanner().isEmpty()) {
           banner_ = other.banner_;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
+          bitField0_ |= 0x00004000;
           onChanged();
         }
         if (!other.getProfile().isEmpty()) {
           profile_ = other.profile_;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         if (!other.getAppImage().isEmpty()) {
           appImage_ = other.appImage_;
+          bitField0_ |= 0x00010000;
           onChanged();
         }
         if (!other.getStampedImage().isEmpty()) {
           stampedImage_ = other.stampedImage_;
+          bitField0_ |= 0x00020000;
           onChanged();
         }
         if (!other.getUnstampedImage().isEmpty()) {
           unstampedImage_ = other.unstampedImage_;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         if (other.hasStampConfig()) {
@@ -7293,209 +7259,209 @@ public final class Image {
                 break;
               case 10: {
                 icon_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 logo_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 appleLogo_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 hero_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 eventStrip_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 strip_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 thumbnail_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 background_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 footer_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 security_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 privilege_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 airlineAlliance_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 personalization_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 banner_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 message_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
                 profile_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 138: {
                 appImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 stampedImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 unstampedImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getStampConfigFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               case 250: {
                 input.readMessage(
                     getLocalizedIconFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 250
               case 258: {
                 input.readMessage(
                     getLocalizedLogoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 258
               case 266: {
                 input.readMessage(
                     getLocalizedAppleLogoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 266
               case 274: {
                 input.readMessage(
                     getLocalizedHeroFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00800000;
                 break;
               } // case 274
               case 282: {
                 input.readMessage(
                     getLocalizedEventStripFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x01000000;
                 break;
               } // case 282
               case 290: {
                 input.readMessage(
                     getLocalizedStripFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x02000000;
                 break;
               } // case 290
               case 298: {
                 input.readMessage(
                     getLocalizedThumbnailFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x04000000;
                 break;
               } // case 298
               case 306: {
                 input.readMessage(
                     getLocalizedBackgroundFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x08000000;
                 break;
               } // case 306
               case 314: {
                 input.readMessage(
                     getLocalizedFooterFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x10000000;
                 break;
               } // case 314
               case 322: {
                 input.readMessage(
                     getLocalizedSecurityFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x20000000;
                 break;
               } // case 322
               case 330: {
                 input.readMessage(
                     getLocalizedPrivilegeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x40000000;
                 break;
               } // case 330
               case 338: {
                 input.readMessage(
                     getLocalizedAirlineAllianceFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x80000000;
                 break;
               } // case 338
               case 346: {
                 input.readMessage(
                     getLocalizedPersonalizationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField1_ |= 0x00000001;
                 break;
               } // case 346
               case 354: {
                 input.readMessage(
                     getLocalizedBannerFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField1_ |= 0x00000002;
                 break;
               } // case 354
               case 362: {
                 input.readMessage(
                     getLocalizedMessageFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField1_ |= 0x00000004;
                 break;
               } // case 362
               default: {
@@ -7513,6 +7479,8 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
+      private int bitField1_;
 
       private java.lang.Object icon_ = "";
       /**
@@ -7567,11 +7535,9 @@ public final class Image {
        */
       public Builder setIcon(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         icon_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7584,8 +7550,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearIcon() {
-        
         icon_ = getDefaultInstance().getIcon();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7600,12 +7566,10 @@ public final class Image {
        */
       public Builder setIconBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         icon_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7663,11 +7627,9 @@ public final class Image {
        */
       public Builder setLogo(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         logo_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7680,8 +7642,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearLogo() {
-        
         logo_ = getDefaultInstance().getLogo();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -7696,12 +7658,10 @@ public final class Image {
        */
       public Builder setLogoBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         logo_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7759,11 +7719,9 @@ public final class Image {
        */
       public Builder setAppleLogo(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         appleLogo_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -7776,8 +7734,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAppleLogo() {
-        
         appleLogo_ = getDefaultInstance().getAppleLogo();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -7792,12 +7750,10 @@ public final class Image {
        */
       public Builder setAppleLogoBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         appleLogo_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -7855,11 +7811,9 @@ public final class Image {
        */
       public Builder setHero(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         hero_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -7872,8 +7826,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearHero() {
-        
         hero_ = getDefaultInstance().getHero();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -7888,12 +7842,10 @@ public final class Image {
        */
       public Builder setHeroBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         hero_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -7951,11 +7903,9 @@ public final class Image {
        */
       public Builder setEventStrip(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         eventStrip_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7968,8 +7918,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearEventStrip() {
-        
         eventStrip_ = getDefaultInstance().getEventStrip();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -7984,12 +7934,10 @@ public final class Image {
        */
       public Builder setEventStripBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventStrip_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -8047,11 +7995,9 @@ public final class Image {
        */
       public Builder setStrip(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         strip_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8064,8 +8010,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStrip() {
-        
         strip_ = getDefaultInstance().getStrip();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -8080,12 +8026,10 @@ public final class Image {
        */
       public Builder setStripBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         strip_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8143,11 +8087,9 @@ public final class Image {
        */
       public Builder setThumbnail(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         thumbnail_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -8160,8 +8102,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearThumbnail() {
-        
         thumbnail_ = getDefaultInstance().getThumbnail();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -8176,12 +8118,10 @@ public final class Image {
        */
       public Builder setThumbnailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         thumbnail_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -8239,11 +8179,9 @@ public final class Image {
        */
       public Builder setBackground(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         background_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -8256,8 +8194,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBackground() {
-        
         background_ = getDefaultInstance().getBackground();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -8272,12 +8210,10 @@ public final class Image {
        */
       public Builder setBackgroundBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         background_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -8335,11 +8271,9 @@ public final class Image {
        */
       public Builder setFooter(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         footer_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -8352,8 +8286,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearFooter() {
-        
         footer_ = getDefaultInstance().getFooter();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -8368,12 +8302,10 @@ public final class Image {
        */
       public Builder setFooterBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         footer_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -8431,11 +8363,9 @@ public final class Image {
        */
       public Builder setSecurity(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         security_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -8448,8 +8378,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearSecurity() {
-        
         security_ = getDefaultInstance().getSecurity();
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -8464,12 +8394,10 @@ public final class Image {
        */
       public Builder setSecurityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         security_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -8527,11 +8455,9 @@ public final class Image {
        */
       public Builder setPrivilege(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privilege_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -8544,8 +8470,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPrivilege() {
-        
         privilege_ = getDefaultInstance().getPrivilege();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -8560,12 +8486,10 @@ public final class Image {
        */
       public Builder setPrivilegeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privilege_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -8623,11 +8547,9 @@ public final class Image {
        */
       public Builder setAirlineAlliance(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airlineAlliance_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -8640,8 +8562,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAirlineAlliance() {
-        
         airlineAlliance_ = getDefaultInstance().getAirlineAlliance();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -8656,12 +8578,10 @@ public final class Image {
        */
       public Builder setAirlineAllianceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airlineAlliance_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -8719,11 +8639,9 @@ public final class Image {
        */
       public Builder setPersonalization(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         personalization_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -8736,8 +8654,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPersonalization() {
-        
         personalization_ = getDefaultInstance().getPersonalization();
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
         return this;
       }
@@ -8752,12 +8670,10 @@ public final class Image {
        */
       public Builder setPersonalizationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         personalization_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -8815,11 +8731,9 @@ public final class Image {
        */
       public Builder setBanner(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         banner_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -8832,8 +8746,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBanner() {
-        
         banner_ = getDefaultInstance().getBanner();
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -8848,12 +8762,10 @@ public final class Image {
        */
       public Builder setBannerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         banner_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -8911,11 +8823,9 @@ public final class Image {
        */
       public Builder setMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         message_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -8928,8 +8838,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
         message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
         return this;
       }
@@ -8944,12 +8854,10 @@ public final class Image {
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         message_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -9007,11 +8915,9 @@ public final class Image {
        */
       public Builder setProfile(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         profile_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -9024,8 +8930,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearProfile() {
-        
         profile_ = getDefaultInstance().getProfile();
+        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -9040,12 +8946,10 @@ public final class Image {
        */
       public Builder setProfileBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         profile_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -9103,11 +9007,9 @@ public final class Image {
        */
       public Builder setAppImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         appImage_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -9120,8 +9022,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearAppImage() {
-        
         appImage_ = getDefaultInstance().getAppImage();
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
         return this;
       }
@@ -9136,12 +9038,10 @@ public final class Image {
        */
       public Builder setAppImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         appImage_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -9199,11 +9099,9 @@ public final class Image {
        */
       public Builder setStampedImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stampedImage_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -9216,8 +9114,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampedImage() {
-        
         stampedImage_ = getDefaultInstance().getStampedImage();
+        bitField0_ = (bitField0_ & ~0x00020000);
         onChanged();
         return this;
       }
@@ -9232,12 +9130,10 @@ public final class Image {
        */
       public Builder setStampedImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stampedImage_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -9295,11 +9191,9 @@ public final class Image {
        */
       public Builder setUnstampedImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         unstampedImage_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -9312,8 +9206,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUnstampedImage() {
-        
         unstampedImage_ = getDefaultInstance().getUnstampedImage();
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
         return this;
       }
@@ -9328,12 +9222,10 @@ public final class Image {
        */
       public Builder setUnstampedImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         unstampedImage_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -9350,7 +9242,7 @@ public final class Image {
        * @return Whether the stampConfig field is set.
        */
       public boolean hasStampConfig() {
-        return stampConfigBuilder_ != null || stampConfig_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -9380,11 +9272,11 @@ public final class Image {
             throw new NullPointerException();
           }
           stampConfig_ = value;
-          onChanged();
         } else {
           stampConfigBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -9398,11 +9290,11 @@ public final class Image {
           com.passkit.grpc.Image.StampImageConfig.Builder builderForValue) {
         if (stampConfigBuilder_ == null) {
           stampConfig_ = builderForValue.build();
-          onChanged();
         } else {
           stampConfigBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -9414,17 +9306,18 @@ public final class Image {
        */
       public Builder mergeStampConfig(com.passkit.grpc.Image.StampImageConfig value) {
         if (stampConfigBuilder_ == null) {
-          if (stampConfig_ != null) {
-            stampConfig_ =
-              com.passkit.grpc.Image.StampImageConfig.newBuilder(stampConfig_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            stampConfig_ != null &&
+            stampConfig_ != com.passkit.grpc.Image.StampImageConfig.getDefaultInstance()) {
+            getStampConfigBuilder().mergeFrom(value);
           } else {
             stampConfig_ = value;
           }
-          onChanged();
         } else {
           stampConfigBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -9435,14 +9328,13 @@ public final class Image {
        * <code>.io.StampImageConfig stampConfig = 20;</code>
        */
       public Builder clearStampConfig() {
-        if (stampConfigBuilder_ == null) {
-          stampConfig_ = null;
-          onChanged();
-        } else {
-          stampConfig_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        stampConfig_ = null;
+        if (stampConfigBuilder_ != null) {
+          stampConfigBuilder_.dispose();
           stampConfigBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9453,7 +9345,7 @@ public final class Image {
        * <code>.io.StampImageConfig stampConfig = 20;</code>
        */
       public com.passkit.grpc.Image.StampImageConfig.Builder getStampConfigBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getStampConfigFieldBuilder().getBuilder();
       }
@@ -9505,7 +9397,7 @@ public final class Image {
        * @return Whether the localizedIcon field is set.
        */
       public boolean hasLocalizedIcon() {
-        return localizedIconBuilder_ != null || localizedIcon_ != null;
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <pre>
@@ -9535,11 +9427,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedIcon_ = value;
-          onChanged();
         } else {
           localizedIconBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -9553,11 +9445,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedIconBuilder_ == null) {
           localizedIcon_ = builderForValue.build();
-          onChanged();
         } else {
           localizedIconBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -9569,17 +9461,18 @@ public final class Image {
        */
       public Builder mergeLocalizedIcon(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedIconBuilder_ == null) {
-          if (localizedIcon_ != null) {
-            localizedIcon_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedIcon_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00100000) != 0) &&
+            localizedIcon_ != null &&
+            localizedIcon_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedIconBuilder().mergeFrom(value);
           } else {
             localizedIcon_ = value;
           }
-          onChanged();
         } else {
           localizedIconBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -9590,14 +9483,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedIcon = 31;</code>
        */
       public Builder clearLocalizedIcon() {
-        if (localizedIconBuilder_ == null) {
-          localizedIcon_ = null;
-          onChanged();
-        } else {
-          localizedIcon_ = null;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        localizedIcon_ = null;
+        if (localizedIconBuilder_ != null) {
+          localizedIconBuilder_.dispose();
           localizedIconBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9608,7 +9500,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedIcon = 31;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedIconBuilder() {
-        
+        bitField0_ |= 0x00100000;
         onChanged();
         return getLocalizedIconFieldBuilder().getBuilder();
       }
@@ -9660,7 +9552,7 @@ public final class Image {
        * @return Whether the localizedLogo field is set.
        */
       public boolean hasLocalizedLogo() {
-        return localizedLogoBuilder_ != null || localizedLogo_ != null;
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <pre>
@@ -9690,11 +9582,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedLogo_ = value;
-          onChanged();
         } else {
           localizedLogoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -9708,11 +9600,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLogoBuilder_ == null) {
           localizedLogo_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLogoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -9724,17 +9616,18 @@ public final class Image {
        */
       public Builder mergeLocalizedLogo(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLogoBuilder_ == null) {
-          if (localizedLogo_ != null) {
-            localizedLogo_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLogo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00200000) != 0) &&
+            localizedLogo_ != null &&
+            localizedLogo_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLogoBuilder().mergeFrom(value);
           } else {
             localizedLogo_ = value;
           }
-          onChanged();
         } else {
           localizedLogoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -9745,14 +9638,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedLogo = 32;</code>
        */
       public Builder clearLocalizedLogo() {
-        if (localizedLogoBuilder_ == null) {
-          localizedLogo_ = null;
-          onChanged();
-        } else {
-          localizedLogo_ = null;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        localizedLogo_ = null;
+        if (localizedLogoBuilder_ != null) {
+          localizedLogoBuilder_.dispose();
           localizedLogoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9763,7 +9655,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedLogo = 32;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLogoBuilder() {
-        
+        bitField0_ |= 0x00200000;
         onChanged();
         return getLocalizedLogoFieldBuilder().getBuilder();
       }
@@ -9815,7 +9707,7 @@ public final class Image {
        * @return Whether the localizedAppleLogo field is set.
        */
       public boolean hasLocalizedAppleLogo() {
-        return localizedAppleLogoBuilder_ != null || localizedAppleLogo_ != null;
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <pre>
@@ -9845,11 +9737,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedAppleLogo_ = value;
-          onChanged();
         } else {
           localizedAppleLogoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -9863,11 +9755,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAppleLogoBuilder_ == null) {
           localizedAppleLogo_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAppleLogoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -9879,17 +9771,18 @@ public final class Image {
        */
       public Builder mergeLocalizedAppleLogo(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAppleLogoBuilder_ == null) {
-          if (localizedAppleLogo_ != null) {
-            localizedAppleLogo_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAppleLogo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00400000) != 0) &&
+            localizedAppleLogo_ != null &&
+            localizedAppleLogo_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAppleLogoBuilder().mergeFrom(value);
           } else {
             localizedAppleLogo_ = value;
           }
-          onChanged();
         } else {
           localizedAppleLogoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -9900,14 +9793,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedAppleLogo = 33;</code>
        */
       public Builder clearLocalizedAppleLogo() {
-        if (localizedAppleLogoBuilder_ == null) {
-          localizedAppleLogo_ = null;
-          onChanged();
-        } else {
-          localizedAppleLogo_ = null;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        localizedAppleLogo_ = null;
+        if (localizedAppleLogoBuilder_ != null) {
+          localizedAppleLogoBuilder_.dispose();
           localizedAppleLogoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9918,7 +9810,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedAppleLogo = 33;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAppleLogoBuilder() {
-        
+        bitField0_ |= 0x00400000;
         onChanged();
         return getLocalizedAppleLogoFieldBuilder().getBuilder();
       }
@@ -9970,7 +9862,7 @@ public final class Image {
        * @return Whether the localizedHero field is set.
        */
       public boolean hasLocalizedHero() {
-        return localizedHeroBuilder_ != null || localizedHero_ != null;
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <pre>
@@ -10000,11 +9892,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedHero_ = value;
-          onChanged();
         } else {
           localizedHeroBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -10018,11 +9910,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedHeroBuilder_ == null) {
           localizedHero_ = builderForValue.build();
-          onChanged();
         } else {
           localizedHeroBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -10034,17 +9926,18 @@ public final class Image {
        */
       public Builder mergeLocalizedHero(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedHeroBuilder_ == null) {
-          if (localizedHero_ != null) {
-            localizedHero_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedHero_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00800000) != 0) &&
+            localizedHero_ != null &&
+            localizedHero_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedHeroBuilder().mergeFrom(value);
           } else {
             localizedHero_ = value;
           }
-          onChanged();
         } else {
           localizedHeroBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -10055,14 +9948,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedHero = 34;</code>
        */
       public Builder clearLocalizedHero() {
-        if (localizedHeroBuilder_ == null) {
-          localizedHero_ = null;
-          onChanged();
-        } else {
-          localizedHero_ = null;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        localizedHero_ = null;
+        if (localizedHeroBuilder_ != null) {
+          localizedHeroBuilder_.dispose();
           localizedHeroBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10073,7 +9965,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedHero = 34;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedHeroBuilder() {
-        
+        bitField0_ |= 0x00800000;
         onChanged();
         return getLocalizedHeroFieldBuilder().getBuilder();
       }
@@ -10125,7 +10017,7 @@ public final class Image {
        * @return Whether the localizedEventStrip field is set.
        */
       public boolean hasLocalizedEventStrip() {
-        return localizedEventStripBuilder_ != null || localizedEventStrip_ != null;
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <pre>
@@ -10155,11 +10047,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedEventStrip_ = value;
-          onChanged();
         } else {
           localizedEventStripBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
@@ -10173,11 +10065,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedEventStripBuilder_ == null) {
           localizedEventStrip_ = builderForValue.build();
-          onChanged();
         } else {
           localizedEventStripBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
@@ -10189,17 +10081,18 @@ public final class Image {
        */
       public Builder mergeLocalizedEventStrip(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedEventStripBuilder_ == null) {
-          if (localizedEventStrip_ != null) {
-            localizedEventStrip_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedEventStrip_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x01000000) != 0) &&
+            localizedEventStrip_ != null &&
+            localizedEventStrip_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedEventStripBuilder().mergeFrom(value);
           } else {
             localizedEventStrip_ = value;
           }
-          onChanged();
         } else {
           localizedEventStripBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
@@ -10210,14 +10103,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedEventStrip = 35;</code>
        */
       public Builder clearLocalizedEventStrip() {
-        if (localizedEventStripBuilder_ == null) {
-          localizedEventStrip_ = null;
-          onChanged();
-        } else {
-          localizedEventStrip_ = null;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        localizedEventStrip_ = null;
+        if (localizedEventStripBuilder_ != null) {
+          localizedEventStripBuilder_.dispose();
           localizedEventStripBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10228,7 +10120,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedEventStrip = 35;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedEventStripBuilder() {
-        
+        bitField0_ |= 0x01000000;
         onChanged();
         return getLocalizedEventStripFieldBuilder().getBuilder();
       }
@@ -10280,7 +10172,7 @@ public final class Image {
        * @return Whether the localizedStrip field is set.
        */
       public boolean hasLocalizedStrip() {
-        return localizedStripBuilder_ != null || localizedStrip_ != null;
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <pre>
@@ -10310,11 +10202,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedStrip_ = value;
-          onChanged();
         } else {
           localizedStripBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
@@ -10328,11 +10220,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedStripBuilder_ == null) {
           localizedStrip_ = builderForValue.build();
-          onChanged();
         } else {
           localizedStripBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
@@ -10344,17 +10236,18 @@ public final class Image {
        */
       public Builder mergeLocalizedStrip(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedStripBuilder_ == null) {
-          if (localizedStrip_ != null) {
-            localizedStrip_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedStrip_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x02000000) != 0) &&
+            localizedStrip_ != null &&
+            localizedStrip_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedStripBuilder().mergeFrom(value);
           } else {
             localizedStrip_ = value;
           }
-          onChanged();
         } else {
           localizedStripBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
@@ -10365,14 +10258,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedStrip = 36;</code>
        */
       public Builder clearLocalizedStrip() {
-        if (localizedStripBuilder_ == null) {
-          localizedStrip_ = null;
-          onChanged();
-        } else {
-          localizedStrip_ = null;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        localizedStrip_ = null;
+        if (localizedStripBuilder_ != null) {
+          localizedStripBuilder_.dispose();
           localizedStripBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10383,7 +10275,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedStrip = 36;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedStripBuilder() {
-        
+        bitField0_ |= 0x02000000;
         onChanged();
         return getLocalizedStripFieldBuilder().getBuilder();
       }
@@ -10435,7 +10327,7 @@ public final class Image {
        * @return Whether the localizedThumbnail field is set.
        */
       public boolean hasLocalizedThumbnail() {
-        return localizedThumbnailBuilder_ != null || localizedThumbnail_ != null;
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <pre>
@@ -10465,11 +10357,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedThumbnail_ = value;
-          onChanged();
         } else {
           localizedThumbnailBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
@@ -10483,11 +10375,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedThumbnailBuilder_ == null) {
           localizedThumbnail_ = builderForValue.build();
-          onChanged();
         } else {
           localizedThumbnailBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
@@ -10499,17 +10391,18 @@ public final class Image {
        */
       public Builder mergeLocalizedThumbnail(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedThumbnailBuilder_ == null) {
-          if (localizedThumbnail_ != null) {
-            localizedThumbnail_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedThumbnail_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x04000000) != 0) &&
+            localizedThumbnail_ != null &&
+            localizedThumbnail_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedThumbnailBuilder().mergeFrom(value);
           } else {
             localizedThumbnail_ = value;
           }
-          onChanged();
         } else {
           localizedThumbnailBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
@@ -10520,14 +10413,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedThumbnail = 37;</code>
        */
       public Builder clearLocalizedThumbnail() {
-        if (localizedThumbnailBuilder_ == null) {
-          localizedThumbnail_ = null;
-          onChanged();
-        } else {
-          localizedThumbnail_ = null;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        localizedThumbnail_ = null;
+        if (localizedThumbnailBuilder_ != null) {
+          localizedThumbnailBuilder_.dispose();
           localizedThumbnailBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10538,7 +10430,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedThumbnail = 37;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedThumbnailBuilder() {
-        
+        bitField0_ |= 0x04000000;
         onChanged();
         return getLocalizedThumbnailFieldBuilder().getBuilder();
       }
@@ -10590,7 +10482,7 @@ public final class Image {
        * @return Whether the localizedBackground field is set.
        */
       public boolean hasLocalizedBackground() {
-        return localizedBackgroundBuilder_ != null || localizedBackground_ != null;
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <pre>
@@ -10620,11 +10512,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedBackground_ = value;
-          onChanged();
         } else {
           localizedBackgroundBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -10638,11 +10530,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedBackgroundBuilder_ == null) {
           localizedBackground_ = builderForValue.build();
-          onChanged();
         } else {
           localizedBackgroundBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -10654,17 +10546,18 @@ public final class Image {
        */
       public Builder mergeLocalizedBackground(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedBackgroundBuilder_ == null) {
-          if (localizedBackground_ != null) {
-            localizedBackground_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedBackground_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x08000000) != 0) &&
+            localizedBackground_ != null &&
+            localizedBackground_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedBackgroundBuilder().mergeFrom(value);
           } else {
             localizedBackground_ = value;
           }
-          onChanged();
         } else {
           localizedBackgroundBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -10675,14 +10568,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedBackground = 38;</code>
        */
       public Builder clearLocalizedBackground() {
-        if (localizedBackgroundBuilder_ == null) {
-          localizedBackground_ = null;
-          onChanged();
-        } else {
-          localizedBackground_ = null;
+        bitField0_ = (bitField0_ & ~0x08000000);
+        localizedBackground_ = null;
+        if (localizedBackgroundBuilder_ != null) {
+          localizedBackgroundBuilder_.dispose();
           localizedBackgroundBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10693,7 +10585,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedBackground = 38;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedBackgroundBuilder() {
-        
+        bitField0_ |= 0x08000000;
         onChanged();
         return getLocalizedBackgroundFieldBuilder().getBuilder();
       }
@@ -10745,7 +10637,7 @@ public final class Image {
        * @return Whether the localizedFooter field is set.
        */
       public boolean hasLocalizedFooter() {
-        return localizedFooterBuilder_ != null || localizedFooter_ != null;
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <pre>
@@ -10775,11 +10667,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedFooter_ = value;
-          onChanged();
         } else {
           localizedFooterBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
@@ -10793,11 +10685,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedFooterBuilder_ == null) {
           localizedFooter_ = builderForValue.build();
-          onChanged();
         } else {
           localizedFooterBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
@@ -10809,17 +10701,18 @@ public final class Image {
        */
       public Builder mergeLocalizedFooter(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedFooterBuilder_ == null) {
-          if (localizedFooter_ != null) {
-            localizedFooter_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedFooter_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x10000000) != 0) &&
+            localizedFooter_ != null &&
+            localizedFooter_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedFooterBuilder().mergeFrom(value);
           } else {
             localizedFooter_ = value;
           }
-          onChanged();
         } else {
           localizedFooterBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
@@ -10830,14 +10723,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedFooter = 39;</code>
        */
       public Builder clearLocalizedFooter() {
-        if (localizedFooterBuilder_ == null) {
-          localizedFooter_ = null;
-          onChanged();
-        } else {
-          localizedFooter_ = null;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        localizedFooter_ = null;
+        if (localizedFooterBuilder_ != null) {
+          localizedFooterBuilder_.dispose();
           localizedFooterBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10848,7 +10740,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedFooter = 39;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedFooterBuilder() {
-        
+        bitField0_ |= 0x10000000;
         onChanged();
         return getLocalizedFooterFieldBuilder().getBuilder();
       }
@@ -10900,7 +10792,7 @@ public final class Image {
        * @return Whether the localizedSecurity field is set.
        */
       public boolean hasLocalizedSecurity() {
-        return localizedSecurityBuilder_ != null || localizedSecurity_ != null;
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <pre>
@@ -10930,11 +10822,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedSecurity_ = value;
-          onChanged();
         } else {
           localizedSecurityBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
@@ -10948,11 +10840,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedSecurityBuilder_ == null) {
           localizedSecurity_ = builderForValue.build();
-          onChanged();
         } else {
           localizedSecurityBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
@@ -10964,17 +10856,18 @@ public final class Image {
        */
       public Builder mergeLocalizedSecurity(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedSecurityBuilder_ == null) {
-          if (localizedSecurity_ != null) {
-            localizedSecurity_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedSecurity_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x20000000) != 0) &&
+            localizedSecurity_ != null &&
+            localizedSecurity_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedSecurityBuilder().mergeFrom(value);
           } else {
             localizedSecurity_ = value;
           }
-          onChanged();
         } else {
           localizedSecurityBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
@@ -10985,14 +10878,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedSecurity = 40;</code>
        */
       public Builder clearLocalizedSecurity() {
-        if (localizedSecurityBuilder_ == null) {
-          localizedSecurity_ = null;
-          onChanged();
-        } else {
-          localizedSecurity_ = null;
+        bitField0_ = (bitField0_ & ~0x20000000);
+        localizedSecurity_ = null;
+        if (localizedSecurityBuilder_ != null) {
+          localizedSecurityBuilder_.dispose();
           localizedSecurityBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11003,7 +10895,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedSecurity = 40;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedSecurityBuilder() {
-        
+        bitField0_ |= 0x20000000;
         onChanged();
         return getLocalizedSecurityFieldBuilder().getBuilder();
       }
@@ -11055,7 +10947,7 @@ public final class Image {
        * @return Whether the localizedPrivilege field is set.
        */
       public boolean hasLocalizedPrivilege() {
-        return localizedPrivilegeBuilder_ != null || localizedPrivilege_ != null;
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <pre>
@@ -11085,11 +10977,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedPrivilege_ = value;
-          onChanged();
         } else {
           localizedPrivilegeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
@@ -11103,11 +10995,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedPrivilegeBuilder_ == null) {
           localizedPrivilege_ = builderForValue.build();
-          onChanged();
         } else {
           localizedPrivilegeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
@@ -11119,17 +11011,18 @@ public final class Image {
        */
       public Builder mergeLocalizedPrivilege(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedPrivilegeBuilder_ == null) {
-          if (localizedPrivilege_ != null) {
-            localizedPrivilege_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedPrivilege_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x40000000) != 0) &&
+            localizedPrivilege_ != null &&
+            localizedPrivilege_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedPrivilegeBuilder().mergeFrom(value);
           } else {
             localizedPrivilege_ = value;
           }
-          onChanged();
         } else {
           localizedPrivilegeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
@@ -11140,14 +11033,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedPrivilege = 41;</code>
        */
       public Builder clearLocalizedPrivilege() {
-        if (localizedPrivilegeBuilder_ == null) {
-          localizedPrivilege_ = null;
-          onChanged();
-        } else {
-          localizedPrivilege_ = null;
+        bitField0_ = (bitField0_ & ~0x40000000);
+        localizedPrivilege_ = null;
+        if (localizedPrivilegeBuilder_ != null) {
+          localizedPrivilegeBuilder_.dispose();
           localizedPrivilegeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11158,7 +11050,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedPrivilege = 41;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedPrivilegeBuilder() {
-        
+        bitField0_ |= 0x40000000;
         onChanged();
         return getLocalizedPrivilegeFieldBuilder().getBuilder();
       }
@@ -11210,7 +11102,7 @@ public final class Image {
        * @return Whether the localizedAirlineAlliance field is set.
        */
       public boolean hasLocalizedAirlineAlliance() {
-        return localizedAirlineAllianceBuilder_ != null || localizedAirlineAlliance_ != null;
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <pre>
@@ -11240,11 +11132,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedAirlineAlliance_ = value;
-          onChanged();
         } else {
           localizedAirlineAllianceBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -11258,11 +11150,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAirlineAllianceBuilder_ == null) {
           localizedAirlineAlliance_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAirlineAllianceBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -11274,17 +11166,18 @@ public final class Image {
        */
       public Builder mergeLocalizedAirlineAlliance(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAirlineAllianceBuilder_ == null) {
-          if (localizedAirlineAlliance_ != null) {
-            localizedAirlineAlliance_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAirlineAlliance_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x80000000) != 0) &&
+            localizedAirlineAlliance_ != null &&
+            localizedAirlineAlliance_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAirlineAllianceBuilder().mergeFrom(value);
           } else {
             localizedAirlineAlliance_ = value;
           }
-          onChanged();
         } else {
           localizedAirlineAllianceBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -11295,14 +11188,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedAirlineAlliance = 42;</code>
        */
       public Builder clearLocalizedAirlineAlliance() {
-        if (localizedAirlineAllianceBuilder_ == null) {
-          localizedAirlineAlliance_ = null;
-          onChanged();
-        } else {
-          localizedAirlineAlliance_ = null;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        localizedAirlineAlliance_ = null;
+        if (localizedAirlineAllianceBuilder_ != null) {
+          localizedAirlineAllianceBuilder_.dispose();
           localizedAirlineAllianceBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11313,7 +11205,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedAirlineAlliance = 42;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAirlineAllianceBuilder() {
-        
+        bitField0_ |= 0x80000000;
         onChanged();
         return getLocalizedAirlineAllianceFieldBuilder().getBuilder();
       }
@@ -11365,7 +11257,7 @@ public final class Image {
        * @return Whether the localizedPersonalization field is set.
        */
       public boolean hasLocalizedPersonalization() {
-        return localizedPersonalizationBuilder_ != null || localizedPersonalization_ != null;
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -11395,11 +11287,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedPersonalization_ = value;
-          onChanged();
         } else {
           localizedPersonalizationBuilder_.setMessage(value);
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11413,11 +11305,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedPersonalizationBuilder_ == null) {
           localizedPersonalization_ = builderForValue.build();
-          onChanged();
         } else {
           localizedPersonalizationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11429,17 +11321,18 @@ public final class Image {
        */
       public Builder mergeLocalizedPersonalization(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedPersonalizationBuilder_ == null) {
-          if (localizedPersonalization_ != null) {
-            localizedPersonalization_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedPersonalization_).mergeFrom(value).buildPartial();
+          if (((bitField1_ & 0x00000001) != 0) &&
+            localizedPersonalization_ != null &&
+            localizedPersonalization_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedPersonalizationBuilder().mergeFrom(value);
           } else {
             localizedPersonalization_ = value;
           }
-          onChanged();
         } else {
           localizedPersonalizationBuilder_.mergeFrom(value);
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -11450,14 +11343,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedPersonalization = 43;</code>
        */
       public Builder clearLocalizedPersonalization() {
-        if (localizedPersonalizationBuilder_ == null) {
-          localizedPersonalization_ = null;
-          onChanged();
-        } else {
-          localizedPersonalization_ = null;
+        bitField1_ = (bitField1_ & ~0x00000001);
+        localizedPersonalization_ = null;
+        if (localizedPersonalizationBuilder_ != null) {
+          localizedPersonalizationBuilder_.dispose();
           localizedPersonalizationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11468,7 +11360,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedPersonalization = 43;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedPersonalizationBuilder() {
-        
+        bitField1_ |= 0x00000001;
         onChanged();
         return getLocalizedPersonalizationFieldBuilder().getBuilder();
       }
@@ -11520,7 +11412,7 @@ public final class Image {
        * @return Whether the localizedBanner field is set.
        */
       public boolean hasLocalizedBanner() {
-        return localizedBannerBuilder_ != null || localizedBanner_ != null;
+        return ((bitField1_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -11550,11 +11442,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedBanner_ = value;
-          onChanged();
         } else {
           localizedBannerBuilder_.setMessage(value);
         }
-
+        bitField1_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11568,11 +11460,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedBannerBuilder_ == null) {
           localizedBanner_ = builderForValue.build();
-          onChanged();
         } else {
           localizedBannerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField1_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11584,17 +11476,18 @@ public final class Image {
        */
       public Builder mergeLocalizedBanner(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedBannerBuilder_ == null) {
-          if (localizedBanner_ != null) {
-            localizedBanner_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedBanner_).mergeFrom(value).buildPartial();
+          if (((bitField1_ & 0x00000002) != 0) &&
+            localizedBanner_ != null &&
+            localizedBanner_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedBannerBuilder().mergeFrom(value);
           } else {
             localizedBanner_ = value;
           }
-          onChanged();
         } else {
           localizedBannerBuilder_.mergeFrom(value);
         }
-
+        bitField1_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11605,14 +11498,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedBanner = 44;</code>
        */
       public Builder clearLocalizedBanner() {
-        if (localizedBannerBuilder_ == null) {
-          localizedBanner_ = null;
-          onChanged();
-        } else {
-          localizedBanner_ = null;
+        bitField1_ = (bitField1_ & ~0x00000002);
+        localizedBanner_ = null;
+        if (localizedBannerBuilder_ != null) {
+          localizedBannerBuilder_.dispose();
           localizedBannerBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11623,7 +11515,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedBanner = 44;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedBannerBuilder() {
-        
+        bitField1_ |= 0x00000002;
         onChanged();
         return getLocalizedBannerFieldBuilder().getBuilder();
       }
@@ -11675,7 +11567,7 @@ public final class Image {
        * @return Whether the localizedMessage field is set.
        */
       public boolean hasLocalizedMessage() {
-        return localizedMessageBuilder_ != null || localizedMessage_ != null;
+        return ((bitField1_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -11705,11 +11597,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedMessage_ = value;
-          onChanged();
         } else {
           localizedMessageBuilder_.setMessage(value);
         }
-
+        bitField1_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11723,11 +11615,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedMessageBuilder_ == null) {
           localizedMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField1_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11739,17 +11631,18 @@ public final class Image {
        */
       public Builder mergeLocalizedMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedMessageBuilder_ == null) {
-          if (localizedMessage_ != null) {
-            localizedMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedMessage_).mergeFrom(value).buildPartial();
+          if (((bitField1_ & 0x00000004) != 0) &&
+            localizedMessage_ != null &&
+            localizedMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedMessageBuilder().mergeFrom(value);
           } else {
             localizedMessage_ = value;
           }
-          onChanged();
         } else {
           localizedMessageBuilder_.mergeFrom(value);
         }
-
+        bitField1_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -11760,14 +11653,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedMessage = 45;</code>
        */
       public Builder clearLocalizedMessage() {
-        if (localizedMessageBuilder_ == null) {
-          localizedMessage_ = null;
-          onChanged();
-        } else {
-          localizedMessage_ = null;
+        bitField1_ = (bitField1_ & ~0x00000004);
+        localizedMessage_ = null;
+        if (localizedMessageBuilder_ != null) {
+          localizedMessageBuilder_.dispose();
           localizedMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11778,7 +11670,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedMessage = 45;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedMessageBuilder() {
-        
+        bitField1_ |= 0x00000004;
         onChanged();
         return getLocalizedMessageFieldBuilder().getBuilder();
       }
@@ -12031,11 +11923,6 @@ public final class Image {
       return new ImageRecord();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageRecord_descriptor;
@@ -12050,7 +11937,8 @@ public final class Image {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
      * @return The id.
@@ -12088,7 +11976,8 @@ public final class Image {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 2;</code>
      * @return The name.
@@ -12126,7 +12015,8 @@ public final class Image {
     }
 
     public static final int URL_FIELD_NUMBER = 3;
-    private volatile java.lang.Object url_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
     /**
      * <code>string url = 3;</code>
      * @return The url.
@@ -12164,7 +12054,7 @@ public final class Image {
     }
 
     public static final int USE_FIELD_NUMBER = 5;
-    private int use_;
+    private int use_ = 0;
     /**
      * <code>.io.ImageUse use = 5;</code>
      * @return The enum numeric value on the wire for use.
@@ -12177,20 +12067,19 @@ public final class Image {
      * @return The use.
      */
     @java.lang.Override public com.passkit.grpc.Image.ImageUse getUse() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Image.ImageUse result = com.passkit.grpc.Image.ImageUse.valueOf(use_);
+      com.passkit.grpc.Image.ImageUse result = com.passkit.grpc.Image.ImageUse.forNumber(use_);
       return result == null ? com.passkit.grpc.Image.ImageUse.UNRECOGNIZED : result;
     }
 
     public static final int LANGUAGES_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> languages_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.Localization.LanguageCode> languages_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.Localization.LanguageCode>() {
               public com.passkit.grpc.Localization.LanguageCode convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.Localization.LanguageCode result = com.passkit.grpc.Localization.LanguageCode.valueOf(from);
+                com.passkit.grpc.Localization.LanguageCode result = com.passkit.grpc.Localization.LanguageCode.forNumber(from);
                 return result == null ? com.passkit.grpc.Localization.LanguageCode.UNRECOGNIZED : result;
               }
             };
@@ -12241,7 +12130,8 @@ public final class Image {
     private int languagesMemoizedSerializedSize;
 
     public static final int OWNERUSERNAME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object ownerUsername_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerUsername_ = "";
     /**
      * <code>string ownerUsername = 7;</code>
      * @return The ownerUsername.
@@ -12301,7 +12191,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int UPDATEDAT_FIELD_NUMBER = 9;
@@ -12327,7 +12217,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
-      return getUpdatedAt();
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -12614,28 +12504,22 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         url_ = "";
-
         use_ = 0;
-
         languages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         ownerUsername_ = "";
-
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-        if (updatedAtBuilder_ == null) {
-          updatedAt_ = null;
-        } else {
-          updatedAt_ = null;
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
           updatedAtBuilder_ = null;
         }
         return this;
@@ -12664,63 +12548,49 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.ImageRecord buildPartial() {
         com.passkit.grpc.Image.ImageRecord result = new com.passkit.grpc.Image.ImageRecord(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.name_ = name_;
-        result.url_ = url_;
-        result.use_ = use_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          languages_ = java.util.Collections.unmodifiableList(languages_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.languages_ = languages_;
-        result.ownerUsername_ = ownerUsername_;
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        if (updatedAtBuilder_ == null) {
-          result.updatedAt_ = updatedAt_;
-        } else {
-          result.updatedAt_ = updatedAtBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.Image.ImageRecord result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          languages_ = java.util.Collections.unmodifiableList(languages_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.languages_ = languages_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.Image.ImageRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.url_ = url_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.use_ = use_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.ownerUsername_ = ownerUsername_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.updatedAt_ = updatedAtBuilder_ == null
+              ? updatedAt_
+              : updatedAtBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.ImageRecord) {
@@ -12735,14 +12605,17 @@ public final class Image {
         if (other == com.passkit.grpc.Image.ImageRecord.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.use_ != 0) {
@@ -12751,7 +12624,7 @@ public final class Image {
         if (!other.languages_.isEmpty()) {
           if (languages_.isEmpty()) {
             languages_ = other.languages_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureLanguagesIsMutable();
             languages_.addAll(other.languages_);
@@ -12760,6 +12633,7 @@ public final class Image {
         }
         if (!other.getOwnerUsername().isEmpty()) {
           ownerUsername_ = other.ownerUsername_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasCreatedAt()) {
@@ -12796,22 +12670,22 @@ public final class Image {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 url_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 40: {
                 use_ = input.readEnum();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 40
               case 48: {
@@ -12833,21 +12707,21 @@ public final class Image {
               } // case 50
               case 58: {
                 ownerUsername_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getUpdatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 74
               default: {
@@ -12908,11 +12782,9 @@ public final class Image {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12921,8 +12793,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -12933,12 +12805,10 @@ public final class Image {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12984,11 +12854,9 @@ public final class Image {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -12997,8 +12865,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -13009,12 +12877,10 @@ public final class Image {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -13060,11 +12926,9 @@ public final class Image {
        */
       public Builder setUrl(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         url_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -13073,8 +12937,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
-        
         url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -13085,12 +12949,10 @@ public final class Image {
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         url_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -13109,8 +12971,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setUseValue(int value) {
-        
         use_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -13120,8 +12982,7 @@ public final class Image {
        */
       @java.lang.Override
       public com.passkit.grpc.Image.ImageUse getUse() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Image.ImageUse result = com.passkit.grpc.Image.ImageUse.valueOf(use_);
+        com.passkit.grpc.Image.ImageUse result = com.passkit.grpc.Image.ImageUse.forNumber(use_);
         return result == null ? com.passkit.grpc.Image.ImageUse.UNRECOGNIZED : result;
       }
       /**
@@ -13133,7 +12994,7 @@ public final class Image {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         use_ = value.getNumber();
         onChanged();
         return this;
@@ -13143,7 +13004,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUse() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         use_ = 0;
         onChanged();
         return this;
@@ -13152,9 +13013,9 @@ public final class Image {
       private java.util.List<java.lang.Integer> languages_ =
         java.util.Collections.emptyList();
       private void ensureLanguagesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           languages_ = new java.util.ArrayList<java.lang.Integer>(languages_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
         }
       }
       /**
@@ -13230,7 +13091,7 @@ public final class Image {
        */
       public Builder clearLanguages() {
         languages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -13330,11 +13191,9 @@ public final class Image {
        */
       public Builder setOwnerUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ownerUsername_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -13343,8 +13202,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearOwnerUsername() {
-        
         ownerUsername_ = getDefaultInstance().getOwnerUsername();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -13355,12 +13214,10 @@ public final class Image {
        */
       public Builder setOwnerUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ownerUsername_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -13373,7 +13230,7 @@ public final class Image {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 8;</code>
@@ -13395,11 +13252,11 @@ public final class Image {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -13409,11 +13266,11 @@ public final class Image {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -13421,38 +13278,38 @@ public final class Image {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 8;</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -13492,7 +13349,7 @@ public final class Image {
        * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
-        return updatedAtBuilder_ != null || updatedAt_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp updatedAt = 9;</code>
@@ -13514,11 +13371,11 @@ public final class Image {
             throw new NullPointerException();
           }
           updatedAt_ = value;
-          onChanged();
         } else {
           updatedAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -13528,11 +13385,11 @@ public final class Image {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedAtBuilder_ == null) {
           updatedAt_ = builderForValue.build();
-          onChanged();
         } else {
           updatedAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -13540,38 +13397,38 @@ public final class Image {
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
-          if (updatedAt_ != null) {
-            updatedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            updatedAt_ != null &&
+            updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedAtBuilder().mergeFrom(value);
           } else {
             updatedAt_ = value;
           }
-          onChanged();
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp updatedAt = 9;</code>
        */
       public Builder clearUpdatedAt() {
-        if (updatedAtBuilder_ == null) {
-          updatedAt_ = null;
-          onChanged();
-        } else {
-          updatedAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
           updatedAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp updatedAt = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getUpdatedAtFieldBuilder().getBuilder();
       }
@@ -13713,11 +13570,6 @@ public final class Image {
       return new ProfileImageInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ProfileImageInput_descriptor;
@@ -13732,7 +13584,8 @@ public final class Image {
     }
 
     public static final int IMAGEDATA_FIELD_NUMBER = 1;
-    private volatile java.lang.Object imageData_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object imageData_ = "";
     /**
      * <pre>
      * Provide an image URL or base64 image data.
@@ -13964,8 +13817,8 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         imageData_ = "";
-
         return this;
       }
 
@@ -13992,43 +13845,18 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.ProfileImageInput buildPartial() {
         com.passkit.grpc.Image.ProfileImageInput result = new com.passkit.grpc.Image.ProfileImageInput(this);
-        result.imageData_ = imageData_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.ProfileImageInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.imageData_ = imageData_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.ProfileImageInput) {
@@ -14043,6 +13871,7 @@ public final class Image {
         if (other == com.passkit.grpc.Image.ProfileImageInput.getDefaultInstance()) return this;
         if (!other.getImageData().isEmpty()) {
           imageData_ = other.imageData_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -14073,7 +13902,7 @@ public final class Image {
                 break;
               case 10: {
                 imageData_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -14091,6 +13920,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object imageData_ = "";
       /**
@@ -14145,11 +13975,9 @@ public final class Image {
        */
       public Builder setImageData(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         imageData_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14162,8 +13990,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearImageData() {
-        
         imageData_ = getDefaultInstance().getImageData();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -14178,12 +14006,10 @@ public final class Image {
        */
       public Builder setImageDataBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         imageData_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14302,11 +14128,6 @@ public final class Image {
       return new MultipleImages();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_MultipleImages_descriptor;
@@ -14321,6 +14142,7 @@ public final class Image {
     }
 
     public static final int IMAGES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Image.ImageRecord> images_;
     /**
      * <code>repeated .io.ImageRecord images = 1;</code>
@@ -14550,6 +14372,7 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (imagesBuilder_ == null) {
           images_ = java.util.Collections.emptyList();
         } else {
@@ -14583,7 +14406,13 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.MultipleImages buildPartial() {
         com.passkit.grpc.Image.MultipleImages result = new com.passkit.grpc.Image.MultipleImages(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Image.MultipleImages result) {
         if (imagesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             images_ = java.util.Collections.unmodifiableList(images_);
@@ -14593,42 +14422,12 @@ public final class Image {
         } else {
           result.images_ = imagesBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.MultipleImages result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.MultipleImages) {
@@ -15083,11 +14882,6 @@ public final class Image {
       return new StampImageRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_StampImageRequest_descriptor;
@@ -15102,7 +14896,8 @@ public final class Image {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit Image Id.
@@ -15148,7 +14943,7 @@ public final class Image {
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private long status_;
+    private long status_ = 0L;
     /**
      * <pre>
      * a bitmask indicating the stamped status (E.g. a value of 22 indicates stamps 2, 3 and 5 are stamped).
@@ -15361,10 +15156,9 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         status_ = 0L;
-
         return this;
       }
 
@@ -15391,44 +15185,21 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.StampImageRequest buildPartial() {
         com.passkit.grpc.Image.StampImageRequest result = new com.passkit.grpc.Image.StampImageRequest(this);
-        result.id_ = id_;
-        result.status_ = status_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.StampImageRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.StampImageRequest) {
@@ -15443,6 +15214,7 @@ public final class Image {
         if (other == com.passkit.grpc.Image.StampImageRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getStatus() != 0L) {
@@ -15476,12 +15248,12 @@ public final class Image {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 status_ = input.readUInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -15499,6 +15271,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -15553,11 +15326,9 @@ public final class Image {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15570,8 +15341,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -15586,12 +15357,10 @@ public final class Image {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15619,8 +15388,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setStatus(long value) {
-        
+
         status_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -15633,7 +15403,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0L;
         onChanged();
         return this;
@@ -15776,11 +15546,6 @@ public final class Image {
       return new CreateImageInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_CreateImageInput_descriptor;
@@ -15795,7 +15560,8 @@ public final class Image {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * If multiple images types are uploaded, then the image type will be appended to the name.
@@ -15875,7 +15641,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Image.ImageDataOrBuilder getImageDataOrBuilder() {
-      return getImageData();
+      return imageData_ == null ? com.passkit.grpc.Image.ImageData.getDefaultInstance() : imageData_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -16081,12 +15847,11 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
-        if (imageDataBuilder_ == null) {
-          imageData_ = null;
-        } else {
-          imageData_ = null;
+        imageData_ = null;
+        if (imageDataBuilder_ != null) {
+          imageDataBuilder_.dispose();
           imageDataBuilder_ = null;
         }
         return this;
@@ -16115,48 +15880,23 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.CreateImageInput buildPartial() {
         com.passkit.grpc.Image.CreateImageInput result = new com.passkit.grpc.Image.CreateImageInput(this);
-        result.name_ = name_;
-        if (imageDataBuilder_ == null) {
-          result.imageData_ = imageData_;
-        } else {
-          result.imageData_ = imageDataBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.CreateImageInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.imageData_ = imageDataBuilder_ == null
+              ? imageData_
+              : imageDataBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.CreateImageInput) {
@@ -16171,6 +15911,7 @@ public final class Image {
         if (other == com.passkit.grpc.Image.CreateImageInput.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasImageData()) {
@@ -16204,14 +15945,14 @@ public final class Image {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getImageDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -16229,6 +15970,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -16283,11 +16025,9 @@ public final class Image {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16300,8 +16040,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -16316,12 +16056,10 @@ public final class Image {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16338,7 +16076,7 @@ public final class Image {
        * @return Whether the imageData field is set.
        */
       public boolean hasImageData() {
-        return imageDataBuilder_ != null || imageData_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -16368,11 +16106,11 @@ public final class Image {
             throw new NullPointerException();
           }
           imageData_ = value;
-          onChanged();
         } else {
           imageDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16386,11 +16124,11 @@ public final class Image {
           com.passkit.grpc.Image.ImageData.Builder builderForValue) {
         if (imageDataBuilder_ == null) {
           imageData_ = builderForValue.build();
-          onChanged();
         } else {
           imageDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16402,17 +16140,18 @@ public final class Image {
        */
       public Builder mergeImageData(com.passkit.grpc.Image.ImageData value) {
         if (imageDataBuilder_ == null) {
-          if (imageData_ != null) {
-            imageData_ =
-              com.passkit.grpc.Image.ImageData.newBuilder(imageData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            imageData_ != null &&
+            imageData_ != com.passkit.grpc.Image.ImageData.getDefaultInstance()) {
+            getImageDataBuilder().mergeFrom(value);
           } else {
             imageData_ = value;
           }
-          onChanged();
         } else {
           imageDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16423,14 +16162,13 @@ public final class Image {
        * <code>.io.ImageData imageData = 2;</code>
        */
       public Builder clearImageData() {
-        if (imageDataBuilder_ == null) {
-          imageData_ = null;
-          onChanged();
-        } else {
-          imageData_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        imageData_ = null;
+        if (imageDataBuilder_ != null) {
+          imageDataBuilder_.dispose();
           imageDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -16441,7 +16179,7 @@ public final class Image {
        * <code>.io.ImageData imageData = 2;</code>
        */
       public com.passkit.grpc.Image.ImageData.Builder getImageDataBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getImageDataFieldBuilder().getBuilder();
       }
@@ -16660,11 +16398,6 @@ public final class Image {
       return new UpdateImageInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_UpdateImageInput_descriptor;
@@ -16679,7 +16412,8 @@ public final class Image {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * The image id.
@@ -16725,7 +16459,8 @@ public final class Image {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Optional, if omitted, the original name will remain the same.
@@ -16771,7 +16506,8 @@ public final class Image {
     }
 
     public static final int IMAGEDATA_FIELD_NUMBER = 3;
-    private volatile java.lang.Object imageData_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object imageData_ = "";
     /**
      * <pre>
      * Optional, if omitted, the original image will remain the same.
@@ -16851,7 +16587,7 @@ public final class Image {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedImageDataOrBuilder() {
-      return getLocalizedImageData();
+      return localizedImageData_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedImageData_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -17077,16 +16813,13 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         imageData_ = "";
-
-        if (localizedImageDataBuilder_ == null) {
-          localizedImageData_ = null;
-        } else {
-          localizedImageData_ = null;
+        localizedImageData_ = null;
+        if (localizedImageDataBuilder_ != null) {
+          localizedImageDataBuilder_.dispose();
           localizedImageDataBuilder_ = null;
         }
         return this;
@@ -17115,50 +16848,29 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.UpdateImageInput buildPartial() {
         com.passkit.grpc.Image.UpdateImageInput result = new com.passkit.grpc.Image.UpdateImageInput(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.imageData_ = imageData_;
-        if (localizedImageDataBuilder_ == null) {
-          result.localizedImageData_ = localizedImageData_;
-        } else {
-          result.localizedImageData_ = localizedImageDataBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.UpdateImageInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.imageData_ = imageData_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedImageData_ = localizedImageDataBuilder_ == null
+              ? localizedImageData_
+              : localizedImageDataBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.UpdateImageInput) {
@@ -17173,14 +16885,17 @@ public final class Image {
         if (other == com.passkit.grpc.Image.UpdateImageInput.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getImageData().isEmpty()) {
           imageData_ = other.imageData_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedImageData()) {
@@ -17214,24 +16929,24 @@ public final class Image {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 imageData_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedImageDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -17249,6 +16964,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -17303,11 +17019,9 @@ public final class Image {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17320,8 +17034,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -17336,12 +17050,10 @@ public final class Image {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17399,11 +17111,9 @@ public final class Image {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -17416,8 +17126,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -17432,12 +17142,10 @@ public final class Image {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -17495,11 +17203,9 @@ public final class Image {
        */
       public Builder setImageData(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         imageData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -17512,8 +17218,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearImageData() {
-        
         imageData_ = getDefaultInstance().getImageData();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -17528,12 +17234,10 @@ public final class Image {
        */
       public Builder setImageDataBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         imageData_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -17550,7 +17254,7 @@ public final class Image {
        * @return Whether the localizedImageData field is set.
        */
       public boolean hasLocalizedImageData() {
-        return localizedImageDataBuilder_ != null || localizedImageData_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -17580,11 +17284,11 @@ public final class Image {
             throw new NullPointerException();
           }
           localizedImageData_ = value;
-          onChanged();
         } else {
           localizedImageDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -17598,11 +17302,11 @@ public final class Image {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedImageDataBuilder_ == null) {
           localizedImageData_ = builderForValue.build();
-          onChanged();
         } else {
           localizedImageDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -17614,17 +17318,18 @@ public final class Image {
        */
       public Builder mergeLocalizedImageData(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedImageDataBuilder_ == null) {
-          if (localizedImageData_ != null) {
-            localizedImageData_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedImageData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedImageData_ != null &&
+            localizedImageData_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedImageDataBuilder().mergeFrom(value);
           } else {
             localizedImageData_ = value;
           }
-          onChanged();
         } else {
           localizedImageDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -17635,14 +17340,13 @@ public final class Image {
        * <code>.io.LocalizedString localizedImageData = 4;</code>
        */
       public Builder clearLocalizedImageData() {
-        if (localizedImageDataBuilder_ == null) {
-          localizedImageData_ = null;
-          onChanged();
-        } else {
-          localizedImageData_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedImageData_ = null;
+        if (localizedImageDataBuilder_ != null) {
+          localizedImageDataBuilder_.dispose();
           localizedImageDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17653,7 +17357,7 @@ public final class Image {
        * <code>.io.LocalizedString localizedImageData = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedImageDataBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedImageDataFieldBuilder().getBuilder();
       }
@@ -17789,11 +17493,6 @@ public final class Image {
       return new ImageBundle();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_ImageBundle_descriptor;
@@ -17808,7 +17507,7 @@ public final class Image {
     }
 
     public static final int IMAGE_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString image_;
+    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes image = 1;</code>
      * @return The image.
@@ -18006,8 +17705,8 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         image_ = com.google.protobuf.ByteString.EMPTY;
-
         return this;
       }
 
@@ -18034,43 +17733,18 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.ImageBundle buildPartial() {
         com.passkit.grpc.Image.ImageBundle result = new com.passkit.grpc.Image.ImageBundle(this);
-        result.image_ = image_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.ImageBundle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.image_ = image_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.ImageBundle) {
@@ -18114,7 +17788,7 @@ public final class Image {
                 break;
               case 10: {
                 image_ = input.readBytes();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -18132,6 +17806,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
       /**
@@ -18148,11 +17823,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setImage(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         image_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18161,7 +17834,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearImage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         image_ = getDefaultInstance().getImage();
         onChanged();
         return this;
@@ -18298,11 +17971,6 @@ public final class Image {
       return new LocalizedImageInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_LocalizedImageInput_descriptor;
@@ -18317,7 +17985,8 @@ public final class Image {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Image id.
@@ -18363,7 +18032,8 @@ public final class Image {
     }
 
     public static final int LANGUAGECODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object languageCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object languageCode_ = "";
     /**
      * <pre>
      * Language code of the image.
@@ -18605,10 +18275,9 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         languageCode_ = "";
-
         return this;
       }
 
@@ -18635,44 +18304,21 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.LocalizedImageInput buildPartial() {
         com.passkit.grpc.Image.LocalizedImageInput result = new com.passkit.grpc.Image.LocalizedImageInput(this);
-        result.id_ = id_;
-        result.languageCode_ = languageCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.LocalizedImageInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.languageCode_ = languageCode_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.LocalizedImageInput) {
@@ -18687,10 +18333,12 @@ public final class Image {
         if (other == com.passkit.grpc.Image.LocalizedImageInput.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getLanguageCode().isEmpty()) {
           languageCode_ = other.languageCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -18721,12 +18369,12 @@ public final class Image {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 languageCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -18744,6 +18392,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -18798,11 +18447,9 @@ public final class Image {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18815,8 +18462,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -18831,12 +18478,10 @@ public final class Image {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18894,11 +18539,9 @@ public final class Image {
        */
       public Builder setLanguageCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         languageCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18911,8 +18554,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearLanguageCode() {
-        
         languageCode_ = getDefaultInstance().getLanguageCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18927,12 +18570,10 @@ public final class Image {
        */
       public Builder setLanguageCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         languageCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -19245,11 +18886,6 @@ public final class Image {
       return new StampImageConfig();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Image.internal_static_io_StampImageConfig_descriptor;
@@ -19264,7 +18900,8 @@ public final class Image {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
      * @return The id.
@@ -19302,7 +18939,7 @@ public final class Image {
     }
 
     public static final int PADDING_FIELD_NUMBER = 2;
-    private float padding_;
+    private float padding_ = 0F;
     /**
      * <code>float padding = 2;</code>
      * @return The padding.
@@ -19313,7 +18950,7 @@ public final class Image {
     }
 
     public static final int TOTALSTAMPS_FIELD_NUMBER = 3;
-    private int totalStamps_;
+    private int totalStamps_ = 0;
     /**
      * <code>uint32 totalStamps = 3;</code>
      * @return The totalStamps.
@@ -19324,7 +18961,8 @@ public final class Image {
     }
 
     public static final int STAMPIMAGE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object stampImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stampImage_ = "";
     /**
      * <code>string stampImage = 4;</code>
      * @return The stampImage.
@@ -19362,7 +19000,8 @@ public final class Image {
     }
 
     public static final int UNSTAMPIMAGE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object unstampImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unstampImage_ = "";
     /**
      * <code>string unstampImage = 5;</code>
      * @return The unstampImage.
@@ -19400,7 +19039,8 @@ public final class Image {
     }
 
     public static final int BACKGROUNDIMAGE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object backgroundImage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object backgroundImage_ = "";
     /**
      * <code>string backgroundImage = 6;</code>
      * @return The backgroundImage.
@@ -19438,7 +19078,8 @@ public final class Image {
     }
 
     public static final int BACKGROUNDCOLOR_FIELD_NUMBER = 7;
-    private volatile java.lang.Object backgroundColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object backgroundColor_ = "";
     /**
      * <code>string backgroundColor = 7;</code>
      * @return The backgroundColor.
@@ -19476,7 +19117,7 @@ public final class Image {
     }
 
     public static final int BACKGROUNDOPACITY_FIELD_NUMBER = 8;
-    private float backgroundOpacity_;
+    private float backgroundOpacity_ = 0F;
     /**
      * <code>float backgroundOpacity = 8;</code>
      * @return The backgroundOpacity.
@@ -19487,7 +19128,8 @@ public final class Image {
     }
 
     public static final int STAMPCOLOR_FIELD_NUMBER = 9;
-    private volatile java.lang.Object stampColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stampColor_ = "";
     /**
      * <code>string stampColor = 9;</code>
      * @return The stampColor.
@@ -19525,7 +19167,7 @@ public final class Image {
     }
 
     public static final int STAMPOPACITY_FIELD_NUMBER = 10;
-    private float stampOpacity_;
+    private float stampOpacity_ = 0F;
     /**
      * <code>float stampOpacity = 10;</code>
      * @return The stampOpacity.
@@ -19536,7 +19178,8 @@ public final class Image {
     }
 
     public static final int UNSTAMPCOLOR_FIELD_NUMBER = 11;
-    private volatile java.lang.Object unstampColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object unstampColor_ = "";
     /**
      * <code>string unstampColor = 11;</code>
      * @return The unstampColor.
@@ -19574,7 +19217,7 @@ public final class Image {
     }
 
     public static final int UNSTAMPOPACITY_FIELD_NUMBER = 12;
-    private float unstampOpacity_;
+    private float unstampOpacity_ = 0F;
     /**
      * <code>float unstampOpacity = 12;</code>
      * @return The unstampOpacity.
@@ -19585,7 +19228,7 @@ public final class Image {
     }
 
     public static final int PLACEHOLDERS_FIELD_NUMBER = 13;
-    private boolean placeholders_;
+    private boolean placeholders_ = false;
     /**
      * <code>bool placeholders = 13;</code>
      * @return The placeholders.
@@ -19596,7 +19239,8 @@ public final class Image {
     }
 
     public static final int PLACEHOLDERCOLOR_FIELD_NUMBER = 14;
-    private volatile java.lang.Object placeholderColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object placeholderColor_ = "";
     /**
      * <code>string placeholderColor = 14;</code>
      * @return The placeholderColor.
@@ -19634,7 +19278,7 @@ public final class Image {
     }
 
     public static final int PLACEHOLDEROPACITY_FIELD_NUMBER = 15;
-    private float placeholderOpacity_;
+    private float placeholderOpacity_ = 0F;
     /**
      * <code>float placeholderOpacity = 15;</code>
      * @return The placeholderOpacity.
@@ -19645,7 +19289,8 @@ public final class Image {
     }
 
     public static final int PLACEHOLDERBORDERCOLOR_FIELD_NUMBER = 16;
-    private volatile java.lang.Object placeholderBorderColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object placeholderBorderColor_ = "";
     /**
      * <code>string placeholderBorderColor = 16;</code>
      * @return The placeholderBorderColor.
@@ -19683,7 +19328,7 @@ public final class Image {
     }
 
     public static final int PLACEHOLDERBORDEROPACITY_FIELD_NUMBER = 17;
-    private float placeholderBorderOpacity_;
+    private float placeholderBorderOpacity_ = 0F;
     /**
      * <code>float placeholderBorderOpacity = 17;</code>
      * @return The placeholderBorderOpacity.
@@ -19694,7 +19339,7 @@ public final class Image {
     }
 
     public static final int REWARDPLACEHOLDERS_FIELD_NUMBER = 18;
-    private boolean rewardPlaceholders_;
+    private boolean rewardPlaceholders_ = false;
     /**
      * <code>bool rewardPlaceholders = 18;</code>
      * @return The rewardPlaceholders.
@@ -19705,7 +19350,8 @@ public final class Image {
     }
 
     public static final int REWARDBORDERCOLOR_FIELD_NUMBER = 19;
-    private volatile java.lang.Object rewardBorderColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardBorderColor_ = "";
     /**
      * <code>string rewardBorderColor = 19;</code>
      * @return The rewardBorderColor.
@@ -19743,7 +19389,7 @@ public final class Image {
     }
 
     public static final int REWARDBORDEROPACITY_FIELD_NUMBER = 20;
-    private float rewardBorderOpacity_;
+    private float rewardBorderOpacity_ = 0F;
     /**
      * <code>float rewardBorderOpacity = 20;</code>
      * @return The rewardBorderOpacity.
@@ -19754,7 +19400,8 @@ public final class Image {
     }
 
     public static final int REWARDBACKGROUNDCOLOR_FIELD_NUMBER = 21;
-    private volatile java.lang.Object rewardBackgroundColor_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardBackgroundColor_ = "";
     /**
      * <code>string rewardBackgroundColor = 21;</code>
      * @return The rewardBackgroundColor.
@@ -19792,7 +19439,7 @@ public final class Image {
     }
 
     public static final int REWARDBACKGROUNDOPACITY_FIELD_NUMBER = 22;
-    private float rewardBackgroundOpacity_;
+    private float rewardBackgroundOpacity_ = 0F;
     /**
      * <code>float rewardBackgroundOpacity = 22;</code>
      * @return The rewardBackgroundOpacity.
@@ -19803,7 +19450,7 @@ public final class Image {
     }
 
     public static final int REWARDPOSITIONS_FIELD_NUMBER = 23;
-    private long rewardPositions_;
+    private long rewardPositions_ = 0L;
     /**
      * <pre>
      * takes a bitmask of rewards positions.
@@ -20255,52 +19902,30 @@ public final class Image {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         padding_ = 0F;
-
         totalStamps_ = 0;
-
         stampImage_ = "";
-
         unstampImage_ = "";
-
         backgroundImage_ = "";
-
         backgroundColor_ = "";
-
         backgroundOpacity_ = 0F;
-
         stampColor_ = "";
-
         stampOpacity_ = 0F;
-
         unstampColor_ = "";
-
         unstampOpacity_ = 0F;
-
         placeholders_ = false;
-
         placeholderColor_ = "";
-
         placeholderOpacity_ = 0F;
-
         placeholderBorderColor_ = "";
-
         placeholderBorderOpacity_ = 0F;
-
         rewardPlaceholders_ = false;
-
         rewardBorderColor_ = "";
-
         rewardBorderOpacity_ = 0F;
-
         rewardBackgroundColor_ = "";
-
         rewardBackgroundOpacity_ = 0F;
-
         rewardPositions_ = 0L;
-
         return this;
       }
 
@@ -20327,65 +19952,84 @@ public final class Image {
       @java.lang.Override
       public com.passkit.grpc.Image.StampImageConfig buildPartial() {
         com.passkit.grpc.Image.StampImageConfig result = new com.passkit.grpc.Image.StampImageConfig(this);
-        result.id_ = id_;
-        result.padding_ = padding_;
-        result.totalStamps_ = totalStamps_;
-        result.stampImage_ = stampImage_;
-        result.unstampImage_ = unstampImage_;
-        result.backgroundImage_ = backgroundImage_;
-        result.backgroundColor_ = backgroundColor_;
-        result.backgroundOpacity_ = backgroundOpacity_;
-        result.stampColor_ = stampColor_;
-        result.stampOpacity_ = stampOpacity_;
-        result.unstampColor_ = unstampColor_;
-        result.unstampOpacity_ = unstampOpacity_;
-        result.placeholders_ = placeholders_;
-        result.placeholderColor_ = placeholderColor_;
-        result.placeholderOpacity_ = placeholderOpacity_;
-        result.placeholderBorderColor_ = placeholderBorderColor_;
-        result.placeholderBorderOpacity_ = placeholderBorderOpacity_;
-        result.rewardPlaceholders_ = rewardPlaceholders_;
-        result.rewardBorderColor_ = rewardBorderColor_;
-        result.rewardBorderOpacity_ = rewardBorderOpacity_;
-        result.rewardBackgroundColor_ = rewardBackgroundColor_;
-        result.rewardBackgroundOpacity_ = rewardBackgroundOpacity_;
-        result.rewardPositions_ = rewardPositions_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Image.StampImageConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.padding_ = padding_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalStamps_ = totalStamps_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.stampImage_ = stampImage_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.unstampImage_ = unstampImage_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.backgroundImage_ = backgroundImage_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.backgroundColor_ = backgroundColor_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.backgroundOpacity_ = backgroundOpacity_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.stampColor_ = stampColor_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.stampOpacity_ = stampOpacity_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.unstampColor_ = unstampColor_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.unstampOpacity_ = unstampOpacity_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.placeholders_ = placeholders_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.placeholderColor_ = placeholderColor_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.placeholderOpacity_ = placeholderOpacity_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.placeholderBorderColor_ = placeholderBorderColor_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.placeholderBorderOpacity_ = placeholderBorderOpacity_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.rewardPlaceholders_ = rewardPlaceholders_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.rewardBorderColor_ = rewardBorderColor_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.rewardBorderOpacity_ = rewardBorderOpacity_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.rewardBackgroundColor_ = rewardBackgroundColor_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.rewardBackgroundOpacity_ = rewardBackgroundOpacity_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.rewardPositions_ = rewardPositions_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Image.StampImageConfig) {
@@ -20400,6 +20044,7 @@ public final class Image {
         if (other == com.passkit.grpc.Image.StampImageConfig.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getPadding() != 0F) {
@@ -20410,18 +20055,22 @@ public final class Image {
         }
         if (!other.getStampImage().isEmpty()) {
           stampImage_ = other.stampImage_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getUnstampImage().isEmpty()) {
           unstampImage_ = other.unstampImage_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getBackgroundImage().isEmpty()) {
           backgroundImage_ = other.backgroundImage_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getBackgroundColor().isEmpty()) {
           backgroundColor_ = other.backgroundColor_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.getBackgroundOpacity() != 0F) {
@@ -20429,6 +20078,7 @@ public final class Image {
         }
         if (!other.getStampColor().isEmpty()) {
           stampColor_ = other.stampColor_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.getStampOpacity() != 0F) {
@@ -20436,6 +20086,7 @@ public final class Image {
         }
         if (!other.getUnstampColor().isEmpty()) {
           unstampColor_ = other.unstampColor_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (other.getUnstampOpacity() != 0F) {
@@ -20446,6 +20097,7 @@ public final class Image {
         }
         if (!other.getPlaceholderColor().isEmpty()) {
           placeholderColor_ = other.placeholderColor_;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         if (other.getPlaceholderOpacity() != 0F) {
@@ -20453,6 +20105,7 @@ public final class Image {
         }
         if (!other.getPlaceholderBorderColor().isEmpty()) {
           placeholderBorderColor_ = other.placeholderBorderColor_;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         if (other.getPlaceholderBorderOpacity() != 0F) {
@@ -20463,6 +20116,7 @@ public final class Image {
         }
         if (!other.getRewardBorderColor().isEmpty()) {
           rewardBorderColor_ = other.rewardBorderColor_;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         if (other.getRewardBorderOpacity() != 0F) {
@@ -20470,6 +20124,7 @@ public final class Image {
         }
         if (!other.getRewardBackgroundColor().isEmpty()) {
           rewardBackgroundColor_ = other.rewardBackgroundColor_;
+          bitField0_ |= 0x00100000;
           onChanged();
         }
         if (other.getRewardBackgroundOpacity() != 0F) {
@@ -20506,117 +20161,117 @@ public final class Image {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 21: {
                 padding_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               case 24: {
                 totalStamps_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
                 stampImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 unstampImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 backgroundImage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 backgroundColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 69: {
                 backgroundOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 69
               case 74: {
                 stampColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 85: {
                 stampOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 85
               case 90: {
                 unstampColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 101: {
                 unstampOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 101
               case 104: {
                 placeholders_ = input.readBool();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 104
               case 114: {
                 placeholderColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 125: {
                 placeholderOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 125
               case 130: {
                 placeholderBorderColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 141: {
                 placeholderBorderOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 141
               case 144: {
                 rewardPlaceholders_ = input.readBool();
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 144
               case 154: {
                 rewardBorderColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 165: {
                 rewardBorderOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 165
               case 170: {
                 rewardBackgroundColor_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 170
               case 181: {
                 rewardBackgroundOpacity_ = input.readFloat();
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 181
               case 184: {
                 rewardPositions_ = input.readUInt64();
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 184
               default: {
@@ -20634,6 +20289,7 @@ public final class Image {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -20676,11 +20332,9 @@ public final class Image {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -20689,8 +20343,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -20701,12 +20355,10 @@ public final class Image {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -20726,8 +20378,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setPadding(float value) {
-        
+
         padding_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -20736,7 +20389,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPadding() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         padding_ = 0F;
         onChanged();
         return this;
@@ -20757,8 +20410,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setTotalStamps(int value) {
-        
+
         totalStamps_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -20767,7 +20421,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearTotalStamps() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         totalStamps_ = 0;
         onChanged();
         return this;
@@ -20814,11 +20468,9 @@ public final class Image {
        */
       public Builder setStampImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stampImage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -20827,8 +20479,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampImage() {
-        
         stampImage_ = getDefaultInstance().getStampImage();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -20839,12 +20491,10 @@ public final class Image {
        */
       public Builder setStampImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stampImage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -20890,11 +20540,9 @@ public final class Image {
        */
       public Builder setUnstampImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         unstampImage_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -20903,8 +20551,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUnstampImage() {
-        
         unstampImage_ = getDefaultInstance().getUnstampImage();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -20915,12 +20563,10 @@ public final class Image {
        */
       public Builder setUnstampImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         unstampImage_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -20966,11 +20612,9 @@ public final class Image {
        */
       public Builder setBackgroundImage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         backgroundImage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -20979,8 +20623,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBackgroundImage() {
-        
         backgroundImage_ = getDefaultInstance().getBackgroundImage();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -20991,12 +20635,10 @@ public final class Image {
        */
       public Builder setBackgroundImageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         backgroundImage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -21042,11 +20684,9 @@ public final class Image {
        */
       public Builder setBackgroundColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         backgroundColor_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -21055,8 +20695,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBackgroundColor() {
-        
         backgroundColor_ = getDefaultInstance().getBackgroundColor();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -21067,12 +20707,10 @@ public final class Image {
        */
       public Builder setBackgroundColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         backgroundColor_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -21092,8 +20730,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setBackgroundOpacity(float value) {
-        
+
         backgroundOpacity_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -21102,7 +20741,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearBackgroundOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         backgroundOpacity_ = 0F;
         onChanged();
         return this;
@@ -21149,11 +20788,9 @@ public final class Image {
        */
       public Builder setStampColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stampColor_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -21162,8 +20799,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampColor() {
-        
         stampColor_ = getDefaultInstance().getStampColor();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -21174,12 +20811,10 @@ public final class Image {
        */
       public Builder setStampColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stampColor_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -21199,8 +20834,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setStampOpacity(float value) {
-        
+
         stampOpacity_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -21209,7 +20845,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearStampOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         stampOpacity_ = 0F;
         onChanged();
         return this;
@@ -21256,11 +20892,9 @@ public final class Image {
        */
       public Builder setUnstampColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         unstampColor_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -21269,8 +20903,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUnstampColor() {
-        
         unstampColor_ = getDefaultInstance().getUnstampColor();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -21281,12 +20915,10 @@ public final class Image {
        */
       public Builder setUnstampColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         unstampColor_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -21306,8 +20938,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setUnstampOpacity(float value) {
-        
+
         unstampOpacity_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -21316,7 +20949,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearUnstampOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00000800);
         unstampOpacity_ = 0F;
         onChanged();
         return this;
@@ -21337,8 +20970,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setPlaceholders(boolean value) {
-        
+
         placeholders_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -21347,7 +20981,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholders() {
-        
+        bitField0_ = (bitField0_ & ~0x00001000);
         placeholders_ = false;
         onChanged();
         return this;
@@ -21394,11 +21028,9 @@ public final class Image {
        */
       public Builder setPlaceholderColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         placeholderColor_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -21407,8 +21039,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholderColor() {
-        
         placeholderColor_ = getDefaultInstance().getPlaceholderColor();
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -21419,12 +21051,10 @@ public final class Image {
        */
       public Builder setPlaceholderColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         placeholderColor_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -21444,8 +21074,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setPlaceholderOpacity(float value) {
-        
+
         placeholderOpacity_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -21454,7 +21085,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholderOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00004000);
         placeholderOpacity_ = 0F;
         onChanged();
         return this;
@@ -21501,11 +21132,9 @@ public final class Image {
        */
       public Builder setPlaceholderBorderColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         placeholderBorderColor_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -21514,8 +21143,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholderBorderColor() {
-        
         placeholderBorderColor_ = getDefaultInstance().getPlaceholderBorderColor();
+        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -21526,12 +21155,10 @@ public final class Image {
        */
       public Builder setPlaceholderBorderColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         placeholderBorderColor_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -21551,8 +21178,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setPlaceholderBorderOpacity(float value) {
-        
+
         placeholderBorderOpacity_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -21561,7 +21189,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholderBorderOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00010000);
         placeholderBorderOpacity_ = 0F;
         onChanged();
         return this;
@@ -21582,8 +21210,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setRewardPlaceholders(boolean value) {
-        
+
         rewardPlaceholders_ = value;
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -21592,7 +21221,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardPlaceholders() {
-        
+        bitField0_ = (bitField0_ & ~0x00020000);
         rewardPlaceholders_ = false;
         onChanged();
         return this;
@@ -21639,11 +21268,9 @@ public final class Image {
        */
       public Builder setRewardBorderColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         rewardBorderColor_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -21652,8 +21279,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardBorderColor() {
-        
         rewardBorderColor_ = getDefaultInstance().getRewardBorderColor();
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
         return this;
       }
@@ -21664,12 +21291,10 @@ public final class Image {
        */
       public Builder setRewardBorderColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         rewardBorderColor_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -21689,8 +21314,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setRewardBorderOpacity(float value) {
-        
+
         rewardBorderOpacity_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -21699,7 +21325,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardBorderOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00080000);
         rewardBorderOpacity_ = 0F;
         onChanged();
         return this;
@@ -21746,11 +21372,9 @@ public final class Image {
        */
       public Builder setRewardBackgroundColor(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         rewardBackgroundColor_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -21759,8 +21383,8 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardBackgroundColor() {
-        
         rewardBackgroundColor_ = getDefaultInstance().getRewardBackgroundColor();
+        bitField0_ = (bitField0_ & ~0x00100000);
         onChanged();
         return this;
       }
@@ -21771,12 +21395,10 @@ public final class Image {
        */
       public Builder setRewardBackgroundColorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         rewardBackgroundColor_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -21796,8 +21418,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setRewardBackgroundOpacity(float value) {
-        
+
         rewardBackgroundOpacity_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -21806,7 +21429,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardBackgroundOpacity() {
-        
+        bitField0_ = (bitField0_ & ~0x00200000);
         rewardBackgroundOpacity_ = 0F;
         onChanged();
         return this;
@@ -21835,8 +21458,9 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder setRewardPositions(long value) {
-        
+
         rewardPositions_ = value;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -21849,7 +21473,7 @@ public final class Image {
        * @return This builder for chaining.
        */
       public Builder clearRewardPositions() {
-        
+        bitField0_ = (bitField0_ & ~0x00400000);
         rewardPositions_ = 0L;
         onChanged();
         return this;

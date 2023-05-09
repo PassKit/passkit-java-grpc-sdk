@@ -29,56 +29,56 @@ public final class ARpc {
       "/raw/project.proto\032\021io/raw/pass.proto\032.p" +
       "rotoc-gen-openapiv2/options/annotations." +
       "proto2\330\017\n\003Raw\022\177\n\021createPassProject\022\020.raw" +
-      ".PassProject\032\006.io.Id\"P\202\323\344\223\002\025\"\020/raw/passP" +
-      "roject:\001*\222A2\n\003Raw\022\023Create Pass Project\032\026" +
-      "Creates a Pass Project\022\223\001\n\021updatePassPro" +
+      ".PassProject\032\006.io.Id\"P\222A2\n\003Raw\022\023Create P" +
+      "ass Project\032\026Creates a Pass Project\202\323\344\223\002" +
+      "\025\"\020/raw/passProject:\001*\022\223\001\n\021updatePassPro" +
       "ject\022\020.raw.PassProject\032\020.raw.PassProject" +
-      "\"Z\202\323\344\223\002\025\032\020/raw/passProject:\001*\222A<\n\003Raw\022\023U" +
-      "pdate Pass Project\032 Updates an existing " +
-      "Pass Project\022\202\001\n\016getPassProject\022\006.io.Id\032" +
-      "\020.raw.PassProject\"V\202\323\344\223\002\027\022\025/raw/passProj" +
-      "ect/{id}\222A6\n\003Raw\022\020Get Pass Project\032\035Gets" +
-      " an existing Pass Project\022\224\001\n\017copyPassPr" +
+      "\"Z\222A<\n\003Raw\022\023Update Pass Project\032 Updates" +
+      " an existing Pass Project\202\323\344\223\002\025\032\020/raw/pa" +
+      "ssProject:\001*\022\202\001\n\016getPassProject\022\006.io.Id\032" +
+      "\020.raw.PassProject\"V\222A6\n\003Raw\022\020Get Pass Pr" +
+      "oject\032\035Gets an existing Pass Project\202\323\344\223" +
+      "\002\027\022\025/raw/passProject/{id}\022\224\001\n\017copyPassPr" +
       "oject\022\033.raw.PassProjectCopyRequest\032\006.io." +
-      "Id\"\\\202\323\344\223\002\032\"\025/raw/passProject/copy:\001*\222A9\n" +
-      "\003Raw\022\021Copy Pass Project\032\037Copies an exist" +
-      "ing Pass Project\022\204\002\n\021deletePassProject\022\006" +
-      ".io.Id\032\026.google.protobuf.Empty\"\316\001\202\323\344\223\002\027*" +
-      "\025/raw/passProject/{id}\222A\255\001\n\003Raw\022\023Delete " +
-      "Pass Project\032\220\001Deletes an existing Pass " +
-      "Project by id. Deleting a Pass Project r" +
-      "esults in all passes being invalidated a" +
-      "nd removed. Needs to be used with care.\022" +
-      "e\n\ncreatePass\022\t.raw.Pass\032\006.io.Id\"D\202\323\344\223\002\016" +
-      "\"\t/raw/pass:\001*\222A-\n\003Raw\022\013Create Pass\032\031Cre" +
-      "ates a new Pass record\022k\n\nupdatePass\022\t.r" +
-      "aw.Pass\032\006.io.Id\"J\202\323\344\223\002\016\032\t/raw/pass:\001*\222A3" +
-      "\n\003Raw\022\013Update Pass\032\037Updates an existing " +
-      "Pass record\022\222\001\n\021streamPassUpdates\022\t.raw." +
+      "Id\"\\\222A9\n\003Raw\022\021Copy Pass Project\032\037Copies " +
+      "an existing Pass Project\202\323\344\223\002\032\"\025/raw/pas" +
+      "sProject/copy:\001*\022\204\002\n\021deletePassProject\022\006" +
+      ".io.Id\032\026.google.protobuf.Empty\"\316\001\222A\255\001\n\003R" +
+      "aw\022\023Delete Pass Project\032\220\001Deletes an exi" +
+      "sting Pass Project by id. Deleting a Pas" +
+      "s Project results in all passes being in" +
+      "validated and removed. Needs to be used " +
+      "with care.\202\323\344\223\002\027*\025/raw/passProject/{id}\022" +
+      "e\n\ncreatePass\022\t.raw.Pass\032\006.io.Id\"D\222A-\n\003R" +
+      "aw\022\013Create Pass\032\031Creates a new Pass reco" +
+      "rd\202\323\344\223\002\016\"\t/raw/pass:\001*\022k\n\nupdatePass\022\t.r" +
+      "aw.Pass\032\006.io.Id\"J\222A3\n\003Raw\022\013Update Pass\032\037" +
+      "Updates an existing Pass record\202\323\344\223\002\016\032\t/" +
+      "raw/pass:\001*\022\222\001\n\021streamPassUpdates\022\t.raw." +
       "Pass\032\006.io.Id\"f\222Ac\n\003Raw\0222Stream Pass Upda" +
       "tes (official SDK\'s only, no REST)\032(Upda" +
       "tes existing Pass records via stream(\0010\001" +
-      "\022d\n\013getPassById\022\006.io.Id\032\t.raw.Pass\"B\202\323\344\223" +
-      "\002\020\022\016/raw/pass/{id}\222A)\n\003Raw\022\016Get Pass by " +
-      "ID\032\022Gets a pass record\022\303\001\n\023getPassByExte" +
+      "\022d\n\013getPassById\022\006.io.Id\032\t.raw.Pass\"B\222A)\n" +
+      "\003Raw\022\016Get Pass by ID\032\022Gets a pass record" +
+      "\202\323\344\223\002\020\022\016/raw/pass/{id}\022\303\001\n\023getPassByExte" +
       "rnalId\022\".raw.PassRecordByExternalIdReque" +
-      "st\032\t.raw.Pass\"}\202\323\344\223\0023\0221/raw/pass/externa" +
-      "lId/{passProjectId}/{externalId}\222AA\n\003Raw" +
-      "\022\027Get Pass by External ID\032!Gets a pass r" +
-      "ecord by External ID\022v\n\ndeletePass\022\t.raw" +
-      ".Pass\032\026.google.protobuf.Empty\"E\202\323\344\223\002\023*\016/" +
-      "raw/pass/{id}:\001*\222A)\n\003Raw\022\013Delete Pass\032\025D" +
-      "eletes a pass record\022\300\001\n\027listPassesByPas" +
+      "st\032\t.raw.Pass\"}\222AA\n\003Raw\022\027Get Pass by Ext" +
+      "ernal ID\032!Gets a pass record by External" +
+      " ID\202\323\344\223\0023\0221/raw/pass/externalId/{passPro" +
+      "jectId}/{externalId}\022v\n\ndeletePass\022\t.raw" +
+      ".Pass\032\026.google.protobuf.Empty\"E\222A)\n\003Raw\022" +
+      "\013Delete Pass\032\025Deletes a pass record\202\323\344\223\002" +
+      "\023*\016/raw/pass/{id}:\001*\022\300\001\n\027listPassesByPas" +
       "sProject\022#.raw.ListPassesByPassProjectRe" +
-      "quest\032\t.raw.Pass\"s\202\323\344\223\002 \"\033/raw/pass/list" +
-      "ByPassProject:\001*\222AJ\n\003Raw\022\013List Passes\0326L" +
-      "ist all passes for pass project. Support" +
-      "s pagination.0\001\022\306\001\n\030listPassesByPassTemp" +
+      "quest\032\t.raw.Pass\"s\222AJ\n\003Raw\022\013List Passes\032" +
+      "6List all passes for pass project. Suppo" +
+      "rts pagination.\202\323\344\223\002 \"\033/raw/pass/listByP" +
+      "assProject:\001*0\001\022\306\001\n\030listPassesByPassTemp" +
       "late\022$.raw.ListPassesByPassTemplateReque" +
-      "st\032\t.raw.Pass\"w\202\323\344\223\002!\"\034/raw/pass/listByP" +
-      "assTemplate:\001*\222AM\n\003Raw\022\013List Passes\0329Lis" +
-      "t all passes for a pass template. Suppor" +
-      "ts pagination.0\001B\212\007\n\024com.passkit.grpc.Ra" +
+      "st\032\t.raw.Pass\"w\222AM\n\003Raw\022\013List Passes\0329Li" +
+      "st all passes for a pass template. Suppo" +
+      "rts pagination.\202\323\344\223\002!\"\034/raw/pass/listByP" +
+      "assTemplate:\001*0\001B\212\007\n\024com.passkit.grpc.Ra" +
       "wZ(stash.passkit.com/io/model/sdk/go/io/" +
       "raw\252\002\020PassKit.Grpc.Raw\222A\263\006\022\300\002\n\026PassKit R" +
       "aw Passes API\022\245\001This protocol is suit fo" +

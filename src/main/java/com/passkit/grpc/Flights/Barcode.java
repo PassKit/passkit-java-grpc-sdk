@@ -1950,7 +1950,8 @@ public final class Barcode {
       boardingPassIssuanceSource_ = 0;
       documentType_ = 0;
       boardingPassIssuer_ = "";
-      baggageTagNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      baggageTagNumber_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       selecteeIndicator_ = 0;
       internationalDocVerification_ = 0;
       idadIndicator_ = 0;
@@ -1964,11 +1965,6 @@ public final class Barcode {
       return new ConditionalItems();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.Barcode.internal_static_flights_ConditionalItems_descriptor;
@@ -1983,7 +1979,7 @@ public final class Barcode {
     }
 
     public static final int PASSENGERDESCRIPTION_FIELD_NUMBER = 1;
-    private int passengerDescription_;
+    private int passengerDescription_ = 0;
     /**
      * <pre>
      * Passenger Status as detailed in IATA PSC Resolution 792 Attachment 'C'. Note: all values other than 0 indicate that the passenger has checked in.
@@ -2004,13 +2000,12 @@ public final class Barcode {
      * @return The passengerDescription.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.PassengerDescription getPassengerDescription() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.PassengerDescription result = com.passkit.grpc.Flights.Barcode.PassengerDescription.valueOf(passengerDescription_);
+      com.passkit.grpc.Flights.Barcode.PassengerDescription result = com.passkit.grpc.Flights.Barcode.PassengerDescription.forNumber(passengerDescription_);
       return result == null ? com.passkit.grpc.Flights.Barcode.PassengerDescription.UNRECOGNIZED : result;
     }
 
     public static final int CHECKINSOURCE_FIELD_NUMBER = 2;
-    private int checkInSource_;
+    private int checkInSource_ = 0;
     /**
      * <pre>
      * Source of checkin as detailed in IATA PSC Resolution 792 Attachment 'C'.
@@ -2031,13 +2026,12 @@ public final class Barcode {
      * @return The checkInSource.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.Source getCheckInSource() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.valueOf(checkInSource_);
+      com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.forNumber(checkInSource_);
       return result == null ? com.passkit.grpc.Flights.Barcode.Source.UNRECOGNIZED : result;
     }
 
     public static final int BOARDINGPASSISSUANCESOURCE_FIELD_NUMBER = 3;
-    private int boardingPassIssuanceSource_;
+    private int boardingPassIssuanceSource_ = 0;
     /**
      * <pre>
      * Source of boarding pass issuance as detailed in IATA PSC Resolution 792 Attachment 'C'.
@@ -2058,8 +2052,7 @@ public final class Barcode {
      * @return The boardingPassIssuanceSource.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.Source getBoardingPassIssuanceSource() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.valueOf(boardingPassIssuanceSource_);
+      com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.forNumber(boardingPassIssuanceSource_);
       return result == null ? com.passkit.grpc.Flights.Barcode.Source.UNRECOGNIZED : result;
     }
 
@@ -2098,11 +2091,11 @@ public final class Barcode {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getBoardingPassIssueDateOrBuilder() {
-      return getBoardingPassIssueDate();
+      return boardingPassIssueDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : boardingPassIssueDate_;
     }
 
     public static final int DOCUMENTTYPE_FIELD_NUMBER = 5;
-    private int documentType_;
+    private int documentType_ = 0;
     /**
      * <pre>
      * Document type that the barcode represents.
@@ -2123,13 +2116,13 @@ public final class Barcode {
      * @return The documentType.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.DocType getDocumentType() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.DocType result = com.passkit.grpc.Flights.Barcode.DocType.valueOf(documentType_);
+      com.passkit.grpc.Flights.Barcode.DocType result = com.passkit.grpc.Flights.Barcode.DocType.forNumber(documentType_);
       return result == null ? com.passkit.grpc.Flights.Barcode.DocType.UNRECOGNIZED : result;
     }
 
     public static final int BOARDINGPASSISSUER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object boardingPassIssuer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object boardingPassIssuer_ = "";
     /**
      * <pre>
      * IATA or ICAO designator of boarding pass issuer.
@@ -2175,7 +2168,9 @@ public final class Barcode {
     }
 
     public static final int BAGGAGETAGNUMBER_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList baggageTagNumber_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList baggageTagNumber_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * This field allows carriers to populate baggage tag numbers and the number of consecutive bags. It contains 13 characters corresponding to the 10 digit bag tag number, as per IATA BCM specifications, Resolution 740 and 3 digits identifying the number of consecutive tags.&#92;n1: leading digit – 0 for interline tag, 1 for fall-back tag, 2 for interline rush tag.&#92;n2-4: carrier numeric code.&#92;n5-10: carrier initial tag number (leading zeros).&#92;n11-13: number of consecutive tags (allows for up to 999 tags).&#92;nUp to 2 additional, non-consecutive tags can be added.
@@ -2226,7 +2221,7 @@ public final class Barcode {
     }
 
     public static final int SELECTEEINDICATOR_FIELD_NUMBER = 8;
-    private int selecteeIndicator_;
+    private int selecteeIndicator_ = 0;
     /**
      * <pre>
      * Passenger security status. Note: in practical terms, this is always likely to be NOT_SELECTEE or TSA_PRECHECK since current DHS Pre-Departure Regulations only allow on-site printing of boarding passes. It is mandatory when US travel is involved.
@@ -2247,13 +2242,12 @@ public final class Barcode {
      * @return The selecteeIndicator.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.SelecteeIndicator getSelecteeIndicator() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.SelecteeIndicator result = com.passkit.grpc.Flights.Barcode.SelecteeIndicator.valueOf(selecteeIndicator_);
+      com.passkit.grpc.Flights.Barcode.SelecteeIndicator result = com.passkit.grpc.Flights.Barcode.SelecteeIndicator.forNumber(selecteeIndicator_);
       return result == null ? com.passkit.grpc.Flights.Barcode.SelecteeIndicator.UNRECOGNIZED : result;
     }
 
     public static final int INTERNATIONALDOCVERIFICATION_FIELD_NUMBER = 9;
-    private int internationalDocVerification_;
+    private int internationalDocVerification_ = 0;
     /**
      * <pre>
      * International Documentation Verification status as detailed in IATA PSC Resolution 792 Attachment 'C'.
@@ -2274,13 +2268,12 @@ public final class Barcode {
      * @return The internationalDocVerification.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.InternationalDocVerification getInternationalDocVerification() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.InternationalDocVerification result = com.passkit.grpc.Flights.Barcode.InternationalDocVerification.valueOf(internationalDocVerification_);
+      com.passkit.grpc.Flights.Barcode.InternationalDocVerification result = com.passkit.grpc.Flights.Barcode.InternationalDocVerification.forNumber(internationalDocVerification_);
       return result == null ? com.passkit.grpc.Flights.Barcode.InternationalDocVerification.UNRECOGNIZED : result;
     }
 
     public static final int IDADINDICATOR_FIELD_NUMBER = 10;
-    private int idadIndicator_;
+    private int idadIndicator_ = 0;
     /**
      * <pre>
      * Industry Discount / Airline Discount codes. See IATA Recommended Practice 1788.
@@ -2301,13 +2294,12 @@ public final class Barcode {
      * @return The idadIndicator.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.IDADIndicator getIdadIndicator() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.IDADIndicator result = com.passkit.grpc.Flights.Barcode.IDADIndicator.valueOf(idadIndicator_);
+      com.passkit.grpc.Flights.Barcode.IDADIndicator result = com.passkit.grpc.Flights.Barcode.IDADIndicator.forNumber(idadIndicator_);
       return result == null ? com.passkit.grpc.Flights.Barcode.IDADIndicator.UNRECOGNIZED : result;
     }
 
     public static final int FASTTRACK_FIELD_NUMBER = 11;
-    private int fastTrack_;
+    private int fastTrack_ = 0;
     /**
      * <pre>
      * Passenger eligibility for Fast-track privileges.
@@ -2328,8 +2320,7 @@ public final class Barcode {
      * @return The fastTrack.
      */
     @java.lang.Override public com.passkit.grpc.Flights.Barcode.FastTrack getFastTrack() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.Barcode.FastTrack result = com.passkit.grpc.Flights.Barcode.FastTrack.valueOf(fastTrack_);
+      com.passkit.grpc.Flights.Barcode.FastTrack result = com.passkit.grpc.Flights.Barcode.FastTrack.forNumber(fastTrack_);
       return result == null ? com.passkit.grpc.Flights.Barcode.FastTrack.UNRECOGNIZED : result;
     }
 
@@ -2637,32 +2628,23 @@ public final class Barcode {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         passengerDescription_ = 0;
-
         checkInSource_ = 0;
-
         boardingPassIssuanceSource_ = 0;
-
-        if (boardingPassIssueDateBuilder_ == null) {
-          boardingPassIssueDate_ = null;
-        } else {
-          boardingPassIssueDate_ = null;
+        boardingPassIssueDate_ = null;
+        if (boardingPassIssueDateBuilder_ != null) {
+          boardingPassIssueDateBuilder_.dispose();
           boardingPassIssueDateBuilder_ = null;
         }
         documentType_ = 0;
-
         boardingPassIssuer_ = "";
-
-        baggageTagNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        baggageTagNumber_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         selecteeIndicator_ = 0;
-
         internationalDocVerification_ = 0;
-
         idadIndicator_ = 0;
-
         fastTrack_ = 0;
-
         return this;
       }
 
@@ -2689,62 +2671,51 @@ public final class Barcode {
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.ConditionalItems buildPartial() {
         com.passkit.grpc.Flights.Barcode.ConditionalItems result = new com.passkit.grpc.Flights.Barcode.ConditionalItems(this);
-        int from_bitField0_ = bitField0_;
-        result.passengerDescription_ = passengerDescription_;
-        result.checkInSource_ = checkInSource_;
-        result.boardingPassIssuanceSource_ = boardingPassIssuanceSource_;
-        if (boardingPassIssueDateBuilder_ == null) {
-          result.boardingPassIssueDate_ = boardingPassIssueDate_;
-        } else {
-          result.boardingPassIssueDate_ = boardingPassIssueDateBuilder_.build();
-        }
-        result.documentType_ = documentType_;
-        result.boardingPassIssuer_ = boardingPassIssuer_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          baggageTagNumber_ = baggageTagNumber_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.baggageTagNumber_ = baggageTagNumber_;
-        result.selecteeIndicator_ = selecteeIndicator_;
-        result.internationalDocVerification_ = internationalDocVerification_;
-        result.idadIndicator_ = idadIndicator_;
-        result.fastTrack_ = fastTrack_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.Barcode.ConditionalItems result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.passengerDescription_ = passengerDescription_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.checkInSource_ = checkInSource_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.boardingPassIssuanceSource_ = boardingPassIssuanceSource_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.boardingPassIssueDate_ = boardingPassIssueDateBuilder_ == null
+              ? boardingPassIssueDate_
+              : boardingPassIssueDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.documentType_ = documentType_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.boardingPassIssuer_ = boardingPassIssuer_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          baggageTagNumber_.makeImmutable();
+          result.baggageTagNumber_ = baggageTagNumber_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.selecteeIndicator_ = selecteeIndicator_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.internationalDocVerification_ = internationalDocVerification_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.idadIndicator_ = idadIndicator_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.fastTrack_ = fastTrack_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.Barcode.ConditionalItems) {
@@ -2774,12 +2745,13 @@ public final class Barcode {
         }
         if (!other.getBoardingPassIssuer().isEmpty()) {
           boardingPassIssuer_ = other.boardingPassIssuer_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.baggageTagNumber_.isEmpty()) {
           if (baggageTagNumber_.isEmpty()) {
             baggageTagNumber_ = other.baggageTagNumber_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000040;
           } else {
             ensureBaggageTagNumberIsMutable();
             baggageTagNumber_.addAll(other.baggageTagNumber_);
@@ -2826,34 +2798,34 @@ public final class Barcode {
                 break;
               case 8: {
                 passengerDescription_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 checkInSource_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 boardingPassIssuanceSource_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
                 input.readMessage(
                     getBoardingPassIssueDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 40: {
                 documentType_ = input.readEnum();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 boardingPassIssuer_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
@@ -2864,22 +2836,22 @@ public final class Barcode {
               } // case 58
               case 64: {
                 selecteeIndicator_ = input.readEnum();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 72: {
                 internationalDocVerification_ = input.readEnum();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 72
               case 80: {
                 idadIndicator_ = input.readEnum();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 80
               case 88: {
                 fastTrack_ = input.readEnum();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 88
               default: {
@@ -2921,8 +2893,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setPassengerDescriptionValue(int value) {
-        
         passengerDescription_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2936,8 +2908,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.PassengerDescription getPassengerDescription() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.PassengerDescription result = com.passkit.grpc.Flights.Barcode.PassengerDescription.valueOf(passengerDescription_);
+        com.passkit.grpc.Flights.Barcode.PassengerDescription result = com.passkit.grpc.Flights.Barcode.PassengerDescription.forNumber(passengerDescription_);
         return result == null ? com.passkit.grpc.Flights.Barcode.PassengerDescription.UNRECOGNIZED : result;
       }
       /**
@@ -2953,7 +2924,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         passengerDescription_ = value.getNumber();
         onChanged();
         return this;
@@ -2967,7 +2938,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearPassengerDescription() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         passengerDescription_ = 0;
         onChanged();
         return this;
@@ -2995,8 +2966,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setCheckInSourceValue(int value) {
-        
         checkInSource_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3010,8 +2981,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.Source getCheckInSource() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.valueOf(checkInSource_);
+        com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.forNumber(checkInSource_);
         return result == null ? com.passkit.grpc.Flights.Barcode.Source.UNRECOGNIZED : result;
       }
       /**
@@ -3027,7 +2997,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         checkInSource_ = value.getNumber();
         onChanged();
         return this;
@@ -3041,7 +3011,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearCheckInSource() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         checkInSource_ = 0;
         onChanged();
         return this;
@@ -3069,8 +3039,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setBoardingPassIssuanceSourceValue(int value) {
-        
         boardingPassIssuanceSource_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3084,8 +3054,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.Source getBoardingPassIssuanceSource() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.valueOf(boardingPassIssuanceSource_);
+        com.passkit.grpc.Flights.Barcode.Source result = com.passkit.grpc.Flights.Barcode.Source.forNumber(boardingPassIssuanceSource_);
         return result == null ? com.passkit.grpc.Flights.Barcode.Source.UNRECOGNIZED : result;
       }
       /**
@@ -3101,7 +3070,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         boardingPassIssuanceSource_ = value.getNumber();
         onChanged();
         return this;
@@ -3115,7 +3084,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPassIssuanceSource() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         boardingPassIssuanceSource_ = 0;
         onChanged();
         return this;
@@ -3133,7 +3102,7 @@ public final class Barcode {
        * @return Whether the boardingPassIssueDate field is set.
        */
       public boolean hasBoardingPassIssueDate() {
-        return boardingPassIssueDateBuilder_ != null || boardingPassIssueDate_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -3163,11 +3132,11 @@ public final class Barcode {
             throw new NullPointerException();
           }
           boardingPassIssueDate_ = value;
-          onChanged();
         } else {
           boardingPassIssueDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3181,11 +3150,11 @@ public final class Barcode {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (boardingPassIssueDateBuilder_ == null) {
           boardingPassIssueDate_ = builderForValue.build();
-          onChanged();
         } else {
           boardingPassIssueDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3197,17 +3166,18 @@ public final class Barcode {
        */
       public Builder mergeBoardingPassIssueDate(com.passkit.grpc.CommonObjects.Date value) {
         if (boardingPassIssueDateBuilder_ == null) {
-          if (boardingPassIssueDate_ != null) {
-            boardingPassIssueDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(boardingPassIssueDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            boardingPassIssueDate_ != null &&
+            boardingPassIssueDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getBoardingPassIssueDateBuilder().mergeFrom(value);
           } else {
             boardingPassIssueDate_ = value;
           }
-          onChanged();
         } else {
           boardingPassIssueDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -3218,14 +3188,13 @@ public final class Barcode {
        * <code>.io.Date boardingPassIssueDate = 4;</code>
        */
       public Builder clearBoardingPassIssueDate() {
-        if (boardingPassIssueDateBuilder_ == null) {
-          boardingPassIssueDate_ = null;
-          onChanged();
-        } else {
-          boardingPassIssueDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        boardingPassIssueDate_ = null;
+        if (boardingPassIssueDateBuilder_ != null) {
+          boardingPassIssueDateBuilder_.dispose();
           boardingPassIssueDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3236,7 +3205,7 @@ public final class Barcode {
        * <code>.io.Date boardingPassIssueDate = 4;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getBoardingPassIssueDateBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getBoardingPassIssueDateFieldBuilder().getBuilder();
       }
@@ -3298,8 +3267,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setDocumentTypeValue(int value) {
-        
         documentType_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -3313,8 +3282,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.DocType getDocumentType() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.DocType result = com.passkit.grpc.Flights.Barcode.DocType.valueOf(documentType_);
+        com.passkit.grpc.Flights.Barcode.DocType result = com.passkit.grpc.Flights.Barcode.DocType.forNumber(documentType_);
         return result == null ? com.passkit.grpc.Flights.Barcode.DocType.UNRECOGNIZED : result;
       }
       /**
@@ -3330,7 +3298,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000010;
         documentType_ = value.getNumber();
         onChanged();
         return this;
@@ -3344,7 +3312,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearDocumentType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         documentType_ = 0;
         onChanged();
         return this;
@@ -3403,11 +3371,9 @@ public final class Barcode {
        */
       public Builder setBoardingPassIssuer(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         boardingPassIssuer_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3420,8 +3386,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPassIssuer() {
-        
         boardingPassIssuer_ = getDefaultInstance().getBoardingPassIssuer();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -3436,22 +3402,21 @@ public final class Barcode {
        */
       public Builder setBoardingPassIssuerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         boardingPassIssuer_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList baggageTagNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList baggageTagNumber_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureBaggageTagNumberIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!baggageTagNumber_.isModifiable()) {
           baggageTagNumber_ = new com.google.protobuf.LazyStringArrayList(baggageTagNumber_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <pre>
@@ -3463,7 +3428,8 @@ public final class Barcode {
        */
       public com.google.protobuf.ProtocolStringList
           getBaggageTagNumberList() {
-        return baggageTagNumber_.getUnmodifiableView();
+        baggageTagNumber_.makeImmutable();
+        return baggageTagNumber_;
       }
       /**
        * <pre>
@@ -3513,11 +3479,10 @@ public final class Barcode {
        */
       public Builder setBaggageTagNumber(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBaggageTagNumberIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureBaggageTagNumberIsMutable();
         baggageTagNumber_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3532,11 +3497,10 @@ public final class Barcode {
        */
       public Builder addBaggageTagNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBaggageTagNumberIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureBaggageTagNumberIsMutable();
         baggageTagNumber_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3554,6 +3518,7 @@ public final class Barcode {
         ensureBaggageTagNumberIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, baggageTagNumber_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3566,8 +3531,9 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearBaggageTagNumber() {
-        baggageTagNumber_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        baggageTagNumber_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
         onChanged();
         return this;
       }
@@ -3582,12 +3548,11 @@ public final class Barcode {
        */
       public Builder addBaggageTagNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureBaggageTagNumberIsMutable();
         baggageTagNumber_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -3614,8 +3579,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setSelecteeIndicatorValue(int value) {
-        
         selecteeIndicator_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -3629,8 +3594,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.SelecteeIndicator getSelecteeIndicator() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.SelecteeIndicator result = com.passkit.grpc.Flights.Barcode.SelecteeIndicator.valueOf(selecteeIndicator_);
+        com.passkit.grpc.Flights.Barcode.SelecteeIndicator result = com.passkit.grpc.Flights.Barcode.SelecteeIndicator.forNumber(selecteeIndicator_);
         return result == null ? com.passkit.grpc.Flights.Barcode.SelecteeIndicator.UNRECOGNIZED : result;
       }
       /**
@@ -3646,7 +3610,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000080;
         selecteeIndicator_ = value.getNumber();
         onChanged();
         return this;
@@ -3660,7 +3624,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearSelecteeIndicator() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         selecteeIndicator_ = 0;
         onChanged();
         return this;
@@ -3688,8 +3652,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setInternationalDocVerificationValue(int value) {
-        
         internationalDocVerification_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -3703,8 +3667,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.InternationalDocVerification getInternationalDocVerification() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.InternationalDocVerification result = com.passkit.grpc.Flights.Barcode.InternationalDocVerification.valueOf(internationalDocVerification_);
+        com.passkit.grpc.Flights.Barcode.InternationalDocVerification result = com.passkit.grpc.Flights.Barcode.InternationalDocVerification.forNumber(internationalDocVerification_);
         return result == null ? com.passkit.grpc.Flights.Barcode.InternationalDocVerification.UNRECOGNIZED : result;
       }
       /**
@@ -3720,7 +3683,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000100;
         internationalDocVerification_ = value.getNumber();
         onChanged();
         return this;
@@ -3734,7 +3697,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearInternationalDocVerification() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         internationalDocVerification_ = 0;
         onChanged();
         return this;
@@ -3762,8 +3725,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setIdadIndicatorValue(int value) {
-        
         idadIndicator_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -3777,8 +3740,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.IDADIndicator getIdadIndicator() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.IDADIndicator result = com.passkit.grpc.Flights.Barcode.IDADIndicator.valueOf(idadIndicator_);
+        com.passkit.grpc.Flights.Barcode.IDADIndicator result = com.passkit.grpc.Flights.Barcode.IDADIndicator.forNumber(idadIndicator_);
         return result == null ? com.passkit.grpc.Flights.Barcode.IDADIndicator.UNRECOGNIZED : result;
       }
       /**
@@ -3794,7 +3756,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000200;
         idadIndicator_ = value.getNumber();
         onChanged();
         return this;
@@ -3808,7 +3770,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearIdadIndicator() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         idadIndicator_ = 0;
         onChanged();
         return this;
@@ -3836,8 +3798,8 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder setFastTrackValue(int value) {
-        
         fastTrack_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -3851,8 +3813,7 @@ public final class Barcode {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.Barcode.FastTrack getFastTrack() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.Barcode.FastTrack result = com.passkit.grpc.Flights.Barcode.FastTrack.valueOf(fastTrack_);
+        com.passkit.grpc.Flights.Barcode.FastTrack result = com.passkit.grpc.Flights.Barcode.FastTrack.forNumber(fastTrack_);
         return result == null ? com.passkit.grpc.Flights.Barcode.FastTrack.UNRECOGNIZED : result;
       }
       /**
@@ -3868,7 +3829,7 @@ public final class Barcode {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000400;
         fastTrack_ = value.getNumber();
         onChanged();
         return this;
@@ -3882,7 +3843,7 @@ public final class Barcode {
        * @return This builder for chaining.
        */
       public Builder clearFastTrack() {
-        
+        bitField0_ = (bitField0_ & ~0x00000400);
         fastTrack_ = 0;
         onChanged();
         return this;

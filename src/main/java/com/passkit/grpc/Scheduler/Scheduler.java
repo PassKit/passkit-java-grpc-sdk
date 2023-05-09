@@ -88,11 +88,6 @@ public final class Scheduler {
       return new ListRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Scheduler.Scheduler.internal_static_scheduler_ListRequest_descriptor;
@@ -107,7 +102,8 @@ public final class Scheduler {
     }
 
     public static final int JOBID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object jobId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jobId_ = "";
     /**
      * <pre>
      * The id of SchedulingJob.
@@ -187,7 +183,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder() {
-      return getFilters();
+      return filters_ == null ? com.passkit.grpc.Filter.Filters.getDefaultInstance() : filters_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -393,12 +389,11 @@ public final class Scheduler {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         jobId_ = "";
-
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-        } else {
-          filters_ = null;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
         return this;
@@ -427,48 +422,23 @@ public final class Scheduler {
       @java.lang.Override
       public com.passkit.grpc.Scheduler.Scheduler.ListRequest buildPartial() {
         com.passkit.grpc.Scheduler.Scheduler.ListRequest result = new com.passkit.grpc.Scheduler.Scheduler.ListRequest(this);
-        result.jobId_ = jobId_;
-        if (filtersBuilder_ == null) {
-          result.filters_ = filters_;
-        } else {
-          result.filters_ = filtersBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Scheduler.Scheduler.ListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.jobId_ = jobId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Scheduler.Scheduler.ListRequest) {
@@ -483,6 +453,7 @@ public final class Scheduler {
         if (other == com.passkit.grpc.Scheduler.Scheduler.ListRequest.getDefaultInstance()) return this;
         if (!other.getJobId().isEmpty()) {
           jobId_ = other.jobId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasFilters()) {
@@ -516,14 +487,14 @@ public final class Scheduler {
                 break;
               case 10: {
                 jobId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getFiltersFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -541,6 +512,7 @@ public final class Scheduler {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object jobId_ = "";
       /**
@@ -595,11 +567,9 @@ public final class Scheduler {
        */
       public Builder setJobId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         jobId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -612,8 +582,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearJobId() {
-        
         jobId_ = getDefaultInstance().getJobId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -628,12 +598,10 @@ public final class Scheduler {
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         jobId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -650,7 +618,7 @@ public final class Scheduler {
        * @return Whether the filters field is set.
        */
       public boolean hasFilters() {
-        return filtersBuilder_ != null || filters_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -680,11 +648,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           filters_ = value;
-          onChanged();
         } else {
           filtersBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -698,11 +666,11 @@ public final class Scheduler {
           com.passkit.grpc.Filter.Filters.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           filters_ = builderForValue.build();
-          onChanged();
         } else {
           filtersBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -714,17 +682,18 @@ public final class Scheduler {
        */
       public Builder mergeFilters(com.passkit.grpc.Filter.Filters value) {
         if (filtersBuilder_ == null) {
-          if (filters_ != null) {
-            filters_ =
-              com.passkit.grpc.Filter.Filters.newBuilder(filters_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            filters_ != null &&
+            filters_ != com.passkit.grpc.Filter.Filters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
           } else {
             filters_ = value;
           }
-          onChanged();
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -735,14 +704,13 @@ public final class Scheduler {
        * <code>.io.Filters filters = 2;</code>
        */
       public Builder clearFilters() {
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-          onChanged();
-        } else {
-          filters_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -753,7 +721,7 @@ public final class Scheduler {
        * <code>.io.Filters filters = 2;</code>
        */
       public com.passkit.grpc.Filter.Filters.Builder getFiltersBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFiltersFieldBuilder().getBuilder();
       }

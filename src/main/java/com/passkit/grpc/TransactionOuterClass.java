@@ -321,11 +321,6 @@ public final class TransactionOuterClass {
       return new Transaction();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.TransactionOuterClass.internal_static_io_Transaction_descriptor;
@@ -340,7 +335,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int REFERENCEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object referenceId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object referenceId_ = "";
     /**
      * <pre>
      * Reference ID is the ID used in the system where the transaction is coming from. Needs to be unique within the program.
@@ -386,7 +382,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int TOTALPRICE_FIELD_NUMBER = 2;
-    private float totalPrice_;
+    private float totalPrice_ = 0F;
     /**
      * <pre>
      * The total amount of all order items. Based on POS setting, the totalPrice can already include the tax amount
@@ -401,6 +397,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int ORDERITEMS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.TransactionOuterClass.OrderItem> orderItems_;
     /**
      * <pre>
@@ -461,7 +458,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int DISCOUNT_FIELD_NUMBER = 4;
-    private float discount_;
+    private float discount_ = 0F;
     /**
      * <pre>
      * The total discount amount
@@ -476,6 +473,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int DISCOUNTITEMS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.TransactionOuterClass.DiscountItem> discountItems_;
     /**
      * <pre>
@@ -536,7 +534,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int SERVICECHARGE_FIELD_NUMBER = 6;
-    private float serviceCharge_;
+    private float serviceCharge_ = 0F;
     /**
      * <pre>
      * The service charge amount
@@ -551,7 +549,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int TOTALTAX_FIELD_NUMBER = 7;
-    private float totalTax_;
+    private float totalTax_ = 0F;
     /**
      * <pre>
      * The tax amount.
@@ -566,7 +564,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int FINALPRICE_FIELD_NUMBER = 8;
-    private float finalPrice_;
+    private float finalPrice_ = 0F;
     /**
      * <pre>
      * The final price of the transaction: (total price + service charge + (totalTax: if POS settings set to tax exclusive)) - discount
@@ -581,7 +579,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int ROUNDINGDIFFERENCE_FIELD_NUMBER = 9;
-    private float roundingDifference_;
+    private float roundingDifference_ = 0F;
     /**
      * <pre>
      * Rounding difference
@@ -596,7 +594,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int ISREFUNDED_FIELD_NUMBER = 10;
-    private boolean isRefunded_;
+    private boolean isRefunded_ = false;
     /**
      * <pre>
      * Indicates if this transaction is a refund
@@ -645,11 +643,12 @@ public final class TransactionOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getTimestampOrBuilder() {
-      return getTimestamp();
+      return timestamp_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : timestamp_;
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 12;
-    private volatile java.lang.Object currency_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object currency_ = "";
     /**
      * <pre>
      * The transaction currency
@@ -729,11 +728,12 @@ public final class TransactionOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Proximity.GPSLocationOrBuilder getLocationOrBuilder() {
-      return getLocation();
+      return location_ == null ? com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance() : location_;
     }
 
     public static final int TRANSACTIONSOURCE_FIELD_NUMBER = 14;
-    private volatile java.lang.Object transactionSource_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transactionSource_ = "";
     /**
      * <pre>
      * 17 is reserved for transaction source (online, or restaurant code)
@@ -1137,52 +1137,41 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         referenceId_ = "";
-
         totalPrice_ = 0F;
-
         if (orderItemsBuilder_ == null) {
           orderItems_ = java.util.Collections.emptyList();
         } else {
           orderItems_ = null;
           orderItemsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         discount_ = 0F;
-
         if (discountItemsBuilder_ == null) {
           discountItems_ = java.util.Collections.emptyList();
         } else {
           discountItems_ = null;
           discountItemsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         serviceCharge_ = 0F;
-
         totalTax_ = 0F;
-
         finalPrice_ = 0F;
-
         roundingDifference_ = 0F;
-
         isRefunded_ = false;
-
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
-        } else {
-          timestamp_ = null;
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
           timestampBuilder_ = null;
         }
         currency_ = "";
-
-        if (locationBuilder_ == null) {
-          location_ = null;
-        } else {
-          location_ = null;
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
           locationBuilder_ = null;
         }
         transactionSource_ = "";
-
         return this;
       }
 
@@ -1209,81 +1198,77 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public com.passkit.grpc.TransactionOuterClass.Transaction buildPartial() {
         com.passkit.grpc.TransactionOuterClass.Transaction result = new com.passkit.grpc.TransactionOuterClass.Transaction(this);
-        int from_bitField0_ = bitField0_;
-        result.referenceId_ = referenceId_;
-        result.totalPrice_ = totalPrice_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.TransactionOuterClass.Transaction result) {
         if (orderItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             orderItems_ = java.util.Collections.unmodifiableList(orderItems_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.orderItems_ = orderItems_;
         } else {
           result.orderItems_ = orderItemsBuilder_.build();
         }
-        result.discount_ = discount_;
         if (discountItemsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             discountItems_ = java.util.Collections.unmodifiableList(discountItems_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.discountItems_ = discountItems_;
         } else {
           result.discountItems_ = discountItemsBuilder_.build();
         }
-        result.serviceCharge_ = serviceCharge_;
-        result.totalTax_ = totalTax_;
-        result.finalPrice_ = finalPrice_;
-        result.roundingDifference_ = roundingDifference_;
-        result.isRefunded_ = isRefunded_;
-        if (timestampBuilder_ == null) {
-          result.timestamp_ = timestamp_;
-        } else {
-          result.timestamp_ = timestampBuilder_.build();
-        }
-        result.currency_ = currency_;
-        if (locationBuilder_ == null) {
-          result.location_ = location_;
-        } else {
-          result.location_ = locationBuilder_.build();
-        }
-        result.transactionSource_ = transactionSource_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.TransactionOuterClass.Transaction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.referenceId_ = referenceId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalPrice_ = totalPrice_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.discount_ = discount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.serviceCharge_ = serviceCharge_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.totalTax_ = totalTax_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.finalPrice_ = finalPrice_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.roundingDifference_ = roundingDifference_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.isRefunded_ = isRefunded_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.timestamp_ = timestampBuilder_ == null
+              ? timestamp_
+              : timestampBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.currency_ = currency_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.location_ = locationBuilder_ == null
+              ? location_
+              : locationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.transactionSource_ = transactionSource_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.TransactionOuterClass.Transaction) {
@@ -1298,6 +1283,7 @@ public final class TransactionOuterClass {
         if (other == com.passkit.grpc.TransactionOuterClass.Transaction.getDefaultInstance()) return this;
         if (!other.getReferenceId().isEmpty()) {
           referenceId_ = other.referenceId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getTotalPrice() != 0F) {
@@ -1307,7 +1293,7 @@ public final class TransactionOuterClass {
           if (!other.orderItems_.isEmpty()) {
             if (orderItems_.isEmpty()) {
               orderItems_ = other.orderItems_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureOrderItemsIsMutable();
               orderItems_.addAll(other.orderItems_);
@@ -1320,7 +1306,7 @@ public final class TransactionOuterClass {
               orderItemsBuilder_.dispose();
               orderItemsBuilder_ = null;
               orderItems_ = other.orderItems_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               orderItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOrderItemsFieldBuilder() : null;
@@ -1336,7 +1322,7 @@ public final class TransactionOuterClass {
           if (!other.discountItems_.isEmpty()) {
             if (discountItems_.isEmpty()) {
               discountItems_ = other.discountItems_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureDiscountItemsIsMutable();
               discountItems_.addAll(other.discountItems_);
@@ -1349,7 +1335,7 @@ public final class TransactionOuterClass {
               discountItemsBuilder_.dispose();
               discountItemsBuilder_ = null;
               discountItems_ = other.discountItems_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               discountItemsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDiscountItemsFieldBuilder() : null;
@@ -1378,6 +1364,7 @@ public final class TransactionOuterClass {
         }
         if (!other.getCurrency().isEmpty()) {
           currency_ = other.currency_;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         if (other.hasLocation()) {
@@ -1385,6 +1372,7 @@ public final class TransactionOuterClass {
         }
         if (!other.getTransactionSource().isEmpty()) {
           transactionSource_ = other.transactionSource_;
+          bitField0_ |= 0x00002000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1415,12 +1403,12 @@ public final class TransactionOuterClass {
                 break;
               case 10: {
                 referenceId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 21: {
                 totalPrice_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               case 26: {
@@ -1438,7 +1426,7 @@ public final class TransactionOuterClass {
               } // case 26
               case 37: {
                 discount_ = input.readFloat();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 37
               case 42: {
@@ -1456,51 +1444,51 @@ public final class TransactionOuterClass {
               } // case 42
               case 53: {
                 serviceCharge_ = input.readFloat();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 53
               case 61: {
                 totalTax_ = input.readFloat();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 61
               case 69: {
                 finalPrice_ = input.readFloat();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 69
               case 77: {
                 roundingDifference_ = input.readFloat();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 77
               case 80: {
                 isRefunded_ = input.readBool();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 80
               case 90: {
                 input.readMessage(
                     getTimestampFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 currency_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 input.readMessage(
                     getLocationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 transactionSource_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               default: {
@@ -1573,11 +1561,9 @@ public final class TransactionOuterClass {
        */
       public Builder setReferenceId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         referenceId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1590,8 +1576,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearReferenceId() {
-        
         referenceId_ = getDefaultInstance().getReferenceId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1606,12 +1592,10 @@ public final class TransactionOuterClass {
        */
       public Builder setReferenceIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         referenceId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1639,8 +1623,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTotalPrice(float value) {
-        
+
         totalPrice_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1653,7 +1638,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotalPrice() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         totalPrice_ = 0F;
         onChanged();
         return this;
@@ -1662,9 +1647,9 @@ public final class TransactionOuterClass {
       private java.util.List<com.passkit.grpc.TransactionOuterClass.OrderItem> orderItems_ =
         java.util.Collections.emptyList();
       private void ensureOrderItemsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           orderItems_ = new java.util.ArrayList<com.passkit.grpc.TransactionOuterClass.OrderItem>(orderItems_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1858,7 +1843,7 @@ public final class TransactionOuterClass {
       public Builder clearOrderItems() {
         if (orderItemsBuilder_ == null) {
           orderItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           orderItemsBuilder_.clear();
@@ -1963,7 +1948,7 @@ public final class TransactionOuterClass {
           orderItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.TransactionOuterClass.OrderItem, com.passkit.grpc.TransactionOuterClass.OrderItem.Builder, com.passkit.grpc.TransactionOuterClass.OrderItemOrBuilder>(
                   orderItems_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           orderItems_ = null;
@@ -1994,8 +1979,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDiscount(float value) {
-        
+
         discount_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2008,7 +1994,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDiscount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         discount_ = 0F;
         onChanged();
         return this;
@@ -2017,9 +2003,9 @@ public final class TransactionOuterClass {
       private java.util.List<com.passkit.grpc.TransactionOuterClass.DiscountItem> discountItems_ =
         java.util.Collections.emptyList();
       private void ensureDiscountItemsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           discountItems_ = new java.util.ArrayList<com.passkit.grpc.TransactionOuterClass.DiscountItem>(discountItems_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -2213,7 +2199,7 @@ public final class TransactionOuterClass {
       public Builder clearDiscountItems() {
         if (discountItemsBuilder_ == null) {
           discountItems_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           discountItemsBuilder_.clear();
@@ -2318,7 +2304,7 @@ public final class TransactionOuterClass {
           discountItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.TransactionOuterClass.DiscountItem, com.passkit.grpc.TransactionOuterClass.DiscountItem.Builder, com.passkit.grpc.TransactionOuterClass.DiscountItemOrBuilder>(
                   discountItems_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           discountItems_ = null;
@@ -2349,8 +2335,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setServiceCharge(float value) {
-        
+
         serviceCharge_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2363,7 +2350,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearServiceCharge() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         serviceCharge_ = 0F;
         onChanged();
         return this;
@@ -2392,8 +2379,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTotalTax(float value) {
-        
+
         totalTax_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2406,7 +2394,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotalTax() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         totalTax_ = 0F;
         onChanged();
         return this;
@@ -2435,8 +2423,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setFinalPrice(float value) {
-        
+
         finalPrice_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2449,7 +2438,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFinalPrice() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         finalPrice_ = 0F;
         onChanged();
         return this;
@@ -2478,8 +2467,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setRoundingDifference(float value) {
-        
+
         roundingDifference_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2492,7 +2482,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearRoundingDifference() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         roundingDifference_ = 0F;
         onChanged();
         return this;
@@ -2521,8 +2511,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setIsRefunded(boolean value) {
-        
+
         isRefunded_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2535,7 +2526,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsRefunded() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         isRefunded_ = false;
         onChanged();
         return this;
@@ -2553,7 +2544,7 @@ public final class TransactionOuterClass {
        * @return Whether the timestamp field is set.
        */
       public boolean hasTimestamp() {
-        return timestampBuilder_ != null || timestamp_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -2583,11 +2574,11 @@ public final class TransactionOuterClass {
             throw new NullPointerException();
           }
           timestamp_ = value;
-          onChanged();
         } else {
           timestampBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2601,11 +2592,11 @@ public final class TransactionOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (timestampBuilder_ == null) {
           timestamp_ = builderForValue.build();
-          onChanged();
         } else {
           timestampBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2617,17 +2608,18 @@ public final class TransactionOuterClass {
        */
       public Builder mergeTimestamp(com.passkit.grpc.CommonObjects.Date value) {
         if (timestampBuilder_ == null) {
-          if (timestamp_ != null) {
-            timestamp_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(timestamp_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            timestamp_ != null &&
+            timestamp_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getTimestampBuilder().mergeFrom(value);
           } else {
             timestamp_ = value;
           }
-          onChanged();
         } else {
           timestampBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2638,14 +2630,13 @@ public final class TransactionOuterClass {
        * <code>.io.Date timestamp = 11;</code>
        */
       public Builder clearTimestamp() {
-        if (timestampBuilder_ == null) {
-          timestamp_ = null;
-          onChanged();
-        } else {
-          timestamp_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        timestamp_ = null;
+        if (timestampBuilder_ != null) {
+          timestampBuilder_.dispose();
           timestampBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2656,7 +2647,7 @@ public final class TransactionOuterClass {
        * <code>.io.Date timestamp = 11;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getTimestampBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getTimestampFieldBuilder().getBuilder();
       }
@@ -2749,11 +2740,9 @@ public final class TransactionOuterClass {
        */
       public Builder setCurrency(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         currency_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2766,8 +2755,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
-        
         currency_ = getDefaultInstance().getCurrency();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -2782,12 +2771,10 @@ public final class TransactionOuterClass {
        */
       public Builder setCurrencyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         currency_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -2804,7 +2791,7 @@ public final class TransactionOuterClass {
        * @return Whether the location field is set.
        */
       public boolean hasLocation() {
-        return locationBuilder_ != null || location_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -2834,11 +2821,11 @@ public final class TransactionOuterClass {
             throw new NullPointerException();
           }
           location_ = value;
-          onChanged();
         } else {
           locationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -2852,11 +2839,11 @@ public final class TransactionOuterClass {
           com.passkit.grpc.Proximity.GPSLocation.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
-          onChanged();
         } else {
           locationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -2868,17 +2855,18 @@ public final class TransactionOuterClass {
        */
       public Builder mergeLocation(com.passkit.grpc.Proximity.GPSLocation value) {
         if (locationBuilder_ == null) {
-          if (location_ != null) {
-            location_ =
-              com.passkit.grpc.Proximity.GPSLocation.newBuilder(location_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            location_ != null &&
+            location_ != com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()) {
+            getLocationBuilder().mergeFrom(value);
           } else {
             location_ = value;
           }
-          onChanged();
         } else {
           locationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -2889,14 +2877,13 @@ public final class TransactionOuterClass {
        * <code>.io.GPSLocation location = 13;</code>
        */
       public Builder clearLocation() {
-        if (locationBuilder_ == null) {
-          location_ = null;
-          onChanged();
-        } else {
-          location_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        location_ = null;
+        if (locationBuilder_ != null) {
+          locationBuilder_.dispose();
           locationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2907,7 +2894,7 @@ public final class TransactionOuterClass {
        * <code>.io.GPSLocation location = 13;</code>
        */
       public com.passkit.grpc.Proximity.GPSLocation.Builder getLocationBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getLocationFieldBuilder().getBuilder();
       }
@@ -3000,11 +2987,9 @@ public final class TransactionOuterClass {
        */
       public Builder setTransactionSource(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         transactionSource_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -3017,8 +3002,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTransactionSource() {
-        
         transactionSource_ = getDefaultInstance().getTransactionSource();
+        bitField0_ = (bitField0_ & ~0x00002000);
         onChanged();
         return this;
       }
@@ -3033,12 +3018,10 @@ public final class TransactionOuterClass {
        */
       public Builder setTransactionSourceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         transactionSource_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -3205,11 +3188,6 @@ public final class TransactionOuterClass {
       return new DiscountItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.TransactionOuterClass.internal_static_io_DiscountItem_descriptor;
@@ -3224,7 +3202,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int DISCOUNTCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object discountCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object discountCode_ = "";
     /**
      * <pre>
      * Discount code
@@ -3270,7 +3249,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int VOUCHERCODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object voucherCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object voucherCode_ = "";
     /**
      * <pre>
      * Specific voucher code
@@ -3316,7 +3296,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 4;
-    private float amount_;
+    private float amount_ = 0F;
     /**
      * <pre>
      * The discount amount
@@ -3331,7 +3311,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int ITEMNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object itemName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object itemName_ = "";
     /**
      * <pre>
      * The discount item name
@@ -3596,14 +3577,11 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         discountCode_ = "";
-
         voucherCode_ = "";
-
         amount_ = 0F;
-
         itemName_ = "";
-
         return this;
       }
 
@@ -3630,46 +3608,27 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public com.passkit.grpc.TransactionOuterClass.DiscountItem buildPartial() {
         com.passkit.grpc.TransactionOuterClass.DiscountItem result = new com.passkit.grpc.TransactionOuterClass.DiscountItem(this);
-        result.discountCode_ = discountCode_;
-        result.voucherCode_ = voucherCode_;
-        result.amount_ = amount_;
-        result.itemName_ = itemName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.TransactionOuterClass.DiscountItem result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.discountCode_ = discountCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.voucherCode_ = voucherCode_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.itemName_ = itemName_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.TransactionOuterClass.DiscountItem) {
@@ -3684,10 +3643,12 @@ public final class TransactionOuterClass {
         if (other == com.passkit.grpc.TransactionOuterClass.DiscountItem.getDefaultInstance()) return this;
         if (!other.getDiscountCode().isEmpty()) {
           discountCode_ = other.discountCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVoucherCode().isEmpty()) {
           voucherCode_ = other.voucherCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getAmount() != 0F) {
@@ -3695,6 +3656,7 @@ public final class TransactionOuterClass {
         }
         if (!other.getItemName().isEmpty()) {
           itemName_ = other.itemName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3725,22 +3687,22 @@ public final class TransactionOuterClass {
                 break;
               case 10: {
                 discountCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 voucherCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 37: {
                 amount_ = input.readFloat();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 37
               case 42: {
                 itemName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 42
               default: {
@@ -3758,6 +3720,7 @@ public final class TransactionOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object discountCode_ = "";
       /**
@@ -3812,11 +3775,9 @@ public final class TransactionOuterClass {
        */
       public Builder setDiscountCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         discountCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3829,8 +3790,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDiscountCode() {
-        
         discountCode_ = getDefaultInstance().getDiscountCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3845,12 +3806,10 @@ public final class TransactionOuterClass {
        */
       public Builder setDiscountCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         discountCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3908,11 +3867,9 @@ public final class TransactionOuterClass {
        */
       public Builder setVoucherCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         voucherCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3925,8 +3882,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearVoucherCode() {
-        
         voucherCode_ = getDefaultInstance().getVoucherCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3941,12 +3898,10 @@ public final class TransactionOuterClass {
        */
       public Builder setVoucherCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         voucherCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3974,8 +3929,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAmount(float value) {
-        
+
         amount_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3988,7 +3944,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         amount_ = 0F;
         onChanged();
         return this;
@@ -4047,11 +4003,9 @@ public final class TransactionOuterClass {
        */
       public Builder setItemName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         itemName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4064,8 +4018,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearItemName() {
-        
         itemName_ = getDefaultInstance().getItemName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4080,12 +4034,10 @@ public final class TransactionOuterClass {
        */
       public Builder setItemNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         itemName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4251,11 +4203,6 @@ public final class TransactionOuterClass {
       return new OrderItem();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.TransactionOuterClass.internal_static_io_OrderItem_descriptor;
@@ -4270,7 +4217,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 1;
-    private float amount_;
+    private float amount_ = 0F;
     /**
      * <pre>
      * The item price
@@ -4285,7 +4232,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int TAX_FIELD_NUMBER = 2;
-    private float tax_;
+    private float tax_ = 0F;
     /**
      * <pre>
      * Tax on the item
@@ -4300,7 +4247,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int ITEMNAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object itemName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object itemName_ = "";
     /**
      * <pre>
      * The item name
@@ -4346,7 +4294,7 @@ public final class TransactionOuterClass {
     }
 
     public static final int QUANTITY_FIELD_NUMBER = 4;
-    private int quantity_;
+    private int quantity_ = 0;
     /**
      * <pre>
      * The quantity of items ordered
@@ -4361,7 +4309,8 @@ public final class TransactionOuterClass {
     }
 
     public static final int SKU_FIELD_NUMBER = 5;
-    private volatile java.lang.Object sku_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sku_ = "";
     /**
      * <pre>
      * The SKU as used in the system generating the transaction
@@ -4640,16 +4589,12 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         amount_ = 0F;
-
         tax_ = 0F;
-
         itemName_ = "";
-
         quantity_ = 0;
-
         sku_ = "";
-
         return this;
       }
 
@@ -4676,47 +4621,30 @@ public final class TransactionOuterClass {
       @java.lang.Override
       public com.passkit.grpc.TransactionOuterClass.OrderItem buildPartial() {
         com.passkit.grpc.TransactionOuterClass.OrderItem result = new com.passkit.grpc.TransactionOuterClass.OrderItem(this);
-        result.amount_ = amount_;
-        result.tax_ = tax_;
-        result.itemName_ = itemName_;
-        result.quantity_ = quantity_;
-        result.sku_ = sku_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.TransactionOuterClass.OrderItem result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tax_ = tax_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.itemName_ = itemName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quantity_ = quantity_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.sku_ = sku_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.TransactionOuterClass.OrderItem) {
@@ -4737,6 +4665,7 @@ public final class TransactionOuterClass {
         }
         if (!other.getItemName().isEmpty()) {
           itemName_ = other.itemName_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getQuantity() != 0) {
@@ -4744,6 +4673,7 @@ public final class TransactionOuterClass {
         }
         if (!other.getSku().isEmpty()) {
           sku_ = other.sku_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4774,27 +4704,27 @@ public final class TransactionOuterClass {
                 break;
               case 13: {
                 amount_ = input.readFloat();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 13
               case 21: {
                 tax_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               case 26: {
                 itemName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
                 quantity_ = input.readInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 42: {
                 sku_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               default: {
@@ -4812,6 +4742,7 @@ public final class TransactionOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private float amount_ ;
       /**
@@ -4836,8 +4767,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAmount(float value) {
-        
+
         amount_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4850,7 +4782,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         amount_ = 0F;
         onChanged();
         return this;
@@ -4879,8 +4811,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTax(float value) {
-        
+
         tax_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4893,7 +4826,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTax() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         tax_ = 0F;
         onChanged();
         return this;
@@ -4952,11 +4885,9 @@ public final class TransactionOuterClass {
        */
       public Builder setItemName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         itemName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4969,8 +4900,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearItemName() {
-        
         itemName_ = getDefaultInstance().getItemName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4985,12 +4916,10 @@ public final class TransactionOuterClass {
        */
       public Builder setItemNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         itemName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5018,8 +4947,9 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setQuantity(int value) {
-        
+
         quantity_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5032,7 +4962,7 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearQuantity() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         quantity_ = 0;
         onChanged();
         return this;
@@ -5091,11 +5021,9 @@ public final class TransactionOuterClass {
        */
       public Builder setSku(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         sku_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5108,8 +5036,8 @@ public final class TransactionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSku() {
-        
         sku_ = getDefaultInstance().getSku();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -5124,12 +5052,10 @@ public final class TransactionOuterClass {
        */
       public Builder setSkuBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         sku_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }

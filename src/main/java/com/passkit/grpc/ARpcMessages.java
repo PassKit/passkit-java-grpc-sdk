@@ -29,27 +29,27 @@ public final class ARpcMessages {
       "ons/annotations.proto\032\036io/common/common_" +
       "objects.proto\032\027io/common/message.proto2\330" +
       "\006\n\010Messages\022o\n\ngetMessage\022\006.io.Id\032\013.io.M" +
-      "essage\"L\202\323\344\223\002\017\022\r/message/{id}\222A4\022\013Get me" +
-      "ssage\032%Gets an single message by message" +
-      " id.\022\226\001\n\rcreateMessage\022\013.io.Message\032\006.io" +
-      ".Id\"p\202\323\344\223\002\r\"\010/message:\001*\222AZ\022\016Create Mess" +
-      "age\032\026Creates a new message.J0\n\003400\022)\n\'Th" +
-      "ere is a problem with the input data.\022\244\001" +
+      "essage\"L\222A4\022\013Get message\032%Gets an single" +
+      " message by message id.\202\323\344\223\002\017\022\r/message/" +
+      "{id}\022\226\001\n\rcreateMessage\022\013.io.Message\032\006.io" +
+      ".Id\"p\222AZ\022\016Create Message\032\026Creates a new " +
+      "message.J0\n\003400\022)\n\'There is a problem wi" +
+      "th the input data.\202\323\344\223\002\r\"\010/message:\001*\022\244\001" +
       "\n\rupdateMessage\022\013.io.Message\032\026.google.pr" +
-      "otobuf.Empty\"n\202\323\344\223\002\022\032\r/message/{id}:\001*\222A" +
-      "S\022\016Update Message\032\017Update message.J0\n\00340" +
-      "0\022)\n\'There is a problem with the input d" +
-      "ata.\022\264\001\n\rdeleteMessage\022\006.io.Id\032\026.google." +
-      "protobuf.Empty\"\202\001\202\323\344\223\002\017*\r/message/{id}\222A" +
-      "j\022\016Delete Message\0322Deleting a message wi" +
-      "ll remove it from all passes.J$\n\003404\022\035\n\033" +
-      "Message could not be found.\022\343\001\n\013sendMess" +
+      "otobuf.Empty\"n\222AS\022\016Update Message\032\017Updat" +
+      "e message.J0\n\003400\022)\n\'There is a problem " +
+      "with the input data.\202\323\344\223\002\022\032\r/message/{id" +
+      "}:\001*\022\264\001\n\rdeleteMessage\022\006.io.Id\032\026.google." +
+      "protobuf.Empty\"\202\001\222Aj\022\016Delete Message\0322De" +
+      "leting a message will remove it from all" +
+      " passes.J$\n\003404\022\035\n\033Message could not be " +
+      "found.\202\323\344\223\002\017*\r/message/{id}\022\343\001\n\013sendMess" +
       "age\022\026.io.SendMessageRequest\032\027.io.SendMes" +
-      "sageResponse\"\242\001\202\323\344\223\002\022\"\r/message/send:\001*\222" +
-      "A\206\001\022\014Send Message\032DSends a message to an" +
-      " array of passIds, or to every pass in a" +
-      " class.J0\n\003400\022)\n\'There is a problem wit" +
-      "h the input data.BG\n\020com.passkit.grpcZ$s" +
+      "sageResponse\"\242\001\222A\206\001\022\014Send Message\032DSends" +
+      " a message to an array of passIds, or to" +
+      " every pass in a class.J0\n\003400\022)\n\'There " +
+      "is a problem with the input data.\202\323\344\223\002\022\"" +
+      "\r/message/send:\001*BG\n\020com.passkit.grpcZ$s" +
       "tash.passkit.com/io/model/sdk/go/io\252\002\014Pa" +
       "ssKit.Grpcb\006proto3"
     };

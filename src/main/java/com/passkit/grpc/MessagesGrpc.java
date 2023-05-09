@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.50.1)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/core/a_rpc_messages.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MessagesGrpc {
@@ -216,87 +216,60 @@ public final class MessagesGrpc {
 
   /**
    */
-  public static abstract class MessagesImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void getMessage(com.passkit.grpc.CommonObjects.Id request,
+    default void getMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessageMethod(), responseObserver);
     }
 
     /**
      */
-    public void createMessage(com.passkit.grpc.MessageOuterClass.Message request,
+    default void createMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMessageMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
+    default void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMessageMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteMessage(com.passkit.grpc.CommonObjects.Id request,
+    default void deleteMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMessageMethod(), responseObserver);
     }
 
     /**
      */
-    public void sendMessage(com.passkit.grpc.MessageOuterClass.SendMessageRequest request,
+    default void sendMessage(com.passkit.grpc.MessageOuterClass.SendMessageRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.SendMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendMessageMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.MessageOuterClass.Message>(
-                  this, METHODID_GET_MESSAGE)))
-          .addMethod(
-            getCreateMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.MessageOuterClass.Message,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_MESSAGE)))
-          .addMethod(
-            getUpdateMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.MessageOuterClass.Message,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UPDATE_MESSAGE)))
-          .addMethod(
-            getDeleteMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_MESSAGE)))
-          .addMethod(
-            getSendMessageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.MessageOuterClass.SendMessageRequest,
-                com.passkit.grpc.MessageOuterClass.SendMessageResponse>(
-                  this, METHODID_SEND_MESSAGE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Messages.
    */
-  public static final class MessagesStub extends io.grpc.stub.AbstractAsyncStub<MessagesStub> {
+  public static abstract class MessagesImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MessagesGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Messages.
+   */
+  public static final class MessagesStub
+      extends io.grpc.stub.AbstractAsyncStub<MessagesStub> {
     private MessagesStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -350,8 +323,10 @@ public final class MessagesGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Messages.
    */
-  public static final class MessagesBlockingStub extends io.grpc.stub.AbstractBlockingStub<MessagesBlockingStub> {
+  public static final class MessagesBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MessagesBlockingStub> {
     private MessagesBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -400,8 +375,10 @@ public final class MessagesGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Messages.
    */
-  public static final class MessagesFutureStub extends io.grpc.stub.AbstractFutureStub<MessagesFutureStub> {
+  public static final class MessagesFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MessagesFutureStub> {
     private MessagesFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -465,10 +442,10 @@ public final class MessagesGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MessagesImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MessagesImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -511,6 +488,46 @@ public final class MessagesGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.MessageOuterClass.Message>(
+                service, METHODID_GET_MESSAGE)))
+        .addMethod(
+          getCreateMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.MessageOuterClass.Message,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_MESSAGE)))
+        .addMethod(
+          getUpdateMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.MessageOuterClass.Message,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPDATE_MESSAGE)))
+        .addMethod(
+          getDeleteMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_MESSAGE)))
+        .addMethod(
+          getSendMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.MessageOuterClass.SendMessageRequest,
+              com.passkit.grpc.MessageOuterClass.SendMessageResponse>(
+                service, METHODID_SEND_MESSAGE)))
+        .build();
   }
 
   private static abstract class MessagesBaseDescriptorSupplier

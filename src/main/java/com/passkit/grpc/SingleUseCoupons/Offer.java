@@ -940,11 +940,6 @@ public final class Offer {
       return new CouponOffer();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CouponOffer_descriptor;
@@ -959,7 +954,8 @@ public final class Offer {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated offer id (22 characters).
@@ -1005,7 +1001,8 @@ public final class Offer {
     }
 
     public static final int OFFERTITLE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object offerTitle_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerTitle_ = "";
     /**
      * <pre>
      * The offer title; will be shown on the enrolment page.
@@ -1085,11 +1082,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedOfferTitleOrBuilder() {
-      return getLocalizedOfferTitle();
+      return localizedOfferTitle_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedOfferTitle_;
     }
 
     public static final int OFFERSHORTTITLE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object offerShortTitle_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerShortTitle_ = "";
     /**
      * <pre>
      * The offer short title.
@@ -1169,11 +1167,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedOfferShortTitleOrBuilder() {
-      return getLocalizedOfferShortTitle();
+      return localizedOfferShortTitle_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedOfferShortTitle_;
     }
 
     public static final int OFFERDETAILS_FIELD_NUMBER = 6;
-    private volatile java.lang.Object offerDetails_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerDetails_ = "";
     /**
      * <pre>
      * The offer details; will be shown on the enrolment page.
@@ -1253,11 +1252,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedOfferDetailsOrBuilder() {
-      return getLocalizedOfferDetails();
+      return localizedOfferDetails_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedOfferDetails_;
     }
 
     public static final int OFFERFINEPRINT_FIELD_NUMBER = 8;
-    private volatile java.lang.Object offerFinePrint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerFinePrint_ = "";
     /**
      * <pre>
      * The offer fine print.
@@ -1337,11 +1337,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedOfferFinePrintOrBuilder() {
-      return getLocalizedOfferFinePrint();
+      return localizedOfferFinePrint_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedOfferFinePrint_;
     }
 
     public static final int BEFOREREDEEMPASSTEMPLATEID_FIELD_NUMBER = 10;
-    private volatile java.lang.Object beforeRedeemPassTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object beforeRedeemPassTemplateId_ = "";
     /**
      * <pre>
      * The pass template ID that coupons will use when in unredeemed state. All coupons for the offer are issued in unredeemed state.
@@ -1387,7 +1388,8 @@ public final class Offer {
     }
 
     public static final int AFTERREDEEMPASSTEMPLATEID_FIELD_NUMBER = 11;
-    private volatile java.lang.Object afterRedeemPassTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object afterRedeemPassTemplateId_ = "";
     /**
      * <pre>
      * Optional pass template ID that coupons will use when switched to redeemed state.
@@ -1467,7 +1469,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Billing.QuotaOrBuilder getQuotaOrBuilder() {
-      return getQuota();
+      return quota_ == null ? com.passkit.grpc.Billing.Quota.getDefaultInstance() : quota_;
     }
 
     public static final int COUPONEXPIRYSETTINGS_FIELD_NUMBER = 13;
@@ -1505,7 +1507,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettingsOrBuilder getCouponExpirySettingsOrBuilder() {
-      return getCouponExpirySettings();
+      return couponExpirySettings_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings.getDefaultInstance() : couponExpirySettings_;
     }
 
     public static final int REDEMPTIONSETTINGS_FIELD_NUMBER = 14;
@@ -1543,7 +1545,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettingsOrBuilder getRedemptionSettingsOrBuilder() {
-      return getRedemptionSettings();
+      return redemptionSettings_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings.getDefaultInstance() : redemptionSettings_;
     }
 
     public static final int ISSUESTARTDATE_FIELD_NUMBER = 15;
@@ -1581,7 +1583,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueStartDateOrBuilder() {
-      return getIssueStartDate();
+      return issueStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueStartDate_;
     }
 
     public static final int ISSUEENDDATE_FIELD_NUMBER = 16;
@@ -1619,7 +1621,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueEndDateOrBuilder() {
-      return getIssueEndDate();
+      return issueEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueEndDate_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 17;
@@ -1657,7 +1659,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 18;
@@ -1695,11 +1697,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     public static final int CAMPAIGNID_FIELD_NUMBER = 19;
-    private volatile java.lang.Object campaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object campaignId_ = "";
     /**
      * <pre>
      * The campaign id that the offer belongs to (1 campaign can have multiple offers). This field cannot be changed once an offer is linked to a campaign.
@@ -1779,11 +1782,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Distribution.DistributionSettingsOrBuilder getDistributionSettingsOrBuilder() {
-      return getDistributionSettings();
+      return distributionSettings_ == null ? com.passkit.grpc.Distribution.DistributionSettings.getDefaultInstance() : distributionSettings_;
     }
 
     public static final int SHORTCODE_FIELD_NUMBER = 21;
-    private volatile java.lang.Object shortCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object shortCode_ = "";
     /**
      * <pre>
      * The offer shortcode generated by the system. If the campaign is public, then this shortcode can be used to generate the coupon-create URL.
@@ -1829,7 +1833,8 @@ public final class Offer {
     }
 
     public static final int IANATIMEZONE_FIELD_NUMBER = 22;
-    private volatile java.lang.Object ianaTimezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ianaTimezone_ = "";
     /**
      * <pre>
      * The offer timezone.
@@ -1875,7 +1880,7 @@ public final class Offer {
     }
 
     public static final int DISABLED_FIELD_NUMBER = 23;
-    private boolean disabled_;
+    private boolean disabled_ = false;
     /**
      * <pre>
      * Can be used to temporarily disable the coupon (i.e. if you ran out of your promotion item, you can temporarily disable all live coupons, and activate them again later on when your item is in stock again).
@@ -2374,100 +2379,78 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         offerTitle_ = "";
-
-        if (localizedOfferTitleBuilder_ == null) {
-          localizedOfferTitle_ = null;
-        } else {
-          localizedOfferTitle_ = null;
+        localizedOfferTitle_ = null;
+        if (localizedOfferTitleBuilder_ != null) {
+          localizedOfferTitleBuilder_.dispose();
           localizedOfferTitleBuilder_ = null;
         }
         offerShortTitle_ = "";
-
-        if (localizedOfferShortTitleBuilder_ == null) {
-          localizedOfferShortTitle_ = null;
-        } else {
-          localizedOfferShortTitle_ = null;
+        localizedOfferShortTitle_ = null;
+        if (localizedOfferShortTitleBuilder_ != null) {
+          localizedOfferShortTitleBuilder_.dispose();
           localizedOfferShortTitleBuilder_ = null;
         }
         offerDetails_ = "";
-
-        if (localizedOfferDetailsBuilder_ == null) {
-          localizedOfferDetails_ = null;
-        } else {
-          localizedOfferDetails_ = null;
+        localizedOfferDetails_ = null;
+        if (localizedOfferDetailsBuilder_ != null) {
+          localizedOfferDetailsBuilder_.dispose();
           localizedOfferDetailsBuilder_ = null;
         }
         offerFinePrint_ = "";
-
-        if (localizedOfferFinePrintBuilder_ == null) {
-          localizedOfferFinePrint_ = null;
-        } else {
-          localizedOfferFinePrint_ = null;
+        localizedOfferFinePrint_ = null;
+        if (localizedOfferFinePrintBuilder_ != null) {
+          localizedOfferFinePrintBuilder_.dispose();
           localizedOfferFinePrintBuilder_ = null;
         }
         beforeRedeemPassTemplateId_ = "";
-
         afterRedeemPassTemplateId_ = "";
-
-        if (quotaBuilder_ == null) {
-          quota_ = null;
-        } else {
-          quota_ = null;
+        quota_ = null;
+        if (quotaBuilder_ != null) {
+          quotaBuilder_.dispose();
           quotaBuilder_ = null;
         }
-        if (couponExpirySettingsBuilder_ == null) {
-          couponExpirySettings_ = null;
-        } else {
-          couponExpirySettings_ = null;
+        couponExpirySettings_ = null;
+        if (couponExpirySettingsBuilder_ != null) {
+          couponExpirySettingsBuilder_.dispose();
           couponExpirySettingsBuilder_ = null;
         }
-        if (redemptionSettingsBuilder_ == null) {
-          redemptionSettings_ = null;
-        } else {
-          redemptionSettings_ = null;
+        redemptionSettings_ = null;
+        if (redemptionSettingsBuilder_ != null) {
+          redemptionSettingsBuilder_.dispose();
           redemptionSettingsBuilder_ = null;
         }
-        if (issueStartDateBuilder_ == null) {
-          issueStartDate_ = null;
-        } else {
-          issueStartDate_ = null;
+        issueStartDate_ = null;
+        if (issueStartDateBuilder_ != null) {
+          issueStartDateBuilder_.dispose();
           issueStartDateBuilder_ = null;
         }
-        if (issueEndDateBuilder_ == null) {
-          issueEndDate_ = null;
-        } else {
-          issueEndDate_ = null;
+        issueEndDate_ = null;
+        if (issueEndDateBuilder_ != null) {
+          issueEndDateBuilder_.dispose();
           issueEndDateBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         campaignId_ = "";
-
-        if (distributionSettingsBuilder_ == null) {
-          distributionSettings_ = null;
-        } else {
-          distributionSettings_ = null;
+        distributionSettings_ = null;
+        if (distributionSettingsBuilder_ != null) {
+          distributionSettingsBuilder_.dispose();
           distributionSettingsBuilder_ = null;
         }
         shortCode_ = "";
-
         ianaTimezone_ = "";
-
         disabled_ = false;
-
         return this;
       }
 
@@ -2494,113 +2477,108 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer result = new com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer(this);
-        result.id_ = id_;
-        result.offerTitle_ = offerTitle_;
-        if (localizedOfferTitleBuilder_ == null) {
-          result.localizedOfferTitle_ = localizedOfferTitle_;
-        } else {
-          result.localizedOfferTitle_ = localizedOfferTitleBuilder_.build();
-        }
-        result.offerShortTitle_ = offerShortTitle_;
-        if (localizedOfferShortTitleBuilder_ == null) {
-          result.localizedOfferShortTitle_ = localizedOfferShortTitle_;
-        } else {
-          result.localizedOfferShortTitle_ = localizedOfferShortTitleBuilder_.build();
-        }
-        result.offerDetails_ = offerDetails_;
-        if (localizedOfferDetailsBuilder_ == null) {
-          result.localizedOfferDetails_ = localizedOfferDetails_;
-        } else {
-          result.localizedOfferDetails_ = localizedOfferDetailsBuilder_.build();
-        }
-        result.offerFinePrint_ = offerFinePrint_;
-        if (localizedOfferFinePrintBuilder_ == null) {
-          result.localizedOfferFinePrint_ = localizedOfferFinePrint_;
-        } else {
-          result.localizedOfferFinePrint_ = localizedOfferFinePrintBuilder_.build();
-        }
-        result.beforeRedeemPassTemplateId_ = beforeRedeemPassTemplateId_;
-        result.afterRedeemPassTemplateId_ = afterRedeemPassTemplateId_;
-        if (quotaBuilder_ == null) {
-          result.quota_ = quota_;
-        } else {
-          result.quota_ = quotaBuilder_.build();
-        }
-        if (couponExpirySettingsBuilder_ == null) {
-          result.couponExpirySettings_ = couponExpirySettings_;
-        } else {
-          result.couponExpirySettings_ = couponExpirySettingsBuilder_.build();
-        }
-        if (redemptionSettingsBuilder_ == null) {
-          result.redemptionSettings_ = redemptionSettings_;
-        } else {
-          result.redemptionSettings_ = redemptionSettingsBuilder_.build();
-        }
-        if (issueStartDateBuilder_ == null) {
-          result.issueStartDate_ = issueStartDate_;
-        } else {
-          result.issueStartDate_ = issueStartDateBuilder_.build();
-        }
-        if (issueEndDateBuilder_ == null) {
-          result.issueEndDate_ = issueEndDate_;
-        } else {
-          result.issueEndDate_ = issueEndDateBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        result.campaignId_ = campaignId_;
-        if (distributionSettingsBuilder_ == null) {
-          result.distributionSettings_ = distributionSettings_;
-        } else {
-          result.distributionSettings_ = distributionSettingsBuilder_.build();
-        }
-        result.shortCode_ = shortCode_;
-        result.ianaTimezone_ = ianaTimezone_;
-        result.disabled_ = disabled_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.offerTitle_ = offerTitle_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localizedOfferTitle_ = localizedOfferTitleBuilder_ == null
+              ? localizedOfferTitle_
+              : localizedOfferTitleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.offerShortTitle_ = offerShortTitle_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localizedOfferShortTitle_ = localizedOfferShortTitleBuilder_ == null
+              ? localizedOfferShortTitle_
+              : localizedOfferShortTitleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.offerDetails_ = offerDetails_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.localizedOfferDetails_ = localizedOfferDetailsBuilder_ == null
+              ? localizedOfferDetails_
+              : localizedOfferDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.offerFinePrint_ = offerFinePrint_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.localizedOfferFinePrint_ = localizedOfferFinePrintBuilder_ == null
+              ? localizedOfferFinePrint_
+              : localizedOfferFinePrintBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.beforeRedeemPassTemplateId_ = beforeRedeemPassTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.afterRedeemPassTemplateId_ = afterRedeemPassTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.quota_ = quotaBuilder_ == null
+              ? quota_
+              : quotaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.couponExpirySettings_ = couponExpirySettingsBuilder_ == null
+              ? couponExpirySettings_
+              : couponExpirySettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.redemptionSettings_ = redemptionSettingsBuilder_ == null
+              ? redemptionSettings_
+              : redemptionSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.issueStartDate_ = issueStartDateBuilder_ == null
+              ? issueStartDate_
+              : issueStartDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.issueEndDate_ = issueEndDateBuilder_ == null
+              ? issueEndDate_
+              : issueEndDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.campaignId_ = campaignId_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.distributionSettings_ = distributionSettingsBuilder_ == null
+              ? distributionSettings_
+              : distributionSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.shortCode_ = shortCode_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.ianaTimezone_ = ianaTimezone_;
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.disabled_ = disabled_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer) {
@@ -2615,10 +2593,12 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getOfferTitle().isEmpty()) {
           offerTitle_ = other.offerTitle_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasLocalizedOfferTitle()) {
@@ -2626,6 +2606,7 @@ public final class Offer {
         }
         if (!other.getOfferShortTitle().isEmpty()) {
           offerShortTitle_ = other.offerShortTitle_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasLocalizedOfferShortTitle()) {
@@ -2633,6 +2614,7 @@ public final class Offer {
         }
         if (!other.getOfferDetails().isEmpty()) {
           offerDetails_ = other.offerDetails_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasLocalizedOfferDetails()) {
@@ -2640,6 +2622,7 @@ public final class Offer {
         }
         if (!other.getOfferFinePrint().isEmpty()) {
           offerFinePrint_ = other.offerFinePrint_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (other.hasLocalizedOfferFinePrint()) {
@@ -2647,10 +2630,12 @@ public final class Offer {
         }
         if (!other.getBeforeRedeemPassTemplateId().isEmpty()) {
           beforeRedeemPassTemplateId_ = other.beforeRedeemPassTemplateId_;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getAfterRedeemPassTemplateId().isEmpty()) {
           afterRedeemPassTemplateId_ = other.afterRedeemPassTemplateId_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (other.hasQuota()) {
@@ -2676,6 +2661,7 @@ public final class Offer {
         }
         if (!other.getCampaignId().isEmpty()) {
           campaignId_ = other.campaignId_;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         if (other.hasDistributionSettings()) {
@@ -2683,10 +2669,12 @@ public final class Offer {
         }
         if (!other.getShortCode().isEmpty()) {
           shortCode_ = other.shortCode_;
+          bitField0_ |= 0x00100000;
           onChanged();
         }
         if (!other.getIanaTimezone().isEmpty()) {
           ianaTimezone_ = other.ianaTimezone_;
+          bitField0_ |= 0x00200000;
           onChanged();
         }
         if (other.getDisabled() != false) {
@@ -2720,141 +2708,141 @@ public final class Offer {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 offerTitle_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getLocalizedOfferTitleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 offerShortTitle_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getLocalizedOfferShortTitleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 offerDetails_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getLocalizedOfferDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 offerFinePrint_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getLocalizedOfferFinePrintFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 beforeRedeemPassTemplateId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 afterRedeemPassTemplateId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     getQuotaFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 input.readMessage(
                     getCouponExpirySettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 input.readMessage(
                     getRedemptionSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 input.readMessage(
                     getIssueStartDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
                 input.readMessage(
                     getIssueEndDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 138: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 campaignId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getDistributionSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               case 170: {
                 shortCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 170
               case 178: {
                 ianaTimezone_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 178
               case 184: {
                 disabled_ = input.readBool();
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 184
               default: {
@@ -2872,6 +2860,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -2926,11 +2915,9 @@ public final class Offer {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2943,8 +2930,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2959,12 +2946,10 @@ public final class Offer {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3022,11 +3007,9 @@ public final class Offer {
        */
       public Builder setOfferTitle(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerTitle_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3039,8 +3022,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearOfferTitle() {
-        
         offerTitle_ = getDefaultInstance().getOfferTitle();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3055,12 +3038,10 @@ public final class Offer {
        */
       public Builder setOfferTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerTitle_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3077,7 +3058,7 @@ public final class Offer {
        * @return Whether the localizedOfferTitle field is set.
        */
       public boolean hasLocalizedOfferTitle() {
-        return localizedOfferTitleBuilder_ != null || localizedOfferTitle_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -3107,11 +3088,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedOfferTitle_ = value;
-          onChanged();
         } else {
           localizedOfferTitleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3125,11 +3106,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedOfferTitleBuilder_ == null) {
           localizedOfferTitle_ = builderForValue.build();
-          onChanged();
         } else {
           localizedOfferTitleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3141,17 +3122,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedOfferTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedOfferTitleBuilder_ == null) {
-          if (localizedOfferTitle_ != null) {
-            localizedOfferTitle_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedOfferTitle_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            localizedOfferTitle_ != null &&
+            localizedOfferTitle_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedOfferTitleBuilder().mergeFrom(value);
           } else {
             localizedOfferTitle_ = value;
           }
-          onChanged();
         } else {
           localizedOfferTitleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3162,14 +3144,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferTitle = 3;</code>
        */
       public Builder clearLocalizedOfferTitle() {
-        if (localizedOfferTitleBuilder_ == null) {
-          localizedOfferTitle_ = null;
-          onChanged();
-        } else {
-          localizedOfferTitle_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localizedOfferTitle_ = null;
+        if (localizedOfferTitleBuilder_ != null) {
+          localizedOfferTitleBuilder_.dispose();
           localizedOfferTitleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3180,7 +3161,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferTitle = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedOfferTitleBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getLocalizedOfferTitleFieldBuilder().getBuilder();
       }
@@ -3273,11 +3254,9 @@ public final class Offer {
        */
       public Builder setOfferShortTitle(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerShortTitle_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3290,8 +3269,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearOfferShortTitle() {
-        
         offerShortTitle_ = getDefaultInstance().getOfferShortTitle();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -3306,12 +3285,10 @@ public final class Offer {
        */
       public Builder setOfferShortTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerShortTitle_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -3328,7 +3305,7 @@ public final class Offer {
        * @return Whether the localizedOfferShortTitle field is set.
        */
       public boolean hasLocalizedOfferShortTitle() {
-        return localizedOfferShortTitleBuilder_ != null || localizedOfferShortTitle_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -3358,11 +3335,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedOfferShortTitle_ = value;
-          onChanged();
         } else {
           localizedOfferShortTitleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3376,11 +3353,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedOfferShortTitleBuilder_ == null) {
           localizedOfferShortTitle_ = builderForValue.build();
-          onChanged();
         } else {
           localizedOfferShortTitleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3392,17 +3369,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedOfferShortTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedOfferShortTitleBuilder_ == null) {
-          if (localizedOfferShortTitle_ != null) {
-            localizedOfferShortTitle_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedOfferShortTitle_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            localizedOfferShortTitle_ != null &&
+            localizedOfferShortTitle_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedOfferShortTitleBuilder().mergeFrom(value);
           } else {
             localizedOfferShortTitle_ = value;
           }
-          onChanged();
         } else {
           localizedOfferShortTitleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -3413,14 +3391,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferShortTitle = 5;</code>
        */
       public Builder clearLocalizedOfferShortTitle() {
-        if (localizedOfferShortTitleBuilder_ == null) {
-          localizedOfferShortTitle_ = null;
-          onChanged();
-        } else {
-          localizedOfferShortTitle_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        localizedOfferShortTitle_ = null;
+        if (localizedOfferShortTitleBuilder_ != null) {
+          localizedOfferShortTitleBuilder_.dispose();
           localizedOfferShortTitleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3431,7 +3408,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferShortTitle = 5;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedOfferShortTitleBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getLocalizedOfferShortTitleFieldBuilder().getBuilder();
       }
@@ -3524,11 +3501,9 @@ public final class Offer {
        */
       public Builder setOfferDetails(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerDetails_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3541,8 +3516,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearOfferDetails() {
-        
         offerDetails_ = getDefaultInstance().getOfferDetails();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -3557,12 +3532,10 @@ public final class Offer {
        */
       public Builder setOfferDetailsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerDetails_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3579,7 +3552,7 @@ public final class Offer {
        * @return Whether the localizedOfferDetails field is set.
        */
       public boolean hasLocalizedOfferDetails() {
-        return localizedOfferDetailsBuilder_ != null || localizedOfferDetails_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -3609,11 +3582,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedOfferDetails_ = value;
-          onChanged();
         } else {
           localizedOfferDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3627,11 +3600,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedOfferDetailsBuilder_ == null) {
           localizedOfferDetails_ = builderForValue.build();
-          onChanged();
         } else {
           localizedOfferDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3643,17 +3616,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedOfferDetails(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedOfferDetailsBuilder_ == null) {
-          if (localizedOfferDetails_ != null) {
-            localizedOfferDetails_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedOfferDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            localizedOfferDetails_ != null &&
+            localizedOfferDetails_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedOfferDetailsBuilder().mergeFrom(value);
           } else {
             localizedOfferDetails_ = value;
           }
-          onChanged();
         } else {
           localizedOfferDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3664,14 +3638,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferDetails = 7;</code>
        */
       public Builder clearLocalizedOfferDetails() {
-        if (localizedOfferDetailsBuilder_ == null) {
-          localizedOfferDetails_ = null;
-          onChanged();
-        } else {
-          localizedOfferDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        localizedOfferDetails_ = null;
+        if (localizedOfferDetailsBuilder_ != null) {
+          localizedOfferDetailsBuilder_.dispose();
           localizedOfferDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3682,7 +3655,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferDetails = 7;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedOfferDetailsBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getLocalizedOfferDetailsFieldBuilder().getBuilder();
       }
@@ -3775,11 +3748,9 @@ public final class Offer {
        */
       public Builder setOfferFinePrint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerFinePrint_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -3792,8 +3763,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearOfferFinePrint() {
-        
         offerFinePrint_ = getDefaultInstance().getOfferFinePrint();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -3808,12 +3779,10 @@ public final class Offer {
        */
       public Builder setOfferFinePrintBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerFinePrint_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -3830,7 +3799,7 @@ public final class Offer {
        * @return Whether the localizedOfferFinePrint field is set.
        */
       public boolean hasLocalizedOfferFinePrint() {
-        return localizedOfferFinePrintBuilder_ != null || localizedOfferFinePrint_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -3860,11 +3829,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedOfferFinePrint_ = value;
-          onChanged();
         } else {
           localizedOfferFinePrintBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -3878,11 +3847,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedOfferFinePrintBuilder_ == null) {
           localizedOfferFinePrint_ = builderForValue.build();
-          onChanged();
         } else {
           localizedOfferFinePrintBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -3894,17 +3863,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedOfferFinePrint(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedOfferFinePrintBuilder_ == null) {
-          if (localizedOfferFinePrint_ != null) {
-            localizedOfferFinePrint_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedOfferFinePrint_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            localizedOfferFinePrint_ != null &&
+            localizedOfferFinePrint_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedOfferFinePrintBuilder().mergeFrom(value);
           } else {
             localizedOfferFinePrint_ = value;
           }
-          onChanged();
         } else {
           localizedOfferFinePrintBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -3915,14 +3885,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferFinePrint = 9;</code>
        */
       public Builder clearLocalizedOfferFinePrint() {
-        if (localizedOfferFinePrintBuilder_ == null) {
-          localizedOfferFinePrint_ = null;
-          onChanged();
-        } else {
-          localizedOfferFinePrint_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        localizedOfferFinePrint_ = null;
+        if (localizedOfferFinePrintBuilder_ != null) {
+          localizedOfferFinePrintBuilder_.dispose();
           localizedOfferFinePrintBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3933,7 +3902,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferFinePrint = 9;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedOfferFinePrintBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getLocalizedOfferFinePrintFieldBuilder().getBuilder();
       }
@@ -4026,11 +3995,9 @@ public final class Offer {
        */
       public Builder setBeforeRedeemPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         beforeRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -4043,8 +4010,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearBeforeRedeemPassTemplateId() {
-        
         beforeRedeemPassTemplateId_ = getDefaultInstance().getBeforeRedeemPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -4059,12 +4026,10 @@ public final class Offer {
        */
       public Builder setBeforeRedeemPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         beforeRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -4122,11 +4087,9 @@ public final class Offer {
        */
       public Builder setAfterRedeemPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         afterRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4139,8 +4102,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearAfterRedeemPassTemplateId() {
-        
         afterRedeemPassTemplateId_ = getDefaultInstance().getAfterRedeemPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -4155,12 +4118,10 @@ public final class Offer {
        */
       public Builder setAfterRedeemPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         afterRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -4177,7 +4138,7 @@ public final class Offer {
        * @return Whether the quota field is set.
        */
       public boolean hasQuota() {
-        return quotaBuilder_ != null || quota_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -4207,11 +4168,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           quota_ = value;
-          onChanged();
         } else {
           quotaBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -4225,11 +4186,11 @@ public final class Offer {
           com.passkit.grpc.Billing.Quota.Builder builderForValue) {
         if (quotaBuilder_ == null) {
           quota_ = builderForValue.build();
-          onChanged();
         } else {
           quotaBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -4241,17 +4202,18 @@ public final class Offer {
        */
       public Builder mergeQuota(com.passkit.grpc.Billing.Quota value) {
         if (quotaBuilder_ == null) {
-          if (quota_ != null) {
-            quota_ =
-              com.passkit.grpc.Billing.Quota.newBuilder(quota_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            quota_ != null &&
+            quota_ != com.passkit.grpc.Billing.Quota.getDefaultInstance()) {
+            getQuotaBuilder().mergeFrom(value);
           } else {
             quota_ = value;
           }
-          onChanged();
         } else {
           quotaBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -4262,14 +4224,13 @@ public final class Offer {
        * <code>.io.Quota quota = 12;</code>
        */
       public Builder clearQuota() {
-        if (quotaBuilder_ == null) {
-          quota_ = null;
-          onChanged();
-        } else {
-          quota_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        quota_ = null;
+        if (quotaBuilder_ != null) {
+          quotaBuilder_.dispose();
           quotaBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4280,7 +4241,7 @@ public final class Offer {
        * <code>.io.Quota quota = 12;</code>
        */
       public com.passkit.grpc.Billing.Quota.Builder getQuotaBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getQuotaFieldBuilder().getBuilder();
       }
@@ -4332,7 +4293,7 @@ public final class Offer {
        * @return Whether the couponExpirySettings field is set.
        */
       public boolean hasCouponExpirySettings() {
-        return couponExpirySettingsBuilder_ != null || couponExpirySettings_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -4362,11 +4323,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           couponExpirySettings_ = value;
-          onChanged();
         } else {
           couponExpirySettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -4380,11 +4341,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings.Builder builderForValue) {
         if (couponExpirySettingsBuilder_ == null) {
           couponExpirySettings_ = builderForValue.build();
-          onChanged();
         } else {
           couponExpirySettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -4396,17 +4357,18 @@ public final class Offer {
        */
       public Builder mergeCouponExpirySettings(com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings value) {
         if (couponExpirySettingsBuilder_ == null) {
-          if (couponExpirySettings_ != null) {
-            couponExpirySettings_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings.newBuilder(couponExpirySettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            couponExpirySettings_ != null &&
+            couponExpirySettings_ != com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings.getDefaultInstance()) {
+            getCouponExpirySettingsBuilder().mergeFrom(value);
           } else {
             couponExpirySettings_ = value;
           }
-          onChanged();
         } else {
           couponExpirySettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -4417,14 +4379,13 @@ public final class Offer {
        * <code>.single_use_coupons.CouponExpirySettings couponExpirySettings = 13;</code>
        */
       public Builder clearCouponExpirySettings() {
-        if (couponExpirySettingsBuilder_ == null) {
-          couponExpirySettings_ = null;
-          onChanged();
-        } else {
-          couponExpirySettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        couponExpirySettings_ = null;
+        if (couponExpirySettingsBuilder_ != null) {
+          couponExpirySettingsBuilder_.dispose();
           couponExpirySettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4435,7 +4396,7 @@ public final class Offer {
        * <code>.single_use_coupons.CouponExpirySettings couponExpirySettings = 13;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings.Builder getCouponExpirySettingsBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getCouponExpirySettingsFieldBuilder().getBuilder();
       }
@@ -4487,7 +4448,7 @@ public final class Offer {
        * @return Whether the redemptionSettings field is set.
        */
       public boolean hasRedemptionSettings() {
-        return redemptionSettingsBuilder_ != null || redemptionSettings_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -4517,11 +4478,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           redemptionSettings_ = value;
-          onChanged();
         } else {
           redemptionSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -4535,11 +4496,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings.Builder builderForValue) {
         if (redemptionSettingsBuilder_ == null) {
           redemptionSettings_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -4551,17 +4512,18 @@ public final class Offer {
        */
       public Builder mergeRedemptionSettings(com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings value) {
         if (redemptionSettingsBuilder_ == null) {
-          if (redemptionSettings_ != null) {
-            redemptionSettings_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings.newBuilder(redemptionSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            redemptionSettings_ != null &&
+            redemptionSettings_ != com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings.getDefaultInstance()) {
+            getRedemptionSettingsBuilder().mergeFrom(value);
           } else {
             redemptionSettings_ = value;
           }
-          onChanged();
         } else {
           redemptionSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -4572,14 +4534,13 @@ public final class Offer {
        * <code>.single_use_coupons.RedemptionSettings redemptionSettings = 14;</code>
        */
       public Builder clearRedemptionSettings() {
-        if (redemptionSettingsBuilder_ == null) {
-          redemptionSettings_ = null;
-          onChanged();
-        } else {
-          redemptionSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        redemptionSettings_ = null;
+        if (redemptionSettingsBuilder_ != null) {
+          redemptionSettingsBuilder_.dispose();
           redemptionSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4590,7 +4551,7 @@ public final class Offer {
        * <code>.single_use_coupons.RedemptionSettings redemptionSettings = 14;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings.Builder getRedemptionSettingsBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getRedemptionSettingsFieldBuilder().getBuilder();
       }
@@ -4642,7 +4603,7 @@ public final class Offer {
        * @return Whether the issueStartDate field is set.
        */
       public boolean hasIssueStartDate() {
-        return issueStartDateBuilder_ != null || issueStartDate_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -4672,11 +4633,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           issueStartDate_ = value;
-          onChanged();
         } else {
           issueStartDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -4690,11 +4651,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (issueStartDateBuilder_ == null) {
           issueStartDate_ = builderForValue.build();
-          onChanged();
         } else {
           issueStartDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -4706,17 +4667,18 @@ public final class Offer {
        */
       public Builder mergeIssueStartDate(com.google.protobuf.Timestamp value) {
         if (issueStartDateBuilder_ == null) {
-          if (issueStartDate_ != null) {
-            issueStartDate_ =
-              com.google.protobuf.Timestamp.newBuilder(issueStartDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            issueStartDate_ != null &&
+            issueStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getIssueStartDateBuilder().mergeFrom(value);
           } else {
             issueStartDate_ = value;
           }
-          onChanged();
         } else {
           issueStartDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -4727,14 +4689,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp issueStartDate = 15;</code>
        */
       public Builder clearIssueStartDate() {
-        if (issueStartDateBuilder_ == null) {
-          issueStartDate_ = null;
-          onChanged();
-        } else {
-          issueStartDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        issueStartDate_ = null;
+        if (issueStartDateBuilder_ != null) {
+          issueStartDateBuilder_.dispose();
           issueStartDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4745,7 +4706,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp issueStartDate = 15;</code>
        */
       public com.google.protobuf.Timestamp.Builder getIssueStartDateBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getIssueStartDateFieldBuilder().getBuilder();
       }
@@ -4797,7 +4758,7 @@ public final class Offer {
        * @return Whether the issueEndDate field is set.
        */
       public boolean hasIssueEndDate() {
-        return issueEndDateBuilder_ != null || issueEndDate_ != null;
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <pre>
@@ -4827,11 +4788,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           issueEndDate_ = value;
-          onChanged();
         } else {
           issueEndDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -4845,11 +4806,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (issueEndDateBuilder_ == null) {
           issueEndDate_ = builderForValue.build();
-          onChanged();
         } else {
           issueEndDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -4861,17 +4822,18 @@ public final class Offer {
        */
       public Builder mergeIssueEndDate(com.google.protobuf.Timestamp value) {
         if (issueEndDateBuilder_ == null) {
-          if (issueEndDate_ != null) {
-            issueEndDate_ =
-              com.google.protobuf.Timestamp.newBuilder(issueEndDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00008000) != 0) &&
+            issueEndDate_ != null &&
+            issueEndDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getIssueEndDateBuilder().mergeFrom(value);
           } else {
             issueEndDate_ = value;
           }
-          onChanged();
         } else {
           issueEndDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -4882,14 +4844,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp issueEndDate = 16;</code>
        */
       public Builder clearIssueEndDate() {
-        if (issueEndDateBuilder_ == null) {
-          issueEndDate_ = null;
-          onChanged();
-        } else {
-          issueEndDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        issueEndDate_ = null;
+        if (issueEndDateBuilder_ != null) {
+          issueEndDateBuilder_.dispose();
           issueEndDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4900,7 +4861,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp issueEndDate = 16;</code>
        */
       public com.google.protobuf.Timestamp.Builder getIssueEndDateBuilder() {
-        
+        bitField0_ |= 0x00008000;
         onChanged();
         return getIssueEndDateFieldBuilder().getBuilder();
       }
@@ -4952,7 +4913,7 @@ public final class Offer {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -4982,11 +4943,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -5000,11 +4961,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -5016,17 +4977,18 @@ public final class Offer {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -5037,14 +4999,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp created = 17;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5055,7 +5016,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp created = 17;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -5107,7 +5068,7 @@ public final class Offer {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <pre>
@@ -5137,11 +5098,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -5155,11 +5116,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -5171,17 +5132,18 @@ public final class Offer {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00020000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -5192,14 +5154,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp updated = 18;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5210,7 +5171,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp updated = 18;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00020000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -5303,11 +5264,9 @@ public final class Offer {
        */
       public Builder setCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         campaignId_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -5320,8 +5279,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCampaignId() {
-        
         campaignId_ = getDefaultInstance().getCampaignId();
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
         return this;
       }
@@ -5336,12 +5295,10 @@ public final class Offer {
        */
       public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         campaignId_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -5358,7 +5315,7 @@ public final class Offer {
        * @return Whether the distributionSettings field is set.
        */
       public boolean hasDistributionSettings() {
-        return distributionSettingsBuilder_ != null || distributionSettings_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -5388,11 +5345,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           distributionSettings_ = value;
-          onChanged();
         } else {
           distributionSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -5406,11 +5363,11 @@ public final class Offer {
           com.passkit.grpc.Distribution.DistributionSettings.Builder builderForValue) {
         if (distributionSettingsBuilder_ == null) {
           distributionSettings_ = builderForValue.build();
-          onChanged();
         } else {
           distributionSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -5422,17 +5379,18 @@ public final class Offer {
        */
       public Builder mergeDistributionSettings(com.passkit.grpc.Distribution.DistributionSettings value) {
         if (distributionSettingsBuilder_ == null) {
-          if (distributionSettings_ != null) {
-            distributionSettings_ =
-              com.passkit.grpc.Distribution.DistributionSettings.newBuilder(distributionSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            distributionSettings_ != null &&
+            distributionSettings_ != com.passkit.grpc.Distribution.DistributionSettings.getDefaultInstance()) {
+            getDistributionSettingsBuilder().mergeFrom(value);
           } else {
             distributionSettings_ = value;
           }
-          onChanged();
         } else {
           distributionSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -5443,14 +5401,13 @@ public final class Offer {
        * <code>.io.DistributionSettings distributionSettings = 20;</code>
        */
       public Builder clearDistributionSettings() {
-        if (distributionSettingsBuilder_ == null) {
-          distributionSettings_ = null;
-          onChanged();
-        } else {
-          distributionSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        distributionSettings_ = null;
+        if (distributionSettingsBuilder_ != null) {
+          distributionSettingsBuilder_.dispose();
           distributionSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5461,7 +5418,7 @@ public final class Offer {
        * <code>.io.DistributionSettings distributionSettings = 20;</code>
        */
       public com.passkit.grpc.Distribution.DistributionSettings.Builder getDistributionSettingsBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getDistributionSettingsFieldBuilder().getBuilder();
       }
@@ -5554,11 +5511,9 @@ public final class Offer {
        */
       public Builder setShortCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         shortCode_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -5571,8 +5526,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearShortCode() {
-        
         shortCode_ = getDefaultInstance().getShortCode();
+        bitField0_ = (bitField0_ & ~0x00100000);
         onChanged();
         return this;
       }
@@ -5587,12 +5542,10 @@ public final class Offer {
        */
       public Builder setShortCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         shortCode_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -5650,11 +5603,9 @@ public final class Offer {
        */
       public Builder setIanaTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ianaTimezone_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -5667,8 +5618,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearIanaTimezone() {
-        
         ianaTimezone_ = getDefaultInstance().getIanaTimezone();
+        bitField0_ = (bitField0_ & ~0x00200000);
         onChanged();
         return this;
       }
@@ -5683,12 +5634,10 @@ public final class Offer {
        */
       public Builder setIanaTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ianaTimezone_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -5716,8 +5665,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setDisabled(boolean value) {
-        
+
         disabled_ = value;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -5730,7 +5680,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearDisabled() {
-        
+        bitField0_ = (bitField0_ & ~0x00400000);
         disabled_ = false;
         onChanged();
         return this;
@@ -5849,11 +5799,6 @@ public final class Offer {
       return new CouponExpirySettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CouponExpirySettings_descriptor;
@@ -5868,7 +5813,7 @@ public final class Offer {
     }
 
     public static final int COUPONEXPIRYTYPE_FIELD_NUMBER = 1;
-    private int couponExpiryType_;
+    private int couponExpiryType_ = 0;
     /**
      * <code>.single_use_coupons.CouponExpiryType couponExpiryType = 1;</code>
      * @return The enum numeric value on the wire for couponExpiryType.
@@ -5881,13 +5826,12 @@ public final class Offer {
      * @return The couponExpiryType.
      */
     @java.lang.Override public com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType getCouponExpiryType() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType result = com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.valueOf(couponExpiryType_);
+      com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType result = com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.forNumber(couponExpiryType_);
       return result == null ? com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.UNRECOGNIZED : result;
     }
 
     public static final int EXPIREAFTERXDAYS_FIELD_NUMBER = 3;
-    private int expireAfterXDays_;
+    private int expireAfterXDays_ = 0;
     /**
      * <pre>
      * Number of days the coupon card is expired after the issue date.
@@ -6101,10 +6045,9 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         couponExpiryType_ = 0;
-
         expireAfterXDays_ = 0;
-
         return this;
       }
 
@@ -6131,44 +6074,21 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings result = new com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings(this);
-        result.couponExpiryType_ = couponExpiryType_;
-        result.expireAfterXDays_ = expireAfterXDays_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.couponExpiryType_ = couponExpiryType_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.expireAfterXDays_ = expireAfterXDays_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CouponExpirySettings) {
@@ -6215,12 +6135,12 @@ public final class Offer {
                 break;
               case 8: {
                 couponExpiryType_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 24: {
                 expireAfterXDays_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               default: {
@@ -6238,6 +6158,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int couponExpiryType_ = 0;
       /**
@@ -6253,8 +6174,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setCouponExpiryTypeValue(int value) {
-        
         couponExpiryType_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6264,8 +6185,7 @@ public final class Offer {
        */
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType getCouponExpiryType() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType result = com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.valueOf(couponExpiryType_);
+        com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType result = com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.forNumber(couponExpiryType_);
         return result == null ? com.passkit.grpc.SingleUseCoupons.Offer.CouponExpiryType.UNRECOGNIZED : result;
       }
       /**
@@ -6277,7 +6197,7 @@ public final class Offer {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         couponExpiryType_ = value.getNumber();
         onChanged();
         return this;
@@ -6287,7 +6207,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCouponExpiryType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         couponExpiryType_ = 0;
         onChanged();
         return this;
@@ -6320,8 +6240,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setExpireAfterXDays(int value) {
-        
+
         expireAfterXDays_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6336,7 +6257,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearExpireAfterXDays() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         expireAfterXDays_ = 0;
         onChanged();
         return this;
@@ -6616,11 +6537,6 @@ public final class Offer {
       return new RedemptionSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_RedemptionSettings_descriptor;
@@ -6669,7 +6585,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getRedemptionStartDateOrBuilder() {
-      return getRedemptionStartDate();
+      return redemptionStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : redemptionStartDate_;
     }
 
     public static final int REDEMPTIONENDDATE_FIELD_NUMBER = 2;
@@ -6707,18 +6623,18 @@ public final class Offer {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getRedemptionEndDateOrBuilder() {
-      return getRedemptionEndDate();
+      return redemptionEndDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : redemptionEndDate_;
     }
 
     public static final int REDEMPTIONTYPE_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> redemptionType_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType> redemptionType_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType>() {
               public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType result = com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType.valueOf(from);
+                com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType result = com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType.forNumber(from);
                 return result == null ? com.passkit.grpc.SingleUseCoupons.Offer.RedemptionType.UNRECOGNIZED : result;
               }
             };
@@ -6823,7 +6739,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettingsOrBuilder getCodeProvidedOnRedeemSettingsOrBuilder() {
-      return getCodeProvidedOnRedeemSettings();
+      return codeProvidedOnRedeemSettings_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings.getDefaultInstance() : codeProvidedOnRedeemSettings_;
     }
 
     public static final int FIXEDCODESETTINGS_FIELD_NUMBER = 6;
@@ -6861,7 +6777,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettingsOrBuilder getFixedCodeSettingsOrBuilder() {
-      return getFixedCodeSettings();
+      return fixedCodeSettings_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.getDefaultInstance() : fixedCodeSettings_;
     }
 
     public static final int STANDARDSETTINGS_FIELD_NUMBER = 7;
@@ -6899,7 +6815,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPageOrBuilder getStandardSettingsOrBuilder() {
-      return getStandardSettings();
+      return standardSettings_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.getDefaultInstance() : standardSettings_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7184,36 +7100,32 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (redemptionStartDateBuilder_ == null) {
-          redemptionStartDate_ = null;
-        } else {
-          redemptionStartDate_ = null;
+        bitField0_ = 0;
+        redemptionStartDate_ = null;
+        if (redemptionStartDateBuilder_ != null) {
+          redemptionStartDateBuilder_.dispose();
           redemptionStartDateBuilder_ = null;
         }
-        if (redemptionEndDateBuilder_ == null) {
-          redemptionEndDate_ = null;
-        } else {
-          redemptionEndDate_ = null;
+        redemptionEndDate_ = null;
+        if (redemptionEndDateBuilder_ != null) {
+          redemptionEndDateBuilder_.dispose();
           redemptionEndDateBuilder_ = null;
         }
         redemptionType_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (codeProvidedOnRedeemSettingsBuilder_ == null) {
-          codeProvidedOnRedeemSettings_ = null;
-        } else {
-          codeProvidedOnRedeemSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        codeProvidedOnRedeemSettings_ = null;
+        if (codeProvidedOnRedeemSettingsBuilder_ != null) {
+          codeProvidedOnRedeemSettingsBuilder_.dispose();
           codeProvidedOnRedeemSettingsBuilder_ = null;
         }
-        if (fixedCodeSettingsBuilder_ == null) {
-          fixedCodeSettings_ = null;
-        } else {
-          fixedCodeSettings_ = null;
+        fixedCodeSettings_ = null;
+        if (fixedCodeSettingsBuilder_ != null) {
+          fixedCodeSettingsBuilder_.dispose();
           fixedCodeSettingsBuilder_ = null;
         }
-        if (standardSettingsBuilder_ == null) {
-          standardSettings_ = null;
-        } else {
-          standardSettings_ = null;
+        standardSettings_ = null;
+        if (standardSettingsBuilder_ != null) {
+          standardSettingsBuilder_.dispose();
           standardSettingsBuilder_ = null;
         }
         return this;
@@ -7242,73 +7154,49 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings result = new com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings(this);
-        int from_bitField0_ = bitField0_;
-        if (redemptionStartDateBuilder_ == null) {
-          result.redemptionStartDate_ = redemptionStartDate_;
-        } else {
-          result.redemptionStartDate_ = redemptionStartDateBuilder_.build();
-        }
-        if (redemptionEndDateBuilder_ == null) {
-          result.redemptionEndDate_ = redemptionEndDate_;
-        } else {
-          result.redemptionEndDate_ = redemptionEndDateBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          redemptionType_ = java.util.Collections.unmodifiableList(redemptionType_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.redemptionType_ = redemptionType_;
-        if (codeProvidedOnRedeemSettingsBuilder_ == null) {
-          result.codeProvidedOnRedeemSettings_ = codeProvidedOnRedeemSettings_;
-        } else {
-          result.codeProvidedOnRedeemSettings_ = codeProvidedOnRedeemSettingsBuilder_.build();
-        }
-        if (fixedCodeSettingsBuilder_ == null) {
-          result.fixedCodeSettings_ = fixedCodeSettings_;
-        } else {
-          result.fixedCodeSettings_ = fixedCodeSettingsBuilder_.build();
-        }
-        if (standardSettingsBuilder_ == null) {
-          result.standardSettings_ = standardSettings_;
-        } else {
-          result.standardSettings_ = standardSettingsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          redemptionType_ = java.util.Collections.unmodifiableList(redemptionType_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.redemptionType_ = redemptionType_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.redemptionStartDate_ = redemptionStartDateBuilder_ == null
+              ? redemptionStartDate_
+              : redemptionStartDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.redemptionEndDate_ = redemptionEndDateBuilder_ == null
+              ? redemptionEndDate_
+              : redemptionEndDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.codeProvidedOnRedeemSettings_ = codeProvidedOnRedeemSettingsBuilder_ == null
+              ? codeProvidedOnRedeemSettings_
+              : codeProvidedOnRedeemSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.fixedCodeSettings_ = fixedCodeSettingsBuilder_ == null
+              ? fixedCodeSettings_
+              : fixedCodeSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.standardSettings_ = standardSettingsBuilder_ == null
+              ? standardSettings_
+              : standardSettingsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.RedemptionSettings) {
@@ -7330,7 +7218,7 @@ public final class Offer {
         if (!other.redemptionType_.isEmpty()) {
           if (redemptionType_.isEmpty()) {
             redemptionType_ = other.redemptionType_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureRedemptionTypeIsMutable();
             redemptionType_.addAll(other.redemptionType_);
@@ -7376,14 +7264,14 @@ public final class Offer {
                 input.readMessage(
                     getRedemptionStartDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getRedemptionEndDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
@@ -7407,21 +7295,21 @@ public final class Offer {
                 input.readMessage(
                     getCodeProvidedOnRedeemSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getFixedCodeSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getStandardSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               default: {
@@ -7453,7 +7341,7 @@ public final class Offer {
        * @return Whether the redemptionStartDate field is set.
        */
       public boolean hasRedemptionStartDate() {
-        return redemptionStartDateBuilder_ != null || redemptionStartDate_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -7483,11 +7371,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           redemptionStartDate_ = value;
-          onChanged();
         } else {
           redemptionStartDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7501,11 +7389,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (redemptionStartDateBuilder_ == null) {
           redemptionStartDate_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionStartDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7517,17 +7405,18 @@ public final class Offer {
        */
       public Builder mergeRedemptionStartDate(com.google.protobuf.Timestamp value) {
         if (redemptionStartDateBuilder_ == null) {
-          if (redemptionStartDate_ != null) {
-            redemptionStartDate_ =
-              com.google.protobuf.Timestamp.newBuilder(redemptionStartDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            redemptionStartDate_ != null &&
+            redemptionStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRedemptionStartDateBuilder().mergeFrom(value);
           } else {
             redemptionStartDate_ = value;
           }
-          onChanged();
         } else {
           redemptionStartDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7538,14 +7427,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp redemptionStartDate = 1;</code>
        */
       public Builder clearRedemptionStartDate() {
-        if (redemptionStartDateBuilder_ == null) {
-          redemptionStartDate_ = null;
-          onChanged();
-        } else {
-          redemptionStartDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        redemptionStartDate_ = null;
+        if (redemptionStartDateBuilder_ != null) {
+          redemptionStartDateBuilder_.dispose();
           redemptionStartDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7556,7 +7444,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp redemptionStartDate = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRedemptionStartDateBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getRedemptionStartDateFieldBuilder().getBuilder();
       }
@@ -7608,7 +7496,7 @@ public final class Offer {
        * @return Whether the redemptionEndDate field is set.
        */
       public boolean hasRedemptionEndDate() {
-        return redemptionEndDateBuilder_ != null || redemptionEndDate_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -7638,11 +7526,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           redemptionEndDate_ = value;
-          onChanged();
         } else {
           redemptionEndDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7656,11 +7544,11 @@ public final class Offer {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (redemptionEndDateBuilder_ == null) {
           redemptionEndDate_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionEndDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7672,17 +7560,18 @@ public final class Offer {
        */
       public Builder mergeRedemptionEndDate(com.google.protobuf.Timestamp value) {
         if (redemptionEndDateBuilder_ == null) {
-          if (redemptionEndDate_ != null) {
-            redemptionEndDate_ =
-              com.google.protobuf.Timestamp.newBuilder(redemptionEndDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            redemptionEndDate_ != null &&
+            redemptionEndDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRedemptionEndDateBuilder().mergeFrom(value);
           } else {
             redemptionEndDate_ = value;
           }
-          onChanged();
         } else {
           redemptionEndDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7693,14 +7582,13 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp redemptionEndDate = 2;</code>
        */
       public Builder clearRedemptionEndDate() {
-        if (redemptionEndDateBuilder_ == null) {
-          redemptionEndDate_ = null;
-          onChanged();
-        } else {
-          redemptionEndDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        redemptionEndDate_ = null;
+        if (redemptionEndDateBuilder_ != null) {
+          redemptionEndDateBuilder_.dispose();
           redemptionEndDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7711,7 +7599,7 @@ public final class Offer {
        * <code>.google.protobuf.Timestamp redemptionEndDate = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRedemptionEndDateBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRedemptionEndDateFieldBuilder().getBuilder();
       }
@@ -7754,9 +7642,9 @@ public final class Offer {
       private java.util.List<java.lang.Integer> redemptionType_ =
         java.util.Collections.emptyList();
       private void ensureRedemptionTypeIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           redemptionType_ = new java.util.ArrayList<java.lang.Integer>(redemptionType_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
         }
       }
       /**
@@ -7860,7 +7748,7 @@ public final class Offer {
        */
       public Builder clearRedemptionType() {
         redemptionType_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -7951,7 +7839,7 @@ public final class Offer {
        * @return Whether the codeProvidedOnRedeemSettings field is set.
        */
       public boolean hasCodeProvidedOnRedeemSettings() {
-        return codeProvidedOnRedeemSettingsBuilder_ != null || codeProvidedOnRedeemSettings_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -7981,11 +7869,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           codeProvidedOnRedeemSettings_ = value;
-          onChanged();
         } else {
           codeProvidedOnRedeemSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -7999,11 +7887,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings.Builder builderForValue) {
         if (codeProvidedOnRedeemSettingsBuilder_ == null) {
           codeProvidedOnRedeemSettings_ = builderForValue.build();
-          onChanged();
         } else {
           codeProvidedOnRedeemSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -8015,17 +7903,18 @@ public final class Offer {
        */
       public Builder mergeCodeProvidedOnRedeemSettings(com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings value) {
         if (codeProvidedOnRedeemSettingsBuilder_ == null) {
-          if (codeProvidedOnRedeemSettings_ != null) {
-            codeProvidedOnRedeemSettings_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings.newBuilder(codeProvidedOnRedeemSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            codeProvidedOnRedeemSettings_ != null &&
+            codeProvidedOnRedeemSettings_ != com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings.getDefaultInstance()) {
+            getCodeProvidedOnRedeemSettingsBuilder().mergeFrom(value);
           } else {
             codeProvidedOnRedeemSettings_ = value;
           }
-          onChanged();
         } else {
           codeProvidedOnRedeemSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -8036,14 +7925,13 @@ public final class Offer {
        * <code>.single_use_coupons.CustomerInitiatedCodeProvideOnRedeemSettings codeProvidedOnRedeemSettings = 5;</code>
        */
       public Builder clearCodeProvidedOnRedeemSettings() {
-        if (codeProvidedOnRedeemSettingsBuilder_ == null) {
-          codeProvidedOnRedeemSettings_ = null;
-          onChanged();
-        } else {
-          codeProvidedOnRedeemSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        codeProvidedOnRedeemSettings_ = null;
+        if (codeProvidedOnRedeemSettingsBuilder_ != null) {
+          codeProvidedOnRedeemSettingsBuilder_.dispose();
           codeProvidedOnRedeemSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8054,7 +7942,7 @@ public final class Offer {
        * <code>.single_use_coupons.CustomerInitiatedCodeProvideOnRedeemSettings codeProvidedOnRedeemSettings = 5;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings.Builder getCodeProvidedOnRedeemSettingsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getCodeProvidedOnRedeemSettingsFieldBuilder().getBuilder();
       }
@@ -8106,7 +7994,7 @@ public final class Offer {
        * @return Whether the fixedCodeSettings field is set.
        */
       public boolean hasFixedCodeSettings() {
-        return fixedCodeSettingsBuilder_ != null || fixedCodeSettings_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -8136,11 +8024,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           fixedCodeSettings_ = value;
-          onChanged();
         } else {
           fixedCodeSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8154,11 +8042,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.Builder builderForValue) {
         if (fixedCodeSettingsBuilder_ == null) {
           fixedCodeSettings_ = builderForValue.build();
-          onChanged();
         } else {
           fixedCodeSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8170,17 +8058,18 @@ public final class Offer {
        */
       public Builder mergeFixedCodeSettings(com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings value) {
         if (fixedCodeSettingsBuilder_ == null) {
-          if (fixedCodeSettings_ != null) {
-            fixedCodeSettings_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.newBuilder(fixedCodeSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            fixedCodeSettings_ != null &&
+            fixedCodeSettings_ != com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.getDefaultInstance()) {
+            getFixedCodeSettingsBuilder().mergeFrom(value);
           } else {
             fixedCodeSettings_ = value;
           }
-          onChanged();
         } else {
           fixedCodeSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8191,14 +8080,13 @@ public final class Offer {
        * <code>.single_use_coupons.CustomerInitiatedFixedCodeSettings fixedCodeSettings = 6;</code>
        */
       public Builder clearFixedCodeSettings() {
-        if (fixedCodeSettingsBuilder_ == null) {
-          fixedCodeSettings_ = null;
-          onChanged();
-        } else {
-          fixedCodeSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        fixedCodeSettings_ = null;
+        if (fixedCodeSettingsBuilder_ != null) {
+          fixedCodeSettingsBuilder_.dispose();
           fixedCodeSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8209,7 +8097,7 @@ public final class Offer {
        * <code>.single_use_coupons.CustomerInitiatedFixedCodeSettings fixedCodeSettings = 6;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.Builder getFixedCodeSettingsBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getFixedCodeSettingsFieldBuilder().getBuilder();
       }
@@ -8261,7 +8149,7 @@ public final class Offer {
        * @return Whether the standardSettings field is set.
        */
       public boolean hasStandardSettings() {
-        return standardSettingsBuilder_ != null || standardSettings_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -8291,11 +8179,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           standardSettings_ = value;
-          onChanged();
         } else {
           standardSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8309,11 +8197,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.Builder builderForValue) {
         if (standardSettingsBuilder_ == null) {
           standardSettings_ = builderForValue.build();
-          onChanged();
         } else {
           standardSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8325,17 +8213,18 @@ public final class Offer {
        */
       public Builder mergeStandardSettings(com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage value) {
         if (standardSettingsBuilder_ == null) {
-          if (standardSettings_ != null) {
-            standardSettings_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.newBuilder(standardSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            standardSettings_ != null &&
+            standardSettings_ != com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.getDefaultInstance()) {
+            getStandardSettingsBuilder().mergeFrom(value);
           } else {
             standardSettings_ = value;
           }
-          onChanged();
         } else {
           standardSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8346,14 +8235,13 @@ public final class Offer {
        * <code>.single_use_coupons.StandardPassKitHostedPage standardSettings = 7;</code>
        */
       public Builder clearStandardSettings() {
-        if (standardSettingsBuilder_ == null) {
-          standardSettings_ = null;
-          onChanged();
-        } else {
-          standardSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        standardSettings_ = null;
+        if (standardSettingsBuilder_ != null) {
+          standardSettingsBuilder_.dispose();
           standardSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8364,7 +8252,7 @@ public final class Offer {
        * <code>.single_use_coupons.StandardPassKitHostedPage standardSettings = 7;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.Builder getStandardSettingsBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getStandardSettingsFieldBuilder().getBuilder();
       }
@@ -8571,11 +8459,6 @@ public final class Offer {
       return new CustomerInitiatedFixedCodeSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CustomerInitiatedFixedCodeSettings_descriptor;
@@ -8590,7 +8473,8 @@ public final class Offer {
     }
 
     public static final int FIXEDCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object fixedCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fixedCode_ = "";
     /**
      * <pre>
      * For fixed code customer initiated redemption; the fixed code to display needs to be set.
@@ -8636,7 +8520,7 @@ public final class Offer {
     }
 
     public static final int USECOUPONSKU_FIELD_NUMBER = 2;
-    private boolean useCouponSku_;
+    private boolean useCouponSku_ = false;
     /**
      * <pre>
      * If set to true will use coupon.sku as the fixed code.
@@ -8651,7 +8535,7 @@ public final class Offer {
     }
 
     public static final int BARCODE_FIELD_NUMBER = 3;
-    private int barcode_;
+    private int barcode_ = 0;
     /**
      * <pre>
      * If set will render a barcode underneath the fixed code with as contents the fixed code.
@@ -8672,8 +8556,7 @@ public final class Offer {
      * @return The barcode.
      */
     @java.lang.Override public com.passkit.grpc.Template.BarcodeType getBarcode() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Template.BarcodeType result = com.passkit.grpc.Template.BarcodeType.valueOf(barcode_);
+      com.passkit.grpc.Template.BarcodeType result = com.passkit.grpc.Template.BarcodeType.forNumber(barcode_);
       return result == null ? com.passkit.grpc.Template.BarcodeType.UNRECOGNIZED : result;
     }
 
@@ -8712,7 +8595,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettingsOrBuilder getRedemptionTimerOrBuilder() {
-      return getRedemptionTimer();
+      return redemptionTimer_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings.getDefaultInstance() : redemptionTimer_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8940,16 +8823,13 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         fixedCode_ = "";
-
         useCouponSku_ = false;
-
         barcode_ = 0;
-
-        if (redemptionTimerBuilder_ == null) {
-          redemptionTimer_ = null;
-        } else {
-          redemptionTimer_ = null;
+        redemptionTimer_ = null;
+        if (redemptionTimerBuilder_ != null) {
+          redemptionTimerBuilder_.dispose();
           redemptionTimerBuilder_ = null;
         }
         return this;
@@ -8978,50 +8858,29 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings result = new com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings(this);
-        result.fixedCode_ = fixedCode_;
-        result.useCouponSku_ = useCouponSku_;
-        result.barcode_ = barcode_;
-        if (redemptionTimerBuilder_ == null) {
-          result.redemptionTimer_ = redemptionTimer_;
-        } else {
-          result.redemptionTimer_ = redemptionTimerBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fixedCode_ = fixedCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.useCouponSku_ = useCouponSku_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.barcode_ = barcode_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.redemptionTimer_ = redemptionTimerBuilder_ == null
+              ? redemptionTimer_
+              : redemptionTimerBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings) {
@@ -9036,6 +8895,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedFixedCodeSettings.getDefaultInstance()) return this;
         if (!other.getFixedCode().isEmpty()) {
           fixedCode_ = other.fixedCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getUseCouponSku() != false) {
@@ -9075,24 +8935,24 @@ public final class Offer {
                 break;
               case 10: {
                 fixedCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 useCouponSku_ = input.readBool();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 barcode_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
                 input.readMessage(
                     getRedemptionTimerFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -9110,6 +8970,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object fixedCode_ = "";
       /**
@@ -9164,11 +9025,9 @@ public final class Offer {
        */
       public Builder setFixedCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         fixedCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9181,8 +9040,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearFixedCode() {
-        
         fixedCode_ = getDefaultInstance().getFixedCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9197,12 +9056,10 @@ public final class Offer {
        */
       public Builder setFixedCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         fixedCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9230,8 +9087,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setUseCouponSku(boolean value) {
-        
+
         useCouponSku_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9244,7 +9102,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearUseCouponSku() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         useCouponSku_ = false;
         onChanged();
         return this;
@@ -9272,8 +9130,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setBarcodeValue(int value) {
-        
         barcode_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9287,8 +9145,7 @@ public final class Offer {
        */
       @java.lang.Override
       public com.passkit.grpc.Template.BarcodeType getBarcode() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Template.BarcodeType result = com.passkit.grpc.Template.BarcodeType.valueOf(barcode_);
+        com.passkit.grpc.Template.BarcodeType result = com.passkit.grpc.Template.BarcodeType.forNumber(barcode_);
         return result == null ? com.passkit.grpc.Template.BarcodeType.UNRECOGNIZED : result;
       }
       /**
@@ -9304,7 +9161,7 @@ public final class Offer {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         barcode_ = value.getNumber();
         onChanged();
         return this;
@@ -9318,7 +9175,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearBarcode() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         barcode_ = 0;
         onChanged();
         return this;
@@ -9336,7 +9193,7 @@ public final class Offer {
        * @return Whether the redemptionTimer field is set.
        */
       public boolean hasRedemptionTimer() {
-        return redemptionTimerBuilder_ != null || redemptionTimer_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -9366,11 +9223,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           redemptionTimer_ = value;
-          onChanged();
         } else {
           redemptionTimerBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9384,11 +9241,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings.Builder builderForValue) {
         if (redemptionTimerBuilder_ == null) {
           redemptionTimer_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionTimerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9400,17 +9257,18 @@ public final class Offer {
        */
       public Builder mergeRedemptionTimer(com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings value) {
         if (redemptionTimerBuilder_ == null) {
-          if (redemptionTimer_ != null) {
-            redemptionTimer_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings.newBuilder(redemptionTimer_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            redemptionTimer_ != null &&
+            redemptionTimer_ != com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings.getDefaultInstance()) {
+            getRedemptionTimerBuilder().mergeFrom(value);
           } else {
             redemptionTimer_ = value;
           }
-          onChanged();
         } else {
           redemptionTimerBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -9421,14 +9279,13 @@ public final class Offer {
        * <code>.single_use_coupons.RedemptionTimerSettings redemptionTimer = 4;</code>
        */
       public Builder clearRedemptionTimer() {
-        if (redemptionTimerBuilder_ == null) {
-          redemptionTimer_ = null;
-          onChanged();
-        } else {
-          redemptionTimer_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        redemptionTimer_ = null;
+        if (redemptionTimerBuilder_ != null) {
+          redemptionTimerBuilder_.dispose();
           redemptionTimerBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9439,7 +9296,7 @@ public final class Offer {
        * <code>.single_use_coupons.RedemptionTimerSettings redemptionTimer = 4;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings.Builder getRedemptionTimerBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getRedemptionTimerFieldBuilder().getBuilder();
       }
@@ -9626,11 +9483,6 @@ public final class Offer {
       return new RedemptionTimerSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_RedemptionTimerSettings_descriptor;
@@ -9645,7 +9497,7 @@ public final class Offer {
     }
 
     public static final int TIMEOUTSECONDS_FIELD_NUMBER = 1;
-    private int timeoutSeconds_;
+    private int timeoutSeconds_ = 0;
     /**
      * <pre>
      * The number of seconds the redemption page displays the redemption code. When the times runs out, the redemption page will show the 'redemption period expired' message.
@@ -9660,7 +9512,8 @@ public final class Offer {
     }
 
     public static final int TIMERHELPTEXT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object timerHelpText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timerHelpText_ = "";
     /**
      * <pre>
      * Help text rendered above redemption timer.
@@ -9740,7 +9593,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTimeHelpTextOrBuilder() {
-      return getLocalizedTimeHelpText();
+      return localizedTimeHelpText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTimeHelpText_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -9957,14 +9810,12 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         timeoutSeconds_ = 0;
-
         timerHelpText_ = "";
-
-        if (localizedTimeHelpTextBuilder_ == null) {
-          localizedTimeHelpText_ = null;
-        } else {
-          localizedTimeHelpText_ = null;
+        localizedTimeHelpText_ = null;
+        if (localizedTimeHelpTextBuilder_ != null) {
+          localizedTimeHelpTextBuilder_.dispose();
           localizedTimeHelpTextBuilder_ = null;
         }
         return this;
@@ -9993,49 +9844,26 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings result = new com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings(this);
-        result.timeoutSeconds_ = timeoutSeconds_;
-        result.timerHelpText_ = timerHelpText_;
-        if (localizedTimeHelpTextBuilder_ == null) {
-          result.localizedTimeHelpText_ = localizedTimeHelpText_;
-        } else {
-          result.localizedTimeHelpText_ = localizedTimeHelpTextBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timeoutSeconds_ = timeoutSeconds_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timerHelpText_ = timerHelpText_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localizedTimeHelpText_ = localizedTimeHelpTextBuilder_ == null
+              ? localizedTimeHelpText_
+              : localizedTimeHelpTextBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.RedemptionTimerSettings) {
@@ -10053,6 +9881,7 @@ public final class Offer {
         }
         if (!other.getTimerHelpText().isEmpty()) {
           timerHelpText_ = other.timerHelpText_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasLocalizedTimeHelpText()) {
@@ -10086,19 +9915,19 @@ public final class Offer {
                 break;
               case 8: {
                 timeoutSeconds_ = input.readUInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 timerHelpText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getLocalizedTimeHelpTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -10116,6 +9945,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int timeoutSeconds_ ;
       /**
@@ -10140,8 +9970,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setTimeoutSeconds(int value) {
-        
+
         timeoutSeconds_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10154,7 +9985,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearTimeoutSeconds() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         timeoutSeconds_ = 0;
         onChanged();
         return this;
@@ -10213,11 +10044,9 @@ public final class Offer {
        */
       public Builder setTimerHelpText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timerHelpText_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10230,8 +10059,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearTimerHelpText() {
-        
         timerHelpText_ = getDefaultInstance().getTimerHelpText();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -10246,12 +10075,10 @@ public final class Offer {
        */
       public Builder setTimerHelpTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timerHelpText_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10268,7 +10095,7 @@ public final class Offer {
        * @return Whether the localizedTimeHelpText field is set.
        */
       public boolean hasLocalizedTimeHelpText() {
-        return localizedTimeHelpTextBuilder_ != null || localizedTimeHelpText_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -10298,11 +10125,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedTimeHelpText_ = value;
-          onChanged();
         } else {
           localizedTimeHelpTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10316,11 +10143,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTimeHelpTextBuilder_ == null) {
           localizedTimeHelpText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTimeHelpTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10332,17 +10159,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedTimeHelpText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTimeHelpTextBuilder_ == null) {
-          if (localizedTimeHelpText_ != null) {
-            localizedTimeHelpText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTimeHelpText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            localizedTimeHelpText_ != null &&
+            localizedTimeHelpText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTimeHelpTextBuilder().mergeFrom(value);
           } else {
             localizedTimeHelpText_ = value;
           }
-          onChanged();
         } else {
           localizedTimeHelpTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -10353,14 +10181,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedTimeHelpText = 3;</code>
        */
       public Builder clearLocalizedTimeHelpText() {
-        if (localizedTimeHelpTextBuilder_ == null) {
-          localizedTimeHelpText_ = null;
-          onChanged();
-        } else {
-          localizedTimeHelpText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localizedTimeHelpText_ = null;
+        if (localizedTimeHelpTextBuilder_ != null) {
+          localizedTimeHelpTextBuilder_.dispose();
           localizedTimeHelpTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10371,7 +10198,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedTimeHelpText = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTimeHelpTextBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getLocalizedTimeHelpTextFieldBuilder().getBuilder();
       }
@@ -10606,7 +10433,8 @@ public final class Offer {
       super(builder);
     }
     private CustomerInitiatedCodeProvideOnRedeemSettings() {
-      validCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      validCodes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       submitButtonText_ = "";
     }
 
@@ -10617,11 +10445,6 @@ public final class Offer {
       return new CustomerInitiatedCodeProvideOnRedeemSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CustomerInitiatedCodeProvideOnRedeemSettings_descriptor;
@@ -10636,7 +10459,9 @@ public final class Offer {
     }
 
     public static final int VALIDCODES_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList validCodes_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList validCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Optional array of valid codes that can be input on redemption.
@@ -10721,11 +10546,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.InputFieldOrBuilder getRedemptionCodeInputOrBuilder() {
-      return getRedemptionCodeInput();
+      return redemptionCodeInput_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.InputField.getDefaultInstance() : redemptionCodeInput_;
     }
 
     public static final int SUBMITBUTTONTEXT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object submitButtonText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object submitButtonText_ = "";
     /**
      * <pre>
      * Submit button to confirm the validation code.
@@ -10805,7 +10631,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedSubmitButtonTextOrBuilder() {
-      return getLocalizedSubmitButtonText();
+      return localizedSubmitButtonText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedSubmitButtonText_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11044,20 +10870,18 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        validCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (redemptionCodeInputBuilder_ == null) {
-          redemptionCodeInput_ = null;
-        } else {
-          redemptionCodeInput_ = null;
+        bitField0_ = 0;
+        validCodes_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        redemptionCodeInput_ = null;
+        if (redemptionCodeInputBuilder_ != null) {
+          redemptionCodeInputBuilder_.dispose();
           redemptionCodeInputBuilder_ = null;
         }
         submitButtonText_ = "";
-
-        if (localizedSubmitButtonTextBuilder_ == null) {
-          localizedSubmitButtonText_ = null;
-        } else {
-          localizedSubmitButtonText_ = null;
+        localizedSubmitButtonText_ = null;
+        if (localizedSubmitButtonTextBuilder_ != null) {
+          localizedSubmitButtonTextBuilder_.dispose();
           localizedSubmitButtonTextBuilder_ = null;
         }
         return this;
@@ -11086,59 +10910,32 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings result = new com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          validCodes_ = validCodes_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.validCodes_ = validCodes_;
-        if (redemptionCodeInputBuilder_ == null) {
-          result.redemptionCodeInput_ = redemptionCodeInput_;
-        } else {
-          result.redemptionCodeInput_ = redemptionCodeInputBuilder_.build();
-        }
-        result.submitButtonText_ = submitButtonText_;
-        if (localizedSubmitButtonTextBuilder_ == null) {
-          result.localizedSubmitButtonText_ = localizedSubmitButtonText_;
-        } else {
-          result.localizedSubmitButtonText_ = localizedSubmitButtonTextBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          validCodes_.makeImmutable();
+          result.validCodes_ = validCodes_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.redemptionCodeInput_ = redemptionCodeInputBuilder_ == null
+              ? redemptionCodeInput_
+              : redemptionCodeInputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.submitButtonText_ = submitButtonText_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedSubmitButtonText_ = localizedSubmitButtonTextBuilder_ == null
+              ? localizedSubmitButtonText_
+              : localizedSubmitButtonTextBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CustomerInitiatedCodeProvideOnRedeemSettings) {
@@ -11154,7 +10951,7 @@ public final class Offer {
         if (!other.validCodes_.isEmpty()) {
           if (validCodes_.isEmpty()) {
             validCodes_ = other.validCodes_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureValidCodesIsMutable();
             validCodes_.addAll(other.validCodes_);
@@ -11166,6 +10963,7 @@ public final class Offer {
         }
         if (!other.getSubmitButtonText().isEmpty()) {
           submitButtonText_ = other.submitButtonText_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedSubmitButtonText()) {
@@ -11207,19 +11005,19 @@ public final class Offer {
                 input.readMessage(
                     getRedemptionCodeInputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 submitButtonText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedSubmitButtonTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -11239,12 +11037,13 @@ public final class Offer {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList validCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList validCodes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureValidCodesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!validCodes_.isModifiable()) {
           validCodes_ = new com.google.protobuf.LazyStringArrayList(validCodes_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -11256,7 +11055,8 @@ public final class Offer {
        */
       public com.google.protobuf.ProtocolStringList
           getValidCodesList() {
-        return validCodes_.getUnmodifiableView();
+        validCodes_.makeImmutable();
+        return validCodes_;
       }
       /**
        * <pre>
@@ -11306,11 +11106,10 @@ public final class Offer {
        */
       public Builder setValidCodes(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValidCodesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidCodesIsMutable();
         validCodes_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11325,11 +11124,10 @@ public final class Offer {
        */
       public Builder addValidCodes(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValidCodesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidCodesIsMutable();
         validCodes_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11347,6 +11145,7 @@ public final class Offer {
         ensureValidCodesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, validCodes_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11359,8 +11158,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearValidCodes() {
-        validCodes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        validCodes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -11375,12 +11175,11 @@ public final class Offer {
        */
       public Builder addValidCodesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureValidCodesIsMutable();
         validCodes_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11397,7 +11196,7 @@ public final class Offer {
        * @return Whether the redemptionCodeInput field is set.
        */
       public boolean hasRedemptionCodeInput() {
-        return redemptionCodeInputBuilder_ != null || redemptionCodeInput_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -11427,11 +11226,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           redemptionCodeInput_ = value;
-          onChanged();
         } else {
           redemptionCodeInputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11445,11 +11244,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.InputField.Builder builderForValue) {
         if (redemptionCodeInputBuilder_ == null) {
           redemptionCodeInput_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionCodeInputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11461,17 +11260,18 @@ public final class Offer {
        */
       public Builder mergeRedemptionCodeInput(com.passkit.grpc.SingleUseCoupons.Offer.InputField value) {
         if (redemptionCodeInputBuilder_ == null) {
-          if (redemptionCodeInput_ != null) {
-            redemptionCodeInput_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.InputField.newBuilder(redemptionCodeInput_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            redemptionCodeInput_ != null &&
+            redemptionCodeInput_ != com.passkit.grpc.SingleUseCoupons.Offer.InputField.getDefaultInstance()) {
+            getRedemptionCodeInputBuilder().mergeFrom(value);
           } else {
             redemptionCodeInput_ = value;
           }
-          onChanged();
         } else {
           redemptionCodeInputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11482,14 +11282,13 @@ public final class Offer {
        * <code>.single_use_coupons.InputField redemptionCodeInput = 2;</code>
        */
       public Builder clearRedemptionCodeInput() {
-        if (redemptionCodeInputBuilder_ == null) {
-          redemptionCodeInput_ = null;
-          onChanged();
-        } else {
-          redemptionCodeInput_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        redemptionCodeInput_ = null;
+        if (redemptionCodeInputBuilder_ != null) {
+          redemptionCodeInputBuilder_.dispose();
           redemptionCodeInputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11500,7 +11299,7 @@ public final class Offer {
        * <code>.single_use_coupons.InputField redemptionCodeInput = 2;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.InputField.Builder getRedemptionCodeInputBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRedemptionCodeInputFieldBuilder().getBuilder();
       }
@@ -11593,11 +11392,9 @@ public final class Offer {
        */
       public Builder setSubmitButtonText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         submitButtonText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11610,8 +11407,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearSubmitButtonText() {
-        
         submitButtonText_ = getDefaultInstance().getSubmitButtonText();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -11626,12 +11423,10 @@ public final class Offer {
        */
       public Builder setSubmitButtonTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         submitButtonText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11648,7 +11443,7 @@ public final class Offer {
        * @return Whether the localizedSubmitButtonText field is set.
        */
       public boolean hasLocalizedSubmitButtonText() {
-        return localizedSubmitButtonTextBuilder_ != null || localizedSubmitButtonText_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -11678,11 +11473,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedSubmitButtonText_ = value;
-          onChanged();
         } else {
           localizedSubmitButtonTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11696,11 +11491,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedSubmitButtonTextBuilder_ == null) {
           localizedSubmitButtonText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedSubmitButtonTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11712,17 +11507,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedSubmitButtonText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedSubmitButtonTextBuilder_ == null) {
-          if (localizedSubmitButtonText_ != null) {
-            localizedSubmitButtonText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedSubmitButtonText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedSubmitButtonText_ != null &&
+            localizedSubmitButtonText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedSubmitButtonTextBuilder().mergeFrom(value);
           } else {
             localizedSubmitButtonText_ = value;
           }
-          onChanged();
         } else {
           localizedSubmitButtonTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -11733,14 +11529,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedSubmitButtonText = 4;</code>
        */
       public Builder clearLocalizedSubmitButtonText() {
-        if (localizedSubmitButtonTextBuilder_ == null) {
-          localizedSubmitButtonText_ = null;
-          onChanged();
-        } else {
-          localizedSubmitButtonText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedSubmitButtonText_ = null;
+        if (localizedSubmitButtonTextBuilder_ != null) {
+          localizedSubmitButtonTextBuilder_.dispose();
           localizedSubmitButtonTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11751,7 +11546,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedSubmitButtonText = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedSubmitButtonTextBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedSubmitButtonTextFieldBuilder().getBuilder();
       }
@@ -12141,11 +11936,6 @@ public final class Offer {
       return new InputField();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_InputField_descriptor;
@@ -12160,7 +11950,8 @@ public final class Offer {
     }
 
     public static final int LABEL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object label_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object label_ = "";
     /**
      * <pre>
      * The label of input field.
@@ -12240,11 +12031,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLabelOrBuilder() {
-      return getLocalizedLabel();
+      return localizedLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLabel_;
     }
 
     public static final int HELPERTEXT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object helperText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object helperText_ = "";
     /**
      * <pre>
      * Help text shown below the input field.
@@ -12324,11 +12116,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHelperTextOrBuilder() {
-      return getLocalizedHelperText();
+      return localizedHelperText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHelperText_;
     }
 
     public static final int ERRORMESSAGE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object errorMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object errorMessage_ = "";
     /**
      * <pre>
      * Optional message that is displayed if the user provides an invalid input value.
@@ -12408,11 +12201,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedErrorMessageOrBuilder() {
-      return getLocalizedErrorMessage();
+      return localizedErrorMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedErrorMessage_;
     }
 
     public static final int DEFAULTVALUE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object defaultValue_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultValue_ = "";
     /**
      * <pre>
      * Default input value.
@@ -12492,11 +12286,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedDefaultValueOrBuilder() {
-      return getLocalizedDefaultValue();
+      return localizedDefaultValue_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedDefaultValue_;
     }
 
     public static final int PLACEHOLDER_FIELD_NUMBER = 9;
-    private volatile java.lang.Object placeholder_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object placeholder_ = "";
     /**
      * <pre>
      * Placeholder text for the input field.
@@ -12576,11 +12371,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedPlaceholderOrBuilder() {
-      return getLocalizedPlaceholder();
+      return localizedPlaceholder_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedPlaceholder_;
     }
 
     public static final int VALIDATION_FIELD_NUMBER = 11;
-    private volatile java.lang.Object validation_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validation_ = "";
     /**
      * <pre>
      * A regex which allows you to set custom validation rules for the input value.
@@ -12942,48 +12738,38 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         label_ = "";
-
-        if (localizedLabelBuilder_ == null) {
-          localizedLabel_ = null;
-        } else {
-          localizedLabel_ = null;
+        localizedLabel_ = null;
+        if (localizedLabelBuilder_ != null) {
+          localizedLabelBuilder_.dispose();
           localizedLabelBuilder_ = null;
         }
         helperText_ = "";
-
-        if (localizedHelperTextBuilder_ == null) {
-          localizedHelperText_ = null;
-        } else {
-          localizedHelperText_ = null;
+        localizedHelperText_ = null;
+        if (localizedHelperTextBuilder_ != null) {
+          localizedHelperTextBuilder_.dispose();
           localizedHelperTextBuilder_ = null;
         }
         errorMessage_ = "";
-
-        if (localizedErrorMessageBuilder_ == null) {
-          localizedErrorMessage_ = null;
-        } else {
-          localizedErrorMessage_ = null;
+        localizedErrorMessage_ = null;
+        if (localizedErrorMessageBuilder_ != null) {
+          localizedErrorMessageBuilder_.dispose();
           localizedErrorMessageBuilder_ = null;
         }
         defaultValue_ = "";
-
-        if (localizedDefaultValueBuilder_ == null) {
-          localizedDefaultValue_ = null;
-        } else {
-          localizedDefaultValue_ = null;
+        localizedDefaultValue_ = null;
+        if (localizedDefaultValueBuilder_ != null) {
+          localizedDefaultValueBuilder_.dispose();
           localizedDefaultValueBuilder_ = null;
         }
         placeholder_ = "";
-
-        if (localizedPlaceholderBuilder_ == null) {
-          localizedPlaceholder_ = null;
-        } else {
-          localizedPlaceholder_ = null;
+        localizedPlaceholder_ = null;
+        if (localizedPlaceholderBuilder_ != null) {
+          localizedPlaceholderBuilder_.dispose();
           localizedPlaceholderBuilder_ = null;
         }
         validation_ = "";
-
         return this;
       }
 
@@ -13010,73 +12796,58 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.InputField buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.InputField result = new com.passkit.grpc.SingleUseCoupons.Offer.InputField(this);
-        result.label_ = label_;
-        if (localizedLabelBuilder_ == null) {
-          result.localizedLabel_ = localizedLabel_;
-        } else {
-          result.localizedLabel_ = localizedLabelBuilder_.build();
-        }
-        result.helperText_ = helperText_;
-        if (localizedHelperTextBuilder_ == null) {
-          result.localizedHelperText_ = localizedHelperText_;
-        } else {
-          result.localizedHelperText_ = localizedHelperTextBuilder_.build();
-        }
-        result.errorMessage_ = errorMessage_;
-        if (localizedErrorMessageBuilder_ == null) {
-          result.localizedErrorMessage_ = localizedErrorMessage_;
-        } else {
-          result.localizedErrorMessage_ = localizedErrorMessageBuilder_.build();
-        }
-        result.defaultValue_ = defaultValue_;
-        if (localizedDefaultValueBuilder_ == null) {
-          result.localizedDefaultValue_ = localizedDefaultValue_;
-        } else {
-          result.localizedDefaultValue_ = localizedDefaultValueBuilder_.build();
-        }
-        result.placeholder_ = placeholder_;
-        if (localizedPlaceholderBuilder_ == null) {
-          result.localizedPlaceholder_ = localizedPlaceholder_;
-        } else {
-          result.localizedPlaceholder_ = localizedPlaceholderBuilder_.build();
-        }
-        result.validation_ = validation_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.InputField result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.label_ = label_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.localizedLabel_ = localizedLabelBuilder_ == null
+              ? localizedLabel_
+              : localizedLabelBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.helperText_ = helperText_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedHelperText_ = localizedHelperTextBuilder_ == null
+              ? localizedHelperText_
+              : localizedHelperTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.errorMessage_ = errorMessage_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedErrorMessage_ = localizedErrorMessageBuilder_ == null
+              ? localizedErrorMessage_
+              : localizedErrorMessageBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.defaultValue_ = defaultValue_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.localizedDefaultValue_ = localizedDefaultValueBuilder_ == null
+              ? localizedDefaultValue_
+              : localizedDefaultValueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.placeholder_ = placeholder_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.localizedPlaceholder_ = localizedPlaceholderBuilder_ == null
+              ? localizedPlaceholder_
+              : localizedPlaceholderBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.validation_ = validation_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.InputField) {
@@ -13091,6 +12862,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.InputField.getDefaultInstance()) return this;
         if (!other.getLabel().isEmpty()) {
           label_ = other.label_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasLocalizedLabel()) {
@@ -13098,6 +12870,7 @@ public final class Offer {
         }
         if (!other.getHelperText().isEmpty()) {
           helperText_ = other.helperText_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedHelperText()) {
@@ -13105,6 +12878,7 @@ public final class Offer {
         }
         if (!other.getErrorMessage().isEmpty()) {
           errorMessage_ = other.errorMessage_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedErrorMessage()) {
@@ -13112,6 +12886,7 @@ public final class Offer {
         }
         if (!other.getDefaultValue().isEmpty()) {
           defaultValue_ = other.defaultValue_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasLocalizedDefaultValue()) {
@@ -13119,6 +12894,7 @@ public final class Offer {
         }
         if (!other.getPlaceholder().isEmpty()) {
           placeholder_ = other.placeholder_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasLocalizedPlaceholder()) {
@@ -13126,6 +12902,7 @@ public final class Offer {
         }
         if (!other.getValidation().isEmpty()) {
           validation_ = other.validation_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -13156,67 +12933,67 @@ public final class Offer {
                 break;
               case 10: {
                 label_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getLocalizedLabelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 helperText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedHelperTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 errorMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getLocalizedErrorMessageFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 defaultValue_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getLocalizedDefaultValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 placeholder_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getLocalizedPlaceholderFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 validation_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               default: {
@@ -13234,6 +13011,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object label_ = "";
       /**
@@ -13288,11 +13066,9 @@ public final class Offer {
        */
       public Builder setLabel(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         label_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -13305,8 +13081,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearLabel() {
-        
         label_ = getDefaultInstance().getLabel();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -13321,12 +13097,10 @@ public final class Offer {
        */
       public Builder setLabelBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         label_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -13343,7 +13117,7 @@ public final class Offer {
        * @return Whether the localizedLabel field is set.
        */
       public boolean hasLocalizedLabel() {
-        return localizedLabelBuilder_ != null || localizedLabel_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -13373,11 +13147,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedLabel_ = value;
-          onChanged();
         } else {
           localizedLabelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -13391,11 +13165,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLabelBuilder_ == null) {
           localizedLabel_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLabelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -13407,17 +13181,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedLabel(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLabelBuilder_ == null) {
-          if (localizedLabel_ != null) {
-            localizedLabel_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLabel_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            localizedLabel_ != null &&
+            localizedLabel_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLabelBuilder().mergeFrom(value);
           } else {
             localizedLabel_ = value;
           }
-          onChanged();
         } else {
           localizedLabelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -13428,14 +13203,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedLabel = 2;</code>
        */
       public Builder clearLocalizedLabel() {
-        if (localizedLabelBuilder_ == null) {
-          localizedLabel_ = null;
-          onChanged();
-        } else {
-          localizedLabel_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localizedLabel_ = null;
+        if (localizedLabelBuilder_ != null) {
+          localizedLabelBuilder_.dispose();
           localizedLabelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -13446,7 +13220,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedLabel = 2;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLabelBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getLocalizedLabelFieldBuilder().getBuilder();
       }
@@ -13539,11 +13313,9 @@ public final class Offer {
        */
       public Builder setHelperText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         helperText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -13556,8 +13328,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearHelperText() {
-        
         helperText_ = getDefaultInstance().getHelperText();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -13572,12 +13344,10 @@ public final class Offer {
        */
       public Builder setHelperTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         helperText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -13594,7 +13364,7 @@ public final class Offer {
        * @return Whether the localizedHelperText field is set.
        */
       public boolean hasLocalizedHelperText() {
-        return localizedHelperTextBuilder_ != null || localizedHelperText_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -13624,11 +13394,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedHelperText_ = value;
-          onChanged();
         } else {
           localizedHelperTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13642,11 +13412,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedHelperTextBuilder_ == null) {
           localizedHelperText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedHelperTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13658,17 +13428,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedHelperText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedHelperTextBuilder_ == null) {
-          if (localizedHelperText_ != null) {
-            localizedHelperText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedHelperText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedHelperText_ != null &&
+            localizedHelperText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedHelperTextBuilder().mergeFrom(value);
           } else {
             localizedHelperText_ = value;
           }
-          onChanged();
         } else {
           localizedHelperTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -13679,14 +13450,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedHelperText = 4;</code>
        */
       public Builder clearLocalizedHelperText() {
-        if (localizedHelperTextBuilder_ == null) {
-          localizedHelperText_ = null;
-          onChanged();
-        } else {
-          localizedHelperText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedHelperText_ = null;
+        if (localizedHelperTextBuilder_ != null) {
+          localizedHelperTextBuilder_.dispose();
           localizedHelperTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -13697,7 +13467,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedHelperText = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedHelperTextBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedHelperTextFieldBuilder().getBuilder();
       }
@@ -13790,11 +13560,9 @@ public final class Offer {
        */
       public Builder setErrorMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         errorMessage_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -13807,8 +13575,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearErrorMessage() {
-        
         errorMessage_ = getDefaultInstance().getErrorMessage();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -13823,12 +13591,10 @@ public final class Offer {
        */
       public Builder setErrorMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         errorMessage_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -13845,7 +13611,7 @@ public final class Offer {
        * @return Whether the localizedErrorMessage field is set.
        */
       public boolean hasLocalizedErrorMessage() {
-        return localizedErrorMessageBuilder_ != null || localizedErrorMessage_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -13875,11 +13641,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedErrorMessage_ = value;
-          onChanged();
         } else {
           localizedErrorMessageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -13893,11 +13659,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedErrorMessageBuilder_ == null) {
           localizedErrorMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedErrorMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -13909,17 +13675,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedErrorMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedErrorMessageBuilder_ == null) {
-          if (localizedErrorMessage_ != null) {
-            localizedErrorMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedErrorMessage_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedErrorMessage_ != null &&
+            localizedErrorMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedErrorMessageBuilder().mergeFrom(value);
           } else {
             localizedErrorMessage_ = value;
           }
-          onChanged();
         } else {
           localizedErrorMessageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -13930,14 +13697,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedErrorMessage = 6;</code>
        */
       public Builder clearLocalizedErrorMessage() {
-        if (localizedErrorMessageBuilder_ == null) {
-          localizedErrorMessage_ = null;
-          onChanged();
-        } else {
-          localizedErrorMessage_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedErrorMessage_ = null;
+        if (localizedErrorMessageBuilder_ != null) {
+          localizedErrorMessageBuilder_.dispose();
           localizedErrorMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -13948,7 +13714,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedErrorMessage = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedErrorMessageBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedErrorMessageFieldBuilder().getBuilder();
       }
@@ -14041,11 +13807,9 @@ public final class Offer {
        */
       public Builder setDefaultValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         defaultValue_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -14058,8 +13822,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearDefaultValue() {
-        
         defaultValue_ = getDefaultInstance().getDefaultValue();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -14074,12 +13838,10 @@ public final class Offer {
        */
       public Builder setDefaultValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         defaultValue_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -14096,7 +13858,7 @@ public final class Offer {
        * @return Whether the localizedDefaultValue field is set.
        */
       public boolean hasLocalizedDefaultValue() {
-        return localizedDefaultValueBuilder_ != null || localizedDefaultValue_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -14126,11 +13888,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedDefaultValue_ = value;
-          onChanged();
         } else {
           localizedDefaultValueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -14144,11 +13906,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedDefaultValueBuilder_ == null) {
           localizedDefaultValue_ = builderForValue.build();
-          onChanged();
         } else {
           localizedDefaultValueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -14160,17 +13922,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedDefaultValue(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedDefaultValueBuilder_ == null) {
-          if (localizedDefaultValue_ != null) {
-            localizedDefaultValue_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedDefaultValue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            localizedDefaultValue_ != null &&
+            localizedDefaultValue_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedDefaultValueBuilder().mergeFrom(value);
           } else {
             localizedDefaultValue_ = value;
           }
-          onChanged();
         } else {
           localizedDefaultValueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -14181,14 +13944,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
        */
       public Builder clearLocalizedDefaultValue() {
-        if (localizedDefaultValueBuilder_ == null) {
-          localizedDefaultValue_ = null;
-          onChanged();
-        } else {
-          localizedDefaultValue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        localizedDefaultValue_ = null;
+        if (localizedDefaultValueBuilder_ != null) {
+          localizedDefaultValueBuilder_.dispose();
           localizedDefaultValueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -14199,7 +13961,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedDefaultValue = 8;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedDefaultValueBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getLocalizedDefaultValueFieldBuilder().getBuilder();
       }
@@ -14292,11 +14054,9 @@ public final class Offer {
        */
       public Builder setPlaceholder(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         placeholder_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -14309,8 +14069,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearPlaceholder() {
-        
         placeholder_ = getDefaultInstance().getPlaceholder();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -14325,12 +14085,10 @@ public final class Offer {
        */
       public Builder setPlaceholderBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         placeholder_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -14347,7 +14105,7 @@ public final class Offer {
        * @return Whether the localizedPlaceholder field is set.
        */
       public boolean hasLocalizedPlaceholder() {
-        return localizedPlaceholderBuilder_ != null || localizedPlaceholder_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -14377,11 +14135,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedPlaceholder_ = value;
-          onChanged();
         } else {
           localizedPlaceholderBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -14395,11 +14153,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedPlaceholderBuilder_ == null) {
           localizedPlaceholder_ = builderForValue.build();
-          onChanged();
         } else {
           localizedPlaceholderBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -14411,17 +14169,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedPlaceholder(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedPlaceholderBuilder_ == null) {
-          if (localizedPlaceholder_ != null) {
-            localizedPlaceholder_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedPlaceholder_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            localizedPlaceholder_ != null &&
+            localizedPlaceholder_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedPlaceholderBuilder().mergeFrom(value);
           } else {
             localizedPlaceholder_ = value;
           }
-          onChanged();
         } else {
           localizedPlaceholderBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -14432,14 +14191,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedPlaceholder = 10;</code>
        */
       public Builder clearLocalizedPlaceholder() {
-        if (localizedPlaceholderBuilder_ == null) {
-          localizedPlaceholder_ = null;
-          onChanged();
-        } else {
-          localizedPlaceholder_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        localizedPlaceholder_ = null;
+        if (localizedPlaceholderBuilder_ != null) {
+          localizedPlaceholderBuilder_.dispose();
           localizedPlaceholderBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -14450,7 +14208,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedPlaceholder = 10;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedPlaceholderBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getLocalizedPlaceholderFieldBuilder().getBuilder();
       }
@@ -14543,11 +14301,9 @@ public final class Offer {
        */
       public Builder setValidation(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         validation_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -14560,8 +14316,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearValidation() {
-        
         validation_ = getDefaultInstance().getValidation();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -14576,12 +14332,10 @@ public final class Offer {
        */
       public Builder setValidationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         validation_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -14932,7 +14686,7 @@ public final class Offer {
     com.google.protobuf.ByteString
         getCssOverridesBytes();
 
-    public com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.RedemptionImageAssetsCase getRedemptionImageAssetsCase();
+    com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.RedemptionImageAssetsCase getRedemptionImageAssetsCase();
   }
   /**
    * Protobuf type {@code single_use_coupons.StandardPassKitHostedPage}
@@ -14960,11 +14714,6 @@ public final class Offer {
       return new StandardPassKitHostedPage();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_StandardPassKitHostedPage_descriptor;
@@ -14979,6 +14728,7 @@ public final class Offer {
     }
 
     private int redemptionImageAssetsCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object redemptionImageAssets_;
     public enum RedemptionImageAssetsCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -15020,7 +14770,8 @@ public final class Offer {
     }
 
     public static final int TITLE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object title_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
     /**
      * <pre>
      * Title shown on the redemption page browser tab. If not set, offer title will be shown.
@@ -15100,11 +14851,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleOrBuilder() {
-      return getLocalizedTitle();
+      return localizedTitle_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTitle_;
     }
 
     public static final int REDEMPTIONINSTRUCTIONS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object redemptionInstructions_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionInstructions_ = "";
     /**
      * <pre>
      * Redemption instructions, show underneath the redemption banner image.
@@ -15184,7 +14936,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRedemptionInstructionsOrBuilder() {
-      return getLocalizedRedemptionInstructions();
+      return localizedRedemptionInstructions_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRedemptionInstructions_;
     }
 
     public static final int IMAGEIDS_FIELD_NUMBER = 5;
@@ -15274,7 +15026,8 @@ public final class Offer {
     }
 
     public static final int FOOTERTEXT_FIELD_NUMBER = 7;
-    private volatile java.lang.Object footerText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object footerText_ = "";
     /**
      * <pre>
      * Text shown at the footer of the page, underneath the redemption code / redemption code input.
@@ -15354,7 +15107,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedFooterTextOrBuilder() {
-      return getLocalizedFooterText();
+      return localizedFooterText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedFooterText_;
     }
 
     public static final int RESPONSETEXTS_FIELD_NUMBER = 9;
@@ -15392,11 +15145,11 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.ResponseTextsOrBuilder getResponseTextsOrBuilder() {
-      return getResponseTexts();
+      return responseTexts_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.getDefaultInstance() : responseTexts_;
     }
 
     public static final int HIDEREDEEMEDDATETIME_FIELD_NUMBER = 10;
-    private boolean hideRedeemedDateTime_;
+    private boolean hideRedeemedDateTime_ = false;
     /**
      * <pre>
      * Date time showed with couponAlreadyRedeemedText. Date time is localized to browser preferred language.
@@ -15445,11 +15198,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButtonOrBuilder getCallToActionButtonOrBuilder() {
-      return getCallToActionButton();
+      return callToActionButton_ == null ? com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton.getDefaultInstance() : callToActionButton_;
     }
 
     public static final int CSSOVERRIDES_FIELD_NUMBER = 12;
-    private volatile java.lang.Object cssOverrides_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cssOverrides_ = "";
     /**
      * <pre>
      * Optional CSS overrides to ensure the page aligns with your brand guidelines.
@@ -15842,20 +15596,17 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         title_ = "";
-
-        if (localizedTitleBuilder_ == null) {
-          localizedTitle_ = null;
-        } else {
-          localizedTitle_ = null;
+        localizedTitle_ = null;
+        if (localizedTitleBuilder_ != null) {
+          localizedTitleBuilder_.dispose();
           localizedTitleBuilder_ = null;
         }
         redemptionInstructions_ = "";
-
-        if (localizedRedemptionInstructionsBuilder_ == null) {
-          localizedRedemptionInstructions_ = null;
-        } else {
-          localizedRedemptionInstructions_ = null;
+        localizedRedemptionInstructions_ = null;
+        if (localizedRedemptionInstructionsBuilder_ != null) {
+          localizedRedemptionInstructionsBuilder_.dispose();
           localizedRedemptionInstructionsBuilder_ = null;
         }
         if (imageIdsBuilder_ != null) {
@@ -15865,29 +15616,23 @@ public final class Offer {
           imagesBuilder_.clear();
         }
         footerText_ = "";
-
-        if (localizedFooterTextBuilder_ == null) {
-          localizedFooterText_ = null;
-        } else {
-          localizedFooterText_ = null;
+        localizedFooterText_ = null;
+        if (localizedFooterTextBuilder_ != null) {
+          localizedFooterTextBuilder_.dispose();
           localizedFooterTextBuilder_ = null;
         }
-        if (responseTextsBuilder_ == null) {
-          responseTexts_ = null;
-        } else {
-          responseTexts_ = null;
+        responseTexts_ = null;
+        if (responseTextsBuilder_ != null) {
+          responseTextsBuilder_.dispose();
           responseTextsBuilder_ = null;
         }
         hideRedeemedDateTime_ = false;
-
-        if (callToActionButtonBuilder_ == null) {
-          callToActionButton_ = null;
-        } else {
-          callToActionButton_ = null;
+        callToActionButton_ = null;
+        if (callToActionButtonBuilder_ != null) {
+          callToActionButtonBuilder_.dispose();
           callToActionButtonBuilder_ = null;
         }
         cssOverrides_ = "";
-
         redemptionImageAssetsCase_ = 0;
         redemptionImageAssets_ = null;
         return this;
@@ -15916,87 +15661,69 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage result = new com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage(this);
-        result.title_ = title_;
-        if (localizedTitleBuilder_ == null) {
-          result.localizedTitle_ = localizedTitle_;
-        } else {
-          result.localizedTitle_ = localizedTitleBuilder_.build();
-        }
-        result.redemptionInstructions_ = redemptionInstructions_;
-        if (localizedRedemptionInstructionsBuilder_ == null) {
-          result.localizedRedemptionInstructions_ = localizedRedemptionInstructions_;
-        } else {
-          result.localizedRedemptionInstructions_ = localizedRedemptionInstructionsBuilder_.build();
-        }
-        if (redemptionImageAssetsCase_ == 5) {
-          if (imageIdsBuilder_ == null) {
-            result.redemptionImageAssets_ = redemptionImageAssets_;
-          } else {
-            result.redemptionImageAssets_ = imageIdsBuilder_.build();
-          }
-        }
-        if (redemptionImageAssetsCase_ == 6) {
-          if (imagesBuilder_ == null) {
-            result.redemptionImageAssets_ = redemptionImageAssets_;
-          } else {
-            result.redemptionImageAssets_ = imagesBuilder_.build();
-          }
-        }
-        result.footerText_ = footerText_;
-        if (localizedFooterTextBuilder_ == null) {
-          result.localizedFooterText_ = localizedFooterText_;
-        } else {
-          result.localizedFooterText_ = localizedFooterTextBuilder_.build();
-        }
-        if (responseTextsBuilder_ == null) {
-          result.responseTexts_ = responseTexts_;
-        } else {
-          result.responseTexts_ = responseTextsBuilder_.build();
-        }
-        result.hideRedeemedDateTime_ = hideRedeemedDateTime_;
-        if (callToActionButtonBuilder_ == null) {
-          result.callToActionButton_ = callToActionButton_;
-        } else {
-          result.callToActionButton_ = callToActionButtonBuilder_.build();
-        }
-        result.cssOverrides_ = cssOverrides_;
-        result.redemptionImageAssetsCase_ = redemptionImageAssetsCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.localizedTitle_ = localizedTitleBuilder_ == null
+              ? localizedTitle_
+              : localizedTitleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.redemptionInstructions_ = redemptionInstructions_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedRedemptionInstructions_ = localizedRedemptionInstructionsBuilder_ == null
+              ? localizedRedemptionInstructions_
+              : localizedRedemptionInstructionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.footerText_ = footerText_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.localizedFooterText_ = localizedFooterTextBuilder_ == null
+              ? localizedFooterText_
+              : localizedFooterTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.responseTexts_ = responseTextsBuilder_ == null
+              ? responseTexts_
+              : responseTextsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.hideRedeemedDateTime_ = hideRedeemedDateTime_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.callToActionButton_ = callToActionButtonBuilder_ == null
+              ? callToActionButton_
+              : callToActionButtonBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.cssOverrides_ = cssOverrides_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage result) {
+        result.redemptionImageAssetsCase_ = redemptionImageAssetsCase_;
+        result.redemptionImageAssets_ = this.redemptionImageAssets_;
+        if (redemptionImageAssetsCase_ == 5 &&
+            imageIdsBuilder_ != null) {
+          result.redemptionImageAssets_ = imageIdsBuilder_.build();
+        }
+        if (redemptionImageAssetsCase_ == 6 &&
+            imagesBuilder_ != null) {
+          result.redemptionImageAssets_ = imagesBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage) {
@@ -16011,6 +15738,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.StandardPassKitHostedPage.getDefaultInstance()) return this;
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasLocalizedTitle()) {
@@ -16018,6 +15746,7 @@ public final class Offer {
         }
         if (!other.getRedemptionInstructions().isEmpty()) {
           redemptionInstructions_ = other.redemptionInstructions_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedRedemptionInstructions()) {
@@ -16025,6 +15754,7 @@ public final class Offer {
         }
         if (!other.getFooterText().isEmpty()) {
           footerText_ = other.footerText_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasLocalizedFooterText()) {
@@ -16041,6 +15771,7 @@ public final class Offer {
         }
         if (!other.getCssOverrides().isEmpty()) {
           cssOverrides_ = other.cssOverrides_;
+          bitField0_ |= 0x00000800;
           onChanged();
         }
         switch (other.getRedemptionImageAssetsCase()) {
@@ -16084,26 +15815,26 @@ public final class Offer {
                 break;
               case 10: {
                 title_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getLocalizedTitleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 redemptionInstructions_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedRedemptionInstructionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -16122,38 +15853,38 @@ public final class Offer {
               } // case 50
               case 58: {
                 footerText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getLocalizedFooterTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getResponseTextsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 80: {
                 hideRedeemedDateTime_ = input.readBool();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 80
               case 90: {
                 input.readMessage(
                     getCallToActionButtonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 cssOverrides_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               default: {
@@ -16186,6 +15917,7 @@ public final class Offer {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object title_ = "";
       /**
@@ -16240,11 +15972,9 @@ public final class Offer {
        */
       public Builder setTitle(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         title_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16257,8 +15987,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
-        
         title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -16273,12 +16003,10 @@ public final class Offer {
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         title_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16295,7 +16023,7 @@ public final class Offer {
        * @return Whether the localizedTitle field is set.
        */
       public boolean hasLocalizedTitle() {
-        return localizedTitleBuilder_ != null || localizedTitle_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -16325,11 +16053,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedTitle_ = value;
-          onChanged();
         } else {
           localizedTitleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16343,11 +16071,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTitleBuilder_ == null) {
           localizedTitle_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTitleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16359,17 +16087,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTitleBuilder_ == null) {
-          if (localizedTitle_ != null) {
-            localizedTitle_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTitle_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            localizedTitle_ != null &&
+            localizedTitle_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTitleBuilder().mergeFrom(value);
           } else {
             localizedTitle_ = value;
           }
-          onChanged();
         } else {
           localizedTitleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -16380,14 +16109,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedTitle = 2;</code>
        */
       public Builder clearLocalizedTitle() {
-        if (localizedTitleBuilder_ == null) {
-          localizedTitle_ = null;
-          onChanged();
-        } else {
-          localizedTitle_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localizedTitle_ = null;
+        if (localizedTitleBuilder_ != null) {
+          localizedTitleBuilder_.dispose();
           localizedTitleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -16398,7 +16126,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedTitle = 2;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTitleBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getLocalizedTitleFieldBuilder().getBuilder();
       }
@@ -16491,11 +16219,9 @@ public final class Offer {
        */
       public Builder setRedemptionInstructions(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionInstructions_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -16508,8 +16234,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearRedemptionInstructions() {
-        
         redemptionInstructions_ = getDefaultInstance().getRedemptionInstructions();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -16524,12 +16250,10 @@ public final class Offer {
        */
       public Builder setRedemptionInstructionsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionInstructions_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -16546,7 +16270,7 @@ public final class Offer {
        * @return Whether the localizedRedemptionInstructions field is set.
        */
       public boolean hasLocalizedRedemptionInstructions() {
-        return localizedRedemptionInstructionsBuilder_ != null || localizedRedemptionInstructions_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -16576,11 +16300,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedRedemptionInstructions_ = value;
-          onChanged();
         } else {
           localizedRedemptionInstructionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -16594,11 +16318,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedRedemptionInstructionsBuilder_ == null) {
           localizedRedemptionInstructions_ = builderForValue.build();
-          onChanged();
         } else {
           localizedRedemptionInstructionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -16610,17 +16334,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedRedemptionInstructions(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedRedemptionInstructionsBuilder_ == null) {
-          if (localizedRedemptionInstructions_ != null) {
-            localizedRedemptionInstructions_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedRedemptionInstructions_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedRedemptionInstructions_ != null &&
+            localizedRedemptionInstructions_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedRedemptionInstructionsBuilder().mergeFrom(value);
           } else {
             localizedRedemptionInstructions_ = value;
           }
-          onChanged();
         } else {
           localizedRedemptionInstructionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -16631,14 +16356,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedRedemptionInstructions = 4;</code>
        */
       public Builder clearLocalizedRedemptionInstructions() {
-        if (localizedRedemptionInstructionsBuilder_ == null) {
-          localizedRedemptionInstructions_ = null;
-          onChanged();
-        } else {
-          localizedRedemptionInstructions_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedRedemptionInstructions_ = null;
+        if (localizedRedemptionInstructionsBuilder_ != null) {
+          localizedRedemptionInstructionsBuilder_.dispose();
           localizedRedemptionInstructionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -16649,7 +16373,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedRedemptionInstructions = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedRedemptionInstructionsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedRedemptionInstructionsFieldBuilder().getBuilder();
       }
@@ -16863,7 +16587,7 @@ public final class Offer {
           redemptionImageAssets_ = null;
         }
         redemptionImageAssetsCase_ = 5;
-        onChanged();;
+        onChanged();
         return imageIdsBuilder_;
       }
 
@@ -17041,7 +16765,7 @@ public final class Offer {
           redemptionImageAssets_ = null;
         }
         redemptionImageAssetsCase_ = 6;
-        onChanged();;
+        onChanged();
         return imagesBuilder_;
       }
 
@@ -17098,11 +16822,9 @@ public final class Offer {
        */
       public Builder setFooterText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         footerText_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -17115,8 +16837,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearFooterText() {
-        
         footerText_ = getDefaultInstance().getFooterText();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -17131,12 +16853,10 @@ public final class Offer {
        */
       public Builder setFooterTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         footerText_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -17153,7 +16873,7 @@ public final class Offer {
        * @return Whether the localizedFooterText field is set.
        */
       public boolean hasLocalizedFooterText() {
-        return localizedFooterTextBuilder_ != null || localizedFooterText_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -17183,11 +16903,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedFooterText_ = value;
-          onChanged();
         } else {
           localizedFooterTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -17201,11 +16921,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedFooterTextBuilder_ == null) {
           localizedFooterText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedFooterTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -17217,17 +16937,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedFooterText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedFooterTextBuilder_ == null) {
-          if (localizedFooterText_ != null) {
-            localizedFooterText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedFooterText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            localizedFooterText_ != null &&
+            localizedFooterText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedFooterTextBuilder().mergeFrom(value);
           } else {
             localizedFooterText_ = value;
           }
-          onChanged();
         } else {
           localizedFooterTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -17238,14 +16959,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedFooterText = 8;</code>
        */
       public Builder clearLocalizedFooterText() {
-        if (localizedFooterTextBuilder_ == null) {
-          localizedFooterText_ = null;
-          onChanged();
-        } else {
-          localizedFooterText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        localizedFooterText_ = null;
+        if (localizedFooterTextBuilder_ != null) {
+          localizedFooterTextBuilder_.dispose();
           localizedFooterTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17256,7 +16976,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedFooterText = 8;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedFooterTextBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getLocalizedFooterTextFieldBuilder().getBuilder();
       }
@@ -17308,7 +17028,7 @@ public final class Offer {
        * @return Whether the responseTexts field is set.
        */
       public boolean hasResponseTexts() {
-        return responseTextsBuilder_ != null || responseTexts_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -17338,11 +17058,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           responseTexts_ = value;
-          onChanged();
         } else {
           responseTextsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -17356,11 +17076,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.Builder builderForValue) {
         if (responseTextsBuilder_ == null) {
           responseTexts_ = builderForValue.build();
-          onChanged();
         } else {
           responseTextsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -17372,17 +17092,18 @@ public final class Offer {
        */
       public Builder mergeResponseTexts(com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts value) {
         if (responseTextsBuilder_ == null) {
-          if (responseTexts_ != null) {
-            responseTexts_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.newBuilder(responseTexts_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            responseTexts_ != null &&
+            responseTexts_ != com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.getDefaultInstance()) {
+            getResponseTextsBuilder().mergeFrom(value);
           } else {
             responseTexts_ = value;
           }
-          onChanged();
         } else {
           responseTextsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -17393,14 +17114,13 @@ public final class Offer {
        * <code>.single_use_coupons.ResponseTexts responseTexts = 9;</code>
        */
       public Builder clearResponseTexts() {
-        if (responseTextsBuilder_ == null) {
-          responseTexts_ = null;
-          onChanged();
-        } else {
-          responseTexts_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        responseTexts_ = null;
+        if (responseTextsBuilder_ != null) {
+          responseTextsBuilder_.dispose();
           responseTextsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17411,7 +17131,7 @@ public final class Offer {
        * <code>.single_use_coupons.ResponseTexts responseTexts = 9;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.Builder getResponseTextsBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getResponseTextsFieldBuilder().getBuilder();
       }
@@ -17474,8 +17194,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setHideRedeemedDateTime(boolean value) {
-        
+
         hideRedeemedDateTime_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -17488,7 +17209,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearHideRedeemedDateTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         hideRedeemedDateTime_ = false;
         onChanged();
         return this;
@@ -17506,7 +17227,7 @@ public final class Offer {
        * @return Whether the callToActionButton field is set.
        */
       public boolean hasCallToActionButton() {
-        return callToActionButtonBuilder_ != null || callToActionButton_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -17536,11 +17257,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           callToActionButton_ = value;
-          onChanged();
         } else {
           callToActionButtonBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -17554,11 +17275,11 @@ public final class Offer {
           com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton.Builder builderForValue) {
         if (callToActionButtonBuilder_ == null) {
           callToActionButton_ = builderForValue.build();
-          onChanged();
         } else {
           callToActionButtonBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -17570,17 +17291,18 @@ public final class Offer {
        */
       public Builder mergeCallToActionButton(com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton value) {
         if (callToActionButtonBuilder_ == null) {
-          if (callToActionButton_ != null) {
-            callToActionButton_ =
-              com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton.newBuilder(callToActionButton_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            callToActionButton_ != null &&
+            callToActionButton_ != com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton.getDefaultInstance()) {
+            getCallToActionButtonBuilder().mergeFrom(value);
           } else {
             callToActionButton_ = value;
           }
-          onChanged();
         } else {
           callToActionButtonBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -17591,14 +17313,13 @@ public final class Offer {
        * <code>.single_use_coupons.CallToActionButton callToActionButton = 11;</code>
        */
       public Builder clearCallToActionButton() {
-        if (callToActionButtonBuilder_ == null) {
-          callToActionButton_ = null;
-          onChanged();
-        } else {
-          callToActionButton_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        callToActionButton_ = null;
+        if (callToActionButtonBuilder_ != null) {
+          callToActionButtonBuilder_.dispose();
           callToActionButtonBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -17609,7 +17330,7 @@ public final class Offer {
        * <code>.single_use_coupons.CallToActionButton callToActionButton = 11;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton.Builder getCallToActionButtonBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getCallToActionButtonFieldBuilder().getBuilder();
       }
@@ -17702,11 +17423,9 @@ public final class Offer {
        */
       public Builder setCssOverrides(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         cssOverrides_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -17719,8 +17438,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCssOverrides() {
-        
         cssOverrides_ = getDefaultInstance().getCssOverrides();
+        bitField0_ = (bitField0_ & ~0x00000800);
         onChanged();
         return this;
       }
@@ -17735,12 +17454,10 @@ public final class Offer {
        */
       public Builder setCssOverridesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         cssOverrides_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -17940,11 +17657,6 @@ public final class Offer {
       return new CallToActionButton();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CallToActionButton_descriptor;
@@ -17959,7 +17671,7 @@ public final class Offer {
     }
 
     public static final int HIDECALLTOACTIONBUTTON_FIELD_NUMBER = 1;
-    private boolean hideCallToActionButton_;
+    private boolean hideCallToActionButton_ = false;
     /**
      * <pre>
      * Set true to hide button.
@@ -17974,7 +17686,8 @@ public final class Offer {
     }
 
     public static final int BUTTONTEXT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object buttonText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object buttonText_ = "";
     /**
      * <pre>
      * Call-to-action text shown on the button.
@@ -18054,11 +17767,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedButtonTextOrBuilder() {
-      return getLocalizedButtonText();
+      return localizedButtonText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedButtonText_;
     }
 
     public static final int LINK_FIELD_NUMBER = 4;
-    private volatile java.lang.Object link_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object link_ = "";
     /**
      * <pre>
      * Link that the button will open.
@@ -18138,7 +17852,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLinkOrBuilder() {
-      return getLocalizedLink();
+      return localizedLink_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLink_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18382,22 +18096,18 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         hideCallToActionButton_ = false;
-
         buttonText_ = "";
-
-        if (localizedButtonTextBuilder_ == null) {
-          localizedButtonText_ = null;
-        } else {
-          localizedButtonText_ = null;
+        localizedButtonText_ = null;
+        if (localizedButtonTextBuilder_ != null) {
+          localizedButtonTextBuilder_.dispose();
           localizedButtonTextBuilder_ = null;
         }
         link_ = "";
-
-        if (localizedLinkBuilder_ == null) {
-          localizedLink_ = null;
-        } else {
-          localizedLink_ = null;
+        localizedLink_ = null;
+        if (localizedLinkBuilder_ != null) {
+          localizedLinkBuilder_.dispose();
           localizedLinkBuilder_ = null;
         }
         return this;
@@ -18426,55 +18136,34 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton result = new com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton(this);
-        result.hideCallToActionButton_ = hideCallToActionButton_;
-        result.buttonText_ = buttonText_;
-        if (localizedButtonTextBuilder_ == null) {
-          result.localizedButtonText_ = localizedButtonText_;
-        } else {
-          result.localizedButtonText_ = localizedButtonTextBuilder_.build();
-        }
-        result.link_ = link_;
-        if (localizedLinkBuilder_ == null) {
-          result.localizedLink_ = localizedLink_;
-        } else {
-          result.localizedLink_ = localizedLinkBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.hideCallToActionButton_ = hideCallToActionButton_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.buttonText_ = buttonText_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.localizedButtonText_ = localizedButtonTextBuilder_ == null
+              ? localizedButtonText_
+              : localizedButtonTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.link_ = link_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localizedLink_ = localizedLinkBuilder_ == null
+              ? localizedLink_
+              : localizedLinkBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CallToActionButton) {
@@ -18492,6 +18181,7 @@ public final class Offer {
         }
         if (!other.getButtonText().isEmpty()) {
           buttonText_ = other.buttonText_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasLocalizedButtonText()) {
@@ -18499,6 +18189,7 @@ public final class Offer {
         }
         if (!other.getLink().isEmpty()) {
           link_ = other.link_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasLocalizedLink()) {
@@ -18532,31 +18223,31 @@ public final class Offer {
                 break;
               case 8: {
                 hideCallToActionButton_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 buttonText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getLocalizedButtonTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 link_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getLocalizedLinkFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               default: {
@@ -18574,6 +18265,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean hideCallToActionButton_ ;
       /**
@@ -18598,8 +18290,9 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder setHideCallToActionButton(boolean value) {
-        
+
         hideCallToActionButton_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18612,7 +18305,7 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearHideCallToActionButton() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         hideCallToActionButton_ = false;
         onChanged();
         return this;
@@ -18671,11 +18364,9 @@ public final class Offer {
        */
       public Builder setButtonText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         buttonText_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18688,8 +18379,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearButtonText() {
-        
         buttonText_ = getDefaultInstance().getButtonText();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18704,12 +18395,10 @@ public final class Offer {
        */
       public Builder setButtonTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         buttonText_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18726,7 +18415,7 @@ public final class Offer {
        * @return Whether the localizedButtonText field is set.
        */
       public boolean hasLocalizedButtonText() {
-        return localizedButtonTextBuilder_ != null || localizedButtonText_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -18756,11 +18445,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedButtonText_ = value;
-          onChanged();
         } else {
           localizedButtonTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -18774,11 +18463,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedButtonTextBuilder_ == null) {
           localizedButtonText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedButtonTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -18790,17 +18479,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedButtonText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedButtonTextBuilder_ == null) {
-          if (localizedButtonText_ != null) {
-            localizedButtonText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedButtonText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            localizedButtonText_ != null &&
+            localizedButtonText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedButtonTextBuilder().mergeFrom(value);
           } else {
             localizedButtonText_ = value;
           }
-          onChanged();
         } else {
           localizedButtonTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -18811,14 +18501,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedButtonText = 3;</code>
        */
       public Builder clearLocalizedButtonText() {
-        if (localizedButtonTextBuilder_ == null) {
-          localizedButtonText_ = null;
-          onChanged();
-        } else {
-          localizedButtonText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        localizedButtonText_ = null;
+        if (localizedButtonTextBuilder_ != null) {
+          localizedButtonTextBuilder_.dispose();
           localizedButtonTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -18829,7 +18518,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedButtonText = 3;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedButtonTextBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getLocalizedButtonTextFieldBuilder().getBuilder();
       }
@@ -18922,11 +18611,9 @@ public final class Offer {
        */
       public Builder setLink(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         link_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -18939,8 +18626,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearLink() {
-        
         link_ = getDefaultInstance().getLink();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -18955,12 +18642,10 @@ public final class Offer {
        */
       public Builder setLinkBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         link_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -18977,7 +18662,7 @@ public final class Offer {
        * @return Whether the localizedLink field is set.
        */
       public boolean hasLocalizedLink() {
-        return localizedLinkBuilder_ != null || localizedLink_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -19007,11 +18692,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedLink_ = value;
-          onChanged();
         } else {
           localizedLinkBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -19025,11 +18710,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLinkBuilder_ == null) {
           localizedLink_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLinkBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -19041,17 +18726,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedLink(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLinkBuilder_ == null) {
-          if (localizedLink_ != null) {
-            localizedLink_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLink_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            localizedLink_ != null &&
+            localizedLink_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLinkBuilder().mergeFrom(value);
           } else {
             localizedLink_ = value;
           }
-          onChanged();
         } else {
           localizedLinkBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -19062,14 +18748,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedLink = 5;</code>
        */
       public Builder clearLocalizedLink() {
-        if (localizedLinkBuilder_ == null) {
-          localizedLink_ = null;
-          onChanged();
-        } else {
-          localizedLink_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        localizedLink_ = null;
+        if (localizedLinkBuilder_ != null) {
+          localizedLinkBuilder_.dispose();
           localizedLinkBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -19080,7 +18765,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedLink = 5;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLinkBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getLocalizedLinkFieldBuilder().getBuilder();
       }
@@ -19503,11 +19188,6 @@ public final class Offer {
       return new ResponseTexts();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_ResponseTexts_descriptor;
@@ -19522,7 +19202,8 @@ public final class Offer {
     }
 
     public static final int REDEEMCONFIRMATIONDIALOGBOXTEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object redeemConfirmationDialogBoxText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redeemConfirmationDialogBoxText_ = "";
     /**
      * <pre>
      * To be shown before redemption page is rendered. The dialogue box will have "Ok" and "Cancel" bottons.
@@ -19606,11 +19287,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRedeemConfirmationDialogBoxTextOrBuilder() {
-      return getLocalizedRedeemConfirmationDialogBoxText();
+      return localizedRedeemConfirmationDialogBoxText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRedeemConfirmationDialogBoxText_;
     }
 
     public static final int CANCELREDEEMTEXT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object cancelRedeemText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cancelRedeemText_ = "";
     /**
      * <pre>
      * To be shown when visitor clicks "Cancel" and reject to redeem now.
@@ -19692,11 +19374,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedCancelRedeemTextOrBuilder() {
-      return getLocalizedCancelRedeemText();
+      return localizedCancelRedeemText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedCancelRedeemText_;
     }
 
     public static final int AFTERREDEEMTEXT_FIELD_NUMBER = 5;
-    private volatile java.lang.Object afterRedeemText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object afterRedeemText_ = "";
     /**
      * <pre>
      * To be shown when coupon has been redeemed.
@@ -19776,11 +19459,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAfterRedeemTextOrBuilder() {
-      return getLocalizedAfterRedeemText();
+      return localizedAfterRedeemText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAfterRedeemText_;
     }
 
     public static final int COUPONALREADYREDEEMEDTEXT_FIELD_NUMBER = 7;
-    private volatile java.lang.Object couponAlreadyRedeemedText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponAlreadyRedeemedText_ = "";
     /**
      * <pre>
      * To be shown when the coupon was already redeemed.
@@ -19860,11 +19544,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedCouponAlreadyRedeemedTextOrBuilder() {
-      return getLocalizedCouponAlreadyRedeemedText();
+      return localizedCouponAlreadyRedeemedText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedCouponAlreadyRedeemedText_;
     }
 
     public static final int OFFEREXPIREDTEXT_FIELD_NUMBER = 9;
-    private volatile java.lang.Object offerExpiredText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerExpiredText_ = "";
     /**
      * <pre>
      * To be shown when the offer period has ended.
@@ -19944,11 +19629,12 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedOfferExpiredTextOrBuilder() {
-      return getLocalizedOfferExpiredText();
+      return localizedOfferExpiredText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedOfferExpiredText_;
     }
 
     public static final int COUPONEXPIREDTEXT_FIELD_NUMBER = 11;
-    private volatile java.lang.Object couponExpiredText_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponExpiredText_ = "";
     /**
      * <pre>
      * To be shown when the coupon expiry date / redemption end date has passed.
@@ -20028,7 +19714,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedCouponExpiredTextOrBuilder() {
-      return getLocalizedCouponExpiredText();
+      return localizedCouponExpiredText_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedCouponExpiredText_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20364,52 +20050,41 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         redeemConfirmationDialogBoxText_ = "";
-
-        if (localizedRedeemConfirmationDialogBoxTextBuilder_ == null) {
-          localizedRedeemConfirmationDialogBoxText_ = null;
-        } else {
-          localizedRedeemConfirmationDialogBoxText_ = null;
+        localizedRedeemConfirmationDialogBoxText_ = null;
+        if (localizedRedeemConfirmationDialogBoxTextBuilder_ != null) {
+          localizedRedeemConfirmationDialogBoxTextBuilder_.dispose();
           localizedRedeemConfirmationDialogBoxTextBuilder_ = null;
         }
         cancelRedeemText_ = "";
-
-        if (localizedCancelRedeemTextBuilder_ == null) {
-          localizedCancelRedeemText_ = null;
-        } else {
-          localizedCancelRedeemText_ = null;
+        localizedCancelRedeemText_ = null;
+        if (localizedCancelRedeemTextBuilder_ != null) {
+          localizedCancelRedeemTextBuilder_.dispose();
           localizedCancelRedeemTextBuilder_ = null;
         }
         afterRedeemText_ = "";
-
-        if (localizedAfterRedeemTextBuilder_ == null) {
-          localizedAfterRedeemText_ = null;
-        } else {
-          localizedAfterRedeemText_ = null;
+        localizedAfterRedeemText_ = null;
+        if (localizedAfterRedeemTextBuilder_ != null) {
+          localizedAfterRedeemTextBuilder_.dispose();
           localizedAfterRedeemTextBuilder_ = null;
         }
         couponAlreadyRedeemedText_ = "";
-
-        if (localizedCouponAlreadyRedeemedTextBuilder_ == null) {
-          localizedCouponAlreadyRedeemedText_ = null;
-        } else {
-          localizedCouponAlreadyRedeemedText_ = null;
+        localizedCouponAlreadyRedeemedText_ = null;
+        if (localizedCouponAlreadyRedeemedTextBuilder_ != null) {
+          localizedCouponAlreadyRedeemedTextBuilder_.dispose();
           localizedCouponAlreadyRedeemedTextBuilder_ = null;
         }
         offerExpiredText_ = "";
-
-        if (localizedOfferExpiredTextBuilder_ == null) {
-          localizedOfferExpiredText_ = null;
-        } else {
-          localizedOfferExpiredText_ = null;
+        localizedOfferExpiredText_ = null;
+        if (localizedOfferExpiredTextBuilder_ != null) {
+          localizedOfferExpiredTextBuilder_.dispose();
           localizedOfferExpiredTextBuilder_ = null;
         }
         couponExpiredText_ = "";
-
-        if (localizedCouponExpiredTextBuilder_ == null) {
-          localizedCouponExpiredText_ = null;
-        } else {
-          localizedCouponExpiredText_ = null;
+        localizedCouponExpiredText_ = null;
+        if (localizedCouponExpiredTextBuilder_ != null) {
+          localizedCouponExpiredTextBuilder_.dispose();
           localizedCouponExpiredTextBuilder_ = null;
         }
         return this;
@@ -20438,78 +20113,63 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts result = new com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts(this);
-        result.redeemConfirmationDialogBoxText_ = redeemConfirmationDialogBoxText_;
-        if (localizedRedeemConfirmationDialogBoxTextBuilder_ == null) {
-          result.localizedRedeemConfirmationDialogBoxText_ = localizedRedeemConfirmationDialogBoxText_;
-        } else {
-          result.localizedRedeemConfirmationDialogBoxText_ = localizedRedeemConfirmationDialogBoxTextBuilder_.build();
-        }
-        result.cancelRedeemText_ = cancelRedeemText_;
-        if (localizedCancelRedeemTextBuilder_ == null) {
-          result.localizedCancelRedeemText_ = localizedCancelRedeemText_;
-        } else {
-          result.localizedCancelRedeemText_ = localizedCancelRedeemTextBuilder_.build();
-        }
-        result.afterRedeemText_ = afterRedeemText_;
-        if (localizedAfterRedeemTextBuilder_ == null) {
-          result.localizedAfterRedeemText_ = localizedAfterRedeemText_;
-        } else {
-          result.localizedAfterRedeemText_ = localizedAfterRedeemTextBuilder_.build();
-        }
-        result.couponAlreadyRedeemedText_ = couponAlreadyRedeemedText_;
-        if (localizedCouponAlreadyRedeemedTextBuilder_ == null) {
-          result.localizedCouponAlreadyRedeemedText_ = localizedCouponAlreadyRedeemedText_;
-        } else {
-          result.localizedCouponAlreadyRedeemedText_ = localizedCouponAlreadyRedeemedTextBuilder_.build();
-        }
-        result.offerExpiredText_ = offerExpiredText_;
-        if (localizedOfferExpiredTextBuilder_ == null) {
-          result.localizedOfferExpiredText_ = localizedOfferExpiredText_;
-        } else {
-          result.localizedOfferExpiredText_ = localizedOfferExpiredTextBuilder_.build();
-        }
-        result.couponExpiredText_ = couponExpiredText_;
-        if (localizedCouponExpiredTextBuilder_ == null) {
-          result.localizedCouponExpiredText_ = localizedCouponExpiredText_;
-        } else {
-          result.localizedCouponExpiredText_ = localizedCouponExpiredTextBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.redeemConfirmationDialogBoxText_ = redeemConfirmationDialogBoxText_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.localizedRedeemConfirmationDialogBoxText_ = localizedRedeemConfirmationDialogBoxTextBuilder_ == null
+              ? localizedRedeemConfirmationDialogBoxText_
+              : localizedRedeemConfirmationDialogBoxTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cancelRedeemText_ = cancelRedeemText_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedCancelRedeemText_ = localizedCancelRedeemTextBuilder_ == null
+              ? localizedCancelRedeemText_
+              : localizedCancelRedeemTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.afterRedeemText_ = afterRedeemText_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedAfterRedeemText_ = localizedAfterRedeemTextBuilder_ == null
+              ? localizedAfterRedeemText_
+              : localizedAfterRedeemTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.couponAlreadyRedeemedText_ = couponAlreadyRedeemedText_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.localizedCouponAlreadyRedeemedText_ = localizedCouponAlreadyRedeemedTextBuilder_ == null
+              ? localizedCouponAlreadyRedeemedText_
+              : localizedCouponAlreadyRedeemedTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.offerExpiredText_ = offerExpiredText_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.localizedOfferExpiredText_ = localizedOfferExpiredTextBuilder_ == null
+              ? localizedOfferExpiredText_
+              : localizedOfferExpiredTextBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.couponExpiredText_ = couponExpiredText_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.localizedCouponExpiredText_ = localizedCouponExpiredTextBuilder_ == null
+              ? localizedCouponExpiredText_
+              : localizedCouponExpiredTextBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts) {
@@ -20524,6 +20184,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.ResponseTexts.getDefaultInstance()) return this;
         if (!other.getRedeemConfirmationDialogBoxText().isEmpty()) {
           redeemConfirmationDialogBoxText_ = other.redeemConfirmationDialogBoxText_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasLocalizedRedeemConfirmationDialogBoxText()) {
@@ -20531,6 +20192,7 @@ public final class Offer {
         }
         if (!other.getCancelRedeemText().isEmpty()) {
           cancelRedeemText_ = other.cancelRedeemText_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedCancelRedeemText()) {
@@ -20538,6 +20200,7 @@ public final class Offer {
         }
         if (!other.getAfterRedeemText().isEmpty()) {
           afterRedeemText_ = other.afterRedeemText_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedAfterRedeemText()) {
@@ -20545,6 +20208,7 @@ public final class Offer {
         }
         if (!other.getCouponAlreadyRedeemedText().isEmpty()) {
           couponAlreadyRedeemedText_ = other.couponAlreadyRedeemedText_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasLocalizedCouponAlreadyRedeemedText()) {
@@ -20552,6 +20216,7 @@ public final class Offer {
         }
         if (!other.getOfferExpiredText().isEmpty()) {
           offerExpiredText_ = other.offerExpiredText_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasLocalizedOfferExpiredText()) {
@@ -20559,6 +20224,7 @@ public final class Offer {
         }
         if (!other.getCouponExpiredText().isEmpty()) {
           couponExpiredText_ = other.couponExpiredText_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         if (other.hasLocalizedCouponExpiredText()) {
@@ -20592,74 +20258,74 @@ public final class Offer {
                 break;
               case 10: {
                 redeemConfirmationDialogBoxText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getLocalizedRedeemConfirmationDialogBoxTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 cancelRedeemText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedCancelRedeemTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 afterRedeemText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getLocalizedAfterRedeemTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 couponAlreadyRedeemedText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getLocalizedCouponAlreadyRedeemedTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 offerExpiredText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getLocalizedOfferExpiredTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 couponExpiredText_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     getLocalizedCouponExpiredTextFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               default: {
@@ -20677,6 +20343,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object redeemConfirmationDialogBoxText_ = "";
       /**
@@ -20737,11 +20404,9 @@ public final class Offer {
        */
       public Builder setRedeemConfirmationDialogBoxText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redeemConfirmationDialogBoxText_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -20756,8 +20421,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearRedeemConfirmationDialogBoxText() {
-        
         redeemConfirmationDialogBoxText_ = getDefaultInstance().getRedeemConfirmationDialogBoxText();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -20774,12 +20439,10 @@ public final class Offer {
        */
       public Builder setRedeemConfirmationDialogBoxTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redeemConfirmationDialogBoxText_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -20796,7 +20459,7 @@ public final class Offer {
        * @return Whether the localizedRedeemConfirmationDialogBoxText field is set.
        */
       public boolean hasLocalizedRedeemConfirmationDialogBoxText() {
-        return localizedRedeemConfirmationDialogBoxTextBuilder_ != null || localizedRedeemConfirmationDialogBoxText_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -20826,11 +20489,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedRedeemConfirmationDialogBoxText_ = value;
-          onChanged();
         } else {
           localizedRedeemConfirmationDialogBoxTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -20844,11 +20507,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedRedeemConfirmationDialogBoxTextBuilder_ == null) {
           localizedRedeemConfirmationDialogBoxText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedRedeemConfirmationDialogBoxTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -20860,17 +20523,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedRedeemConfirmationDialogBoxText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedRedeemConfirmationDialogBoxTextBuilder_ == null) {
-          if (localizedRedeemConfirmationDialogBoxText_ != null) {
-            localizedRedeemConfirmationDialogBoxText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedRedeemConfirmationDialogBoxText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            localizedRedeemConfirmationDialogBoxText_ != null &&
+            localizedRedeemConfirmationDialogBoxText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedRedeemConfirmationDialogBoxTextBuilder().mergeFrom(value);
           } else {
             localizedRedeemConfirmationDialogBoxText_ = value;
           }
-          onChanged();
         } else {
           localizedRedeemConfirmationDialogBoxTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -20881,14 +20545,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedRedeemConfirmationDialogBoxText = 2;</code>
        */
       public Builder clearLocalizedRedeemConfirmationDialogBoxText() {
-        if (localizedRedeemConfirmationDialogBoxTextBuilder_ == null) {
-          localizedRedeemConfirmationDialogBoxText_ = null;
-          onChanged();
-        } else {
-          localizedRedeemConfirmationDialogBoxText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localizedRedeemConfirmationDialogBoxText_ = null;
+        if (localizedRedeemConfirmationDialogBoxTextBuilder_ != null) {
+          localizedRedeemConfirmationDialogBoxTextBuilder_.dispose();
           localizedRedeemConfirmationDialogBoxTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -20899,7 +20562,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedRedeemConfirmationDialogBoxText = 2;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedRedeemConfirmationDialogBoxTextBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getLocalizedRedeemConfirmationDialogBoxTextFieldBuilder().getBuilder();
       }
@@ -20995,11 +20658,9 @@ public final class Offer {
        */
       public Builder setCancelRedeemText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         cancelRedeemText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -21013,8 +20674,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCancelRedeemText() {
-        
         cancelRedeemText_ = getDefaultInstance().getCancelRedeemText();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -21030,12 +20691,10 @@ public final class Offer {
        */
       public Builder setCancelRedeemTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         cancelRedeemText_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -21052,7 +20711,7 @@ public final class Offer {
        * @return Whether the localizedCancelRedeemText field is set.
        */
       public boolean hasLocalizedCancelRedeemText() {
-        return localizedCancelRedeemTextBuilder_ != null || localizedCancelRedeemText_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -21082,11 +20741,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedCancelRedeemText_ = value;
-          onChanged();
         } else {
           localizedCancelRedeemTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -21100,11 +20759,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedCancelRedeemTextBuilder_ == null) {
           localizedCancelRedeemText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedCancelRedeemTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -21116,17 +20775,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedCancelRedeemText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedCancelRedeemTextBuilder_ == null) {
-          if (localizedCancelRedeemText_ != null) {
-            localizedCancelRedeemText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedCancelRedeemText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedCancelRedeemText_ != null &&
+            localizedCancelRedeemText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedCancelRedeemTextBuilder().mergeFrom(value);
           } else {
             localizedCancelRedeemText_ = value;
           }
-          onChanged();
         } else {
           localizedCancelRedeemTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -21137,14 +20797,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCancelRedeemText = 4;</code>
        */
       public Builder clearLocalizedCancelRedeemText() {
-        if (localizedCancelRedeemTextBuilder_ == null) {
-          localizedCancelRedeemText_ = null;
-          onChanged();
-        } else {
-          localizedCancelRedeemText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedCancelRedeemText_ = null;
+        if (localizedCancelRedeemTextBuilder_ != null) {
+          localizedCancelRedeemTextBuilder_.dispose();
           localizedCancelRedeemTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21155,7 +20814,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCancelRedeemText = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedCancelRedeemTextBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedCancelRedeemTextFieldBuilder().getBuilder();
       }
@@ -21248,11 +20907,9 @@ public final class Offer {
        */
       public Builder setAfterRedeemText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         afterRedeemText_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -21265,8 +20922,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearAfterRedeemText() {
-        
         afterRedeemText_ = getDefaultInstance().getAfterRedeemText();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -21281,12 +20938,10 @@ public final class Offer {
        */
       public Builder setAfterRedeemTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         afterRedeemText_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -21303,7 +20958,7 @@ public final class Offer {
        * @return Whether the localizedAfterRedeemText field is set.
        */
       public boolean hasLocalizedAfterRedeemText() {
-        return localizedAfterRedeemTextBuilder_ != null || localizedAfterRedeemText_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -21333,11 +20988,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedAfterRedeemText_ = value;
-          onChanged();
         } else {
           localizedAfterRedeemTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -21351,11 +21006,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAfterRedeemTextBuilder_ == null) {
           localizedAfterRedeemText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAfterRedeemTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -21367,17 +21022,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedAfterRedeemText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAfterRedeemTextBuilder_ == null) {
-          if (localizedAfterRedeemText_ != null) {
-            localizedAfterRedeemText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAfterRedeemText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedAfterRedeemText_ != null &&
+            localizedAfterRedeemText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAfterRedeemTextBuilder().mergeFrom(value);
           } else {
             localizedAfterRedeemText_ = value;
           }
-          onChanged();
         } else {
           localizedAfterRedeemTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -21388,14 +21044,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedAfterRedeemText = 6;</code>
        */
       public Builder clearLocalizedAfterRedeemText() {
-        if (localizedAfterRedeemTextBuilder_ == null) {
-          localizedAfterRedeemText_ = null;
-          onChanged();
-        } else {
-          localizedAfterRedeemText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedAfterRedeemText_ = null;
+        if (localizedAfterRedeemTextBuilder_ != null) {
+          localizedAfterRedeemTextBuilder_.dispose();
           localizedAfterRedeemTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21406,7 +21061,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedAfterRedeemText = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAfterRedeemTextBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedAfterRedeemTextFieldBuilder().getBuilder();
       }
@@ -21499,11 +21154,9 @@ public final class Offer {
        */
       public Builder setCouponAlreadyRedeemedText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponAlreadyRedeemedText_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -21516,8 +21169,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCouponAlreadyRedeemedText() {
-        
         couponAlreadyRedeemedText_ = getDefaultInstance().getCouponAlreadyRedeemedText();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -21532,12 +21185,10 @@ public final class Offer {
        */
       public Builder setCouponAlreadyRedeemedTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponAlreadyRedeemedText_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -21554,7 +21205,7 @@ public final class Offer {
        * @return Whether the localizedCouponAlreadyRedeemedText field is set.
        */
       public boolean hasLocalizedCouponAlreadyRedeemedText() {
-        return localizedCouponAlreadyRedeemedTextBuilder_ != null || localizedCouponAlreadyRedeemedText_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -21584,11 +21235,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedCouponAlreadyRedeemedText_ = value;
-          onChanged();
         } else {
           localizedCouponAlreadyRedeemedTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -21602,11 +21253,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedCouponAlreadyRedeemedTextBuilder_ == null) {
           localizedCouponAlreadyRedeemedText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedCouponAlreadyRedeemedTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -21618,17 +21269,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedCouponAlreadyRedeemedText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedCouponAlreadyRedeemedTextBuilder_ == null) {
-          if (localizedCouponAlreadyRedeemedText_ != null) {
-            localizedCouponAlreadyRedeemedText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedCouponAlreadyRedeemedText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            localizedCouponAlreadyRedeemedText_ != null &&
+            localizedCouponAlreadyRedeemedText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedCouponAlreadyRedeemedTextBuilder().mergeFrom(value);
           } else {
             localizedCouponAlreadyRedeemedText_ = value;
           }
-          onChanged();
         } else {
           localizedCouponAlreadyRedeemedTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -21639,14 +21291,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCouponAlreadyRedeemedText = 8;</code>
        */
       public Builder clearLocalizedCouponAlreadyRedeemedText() {
-        if (localizedCouponAlreadyRedeemedTextBuilder_ == null) {
-          localizedCouponAlreadyRedeemedText_ = null;
-          onChanged();
-        } else {
-          localizedCouponAlreadyRedeemedText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        localizedCouponAlreadyRedeemedText_ = null;
+        if (localizedCouponAlreadyRedeemedTextBuilder_ != null) {
+          localizedCouponAlreadyRedeemedTextBuilder_.dispose();
           localizedCouponAlreadyRedeemedTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21657,7 +21308,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCouponAlreadyRedeemedText = 8;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedCouponAlreadyRedeemedTextBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getLocalizedCouponAlreadyRedeemedTextFieldBuilder().getBuilder();
       }
@@ -21750,11 +21401,9 @@ public final class Offer {
        */
       public Builder setOfferExpiredText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerExpiredText_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -21767,8 +21416,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearOfferExpiredText() {
-        
         offerExpiredText_ = getDefaultInstance().getOfferExpiredText();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -21783,12 +21432,10 @@ public final class Offer {
        */
       public Builder setOfferExpiredTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerExpiredText_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -21805,7 +21452,7 @@ public final class Offer {
        * @return Whether the localizedOfferExpiredText field is set.
        */
       public boolean hasLocalizedOfferExpiredText() {
-        return localizedOfferExpiredTextBuilder_ != null || localizedOfferExpiredText_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -21835,11 +21482,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedOfferExpiredText_ = value;
-          onChanged();
         } else {
           localizedOfferExpiredTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -21853,11 +21500,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedOfferExpiredTextBuilder_ == null) {
           localizedOfferExpiredText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedOfferExpiredTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -21869,17 +21516,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedOfferExpiredText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedOfferExpiredTextBuilder_ == null) {
-          if (localizedOfferExpiredText_ != null) {
-            localizedOfferExpiredText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedOfferExpiredText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            localizedOfferExpiredText_ != null &&
+            localizedOfferExpiredText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedOfferExpiredTextBuilder().mergeFrom(value);
           } else {
             localizedOfferExpiredText_ = value;
           }
-          onChanged();
         } else {
           localizedOfferExpiredTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -21890,14 +21538,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferExpiredText = 10;</code>
        */
       public Builder clearLocalizedOfferExpiredText() {
-        if (localizedOfferExpiredTextBuilder_ == null) {
-          localizedOfferExpiredText_ = null;
-          onChanged();
-        } else {
-          localizedOfferExpiredText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        localizedOfferExpiredText_ = null;
+        if (localizedOfferExpiredTextBuilder_ != null) {
+          localizedOfferExpiredTextBuilder_.dispose();
           localizedOfferExpiredTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21908,7 +21555,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedOfferExpiredText = 10;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedOfferExpiredTextBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getLocalizedOfferExpiredTextFieldBuilder().getBuilder();
       }
@@ -22001,11 +21648,9 @@ public final class Offer {
        */
       public Builder setCouponExpiredText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponExpiredText_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -22018,8 +21663,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCouponExpiredText() {
-        
         couponExpiredText_ = getDefaultInstance().getCouponExpiredText();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -22034,12 +21679,10 @@ public final class Offer {
        */
       public Builder setCouponExpiredTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponExpiredText_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -22056,7 +21699,7 @@ public final class Offer {
        * @return Whether the localizedCouponExpiredText field is set.
        */
       public boolean hasLocalizedCouponExpiredText() {
-        return localizedCouponExpiredTextBuilder_ != null || localizedCouponExpiredText_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -22086,11 +21729,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           localizedCouponExpiredText_ = value;
-          onChanged();
         } else {
           localizedCouponExpiredTextBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -22104,11 +21747,11 @@ public final class Offer {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedCouponExpiredTextBuilder_ == null) {
           localizedCouponExpiredText_ = builderForValue.build();
-          onChanged();
         } else {
           localizedCouponExpiredTextBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -22120,17 +21763,18 @@ public final class Offer {
        */
       public Builder mergeLocalizedCouponExpiredText(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedCouponExpiredTextBuilder_ == null) {
-          if (localizedCouponExpiredText_ != null) {
-            localizedCouponExpiredText_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedCouponExpiredText_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            localizedCouponExpiredText_ != null &&
+            localizedCouponExpiredText_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedCouponExpiredTextBuilder().mergeFrom(value);
           } else {
             localizedCouponExpiredText_ = value;
           }
-          onChanged();
         } else {
           localizedCouponExpiredTextBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -22141,14 +21785,13 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCouponExpiredText = 12;</code>
        */
       public Builder clearLocalizedCouponExpiredText() {
-        if (localizedCouponExpiredTextBuilder_ == null) {
-          localizedCouponExpiredText_ = null;
-          onChanged();
-        } else {
-          localizedCouponExpiredText_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        localizedCouponExpiredText_ = null;
+        if (localizedCouponExpiredTextBuilder_ != null) {
+          localizedCouponExpiredTextBuilder_.dispose();
           localizedCouponExpiredTextBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -22159,7 +21802,7 @@ public final class Offer {
        * <code>.io.LocalizedString localizedCouponExpiredText = 12;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedCouponExpiredTextBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getLocalizedCouponExpiredTextFieldBuilder().getBuilder();
       }
@@ -22320,11 +21963,6 @@ public final class Offer {
       return new CouponOffersListRequestDeprecated();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CouponOffersListRequestDeprecated_descriptor;
@@ -22339,7 +21977,8 @@ public final class Offer {
     }
 
     public static final int CAMPAIGNID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object campaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object campaignId_ = "";
     /**
      * <code>string campaignId = 1;</code>
      * @return The campaignId.
@@ -22399,7 +22038,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
-      return getPagination();
+      return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22609,12 +22248,11 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         campaignId_ = "";
-
-        if (paginationBuilder_ == null) {
-          pagination_ = null;
-        } else {
-          pagination_ = null;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
           paginationBuilder_ = null;
         }
         return this;
@@ -22643,48 +22281,23 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated result = new com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated(this);
-        result.campaignId_ = campaignId_;
-        if (paginationBuilder_ == null) {
-          result.pagination_ = pagination_;
-        } else {
-          result.pagination_ = paginationBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.campaignId_ = campaignId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated) {
@@ -22699,6 +22312,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated.getDefaultInstance()) return this;
         if (!other.getCampaignId().isEmpty()) {
           campaignId_ = other.campaignId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPagination()) {
@@ -22732,14 +22346,14 @@ public final class Offer {
                 break;
               case 10: {
                 campaignId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getPaginationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -22757,6 +22371,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object campaignId_ = "";
       /**
@@ -22799,11 +22414,9 @@ public final class Offer {
        */
       public Builder setCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         campaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22812,8 +22425,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCampaignId() {
-        
         campaignId_ = getDefaultInstance().getCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -22824,12 +22437,10 @@ public final class Offer {
        */
       public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         campaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22842,7 +22453,7 @@ public final class Offer {
        * @return Whether the pagination field is set.
        */
       public boolean hasPagination() {
-        return paginationBuilder_ != null || pagination_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.Pagination pagination = 2;</code>
@@ -22864,11 +22475,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           pagination_ = value;
-          onChanged();
         } else {
           paginationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22878,11 +22489,11 @@ public final class Offer {
           com.passkit.grpc.PaginationOuterClass.Pagination.Builder builderForValue) {
         if (paginationBuilder_ == null) {
           pagination_ = builderForValue.build();
-          onChanged();
         } else {
           paginationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22890,38 +22501,38 @@ public final class Offer {
        */
       public Builder mergePagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
         if (paginationBuilder_ == null) {
-          if (pagination_ != null) {
-            pagination_ =
-              com.passkit.grpc.PaginationOuterClass.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
           } else {
             pagination_ = value;
           }
-          onChanged();
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Pagination pagination = 2;</code>
        */
       public Builder clearPagination() {
-        if (paginationBuilder_ == null) {
-          pagination_ = null;
-          onChanged();
-        } else {
-          pagination_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
           paginationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Pagination pagination = 2;</code>
        */
       public com.passkit.grpc.PaginationOuterClass.Pagination.Builder getPaginationBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPaginationFieldBuilder().getBuilder();
       }
@@ -23070,11 +22681,6 @@ public final class Offer {
       return new CouponOffersListRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.Offer.internal_static_single_use_coupons_CouponOffersListRequest_descriptor;
@@ -23089,7 +22695,8 @@ public final class Offer {
     }
 
     public static final int CAMPAIGNID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object campaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object campaignId_ = "";
     /**
      * <code>string campaignId = 1;</code>
      * @return The campaignId.
@@ -23149,7 +22756,7 @@ public final class Offer {
      */
     @java.lang.Override
     public com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder() {
-      return getFilters();
+      return filters_ == null ? com.passkit.grpc.Filter.Filters.getDefaultInstance() : filters_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -23355,12 +22962,11 @@ public final class Offer {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         campaignId_ = "";
-
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-        } else {
-          filters_ = null;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
         return this;
@@ -23389,48 +22995,23 @@ public final class Offer {
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest buildPartial() {
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest result = new com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest(this);
-        result.campaignId_ = campaignId_;
-        if (filtersBuilder_ == null) {
-          result.filters_ = filters_;
-        } else {
-          result.filters_ = filtersBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.campaignId_ = campaignId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest) {
@@ -23445,6 +23026,7 @@ public final class Offer {
         if (other == com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest.getDefaultInstance()) return this;
         if (!other.getCampaignId().isEmpty()) {
           campaignId_ = other.campaignId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasFilters()) {
@@ -23478,14 +23060,14 @@ public final class Offer {
                 break;
               case 10: {
                 campaignId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getFiltersFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -23503,6 +23085,7 @@ public final class Offer {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object campaignId_ = "";
       /**
@@ -23545,11 +23128,9 @@ public final class Offer {
        */
       public Builder setCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         campaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -23558,8 +23139,8 @@ public final class Offer {
        * @return This builder for chaining.
        */
       public Builder clearCampaignId() {
-        
         campaignId_ = getDefaultInstance().getCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -23570,12 +23151,10 @@ public final class Offer {
        */
       public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         campaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -23588,7 +23167,7 @@ public final class Offer {
        * @return Whether the filters field is set.
        */
       public boolean hasFilters() {
-        return filtersBuilder_ != null || filters_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.Filters filters = 2;</code>
@@ -23610,11 +23189,11 @@ public final class Offer {
             throw new NullPointerException();
           }
           filters_ = value;
-          onChanged();
         } else {
           filtersBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23624,11 +23203,11 @@ public final class Offer {
           com.passkit.grpc.Filter.Filters.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           filters_ = builderForValue.build();
-          onChanged();
         } else {
           filtersBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23636,38 +23215,38 @@ public final class Offer {
        */
       public Builder mergeFilters(com.passkit.grpc.Filter.Filters value) {
         if (filtersBuilder_ == null) {
-          if (filters_ != null) {
-            filters_ =
-              com.passkit.grpc.Filter.Filters.newBuilder(filters_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            filters_ != null &&
+            filters_ != com.passkit.grpc.Filter.Filters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
           } else {
             filters_ = value;
           }
-          onChanged();
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Filters filters = 2;</code>
        */
       public Builder clearFilters() {
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-          onChanged();
-        } else {
-          filters_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Filters filters = 2;</code>
        */
       public com.passkit.grpc.Filter.Filters.Builder getFiltersBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFiltersFieldBuilder().getBuilder();
       }

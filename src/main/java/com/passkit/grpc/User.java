@@ -1165,11 +1165,6 @@ public final class User {
       return new NewUserResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_NewUserResponse_descriptor;
@@ -1184,7 +1179,8 @@ public final class User {
     }
 
     public static final int USERID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object userId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
     /**
      * <code>string userId = 1;</code>
      * @return The userId.
@@ -1222,7 +1218,8 @@ public final class User {
     }
 
     public static final int COMPANYID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object companyId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyId_ = "";
     /**
      * <code>string companyId = 2;</code>
      * @return The companyId.
@@ -1260,7 +1257,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 3;</code>
      * @return The username.
@@ -1298,7 +1296,8 @@ public final class User {
     }
 
     public static final int EMAILADDRESS_FIELD_NUMBER = 4;
-    private volatile java.lang.Object emailAddress_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object emailAddress_ = "";
     /**
      * <code>string emailAddress = 4;</code>
      * @return The emailAddress.
@@ -1336,7 +1335,8 @@ public final class User {
     }
 
     public static final int SECRET_FIELD_NUMBER = 5;
-    private volatile java.lang.Object secret_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
     /**
      * <code>string secret = 5;</code>
      * @return The secret.
@@ -1374,7 +1374,8 @@ public final class User {
     }
 
     public static final int CERTIFICATE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object certificate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object certificate_ = "";
     /**
      * <code>string certificate = 6;</code>
      * @return The certificate.
@@ -1412,7 +1413,8 @@ public final class User {
     }
 
     public static final int PRIVATEKEY_FIELD_NUMBER = 7;
-    private volatile java.lang.Object privateKey_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privateKey_ = "";
     /**
      * <code>string privateKey = 7;</code>
      * @return The privateKey.
@@ -1450,7 +1452,8 @@ public final class User {
     }
 
     public static final int JAVAPRIVATEKEY_FIELD_NUMBER = 8;
-    private volatile java.lang.Object javaPrivateKey_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object javaPrivateKey_ = "";
     /**
      * <code>string javaPrivateKey = 8;</code>
      * @return The javaPrivateKey.
@@ -1510,11 +1513,12 @@ public final class User {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
-      return getExpiresAt();
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
 
     public static final int REGIONID_FIELD_NUMBER = 10;
-    private volatile java.lang.Object regionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object regionId_ = "";
     /**
      * <code>string regionId = 10;</code>
      * @return The regionId.
@@ -1834,30 +1838,21 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         userId_ = "";
-
         companyId_ = "";
-
         username_ = "";
-
         emailAddress_ = "";
-
         secret_ = "";
-
         certificate_ = "";
-
         privateKey_ = "";
-
         javaPrivateKey_ = "";
-
-        if (expiresAtBuilder_ == null) {
-          expiresAt_ = null;
-        } else {
-          expiresAt_ = null;
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
           expiresAtBuilder_ = null;
         }
         regionId_ = "";
-
         return this;
       }
 
@@ -1884,56 +1879,47 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.NewUserResponse buildPartial() {
         com.passkit.grpc.User.NewUserResponse result = new com.passkit.grpc.User.NewUserResponse(this);
-        result.userId_ = userId_;
-        result.companyId_ = companyId_;
-        result.username_ = username_;
-        result.emailAddress_ = emailAddress_;
-        result.secret_ = secret_;
-        result.certificate_ = certificate_;
-        result.privateKey_ = privateKey_;
-        result.javaPrivateKey_ = javaPrivateKey_;
-        if (expiresAtBuilder_ == null) {
-          result.expiresAt_ = expiresAt_;
-        } else {
-          result.expiresAt_ = expiresAtBuilder_.build();
-        }
-        result.regionId_ = regionId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.NewUserResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.userId_ = userId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.companyId_ = companyId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.emailAddress_ = emailAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.certificate_ = certificate_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.privateKey_ = privateKey_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.javaPrivateKey_ = javaPrivateKey_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.expiresAt_ = expiresAtBuilder_ == null
+              ? expiresAt_
+              : expiresAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.regionId_ = regionId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.NewUserResponse) {
@@ -1948,34 +1934,42 @@ public final class User {
         if (other == com.passkit.grpc.User.NewUserResponse.getDefaultInstance()) return this;
         if (!other.getUserId().isEmpty()) {
           userId_ = other.userId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getCompanyId().isEmpty()) {
           companyId_ = other.companyId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getEmailAddress().isEmpty()) {
           emailAddress_ = other.emailAddress_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getSecret().isEmpty()) {
           secret_ = other.secret_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getCertificate().isEmpty()) {
           certificate_ = other.certificate_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getPrivateKey().isEmpty()) {
           privateKey_ = other.privateKey_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getJavaPrivateKey().isEmpty()) {
           javaPrivateKey_ = other.javaPrivateKey_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (other.hasExpiresAt()) {
@@ -1983,6 +1977,7 @@ public final class User {
         }
         if (!other.getRegionId().isEmpty()) {
           regionId_ = other.regionId_;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2013,54 +2008,54 @@ public final class User {
                 break;
               case 10: {
                 userId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 companyId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 emailAddress_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 secret_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 certificate_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 privateKey_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 javaPrivateKey_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getExpiresAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 regionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               default: {
@@ -2078,6 +2073,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object userId_ = "";
       /**
@@ -2120,11 +2116,9 @@ public final class User {
        */
       public Builder setUserId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         userId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2133,8 +2127,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-        
         userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2145,12 +2139,10 @@ public final class User {
        */
       public Builder setUserIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         userId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2196,11 +2188,9 @@ public final class User {
        */
       public Builder setCompanyId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2209,8 +2199,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyId() {
-        
         companyId_ = getDefaultInstance().getCompanyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2221,12 +2211,10 @@ public final class User {
        */
       public Builder setCompanyIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2272,11 +2260,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2285,8 +2271,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2297,12 +2283,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2348,11 +2332,9 @@ public final class User {
        */
       public Builder setEmailAddress(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         emailAddress_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2361,8 +2343,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearEmailAddress() {
-        
         emailAddress_ = getDefaultInstance().getEmailAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2373,12 +2355,10 @@ public final class User {
        */
       public Builder setEmailAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         emailAddress_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2424,11 +2404,9 @@ public final class User {
        */
       public Builder setSecret(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         secret_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2437,8 +2415,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearSecret() {
-        
         secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2449,12 +2427,10 @@ public final class User {
        */
       public Builder setSecretBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         secret_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2500,11 +2476,9 @@ public final class User {
        */
       public Builder setCertificate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         certificate_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2513,8 +2487,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCertificate() {
-        
         certificate_ = getDefaultInstance().getCertificate();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2525,12 +2499,10 @@ public final class User {
        */
       public Builder setCertificateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         certificate_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2576,11 +2548,9 @@ public final class User {
        */
       public Builder setPrivateKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privateKey_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2589,8 +2559,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearPrivateKey() {
-        
         privateKey_ = getDefaultInstance().getPrivateKey();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2601,12 +2571,10 @@ public final class User {
        */
       public Builder setPrivateKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privateKey_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2652,11 +2620,9 @@ public final class User {
        */
       public Builder setJavaPrivateKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         javaPrivateKey_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2665,8 +2631,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearJavaPrivateKey() {
-        
         javaPrivateKey_ = getDefaultInstance().getJavaPrivateKey();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2677,12 +2643,10 @@ public final class User {
        */
       public Builder setJavaPrivateKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         javaPrivateKey_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2695,7 +2659,7 @@ public final class User {
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
-        return expiresAtBuilder_ != null || expiresAt_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 9;</code>
@@ -2717,11 +2681,11 @@ public final class User {
             throw new NullPointerException();
           }
           expiresAt_ = value;
-          onChanged();
         } else {
           expiresAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2731,11 +2695,11 @@ public final class User {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiresAtBuilder_ == null) {
           expiresAt_ = builderForValue.build();
-          onChanged();
         } else {
           expiresAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2743,38 +2707,38 @@ public final class User {
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
-          if (expiresAt_ != null) {
-            expiresAt_ =
-              com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            expiresAt_ != null &&
+            expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiresAtBuilder().mergeFrom(value);
           } else {
             expiresAt_ = value;
           }
-          onChanged();
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 9;</code>
        */
       public Builder clearExpiresAt() {
-        if (expiresAtBuilder_ == null) {
-          expiresAt_ = null;
-          onChanged();
-        } else {
-          expiresAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
           expiresAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getExpiresAtFieldBuilder().getBuilder();
       }
@@ -2847,11 +2811,9 @@ public final class User {
        */
       public Builder setRegionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         regionId_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2860,8 +2822,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearRegionId() {
-        
         regionId_ = getDefaultInstance().getRegionId();
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -2872,12 +2834,10 @@ public final class User {
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         regionId_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -3070,11 +3030,6 @@ public final class User {
       return new NewUser();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_NewUser_descriptor;
@@ -3089,7 +3044,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 1;</code>
      * @return The username.
@@ -3127,7 +3083,8 @@ public final class User {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object password_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
@@ -3165,7 +3122,8 @@ public final class User {
     }
 
     public static final int EMAILADDRESS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object emailAddress_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object emailAddress_ = "";
     /**
      * <code>string emailAddress = 3;</code>
      * @return The emailAddress.
@@ -3203,7 +3161,7 @@ public final class User {
     }
 
     public static final int SENDEMAIL_FIELD_NUMBER = 4;
-    private boolean sendEmail_;
+    private boolean sendEmail_ = false;
     /**
      * <code>bool sendEmail = 4;</code>
      * @return The sendEmail.
@@ -3214,7 +3172,8 @@ public final class User {
     }
 
     public static final int COMPANYNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object companyName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyName_ = "";
     /**
      * <pre>
      * If a company name is provided, then a new company will be created, otherwise, the user will inherit the company
@@ -3262,7 +3221,8 @@ public final class User {
     }
 
     public static final int MOBILENUMBER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object mobileNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mobileNumber_ = "";
     /**
      * <code>string mobileNumber = 6;</code>
      * @return The mobileNumber.
@@ -3300,7 +3260,7 @@ public final class User {
     }
 
     public static final int TWOFACTORAUTH_FIELD_NUMBER = 7;
-    private boolean twoFactorAuth_;
+    private boolean twoFactorAuth_ = false;
     /**
      * <code>bool twoFactorAuth = 7;</code>
      * @return The twoFactorAuth.
@@ -3311,7 +3271,7 @@ public final class User {
     }
 
     public static final int ISOWNER_FIELD_NUMBER = 8;
-    private boolean isOwner_;
+    private boolean isOwner_ = false;
     /**
      * <code>bool isOwner = 8;</code>
      * @return The isOwner.
@@ -3322,7 +3282,7 @@ public final class User {
     }
 
     public static final int READONLY_FIELD_NUMBER = 9;
-    private boolean readOnly_;
+    private boolean readOnly_ = false;
     /**
      * <code>bool readOnly = 9;</code>
      * @return The readOnly.
@@ -3607,24 +3567,16 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         username_ = "";
-
         password_ = "";
-
         emailAddress_ = "";
-
         sendEmail_ = false;
-
         companyName_ = "";
-
         mobileNumber_ = "";
-
         twoFactorAuth_ = false;
-
         isOwner_ = false;
-
         readOnly_ = false;
-
         return this;
       }
 
@@ -3651,51 +3603,42 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.NewUser buildPartial() {
         com.passkit.grpc.User.NewUser result = new com.passkit.grpc.User.NewUser(this);
-        result.username_ = username_;
-        result.password_ = password_;
-        result.emailAddress_ = emailAddress_;
-        result.sendEmail_ = sendEmail_;
-        result.companyName_ = companyName_;
-        result.mobileNumber_ = mobileNumber_;
-        result.twoFactorAuth_ = twoFactorAuth_;
-        result.isOwner_ = isOwner_;
-        result.readOnly_ = readOnly_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.NewUser result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.password_ = password_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.emailAddress_ = emailAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.sendEmail_ = sendEmail_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.companyName_ = companyName_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.mobileNumber_ = mobileNumber_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.twoFactorAuth_ = twoFactorAuth_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.isOwner_ = isOwner_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.readOnly_ = readOnly_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.NewUser) {
@@ -3710,14 +3653,17 @@ public final class User {
         if (other == com.passkit.grpc.User.NewUser.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getEmailAddress().isEmpty()) {
           emailAddress_ = other.emailAddress_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getSendEmail() != false) {
@@ -3725,10 +3671,12 @@ public final class User {
         }
         if (!other.getCompanyName().isEmpty()) {
           companyName_ = other.companyName_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getMobileNumber().isEmpty()) {
           mobileNumber_ = other.mobileNumber_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.getTwoFactorAuth() != false) {
@@ -3768,47 +3716,47 @@ public final class User {
                 break;
               case 10: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 password_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 emailAddress_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
                 sendEmail_ = input.readBool();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 42: {
                 companyName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 mobileNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 56: {
                 twoFactorAuth_ = input.readBool();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
                 isOwner_ = input.readBool();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 72: {
                 readOnly_ = input.readBool();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 72
               default: {
@@ -3826,6 +3774,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object username_ = "";
       /**
@@ -3868,11 +3817,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3881,8 +3828,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3893,12 +3840,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3944,11 +3889,9 @@ public final class User {
        */
       public Builder setPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3957,8 +3900,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
         password_ = getDefaultInstance().getPassword();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3969,12 +3912,10 @@ public final class User {
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4020,11 +3961,9 @@ public final class User {
        */
       public Builder setEmailAddress(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         emailAddress_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4033,8 +3972,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearEmailAddress() {
-        
         emailAddress_ = getDefaultInstance().getEmailAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4045,12 +3984,10 @@ public final class User {
        */
       public Builder setEmailAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         emailAddress_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4070,8 +4007,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setSendEmail(boolean value) {
-        
+
         sendEmail_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4080,7 +4018,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearSendEmail() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         sendEmail_ = false;
         onChanged();
         return this;
@@ -4142,11 +4080,9 @@ public final class User {
        */
       public Builder setCompanyName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4160,8 +4096,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyName() {
-        
         companyName_ = getDefaultInstance().getCompanyName();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -4177,12 +4113,10 @@ public final class User {
        */
       public Builder setCompanyNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4228,11 +4162,9 @@ public final class User {
        */
       public Builder setMobileNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         mobileNumber_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4241,8 +4173,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearMobileNumber() {
-        
         mobileNumber_ = getDefaultInstance().getMobileNumber();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -4253,12 +4185,10 @@ public final class User {
        */
       public Builder setMobileNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         mobileNumber_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4278,8 +4208,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setTwoFactorAuth(boolean value) {
-        
+
         twoFactorAuth_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4288,7 +4219,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearTwoFactorAuth() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         twoFactorAuth_ = false;
         onChanged();
         return this;
@@ -4309,8 +4240,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setIsOwner(boolean value) {
-        
+
         isOwner_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4319,7 +4251,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearIsOwner() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         isOwner_ = false;
         onChanged();
         return this;
@@ -4340,8 +4272,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setReadOnly(boolean value) {
-        
+
         readOnly_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -4350,7 +4283,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearReadOnly() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         readOnly_ = false;
         onChanged();
         return this;
@@ -4554,11 +4487,6 @@ public final class User {
       return new GetUserResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_GetUserResponse_descriptor;
@@ -4573,7 +4501,8 @@ public final class User {
     }
 
     public static final int EMAIL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object email_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object email_ = "";
     /**
      * <code>string email = 1;</code>
      * @return The email.
@@ -4611,7 +4540,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 2;</code>
      * @return The username.
@@ -4649,7 +4579,8 @@ public final class User {
     }
 
     public static final int COMPANYID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object companyId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyId_ = "";
     /**
      * <code>string companyId = 3;</code>
      * @return The companyId.
@@ -4687,7 +4618,8 @@ public final class User {
     }
 
     public static final int COMPANYNAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object companyName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyName_ = "";
     /**
      * <code>string companyName = 4;</code>
      * @return The companyName.
@@ -4725,7 +4657,7 @@ public final class User {
     }
 
     public static final int COMPANYSTATUS_FIELD_NUMBER = 5;
-    private long companyStatus_;
+    private long companyStatus_ = 0L;
     /**
      * <pre>
      * used for checking production, etc.
@@ -4762,7 +4694,7 @@ public final class User {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int EXPIRESAT_FIELD_NUMBER = 7;
@@ -4788,11 +4720,12 @@ public final class User {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiresAtOrBuilder() {
-      return getExpiresAt();
+      return expiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiresAt_;
     }
 
     public static final int REGIONID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object regionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object regionId_ = "";
     /**
      * <code>string regionId = 8;</code>
      * @return The regionId.
@@ -5104,30 +5037,23 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         email_ = "";
-
         username_ = "";
-
         companyId_ = "";
-
         companyName_ = "";
-
         companyStatus_ = 0L;
-
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-        if (expiresAtBuilder_ == null) {
-          expiresAt_ = null;
-        } else {
-          expiresAt_ = null;
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
           expiresAtBuilder_ = null;
         }
         regionId_ = "";
-
         return this;
       }
 
@@ -5154,58 +5080,43 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.GetUserResponse buildPartial() {
         com.passkit.grpc.User.GetUserResponse result = new com.passkit.grpc.User.GetUserResponse(this);
-        result.email_ = email_;
-        result.username_ = username_;
-        result.companyId_ = companyId_;
-        result.companyName_ = companyName_;
-        result.companyStatus_ = companyStatus_;
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        if (expiresAtBuilder_ == null) {
-          result.expiresAt_ = expiresAt_;
-        } else {
-          result.expiresAt_ = expiresAtBuilder_.build();
-        }
-        result.regionId_ = regionId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.GetUserResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.email_ = email_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.companyId_ = companyId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.companyName_ = companyName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.companyStatus_ = companyStatus_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.expiresAt_ = expiresAtBuilder_ == null
+              ? expiresAt_
+              : expiresAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.regionId_ = regionId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.GetUserResponse) {
@@ -5220,18 +5131,22 @@ public final class User {
         if (other == com.passkit.grpc.User.GetUserResponse.getDefaultInstance()) return this;
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getCompanyId().isEmpty()) {
           companyId_ = other.companyId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getCompanyName().isEmpty()) {
           companyName_ = other.companyName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getCompanyStatus() != 0L) {
@@ -5245,6 +5160,7 @@ public final class User {
         }
         if (!other.getRegionId().isEmpty()) {
           regionId_ = other.regionId_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5275,46 +5191,46 @@ public final class User {
                 break;
               case 10: {
                 email_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 companyId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 companyName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 40: {
                 companyStatus_ = input.readUInt64();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getExpiresAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 regionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -5332,6 +5248,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object email_ = "";
       /**
@@ -5374,11 +5291,9 @@ public final class User {
        */
       public Builder setEmail(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         email_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5387,8 +5302,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
-        
         email_ = getDefaultInstance().getEmail();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5399,12 +5314,10 @@ public final class User {
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         email_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5450,11 +5363,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5463,8 +5374,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5475,12 +5386,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5526,11 +5435,9 @@ public final class User {
        */
       public Builder setCompanyId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5539,8 +5446,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyId() {
-        
         companyId_ = getDefaultInstance().getCompanyId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -5551,12 +5458,10 @@ public final class User {
        */
       public Builder setCompanyIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5602,11 +5507,9 @@ public final class User {
        */
       public Builder setCompanyName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5615,8 +5518,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyName() {
-        
         companyName_ = getDefaultInstance().getCompanyName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -5627,12 +5530,10 @@ public final class User {
        */
       public Builder setCompanyNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5660,8 +5561,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setCompanyStatus(long value) {
-        
+
         companyStatus_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5674,7 +5576,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         companyStatus_ = 0L;
         onChanged();
         return this;
@@ -5688,7 +5590,7 @@ public final class User {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 6;</code>
@@ -5710,11 +5612,11 @@ public final class User {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5724,11 +5626,11 @@ public final class User {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5736,38 +5638,38 @@ public final class User {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 6;</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp createdAt = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -5807,7 +5709,7 @@ public final class User {
        * @return Whether the expiresAt field is set.
        */
       public boolean hasExpiresAt() {
-        return expiresAtBuilder_ != null || expiresAt_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 7;</code>
@@ -5829,11 +5731,11 @@ public final class User {
             throw new NullPointerException();
           }
           expiresAt_ = value;
-          onChanged();
         } else {
           expiresAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -5843,11 +5745,11 @@ public final class User {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiresAtBuilder_ == null) {
           expiresAt_ = builderForValue.build();
-          onChanged();
         } else {
           expiresAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -5855,38 +5757,38 @@ public final class User {
        */
       public Builder mergeExpiresAt(com.google.protobuf.Timestamp value) {
         if (expiresAtBuilder_ == null) {
-          if (expiresAt_ != null) {
-            expiresAt_ =
-              com.google.protobuf.Timestamp.newBuilder(expiresAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            expiresAt_ != null &&
+            expiresAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiresAtBuilder().mergeFrom(value);
           } else {
             expiresAt_ = value;
           }
-          onChanged();
         } else {
           expiresAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 7;</code>
        */
       public Builder clearExpiresAt() {
-        if (expiresAtBuilder_ == null) {
-          expiresAt_ = null;
-          onChanged();
-        } else {
-          expiresAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        expiresAt_ = null;
+        if (expiresAtBuilder_ != null) {
+          expiresAtBuilder_.dispose();
           expiresAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiresAt = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiresAtBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getExpiresAtFieldBuilder().getBuilder();
       }
@@ -5959,11 +5861,9 @@ public final class User {
        */
       public Builder setRegionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         regionId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5972,8 +5872,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearRegionId() {
-        
         regionId_ = getDefaultInstance().getRegionId();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -5984,12 +5884,10 @@ public final class User {
        */
       public Builder setRegionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         regionId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -6137,11 +6035,6 @@ public final class User {
       return new BillingMeta();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_BillingMeta_descriptor;
@@ -6156,7 +6049,8 @@ public final class User {
     }
 
     public static final int COMPANYNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object companyName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyName_ = "";
     /**
      * <code>string companyName = 1;</code>
      * @return The companyName.
@@ -6194,7 +6088,8 @@ public final class User {
     }
 
     public static final int TAXID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object taxId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object taxId_ = "";
     /**
      * <code>string taxId = 2;</code>
      * @return The taxId.
@@ -6232,7 +6127,8 @@ public final class User {
     }
 
     public static final int REFERENCE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object reference_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object reference_ = "";
     /**
      * <code>string reference = 3;</code>
      * @return The reference.
@@ -6292,7 +6188,7 @@ public final class User {
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.AddressOrBuilder getBillingAddressOrBuilder() {
-      return getBillingAddress();
+      return billingAddress_ == null ? com.passkit.grpc.Personal.Address.getDefaultInstance() : billingAddress_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6518,16 +6414,13 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         companyName_ = "";
-
         taxId_ = "";
-
         reference_ = "";
-
-        if (billingAddressBuilder_ == null) {
-          billingAddress_ = null;
-        } else {
-          billingAddress_ = null;
+        billingAddress_ = null;
+        if (billingAddressBuilder_ != null) {
+          billingAddressBuilder_.dispose();
           billingAddressBuilder_ = null;
         }
         return this;
@@ -6556,50 +6449,29 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.BillingMeta buildPartial() {
         com.passkit.grpc.User.BillingMeta result = new com.passkit.grpc.User.BillingMeta(this);
-        result.companyName_ = companyName_;
-        result.taxId_ = taxId_;
-        result.reference_ = reference_;
-        if (billingAddressBuilder_ == null) {
-          result.billingAddress_ = billingAddress_;
-        } else {
-          result.billingAddress_ = billingAddressBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.BillingMeta result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.companyName_ = companyName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.taxId_ = taxId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.reference_ = reference_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.billingAddress_ = billingAddressBuilder_ == null
+              ? billingAddress_
+              : billingAddressBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.BillingMeta) {
@@ -6614,14 +6486,17 @@ public final class User {
         if (other == com.passkit.grpc.User.BillingMeta.getDefaultInstance()) return this;
         if (!other.getCompanyName().isEmpty()) {
           companyName_ = other.companyName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTaxId().isEmpty()) {
           taxId_ = other.taxId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getReference().isEmpty()) {
           reference_ = other.reference_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasBillingAddress()) {
@@ -6655,24 +6530,24 @@ public final class User {
                 break;
               case 10: {
                 companyName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 taxId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 reference_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getBillingAddressFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -6690,6 +6565,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object companyName_ = "";
       /**
@@ -6732,11 +6608,9 @@ public final class User {
        */
       public Builder setCompanyName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6745,8 +6619,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyName() {
-        
         companyName_ = getDefaultInstance().getCompanyName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6757,12 +6631,10 @@ public final class User {
        */
       public Builder setCompanyNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6808,11 +6680,9 @@ public final class User {
        */
       public Builder setTaxId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         taxId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6821,8 +6691,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearTaxId() {
-        
         taxId_ = getDefaultInstance().getTaxId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6833,12 +6703,10 @@ public final class User {
        */
       public Builder setTaxIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         taxId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6884,11 +6752,9 @@ public final class User {
        */
       public Builder setReference(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         reference_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6897,8 +6763,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearReference() {
-        
         reference_ = getDefaultInstance().getReference();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -6909,12 +6775,10 @@ public final class User {
        */
       public Builder setReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         reference_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6927,7 +6791,7 @@ public final class User {
        * @return Whether the billingAddress field is set.
        */
       public boolean hasBillingAddress() {
-        return billingAddressBuilder_ != null || billingAddress_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.io.Address billingAddress = 4;</code>
@@ -6949,11 +6813,11 @@ public final class User {
             throw new NullPointerException();
           }
           billingAddress_ = value;
-          onChanged();
         } else {
           billingAddressBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6963,11 +6827,11 @@ public final class User {
           com.passkit.grpc.Personal.Address.Builder builderForValue) {
         if (billingAddressBuilder_ == null) {
           billingAddress_ = builderForValue.build();
-          onChanged();
         } else {
           billingAddressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6975,38 +6839,38 @@ public final class User {
        */
       public Builder mergeBillingAddress(com.passkit.grpc.Personal.Address value) {
         if (billingAddressBuilder_ == null) {
-          if (billingAddress_ != null) {
-            billingAddress_ =
-              com.passkit.grpc.Personal.Address.newBuilder(billingAddress_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            billingAddress_ != null &&
+            billingAddress_ != com.passkit.grpc.Personal.Address.getDefaultInstance()) {
+            getBillingAddressBuilder().mergeFrom(value);
           } else {
             billingAddress_ = value;
           }
-          onChanged();
         } else {
           billingAddressBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Address billingAddress = 4;</code>
        */
       public Builder clearBillingAddress() {
-        if (billingAddressBuilder_ == null) {
-          billingAddress_ = null;
-          onChanged();
-        } else {
-          billingAddress_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        billingAddress_ = null;
+        if (billingAddressBuilder_ != null) {
+          billingAddressBuilder_.dispose();
           billingAddressBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Address billingAddress = 4;</code>
        */
       public com.passkit.grpc.Personal.Address.Builder getBillingAddressBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getBillingAddressFieldBuilder().getBuilder();
       }
@@ -7153,11 +7017,6 @@ public final class User {
       return new Credentials();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_Credentials_descriptor;
@@ -7172,7 +7031,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 1;</code>
      * @return The username.
@@ -7210,7 +7070,8 @@ public final class User {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object password_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
@@ -7444,10 +7305,9 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         username_ = "";
-
         password_ = "";
-
         return this;
       }
 
@@ -7474,44 +7334,21 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.Credentials buildPartial() {
         com.passkit.grpc.User.Credentials result = new com.passkit.grpc.User.Credentials(this);
-        result.username_ = username_;
-        result.password_ = password_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.Credentials result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.password_ = password_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.Credentials) {
@@ -7526,10 +7363,12 @@ public final class User {
         if (other == com.passkit.grpc.User.Credentials.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -7560,12 +7399,12 @@ public final class User {
                 break;
               case 10: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 password_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -7583,6 +7422,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object username_ = "";
       /**
@@ -7625,11 +7465,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7638,8 +7476,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7650,12 +7488,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7701,11 +7537,9 @@ public final class User {
        */
       public Builder setPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7714,8 +7548,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
         password_ = getDefaultInstance().getPassword();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -7726,12 +7560,10 @@ public final class User {
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7871,11 +7703,6 @@ public final class User {
       return new VerifyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_VerifyRequest_descriptor;
@@ -7890,7 +7717,8 @@ public final class User {
     }
 
     public static final int UID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * 22 character passkit user Id.
@@ -7936,7 +7764,8 @@ public final class User {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 2;
-    private volatile java.lang.Object token_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
     /**
      * <pre>
      * Token supplied by email to the account email.
@@ -8182,10 +8011,9 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         uid_ = "";
-
         token_ = "";
-
         return this;
       }
 
@@ -8212,44 +8040,21 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.VerifyRequest buildPartial() {
         com.passkit.grpc.User.VerifyRequest result = new com.passkit.grpc.User.VerifyRequest(this);
-        result.uid_ = uid_;
-        result.token_ = token_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.VerifyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.token_ = token_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.VerifyRequest) {
@@ -8264,10 +8069,12 @@ public final class User {
         if (other == com.passkit.grpc.User.VerifyRequest.getDefaultInstance()) return this;
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -8298,12 +8105,12 @@ public final class User {
                 break;
               case 10: {
                 uid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 token_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -8321,6 +8128,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object uid_ = "";
       /**
@@ -8375,11 +8183,9 @@ public final class User {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8392,8 +8198,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8408,12 +8214,10 @@ public final class User {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8471,11 +8275,9 @@ public final class User {
        */
       public Builder setToken(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         token_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8488,8 +8290,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearToken() {
-        
         token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8504,12 +8306,10 @@ public final class User {
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         token_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8616,11 +8416,6 @@ public final class User {
       return new JWT();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_JWT_descriptor;
@@ -8635,7 +8430,8 @@ public final class User {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 1;
-    private volatile java.lang.Object token_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
     /**
      * <code>string token = 1;</code>
      * @return The token.
@@ -8859,8 +8655,8 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         token_ = "";
-
         return this;
       }
 
@@ -8887,43 +8683,18 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.JWT buildPartial() {
         com.passkit.grpc.User.JWT result = new com.passkit.grpc.User.JWT(this);
-        result.token_ = token_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.JWT result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.token_ = token_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.JWT) {
@@ -8938,6 +8709,7 @@ public final class User {
         if (other == com.passkit.grpc.User.JWT.getDefaultInstance()) return this;
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -8968,7 +8740,7 @@ public final class User {
                 break;
               case 10: {
                 token_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -8986,6 +8758,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object token_ = "";
       /**
@@ -9028,11 +8801,9 @@ public final class User {
        */
       public Builder setToken(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         token_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9041,8 +8812,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearToken() {
-        
         token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9053,12 +8824,10 @@ public final class User {
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         token_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9204,11 +8973,6 @@ public final class User {
       return new PasswordResetInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_PasswordResetInput_descriptor;
@@ -9223,7 +8987,8 @@ public final class User {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
      * @return The id.
@@ -9261,7 +9026,8 @@ public final class User {
     }
 
     public static final int REGISTEREDEMAIL_FIELD_NUMBER = 2;
-    private volatile java.lang.Object registeredEmail_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registeredEmail_ = "";
     /**
      * <code>string registeredEmail = 2;</code>
      * @return The registeredEmail.
@@ -9299,7 +9065,8 @@ public final class User {
     }
 
     public static final int NEWPASSWORD_FIELD_NUMBER = 3;
-    private volatile java.lang.Object newPassword_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newPassword_ = "";
     /**
      * <code>string newPassword = 3;</code>
      * @return The newPassword.
@@ -9337,7 +9104,8 @@ public final class User {
     }
 
     public static final int CONFIRMNEWPASSWORD_FIELD_NUMBER = 4;
-    private volatile java.lang.Object confirmNewPassword_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object confirmNewPassword_ = "";
     /**
      * <code>string confirmNewPassword = 4;</code>
      * @return The confirmNewPassword.
@@ -9591,14 +9359,11 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         registeredEmail_ = "";
-
         newPassword_ = "";
-
         confirmNewPassword_ = "";
-
         return this;
       }
 
@@ -9625,46 +9390,27 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.PasswordResetInput buildPartial() {
         com.passkit.grpc.User.PasswordResetInput result = new com.passkit.grpc.User.PasswordResetInput(this);
-        result.id_ = id_;
-        result.registeredEmail_ = registeredEmail_;
-        result.newPassword_ = newPassword_;
-        result.confirmNewPassword_ = confirmNewPassword_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.PasswordResetInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.registeredEmail_ = registeredEmail_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.newPassword_ = newPassword_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.confirmNewPassword_ = confirmNewPassword_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.PasswordResetInput) {
@@ -9679,18 +9425,22 @@ public final class User {
         if (other == com.passkit.grpc.User.PasswordResetInput.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getRegisteredEmail().isEmpty()) {
           registeredEmail_ = other.registeredEmail_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getNewPassword().isEmpty()) {
           newPassword_ = other.newPassword_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getConfirmNewPassword().isEmpty()) {
           confirmNewPassword_ = other.confirmNewPassword_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9721,22 +9471,22 @@ public final class User {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 registeredEmail_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 newPassword_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 confirmNewPassword_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -9754,6 +9504,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -9796,11 +9547,9 @@ public final class User {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9809,8 +9558,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9821,12 +9570,10 @@ public final class User {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9872,11 +9619,9 @@ public final class User {
        */
       public Builder setRegisteredEmail(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         registeredEmail_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9885,8 +9630,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearRegisteredEmail() {
-        
         registeredEmail_ = getDefaultInstance().getRegisteredEmail();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9897,12 +9642,10 @@ public final class User {
        */
       public Builder setRegisteredEmailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         registeredEmail_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9948,11 +9691,9 @@ public final class User {
        */
       public Builder setNewPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         newPassword_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9961,8 +9702,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearNewPassword() {
-        
         newPassword_ = getDefaultInstance().getNewPassword();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -9973,12 +9714,10 @@ public final class User {
        */
       public Builder setNewPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         newPassword_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10024,11 +9763,9 @@ public final class User {
        */
       public Builder setConfirmNewPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         confirmNewPassword_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10037,8 +9774,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearConfirmNewPassword() {
-        
         confirmNewPassword_ = getDefaultInstance().getConfirmNewPassword();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -10049,12 +9786,10 @@ public final class User {
        */
       public Builder setConfirmNewPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         confirmNewPassword_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10161,11 +9896,6 @@ public final class User {
       return new Username();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_Username_descriptor;
@@ -10180,7 +9910,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 1;</code>
      * @return The username.
@@ -10404,8 +10135,8 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         username_ = "";
-
         return this;
       }
 
@@ -10432,43 +10163,18 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.Username buildPartial() {
         com.passkit.grpc.User.Username result = new com.passkit.grpc.User.Username(this);
-        result.username_ = username_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.Username result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.username_ = username_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.Username) {
@@ -10483,6 +10189,7 @@ public final class User {
         if (other == com.passkit.grpc.User.Username.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -10513,7 +10220,7 @@ public final class User {
                 break;
               case 10: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -10531,6 +10238,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object username_ = "";
       /**
@@ -10573,11 +10281,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10586,8 +10292,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10598,12 +10304,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10763,11 +10467,6 @@ public final class User {
       return new OAuth2AuthorizationRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_OAuth2AuthorizationRequest_descriptor;
@@ -10782,7 +10481,8 @@ public final class User {
     }
 
     public static final int CLIENTCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object clientCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object clientCode_ = "";
     /**
      * <pre>
      * The code passed back from the application that we wish to gain access to.
@@ -10828,7 +10528,7 @@ public final class User {
     }
 
     public static final int PROVIDER_FIELD_NUMBER = 2;
-    private int provider_;
+    private int provider_ = 0;
     /**
      * <pre>
      * The provider of the access token, determines which environment variables are used.
@@ -10849,13 +10549,13 @@ public final class User {
      * @return The provider.
      */
     @java.lang.Override public com.passkit.grpc.User.OAuth2Provider getProvider() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.User.OAuth2Provider result = com.passkit.grpc.User.OAuth2Provider.valueOf(provider_);
+      com.passkit.grpc.User.OAuth2Provider result = com.passkit.grpc.User.OAuth2Provider.forNumber(provider_);
       return result == null ? com.passkit.grpc.User.OAuth2Provider.UNRECOGNIZED : result;
     }
 
     public static final int REDIRECTURI_FIELD_NUMBER = 3;
-    private volatile java.lang.Object redirectUri_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redirectUri_ = "";
     /**
      * <pre>
      * The redirect Uri that was provided when the authorization code was generated.
@@ -11111,12 +10811,10 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         clientCode_ = "";
-
         provider_ = 0;
-
         redirectUri_ = "";
-
         return this;
       }
 
@@ -11143,45 +10841,24 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.OAuth2AuthorizationRequest buildPartial() {
         com.passkit.grpc.User.OAuth2AuthorizationRequest result = new com.passkit.grpc.User.OAuth2AuthorizationRequest(this);
-        result.clientCode_ = clientCode_;
-        result.provider_ = provider_;
-        result.redirectUri_ = redirectUri_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.OAuth2AuthorizationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.clientCode_ = clientCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.provider_ = provider_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.redirectUri_ = redirectUri_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.OAuth2AuthorizationRequest) {
@@ -11196,6 +10873,7 @@ public final class User {
         if (other == com.passkit.grpc.User.OAuth2AuthorizationRequest.getDefaultInstance()) return this;
         if (!other.getClientCode().isEmpty()) {
           clientCode_ = other.clientCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.provider_ != 0) {
@@ -11203,6 +10881,7 @@ public final class User {
         }
         if (!other.getRedirectUri().isEmpty()) {
           redirectUri_ = other.redirectUri_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -11233,17 +10912,17 @@ public final class User {
                 break;
               case 10: {
                 clientCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 provider_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 redirectUri_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -11261,6 +10940,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object clientCode_ = "";
       /**
@@ -11315,11 +10995,9 @@ public final class User {
        */
       public Builder setClientCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         clientCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11332,8 +11010,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearClientCode() {
-        
         clientCode_ = getDefaultInstance().getClientCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -11348,12 +11026,10 @@ public final class User {
        */
       public Builder setClientCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         clientCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11380,8 +11056,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setProviderValue(int value) {
-        
         provider_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -11395,8 +11071,7 @@ public final class User {
        */
       @java.lang.Override
       public com.passkit.grpc.User.OAuth2Provider getProvider() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.User.OAuth2Provider result = com.passkit.grpc.User.OAuth2Provider.valueOf(provider_);
+        com.passkit.grpc.User.OAuth2Provider result = com.passkit.grpc.User.OAuth2Provider.forNumber(provider_);
         return result == null ? com.passkit.grpc.User.OAuth2Provider.UNRECOGNIZED : result;
       }
       /**
@@ -11412,7 +11087,7 @@ public final class User {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         provider_ = value.getNumber();
         onChanged();
         return this;
@@ -11426,7 +11101,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearProvider() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         provider_ = 0;
         onChanged();
         return this;
@@ -11485,11 +11160,9 @@ public final class User {
        */
       public Builder setRedirectUri(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redirectUri_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11502,8 +11175,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearRedirectUri() {
-        
         redirectUri_ = getDefaultInstance().getRedirectUri();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -11518,12 +11191,10 @@ public final class User {
        */
       public Builder setRedirectUriBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redirectUri_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11741,11 +11412,6 @@ public final class User {
       return new ScannerConfiguration();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_ScannerConfiguration_descriptor;
@@ -11760,14 +11426,14 @@ public final class User {
     }
 
     public static final int MEMBERSHIPPERMISSIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> membershipPermissions_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.User.ScannerMembershipPermissions> membershipPermissions_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.User.ScannerMembershipPermissions>() {
               public com.passkit.grpc.User.ScannerMembershipPermissions convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.User.ScannerMembershipPermissions result = com.passkit.grpc.User.ScannerMembershipPermissions.valueOf(from);
+                com.passkit.grpc.User.ScannerMembershipPermissions result = com.passkit.grpc.User.ScannerMembershipPermissions.forNumber(from);
                 return result == null ? com.passkit.grpc.User.ScannerMembershipPermissions.UNRECOGNIZED : result;
               }
             };
@@ -11818,14 +11484,14 @@ public final class User {
     private int membershipPermissionsMemoizedSerializedSize;
 
     public static final int COUPONPERMISSIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> couponPermissions_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.User.ScannerCouponPermissions> couponPermissions_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.User.ScannerCouponPermissions>() {
               public com.passkit.grpc.User.ScannerCouponPermissions convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.User.ScannerCouponPermissions result = com.passkit.grpc.User.ScannerCouponPermissions.valueOf(from);
+                com.passkit.grpc.User.ScannerCouponPermissions result = com.passkit.grpc.User.ScannerCouponPermissions.forNumber(from);
                 return result == null ? com.passkit.grpc.User.ScannerCouponPermissions.UNRECOGNIZED : result;
               }
             };
@@ -11876,14 +11542,14 @@ public final class User {
     private int couponPermissionsMemoizedSerializedSize;
 
     public static final int DEFAULTMEMBERSHIPACTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> defaultMembershipAction_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.User.DefaultMembershipScanAction> defaultMembershipAction_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.User.DefaultMembershipScanAction>() {
               public com.passkit.grpc.User.DefaultMembershipScanAction convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.User.DefaultMembershipScanAction result = com.passkit.grpc.User.DefaultMembershipScanAction.valueOf(from);
+                com.passkit.grpc.User.DefaultMembershipScanAction result = com.passkit.grpc.User.DefaultMembershipScanAction.forNumber(from);
                 return result == null ? com.passkit.grpc.User.DefaultMembershipScanAction.UNRECOGNIZED : result;
               }
             };
@@ -11934,14 +11600,14 @@ public final class User {
     private int defaultMembershipActionMemoizedSerializedSize;
 
     public static final int DEFAULTCOUPONACTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> defaultCouponAction_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.User.DefaultCouponScanAction> defaultCouponAction_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.User.DefaultCouponScanAction>() {
               public com.passkit.grpc.User.DefaultCouponScanAction convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.User.DefaultCouponScanAction result = com.passkit.grpc.User.DefaultCouponScanAction.valueOf(from);
+                com.passkit.grpc.User.DefaultCouponScanAction result = com.passkit.grpc.User.DefaultCouponScanAction.forNumber(from);
                 return result == null ? com.passkit.grpc.User.DefaultCouponScanAction.UNRECOGNIZED : result;
               }
             };
@@ -12269,6 +11935,7 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         membershipPermissions_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         couponPermissions_ = java.util.Collections.emptyList();
@@ -12303,7 +11970,13 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.ScannerConfiguration buildPartial() {
         com.passkit.grpc.User.ScannerConfiguration result = new com.passkit.grpc.User.ScannerConfiguration(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.User.ScannerConfiguration result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           membershipPermissions_ = java.util.Collections.unmodifiableList(membershipPermissions_);
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -12324,42 +11997,12 @@ public final class User {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.defaultCouponAction_ = defaultCouponAction_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.ScannerConfiguration result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.ScannerConfiguration) {
@@ -13185,11 +12828,6 @@ public final class User {
       return new Email();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_Email_descriptor;
@@ -13204,7 +12842,8 @@ public final class User {
     }
 
     public static final int EMAIL_FIELD_NUMBER = 1;
-    private volatile java.lang.Object email_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object email_ = "";
     /**
      * <code>string email = 1;</code>
      * @return The email.
@@ -13428,8 +13067,8 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         email_ = "";
-
         return this;
       }
 
@@ -13456,43 +13095,18 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.Email buildPartial() {
         com.passkit.grpc.User.Email result = new com.passkit.grpc.User.Email(this);
-        result.email_ = email_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.Email result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.email_ = email_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.Email) {
@@ -13507,6 +13121,7 @@ public final class User {
         if (other == com.passkit.grpc.User.Email.getDefaultInstance()) return this;
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -13537,7 +13152,7 @@ public final class User {
                 break;
               case 10: {
                 email_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -13555,6 +13170,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object email_ = "";
       /**
@@ -13597,11 +13213,9 @@ public final class User {
        */
       public Builder setEmail(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         email_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -13610,8 +13224,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearEmail() {
-        
         email_ = getDefaultInstance().getEmail();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -13622,12 +13236,10 @@ public final class User {
        */
       public Builder setEmailBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         email_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -13760,11 +13372,6 @@ public final class User {
       return new ConfirmEmailChangeInput();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_ConfirmEmailChangeInput_descriptor;
@@ -13779,7 +13386,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <code>string username = 1;</code>
      * @return The username.
@@ -13817,7 +13425,8 @@ public final class User {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object password_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object password_ = "";
     /**
      * <code>string password = 2;</code>
      * @return The password.
@@ -13855,7 +13464,8 @@ public final class User {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 3;
-    private volatile java.lang.Object token_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
     /**
      * <code>string token = 3;</code>
      * @return The token.
@@ -14099,12 +13709,10 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         username_ = "";
-
         password_ = "";
-
         token_ = "";
-
         return this;
       }
 
@@ -14131,45 +13739,24 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.ConfirmEmailChangeInput buildPartial() {
         com.passkit.grpc.User.ConfirmEmailChangeInput result = new com.passkit.grpc.User.ConfirmEmailChangeInput(this);
-        result.username_ = username_;
-        result.password_ = password_;
-        result.token_ = token_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.ConfirmEmailChangeInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.password_ = password_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.token_ = token_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.ConfirmEmailChangeInput) {
@@ -14184,14 +13771,17 @@ public final class User {
         if (other == com.passkit.grpc.User.ConfirmEmailChangeInput.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -14222,17 +13812,17 @@ public final class User {
                 break;
               case 10: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 password_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 token_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -14250,6 +13840,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object username_ = "";
       /**
@@ -14292,11 +13883,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14305,8 +13894,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -14317,12 +13906,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -14368,11 +13955,9 @@ public final class User {
        */
       public Builder setPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -14381,8 +13966,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
         password_ = getDefaultInstance().getPassword();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -14393,12 +13978,10 @@ public final class User {
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -14444,11 +14027,9 @@ public final class User {
        */
       public Builder setToken(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         token_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -14457,8 +14038,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearToken() {
-        
         token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -14469,12 +14050,10 @@ public final class User {
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         token_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -14581,11 +14160,6 @@ public final class User {
       return new CompanyName();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_CompanyName_descriptor;
@@ -14600,7 +14174,8 @@ public final class User {
     }
 
     public static final int COMPANYNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object companyName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object companyName_ = "";
     /**
      * <code>string companyName = 1;</code>
      * @return The companyName.
@@ -14824,8 +14399,8 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         companyName_ = "";
-
         return this;
       }
 
@@ -14852,43 +14427,18 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.CompanyName buildPartial() {
         com.passkit.grpc.User.CompanyName result = new com.passkit.grpc.User.CompanyName(this);
-        result.companyName_ = companyName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.CompanyName result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.companyName_ = companyName_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.CompanyName) {
@@ -14903,6 +14453,7 @@ public final class User {
         if (other == com.passkit.grpc.User.CompanyName.getDefaultInstance()) return this;
         if (!other.getCompanyName().isEmpty()) {
           companyName_ = other.companyName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -14933,7 +14484,7 @@ public final class User {
                 break;
               case 10: {
                 companyName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -14951,6 +14502,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object companyName_ = "";
       /**
@@ -14993,11 +14545,9 @@ public final class User {
        */
       public Builder setCompanyName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         companyName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15006,8 +14556,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearCompanyName() {
-        
         companyName_ = getDefaultInstance().getCompanyName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -15018,12 +14568,10 @@ public final class User {
        */
       public Builder setCompanyNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         companyName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15169,11 +14717,6 @@ public final class User {
       return new DeleteAccountRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.User.internal_static_io_DeleteAccountRequest_descriptor;
@@ -15188,7 +14731,8 @@ public final class User {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <pre>
      * Username of Email of a deleting account.
@@ -15234,7 +14778,8 @@ public final class User {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile java.lang.Object password_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object password_ = "";
     /**
      * <pre>
      * Password of a deleting account.
@@ -15280,7 +14825,7 @@ public final class User {
     }
 
     public static final int CONFIRMPERMANENTDELETE_FIELD_NUMBER = 3;
-    private boolean confirmPermanentDelete_;
+    private boolean confirmPermanentDelete_ = false;
     /**
      * <pre>
      * To confirm permanent deletion of your account. Delete action cannot be undone. Please use with caution.
@@ -15503,12 +15048,10 @@ public final class User {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         username_ = "";
-
         password_ = "";
-
         confirmPermanentDelete_ = false;
-
         return this;
       }
 
@@ -15535,45 +15078,24 @@ public final class User {
       @java.lang.Override
       public com.passkit.grpc.User.DeleteAccountRequest buildPartial() {
         com.passkit.grpc.User.DeleteAccountRequest result = new com.passkit.grpc.User.DeleteAccountRequest(this);
-        result.username_ = username_;
-        result.password_ = password_;
-        result.confirmPermanentDelete_ = confirmPermanentDelete_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.User.DeleteAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.password_ = password_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.confirmPermanentDelete_ = confirmPermanentDelete_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.User.DeleteAccountRequest) {
@@ -15588,10 +15110,12 @@ public final class User {
         if (other == com.passkit.grpc.User.DeleteAccountRequest.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getConfirmPermanentDelete() != false) {
@@ -15625,17 +15149,17 @@ public final class User {
                 break;
               case 10: {
                 username_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 password_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 confirmPermanentDelete_ = input.readBool();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -15653,6 +15177,7 @@ public final class User {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object username_ = "";
       /**
@@ -15707,11 +15232,9 @@ public final class User {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15724,8 +15247,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -15740,12 +15263,10 @@ public final class User {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15803,11 +15324,9 @@ public final class User {
        */
       public Builder setPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -15820,8 +15339,8 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
         password_ = getDefaultInstance().getPassword();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -15836,12 +15355,10 @@ public final class User {
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         password_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -15869,8 +15386,9 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder setConfirmPermanentDelete(boolean value) {
-        
+
         confirmPermanentDelete_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -15883,7 +15401,7 @@ public final class User {
        * @return This builder for chaining.
        */
       public Builder clearConfirmPermanentDelete() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         confirmPermanentDelete_ = false;
         onChanged();
         return this;

@@ -1037,11 +1037,6 @@ public final class Tracking {
       return new FacebookPixelSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_FacebookPixelSettings_descriptor;
@@ -1056,7 +1051,8 @@ public final class Tracking {
     }
 
     public static final int PIXELID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object pixelId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object pixelId_ = "";
     /**
      * <pre>
      * The Facebook Pixel ID of the account.
@@ -1102,6 +1098,7 @@ public final class Tracking {
     }
 
     public static final int DATACOLLECTIONPAGESTANDARDEVENTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.StandardEvent> dataCollectionPageStandardEvents_;
     /**
      * <pre>
@@ -1162,6 +1159,7 @@ public final class Tracking {
     }
 
     public static final int DATACOLLECTIONPAGECUSTOMEVENTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.CustomEvent> dataCollectionPageCustomEvents_;
     /**
      * <pre>
@@ -1222,6 +1220,7 @@ public final class Tracking {
     }
 
     public static final int PASSPAGESTANDARDEVENTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.StandardEvent> passPageStandardEvents_;
     /**
      * <pre>
@@ -1282,6 +1281,7 @@ public final class Tracking {
     }
 
     public static final int PASSPAGECUSTOMEVENTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.CustomEvent> passPageCustomEvents_;
     /**
      * <pre>
@@ -1342,6 +1342,7 @@ public final class Tracking {
     }
 
     public static final int CUSTOMERINITIATEDREDEMPTIONPAGESTANDARDEVENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.StandardEvent> customerInitiatedRedemptionPageStandardEvents_;
     /**
      * <pre>
@@ -1402,6 +1403,7 @@ public final class Tracking {
     }
 
     public static final int CUSTOMERINITIATEDREDEMPTIONPAGECUSTOMEVENTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Tracking.CustomEvent> customerInitiatedRedemptionPageCustomEvents_;
     /**
      * <pre>
@@ -1726,50 +1728,50 @@ public final class Tracking {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         pixelId_ = "";
-
         if (dataCollectionPageStandardEventsBuilder_ == null) {
           dataCollectionPageStandardEvents_ = java.util.Collections.emptyList();
         } else {
           dataCollectionPageStandardEvents_ = null;
           dataCollectionPageStandardEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (dataCollectionPageCustomEventsBuilder_ == null) {
           dataCollectionPageCustomEvents_ = java.util.Collections.emptyList();
         } else {
           dataCollectionPageCustomEvents_ = null;
           dataCollectionPageCustomEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (passPageStandardEventsBuilder_ == null) {
           passPageStandardEvents_ = java.util.Collections.emptyList();
         } else {
           passPageStandardEvents_ = null;
           passPageStandardEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (passPageCustomEventsBuilder_ == null) {
           passPageCustomEvents_ = java.util.Collections.emptyList();
         } else {
           passPageCustomEvents_ = null;
           passPageCustomEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (customerInitiatedRedemptionPageStandardEventsBuilder_ == null) {
           customerInitiatedRedemptionPageStandardEvents_ = java.util.Collections.emptyList();
         } else {
           customerInitiatedRedemptionPageStandardEvents_ = null;
           customerInitiatedRedemptionPageStandardEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (customerInitiatedRedemptionPageCustomEventsBuilder_ == null) {
           customerInitiatedRedemptionPageCustomEvents_ = java.util.Collections.emptyList();
         } else {
           customerInitiatedRedemptionPageCustomEvents_ = null;
           customerInitiatedRedemptionPageCustomEventsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1796,98 +1798,76 @@ public final class Tracking {
       @java.lang.Override
       public com.passkit.grpc.Tracking.FacebookPixelSettings buildPartial() {
         com.passkit.grpc.Tracking.FacebookPixelSettings result = new com.passkit.grpc.Tracking.FacebookPixelSettings(this);
-        int from_bitField0_ = bitField0_;
-        result.pixelId_ = pixelId_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Tracking.FacebookPixelSettings result) {
         if (dataCollectionPageStandardEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             dataCollectionPageStandardEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageStandardEvents_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.dataCollectionPageStandardEvents_ = dataCollectionPageStandardEvents_;
         } else {
           result.dataCollectionPageStandardEvents_ = dataCollectionPageStandardEventsBuilder_.build();
         }
         if (dataCollectionPageCustomEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             dataCollectionPageCustomEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageCustomEvents_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.dataCollectionPageCustomEvents_ = dataCollectionPageCustomEvents_;
         } else {
           result.dataCollectionPageCustomEvents_ = dataCollectionPageCustomEventsBuilder_.build();
         }
         if (passPageStandardEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             passPageStandardEvents_ = java.util.Collections.unmodifiableList(passPageStandardEvents_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.passPageStandardEvents_ = passPageStandardEvents_;
         } else {
           result.passPageStandardEvents_ = passPageStandardEventsBuilder_.build();
         }
         if (passPageCustomEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             passPageCustomEvents_ = java.util.Collections.unmodifiableList(passPageCustomEvents_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.passPageCustomEvents_ = passPageCustomEvents_;
         } else {
           result.passPageCustomEvents_ = passPageCustomEventsBuilder_.build();
         }
         if (customerInitiatedRedemptionPageStandardEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             customerInitiatedRedemptionPageStandardEvents_ = java.util.Collections.unmodifiableList(customerInitiatedRedemptionPageStandardEvents_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.customerInitiatedRedemptionPageStandardEvents_ = customerInitiatedRedemptionPageStandardEvents_;
         } else {
           result.customerInitiatedRedemptionPageStandardEvents_ = customerInitiatedRedemptionPageStandardEventsBuilder_.build();
         }
         if (customerInitiatedRedemptionPageCustomEventsBuilder_ == null) {
-          if (((bitField0_ & 0x00000020) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             customerInitiatedRedemptionPageCustomEvents_ = java.util.Collections.unmodifiableList(customerInitiatedRedemptionPageCustomEvents_);
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.customerInitiatedRedemptionPageCustomEvents_ = customerInitiatedRedemptionPageCustomEvents_;
         } else {
           result.customerInitiatedRedemptionPageCustomEvents_ = customerInitiatedRedemptionPageCustomEventsBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Tracking.FacebookPixelSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pixelId_ = pixelId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Tracking.FacebookPixelSettings) {
@@ -1902,13 +1882,14 @@ public final class Tracking {
         if (other == com.passkit.grpc.Tracking.FacebookPixelSettings.getDefaultInstance()) return this;
         if (!other.getPixelId().isEmpty()) {
           pixelId_ = other.pixelId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (dataCollectionPageStandardEventsBuilder_ == null) {
           if (!other.dataCollectionPageStandardEvents_.isEmpty()) {
             if (dataCollectionPageStandardEvents_.isEmpty()) {
               dataCollectionPageStandardEvents_ = other.dataCollectionPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDataCollectionPageStandardEventsIsMutable();
               dataCollectionPageStandardEvents_.addAll(other.dataCollectionPageStandardEvents_);
@@ -1921,7 +1902,7 @@ public final class Tracking {
               dataCollectionPageStandardEventsBuilder_.dispose();
               dataCollectionPageStandardEventsBuilder_ = null;
               dataCollectionPageStandardEvents_ = other.dataCollectionPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               dataCollectionPageStandardEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDataCollectionPageStandardEventsFieldBuilder() : null;
@@ -1934,7 +1915,7 @@ public final class Tracking {
           if (!other.dataCollectionPageCustomEvents_.isEmpty()) {
             if (dataCollectionPageCustomEvents_.isEmpty()) {
               dataCollectionPageCustomEvents_ = other.dataCollectionPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureDataCollectionPageCustomEventsIsMutable();
               dataCollectionPageCustomEvents_.addAll(other.dataCollectionPageCustomEvents_);
@@ -1947,7 +1928,7 @@ public final class Tracking {
               dataCollectionPageCustomEventsBuilder_.dispose();
               dataCollectionPageCustomEventsBuilder_ = null;
               dataCollectionPageCustomEvents_ = other.dataCollectionPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               dataCollectionPageCustomEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDataCollectionPageCustomEventsFieldBuilder() : null;
@@ -1960,7 +1941,7 @@ public final class Tracking {
           if (!other.passPageStandardEvents_.isEmpty()) {
             if (passPageStandardEvents_.isEmpty()) {
               passPageStandardEvents_ = other.passPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensurePassPageStandardEventsIsMutable();
               passPageStandardEvents_.addAll(other.passPageStandardEvents_);
@@ -1973,7 +1954,7 @@ public final class Tracking {
               passPageStandardEventsBuilder_.dispose();
               passPageStandardEventsBuilder_ = null;
               passPageStandardEvents_ = other.passPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               passPageStandardEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPassPageStandardEventsFieldBuilder() : null;
@@ -1986,7 +1967,7 @@ public final class Tracking {
           if (!other.passPageCustomEvents_.isEmpty()) {
             if (passPageCustomEvents_.isEmpty()) {
               passPageCustomEvents_ = other.passPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensurePassPageCustomEventsIsMutable();
               passPageCustomEvents_.addAll(other.passPageCustomEvents_);
@@ -1999,7 +1980,7 @@ public final class Tracking {
               passPageCustomEventsBuilder_.dispose();
               passPageCustomEventsBuilder_ = null;
               passPageCustomEvents_ = other.passPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000010);
               passPageCustomEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getPassPageCustomEventsFieldBuilder() : null;
@@ -2012,7 +1993,7 @@ public final class Tracking {
           if (!other.customerInitiatedRedemptionPageStandardEvents_.isEmpty()) {
             if (customerInitiatedRedemptionPageStandardEvents_.isEmpty()) {
               customerInitiatedRedemptionPageStandardEvents_ = other.customerInitiatedRedemptionPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureCustomerInitiatedRedemptionPageStandardEventsIsMutable();
               customerInitiatedRedemptionPageStandardEvents_.addAll(other.customerInitiatedRedemptionPageStandardEvents_);
@@ -2025,7 +2006,7 @@ public final class Tracking {
               customerInitiatedRedemptionPageStandardEventsBuilder_.dispose();
               customerInitiatedRedemptionPageStandardEventsBuilder_ = null;
               customerInitiatedRedemptionPageStandardEvents_ = other.customerInitiatedRedemptionPageStandardEvents_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000020);
               customerInitiatedRedemptionPageStandardEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCustomerInitiatedRedemptionPageStandardEventsFieldBuilder() : null;
@@ -2038,7 +2019,7 @@ public final class Tracking {
           if (!other.customerInitiatedRedemptionPageCustomEvents_.isEmpty()) {
             if (customerInitiatedRedemptionPageCustomEvents_.isEmpty()) {
               customerInitiatedRedemptionPageCustomEvents_ = other.customerInitiatedRedemptionPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureCustomerInitiatedRedemptionPageCustomEventsIsMutable();
               customerInitiatedRedemptionPageCustomEvents_.addAll(other.customerInitiatedRedemptionPageCustomEvents_);
@@ -2051,7 +2032,7 @@ public final class Tracking {
               customerInitiatedRedemptionPageCustomEventsBuilder_.dispose();
               customerInitiatedRedemptionPageCustomEventsBuilder_ = null;
               customerInitiatedRedemptionPageCustomEvents_ = other.customerInitiatedRedemptionPageCustomEvents_;
-              bitField0_ = (bitField0_ & ~0x00000020);
+              bitField0_ = (bitField0_ & ~0x00000040);
               customerInitiatedRedemptionPageCustomEventsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getCustomerInitiatedRedemptionPageCustomEventsFieldBuilder() : null;
@@ -2088,7 +2069,7 @@ public final class Tracking {
                 break;
               case 10: {
                 pixelId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -2239,11 +2220,9 @@ public final class Tracking {
        */
       public Builder setPixelId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         pixelId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2256,8 +2235,8 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearPixelId() {
-        
         pixelId_ = getDefaultInstance().getPixelId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2272,12 +2251,10 @@ public final class Tracking {
        */
       public Builder setPixelIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         pixelId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2285,9 +2262,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.StandardEvent> dataCollectionPageStandardEvents_ =
         java.util.Collections.emptyList();
       private void ensureDataCollectionPageStandardEventsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           dataCollectionPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>(dataCollectionPageStandardEvents_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2481,7 +2458,7 @@ public final class Tracking {
       public Builder clearDataCollectionPageStandardEvents() {
         if (dataCollectionPageStandardEventsBuilder_ == null) {
           dataCollectionPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           dataCollectionPageStandardEventsBuilder_.clear();
@@ -2586,7 +2563,7 @@ public final class Tracking {
           dataCollectionPageStandardEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.StandardEvent, com.passkit.grpc.Tracking.StandardEvent.Builder, com.passkit.grpc.Tracking.StandardEventOrBuilder>(
                   dataCollectionPageStandardEvents_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           dataCollectionPageStandardEvents_ = null;
@@ -2597,9 +2574,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.CustomEvent> dataCollectionPageCustomEvents_ =
         java.util.Collections.emptyList();
       private void ensureDataCollectionPageCustomEventsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           dataCollectionPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>(dataCollectionPageCustomEvents_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2793,7 +2770,7 @@ public final class Tracking {
       public Builder clearDataCollectionPageCustomEvents() {
         if (dataCollectionPageCustomEventsBuilder_ == null) {
           dataCollectionPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           dataCollectionPageCustomEventsBuilder_.clear();
@@ -2898,7 +2875,7 @@ public final class Tracking {
           dataCollectionPageCustomEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.CustomEvent, com.passkit.grpc.Tracking.CustomEvent.Builder, com.passkit.grpc.Tracking.CustomEventOrBuilder>(
                   dataCollectionPageCustomEvents_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           dataCollectionPageCustomEvents_ = null;
@@ -2909,9 +2886,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.StandardEvent> passPageStandardEvents_ =
         java.util.Collections.emptyList();
       private void ensurePassPageStandardEventsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           passPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>(passPageStandardEvents_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -3105,7 +3082,7 @@ public final class Tracking {
       public Builder clearPassPageStandardEvents() {
         if (passPageStandardEventsBuilder_ == null) {
           passPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           passPageStandardEventsBuilder_.clear();
@@ -3210,7 +3187,7 @@ public final class Tracking {
           passPageStandardEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.StandardEvent, com.passkit.grpc.Tracking.StandardEvent.Builder, com.passkit.grpc.Tracking.StandardEventOrBuilder>(
                   passPageStandardEvents_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           passPageStandardEvents_ = null;
@@ -3221,9 +3198,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.CustomEvent> passPageCustomEvents_ =
         java.util.Collections.emptyList();
       private void ensurePassPageCustomEventsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           passPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>(passPageCustomEvents_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -3417,7 +3394,7 @@ public final class Tracking {
       public Builder clearPassPageCustomEvents() {
         if (passPageCustomEventsBuilder_ == null) {
           passPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           passPageCustomEventsBuilder_.clear();
@@ -3522,7 +3499,7 @@ public final class Tracking {
           passPageCustomEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.CustomEvent, com.passkit.grpc.Tracking.CustomEvent.Builder, com.passkit.grpc.Tracking.CustomEventOrBuilder>(
                   passPageCustomEvents_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           passPageCustomEvents_ = null;
@@ -3533,9 +3510,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.StandardEvent> customerInitiatedRedemptionPageStandardEvents_ =
         java.util.Collections.emptyList();
       private void ensureCustomerInitiatedRedemptionPageStandardEventsIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           customerInitiatedRedemptionPageStandardEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.StandardEvent>(customerInitiatedRedemptionPageStandardEvents_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -3729,7 +3706,7 @@ public final class Tracking {
       public Builder clearCustomerInitiatedRedemptionPageStandardEvents() {
         if (customerInitiatedRedemptionPageStandardEventsBuilder_ == null) {
           customerInitiatedRedemptionPageStandardEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           customerInitiatedRedemptionPageStandardEventsBuilder_.clear();
@@ -3834,7 +3811,7 @@ public final class Tracking {
           customerInitiatedRedemptionPageStandardEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.StandardEvent, com.passkit.grpc.Tracking.StandardEvent.Builder, com.passkit.grpc.Tracking.StandardEventOrBuilder>(
                   customerInitiatedRedemptionPageStandardEvents_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           customerInitiatedRedemptionPageStandardEvents_ = null;
@@ -3845,9 +3822,9 @@ public final class Tracking {
       private java.util.List<com.passkit.grpc.Tracking.CustomEvent> customerInitiatedRedemptionPageCustomEvents_ =
         java.util.Collections.emptyList();
       private void ensureCustomerInitiatedRedemptionPageCustomEventsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           customerInitiatedRedemptionPageCustomEvents_ = new java.util.ArrayList<com.passkit.grpc.Tracking.CustomEvent>(customerInitiatedRedemptionPageCustomEvents_);
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -4041,7 +4018,7 @@ public final class Tracking {
       public Builder clearCustomerInitiatedRedemptionPageCustomEvents() {
         if (customerInitiatedRedemptionPageCustomEventsBuilder_ == null) {
           customerInitiatedRedemptionPageCustomEvents_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           customerInitiatedRedemptionPageCustomEventsBuilder_.clear();
@@ -4146,7 +4123,7 @@ public final class Tracking {
           customerInitiatedRedemptionPageCustomEventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Tracking.CustomEvent, com.passkit.grpc.Tracking.CustomEvent.Builder, com.passkit.grpc.Tracking.CustomEventOrBuilder>(
                   customerInitiatedRedemptionPageCustomEvents_,
-                  ((bitField0_ & 0x00000020) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           customerInitiatedRedemptionPageCustomEvents_ = null;
@@ -4284,11 +4261,6 @@ public final class Tracking {
       return new StandardEvent();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_StandardEvent_descriptor;
@@ -4303,7 +4275,7 @@ public final class Tracking {
     }
 
     public static final int EVENT_FIELD_NUMBER = 1;
-    private int event_;
+    private int event_ = 0;
     /**
      * <pre>
      * Standard event
@@ -4324,13 +4296,13 @@ public final class Tracking {
      * @return The event.
      */
     @java.lang.Override public com.passkit.grpc.Tracking.FbPixelStandardEvent getEvent() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Tracking.FbPixelStandardEvent result = com.passkit.grpc.Tracking.FbPixelStandardEvent.valueOf(event_);
+      com.passkit.grpc.Tracking.FbPixelStandardEvent result = com.passkit.grpc.Tracking.FbPixelStandardEvent.forNumber(event_);
       return result == null ? com.passkit.grpc.Tracking.FbPixelStandardEvent.UNRECOGNIZED : result;
     }
 
     public static final int PROPERTIES_FIELD_NUMBER = 3;
-    private volatile java.lang.Object properties_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object properties_ = "";
     /**
      * <pre>
      * Optional event properties
@@ -4572,10 +4544,9 @@ public final class Tracking {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         event_ = 0;
-
         properties_ = "";
-
         return this;
       }
 
@@ -4602,44 +4573,21 @@ public final class Tracking {
       @java.lang.Override
       public com.passkit.grpc.Tracking.StandardEvent buildPartial() {
         com.passkit.grpc.Tracking.StandardEvent result = new com.passkit.grpc.Tracking.StandardEvent(this);
-        result.event_ = event_;
-        result.properties_ = properties_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Tracking.StandardEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.event_ = event_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.properties_ = properties_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Tracking.StandardEvent) {
@@ -4657,6 +4605,7 @@ public final class Tracking {
         }
         if (!other.getProperties().isEmpty()) {
           properties_ = other.properties_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4687,12 +4636,12 @@ public final class Tracking {
                 break;
               case 8: {
                 event_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 26: {
                 properties_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               default: {
@@ -4710,6 +4659,7 @@ public final class Tracking {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int event_ = 0;
       /**
@@ -4733,8 +4683,8 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder setEventValue(int value) {
-        
         event_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4748,8 +4698,7 @@ public final class Tracking {
        */
       @java.lang.Override
       public com.passkit.grpc.Tracking.FbPixelStandardEvent getEvent() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Tracking.FbPixelStandardEvent result = com.passkit.grpc.Tracking.FbPixelStandardEvent.valueOf(event_);
+        com.passkit.grpc.Tracking.FbPixelStandardEvent result = com.passkit.grpc.Tracking.FbPixelStandardEvent.forNumber(event_);
         return result == null ? com.passkit.grpc.Tracking.FbPixelStandardEvent.UNRECOGNIZED : result;
       }
       /**
@@ -4765,7 +4714,7 @@ public final class Tracking {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         event_ = value.getNumber();
         onChanged();
         return this;
@@ -4779,7 +4728,7 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearEvent() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         event_ = 0;
         onChanged();
         return this;
@@ -4838,11 +4787,9 @@ public final class Tracking {
        */
       public Builder setProperties(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         properties_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4855,8 +4802,8 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearProperties() {
-        
         properties_ = getDefaultInstance().getProperties();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4871,12 +4818,10 @@ public final class Tracking {
        */
       public Builder setPropertiesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         properties_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5012,11 +4957,6 @@ public final class Tracking {
       return new CustomEvent();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_CustomEvent_descriptor;
@@ -5031,7 +4971,8 @@ public final class Tracking {
     }
 
     public static final int EVENT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object event_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object event_ = "";
     /**
      * <pre>
      * Custom event name
@@ -5077,7 +5018,8 @@ public final class Tracking {
     }
 
     public static final int PROPERTIES_FIELD_NUMBER = 3;
-    private volatile java.lang.Object properties_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object properties_ = "";
     /**
      * <pre>
      * Optional event properties
@@ -5319,10 +5261,9 @@ public final class Tracking {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         event_ = "";
-
         properties_ = "";
-
         return this;
       }
 
@@ -5349,44 +5290,21 @@ public final class Tracking {
       @java.lang.Override
       public com.passkit.grpc.Tracking.CustomEvent buildPartial() {
         com.passkit.grpc.Tracking.CustomEvent result = new com.passkit.grpc.Tracking.CustomEvent(this);
-        result.event_ = event_;
-        result.properties_ = properties_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Tracking.CustomEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.event_ = event_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.properties_ = properties_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Tracking.CustomEvent) {
@@ -5401,10 +5319,12 @@ public final class Tracking {
         if (other == com.passkit.grpc.Tracking.CustomEvent.getDefaultInstance()) return this;
         if (!other.getEvent().isEmpty()) {
           event_ = other.event_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getProperties().isEmpty()) {
           properties_ = other.properties_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5435,12 +5355,12 @@ public final class Tracking {
                 break;
               case 10: {
                 event_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 26: {
                 properties_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               default: {
@@ -5458,6 +5378,7 @@ public final class Tracking {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object event_ = "";
       /**
@@ -5512,11 +5433,9 @@ public final class Tracking {
        */
       public Builder setEvent(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         event_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5529,8 +5448,8 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearEvent() {
-        
         event_ = getDefaultInstance().getEvent();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5545,12 +5464,10 @@ public final class Tracking {
        */
       public Builder setEventBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         event_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5608,11 +5525,9 @@ public final class Tracking {
        */
       public Builder setProperties(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         properties_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5625,8 +5540,8 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearProperties() {
-        
         properties_ = getDefaultInstance().getProperties();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5641,12 +5556,10 @@ public final class Tracking {
        */
       public Builder setPropertiesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         properties_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5919,7 +5832,8 @@ public final class Tracking {
       super(builder);
     }
     private GoogleAnalyticsSettings() {
-      trackingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      trackingIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       dataCollectionPageEvents_ = java.util.Collections.emptyList();
       passRenderPageEvents_ = java.util.Collections.emptyList();
       customerInitiatedRedemption_ = java.util.Collections.emptyList();
@@ -5932,11 +5846,6 @@ public final class Tracking {
       return new GoogleAnalyticsSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_GoogleAnalyticsSettings_descriptor;
@@ -5951,7 +5860,9 @@ public final class Tracking {
     }
 
     public static final int TRACKINGIDS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList trackingIds_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList trackingIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * list of Google Analytics ID's to track ('UA-XXXXX-Y', 'UA-XXXXX-B', etc).
@@ -6002,14 +5913,14 @@ public final class Tracking {
     }
 
     public static final int DATACOLLECTIONPAGEEVENTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> dataCollectionPageEvents_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent> dataCollectionPageEvents_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent>() {
               public com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent.valueOf(from);
+                com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent.forNumber(from);
                 return result == null ? com.passkit.grpc.Tracking.GoogleAnalyticsDataCollectionPageEvent.UNRECOGNIZED : result;
               }
             };
@@ -6080,14 +5991,14 @@ public final class Tracking {
     private int dataCollectionPageEventsMemoizedSerializedSize;
 
     public static final int PASSRENDERPAGEEVENTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> passRenderPageEvents_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent> passRenderPageEvents_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent>() {
               public com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent.valueOf(from);
+                com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent.forNumber(from);
                 return result == null ? com.passkit.grpc.Tracking.GoogleAnalyticsPassRenderPageEvent.UNRECOGNIZED : result;
               }
             };
@@ -6158,14 +6069,14 @@ public final class Tracking {
     private int passRenderPageEventsMemoizedSerializedSize;
 
     public static final int CUSTOMERINITIATEDREDEMPTION_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> customerInitiatedRedemption_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent> customerInitiatedRedemption_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent>() {
               public com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent.valueOf(from);
+                com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent result = com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent.forNumber(from);
                 return result == null ? com.passkit.grpc.Tracking.GoogleAnalyticsCustomerInitiatedRedemptionPageEvent.UNRECOGNIZED : result;
               }
             };
@@ -6502,8 +6413,9 @@ public final class Tracking {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        trackingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = 0;
+        trackingIds_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         dataCollectionPageEvents_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         passRenderPageEvents_ = java.util.Collections.emptyList();
@@ -6536,12 +6448,13 @@ public final class Tracking {
       @java.lang.Override
       public com.passkit.grpc.Tracking.GoogleAnalyticsSettings buildPartial() {
         com.passkit.grpc.Tracking.GoogleAnalyticsSettings result = new com.passkit.grpc.Tracking.GoogleAnalyticsSettings(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          trackingIds_ = trackingIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.trackingIds_ = trackingIds_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Tracking.GoogleAnalyticsSettings result) {
         if (((bitField0_ & 0x00000002) != 0)) {
           dataCollectionPageEvents_ = java.util.Collections.unmodifiableList(dataCollectionPageEvents_);
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -6557,42 +6470,16 @@ public final class Tracking {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.customerInitiatedRedemption_ = customerInitiatedRedemption_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Tracking.GoogleAnalyticsSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          trackingIds_.makeImmutable();
+          result.trackingIds_ = trackingIds_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Tracking.GoogleAnalyticsSettings) {
@@ -6608,7 +6495,7 @@ public final class Tracking {
         if (!other.trackingIds_.isEmpty()) {
           if (trackingIds_.isEmpty()) {
             trackingIds_ = other.trackingIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureTrackingIdsIsMutable();
             trackingIds_.addAll(other.trackingIds_);
@@ -6745,12 +6632,13 @@ public final class Tracking {
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList trackingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList trackingIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureTrackingIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!trackingIds_.isModifiable()) {
           trackingIds_ = new com.google.protobuf.LazyStringArrayList(trackingIds_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -6762,7 +6650,8 @@ public final class Tracking {
        */
       public com.google.protobuf.ProtocolStringList
           getTrackingIdsList() {
-        return trackingIds_.getUnmodifiableView();
+        trackingIds_.makeImmutable();
+        return trackingIds_;
       }
       /**
        * <pre>
@@ -6812,11 +6701,10 @@ public final class Tracking {
        */
       public Builder setTrackingIds(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTrackingIdsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrackingIdsIsMutable();
         trackingIds_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6831,11 +6719,10 @@ public final class Tracking {
        */
       public Builder addTrackingIds(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTrackingIdsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrackingIdsIsMutable();
         trackingIds_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6853,6 +6740,7 @@ public final class Tracking {
         ensureTrackingIdsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, trackingIds_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6865,8 +6753,9 @@ public final class Tracking {
        * @return This builder for chaining.
        */
       public Builder clearTrackingIds() {
-        trackingIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        trackingIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -6881,12 +6770,11 @@ public final class Tracking {
        */
       public Builder addTrackingIdsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTrackingIdsIsMutable();
         trackingIds_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7598,11 +7486,6 @@ public final class Tracking {
       return new TrackingSettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Tracking.internal_static_io_TrackingSettings_descriptor;
@@ -7651,7 +7534,7 @@ public final class Tracking {
      */
     @java.lang.Override
     public com.passkit.grpc.Tracking.FacebookPixelSettingsOrBuilder getFacebookPixelSettingsOrBuilder() {
-      return getFacebookPixelSettings();
+      return facebookPixelSettings_ == null ? com.passkit.grpc.Tracking.FacebookPixelSettings.getDefaultInstance() : facebookPixelSettings_;
     }
 
     public static final int GOOGLEANALYTICSSETTINGS_FIELD_NUMBER = 2;
@@ -7689,7 +7572,7 @@ public final class Tracking {
      */
     @java.lang.Override
     public com.passkit.grpc.Tracking.GoogleAnalyticsSettingsOrBuilder getGoogleAnalyticsSettingsOrBuilder() {
-      return getGoogleAnalyticsSettings();
+      return googleAnalyticsSettings_ == null ? com.passkit.grpc.Tracking.GoogleAnalyticsSettings.getDefaultInstance() : googleAnalyticsSettings_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7901,16 +7784,15 @@ public final class Tracking {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (facebookPixelSettingsBuilder_ == null) {
-          facebookPixelSettings_ = null;
-        } else {
-          facebookPixelSettings_ = null;
+        bitField0_ = 0;
+        facebookPixelSettings_ = null;
+        if (facebookPixelSettingsBuilder_ != null) {
+          facebookPixelSettingsBuilder_.dispose();
           facebookPixelSettingsBuilder_ = null;
         }
-        if (googleAnalyticsSettingsBuilder_ == null) {
-          googleAnalyticsSettings_ = null;
-        } else {
-          googleAnalyticsSettings_ = null;
+        googleAnalyticsSettings_ = null;
+        if (googleAnalyticsSettingsBuilder_ != null) {
+          googleAnalyticsSettingsBuilder_.dispose();
           googleAnalyticsSettingsBuilder_ = null;
         }
         return this;
@@ -7939,52 +7821,25 @@ public final class Tracking {
       @java.lang.Override
       public com.passkit.grpc.Tracking.TrackingSettings buildPartial() {
         com.passkit.grpc.Tracking.TrackingSettings result = new com.passkit.grpc.Tracking.TrackingSettings(this);
-        if (facebookPixelSettingsBuilder_ == null) {
-          result.facebookPixelSettings_ = facebookPixelSettings_;
-        } else {
-          result.facebookPixelSettings_ = facebookPixelSettingsBuilder_.build();
-        }
-        if (googleAnalyticsSettingsBuilder_ == null) {
-          result.googleAnalyticsSettings_ = googleAnalyticsSettings_;
-        } else {
-          result.googleAnalyticsSettings_ = googleAnalyticsSettingsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Tracking.TrackingSettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.facebookPixelSettings_ = facebookPixelSettingsBuilder_ == null
+              ? facebookPixelSettings_
+              : facebookPixelSettingsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.googleAnalyticsSettings_ = googleAnalyticsSettingsBuilder_ == null
+              ? googleAnalyticsSettings_
+              : googleAnalyticsSettingsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Tracking.TrackingSettings) {
@@ -8033,14 +7888,14 @@ public final class Tracking {
                 input.readMessage(
                     getFacebookPixelSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getGoogleAnalyticsSettingsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -8058,6 +7913,7 @@ public final class Tracking {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.Tracking.FacebookPixelSettings facebookPixelSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8071,7 +7927,7 @@ public final class Tracking {
        * @return Whether the facebookPixelSettings field is set.
        */
       public boolean hasFacebookPixelSettings() {
-        return facebookPixelSettingsBuilder_ != null || facebookPixelSettings_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -8101,11 +7957,11 @@ public final class Tracking {
             throw new NullPointerException();
           }
           facebookPixelSettings_ = value;
-          onChanged();
         } else {
           facebookPixelSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8119,11 +7975,11 @@ public final class Tracking {
           com.passkit.grpc.Tracking.FacebookPixelSettings.Builder builderForValue) {
         if (facebookPixelSettingsBuilder_ == null) {
           facebookPixelSettings_ = builderForValue.build();
-          onChanged();
         } else {
           facebookPixelSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8135,17 +7991,18 @@ public final class Tracking {
        */
       public Builder mergeFacebookPixelSettings(com.passkit.grpc.Tracking.FacebookPixelSettings value) {
         if (facebookPixelSettingsBuilder_ == null) {
-          if (facebookPixelSettings_ != null) {
-            facebookPixelSettings_ =
-              com.passkit.grpc.Tracking.FacebookPixelSettings.newBuilder(facebookPixelSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            facebookPixelSettings_ != null &&
+            facebookPixelSettings_ != com.passkit.grpc.Tracking.FacebookPixelSettings.getDefaultInstance()) {
+            getFacebookPixelSettingsBuilder().mergeFrom(value);
           } else {
             facebookPixelSettings_ = value;
           }
-          onChanged();
         } else {
           facebookPixelSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8156,14 +8013,13 @@ public final class Tracking {
        * <code>.io.FacebookPixelSettings facebookPixelSettings = 1;</code>
        */
       public Builder clearFacebookPixelSettings() {
-        if (facebookPixelSettingsBuilder_ == null) {
-          facebookPixelSettings_ = null;
-          onChanged();
-        } else {
-          facebookPixelSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        facebookPixelSettings_ = null;
+        if (facebookPixelSettingsBuilder_ != null) {
+          facebookPixelSettingsBuilder_.dispose();
           facebookPixelSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8174,7 +8030,7 @@ public final class Tracking {
        * <code>.io.FacebookPixelSettings facebookPixelSettings = 1;</code>
        */
       public com.passkit.grpc.Tracking.FacebookPixelSettings.Builder getFacebookPixelSettingsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getFacebookPixelSettingsFieldBuilder().getBuilder();
       }
@@ -8226,7 +8082,7 @@ public final class Tracking {
        * @return Whether the googleAnalyticsSettings field is set.
        */
       public boolean hasGoogleAnalyticsSettings() {
-        return googleAnalyticsSettingsBuilder_ != null || googleAnalyticsSettings_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -8256,11 +8112,11 @@ public final class Tracking {
             throw new NullPointerException();
           }
           googleAnalyticsSettings_ = value;
-          onChanged();
         } else {
           googleAnalyticsSettingsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8274,11 +8130,11 @@ public final class Tracking {
           com.passkit.grpc.Tracking.GoogleAnalyticsSettings.Builder builderForValue) {
         if (googleAnalyticsSettingsBuilder_ == null) {
           googleAnalyticsSettings_ = builderForValue.build();
-          onChanged();
         } else {
           googleAnalyticsSettingsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8290,17 +8146,18 @@ public final class Tracking {
        */
       public Builder mergeGoogleAnalyticsSettings(com.passkit.grpc.Tracking.GoogleAnalyticsSettings value) {
         if (googleAnalyticsSettingsBuilder_ == null) {
-          if (googleAnalyticsSettings_ != null) {
-            googleAnalyticsSettings_ =
-              com.passkit.grpc.Tracking.GoogleAnalyticsSettings.newBuilder(googleAnalyticsSettings_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            googleAnalyticsSettings_ != null &&
+            googleAnalyticsSettings_ != com.passkit.grpc.Tracking.GoogleAnalyticsSettings.getDefaultInstance()) {
+            getGoogleAnalyticsSettingsBuilder().mergeFrom(value);
           } else {
             googleAnalyticsSettings_ = value;
           }
-          onChanged();
         } else {
           googleAnalyticsSettingsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8311,14 +8168,13 @@ public final class Tracking {
        * <code>.io.GoogleAnalyticsSettings googleAnalyticsSettings = 2;</code>
        */
       public Builder clearGoogleAnalyticsSettings() {
-        if (googleAnalyticsSettingsBuilder_ == null) {
-          googleAnalyticsSettings_ = null;
-          onChanged();
-        } else {
-          googleAnalyticsSettings_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        googleAnalyticsSettings_ = null;
+        if (googleAnalyticsSettingsBuilder_ != null) {
+          googleAnalyticsSettingsBuilder_.dispose();
           googleAnalyticsSettingsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8329,7 +8185,7 @@ public final class Tracking {
        * <code>.io.GoogleAnalyticsSettings googleAnalyticsSettings = 2;</code>
        */
       public com.passkit.grpc.Tracking.GoogleAnalyticsSettings.Builder getGoogleAnalyticsSettingsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getGoogleAnalyticsSettingsFieldBuilder().getBuilder();
       }

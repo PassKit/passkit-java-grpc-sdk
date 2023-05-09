@@ -449,7 +449,6 @@ public final class Personal {
      *
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
-
     /* nullable */
 java.lang.String getExternalIdsOrDefault(
         int key,
@@ -462,7 +461,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
-
     java.lang.String getExternalIdsOrThrow(
         int key);
   }
@@ -485,7 +483,8 @@ java.lang.String defaultValue);
     private Person() {
       surname_ = "";
       forename_ = "";
-      otherNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      otherNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       salutation_ = "";
       suffix_ = "";
       displayName_ = "";
@@ -502,11 +501,6 @@ java.lang.String defaultValue);
       return new Person();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Personal.internal_static_io_Person_descriptor;
@@ -533,7 +527,8 @@ java.lang.String defaultValue);
     }
 
     public static final int SURNAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object surname_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object surname_ = "";
     /**
      * <pre>
      * Surname / Family name.
@@ -579,7 +574,8 @@ java.lang.String defaultValue);
     }
 
     public static final int FORENAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object forename_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object forename_ = "";
     /**
      * <pre>
      * Forename / Given name.
@@ -625,7 +621,9 @@ java.lang.String defaultValue);
     }
 
     public static final int OTHERNAMES_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList otherNames_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList otherNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Other names.
@@ -676,7 +674,8 @@ java.lang.String defaultValue);
     }
 
     public static final int SALUTATION_FIELD_NUMBER = 4;
-    private volatile java.lang.Object salutation_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object salutation_ = "";
     /**
      * <pre>
      * Salutation or title.
@@ -722,7 +721,8 @@ java.lang.String defaultValue);
     }
 
     public static final int SUFFIX_FIELD_NUMBER = 5;
-    private volatile java.lang.Object suffix_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object suffix_ = "";
     /**
      * <pre>
      * Suffix. For multiple suffixes, separate with spaces.
@@ -768,7 +768,8 @@ java.lang.String defaultValue);
     }
 
     public static final int DISPLAYNAME_FIELD_NUMBER = 6;
-    private volatile java.lang.Object displayName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object displayName_ = "";
     /**
      * <pre>
      * If required, a string representing the user's preferred designation.
@@ -814,7 +815,7 @@ java.lang.String defaultValue);
     }
 
     public static final int GENDER_FIELD_NUMBER = 7;
-    private int gender_;
+    private int gender_ = 0;
     /**
      * <pre>
      * Gender, as per government issued id.
@@ -835,8 +836,7 @@ java.lang.String defaultValue);
      * @return The gender.
      */
     @java.lang.Override public com.passkit.grpc.Personal.Gender getGender() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.valueOf(gender_);
+      com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.forNumber(gender_);
       return result == null ? com.passkit.grpc.Personal.Gender.UNRECOGNIZED : result;
     }
 
@@ -875,11 +875,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getDateOfBirthOrBuilder() {
-      return getDateOfBirth();
+      return dateOfBirth_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : dateOfBirth_;
     }
 
     public static final int EMAILADDRESS_FIELD_NUMBER = 9;
-    private volatile java.lang.Object emailAddress_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object emailAddress_ = "";
     /**
      * <pre>
      * Email address.
@@ -925,7 +926,8 @@ java.lang.String defaultValue);
     }
 
     public static final int MOBILENUMBER_FIELD_NUMBER = 10;
-    private volatile java.lang.Object mobileNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object mobileNumber_ = "";
     /**
      * <pre>
      * Telephone number. Enter in the format +{countryCode}{telephoneNumber} with no commas, spaces or other delimiters.
@@ -971,7 +973,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 11;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * External id. Not editable.
@@ -1028,6 +1031,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, java.lang.String> externalIds_;
     private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
@@ -1038,7 +1042,6 @@ java.lang.String defaultValue);
       }
       return externalIds_;
     }
-
     public int getExternalIdsCount() {
       return internalGetExternalIds().getMap().size();
     }
@@ -1049,11 +1052,10 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
-
     @java.lang.Override
     public boolean containsExternalIds(
         int key) {
-      
+
       return internalGetExternalIds().getMap().containsKey(key);
     }
     /**
@@ -1072,7 +1074,6 @@ java.lang.String defaultValue);
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, java.lang.String> getExternalIdsMap() {
       return internalGetExternalIds().getMap();
     }
@@ -1084,11 +1085,12 @@ java.lang.String defaultValue);
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getExternalIdsOrDefault(
+    public /* nullable */
+java.lang.String getExternalIdsOrDefault(
         int key,
-        java.lang.String defaultValue) {
-      
+        /* nullable */
+java.lang.String defaultValue) {
+
       java.util.Map<java.lang.Integer, java.lang.String> map =
           internalGetExternalIds().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1101,10 +1103,9 @@ java.lang.String defaultValue);
      * <code>map&lt;int32, string&gt; externalIds = 12;</code>
      */
     @java.lang.Override
-
     public java.lang.String getExternalIdsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, java.lang.String> map =
           internalGetExternalIds().getMap();
       if (!map.containsKey(key)) {
@@ -1461,32 +1462,23 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         surname_ = "";
-
         forename_ = "";
-
-        otherNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        otherNames_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         salutation_ = "";
-
         suffix_ = "";
-
         displayName_ = "";
-
         gender_ = 0;
-
-        if (dateOfBirthBuilder_ == null) {
-          dateOfBirth_ = null;
-        } else {
-          dateOfBirth_ = null;
+        dateOfBirth_ = null;
+        if (dateOfBirthBuilder_ != null) {
+          dateOfBirthBuilder_.dispose();
           dateOfBirthBuilder_ = null;
         }
         emailAddress_ = "";
-
         mobileNumber_ = "";
-
         externalId_ = "";
-
         internalGetMutableExternalIds().clear();
         return this;
       }
@@ -1514,64 +1506,55 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Personal.Person buildPartial() {
         com.passkit.grpc.Personal.Person result = new com.passkit.grpc.Personal.Person(this);
-        int from_bitField0_ = bitField0_;
-        result.surname_ = surname_;
-        result.forename_ = forename_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          otherNames_ = otherNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.otherNames_ = otherNames_;
-        result.salutation_ = salutation_;
-        result.suffix_ = suffix_;
-        result.displayName_ = displayName_;
-        result.gender_ = gender_;
-        if (dateOfBirthBuilder_ == null) {
-          result.dateOfBirth_ = dateOfBirth_;
-        } else {
-          result.dateOfBirth_ = dateOfBirthBuilder_.build();
-        }
-        result.emailAddress_ = emailAddress_;
-        result.mobileNumber_ = mobileNumber_;
-        result.externalId_ = externalId_;
-        result.externalIds_ = internalGetExternalIds();
-        result.externalIds_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Personal.Person result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.surname_ = surname_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.forename_ = forename_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          otherNames_.makeImmutable();
+          result.otherNames_ = otherNames_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.salutation_ = salutation_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.suffix_ = suffix_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.displayName_ = displayName_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.gender_ = gender_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.dateOfBirth_ = dateOfBirthBuilder_ == null
+              ? dateOfBirth_
+              : dateOfBirthBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.emailAddress_ = emailAddress_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.mobileNumber_ = mobileNumber_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.externalId_ = externalId_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.externalIds_ = internalGetExternalIds();
+          result.externalIds_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Personal.Person) {
@@ -1586,16 +1569,18 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.Personal.Person.getDefaultInstance()) return this;
         if (!other.getSurname().isEmpty()) {
           surname_ = other.surname_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getForename().isEmpty()) {
           forename_ = other.forename_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.otherNames_.isEmpty()) {
           if (otherNames_.isEmpty()) {
             otherNames_ = other.otherNames_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000004;
           } else {
             ensureOtherNamesIsMutable();
             otherNames_.addAll(other.otherNames_);
@@ -1604,14 +1589,17 @@ java.lang.String defaultValue);
         }
         if (!other.getSalutation().isEmpty()) {
           salutation_ = other.salutation_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getSuffix().isEmpty()) {
           suffix_ = other.suffix_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getDisplayName().isEmpty()) {
           displayName_ = other.displayName_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.gender_ != 0) {
@@ -1622,18 +1610,22 @@ java.lang.String defaultValue);
         }
         if (!other.getEmailAddress().isEmpty()) {
           emailAddress_ = other.emailAddress_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (!other.getMobileNumber().isEmpty()) {
           mobileNumber_ = other.mobileNumber_;
+          bitField0_ |= 0x00000200;
           onChanged();
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000400;
           onChanged();
         }
         internalGetMutableExternalIds().mergeFrom(
             other.internalGetExternalIds());
+        bitField0_ |= 0x00000800;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1662,12 +1654,12 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 surname_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 forename_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -1678,44 +1670,44 @@ java.lang.String defaultValue);
               } // case 26
               case 34: {
                 salutation_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 suffix_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 displayName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 56: {
                 gender_ = input.readEnum();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 66: {
                 input.readMessage(
                     getDateOfBirthFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 emailAddress_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 mobileNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 externalId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
@@ -1724,6 +1716,7 @@ java.lang.String defaultValue);
                     ExternalIdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableExternalIds().getMutableMap().put(
                     externalIds__.getKey(), externalIds__.getValue());
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               default: {
@@ -1796,11 +1789,9 @@ java.lang.String defaultValue);
        */
       public Builder setSurname(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         surname_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1813,8 +1804,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSurname() {
-        
         surname_ = getDefaultInstance().getSurname();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1829,12 +1820,10 @@ java.lang.String defaultValue);
        */
       public Builder setSurnameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         surname_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1892,11 +1881,9 @@ java.lang.String defaultValue);
        */
       public Builder setForename(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         forename_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1909,8 +1896,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearForename() {
-        
         forename_ = getDefaultInstance().getForename();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1925,22 +1912,21 @@ java.lang.String defaultValue);
        */
       public Builder setForenameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         forename_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList otherNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList otherNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureOtherNamesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!otherNames_.isModifiable()) {
           otherNames_ = new com.google.protobuf.LazyStringArrayList(otherNames_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1952,7 +1938,8 @@ java.lang.String defaultValue);
        */
       public com.google.protobuf.ProtocolStringList
           getOtherNamesList() {
-        return otherNames_.getUnmodifiableView();
+        otherNames_.makeImmutable();
+        return otherNames_;
       }
       /**
        * <pre>
@@ -2002,11 +1989,10 @@ java.lang.String defaultValue);
        */
       public Builder setOtherNames(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOtherNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureOtherNamesIsMutable();
         otherNames_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2021,11 +2007,10 @@ java.lang.String defaultValue);
        */
       public Builder addOtherNames(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOtherNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureOtherNamesIsMutable();
         otherNames_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2043,6 +2028,7 @@ java.lang.String defaultValue);
         ensureOtherNamesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, otherNames_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2055,8 +2041,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOtherNames() {
-        otherNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        otherNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
@@ -2071,12 +2058,11 @@ java.lang.String defaultValue);
        */
       public Builder addOtherNamesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureOtherNamesIsMutable();
         otherNames_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2134,11 +2120,9 @@ java.lang.String defaultValue);
        */
       public Builder setSalutation(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         salutation_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2151,8 +2135,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSalutation() {
-        
         salutation_ = getDefaultInstance().getSalutation();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2167,12 +2151,10 @@ java.lang.String defaultValue);
        */
       public Builder setSalutationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         salutation_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2230,11 +2212,9 @@ java.lang.String defaultValue);
        */
       public Builder setSuffix(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         suffix_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2247,8 +2227,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSuffix() {
-        
         suffix_ = getDefaultInstance().getSuffix();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2263,12 +2243,10 @@ java.lang.String defaultValue);
        */
       public Builder setSuffixBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         suffix_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2326,11 +2304,9 @@ java.lang.String defaultValue);
        */
       public Builder setDisplayName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         displayName_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2343,8 +2319,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDisplayName() {
-        
         displayName_ = getDefaultInstance().getDisplayName();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2359,12 +2335,10 @@ java.lang.String defaultValue);
        */
       public Builder setDisplayNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         displayName_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2391,8 +2365,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setGenderValue(int value) {
-        
         gender_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2406,8 +2380,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.Personal.Gender getGender() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.valueOf(gender_);
+        com.passkit.grpc.Personal.Gender result = com.passkit.grpc.Personal.Gender.forNumber(gender_);
         return result == null ? com.passkit.grpc.Personal.Gender.UNRECOGNIZED : result;
       }
       /**
@@ -2423,7 +2396,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000040;
         gender_ = value.getNumber();
         onChanged();
         return this;
@@ -2437,7 +2410,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGender() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         gender_ = 0;
         onChanged();
         return this;
@@ -2455,7 +2428,7 @@ java.lang.String defaultValue);
        * @return Whether the dateOfBirth field is set.
        */
       public boolean hasDateOfBirth() {
-        return dateOfBirthBuilder_ != null || dateOfBirth_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -2485,11 +2458,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           dateOfBirth_ = value;
-          onChanged();
         } else {
           dateOfBirthBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2503,11 +2476,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (dateOfBirthBuilder_ == null) {
           dateOfBirth_ = builderForValue.build();
-          onChanged();
         } else {
           dateOfBirthBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2519,17 +2492,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeDateOfBirth(com.passkit.grpc.CommonObjects.Date value) {
         if (dateOfBirthBuilder_ == null) {
-          if (dateOfBirth_ != null) {
-            dateOfBirth_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(dateOfBirth_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            dateOfBirth_ != null &&
+            dateOfBirth_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getDateOfBirthBuilder().mergeFrom(value);
           } else {
             dateOfBirth_ = value;
           }
-          onChanged();
         } else {
           dateOfBirthBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2540,14 +2514,13 @@ java.lang.String defaultValue);
        * <code>.io.Date dateOfBirth = 8;</code>
        */
       public Builder clearDateOfBirth() {
-        if (dateOfBirthBuilder_ == null) {
-          dateOfBirth_ = null;
-          onChanged();
-        } else {
-          dateOfBirth_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        dateOfBirth_ = null;
+        if (dateOfBirthBuilder_ != null) {
+          dateOfBirthBuilder_.dispose();
           dateOfBirthBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2558,7 +2531,7 @@ java.lang.String defaultValue);
        * <code>.io.Date dateOfBirth = 8;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getDateOfBirthBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getDateOfBirthFieldBuilder().getBuilder();
       }
@@ -2651,11 +2624,9 @@ java.lang.String defaultValue);
        */
       public Builder setEmailAddress(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         emailAddress_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2668,8 +2639,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearEmailAddress() {
-        
         emailAddress_ = getDefaultInstance().getEmailAddress();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -2684,12 +2655,10 @@ java.lang.String defaultValue);
        */
       public Builder setEmailAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         emailAddress_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2747,11 +2716,9 @@ java.lang.String defaultValue);
        */
       public Builder setMobileNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         mobileNumber_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2764,8 +2731,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMobileNumber() {
-        
         mobileNumber_ = getDefaultInstance().getMobileNumber();
+        bitField0_ = (bitField0_ & ~0x00000200);
         onChanged();
         return this;
       }
@@ -2780,12 +2747,10 @@ java.lang.String defaultValue);
        */
       public Builder setMobileNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         mobileNumber_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -2843,11 +2808,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2860,8 +2823,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000400);
         onChanged();
         return this;
       }
@@ -2876,12 +2839,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -2889,7 +2850,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.Integer, java.lang.String> externalIds_;
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
-      internalGetExternalIds() {
+          internalGetExternalIds() {
         if (externalIds_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ExternalIdsDefaultEntryHolder.defaultEntry);
@@ -2897,8 +2858,7 @@ java.lang.String defaultValue);
         return externalIds_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, java.lang.String>
-      internalGetMutableExternalIds() {
-        onChanged();;
+          internalGetMutableExternalIds() {
         if (externalIds_ == null) {
           externalIds_ = com.google.protobuf.MapField.newMapField(
               ExternalIdsDefaultEntryHolder.defaultEntry);
@@ -2906,9 +2866,10 @@ java.lang.String defaultValue);
         if (!externalIds_.isMutable()) {
           externalIds_ = externalIds_.copy();
         }
+        bitField0_ |= 0x00000800;
+        onChanged();
         return externalIds_;
       }
-
       public int getExternalIdsCount() {
         return internalGetExternalIds().getMap().size();
       }
@@ -2919,11 +2880,10 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
-
       @java.lang.Override
       public boolean containsExternalIds(
           int key) {
-        
+
         return internalGetExternalIds().getMap().containsKey(key);
       }
       /**
@@ -2942,7 +2902,6 @@ java.lang.String defaultValue);
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, java.lang.String> getExternalIdsMap() {
         return internalGetExternalIds().getMap();
       }
@@ -2954,11 +2913,12 @@ java.lang.String defaultValue);
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getExternalIdsOrDefault(
+      public /* nullable */
+java.lang.String getExternalIdsOrDefault(
           int key,
-          java.lang.String defaultValue) {
-        
+          /* nullable */
+java.lang.String defaultValue) {
+
         java.util.Map<java.lang.Integer, java.lang.String> map =
             internalGetExternalIds().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -2971,10 +2931,9 @@ java.lang.String defaultValue);
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
       @java.lang.Override
-
       public java.lang.String getExternalIdsOrThrow(
           int key) {
-        
+
         java.util.Map<java.lang.Integer, java.lang.String> map =
             internalGetExternalIds().getMap();
         if (!map.containsKey(key)) {
@@ -2982,8 +2941,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearExternalIds() {
+        bitField0_ = (bitField0_ & ~0x00000800);
         internalGetMutableExternalIds().getMutableMap()
             .clear();
         return this;
@@ -2995,10 +2954,9 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
-
       public Builder removeExternalIds(
           int key) {
-        
+
         internalGetMutableExternalIds().getMutableMap()
             .remove(key);
         return this;
@@ -3008,7 +2966,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, java.lang.String>
-      getMutableExternalIds() {
+          getMutableExternalIds() {
+        bitField0_ |= 0x00000800;
         return internalGetMutableExternalIds().getMutableMap();
       }
       /**
@@ -3021,13 +2980,11 @@ java.lang.String defaultValue);
       public Builder putExternalIds(
           int key,
           java.lang.String value) {
-        
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
 
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableExternalIds().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -3037,11 +2994,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;int32, string&gt; externalIds = 12;</code>
        */
-
       public Builder putAllExternalIds(
           java.util.Map<java.lang.Integer, java.lang.String> values) {
         internalGetMutableExternalIds().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000800;
         return this;
       }
       @java.lang.Override
@@ -3225,11 +3182,6 @@ java.lang.String defaultValue);
       return new Address();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Personal.internal_static_io_Address_descriptor;
@@ -3244,7 +3196,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ADDRESSLINE1_FIELD_NUMBER = 1;
-    private volatile java.lang.Object addressLine1_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addressLine1_ = "";
     /**
      * <code>string addressLine1 = 1;</code>
      * @return The addressLine1.
@@ -3282,7 +3235,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ADDRESSLINE2_FIELD_NUMBER = 2;
-    private volatile java.lang.Object addressLine2_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addressLine2_ = "";
     /**
      * <code>string addressLine2 = 2;</code>
      * @return The addressLine2.
@@ -3320,7 +3274,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ADDRESSLINE3_FIELD_NUMBER = 3;
-    private volatile java.lang.Object addressLine3_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object addressLine3_ = "";
     /**
      * <code>string addressLine3 = 3;</code>
      * @return The addressLine3.
@@ -3358,7 +3313,8 @@ java.lang.String defaultValue);
     }
 
     public static final int CITY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object city_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object city_ = "";
     /**
      * <code>string city = 4;</code>
      * @return The city.
@@ -3396,7 +3352,8 @@ java.lang.String defaultValue);
     }
 
     public static final int STATE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object state_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object state_ = "";
     /**
      * <code>string state = 5;</code>
      * @return The state.
@@ -3434,7 +3391,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ZIPCODE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object zipCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object zipCode_ = "";
     /**
      * <code>string zipCode = 6;</code>
      * @return The zipCode.
@@ -3472,7 +3430,8 @@ java.lang.String defaultValue);
     }
 
     public static final int COUNTRYCODE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object countryCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object countryCode_ = "";
     /**
      * <code>string countryCode = 7;</code>
      * @return The countryCode.
@@ -3756,20 +3715,14 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         addressLine1_ = "";
-
         addressLine2_ = "";
-
         addressLine3_ = "";
-
         city_ = "";
-
         state_ = "";
-
         zipCode_ = "";
-
         countryCode_ = "";
-
         return this;
       }
 
@@ -3796,49 +3749,36 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Personal.Address buildPartial() {
         com.passkit.grpc.Personal.Address result = new com.passkit.grpc.Personal.Address(this);
-        result.addressLine1_ = addressLine1_;
-        result.addressLine2_ = addressLine2_;
-        result.addressLine3_ = addressLine3_;
-        result.city_ = city_;
-        result.state_ = state_;
-        result.zipCode_ = zipCode_;
-        result.countryCode_ = countryCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Personal.Address result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.addressLine1_ = addressLine1_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.addressLine2_ = addressLine2_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.addressLine3_ = addressLine3_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.city_ = city_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.state_ = state_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.zipCode_ = zipCode_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.countryCode_ = countryCode_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Personal.Address) {
@@ -3853,30 +3793,37 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.Personal.Address.getDefaultInstance()) return this;
         if (!other.getAddressLine1().isEmpty()) {
           addressLine1_ = other.addressLine1_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getAddressLine2().isEmpty()) {
           addressLine2_ = other.addressLine2_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getAddressLine3().isEmpty()) {
           addressLine3_ = other.addressLine3_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getCity().isEmpty()) {
           city_ = other.city_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getState().isEmpty()) {
           state_ = other.state_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getZipCode().isEmpty()) {
           zipCode_ = other.zipCode_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getCountryCode().isEmpty()) {
           countryCode_ = other.countryCode_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3907,37 +3854,37 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 addressLine1_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 addressLine2_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 addressLine3_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 city_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 state_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 zipCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 countryCode_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               default: {
@@ -3955,6 +3902,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object addressLine1_ = "";
       /**
@@ -3997,11 +3945,9 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine1(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         addressLine1_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4010,8 +3956,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAddressLine1() {
-        
         addressLine1_ = getDefaultInstance().getAddressLine1();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4022,12 +3968,10 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine1Bytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         addressLine1_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4073,11 +4017,9 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine2(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         addressLine2_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4086,8 +4028,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAddressLine2() {
-        
         addressLine2_ = getDefaultInstance().getAddressLine2();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4098,12 +4040,10 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine2Bytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         addressLine2_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4149,11 +4089,9 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine3(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         addressLine3_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4162,8 +4100,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAddressLine3() {
-        
         addressLine3_ = getDefaultInstance().getAddressLine3();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4174,12 +4112,10 @@ java.lang.String defaultValue);
        */
       public Builder setAddressLine3Bytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         addressLine3_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4225,11 +4161,9 @@ java.lang.String defaultValue);
        */
       public Builder setCity(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         city_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4238,8 +4172,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCity() {
-        
         city_ = getDefaultInstance().getCity();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4250,12 +4184,10 @@ java.lang.String defaultValue);
        */
       public Builder setCityBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         city_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4301,11 +4233,9 @@ java.lang.String defaultValue);
        */
       public Builder setState(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         state_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4314,8 +4244,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearState() {
-        
         state_ = getDefaultInstance().getState();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -4326,12 +4256,10 @@ java.lang.String defaultValue);
        */
       public Builder setStateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         state_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4377,11 +4305,9 @@ java.lang.String defaultValue);
        */
       public Builder setZipCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         zipCode_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4390,8 +4316,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearZipCode() {
-        
         zipCode_ = getDefaultInstance().getZipCode();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -4402,12 +4328,10 @@ java.lang.String defaultValue);
        */
       public Builder setZipCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         zipCode_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4453,11 +4377,9 @@ java.lang.String defaultValue);
        */
       public Builder setCountryCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         countryCode_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4466,8 +4388,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
-        
         countryCode_ = getDefaultInstance().getCountryCode();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -4478,12 +4400,10 @@ java.lang.String defaultValue);
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         countryCode_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4655,11 +4575,6 @@ java.lang.String defaultValue);
       return new PersonRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Personal.internal_static_io_PersonRequest_descriptor;
@@ -4674,7 +4589,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Pass Id (22 characters).
@@ -4720,7 +4636,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * External Id of the pass holder. Needs to provide Class Id as well.
@@ -4766,7 +4683,8 @@ java.lang.String defaultValue);
     }
 
     public static final int CLASSID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object classId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
     /**
      * <pre>
      * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
@@ -4834,7 +4752,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5060,16 +4978,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         externalId_ = "";
-
         classId_ = "";
-
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         return this;
@@ -5098,50 +5013,29 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Personal.PersonRequest buildPartial() {
         com.passkit.grpc.Personal.PersonRequest result = new com.passkit.grpc.Personal.PersonRequest(this);
-        result.id_ = id_;
-        result.externalId_ = externalId_;
-        result.classId_ = classId_;
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Personal.PersonRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.externalId_ = externalId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Personal.PersonRequest) {
@@ -5156,14 +5050,17 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.Personal.PersonRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getClassId().isEmpty()) {
           classId_ = other.classId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasPerson()) {
@@ -5197,24 +5094,24 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 externalId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 classId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getPersonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -5232,6 +5129,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -5286,11 +5184,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5303,8 +5199,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5319,12 +5215,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5382,11 +5276,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5399,8 +5291,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5415,12 +5307,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5478,11 +5368,9 @@ java.lang.String defaultValue);
        */
       public Builder setClassId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         classId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5495,8 +5383,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearClassId() {
-        
         classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -5511,12 +5399,10 @@ java.lang.String defaultValue);
        */
       public Builder setClassIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         classId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5529,7 +5415,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.io.Person person = 4;</code>
@@ -5551,11 +5437,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5565,11 +5451,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5577,38 +5463,38 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Person person = 4;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Person person = 4;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }

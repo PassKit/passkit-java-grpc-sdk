@@ -207,7 +207,7 @@ public final class TicketOuterClass {
      */
     com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberOrBuilder getTicketNumberOrBuilder();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.IdCase getIdCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.IdCase getIdCase();
   }
   /**
    * <pre>
@@ -236,11 +236,6 @@ public final class TicketOuterClass {
       return new TicketId();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketId_descriptor;
@@ -255,6 +250,7 @@ public final class TicketOuterClass {
     }
 
     private int idCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object id_;
     public enum IdCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -622,6 +618,7 @@ public final class TicketOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (ticketNumberBuilder_ != null) {
           ticketNumberBuilder_.clear();
         }
@@ -653,53 +650,25 @@ public final class TicketOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketId result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketId(this);
-        if (idCase_ == 1) {
-          result.id_ = id_;
-        }
-        if (idCase_ == 2) {
-          if (ticketNumberBuilder_ == null) {
-            result.id_ = id_;
-          } else {
-            result.id_ = ticketNumberBuilder_.build();
-          }
-        }
-        result.idCase_ = idCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId result) {
+        result.idCase_ = idCase_;
+        result.id_ = this.id_;
+        if (idCase_ == 2 &&
+            ticketNumberBuilder_ != null) {
+          result.id_ = ticketNumberBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) {
@@ -796,6 +765,7 @@ public final class TicketOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       /**
        * <pre>
@@ -873,10 +843,8 @@ public final class TicketOuterClass {
        */
       public Builder setTicketId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  idCase_ = 1;
+        if (value == null) { throw new NullPointerException(); }
+        idCase_ = 1;
         id_ = value;
         onChanged();
         return this;
@@ -908,10 +876,8 @@ public final class TicketOuterClass {
        */
       public Builder setTicketIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         idCase_ = 1;
         id_ = value;
         onChanged();
@@ -1092,7 +1058,7 @@ public final class TicketOuterClass {
           id_ = null;
         }
         idCase_ = 2;
-        onChanged();;
+        onChanged();
         return ticketNumberBuilder_;
       }
       @java.lang.Override
@@ -1227,11 +1193,6 @@ public final class TicketOuterClass {
       return new TicketNumber();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumber_descriptor;
@@ -1246,7 +1207,8 @@ public final class TicketOuterClass {
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * The Production id (22 character identifier), or the Production user defined id.
@@ -1292,7 +1254,8 @@ public final class TicketOuterClass {
     }
 
     public static final int TICKETNUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object ticketNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketNumber_ = "";
     /**
      * <pre>
      * The user defined ticket number (unique within production)
@@ -1534,10 +1497,9 @@ public final class TicketOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
         ticketNumber_ = "";
-
         return this;
       }
 
@@ -1564,44 +1526,21 @@ public final class TicketOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber(this);
-        result.productionId_ = productionId_;
-        result.ticketNumber_ = ticketNumber_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticketNumber_ = ticketNumber_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber) {
@@ -1616,10 +1555,12 @@ public final class TicketOuterClass {
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumber.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTicketNumber().isEmpty()) {
           ticketNumber_ = other.ticketNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1650,12 +1591,12 @@ public final class TicketOuterClass {
                 break;
               case 10: {
                 productionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 ticketNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -1673,6 +1614,7 @@ public final class TicketOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -1727,11 +1669,9 @@ public final class TicketOuterClass {
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1744,8 +1684,8 @@ public final class TicketOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1760,12 +1700,10 @@ public final class TicketOuterClass {
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1823,11 +1761,9 @@ public final class TicketOuterClass {
        */
       public Builder setTicketNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1840,8 +1776,8 @@ public final class TicketOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTicketNumber() {
-        
         ticketNumber_ = getDefaultInstance().getTicketNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1856,12 +1792,10 @@ public final class TicketOuterClass {
        */
       public Builder setTicketNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2207,7 +2141,6 @@ public final class TicketOuterClass {
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -2220,7 +2153,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
@@ -2502,11 +2434,6 @@ java.lang.String defaultValue);
       return new Ticket();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_Ticket_descriptor;
@@ -2533,7 +2460,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated ticket id (22 characters).
@@ -2579,7 +2507,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETNUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object ticketNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketNumber_ = "";
     /**
      * <pre>
      * Optional user generated ticket number. Unique within the Production.
@@ -2659,7 +2588,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.EventOuterClass.EventOrBuilder getEventOrBuilder() {
-      return getEvent();
+      return event_ == null ? com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance() : event_;
     }
 
     public static final int TICKETTYPE_FIELD_NUMBER = 4;
@@ -2697,11 +2626,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeOrBuilder getTicketTypeOrBuilder() {
-      return getTicketType();
+      return ticketType_ == null ? com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance() : ticketType_;
     }
 
     public static final int ORDERNUMBER_FIELD_NUMBER = 5;
-    private volatile java.lang.Object orderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderNumber_ = "";
     /**
      * <pre>
      * Optional order / confirmation / booking code. Unique within the Production.
@@ -2747,7 +2677,8 @@ java.lang.String defaultValue);
     }
 
     public static final int GROUPINGID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object groupingId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object groupingId_ = "";
     /**
      * <pre>
      * Optional PassKit generated grouping ID. The system automatically groups tickets based by order number. Grouped tickets can be downloaded together from our multi-pass download pages. Not writable.
@@ -2793,7 +2724,8 @@ java.lang.String defaultValue);
     }
 
     public static final int BARCODECONTENTS_FIELD_NUMBER = 7;
-    private volatile java.lang.Object barcodeContents_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodeContents_ = "";
     /**
      * <pre>
      * The contents to embed in the barcode for this ticket. If not provided, the default value from the Ticket Type Pass Template Design is used.
@@ -2873,7 +2805,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.SeatOrBuilder getSeatInfoOrBuilder() {
-      return getSeatInfo();
+      return seatInfo_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance() : seatInfo_;
     }
 
     public static final int FACEVALUE_FIELD_NUMBER = 9;
@@ -2911,7 +2843,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValueOrBuilder getFaceValueOrBuilder() {
-      return getFaceValue();
+      return faceValue_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance() : faceValue_;
     }
 
     public static final int PERSON_FIELD_NUMBER = 10;
@@ -2949,7 +2881,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     public static final int METADATA_FIELD_NUMBER = 11;
@@ -2964,6 +2896,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -2974,7 +2907,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -2985,7 +2917,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -3008,7 +2939,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -3020,10 +2950,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -3037,7 +2968,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -3050,7 +2980,7 @@ java.lang.String defaultValue);
     }
 
     public static final int OPTOUT_FIELD_NUMBER = 12;
-    private int optOut_;
+    private int optOut_ = 0;
     /**
      * <pre>
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
@@ -3071,13 +3001,12 @@ java.lang.String defaultValue);
      * @return The optOut.
      */
     @java.lang.Override public com.passkit.grpc.CommonObjects.Toggle getOptOut() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(optOut_);
+      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.forNumber(optOut_);
       return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
     }
 
     public static final int STATUS_FIELD_NUMBER = 13;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Holds the ticket status.
@@ -3098,8 +3027,7 @@ java.lang.String defaultValue);
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
     }
 
@@ -3138,7 +3066,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      return getExpiryDate();
+      return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
     }
 
     public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 15;
@@ -3176,10 +3104,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     public static final int VALIDATEDETAILS_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_;
     /**
      * <pre>
@@ -3274,7 +3203,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.PassOuterClass.PassOverridesOrBuilder getPassOverridesOrBuilder() {
-      return getPassOverrides();
+      return passOverrides_ == null ? com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance() : passOverrides_;
     }
 
     public static final int PASSMETADATA_FIELD_NUMBER = 18;
@@ -3312,7 +3241,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetadataOrBuilder getPassMetaDataOrBuilder() {
-      return getPassMetaData();
+      return passMetaData_ == null ? com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance() : passMetaData_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 19;
@@ -3350,7 +3279,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 20;
@@ -3388,7 +3317,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3875,61 +3804,48 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         ticketNumber_ = "";
-
-        if (eventBuilder_ == null) {
-          event_ = null;
-        } else {
-          event_ = null;
+        event_ = null;
+        if (eventBuilder_ != null) {
+          eventBuilder_.dispose();
           eventBuilder_ = null;
         }
-        if (ticketTypeBuilder_ == null) {
-          ticketType_ = null;
-        } else {
-          ticketType_ = null;
+        ticketType_ = null;
+        if (ticketTypeBuilder_ != null) {
+          ticketTypeBuilder_.dispose();
           ticketTypeBuilder_ = null;
         }
         orderNumber_ = "";
-
         groupingId_ = "";
-
         barcodeContents_ = "";
-
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-        } else {
-          seatInfo_ = null;
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-        } else {
-          faceValue_ = null;
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         internalGetMutableMetaData().clear();
         optOut_ = 0;
-
         status_ = 0;
-
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-        } else {
-          expiryDate_ = null;
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
         if (validateDetailsBuilder_ == null) {
@@ -3938,29 +3854,25 @@ java.lang.String defaultValue);
           validateDetails_ = null;
           validateDetailsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-        } else {
-          passMetaData_ = null;
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -3989,116 +3901,108 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket result = new com.passkit.grpc.EventTickets.TicketOuterClass.Ticket(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.ticketNumber_ = ticketNumber_;
-        if (eventBuilder_ == null) {
-          result.event_ = event_;
-        } else {
-          result.event_ = eventBuilder_.build();
-        }
-        if (ticketTypeBuilder_ == null) {
-          result.ticketType_ = ticketType_;
-        } else {
-          result.ticketType_ = ticketTypeBuilder_.build();
-        }
-        result.orderNumber_ = orderNumber_;
-        result.groupingId_ = groupingId_;
-        result.barcodeContents_ = barcodeContents_;
-        if (seatInfoBuilder_ == null) {
-          result.seatInfo_ = seatInfo_;
-        } else {
-          result.seatInfo_ = seatInfoBuilder_.build();
-        }
-        if (faceValueBuilder_ == null) {
-          result.faceValue_ = faceValue_;
-        } else {
-          result.faceValue_ = faceValueBuilder_.build();
-        }
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
-        result.optOut_ = optOut_;
-        result.status_ = status_;
-        if (expiryDateBuilder_ == null) {
-          result.expiryDate_ = expiryDate_;
-        } else {
-          result.expiryDate_ = expiryDateBuilder_.build();
-        }
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket result) {
         if (validateDetailsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             validateDetails_ = java.util.Collections.unmodifiableList(validateDetails_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.validateDetails_ = validateDetails_;
         } else {
           result.validateDetails_ = validateDetailsBuilder_.build();
         }
-        if (passOverridesBuilder_ == null) {
-          result.passOverrides_ = passOverrides_;
-        } else {
-          result.passOverrides_ = passOverridesBuilder_.build();
-        }
-        if (passMetaDataBuilder_ == null) {
-          result.passMetaData_ = passMetaData_;
-        } else {
-          result.passMetaData_ = passMetaDataBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticketNumber_ = ticketNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.event_ = eventBuilder_ == null
+              ? event_
+              : eventBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ticketType_ = ticketTypeBuilder_ == null
+              ? ticketType_
+              : ticketTypeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.orderNumber_ = orderNumber_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.groupingId_ = groupingId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.barcodeContents_ = barcodeContents_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.seatInfo_ = seatInfoBuilder_ == null
+              ? seatInfo_
+              : seatInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.faceValue_ = faceValueBuilder_ == null
+              ? faceValue_
+              : faceValueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.optOut_ = optOut_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.expiryDate_ = expiryDateBuilder_ == null
+              ? expiryDate_
+              : expiryDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.passOverrides_ = passOverridesBuilder_ == null
+              ? passOverrides_
+              : passOverridesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.passMetaData_ = passMetaDataBuilder_ == null
+              ? passMetaData_
+              : passMetaDataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.Ticket) {
@@ -4113,10 +4017,12 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTicketNumber().isEmpty()) {
           ticketNumber_ = other.ticketNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasEvent()) {
@@ -4127,14 +4033,17 @@ java.lang.String defaultValue);
         }
         if (!other.getOrderNumber().isEmpty()) {
           orderNumber_ = other.orderNumber_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getGroupingId().isEmpty()) {
           groupingId_ = other.groupingId_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getBarcodeContents().isEmpty()) {
           barcodeContents_ = other.barcodeContents_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasSeatInfo()) {
@@ -4148,6 +4057,7 @@ java.lang.String defaultValue);
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
+        bitField0_ |= 0x00000400;
         if (other.optOut_ != 0) {
           setOptOutValue(other.getOptOutValue());
         }
@@ -4164,7 +4074,7 @@ java.lang.String defaultValue);
           if (!other.validateDetails_.isEmpty()) {
             if (validateDetails_.isEmpty()) {
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureValidateDetailsIsMutable();
               validateDetails_.addAll(other.validateDetails_);
@@ -4177,7 +4087,7 @@ java.lang.String defaultValue);
               validateDetailsBuilder_.dispose();
               validateDetailsBuilder_ = null;
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00008000);
               validateDetailsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getValidateDetailsFieldBuilder() : null;
@@ -4226,62 +4136,62 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 ticketNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getEventFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getTicketTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 orderNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 groupingId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 barcodeContents_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getSeatInfoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getFaceValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getPersonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
@@ -4290,30 +4200,31 @@ java.lang.String defaultValue);
                     MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetaData().getMutableMap().put(
                     metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 96: {
                 optOut_ = input.readEnum();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 96
               case 104: {
                 status_ = input.readEnum();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 104
               case 114: {
                 input.readMessage(
                     getExpiryDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 input.readMessage(
                     getRedemptionDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
@@ -4333,28 +4244,28 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getPassOverridesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     getPassMetaDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               default: {
@@ -4427,11 +4338,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4444,8 +4353,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4460,12 +4369,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4523,11 +4430,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4540,8 +4445,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketNumber() {
-        
         ticketNumber_ = getDefaultInstance().getTicketNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4556,12 +4461,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4578,7 +4481,7 @@ java.lang.String defaultValue);
        * @return Whether the event field is set.
        */
       public boolean hasEvent() {
-        return eventBuilder_ != null || event_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -4608,11 +4511,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           event_ = value;
-          onChanged();
         } else {
           eventBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4626,11 +4529,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.EventOuterClass.Event.Builder builderForValue) {
         if (eventBuilder_ == null) {
           event_ = builderForValue.build();
-          onChanged();
         } else {
           eventBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4642,17 +4545,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event value) {
         if (eventBuilder_ == null) {
-          if (event_ != null) {
-            event_ =
-              com.passkit.grpc.EventTickets.EventOuterClass.Event.newBuilder(event_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            event_ != null &&
+            event_ != com.passkit.grpc.EventTickets.EventOuterClass.Event.getDefaultInstance()) {
+            getEventBuilder().mergeFrom(value);
           } else {
             event_ = value;
           }
-          onChanged();
         } else {
           eventBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4663,14 +4567,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Event event = 3;</code>
        */
       public Builder clearEvent() {
-        if (eventBuilder_ == null) {
-          event_ = null;
-          onChanged();
-        } else {
-          event_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        event_ = null;
+        if (eventBuilder_ != null) {
+          eventBuilder_.dispose();
           eventBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4681,7 +4584,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Event event = 3;</code>
        */
       public com.passkit.grpc.EventTickets.EventOuterClass.Event.Builder getEventBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getEventFieldBuilder().getBuilder();
       }
@@ -4733,7 +4636,7 @@ java.lang.String defaultValue);
        * @return Whether the ticketType field is set.
        */
       public boolean hasTicketType() {
-        return ticketTypeBuilder_ != null || ticketType_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -4763,11 +4666,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           ticketType_ = value;
-          onChanged();
         } else {
           ticketTypeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4781,11 +4684,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.Builder builderForValue) {
         if (ticketTypeBuilder_ == null) {
           ticketType_ = builderForValue.build();
-          onChanged();
         } else {
           ticketTypeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4797,17 +4700,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType value) {
         if (ticketTypeBuilder_ == null) {
-          if (ticketType_ != null) {
-            ticketType_ =
-              com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.newBuilder(ticketType_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            ticketType_ != null &&
+            ticketType_ != com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()) {
+            getTicketTypeBuilder().mergeFrom(value);
           } else {
             ticketType_ = value;
           }
-          onChanged();
         } else {
           ticketTypeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4818,14 +4722,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketType ticketType = 4;</code>
        */
       public Builder clearTicketType() {
-        if (ticketTypeBuilder_ == null) {
-          ticketType_ = null;
-          onChanged();
-        } else {
-          ticketType_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        ticketType_ = null;
+        if (ticketTypeBuilder_ != null) {
+          ticketTypeBuilder_.dispose();
           ticketTypeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4836,7 +4739,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketType ticketType = 4;</code>
        */
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.Builder getTicketTypeBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getTicketTypeFieldBuilder().getBuilder();
       }
@@ -4929,11 +4832,9 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -4946,8 +4847,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOrderNumber() {
-        
         orderNumber_ = getDefaultInstance().getOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -4962,12 +4863,10 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5025,11 +4924,9 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         groupingId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -5042,8 +4939,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGroupingId() {
-        
         groupingId_ = getDefaultInstance().getGroupingId();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -5058,12 +4955,10 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         groupingId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -5121,11 +5016,9 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContents(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodeContents_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5138,8 +5031,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBarcodeContents() {
-        
         barcodeContents_ = getDefaultInstance().getBarcodeContents();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -5154,12 +5047,10 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContentsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodeContents_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5176,7 +5067,7 @@ java.lang.String defaultValue);
        * @return Whether the seatInfo field is set.
        */
       public boolean hasSeatInfo() {
-        return seatInfoBuilder_ != null || seatInfo_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -5206,11 +5097,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           seatInfo_ = value;
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5224,11 +5115,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder builderForValue) {
         if (seatInfoBuilder_ == null) {
           seatInfo_ = builderForValue.build();
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5240,17 +5131,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeSeatInfo(com.passkit.grpc.EventTickets.TicketOuterClass.Seat value) {
         if (seatInfoBuilder_ == null) {
-          if (seatInfo_ != null) {
-            seatInfo_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.Seat.newBuilder(seatInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            seatInfo_ != null &&
+            seatInfo_ != com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance()) {
+            getSeatInfoBuilder().mergeFrom(value);
           } else {
             seatInfo_ = value;
           }
-          onChanged();
         } else {
           seatInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5261,14 +5153,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 8;</code>
        */
       public Builder clearSeatInfo() {
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-          onChanged();
-        } else {
-          seatInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5279,7 +5170,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 8;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder getSeatInfoBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getSeatInfoFieldBuilder().getBuilder();
       }
@@ -5331,7 +5222,7 @@ java.lang.String defaultValue);
        * @return Whether the faceValue field is set.
        */
       public boolean hasFaceValue() {
-        return faceValueBuilder_ != null || faceValue_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -5361,11 +5252,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           faceValue_ = value;
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5379,11 +5270,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder builderForValue) {
         if (faceValueBuilder_ == null) {
           faceValue_ = builderForValue.build();
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5395,17 +5286,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeFaceValue(com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue value) {
         if (faceValueBuilder_ == null) {
-          if (faceValue_ != null) {
-            faceValue_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.newBuilder(faceValue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            faceValue_ != null &&
+            faceValue_ != com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance()) {
+            getFaceValueBuilder().mergeFrom(value);
           } else {
             faceValue_ = value;
           }
-          onChanged();
         } else {
           faceValueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5416,14 +5308,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 9;</code>
        */
       public Builder clearFaceValue() {
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-          onChanged();
-        } else {
-          faceValue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5434,7 +5325,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 9;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder getFaceValueBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getFaceValueFieldBuilder().getBuilder();
       }
@@ -5486,7 +5377,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -5516,11 +5407,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5534,11 +5425,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5550,17 +5441,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5571,14 +5463,13 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 10;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5589,7 +5480,7 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 10;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
@@ -5632,7 +5523,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -5640,8 +5531,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -5649,9 +5539,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -5662,7 +5553,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -5685,7 +5575,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -5697,10 +5586,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -5714,7 +5604,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -5725,8 +5614,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000400);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -5738,7 +5627,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -5751,7 +5639,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00000400;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -5765,12 +5654,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -5780,11 +5667,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000400;
         return this;
       }
 
@@ -5810,8 +5697,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setOptOutValue(int value) {
-        
         optOut_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -5825,8 +5712,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.CommonObjects.Toggle getOptOut() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(optOut_);
+        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.forNumber(optOut_);
         return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
       }
       /**
@@ -5842,7 +5728,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000800;
         optOut_ = value.getNumber();
         onChanged();
         return this;
@@ -5856,7 +5742,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOptOut() {
-        
+        bitField0_ = (bitField0_ & ~0x00000800);
         optOut_ = 0;
         onChanged();
         return this;
@@ -5884,8 +5770,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -5899,8 +5785,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
       }
       /**
@@ -5916,7 +5801,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00001000;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -5930,7 +5815,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00001000);
         status_ = 0;
         onChanged();
         return this;
@@ -5948,7 +5833,7 @@ java.lang.String defaultValue);
        * @return Whether the expiryDate field is set.
        */
       public boolean hasExpiryDate() {
-        return expiryDateBuilder_ != null || expiryDate_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -5978,11 +5863,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           expiryDate_ = value;
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -5996,11 +5881,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryDateBuilder_ == null) {
           expiryDate_ = builderForValue.build();
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -6012,17 +5897,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
         if (expiryDateBuilder_ == null) {
-          if (expiryDate_ != null) {
-            expiryDate_ =
-              com.google.protobuf.Timestamp.newBuilder(expiryDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            expiryDate_ != null &&
+            expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryDateBuilder().mergeFrom(value);
           } else {
             expiryDate_ = value;
           }
-          onChanged();
         } else {
           expiryDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -6033,14 +5919,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 14;</code>
        */
       public Builder clearExpiryDate() {
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-          onChanged();
-        } else {
-          expiryDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6051,7 +5936,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 14;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getExpiryDateFieldBuilder().getBuilder();
       }
@@ -6103,7 +5988,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -6133,11 +6018,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -6151,11 +6036,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -6167,17 +6052,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -6188,14 +6074,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 15;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6206,7 +6091,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 15;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -6249,9 +6134,9 @@ java.lang.String defaultValue);
       private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_ =
         java.util.Collections.emptyList();
       private void ensureValidateDetailsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           validateDetails_ = new java.util.ArrayList<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails>(validateDetails_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -6445,7 +6330,7 @@ java.lang.String defaultValue);
       public Builder clearValidateDetails() {
         if (validateDetailsBuilder_ == null) {
           validateDetails_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           validateDetailsBuilder_.clear();
@@ -6550,7 +6435,7 @@ java.lang.String defaultValue);
           validateDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetailsOrBuilder>(
                   validateDetails_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           validateDetails_ = null;
@@ -6570,7 +6455,7 @@ java.lang.String defaultValue);
        * @return Whether the passOverrides field is set.
        */
       public boolean hasPassOverrides() {
-        return passOverridesBuilder_ != null || passOverrides_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -6600,11 +6485,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passOverrides_ = value;
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -6618,11 +6503,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.PassOuterClass.PassOverrides.Builder builderForValue) {
         if (passOverridesBuilder_ == null) {
           passOverrides_ = builderForValue.build();
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -6634,17 +6519,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassOverrides(com.passkit.grpc.PassOuterClass.PassOverrides value) {
         if (passOverridesBuilder_ == null) {
-          if (passOverrides_ != null) {
-            passOverrides_ =
-              com.passkit.grpc.PassOuterClass.PassOverrides.newBuilder(passOverrides_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            passOverrides_ != null &&
+            passOverrides_ != com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance()) {
+            getPassOverridesBuilder().mergeFrom(value);
           } else {
             passOverrides_ = value;
           }
-          onChanged();
         } else {
           passOverridesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -6655,14 +6541,13 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 17;</code>
        */
       public Builder clearPassOverrides() {
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-          onChanged();
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6673,7 +6558,7 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 17;</code>
        */
       public com.passkit.grpc.PassOuterClass.PassOverrides.Builder getPassOverridesBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getPassOverridesFieldBuilder().getBuilder();
       }
@@ -6725,7 +6610,7 @@ java.lang.String defaultValue);
        * @return Whether the passMetaData field is set.
        */
       public boolean hasPassMetaData() {
-        return passMetaDataBuilder_ != null || passMetaData_ != null;
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <pre>
@@ -6755,11 +6640,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passMetaData_ = value;
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -6773,11 +6658,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.MetricsOuterClass.Metadata.Builder builderForValue) {
         if (passMetaDataBuilder_ == null) {
           passMetaData_ = builderForValue.build();
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -6789,17 +6674,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassMetaData(com.passkit.grpc.MetricsOuterClass.Metadata value) {
         if (passMetaDataBuilder_ == null) {
-          if (passMetaData_ != null) {
-            passMetaData_ =
-              com.passkit.grpc.MetricsOuterClass.Metadata.newBuilder(passMetaData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00020000) != 0) &&
+            passMetaData_ != null &&
+            passMetaData_ != com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance()) {
+            getPassMetaDataBuilder().mergeFrom(value);
           } else {
             passMetaData_ = value;
           }
-          onChanged();
         } else {
           passMetaDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -6810,14 +6696,13 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 18;</code>
        */
       public Builder clearPassMetaData() {
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-          onChanged();
-        } else {
-          passMetaData_ = null;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6828,7 +6713,7 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 18;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metadata.Builder getPassMetaDataBuilder() {
-        
+        bitField0_ |= 0x00020000;
         onChanged();
         return getPassMetaDataFieldBuilder().getBuilder();
       }
@@ -6880,7 +6765,7 @@ java.lang.String defaultValue);
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <pre>
@@ -6910,11 +6795,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -6928,11 +6813,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -6944,17 +6829,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00040000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -6965,14 +6851,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6983,7 +6868,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 19 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00040000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -7035,7 +6920,7 @@ java.lang.String defaultValue);
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -7065,11 +6950,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -7083,11 +6968,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -7099,17 +6984,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -7120,14 +7006,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7138,7 +7023,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 20 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -7366,11 +7251,6 @@ java.lang.String defaultValue);
       return new ValidateDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_ValidateDetails_descriptor;
@@ -7419,11 +7299,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getValidateDateOrBuilder() {
-      return getValidateDate();
+      return validateDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validateDate_;
     }
 
     public static final int LAT_FIELD_NUMBER = 2;
-    private double lat_;
+    private double lat_ = 0D;
     /**
      * <pre>
      * Optional redemption lat.
@@ -7438,7 +7318,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LON_FIELD_NUMBER = 3;
-    private double lon_;
+    private double lon_ = 0D;
     /**
      * <pre>
      * Optional redemption lon.
@@ -7453,7 +7333,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ALT_FIELD_NUMBER = 4;
-    private int alt_;
+    private int alt_ = 0;
     /**
      * <pre>
      * Optional redemption alt.
@@ -7468,7 +7348,8 @@ java.lang.String defaultValue);
     }
 
     public static final int VALIDATESOURCE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object validateSource_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validateSource_ = "";
     /**
      * <pre>
      * Optional validate user agent, can be used in case where a Merchant uses the PassKit scanning solution combined with their own scanning software and wants to differentiate the source of validation.
@@ -7514,7 +7395,8 @@ java.lang.String defaultValue);
     }
 
     public static final int VALIDATEREFERENCE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object validateReference_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object validateReference_ = "";
     /**
      * <pre>
      * Optional validate reference, can be used for staff name, username, scanner ID, location ID, etc.
@@ -7809,22 +7691,17 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (validateDateBuilder_ == null) {
-          validateDate_ = null;
-        } else {
-          validateDate_ = null;
+        bitField0_ = 0;
+        validateDate_ = null;
+        if (validateDateBuilder_ != null) {
+          validateDateBuilder_.dispose();
           validateDateBuilder_ = null;
         }
         lat_ = 0D;
-
         lon_ = 0D;
-
         alt_ = 0;
-
         validateSource_ = "";
-
         validateReference_ = "";
-
         return this;
       }
 
@@ -7851,52 +7728,35 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails result = new com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails(this);
-        if (validateDateBuilder_ == null) {
-          result.validateDate_ = validateDate_;
-        } else {
-          result.validateDate_ = validateDateBuilder_.build();
-        }
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.alt_ = alt_;
-        result.validateSource_ = validateSource_;
-        result.validateReference_ = validateReference_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.validateDate_ = validateDateBuilder_ == null
+              ? validateDate_
+              : validateDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lat_ = lat_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lon_ = lon_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.alt_ = alt_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.validateSource_ = validateSource_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.validateReference_ = validateReference_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails) {
@@ -7923,10 +7783,12 @@ java.lang.String defaultValue);
         }
         if (!other.getValidateSource().isEmpty()) {
           validateSource_ = other.validateSource_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getValidateReference().isEmpty()) {
           validateReference_ = other.validateReference_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -7959,32 +7821,32 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getValidateDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 17: {
                 lat_ = input.readDouble();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 17
               case 25: {
                 lon_ = input.readDouble();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 25
               case 32: {
                 alt_ = input.readInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 50: {
                 validateSource_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 50
               case 58: {
                 validateReference_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               default: {
@@ -8002,6 +7864,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.Timestamp validateDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8015,7 +7878,7 @@ java.lang.String defaultValue);
        * @return Whether the validateDate field is set.
        */
       public boolean hasValidateDate() {
-        return validateDateBuilder_ != null || validateDate_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -8045,11 +7908,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           validateDate_ = value;
-          onChanged();
         } else {
           validateDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8063,11 +7926,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (validateDateBuilder_ == null) {
           validateDate_ = builderForValue.build();
-          onChanged();
         } else {
           validateDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8079,17 +7942,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeValidateDate(com.google.protobuf.Timestamp value) {
         if (validateDateBuilder_ == null) {
-          if (validateDate_ != null) {
-            validateDate_ =
-              com.google.protobuf.Timestamp.newBuilder(validateDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            validateDate_ != null &&
+            validateDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getValidateDateBuilder().mergeFrom(value);
           } else {
             validateDate_ = value;
           }
-          onChanged();
         } else {
           validateDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8100,14 +7964,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp validateDate = 1;</code>
        */
       public Builder clearValidateDate() {
-        if (validateDateBuilder_ == null) {
-          validateDate_ = null;
-          onChanged();
-        } else {
-          validateDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        validateDate_ = null;
+        if (validateDateBuilder_ != null) {
+          validateDateBuilder_.dispose();
           validateDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8118,7 +7981,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp validateDate = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getValidateDateBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getValidateDateFieldBuilder().getBuilder();
       }
@@ -8181,8 +8044,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8195,7 +8059,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         lat_ = 0D;
         onChanged();
         return this;
@@ -8224,8 +8088,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8238,7 +8103,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lon_ = 0D;
         onChanged();
         return this;
@@ -8267,8 +8132,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setAlt(int value) {
-        
+
         alt_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8281,7 +8147,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAlt() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         alt_ = 0;
         onChanged();
         return this;
@@ -8340,11 +8206,9 @@ java.lang.String defaultValue);
        */
       public Builder setValidateSource(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         validateSource_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -8357,8 +8221,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearValidateSource() {
-        
         validateSource_ = getDefaultInstance().getValidateSource();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -8373,12 +8237,10 @@ java.lang.String defaultValue);
        */
       public Builder setValidateSourceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         validateSource_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -8436,11 +8298,9 @@ java.lang.String defaultValue);
        */
       public Builder setValidateReference(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         validateReference_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8453,8 +8313,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearValidateReference() {
-        
         validateReference_ = getDefaultInstance().getValidateReference();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -8469,12 +8329,10 @@ java.lang.String defaultValue);
        */
       public Builder setValidateReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         validateReference_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -8667,11 +8525,6 @@ java.lang.String defaultValue);
       return new RedemptionDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedemptionDetails_descriptor;
@@ -8720,11 +8573,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getRedemptionDateOrBuilder() {
-      return getRedemptionDate();
+      return redemptionDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : redemptionDate_;
     }
 
     public static final int LAT_FIELD_NUMBER = 2;
-    private double lat_;
+    private double lat_ = 0D;
     /**
      * <pre>
      * Optional redemption lat.
@@ -8739,7 +8592,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LON_FIELD_NUMBER = 3;
-    private double lon_;
+    private double lon_ = 0D;
     /**
      * <pre>
      * Optional redemption lon.
@@ -8754,7 +8607,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ALT_FIELD_NUMBER = 4;
-    private int alt_;
+    private int alt_ = 0;
     /**
      * <pre>
      * Optional redemption alt.
@@ -8769,7 +8622,8 @@ java.lang.String defaultValue);
     }
 
     public static final int REDEMPTIONSOURCE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object redemptionSource_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionSource_ = "";
     /**
      * <pre>
      * Optional redemption user agent, can be used in case where a Merchant uses the PassKit scanning solution combined with their own scanning software and wants to differentiate the source of redemption.
@@ -8815,7 +8669,8 @@ java.lang.String defaultValue);
     }
 
     public static final int REDEMPTIONREFERENCE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object redemptionReference_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionReference_ = "";
     /**
      * <pre>
      * Optional redemption reference, can be used for staff name, username, scanner ID, location ID, etc.
@@ -9110,22 +8965,17 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (redemptionDateBuilder_ == null) {
-          redemptionDate_ = null;
-        } else {
-          redemptionDate_ = null;
+        bitField0_ = 0;
+        redemptionDate_ = null;
+        if (redemptionDateBuilder_ != null) {
+          redemptionDateBuilder_.dispose();
           redemptionDateBuilder_ = null;
         }
         lat_ = 0D;
-
         lon_ = 0D;
-
         alt_ = 0;
-
         redemptionSource_ = "";
-
         redemptionReference_ = "";
-
         return this;
       }
 
@@ -9152,52 +9002,35 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails result = new com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails(this);
-        if (redemptionDateBuilder_ == null) {
-          result.redemptionDate_ = redemptionDate_;
-        } else {
-          result.redemptionDate_ = redemptionDateBuilder_.build();
-        }
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.alt_ = alt_;
-        result.redemptionSource_ = redemptionSource_;
-        result.redemptionReference_ = redemptionReference_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.redemptionDate_ = redemptionDateBuilder_ == null
+              ? redemptionDate_
+              : redemptionDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lat_ = lat_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lon_ = lon_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.alt_ = alt_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.redemptionSource_ = redemptionSource_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.redemptionReference_ = redemptionReference_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails) {
@@ -9224,10 +9057,12 @@ java.lang.String defaultValue);
         }
         if (!other.getRedemptionSource().isEmpty()) {
           redemptionSource_ = other.redemptionSource_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getRedemptionReference().isEmpty()) {
           redemptionReference_ = other.redemptionReference_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9260,32 +9095,32 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getRedemptionDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 17: {
                 lat_ = input.readDouble();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 17
               case 25: {
                 lon_ = input.readDouble();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 25
               case 32: {
                 alt_ = input.readInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 50: {
                 redemptionSource_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 50
               case 58: {
                 redemptionReference_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 58
               default: {
@@ -9303,6 +9138,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.Timestamp redemptionDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -9316,7 +9152,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDate field is set.
        */
       public boolean hasRedemptionDate() {
-        return redemptionDateBuilder_ != null || redemptionDate_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -9346,11 +9182,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDate_ = value;
-          onChanged();
         } else {
           redemptionDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9364,11 +9200,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (redemptionDateBuilder_ == null) {
           redemptionDate_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9380,17 +9216,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDate(com.google.protobuf.Timestamp value) {
         if (redemptionDateBuilder_ == null) {
-          if (redemptionDate_ != null) {
-            redemptionDate_ =
-              com.google.protobuf.Timestamp.newBuilder(redemptionDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            redemptionDate_ != null &&
+            redemptionDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRedemptionDateBuilder().mergeFrom(value);
           } else {
             redemptionDate_ = value;
           }
-          onChanged();
         } else {
           redemptionDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -9401,14 +9238,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp redemptionDate = 1;</code>
        */
       public Builder clearRedemptionDate() {
-        if (redemptionDateBuilder_ == null) {
-          redemptionDate_ = null;
-          onChanged();
-        } else {
-          redemptionDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        redemptionDate_ = null;
+        if (redemptionDateBuilder_ != null) {
+          redemptionDateBuilder_.dispose();
           redemptionDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9419,7 +9255,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp redemptionDate = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRedemptionDateBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getRedemptionDateFieldBuilder().getBuilder();
       }
@@ -9482,8 +9318,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9496,7 +9333,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         lat_ = 0D;
         onChanged();
         return this;
@@ -9525,8 +9362,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9539,7 +9377,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lon_ = 0D;
         onChanged();
         return this;
@@ -9568,8 +9406,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setAlt(int value) {
-        
+
         alt_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9582,7 +9421,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAlt() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         alt_ = 0;
         onChanged();
         return this;
@@ -9641,11 +9480,9 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionSource(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionSource_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -9658,8 +9495,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRedemptionSource() {
-        
         redemptionSource_ = getDefaultInstance().getRedemptionSource();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -9674,12 +9511,10 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionSourceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionSource_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -9737,11 +9572,9 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionReference(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionReference_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -9754,8 +9587,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRedemptionReference() {
-        
         redemptionReference_ = getDefaultInstance().getRedemptionReference();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -9770,12 +9603,10 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionReference_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -9900,11 +9731,6 @@ java.lang.String defaultValue);
       return new FaceValue();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_FaceValue_descriptor;
@@ -9919,7 +9745,7 @@ java.lang.String defaultValue);
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 1;
-    private float amount_;
+    private float amount_ = 0F;
     /**
      * <pre>
      * The ticket amount in cents.
@@ -9934,7 +9760,8 @@ java.lang.String defaultValue);
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object currency_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object currency_ = "";
     /**
      * <pre>
      * The ticket currency.
@@ -10179,10 +10006,9 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         amount_ = 0F;
-
         currency_ = "";
-
         return this;
       }
 
@@ -10209,44 +10035,21 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue result = new com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue(this);
-        result.amount_ = amount_;
-        result.currency_ = currency_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.currency_ = currency_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue) {
@@ -10264,6 +10067,7 @@ java.lang.String defaultValue);
         }
         if (!other.getCurrency().isEmpty()) {
           currency_ = other.currency_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -10294,12 +10098,12 @@ java.lang.String defaultValue);
                 break;
               case 13: {
                 amount_ = input.readFloat();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 13
               case 18: {
                 currency_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -10317,6 +10121,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private float amount_ ;
       /**
@@ -10341,8 +10146,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setAmount(float value) {
-        
+
         amount_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10355,7 +10161,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         amount_ = 0F;
         onChanged();
         return this;
@@ -10414,11 +10220,9 @@ java.lang.String defaultValue);
        */
       public Builder setCurrency(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         currency_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10431,8 +10235,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
-        
         currency_ = getDefaultInstance().getCurrency();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -10447,12 +10251,10 @@ java.lang.String defaultValue);
        */
       public Builder setCurrencyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         currency_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10738,11 +10540,6 @@ java.lang.String defaultValue);
       return new Seat();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_Seat_descriptor;
@@ -10757,7 +10554,8 @@ java.lang.String defaultValue);
     }
 
     public static final int SEAT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object seat_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object seat_ = "";
     /**
      * <pre>
      * The seat number, such as "1", "2", "3", or any other seat identifier.
@@ -10837,11 +10635,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedSeatOrBuilder() {
-      return getLocalizedSeat();
+      return localizedSeat_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedSeat_;
     }
 
     public static final int ROW_FIELD_NUMBER = 3;
-    private volatile java.lang.Object row_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object row_ = "";
     /**
      * <pre>
      * The row of the seat, such as "1", E", "BB", or "A5".
@@ -10921,11 +10720,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedRowOrBuilder() {
-      return getLocalizedRow();
+      return localizedRow_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedRow_;
     }
 
     public static final int SECTION_FIELD_NUMBER = 5;
-    private volatile java.lang.Object section_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object section_ = "";
     /**
      * <pre>
      * The section of the seat, such as "121".
@@ -11005,11 +10805,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedSectionOrBuilder() {
-      return getLocalizedSection();
+      return localizedSection_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedSection_;
     }
 
     public static final int GATE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object gate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object gate_ = "";
     /**
      * <pre>
      * The gate the ticket holder should enter to get to their seat, such as "A" or "West".
@@ -11089,7 +10890,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedGateOrBuilder() {
-      return getLocalizedGate();
+      return localizedGate_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedGate_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11373,36 +11174,29 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         seat_ = "";
-
-        if (localizedSeatBuilder_ == null) {
-          localizedSeat_ = null;
-        } else {
-          localizedSeat_ = null;
+        localizedSeat_ = null;
+        if (localizedSeatBuilder_ != null) {
+          localizedSeatBuilder_.dispose();
           localizedSeatBuilder_ = null;
         }
         row_ = "";
-
-        if (localizedRowBuilder_ == null) {
-          localizedRow_ = null;
-        } else {
-          localizedRow_ = null;
+        localizedRow_ = null;
+        if (localizedRowBuilder_ != null) {
+          localizedRowBuilder_.dispose();
           localizedRowBuilder_ = null;
         }
         section_ = "";
-
-        if (localizedSectionBuilder_ == null) {
-          localizedSection_ = null;
-        } else {
-          localizedSection_ = null;
+        localizedSection_ = null;
+        if (localizedSectionBuilder_ != null) {
+          localizedSectionBuilder_.dispose();
           localizedSectionBuilder_ = null;
         }
         gate_ = "";
-
-        if (localizedGateBuilder_ == null) {
-          localizedGate_ = null;
-        } else {
-          localizedGate_ = null;
+        localizedGate_ = null;
+        if (localizedGateBuilder_ != null) {
+          localizedGateBuilder_.dispose();
           localizedGateBuilder_ = null;
         }
         return this;
@@ -11431,66 +11225,47 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.Seat buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.Seat result = new com.passkit.grpc.EventTickets.TicketOuterClass.Seat(this);
-        result.seat_ = seat_;
-        if (localizedSeatBuilder_ == null) {
-          result.localizedSeat_ = localizedSeat_;
-        } else {
-          result.localizedSeat_ = localizedSeatBuilder_.build();
-        }
-        result.row_ = row_;
-        if (localizedRowBuilder_ == null) {
-          result.localizedRow_ = localizedRow_;
-        } else {
-          result.localizedRow_ = localizedRowBuilder_.build();
-        }
-        result.section_ = section_;
-        if (localizedSectionBuilder_ == null) {
-          result.localizedSection_ = localizedSection_;
-        } else {
-          result.localizedSection_ = localizedSectionBuilder_.build();
-        }
-        result.gate_ = gate_;
-        if (localizedGateBuilder_ == null) {
-          result.localizedGate_ = localizedGate_;
-        } else {
-          result.localizedGate_ = localizedGateBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.Seat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.seat_ = seat_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.localizedSeat_ = localizedSeatBuilder_ == null
+              ? localizedSeat_
+              : localizedSeatBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.row_ = row_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedRow_ = localizedRowBuilder_ == null
+              ? localizedRow_
+              : localizedRowBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.section_ = section_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedSection_ = localizedSectionBuilder_ == null
+              ? localizedSection_
+              : localizedSectionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.gate_ = gate_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.localizedGate_ = localizedGateBuilder_ == null
+              ? localizedGate_
+              : localizedGateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.Seat) {
@@ -11505,6 +11280,7 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance()) return this;
         if (!other.getSeat().isEmpty()) {
           seat_ = other.seat_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasLocalizedSeat()) {
@@ -11512,6 +11288,7 @@ java.lang.String defaultValue);
         }
         if (!other.getRow().isEmpty()) {
           row_ = other.row_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedRow()) {
@@ -11519,6 +11296,7 @@ java.lang.String defaultValue);
         }
         if (!other.getSection().isEmpty()) {
           section_ = other.section_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedSection()) {
@@ -11526,6 +11304,7 @@ java.lang.String defaultValue);
         }
         if (!other.getGate().isEmpty()) {
           gate_ = other.gate_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasLocalizedGate()) {
@@ -11559,50 +11338,50 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 seat_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getLocalizedSeatFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 row_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getLocalizedRowFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 section_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getLocalizedSectionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 gate_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getLocalizedGateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -11620,6 +11399,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object seat_ = "";
       /**
@@ -11674,11 +11454,9 @@ java.lang.String defaultValue);
        */
       public Builder setSeat(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         seat_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11691,8 +11469,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSeat() {
-        
         seat_ = getDefaultInstance().getSeat();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -11707,12 +11485,10 @@ java.lang.String defaultValue);
        */
       public Builder setSeatBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         seat_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -11729,7 +11505,7 @@ java.lang.String defaultValue);
        * @return Whether the localizedSeat field is set.
        */
       public boolean hasLocalizedSeat() {
-        return localizedSeatBuilder_ != null || localizedSeat_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -11759,11 +11535,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           localizedSeat_ = value;
-          onChanged();
         } else {
           localizedSeatBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11777,11 +11553,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedSeatBuilder_ == null) {
           localizedSeat_ = builderForValue.build();
-          onChanged();
         } else {
           localizedSeatBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11793,17 +11569,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeLocalizedSeat(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedSeatBuilder_ == null) {
-          if (localizedSeat_ != null) {
-            localizedSeat_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedSeat_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            localizedSeat_ != null &&
+            localizedSeat_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedSeatBuilder().mergeFrom(value);
           } else {
             localizedSeat_ = value;
           }
-          onChanged();
         } else {
           localizedSeatBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -11814,14 +11591,13 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedSeat = 2;</code>
        */
       public Builder clearLocalizedSeat() {
-        if (localizedSeatBuilder_ == null) {
-          localizedSeat_ = null;
-          onChanged();
-        } else {
-          localizedSeat_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        localizedSeat_ = null;
+        if (localizedSeatBuilder_ != null) {
+          localizedSeatBuilder_.dispose();
           localizedSeatBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -11832,7 +11608,7 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedSeat = 2;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedSeatBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getLocalizedSeatFieldBuilder().getBuilder();
       }
@@ -11925,11 +11701,9 @@ java.lang.String defaultValue);
        */
       public Builder setRow(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         row_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11942,8 +11716,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRow() {
-        
         row_ = getDefaultInstance().getRow();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -11958,12 +11732,10 @@ java.lang.String defaultValue);
        */
       public Builder setRowBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         row_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -11980,7 +11752,7 @@ java.lang.String defaultValue);
        * @return Whether the localizedRow field is set.
        */
       public boolean hasLocalizedRow() {
-        return localizedRowBuilder_ != null || localizedRow_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -12010,11 +11782,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           localizedRow_ = value;
-          onChanged();
         } else {
           localizedRowBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -12028,11 +11800,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedRowBuilder_ == null) {
           localizedRow_ = builderForValue.build();
-          onChanged();
         } else {
           localizedRowBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -12044,17 +11816,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeLocalizedRow(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedRowBuilder_ == null) {
-          if (localizedRow_ != null) {
-            localizedRow_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedRow_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedRow_ != null &&
+            localizedRow_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedRowBuilder().mergeFrom(value);
           } else {
             localizedRow_ = value;
           }
-          onChanged();
         } else {
           localizedRowBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -12065,14 +11838,13 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedRow = 4;</code>
        */
       public Builder clearLocalizedRow() {
-        if (localizedRowBuilder_ == null) {
-          localizedRow_ = null;
-          onChanged();
-        } else {
-          localizedRow_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedRow_ = null;
+        if (localizedRowBuilder_ != null) {
+          localizedRowBuilder_.dispose();
           localizedRowBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -12083,7 +11855,7 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedRow = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedRowBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedRowFieldBuilder().getBuilder();
       }
@@ -12176,11 +11948,9 @@ java.lang.String defaultValue);
        */
       public Builder setSection(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         section_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -12193,8 +11963,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSection() {
-        
         section_ = getDefaultInstance().getSection();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -12209,12 +11979,10 @@ java.lang.String defaultValue);
        */
       public Builder setSectionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         section_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -12231,7 +11999,7 @@ java.lang.String defaultValue);
        * @return Whether the localizedSection field is set.
        */
       public boolean hasLocalizedSection() {
-        return localizedSectionBuilder_ != null || localizedSection_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -12261,11 +12029,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           localizedSection_ = value;
-          onChanged();
         } else {
           localizedSectionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -12279,11 +12047,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedSectionBuilder_ == null) {
           localizedSection_ = builderForValue.build();
-          onChanged();
         } else {
           localizedSectionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -12295,17 +12063,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeLocalizedSection(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedSectionBuilder_ == null) {
-          if (localizedSection_ != null) {
-            localizedSection_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedSection_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedSection_ != null &&
+            localizedSection_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedSectionBuilder().mergeFrom(value);
           } else {
             localizedSection_ = value;
           }
-          onChanged();
         } else {
           localizedSectionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -12316,14 +12085,13 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedSection = 6;</code>
        */
       public Builder clearLocalizedSection() {
-        if (localizedSectionBuilder_ == null) {
-          localizedSection_ = null;
-          onChanged();
-        } else {
-          localizedSection_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedSection_ = null;
+        if (localizedSectionBuilder_ != null) {
+          localizedSectionBuilder_.dispose();
           localizedSectionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -12334,7 +12102,7 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedSection = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedSectionBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedSectionFieldBuilder().getBuilder();
       }
@@ -12427,11 +12195,9 @@ java.lang.String defaultValue);
        */
       public Builder setGate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         gate_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -12444,8 +12210,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGate() {
-        
         gate_ = getDefaultInstance().getGate();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -12460,12 +12226,10 @@ java.lang.String defaultValue);
        */
       public Builder setGateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         gate_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -12482,7 +12246,7 @@ java.lang.String defaultValue);
        * @return Whether the localizedGate field is set.
        */
       public boolean hasLocalizedGate() {
-        return localizedGateBuilder_ != null || localizedGate_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -12512,11 +12276,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           localizedGate_ = value;
-          onChanged();
         } else {
           localizedGateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -12530,11 +12294,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedGateBuilder_ == null) {
           localizedGate_ = builderForValue.build();
-          onChanged();
         } else {
           localizedGateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -12546,17 +12310,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeLocalizedGate(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedGateBuilder_ == null) {
-          if (localizedGate_ != null) {
-            localizedGate_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedGate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            localizedGate_ != null &&
+            localizedGate_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedGateBuilder().mergeFrom(value);
           } else {
             localizedGate_ = value;
           }
-          onChanged();
         } else {
           localizedGateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -12567,14 +12332,13 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedGate = 8;</code>
        */
       public Builder clearLocalizedGate() {
-        if (localizedGateBuilder_ == null) {
-          localizedGate_ = null;
-          onChanged();
-        } else {
-          localizedGate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        localizedGate_ = null;
+        if (localizedGateBuilder_ != null) {
+          localizedGateBuilder_.dispose();
           localizedGateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -12585,7 +12349,7 @@ java.lang.String defaultValue);
        * <code>.io.LocalizedString localizedGate = 8;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedGateBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getLocalizedGateFieldBuilder().getBuilder();
       }
@@ -12879,11 +12643,11 @@ java.lang.String defaultValue);
      */
     com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.ProductionCase getProductionCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.ProductionCase getProductionCase();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.EventCase getEventCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.EventCase getEventCase();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.TicketTypeCase getTicketTypeCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest.TicketTypeCase getTicketTypeCase();
   }
   /**
    * Protobuf type {@code event_tickets.TicketListRequest}
@@ -12907,11 +12671,6 @@ java.lang.String defaultValue);
       return new TicketListRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketListRequest_descriptor;
@@ -12926,6 +12685,7 @@ java.lang.String defaultValue);
     }
 
     private int productionCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object production_;
     public enum ProductionCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -12967,6 +12727,7 @@ java.lang.String defaultValue);
     }
 
     private int eventCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object event_;
     public enum EventCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -13008,6 +12769,7 @@ java.lang.String defaultValue);
     }
 
     private int ticketTypeCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object ticketType_;
     public enum TicketTypeCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -13434,7 +13196,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder() {
-      return getFilters();
+      return filters_ == null ? com.passkit.grpc.Filter.Filters.getDefaultInstance() : filters_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13742,13 +13504,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (eventFilterByVenueAndStartBuilder_ != null) {
           eventFilterByVenueAndStartBuilder_.clear();
         }
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-        } else {
-          filters_ = null;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
         productionCase_ = 0;
@@ -13783,72 +13545,34 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest(this);
-        if (productionCase_ == 1) {
-          result.production_ = production_;
-        }
-        if (productionCase_ == 2) {
-          result.production_ = production_;
-        }
-        if (eventCase_ == 3) {
-          result.event_ = event_;
-        }
-        if (eventCase_ == 4) {
-          if (eventFilterByVenueAndStartBuilder_ == null) {
-            result.event_ = event_;
-          } else {
-            result.event_ = eventFilterByVenueAndStartBuilder_.build();
-          }
-        }
-        if (ticketTypeCase_ == 5) {
-          result.ticketType_ = ticketType_;
-        }
-        if (ticketTypeCase_ == 6) {
-          result.ticketType_ = ticketType_;
-        }
-        if (filtersBuilder_ == null) {
-          result.filters_ = filters_;
-        } else {
-          result.filters_ = filtersBuilder_.build();
-        }
-        result.productionCase_ = productionCase_;
-        result.eventCase_ = eventCase_;
-        result.ticketTypeCase_ = ticketTypeCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest result) {
+        result.productionCase_ = productionCase_;
+        result.production_ = this.production_;
+        result.eventCase_ = eventCase_;
+        result.event_ = this.event_;
+        if (eventCase_ == 4 &&
+            eventFilterByVenueAndStartBuilder_ != null) {
+          result.event_ = eventFilterByVenueAndStartBuilder_.build();
+        }
+        result.ticketTypeCase_ = ticketTypeCase_;
+        result.ticketType_ = this.ticketType_;
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest) {
@@ -13980,7 +13704,7 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getFiltersFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               default: {
@@ -14043,6 +13767,7 @@ java.lang.String defaultValue);
         return this;
       }
 
+      private int bitField0_;
 
       /**
        * <pre>
@@ -14120,10 +13845,8 @@ java.lang.String defaultValue);
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  productionCase_ = 1;
+        if (value == null) { throw new NullPointerException(); }
+        productionCase_ = 1;
         production_ = value;
         onChanged();
         return this;
@@ -14155,10 +13878,8 @@ java.lang.String defaultValue);
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionCase_ = 1;
         production_ = value;
         onChanged();
@@ -14241,10 +13962,8 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  productionCase_ = 2;
+        if (value == null) { throw new NullPointerException(); }
+        productionCase_ = 2;
         production_ = value;
         onChanged();
         return this;
@@ -14276,10 +13995,8 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionCase_ = 2;
         production_ = value;
         onChanged();
@@ -14362,10 +14079,8 @@ java.lang.String defaultValue);
        */
       public Builder setEventId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  eventCase_ = 3;
+        if (value == null) { throw new NullPointerException(); }
+        eventCase_ = 3;
         event_ = value;
         onChanged();
         return this;
@@ -14397,10 +14112,8 @@ java.lang.String defaultValue);
        */
       public Builder setEventIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventCase_ = 3;
         event_ = value;
         onChanged();
@@ -14545,7 +14258,7 @@ java.lang.String defaultValue);
           event_ = null;
         }
         eventCase_ = 4;
-        onChanged();;
+        onChanged();
         return eventFilterByVenueAndStartBuilder_;
       }
 
@@ -14625,10 +14338,8 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ticketTypeCase_ = 5;
+        if (value == null) { throw new NullPointerException(); }
+        ticketTypeCase_ = 5;
         ticketType_ = value;
         onChanged();
         return this;
@@ -14660,10 +14371,8 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeCase_ = 5;
         ticketType_ = value;
         onChanged();
@@ -14746,10 +14455,8 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ticketTypeCase_ = 6;
+        if (value == null) { throw new NullPointerException(); }
+        ticketTypeCase_ = 6;
         ticketType_ = value;
         onChanged();
         return this;
@@ -14781,10 +14488,8 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeCase_ = 6;
         ticketType_ = value;
         onChanged();
@@ -14803,7 +14508,7 @@ java.lang.String defaultValue);
        * @return Whether the filters field is set.
        */
       public boolean hasFilters() {
-        return filtersBuilder_ != null || filters_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -14833,11 +14538,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           filters_ = value;
-          onChanged();
         } else {
           filtersBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -14851,11 +14556,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Filter.Filters.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           filters_ = builderForValue.build();
-          onChanged();
         } else {
           filtersBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -14867,17 +14572,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeFilters(com.passkit.grpc.Filter.Filters value) {
         if (filtersBuilder_ == null) {
-          if (filters_ != null) {
-            filters_ =
-              com.passkit.grpc.Filter.Filters.newBuilder(filters_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            filters_ != null &&
+            filters_ != com.passkit.grpc.Filter.Filters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
           } else {
             filters_ = value;
           }
-          onChanged();
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -14888,14 +14594,13 @@ java.lang.String defaultValue);
        * <code>.io.Filters filters = 7;</code>
        */
       public Builder clearFilters() {
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-          onChanged();
-        } else {
-          filters_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -14906,7 +14611,7 @@ java.lang.String defaultValue);
        * <code>.io.Filters filters = 7;</code>
        */
       public com.passkit.grpc.Filter.Filters.Builder getFiltersBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getFiltersFieldBuilder().getBuilder();
       }
@@ -15104,11 +14809,6 @@ java.lang.String defaultValue);
       return new EventFilterByVenueAndStart();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_EventFilterByVenueAndStart_descriptor;
@@ -15123,7 +14823,8 @@ java.lang.String defaultValue);
     }
 
     public static final int VENUEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object venueId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object venueId_ = "";
     /**
      * <pre>
      * Venue ID. Required if venueUid is not provided.
@@ -15169,7 +14870,8 @@ java.lang.String defaultValue);
     }
 
     public static final int VENUEUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object venueUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object venueUid_ = "";
     /**
      * <pre>
      * Venue UID. Required if venueId is not provided.
@@ -15249,7 +14951,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getScheduledStartDateOrBuilder() {
-      return getScheduledStartDate();
+      return scheduledStartDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledStartDate_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -15465,14 +15167,12 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         venueId_ = "";
-
         venueUid_ = "";
-
-        if (scheduledStartDateBuilder_ == null) {
-          scheduledStartDate_ = null;
-        } else {
-          scheduledStartDate_ = null;
+        scheduledStartDate_ = null;
+        if (scheduledStartDateBuilder_ != null) {
+          scheduledStartDateBuilder_.dispose();
           scheduledStartDateBuilder_ = null;
         }
         return this;
@@ -15501,49 +15201,26 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart result = new com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart(this);
-        result.venueId_ = venueId_;
-        result.venueUid_ = venueUid_;
-        if (scheduledStartDateBuilder_ == null) {
-          result.scheduledStartDate_ = scheduledStartDate_;
-        } else {
-          result.scheduledStartDate_ = scheduledStartDateBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.venueId_ = venueId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.venueUid_ = venueUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.scheduledStartDate_ = scheduledStartDateBuilder_ == null
+              ? scheduledStartDate_
+              : scheduledStartDateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart) {
@@ -15558,10 +15235,12 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.EventFilterByVenueAndStart.getDefaultInstance()) return this;
         if (!other.getVenueId().isEmpty()) {
           venueId_ = other.venueId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVenueUid().isEmpty()) {
           venueUid_ = other.venueUid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasScheduledStartDate()) {
@@ -15595,19 +15274,19 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 venueId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 venueUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getScheduledStartDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -15625,6 +15304,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object venueId_ = "";
       /**
@@ -15679,11 +15359,9 @@ java.lang.String defaultValue);
        */
       public Builder setVenueId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         venueId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15696,8 +15374,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVenueId() {
-        
         venueId_ = getDefaultInstance().getVenueId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -15712,12 +15390,10 @@ java.lang.String defaultValue);
        */
       public Builder setVenueIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         venueId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -15775,11 +15451,9 @@ java.lang.String defaultValue);
        */
       public Builder setVenueUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         venueUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -15792,8 +15466,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVenueUid() {
-        
         venueUid_ = getDefaultInstance().getVenueUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -15808,12 +15482,10 @@ java.lang.String defaultValue);
        */
       public Builder setVenueUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         venueUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -15830,7 +15502,7 @@ java.lang.String defaultValue);
        * @return Whether the scheduledStartDate field is set.
        */
       public boolean hasScheduledStartDate() {
-        return scheduledStartDateBuilder_ != null || scheduledStartDate_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -15860,11 +15532,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           scheduledStartDate_ = value;
-          onChanged();
         } else {
           scheduledStartDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15878,11 +15550,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (scheduledStartDateBuilder_ == null) {
           scheduledStartDate_ = builderForValue.build();
-          onChanged();
         } else {
           scheduledStartDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15894,17 +15566,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeScheduledStartDate(com.google.protobuf.Timestamp value) {
         if (scheduledStartDateBuilder_ == null) {
-          if (scheduledStartDate_ != null) {
-            scheduledStartDate_ =
-              com.google.protobuf.Timestamp.newBuilder(scheduledStartDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            scheduledStartDate_ != null &&
+            scheduledStartDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getScheduledStartDateBuilder().mergeFrom(value);
           } else {
             scheduledStartDate_ = value;
           }
-          onChanged();
         } else {
           scheduledStartDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -15915,14 +15588,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp scheduledStartDate = 3;</code>
        */
       public Builder clearScheduledStartDate() {
-        if (scheduledStartDateBuilder_ == null) {
-          scheduledStartDate_ = null;
-          onChanged();
-        } else {
-          scheduledStartDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        scheduledStartDate_ = null;
+        if (scheduledStartDateBuilder_ != null) {
+          scheduledStartDateBuilder_.dispose();
           scheduledStartDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -15933,7 +15605,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp scheduledStartDate = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getScheduledStartDateBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getScheduledStartDateFieldBuilder().getBuilder();
       }
@@ -16125,11 +15797,6 @@ java.lang.String defaultValue);
       return new TicketNumberRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketNumberRequest_descriptor;
@@ -16144,7 +15811,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * Production ID. Required if productionUid is not provided.
@@ -16190,7 +15858,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object productionUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionUid_ = "";
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -16236,7 +15905,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETNUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object ticketNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketNumber_ = "";
     /**
      * <pre>
      * Ticket Number.
@@ -16488,12 +16158,10 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
         productionUid_ = "";
-
         ticketNumber_ = "";
-
         return this;
       }
 
@@ -16520,45 +16188,24 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest(this);
-        result.productionId_ = productionId_;
-        result.productionUid_ = productionUid_;
-        result.ticketNumber_ = ticketNumber_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.productionUid_ = productionUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ticketNumber_ = ticketNumber_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest) {
@@ -16573,14 +16220,17 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getProductionUid().isEmpty()) {
           productionUid_ = other.productionUid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getTicketNumber().isEmpty()) {
           ticketNumber_ = other.ticketNumber_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -16611,17 +16261,17 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 productionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 productionUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 ticketNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -16639,6 +16289,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -16693,11 +16344,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16710,8 +16359,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -16726,12 +16375,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -16789,11 +16436,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -16806,8 +16451,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionUid() {
-        
         productionUid_ = getDefaultInstance().getProductionUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -16822,12 +16467,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -16885,11 +16528,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -16902,8 +16543,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketNumber() {
-        
         ticketNumber_ = getDefaultInstance().getTicketNumber();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -16918,12 +16559,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -17080,11 +16719,6 @@ java.lang.String defaultValue);
       return new OrderNumberRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_OrderNumberRequest_descriptor;
@@ -17099,7 +16733,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * Production ID. Required if productionUid is not provided.
@@ -17145,7 +16780,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object productionUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionUid_ = "";
     /**
      * <pre>
      * Production UID. Required if productionId is not provided.
@@ -17191,7 +16827,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ORDERNUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object orderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderNumber_ = "";
     /**
      * <pre>
      * Order Number.
@@ -17443,12 +17080,10 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
         productionUid_ = "";
-
         orderNumber_ = "";
-
         return this;
       }
 
@@ -17475,45 +17110,24 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest(this);
-        result.productionId_ = productionId_;
-        result.productionUid_ = productionUid_;
-        result.orderNumber_ = orderNumber_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.productionUid_ = productionUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.orderNumber_ = orderNumber_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest) {
@@ -17528,14 +17142,17 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getProductionUid().isEmpty()) {
           productionUid_ = other.productionUid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getOrderNumber().isEmpty()) {
           orderNumber_ = other.orderNumber_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -17566,17 +17183,17 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 productionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 productionUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 orderNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -17594,6 +17211,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -17648,11 +17266,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17665,8 +17281,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -17681,12 +17297,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -17744,11 +17358,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -17761,8 +17373,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionUid() {
-        
         productionUid_ = getDefaultInstance().getProductionUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -17777,12 +17389,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -17840,11 +17450,9 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -17857,8 +17465,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOrderNumber() {
-        
         orderNumber_ = getDefaultInstance().getOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -17873,12 +17481,10 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -18062,11 +17668,6 @@ java.lang.String defaultValue);
       return new RedeemByOrderNumber();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemByOrderNumber_descriptor;
@@ -18081,7 +17682,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * Production ID. Required if productionUid is not provided.
@@ -18127,7 +17729,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object productionUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionUid_ = "";
     /**
      * <pre>
      * Production UID. Required if productionId is not provided
@@ -18173,7 +17776,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ORDERNUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object orderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderNumber_ = "";
     /**
      * <pre>
      * Order Number.
@@ -18253,7 +17857,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -18479,16 +18083,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
         productionUid_ = "";
-
         orderNumber_ = "";
-
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
         return this;
@@ -18517,50 +18118,29 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber result = new com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber(this);
-        result.productionId_ = productionId_;
-        result.productionUid_ = productionUid_;
-        result.orderNumber_ = orderNumber_;
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.productionUid_ = productionUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.orderNumber_ = orderNumber_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber) {
@@ -18575,14 +18155,17 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getProductionUid().isEmpty()) {
           productionUid_ = other.productionUid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getOrderNumber().isEmpty()) {
           orderNumber_ = other.orderNumber_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasRedemptionDetails()) {
@@ -18616,24 +18199,24 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 productionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 productionUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 orderNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getRedemptionDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -18651,6 +18234,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -18705,11 +18289,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18722,8 +18304,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -18738,12 +18320,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18801,11 +18381,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18818,8 +18396,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionUid() {
-        
         productionUid_ = getDefaultInstance().getProductionUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18834,12 +18412,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18897,11 +18473,9 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -18914,8 +18488,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOrderNumber() {
-        
         orderNumber_ = getDefaultInstance().getOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -18930,12 +18504,10 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -18952,7 +18524,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -18982,11 +18554,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -19000,11 +18572,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -19016,17 +18588,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -19037,14 +18610,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 4;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -19055,7 +18627,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 4;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -19209,11 +18781,6 @@ java.lang.String defaultValue);
       return new Tickets();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_Tickets_descriptor;
@@ -19228,6 +18795,7 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> tickets_;
     /**
      * <code>repeated .event_tickets.TicketLimitedFields tickets = 1;</code>
@@ -19457,6 +19025,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (ticketsBuilder_ == null) {
           tickets_ = java.util.Collections.emptyList();
         } else {
@@ -19490,7 +19059,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.Tickets buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.Tickets result = new com.passkit.grpc.EventTickets.TicketOuterClass.Tickets(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.Tickets result) {
         if (ticketsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             tickets_ = java.util.Collections.unmodifiableList(tickets_);
@@ -19500,42 +19075,12 @@ java.lang.String defaultValue);
         } else {
           result.tickets_ = ticketsBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.Tickets result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.Tickets) {
@@ -20004,11 +19549,6 @@ java.lang.String defaultValue);
       return new TicketPassBundles();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketPassBundles_descriptor;
@@ -20023,6 +19563,7 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.CommonObjects.PassBundle> tickets_;
     /**
      * <pre>
@@ -20272,6 +19813,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (ticketsBuilder_ == null) {
           tickets_ = java.util.Collections.emptyList();
         } else {
@@ -20305,7 +19847,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles result) {
         if (ticketsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             tickets_ = java.util.Collections.unmodifiableList(tickets_);
@@ -20315,42 +19863,12 @@ java.lang.String defaultValue);
         } else {
           result.tickets_ = ticketsBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketPassBundles) {
@@ -20910,11 +20428,6 @@ java.lang.String defaultValue);
       return new ValidateTicketRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_ValidateTicketRequest_descriptor;
@@ -20929,7 +20442,7 @@ java.lang.String defaultValue);
     }
 
     public static final int MAXNUMBEROFVALIDATIONS_FIELD_NUMBER = 1;
-    private int maxNumberOfValidations_;
+    private int maxNumberOfValidations_ = 0;
     /**
      * <pre>
      * If provided will auto redeem ticket once max number of validations has been reached.
@@ -20978,7 +20491,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
-      return getTicket();
+      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
     }
 
     public static final int VALIDATEDETAILS_FIELD_NUMBER = 3;
@@ -21016,7 +20529,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetailsOrBuilder getValidateDetailsOrBuilder() {
-      return getValidateDetails();
+      return validateDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.getDefaultInstance() : validateDetails_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21239,18 +20752,16 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         maxNumberOfValidations_ = 0;
-
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-        } else {
-          ticket_ = null;
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
-        if (validateDetailsBuilder_ == null) {
-          validateDetails_ = null;
-        } else {
-          validateDetails_ = null;
+        validateDetails_ = null;
+        if (validateDetailsBuilder_ != null) {
+          validateDetailsBuilder_.dispose();
           validateDetailsBuilder_ = null;
         }
         return this;
@@ -21279,53 +20790,28 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest(this);
-        result.maxNumberOfValidations_ = maxNumberOfValidations_;
-        if (ticketBuilder_ == null) {
-          result.ticket_ = ticket_;
-        } else {
-          result.ticket_ = ticketBuilder_.build();
-        }
-        if (validateDetailsBuilder_ == null) {
-          result.validateDetails_ = validateDetails_;
-        } else {
-          result.validateDetails_ = validateDetailsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxNumberOfValidations_ = maxNumberOfValidations_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticket_ = ticketBuilder_ == null
+              ? ticket_
+              : ticketBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.validateDetails_ = validateDetailsBuilder_ == null
+              ? validateDetails_
+              : validateDetailsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest) {
@@ -21375,21 +20861,21 @@ java.lang.String defaultValue);
                 break;
               case 8: {
                 maxNumberOfValidations_ = input.readUInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getTicketFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getValidateDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -21407,6 +20893,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int maxNumberOfValidations_ ;
       /**
@@ -21431,8 +20918,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setMaxNumberOfValidations(int value) {
-        
+
         maxNumberOfValidations_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -21445,7 +20933,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMaxNumberOfValidations() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         maxNumberOfValidations_ = 0;
         onChanged();
         return this;
@@ -21463,7 +20951,7 @@ java.lang.String defaultValue);
        * @return Whether the ticket field is set.
        */
       public boolean hasTicket() {
-        return ticketBuilder_ != null || ticket_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -21493,11 +20981,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           ticket_ = value;
-          onChanged();
         } else {
           ticketBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21511,11 +20999,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder builderForValue) {
         if (ticketBuilder_ == null) {
           ticket_ = builderForValue.build();
-          onChanged();
         } else {
           ticketBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21527,17 +21015,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
         if (ticketBuilder_ == null) {
-          if (ticket_ != null) {
-            ticket_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.newBuilder(ticket_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            ticket_ != null &&
+            ticket_ != com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance()) {
+            getTicketBuilder().mergeFrom(value);
           } else {
             ticket_ = value;
           }
-          onChanged();
         } else {
           ticketBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21548,14 +21037,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketId ticket = 2;</code>
        */
       public Builder clearTicket() {
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-          onChanged();
-        } else {
-          ticket_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21566,7 +21054,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketId ticket = 2;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder getTicketBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTicketFieldBuilder().getBuilder();
       }
@@ -21618,7 +21106,7 @@ java.lang.String defaultValue);
        * @return Whether the validateDetails field is set.
        */
       public boolean hasValidateDetails() {
-        return validateDetailsBuilder_ != null || validateDetails_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -21648,11 +21136,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           validateDetails_ = value;
-          onChanged();
         } else {
           validateDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -21666,11 +21154,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.Builder builderForValue) {
         if (validateDetailsBuilder_ == null) {
           validateDetails_ = builderForValue.build();
-          onChanged();
         } else {
           validateDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -21682,17 +21170,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeValidateDetails(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails value) {
         if (validateDetailsBuilder_ == null) {
-          if (validateDetails_ != null) {
-            validateDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.newBuilder(validateDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            validateDetails_ != null &&
+            validateDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.getDefaultInstance()) {
+            getValidateDetailsBuilder().mergeFrom(value);
           } else {
             validateDetails_ = value;
           }
-          onChanged();
         } else {
           validateDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -21703,14 +21192,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.ValidateDetails validateDetails = 3;</code>
        */
       public Builder clearValidateDetails() {
-        if (validateDetailsBuilder_ == null) {
-          validateDetails_ = null;
-          onChanged();
-        } else {
-          validateDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        validateDetails_ = null;
+        if (validateDetailsBuilder_ != null) {
+          validateDetailsBuilder_.dispose();
           validateDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21721,7 +21209,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.ValidateDetails validateDetails = 3;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.Builder getValidateDetailsBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getValidateDetailsFieldBuilder().getBuilder();
       }
@@ -21887,11 +21375,6 @@ java.lang.String defaultValue);
       return new ValidateTicketResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_ValidateTicketResponse_descriptor;
@@ -21906,7 +21389,7 @@ java.lang.String defaultValue);
     }
 
     public static final int VALID_FIELD_NUMBER = 1;
-    private boolean valid_;
+    private boolean valid_ = false;
     /**
      * <pre>
      * Indicates if the ticket is valid.
@@ -21955,7 +21438,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.TicketOrBuilder getTicketOrBuilder() {
-      return getTicket();
+      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance() : ticket_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22163,12 +21646,11 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         valid_ = false;
-
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-        } else {
-          ticket_ = null;
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
         return this;
@@ -22197,48 +21679,23 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse result = new com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse(this);
-        result.valid_ = valid_;
-        if (ticketBuilder_ == null) {
-          result.ticket_ = ticket_;
-        } else {
-          result.ticket_ = ticketBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.valid_ = valid_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticket_ = ticketBuilder_ == null
+              ? ticket_
+              : ticketBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse) {
@@ -22285,14 +21742,14 @@ java.lang.String defaultValue);
                 break;
               case 8: {
                 valid_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getTicketFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -22310,6 +21767,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean valid_ ;
       /**
@@ -22334,8 +21792,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setValid(boolean value) {
-        
+
         valid_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22348,7 +21807,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearValid() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         valid_ = false;
         onChanged();
         return this;
@@ -22366,7 +21825,7 @@ java.lang.String defaultValue);
        * @return Whether the ticket field is set.
        */
       public boolean hasTicket() {
-        return ticketBuilder_ != null || ticket_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -22396,11 +21855,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           ticket_ = value;
-          onChanged();
         } else {
           ticketBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22414,11 +21873,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder builderForValue) {
         if (ticketBuilder_ == null) {
           ticket_ = builderForValue.build();
-          onChanged();
         } else {
           ticketBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22430,17 +21889,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket value) {
         if (ticketBuilder_ == null) {
-          if (ticket_ != null) {
-            ticket_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.newBuilder(ticket_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            ticket_ != null &&
+            ticket_ != com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.getDefaultInstance()) {
+            getTicketBuilder().mergeFrom(value);
           } else {
             ticket_ = value;
           }
-          onChanged();
         } else {
           ticketBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -22451,14 +21911,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Ticket ticket = 2;</code>
        */
       public Builder clearTicket() {
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-          onChanged();
-        } else {
-          ticket_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -22469,7 +21928,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Ticket ticket = 2;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket.Builder getTicketBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTicketFieldBuilder().getBuilder();
       }
@@ -22652,11 +22111,6 @@ java.lang.String defaultValue);
       return new RedeemTicketRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_RedeemTicketRequest_descriptor;
@@ -22705,7 +22159,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.TicketIdOrBuilder getTicketOrBuilder() {
-      return getTicket();
+      return ticket_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance() : ticket_;
     }
 
     public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 3;
@@ -22743,7 +22197,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -22955,16 +22409,15 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-        } else {
-          ticket_ = null;
+        bitField0_ = 0;
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
         return this;
@@ -22993,52 +22446,25 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest(this);
-        if (ticketBuilder_ == null) {
-          result.ticket_ = ticket_;
-        } else {
-          result.ticket_ = ticketBuilder_.build();
-        }
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ticket_ = ticketBuilder_ == null
+              ? ticket_
+              : ticketBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest) {
@@ -23087,14 +22513,14 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getTicketFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 26: {
                 input.readMessage(
                     getRedemptionDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               default: {
@@ -23112,6 +22538,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.EventTickets.TicketOuterClass.TicketId ticket_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -23125,7 +22552,7 @@ java.lang.String defaultValue);
        * @return Whether the ticket field is set.
        */
       public boolean hasTicket() {
-        return ticketBuilder_ != null || ticket_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -23155,11 +22582,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           ticket_ = value;
-          onChanged();
         } else {
           ticketBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23173,11 +22600,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder builderForValue) {
         if (ticketBuilder_ == null) {
           ticket_ = builderForValue.build();
-          onChanged();
         } else {
           ticketBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23189,17 +22616,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId value) {
         if (ticketBuilder_ == null) {
-          if (ticket_ != null) {
-            ticket_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.newBuilder(ticket_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ticket_ != null &&
+            ticket_ != com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.getDefaultInstance()) {
+            getTicketBuilder().mergeFrom(value);
           } else {
             ticket_ = value;
           }
-          onChanged();
         } else {
           ticketBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -23210,14 +22638,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketId ticket = 1;</code>
        */
       public Builder clearTicket() {
-        if (ticketBuilder_ == null) {
-          ticket_ = null;
-          onChanged();
-        } else {
-          ticket_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ticket_ = null;
+        if (ticketBuilder_ != null) {
+          ticketBuilder_.dispose();
           ticketBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -23228,7 +22655,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketId ticket = 1;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketId.Builder getTicketBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTicketFieldBuilder().getBuilder();
       }
@@ -23280,7 +22707,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -23310,11 +22737,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23328,11 +22755,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23344,17 +22771,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -23365,14 +22793,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -23383,7 +22810,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 3;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -23818,7 +23245,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -23831,7 +23257,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
@@ -24099,11 +23524,6 @@ java.lang.String defaultValue);
       return new TicketLimitedFields();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_TicketLimitedFields_descriptor;
@@ -24130,7 +23550,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated ticket id (22 characters).
@@ -24176,7 +23597,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETNUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object ticketNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketNumber_ = "";
     /**
      * <pre>
      * User generated ticket number. Unique within the Production.
@@ -24256,7 +23678,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponseOrBuilder getProductionOrBuilder() {
-      return getProduction();
+      return production_ == null ? com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse.getDefaultInstance() : production_;
     }
 
     public static final int EVENT_FIELD_NUMBER = 4;
@@ -24294,7 +23716,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponseOrBuilder getEventOrBuilder() {
-      return getEvent();
+      return event_ == null ? com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse.getDefaultInstance() : event_;
     }
 
     public static final int VENUE_FIELD_NUMBER = 5;
@@ -24332,7 +23754,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponseOrBuilder getVenueOrBuilder() {
-      return getVenue();
+      return venue_ == null ? com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.getDefaultInstance() : venue_;
     }
 
     public static final int TICKETTYPE_FIELD_NUMBER = 6;
@@ -24370,11 +23792,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFieldsOrBuilder getTicketTypeOrBuilder() {
-      return getTicketType();
+      return ticketType_ == null ? com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.getDefaultInstance() : ticketType_;
     }
 
     public static final int ORDERNUMBER_FIELD_NUMBER = 7;
-    private volatile java.lang.Object orderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderNumber_ = "";
     /**
      * <pre>
      * Optional order / confirmation / booking code. Unique within the Production.
@@ -24420,7 +23843,8 @@ java.lang.String defaultValue);
     }
 
     public static final int GROUPINGID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object groupingId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object groupingId_ = "";
     /**
      * <pre>
      * Optional PassKit generated grouping ID. The system automatically groups tickets based by order number. Grouped tickets can be downloaded together from our multi-pass download pages. Not writable.
@@ -24466,7 +23890,8 @@ java.lang.String defaultValue);
     }
 
     public static final int BARCODECONTENTS_FIELD_NUMBER = 9;
-    private volatile java.lang.Object barcodeContents_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodeContents_ = "";
     /**
      * <pre>
      * The contents to embed in the barcode for this ticket. If not provided, the default value from the Ticket Type Pass Template Design is used.
@@ -24546,7 +23971,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.SeatOrBuilder getSeatInfoOrBuilder() {
-      return getSeatInfo();
+      return seatInfo_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance() : seatInfo_;
     }
 
     public static final int FACEVALUE_FIELD_NUMBER = 11;
@@ -24584,7 +24009,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValueOrBuilder getFaceValueOrBuilder() {
-      return getFaceValue();
+      return faceValue_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance() : faceValue_;
     }
 
     public static final int PERSON_FIELD_NUMBER = 12;
@@ -24622,7 +24047,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     public static final int METADATA_FIELD_NUMBER = 13;
@@ -24637,6 +24062,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -24647,7 +24073,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -24658,7 +24083,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -24681,7 +24105,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -24693,10 +24116,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -24710,7 +24134,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 13;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -24723,7 +24146,7 @@ java.lang.String defaultValue);
     }
 
     public static final int OPTOUT_FIELD_NUMBER = 14;
-    private boolean optOut_;
+    private boolean optOut_ = false;
     /**
      * <pre>
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
@@ -24738,7 +24161,7 @@ java.lang.String defaultValue);
     }
 
     public static final int STATUS_FIELD_NUMBER = 15;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Holds the ticket status.
@@ -24759,8 +24182,7 @@ java.lang.String defaultValue);
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
     }
 
@@ -24799,7 +24221,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      return getExpiryDate();
+      return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
     }
 
     public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 17;
@@ -24837,10 +24259,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     public static final int VALIDATEDETAILS_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_;
     /**
      * <pre>
@@ -24935,7 +24358,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.PassOuterClass.PassOverridesOrBuilder getPassOverridesOrBuilder() {
-      return getPassOverrides();
+      return passOverrides_ == null ? com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance() : passOverrides_;
     }
 
     public static final int PASSMETADATA_FIELD_NUMBER = 20;
@@ -24973,7 +24396,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetadataOrBuilder getPassMetaDataOrBuilder() {
-      return getPassMetaData();
+      return passMetaData_ == null ? com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance() : passMetaData_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 21;
@@ -25011,7 +24434,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 22;
@@ -25049,7 +24472,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -25566,73 +24989,58 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         ticketNumber_ = "";
-
-        if (productionBuilder_ == null) {
-          production_ = null;
-        } else {
-          production_ = null;
+        production_ = null;
+        if (productionBuilder_ != null) {
+          productionBuilder_.dispose();
           productionBuilder_ = null;
         }
-        if (eventBuilder_ == null) {
-          event_ = null;
-        } else {
-          event_ = null;
+        event_ = null;
+        if (eventBuilder_ != null) {
+          eventBuilder_.dispose();
           eventBuilder_ = null;
         }
-        if (venueBuilder_ == null) {
-          venue_ = null;
-        } else {
-          venue_ = null;
+        venue_ = null;
+        if (venueBuilder_ != null) {
+          venueBuilder_.dispose();
           venueBuilder_ = null;
         }
-        if (ticketTypeBuilder_ == null) {
-          ticketType_ = null;
-        } else {
-          ticketType_ = null;
+        ticketType_ = null;
+        if (ticketTypeBuilder_ != null) {
+          ticketTypeBuilder_.dispose();
           ticketTypeBuilder_ = null;
         }
         orderNumber_ = "";
-
         groupingId_ = "";
-
         barcodeContents_ = "";
-
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-        } else {
-          seatInfo_ = null;
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-        } else {
-          faceValue_ = null;
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         internalGetMutableMetaData().clear();
         optOut_ = false;
-
         status_ = 0;
-
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-        } else {
-          expiryDate_ = null;
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
         if (validateDetailsBuilder_ == null) {
@@ -25641,29 +25049,25 @@ java.lang.String defaultValue);
           validateDetails_ = null;
           validateDetailsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-        } else {
-          passMetaData_ = null;
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -25692,126 +25096,118 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields result = new com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.ticketNumber_ = ticketNumber_;
-        if (productionBuilder_ == null) {
-          result.production_ = production_;
-        } else {
-          result.production_ = productionBuilder_.build();
-        }
-        if (eventBuilder_ == null) {
-          result.event_ = event_;
-        } else {
-          result.event_ = eventBuilder_.build();
-        }
-        if (venueBuilder_ == null) {
-          result.venue_ = venue_;
-        } else {
-          result.venue_ = venueBuilder_.build();
-        }
-        if (ticketTypeBuilder_ == null) {
-          result.ticketType_ = ticketType_;
-        } else {
-          result.ticketType_ = ticketTypeBuilder_.build();
-        }
-        result.orderNumber_ = orderNumber_;
-        result.groupingId_ = groupingId_;
-        result.barcodeContents_ = barcodeContents_;
-        if (seatInfoBuilder_ == null) {
-          result.seatInfo_ = seatInfo_;
-        } else {
-          result.seatInfo_ = seatInfoBuilder_.build();
-        }
-        if (faceValueBuilder_ == null) {
-          result.faceValue_ = faceValue_;
-        } else {
-          result.faceValue_ = faceValueBuilder_.build();
-        }
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
-        result.optOut_ = optOut_;
-        result.status_ = status_;
-        if (expiryDateBuilder_ == null) {
-          result.expiryDate_ = expiryDate_;
-        } else {
-          result.expiryDate_ = expiryDateBuilder_.build();
-        }
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields result) {
         if (validateDetailsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             validateDetails_ = java.util.Collections.unmodifiableList(validateDetails_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00020000);
           }
           result.validateDetails_ = validateDetails_;
         } else {
           result.validateDetails_ = validateDetailsBuilder_.build();
         }
-        if (passOverridesBuilder_ == null) {
-          result.passOverrides_ = passOverrides_;
-        } else {
-          result.passOverrides_ = passOverridesBuilder_.build();
-        }
-        if (passMetaDataBuilder_ == null) {
-          result.passMetaData_ = passMetaData_;
-        } else {
-          result.passMetaData_ = passMetaDataBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticketNumber_ = ticketNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.production_ = productionBuilder_ == null
+              ? production_
+              : productionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.event_ = eventBuilder_ == null
+              ? event_
+              : eventBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.venue_ = venueBuilder_ == null
+              ? venue_
+              : venueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.ticketType_ = ticketTypeBuilder_ == null
+              ? ticketType_
+              : ticketTypeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.orderNumber_ = orderNumber_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.groupingId_ = groupingId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.barcodeContents_ = barcodeContents_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.seatInfo_ = seatInfoBuilder_ == null
+              ? seatInfo_
+              : seatInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.faceValue_ = faceValueBuilder_ == null
+              ? faceValue_
+              : faceValueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.optOut_ = optOut_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.expiryDate_ = expiryDateBuilder_ == null
+              ? expiryDate_
+              : expiryDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.passOverrides_ = passOverridesBuilder_ == null
+              ? passOverrides_
+              : passOverridesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.passMetaData_ = passMetaDataBuilder_ == null
+              ? passMetaData_
+              : passMetaDataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields) {
@@ -25826,10 +25222,12 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTicketNumber().isEmpty()) {
           ticketNumber_ = other.ticketNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasProduction()) {
@@ -25846,14 +25244,17 @@ java.lang.String defaultValue);
         }
         if (!other.getOrderNumber().isEmpty()) {
           orderNumber_ = other.orderNumber_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getGroupingId().isEmpty()) {
           groupingId_ = other.groupingId_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getBarcodeContents().isEmpty()) {
           barcodeContents_ = other.barcodeContents_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasSeatInfo()) {
@@ -25867,6 +25268,7 @@ java.lang.String defaultValue);
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
+        bitField0_ |= 0x00001000;
         if (other.getOptOut() != false) {
           setOptOut(other.getOptOut());
         }
@@ -25883,7 +25285,7 @@ java.lang.String defaultValue);
           if (!other.validateDetails_.isEmpty()) {
             if (validateDetails_.isEmpty()) {
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00020000);
             } else {
               ensureValidateDetailsIsMutable();
               validateDetails_.addAll(other.validateDetails_);
@@ -25896,7 +25298,7 @@ java.lang.String defaultValue);
               validateDetailsBuilder_.dispose();
               validateDetailsBuilder_ = null;
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00020000);
               validateDetailsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getValidateDetailsFieldBuilder() : null;
@@ -25945,76 +25347,76 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 ticketNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getProductionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getEventFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getVenueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getTicketTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 orderNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 groupingId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 barcodeContents_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getSeatInfoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 input.readMessage(
                     getFaceValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     getPersonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
@@ -26023,30 +25425,31 @@ java.lang.String defaultValue);
                     MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetaData().getMutableMap().put(
                     metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 112: {
                 optOut_ = input.readBool();
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 112
               case 120: {
                 status_ = input.readEnum();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 120
               case 130: {
                 input.readMessage(
                     getExpiryDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 138: {
                 input.readMessage(
                     getRedemptionDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
@@ -26066,28 +25469,28 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getPassOverridesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getPassMetaDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               case 170: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 170
               case 178: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 178
               default: {
@@ -26160,11 +25563,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -26177,8 +25578,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -26193,12 +25594,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -26256,11 +25655,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -26273,8 +25670,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketNumber() {
-        
         ticketNumber_ = getDefaultInstance().getTicketNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -26289,12 +25686,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -26311,7 +25706,7 @@ java.lang.String defaultValue);
        * @return Whether the production field is set.
        */
       public boolean hasProduction() {
-        return productionBuilder_ != null || production_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -26341,11 +25736,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           production_ = value;
-          onChanged();
         } else {
           productionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -26359,11 +25754,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse.Builder builderForValue) {
         if (productionBuilder_ == null) {
           production_ = builderForValue.build();
-          onChanged();
         } else {
           productionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -26375,17 +25770,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse value) {
         if (productionBuilder_ == null) {
-          if (production_ != null) {
-            production_ =
-              com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse.newBuilder(production_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            production_ != null &&
+            production_ != com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse.getDefaultInstance()) {
+            getProductionBuilder().mergeFrom(value);
           } else {
             production_ = value;
           }
-          onChanged();
         } else {
           productionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -26396,14 +25792,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.ProductionLimitedFieldsResponse production = 3;</code>
        */
       public Builder clearProduction() {
-        if (productionBuilder_ == null) {
-          production_ = null;
-          onChanged();
-        } else {
-          production_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        production_ = null;
+        if (productionBuilder_ != null) {
+          productionBuilder_.dispose();
           productionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -26414,7 +25809,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.ProductionLimitedFieldsResponse production = 3;</code>
        */
       public com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionLimitedFieldsResponse.Builder getProductionBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getProductionFieldBuilder().getBuilder();
       }
@@ -26466,7 +25861,7 @@ java.lang.String defaultValue);
        * @return Whether the event field is set.
        */
       public boolean hasEvent() {
-        return eventBuilder_ != null || event_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -26496,11 +25891,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           event_ = value;
-          onChanged();
         } else {
           eventBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -26514,11 +25909,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse.Builder builderForValue) {
         if (eventBuilder_ == null) {
           event_ = builderForValue.build();
-          onChanged();
         } else {
           eventBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -26530,17 +25925,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeEvent(com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse value) {
         if (eventBuilder_ == null) {
-          if (event_ != null) {
-            event_ =
-              com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse.newBuilder(event_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            event_ != null &&
+            event_ != com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse.getDefaultInstance()) {
+            getEventBuilder().mergeFrom(value);
           } else {
             event_ = value;
           }
-          onChanged();
         } else {
           eventBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -26551,14 +25947,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.EventLimitedFieldsResponse event = 4;</code>
        */
       public Builder clearEvent() {
-        if (eventBuilder_ == null) {
-          event_ = null;
-          onChanged();
-        } else {
-          event_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        event_ = null;
+        if (eventBuilder_ != null) {
+          eventBuilder_.dispose();
           eventBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -26569,7 +25964,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.EventLimitedFieldsResponse event = 4;</code>
        */
       public com.passkit.grpc.EventTickets.EventOuterClass.EventLimitedFieldsResponse.Builder getEventBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getEventFieldBuilder().getBuilder();
       }
@@ -26621,7 +26016,7 @@ java.lang.String defaultValue);
        * @return Whether the venue field is set.
        */
       public boolean hasVenue() {
-        return venueBuilder_ != null || venue_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -26651,11 +26046,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           venue_ = value;
-          onChanged();
         } else {
           venueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -26669,11 +26064,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.Builder builderForValue) {
         if (venueBuilder_ == null) {
           venue_ = builderForValue.build();
-          onChanged();
         } else {
           venueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -26685,17 +26080,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeVenue(com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse value) {
         if (venueBuilder_ == null) {
-          if (venue_ != null) {
-            venue_ =
-              com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.newBuilder(venue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            venue_ != null &&
+            venue_ != com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.getDefaultInstance()) {
+            getVenueBuilder().mergeFrom(value);
           } else {
             venue_ = value;
           }
-          onChanged();
         } else {
           venueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -26706,14 +26102,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.VenueLimitedFieldsResponse venue = 5;</code>
        */
       public Builder clearVenue() {
-        if (venueBuilder_ == null) {
-          venue_ = null;
-          onChanged();
-        } else {
-          venue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        venue_ = null;
+        if (venueBuilder_ != null) {
+          venueBuilder_.dispose();
           venueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -26724,7 +26119,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.VenueLimitedFieldsResponse venue = 5;</code>
        */
       public com.passkit.grpc.EventTickets.VenueOuterClass.VenueLimitedFieldsResponse.Builder getVenueBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getVenueFieldBuilder().getBuilder();
       }
@@ -26776,7 +26171,7 @@ java.lang.String defaultValue);
        * @return Whether the ticketType field is set.
        */
       public boolean hasTicketType() {
-        return ticketTypeBuilder_ != null || ticketType_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -26806,11 +26201,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           ticketType_ = value;
-          onChanged();
         } else {
           ticketTypeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -26824,11 +26219,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.Builder builderForValue) {
         if (ticketTypeBuilder_ == null) {
           ticketType_ = builderForValue.build();
-          onChanged();
         } else {
           ticketTypeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -26840,17 +26235,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields value) {
         if (ticketTypeBuilder_ == null) {
-          if (ticketType_ != null) {
-            ticketType_ =
-              com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.newBuilder(ticketType_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            ticketType_ != null &&
+            ticketType_ != com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.getDefaultInstance()) {
+            getTicketTypeBuilder().mergeFrom(value);
           } else {
             ticketType_ = value;
           }
-          onChanged();
         } else {
           ticketTypeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -26861,14 +26257,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketTypeLimitedFields ticketType = 6;</code>
        */
       public Builder clearTicketType() {
-        if (ticketTypeBuilder_ == null) {
-          ticketType_ = null;
-          onChanged();
-        } else {
-          ticketType_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        ticketType_ = null;
+        if (ticketTypeBuilder_ != null) {
+          ticketTypeBuilder_.dispose();
           ticketTypeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -26879,7 +26274,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.TicketTypeLimitedFields ticketType = 6;</code>
        */
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.Builder getTicketTypeBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getTicketTypeFieldBuilder().getBuilder();
       }
@@ -26972,11 +26367,9 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderNumber_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -26989,8 +26382,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOrderNumber() {
-        
         orderNumber_ = getDefaultInstance().getOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -27005,12 +26398,10 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderNumber_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -27068,11 +26459,9 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         groupingId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -27085,8 +26474,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGroupingId() {
-        
         groupingId_ = getDefaultInstance().getGroupingId();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -27101,12 +26490,10 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         groupingId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -27164,11 +26551,9 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContents(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodeContents_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -27181,8 +26566,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBarcodeContents() {
-        
         barcodeContents_ = getDefaultInstance().getBarcodeContents();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -27197,12 +26582,10 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContentsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodeContents_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -27219,7 +26602,7 @@ java.lang.String defaultValue);
        * @return Whether the seatInfo field is set.
        */
       public boolean hasSeatInfo() {
-        return seatInfoBuilder_ != null || seatInfo_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -27249,11 +26632,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           seatInfo_ = value;
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -27267,11 +26650,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder builderForValue) {
         if (seatInfoBuilder_ == null) {
           seatInfo_ = builderForValue.build();
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -27283,17 +26666,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeSeatInfo(com.passkit.grpc.EventTickets.TicketOuterClass.Seat value) {
         if (seatInfoBuilder_ == null) {
-          if (seatInfo_ != null) {
-            seatInfo_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.Seat.newBuilder(seatInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            seatInfo_ != null &&
+            seatInfo_ != com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance()) {
+            getSeatInfoBuilder().mergeFrom(value);
           } else {
             seatInfo_ = value;
           }
-          onChanged();
         } else {
           seatInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -27304,14 +26688,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 10;</code>
        */
       public Builder clearSeatInfo() {
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-          onChanged();
-        } else {
-          seatInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -27322,7 +26705,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 10;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder getSeatInfoBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getSeatInfoFieldBuilder().getBuilder();
       }
@@ -27374,7 +26757,7 @@ java.lang.String defaultValue);
        * @return Whether the faceValue field is set.
        */
       public boolean hasFaceValue() {
-        return faceValueBuilder_ != null || faceValue_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -27404,11 +26787,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           faceValue_ = value;
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -27422,11 +26805,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder builderForValue) {
         if (faceValueBuilder_ == null) {
           faceValue_ = builderForValue.build();
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -27438,17 +26821,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeFaceValue(com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue value) {
         if (faceValueBuilder_ == null) {
-          if (faceValue_ != null) {
-            faceValue_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.newBuilder(faceValue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            faceValue_ != null &&
+            faceValue_ != com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance()) {
+            getFaceValueBuilder().mergeFrom(value);
           } else {
             faceValue_ = value;
           }
-          onChanged();
         } else {
           faceValueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -27459,14 +26843,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 11;</code>
        */
       public Builder clearFaceValue() {
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-          onChanged();
-        } else {
-          faceValue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -27477,7 +26860,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 11;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder getFaceValueBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getFaceValueFieldBuilder().getBuilder();
       }
@@ -27529,7 +26912,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -27559,11 +26942,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -27577,11 +26960,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -27593,17 +26976,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -27614,14 +26998,13 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 12;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -27632,7 +27015,7 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 12;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
@@ -27675,7 +27058,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -27683,8 +27066,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -27692,9 +27074,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00001000;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -27705,7 +27088,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -27728,7 +27110,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -27740,10 +27121,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -27757,7 +27139,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -27768,8 +27149,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00001000);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -27781,7 +27162,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -27794,7 +27174,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00001000;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -27808,12 +27189,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00001000;
         return this;
       }
       /**
@@ -27823,11 +27202,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 13;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00001000;
         return this;
       }
 
@@ -27854,8 +27233,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setOptOut(boolean value) {
-        
+
         optOut_ = value;
+        bitField0_ |= 0x00002000;
         onChanged();
         return this;
       }
@@ -27868,7 +27248,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOptOut() {
-        
+        bitField0_ = (bitField0_ & ~0x00002000);
         optOut_ = false;
         onChanged();
         return this;
@@ -27896,8 +27276,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -27911,8 +27291,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
       }
       /**
@@ -27928,7 +27307,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00004000;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -27942,7 +27321,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00004000);
         status_ = 0;
         onChanged();
         return this;
@@ -27960,7 +27339,7 @@ java.lang.String defaultValue);
        * @return Whether the expiryDate field is set.
        */
       public boolean hasExpiryDate() {
-        return expiryDateBuilder_ != null || expiryDate_ != null;
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <pre>
@@ -27990,11 +27369,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           expiryDate_ = value;
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -28008,11 +27387,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryDateBuilder_ == null) {
           expiryDate_ = builderForValue.build();
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -28024,17 +27403,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
         if (expiryDateBuilder_ == null) {
-          if (expiryDate_ != null) {
-            expiryDate_ =
-              com.google.protobuf.Timestamp.newBuilder(expiryDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00008000) != 0) &&
+            expiryDate_ != null &&
+            expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryDateBuilder().mergeFrom(value);
           } else {
             expiryDate_ = value;
           }
-          onChanged();
         } else {
           expiryDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -28045,14 +27425,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 16;</code>
        */
       public Builder clearExpiryDate() {
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-          onChanged();
-        } else {
-          expiryDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28063,7 +27442,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 16;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
-        
+        bitField0_ |= 0x00008000;
         onChanged();
         return getExpiryDateFieldBuilder().getBuilder();
       }
@@ -28115,7 +27494,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -28145,11 +27524,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -28163,11 +27542,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -28179,17 +27558,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -28200,14 +27580,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 17;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28218,7 +27597,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 17;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -28261,9 +27640,9 @@ java.lang.String defaultValue);
       private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_ =
         java.util.Collections.emptyList();
       private void ensureValidateDetailsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           validateDetails_ = new java.util.ArrayList<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails>(validateDetails_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00020000;
          }
       }
 
@@ -28457,7 +27836,7 @@ java.lang.String defaultValue);
       public Builder clearValidateDetails() {
         if (validateDetailsBuilder_ == null) {
           validateDetails_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00020000);
           onChanged();
         } else {
           validateDetailsBuilder_.clear();
@@ -28562,7 +27941,7 @@ java.lang.String defaultValue);
           validateDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetailsOrBuilder>(
                   validateDetails_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           validateDetails_ = null;
@@ -28582,7 +27961,7 @@ java.lang.String defaultValue);
        * @return Whether the passOverrides field is set.
        */
       public boolean hasPassOverrides() {
-        return passOverridesBuilder_ != null || passOverrides_ != null;
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <pre>
@@ -28612,11 +27991,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passOverrides_ = value;
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -28630,11 +28009,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.PassOuterClass.PassOverrides.Builder builderForValue) {
         if (passOverridesBuilder_ == null) {
           passOverrides_ = builderForValue.build();
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -28646,17 +28025,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassOverrides(com.passkit.grpc.PassOuterClass.PassOverrides value) {
         if (passOverridesBuilder_ == null) {
-          if (passOverrides_ != null) {
-            passOverrides_ =
-              com.passkit.grpc.PassOuterClass.PassOverrides.newBuilder(passOverrides_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00040000) != 0) &&
+            passOverrides_ != null &&
+            passOverrides_ != com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance()) {
+            getPassOverridesBuilder().mergeFrom(value);
           } else {
             passOverrides_ = value;
           }
-          onChanged();
         } else {
           passOverridesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -28667,14 +28047,13 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 19;</code>
        */
       public Builder clearPassOverrides() {
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-          onChanged();
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28685,7 +28064,7 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 19;</code>
        */
       public com.passkit.grpc.PassOuterClass.PassOverrides.Builder getPassOverridesBuilder() {
-        
+        bitField0_ |= 0x00040000;
         onChanged();
         return getPassOverridesFieldBuilder().getBuilder();
       }
@@ -28737,7 +28116,7 @@ java.lang.String defaultValue);
        * @return Whether the passMetaData field is set.
        */
       public boolean hasPassMetaData() {
-        return passMetaDataBuilder_ != null || passMetaData_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -28767,11 +28146,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passMetaData_ = value;
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -28785,11 +28164,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.MetricsOuterClass.Metadata.Builder builderForValue) {
         if (passMetaDataBuilder_ == null) {
           passMetaData_ = builderForValue.build();
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -28801,17 +28180,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassMetaData(com.passkit.grpc.MetricsOuterClass.Metadata value) {
         if (passMetaDataBuilder_ == null) {
-          if (passMetaData_ != null) {
-            passMetaData_ =
-              com.passkit.grpc.MetricsOuterClass.Metadata.newBuilder(passMetaData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            passMetaData_ != null &&
+            passMetaData_ != com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance()) {
+            getPassMetaDataBuilder().mergeFrom(value);
           } else {
             passMetaData_ = value;
           }
-          onChanged();
         } else {
           passMetaDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -28822,14 +28202,13 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 20;</code>
        */
       public Builder clearPassMetaData() {
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-          onChanged();
-        } else {
-          passMetaData_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28840,7 +28219,7 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 20;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metadata.Builder getPassMetaDataBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getPassMetaDataFieldBuilder().getBuilder();
       }
@@ -28892,7 +28271,7 @@ java.lang.String defaultValue);
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <pre>
@@ -28922,11 +28301,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -28940,11 +28319,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -28956,17 +28335,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00100000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -28977,14 +28357,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 21;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28995,7 +28374,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 21;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00100000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -29047,7 +28426,7 @@ java.lang.String defaultValue);
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <pre>
@@ -29077,11 +28456,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -29095,11 +28474,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -29111,17 +28490,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00200000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -29132,14 +28512,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 22;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -29150,7 +28529,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 22;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00200000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -29533,7 +28912,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -29546,7 +28924,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
@@ -29785,7 +29162,7 @@ java.lang.String defaultValue);
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest.EventInfoCase getEventInfoCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest.EventInfoCase getEventInfoCase();
   }
   /**
    * Protobuf type {@code event_tickets.IssueTicketRequest}
@@ -29816,11 +29193,6 @@ java.lang.String defaultValue);
       return new IssueTicketRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_IssueTicketRequest_descriptor;
@@ -29847,6 +29219,7 @@ java.lang.String defaultValue);
     }
 
     private int eventInfoCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object eventInfo_;
     public enum EventInfoCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -29995,7 +29368,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETTYPEID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object ticketTypeId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketTypeId_ = "";
     /**
      * <pre>
      * PassKit generated ticketType id (22 characters).
@@ -30041,7 +29415,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETNUMBER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object ticketNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketNumber_ = "";
     /**
      * <pre>
      * Optional user generated ticket number. Unique within the Production.
@@ -30087,7 +29462,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ORDERNUMBER_FIELD_NUMBER = 5;
-    private volatile java.lang.Object orderNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderNumber_ = "";
     /**
      * <pre>
      * Optional order / confirmation / booking code. Unique within the Production.
@@ -30133,7 +29509,8 @@ java.lang.String defaultValue);
     }
 
     public static final int GROUPINGID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object groupingId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object groupingId_ = "";
     /**
      * <pre>
      * Optional PassKit generated grouping ID. The system automatically groups tickets based by order number. Grouped tickets can be downloaded together from our multi-pass download pages. Not writable.
@@ -30179,7 +29556,8 @@ java.lang.String defaultValue);
     }
 
     public static final int BARCODECONTENTS_FIELD_NUMBER = 7;
-    private volatile java.lang.Object barcodeContents_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodeContents_ = "";
     /**
      * <pre>
      * The contents to embed in the barcode for this ticket. If not provided, the default value from the Ticket Type Pass Template Design is used.
@@ -30259,7 +29637,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.SeatOrBuilder getSeatInfoOrBuilder() {
-      return getSeatInfo();
+      return seatInfo_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance() : seatInfo_;
     }
 
     public static final int FACEVALUE_FIELD_NUMBER = 9;
@@ -30297,7 +29675,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValueOrBuilder getFaceValueOrBuilder() {
-      return getFaceValue();
+      return faceValue_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance() : faceValue_;
     }
 
     public static final int PERSON_FIELD_NUMBER = 10;
@@ -30335,7 +29713,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     public static final int METADATA_FIELD_NUMBER = 11;
@@ -30350,6 +29728,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -30360,7 +29739,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -30371,7 +29749,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -30394,7 +29771,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -30406,10 +29782,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -30423,7 +29800,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 11;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -30436,7 +29812,7 @@ java.lang.String defaultValue);
     }
 
     public static final int OPTOUT_FIELD_NUMBER = 12;
-    private boolean optOut_;
+    private boolean optOut_ = false;
     /**
      * <pre>
      * Indicates if the holder of the ticket opted out to receive marketing promotions (defaults to false).
@@ -30451,7 +29827,7 @@ java.lang.String defaultValue);
     }
 
     public static final int STATUS_FIELD_NUMBER = 13;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Holds the ticket status.
@@ -30472,8 +29848,7 @@ java.lang.String defaultValue);
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+      com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
     }
 
@@ -30512,7 +29887,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      return getExpiryDate();
+      return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
     }
 
     public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 15;
@@ -30550,10 +29925,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     public static final int VALIDATEDETAILS_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_;
     /**
      * <pre>
@@ -30648,7 +30024,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.PassOuterClass.PassOverridesOrBuilder getPassOverridesOrBuilder() {
-      return getPassOverrides();
+      return passOverrides_ == null ? com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance() : passOverrides_;
     }
 
     public static final int PASSMETADATA_FIELD_NUMBER = 18;
@@ -30686,7 +30062,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetadataOrBuilder getPassMetaDataOrBuilder() {
-      return getPassMetaData();
+      return passMetaData_ == null ? com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance() : passMetaData_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 19;
@@ -30724,7 +30100,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 20;
@@ -30762,7 +30138,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -31253,52 +30629,41 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (eventBuilder_ != null) {
           eventBuilder_.clear();
         }
         ticketTypeId_ = "";
-
         ticketNumber_ = "";
-
         orderNumber_ = "";
-
         groupingId_ = "";
-
         barcodeContents_ = "";
-
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-        } else {
-          seatInfo_ = null;
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-        } else {
-          faceValue_ = null;
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         internalGetMutableMetaData().clear();
         optOut_ = false;
-
         status_ = 0;
-
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-        } else {
-          expiryDate_ = null;
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
         if (validateDetailsBuilder_ == null) {
@@ -31307,29 +30672,25 @@ java.lang.String defaultValue);
           validateDetails_ = null;
           validateDetailsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-        } else {
-          passMetaData_ = null;
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         eventInfoCase_ = 0;
@@ -31360,117 +30721,108 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (eventInfoCase_ == 1) {
-          result.eventInfo_ = eventInfo_;
-        }
-        if (eventInfoCase_ == 2) {
-          if (eventBuilder_ == null) {
-            result.eventInfo_ = eventInfo_;
-          } else {
-            result.eventInfo_ = eventBuilder_.build();
-          }
-        }
-        result.ticketTypeId_ = ticketTypeId_;
-        result.ticketNumber_ = ticketNumber_;
-        result.orderNumber_ = orderNumber_;
-        result.groupingId_ = groupingId_;
-        result.barcodeContents_ = barcodeContents_;
-        if (seatInfoBuilder_ == null) {
-          result.seatInfo_ = seatInfo_;
-        } else {
-          result.seatInfo_ = seatInfoBuilder_.build();
-        }
-        if (faceValueBuilder_ == null) {
-          result.faceValue_ = faceValue_;
-        } else {
-          result.faceValue_ = faceValueBuilder_.build();
-        }
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
-        result.optOut_ = optOut_;
-        result.status_ = status_;
-        if (expiryDateBuilder_ == null) {
-          result.expiryDate_ = expiryDate_;
-        } else {
-          result.expiryDate_ = expiryDateBuilder_.build();
-        }
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest result) {
         if (validateDetailsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             validateDetails_ = java.util.Collections.unmodifiableList(validateDetails_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.validateDetails_ = validateDetails_;
         } else {
           result.validateDetails_ = validateDetailsBuilder_.build();
         }
-        if (passOverridesBuilder_ == null) {
-          result.passOverrides_ = passOverrides_;
-        } else {
-          result.passOverrides_ = passOverridesBuilder_.build();
-        }
-        if (passMetaDataBuilder_ == null) {
-          result.passMetaData_ = passMetaData_;
-        } else {
-          result.passMetaData_ = passMetaDataBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        result.eventInfoCase_ = eventInfoCase_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ticketTypeId_ = ticketTypeId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ticketNumber_ = ticketNumber_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.orderNumber_ = orderNumber_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.groupingId_ = groupingId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.barcodeContents_ = barcodeContents_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.seatInfo_ = seatInfoBuilder_ == null
+              ? seatInfo_
+              : seatInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.faceValue_ = faceValueBuilder_ == null
+              ? faceValue_
+              : faceValueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.optOut_ = optOut_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.expiryDate_ = expiryDateBuilder_ == null
+              ? expiryDate_
+              : expiryDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.passOverrides_ = passOverridesBuilder_ == null
+              ? passOverrides_
+              : passOverridesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.passMetaData_ = passMetaDataBuilder_ == null
+              ? passMetaData_
+              : passMetaDataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest result) {
+        result.eventInfoCase_ = eventInfoCase_;
+        result.eventInfo_ = this.eventInfo_;
+        if (eventInfoCase_ == 2 &&
+            eventBuilder_ != null) {
+          result.eventInfo_ = eventBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest) {
@@ -31485,22 +30837,27 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest.getDefaultInstance()) return this;
         if (!other.getTicketTypeId().isEmpty()) {
           ticketTypeId_ = other.ticketTypeId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getTicketNumber().isEmpty()) {
           ticketNumber_ = other.ticketNumber_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getOrderNumber().isEmpty()) {
           orderNumber_ = other.orderNumber_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getGroupingId().isEmpty()) {
           groupingId_ = other.groupingId_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getBarcodeContents().isEmpty()) {
           barcodeContents_ = other.barcodeContents_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.hasSeatInfo()) {
@@ -31514,6 +30871,7 @@ java.lang.String defaultValue);
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
+        bitField0_ |= 0x00000400;
         if (other.getOptOut() != false) {
           setOptOut(other.getOptOut());
         }
@@ -31530,7 +30888,7 @@ java.lang.String defaultValue);
           if (!other.validateDetails_.isEmpty()) {
             if (validateDetails_.isEmpty()) {
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureValidateDetailsIsMutable();
               validateDetails_.addAll(other.validateDetails_);
@@ -31543,7 +30901,7 @@ java.lang.String defaultValue);
               validateDetailsBuilder_.dispose();
               validateDetailsBuilder_ = null;
               validateDetails_ = other.validateDetails_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00008000);
               validateDetailsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getValidateDetailsFieldBuilder() : null;
@@ -31620,48 +30978,48 @@ java.lang.String defaultValue);
               } // case 18
               case 26: {
                 ticketTypeId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 ticketNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 orderNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 groupingId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 barcodeContents_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getSeatInfoFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getFaceValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getPersonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
@@ -31670,30 +31028,31 @@ java.lang.String defaultValue);
                     MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetaData().getMutableMap().put(
                     metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 96: {
                 optOut_ = input.readBool();
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 96
               case 104: {
                 status_ = input.readEnum();
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 104
               case 114: {
                 input.readMessage(
                     getExpiryDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 input.readMessage(
                     getRedemptionDetailsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
@@ -31713,28 +31072,28 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getPassOverridesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     getPassMetaDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 input.readMessage(
                     getCreatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getUpdatedFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               default: {
@@ -31845,10 +31204,8 @@ java.lang.String defaultValue);
        */
       public Builder setEventId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  eventInfoCase_ = 1;
+        if (value == null) { throw new NullPointerException(); }
+        eventInfoCase_ = 1;
         eventInfo_ = value;
         onChanged();
         return this;
@@ -31880,10 +31237,8 @@ java.lang.String defaultValue);
        */
       public Builder setEventIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventInfoCase_ = 1;
         eventInfo_ = value;
         onChanged();
@@ -32064,7 +31419,7 @@ java.lang.String defaultValue);
           eventInfo_ = null;
         }
         eventInfoCase_ = 2;
-        onChanged();;
+        onChanged();
         return eventBuilder_;
       }
 
@@ -32121,11 +31476,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -32138,8 +31491,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketTypeId() {
-        
         ticketTypeId_ = getDefaultInstance().getTicketTypeId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -32154,12 +31507,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -32217,11 +31568,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -32234,8 +31583,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketNumber() {
-        
         ticketNumber_ = getDefaultInstance().getTicketNumber();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -32250,12 +31599,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -32313,11 +31660,9 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -32330,8 +31675,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOrderNumber() {
-        
         orderNumber_ = getDefaultInstance().getOrderNumber();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -32346,12 +31691,10 @@ java.lang.String defaultValue);
        */
       public Builder setOrderNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderNumber_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -32409,11 +31752,9 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         groupingId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -32426,8 +31767,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGroupingId() {
-        
         groupingId_ = getDefaultInstance().getGroupingId();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -32442,12 +31783,10 @@ java.lang.String defaultValue);
        */
       public Builder setGroupingIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         groupingId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -32505,11 +31844,9 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContents(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodeContents_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -32522,8 +31859,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBarcodeContents() {
-        
         barcodeContents_ = getDefaultInstance().getBarcodeContents();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -32538,12 +31875,10 @@ java.lang.String defaultValue);
        */
       public Builder setBarcodeContentsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodeContents_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -32560,7 +31895,7 @@ java.lang.String defaultValue);
        * @return Whether the seatInfo field is set.
        */
       public boolean hasSeatInfo() {
-        return seatInfoBuilder_ != null || seatInfo_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -32590,11 +31925,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           seatInfo_ = value;
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -32608,11 +31943,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder builderForValue) {
         if (seatInfoBuilder_ == null) {
           seatInfo_ = builderForValue.build();
-          onChanged();
         } else {
           seatInfoBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -32624,17 +31959,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeSeatInfo(com.passkit.grpc.EventTickets.TicketOuterClass.Seat value) {
         if (seatInfoBuilder_ == null) {
-          if (seatInfo_ != null) {
-            seatInfo_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.Seat.newBuilder(seatInfo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            seatInfo_ != null &&
+            seatInfo_ != com.passkit.grpc.EventTickets.TicketOuterClass.Seat.getDefaultInstance()) {
+            getSeatInfoBuilder().mergeFrom(value);
           } else {
             seatInfo_ = value;
           }
-          onChanged();
         } else {
           seatInfoBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -32645,14 +31981,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 8;</code>
        */
       public Builder clearSeatInfo() {
-        if (seatInfoBuilder_ == null) {
-          seatInfo_ = null;
-          onChanged();
-        } else {
-          seatInfo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        seatInfo_ = null;
+        if (seatInfoBuilder_ != null) {
+          seatInfoBuilder_.dispose();
           seatInfoBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32663,7 +31998,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.Seat seatInfo = 8;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.Seat.Builder getSeatInfoBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getSeatInfoFieldBuilder().getBuilder();
       }
@@ -32715,7 +32050,7 @@ java.lang.String defaultValue);
        * @return Whether the faceValue field is set.
        */
       public boolean hasFaceValue() {
-        return faceValueBuilder_ != null || faceValue_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -32745,11 +32080,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           faceValue_ = value;
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -32763,11 +32098,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder builderForValue) {
         if (faceValueBuilder_ == null) {
           faceValue_ = builderForValue.build();
-          onChanged();
         } else {
           faceValueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -32779,17 +32114,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeFaceValue(com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue value) {
         if (faceValueBuilder_ == null) {
-          if (faceValue_ != null) {
-            faceValue_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.newBuilder(faceValue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            faceValue_ != null &&
+            faceValue_ != com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.getDefaultInstance()) {
+            getFaceValueBuilder().mergeFrom(value);
           } else {
             faceValue_ = value;
           }
-          onChanged();
         } else {
           faceValueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -32800,14 +32136,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 9;</code>
        */
       public Builder clearFaceValue() {
-        if (faceValueBuilder_ == null) {
-          faceValue_ = null;
-          onChanged();
-        } else {
-          faceValue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        faceValue_ = null;
+        if (faceValueBuilder_ != null) {
+          faceValueBuilder_.dispose();
           faceValueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32818,7 +32153,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.FaceValue faceValue = 9;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.FaceValue.Builder getFaceValueBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getFaceValueFieldBuilder().getBuilder();
       }
@@ -32870,7 +32205,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -32900,11 +32235,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -32918,11 +32253,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -32934,17 +32269,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -32955,14 +32291,13 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 10;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32973,7 +32308,7 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 10;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
@@ -33016,7 +32351,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -33024,8 +32359,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -33033,9 +32367,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -33046,7 +32381,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -33069,7 +32403,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -33081,10 +32414,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -33098,7 +32432,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -33109,8 +32442,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000400);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -33122,7 +32455,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -33135,7 +32467,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00000400;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -33149,12 +32482,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -33164,11 +32495,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 11;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000400;
         return this;
       }
 
@@ -33195,8 +32526,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setOptOut(boolean value) {
-        
+
         optOut_ = value;
+        bitField0_ |= 0x00000800;
         onChanged();
         return this;
       }
@@ -33209,7 +32541,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOptOut() {
-        
+        bitField0_ = (bitField0_ & ~0x00000800);
         optOut_ = false;
         onChanged();
         return this;
@@ -33237,8 +32569,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00001000;
         onChanged();
         return this;
       }
@@ -33252,8 +32584,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.valueOf(status_);
+        com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus result = com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.EventTickets.TicketOuterClass.TicketStatus.UNRECOGNIZED : result;
       }
       /**
@@ -33269,7 +32600,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00001000;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -33283,7 +32614,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00001000);
         status_ = 0;
         onChanged();
         return this;
@@ -33301,7 +32632,7 @@ java.lang.String defaultValue);
        * @return Whether the expiryDate field is set.
        */
       public boolean hasExpiryDate() {
-        return expiryDateBuilder_ != null || expiryDate_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -33331,11 +32662,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           expiryDate_ = value;
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -33349,11 +32680,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryDateBuilder_ == null) {
           expiryDate_ = builderForValue.build();
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -33365,17 +32696,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
         if (expiryDateBuilder_ == null) {
-          if (expiryDate_ != null) {
-            expiryDate_ =
-              com.google.protobuf.Timestamp.newBuilder(expiryDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            expiryDate_ != null &&
+            expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryDateBuilder().mergeFrom(value);
           } else {
             expiryDate_ = value;
           }
-          onChanged();
         } else {
           expiryDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -33386,14 +32718,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 14;</code>
        */
       public Builder clearExpiryDate() {
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-          onChanged();
-        } else {
-          expiryDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -33404,7 +32735,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 14;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getExpiryDateFieldBuilder().getBuilder();
       }
@@ -33456,7 +32787,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -33486,11 +32817,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -33504,11 +32835,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -33520,17 +32851,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -33541,14 +32873,13 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 15;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -33559,7 +32890,7 @@ java.lang.String defaultValue);
        * <code>.event_tickets.RedemptionDetails redemptionDetails = 15;</code>
        */
       public com.passkit.grpc.EventTickets.TicketOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -33602,9 +32933,9 @@ java.lang.String defaultValue);
       private java.util.List<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails> validateDetails_ =
         java.util.Collections.emptyList();
       private void ensureValidateDetailsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           validateDetails_ = new java.util.ArrayList<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails>(validateDetails_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -33798,7 +33129,7 @@ java.lang.String defaultValue);
       public Builder clearValidateDetails() {
         if (validateDetailsBuilder_ == null) {
           validateDetails_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           validateDetailsBuilder_.clear();
@@ -33903,7 +33234,7 @@ java.lang.String defaultValue);
           validateDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetails.Builder, com.passkit.grpc.EventTickets.TicketOuterClass.ValidateDetailsOrBuilder>(
                   validateDetails_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           validateDetails_ = null;
@@ -33923,7 +33254,7 @@ java.lang.String defaultValue);
        * @return Whether the passOverrides field is set.
        */
       public boolean hasPassOverrides() {
-        return passOverridesBuilder_ != null || passOverrides_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <pre>
@@ -33953,11 +33284,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passOverrides_ = value;
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -33971,11 +33302,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.PassOuterClass.PassOverrides.Builder builderForValue) {
         if (passOverridesBuilder_ == null) {
           passOverrides_ = builderForValue.build();
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -33987,17 +33318,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassOverrides(com.passkit.grpc.PassOuterClass.PassOverrides value) {
         if (passOverridesBuilder_ == null) {
-          if (passOverrides_ != null) {
-            passOverrides_ =
-              com.passkit.grpc.PassOuterClass.PassOverrides.newBuilder(passOverrides_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            passOverrides_ != null &&
+            passOverrides_ != com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance()) {
+            getPassOverridesBuilder().mergeFrom(value);
           } else {
             passOverrides_ = value;
           }
-          onChanged();
         } else {
           passOverridesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -34008,14 +33340,13 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 17;</code>
        */
       public Builder clearPassOverrides() {
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-          onChanged();
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -34026,7 +33357,7 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 17;</code>
        */
       public com.passkit.grpc.PassOuterClass.PassOverrides.Builder getPassOverridesBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getPassOverridesFieldBuilder().getBuilder();
       }
@@ -34078,7 +33409,7 @@ java.lang.String defaultValue);
        * @return Whether the passMetaData field is set.
        */
       public boolean hasPassMetaData() {
-        return passMetaDataBuilder_ != null || passMetaData_ != null;
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <pre>
@@ -34108,11 +33439,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passMetaData_ = value;
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -34126,11 +33457,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.MetricsOuterClass.Metadata.Builder builderForValue) {
         if (passMetaDataBuilder_ == null) {
           passMetaData_ = builderForValue.build();
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -34142,17 +33473,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassMetaData(com.passkit.grpc.MetricsOuterClass.Metadata value) {
         if (passMetaDataBuilder_ == null) {
-          if (passMetaData_ != null) {
-            passMetaData_ =
-              com.passkit.grpc.MetricsOuterClass.Metadata.newBuilder(passMetaData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00020000) != 0) &&
+            passMetaData_ != null &&
+            passMetaData_ != com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance()) {
+            getPassMetaDataBuilder().mergeFrom(value);
           } else {
             passMetaData_ = value;
           }
-          onChanged();
         } else {
           passMetaDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -34163,14 +33495,13 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 18;</code>
        */
       public Builder clearPassMetaData() {
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-          onChanged();
-        } else {
-          passMetaData_ = null;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -34181,7 +33512,7 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 18;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metadata.Builder getPassMetaDataBuilder() {
-        
+        bitField0_ |= 0x00020000;
         onChanged();
         return getPassMetaDataFieldBuilder().getBuilder();
       }
@@ -34233,7 +33564,7 @@ java.lang.String defaultValue);
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <pre>
@@ -34263,11 +33594,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -34281,11 +33612,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -34297,17 +33628,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00040000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -34318,14 +33650,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 19;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -34336,7 +33667,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 19;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00040000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -34388,7 +33719,7 @@ java.lang.String defaultValue);
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -34418,11 +33749,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -34436,11 +33767,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -34452,17 +33783,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -34473,14 +33805,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 20;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -34491,7 +33822,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 20;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -34725,11 +34056,6 @@ java.lang.String defaultValue);
       return new IssueTicketResponseIds();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_IssueTicketResponseIds_descriptor;
@@ -34744,7 +34070,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object ticketId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketId_ = "";
     /**
      * <pre>
      * PassKit generated ticket id (22 characters).
@@ -34790,7 +34117,8 @@ java.lang.String defaultValue);
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * PassKit generated production id (22 characters).
@@ -34836,7 +34164,8 @@ java.lang.String defaultValue);
     }
 
     public static final int VENUEID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object venueId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object venueId_ = "";
     /**
      * <pre>
      * PassKit generated venue id (22 characters).
@@ -34882,7 +34211,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TICKETTYPEID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object ticketTypeId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketTypeId_ = "";
     /**
      * <pre>
      * PassKit generated ticket type id (22 characters).
@@ -34928,7 +34258,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EVENTID_FIELD_NUMBER = 5;
-    private volatile java.lang.Object eventId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventId_ = "";
     /**
      * <pre>
      * PassKit generated event id (22 characters).
@@ -35200,16 +34531,12 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         ticketId_ = "";
-
         productionId_ = "";
-
         venueId_ = "";
-
         ticketTypeId_ = "";
-
         eventId_ = "";
-
         return this;
       }
 
@@ -35236,47 +34563,30 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds result = new com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds(this);
-        result.ticketId_ = ticketId_;
-        result.productionId_ = productionId_;
-        result.venueId_ = venueId_;
-        result.ticketTypeId_ = ticketTypeId_;
-        result.eventId_ = eventId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ticketId_ = ticketId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.venueId_ = venueId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.ticketTypeId_ = ticketTypeId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.eventId_ = eventId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds) {
@@ -35291,22 +34601,27 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds.getDefaultInstance()) return this;
         if (!other.getTicketId().isEmpty()) {
           ticketId_ = other.ticketId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getVenueId().isEmpty()) {
           venueId_ = other.venueId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getTicketTypeId().isEmpty()) {
           ticketTypeId_ = other.ticketTypeId_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEventId().isEmpty()) {
           eventId_ = other.eventId_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -35337,27 +34652,27 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 ticketId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 productionId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 venueId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 ticketTypeId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 eventId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               default: {
@@ -35375,6 +34690,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object ticketId_ = "";
       /**
@@ -35429,11 +34745,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -35446,8 +34760,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketId() {
-        
         ticketId_ = getDefaultInstance().getTicketId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -35462,12 +34776,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -35525,11 +34837,9 @@ java.lang.String defaultValue);
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -35542,8 +34852,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -35558,12 +34868,10 @@ java.lang.String defaultValue);
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -35621,11 +34929,9 @@ java.lang.String defaultValue);
        */
       public Builder setVenueId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         venueId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -35638,8 +34944,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVenueId() {
-        
         venueId_ = getDefaultInstance().getVenueId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -35654,12 +34960,10 @@ java.lang.String defaultValue);
        */
       public Builder setVenueIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         venueId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -35717,11 +35021,9 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -35734,8 +35036,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTicketTypeId() {
-        
         ticketTypeId_ = getDefaultInstance().getTicketTypeId();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -35750,12 +35052,10 @@ java.lang.String defaultValue);
        */
       public Builder setTicketTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -35813,11 +35113,9 @@ java.lang.String defaultValue);
        */
       public Builder setEventId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         eventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -35830,8 +35128,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearEventId() {
-        
         eventId_ = getDefaultInstance().getEventId();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -35846,12 +35144,10 @@ java.lang.String defaultValue);
        */
       public Builder setEventIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -36017,7 +35313,7 @@ java.lang.String defaultValue);
      */
     int getFormatValue(int index);
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest.RequestCase getRequestCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest.RequestCase getRequestCase();
   }
   /**
    * Protobuf type {@code event_tickets.EventTicketPassRequest}
@@ -36042,11 +35338,6 @@ java.lang.String defaultValue);
       return new EventTicketPassRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_EventTicketPassRequest_descriptor;
@@ -36061,6 +35352,7 @@ java.lang.String defaultValue);
     }
 
     private int requestCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object request_;
     public enum RequestCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -36197,14 +35489,14 @@ java.lang.String defaultValue);
     }
 
     public static final int FORMAT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> format_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.CommonObjects.PassBundleFormat> format_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.CommonObjects.PassBundleFormat>() {
               public com.passkit.grpc.CommonObjects.PassBundleFormat convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.CommonObjects.PassBundleFormat result = com.passkit.grpc.CommonObjects.PassBundleFormat.valueOf(from);
+                com.passkit.grpc.CommonObjects.PassBundleFormat result = com.passkit.grpc.CommonObjects.PassBundleFormat.forNumber(from);
                 return result == null ? com.passkit.grpc.CommonObjects.PassBundleFormat.UNRECOGNIZED : result;
               }
             };
@@ -36530,6 +35822,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (ticketIdBuilder_ != null) {
           ticketIdBuilder_.clear();
         }
@@ -36540,7 +35833,7 @@ java.lang.String defaultValue);
           orderNumberBuilder_.clear();
         }
         format_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         requestCase_ = 0;
         request_ = null;
         return this;
@@ -36569,70 +35862,42 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest result = new com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (requestCase_ == 1) {
-          if (ticketIdBuilder_ == null) {
-            result.request_ = request_;
-          } else {
-            result.request_ = ticketIdBuilder_.build();
-          }
-        }
-        if (requestCase_ == 2) {
-          if (ticketNumberBuilder_ == null) {
-            result.request_ = request_;
-          } else {
-            result.request_ = ticketNumberBuilder_.build();
-          }
-        }
-        if (requestCase_ == 3) {
-          if (orderNumberBuilder_ == null) {
-            result.request_ = request_;
-          } else {
-            result.request_ = orderNumberBuilder_.build();
-          }
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          format_ = java.util.Collections.unmodifiableList(format_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.format_ = format_;
-        result.requestCase_ = requestCase_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          format_ = java.util.Collections.unmodifiableList(format_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.format_ = format_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
+
+      private void buildPartialOneofs(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest result) {
+        result.requestCase_ = requestCase_;
+        result.request_ = this.request_;
+        if (requestCase_ == 1 &&
+            ticketIdBuilder_ != null) {
+          result.request_ = ticketIdBuilder_.build();
+        }
+        if (requestCase_ == 2 &&
+            ticketNumberBuilder_ != null) {
+          result.request_ = ticketNumberBuilder_.build();
+        }
+        if (requestCase_ == 3 &&
+            orderNumberBuilder_ != null) {
+          result.request_ = orderNumberBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest) {
@@ -36648,7 +35913,7 @@ java.lang.String defaultValue);
         if (!other.format_.isEmpty()) {
           if (format_.isEmpty()) {
             format_ = other.format_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureFormatIsMutable();
             format_.addAll(other.format_);
@@ -36906,7 +36171,7 @@ java.lang.String defaultValue);
           request_ = null;
         }
         requestCase_ = 1;
-        onChanged();;
+        onChanged();
         return ticketIdBuilder_;
       }
 
@@ -37048,7 +36313,7 @@ java.lang.String defaultValue);
           request_ = null;
         }
         requestCase_ = 2;
-        onChanged();;
+        onChanged();
         return ticketNumberBuilder_;
       }
 
@@ -37190,16 +36455,16 @@ java.lang.String defaultValue);
           request_ = null;
         }
         requestCase_ = 3;
-        onChanged();;
+        onChanged();
         return orderNumberBuilder_;
       }
 
       private java.util.List<java.lang.Integer> format_ =
         java.util.Collections.emptyList();
       private void ensureFormatIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           format_ = new java.util.ArrayList<java.lang.Integer>(format_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
         }
       }
       /**
@@ -37303,7 +36568,7 @@ java.lang.String defaultValue);
        */
       public Builder clearFormat() {
         format_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -37494,7 +36759,7 @@ java.lang.String defaultValue);
      */
     com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder();
 
-    public com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson.RequestCase getRequestCase();
+    com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson.RequestCase getRequestCase();
   }
   /**
    * Protobuf type {@code event_tickets.EventTicketPerson}
@@ -37518,11 +36783,6 @@ java.lang.String defaultValue);
       return new EventTicketPerson();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketOuterClass.internal_static_event_tickets_EventTicketPerson_descriptor;
@@ -37537,6 +36797,7 @@ java.lang.String defaultValue);
     }
 
     private int requestCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object request_;
     public enum RequestCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -37662,7 +36923,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -37897,16 +37158,16 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (ticketIdBuilder_ != null) {
           ticketIdBuilder_.clear();
         }
         if (ticketNumberBuilder_ != null) {
           ticketNumberBuilder_.clear();
         }
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         requestCase_ = 0;
@@ -37937,62 +37198,34 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson buildPartial() {
         com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson result = new com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson(this);
-        if (requestCase_ == 1) {
-          if (ticketIdBuilder_ == null) {
-            result.request_ = request_;
-          } else {
-            result.request_ = ticketIdBuilder_.build();
-          }
-        }
-        if (requestCase_ == 2) {
-          if (ticketNumberBuilder_ == null) {
-            result.request_ = request_;
-          } else {
-            result.request_ = ticketNumberBuilder_.build();
-          }
-        }
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
-        result.requestCase_ = requestCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson result) {
+        result.requestCase_ = requestCase_;
+        result.request_ = this.request_;
+        if (requestCase_ == 1 &&
+            ticketIdBuilder_ != null) {
+          result.request_ = ticketIdBuilder_.build();
+        }
+        if (requestCase_ == 2 &&
+            ticketNumberBuilder_ != null) {
+          result.request_ = ticketNumberBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson) {
@@ -38065,7 +37298,7 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getPersonFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 42
               default: {
@@ -38098,6 +37331,7 @@ java.lang.String defaultValue);
         return this;
       }
 
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
           com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.CommonObjects.Id.Builder, com.passkit.grpc.CommonObjects.IdOrBuilder> ticketIdBuilder_;
@@ -38237,7 +37471,7 @@ java.lang.String defaultValue);
           request_ = null;
         }
         requestCase_ = 1;
-        onChanged();;
+        onChanged();
         return ticketIdBuilder_;
       }
 
@@ -38379,7 +37613,7 @@ java.lang.String defaultValue);
           request_ = null;
         }
         requestCase_ = 2;
-        onChanged();;
+        onChanged();
         return ticketNumberBuilder_;
       }
 
@@ -38391,7 +37625,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.io.Person person = 5;</code>
@@ -38413,11 +37647,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -38427,11 +37661,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -38439,38 +37673,38 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Person person = 5;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Person person = 5;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }

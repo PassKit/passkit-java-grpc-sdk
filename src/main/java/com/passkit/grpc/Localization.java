@@ -882,7 +882,6 @@ public final class Localization {
      *
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
-
     /* nullable */
 java.lang.String getTranslationsOrDefault(
         java.lang.String key,
@@ -895,7 +894,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
-
     java.lang.String getTranslationsOrThrow(
         java.lang.String key);
   }
@@ -925,11 +923,6 @@ java.lang.String defaultValue);
       return new LocalizedString();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Localization.internal_static_io_LocalizedString_descriptor;
@@ -967,6 +960,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> translations_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -977,7 +971,6 @@ java.lang.String defaultValue);
       }
       return translations_;
     }
-
     public int getTranslationsCount() {
       return internalGetTranslations().getMap().size();
     }
@@ -988,7 +981,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
-
     @java.lang.Override
     public boolean containsTranslations(
         java.lang.String key) {
@@ -1011,7 +1003,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getTranslationsMap() {
       return internalGetTranslations().getMap();
     }
@@ -1023,10 +1014,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getTranslationsOrDefault(
+    public /* nullable */
+java.lang.String getTranslationsOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetTranslations().getMap();
@@ -1040,7 +1032,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; translations = 1;</code>
      */
     @java.lang.Override
-
     public java.lang.String getTranslationsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1277,6 +1268,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableTranslations().clear();
         return this;
       }
@@ -1304,45 +1296,19 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Localization.LocalizedString buildPartial() {
         com.passkit.grpc.Localization.LocalizedString result = new com.passkit.grpc.Localization.LocalizedString(this);
-        int from_bitField0_ = bitField0_;
-        result.translations_ = internalGetTranslations();
-        result.translations_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Localization.LocalizedString result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.translations_ = internalGetTranslations();
+          result.translations_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Localization.LocalizedString) {
@@ -1357,6 +1323,7 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) return this;
         internalGetMutableTranslations().mergeFrom(
             other.internalGetTranslations());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1389,6 +1356,7 @@ java.lang.String defaultValue);
                     TranslationsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableTranslations().getMutableMap().put(
                     translations__.getKey(), translations__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -1411,7 +1379,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> translations_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetTranslations() {
+          internalGetTranslations() {
         if (translations_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               TranslationsDefaultEntryHolder.defaultEntry);
@@ -1419,8 +1387,7 @@ java.lang.String defaultValue);
         return translations_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableTranslations() {
-        onChanged();;
+          internalGetMutableTranslations() {
         if (translations_ == null) {
           translations_ = com.google.protobuf.MapField.newMapField(
               TranslationsDefaultEntryHolder.defaultEntry);
@@ -1428,9 +1395,10 @@ java.lang.String defaultValue);
         if (!translations_.isMutable()) {
           translations_ = translations_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return translations_;
       }
-
       public int getTranslationsCount() {
         return internalGetTranslations().getMap().size();
       }
@@ -1441,7 +1409,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
-
       @java.lang.Override
       public boolean containsTranslations(
           java.lang.String key) {
@@ -1464,7 +1431,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getTranslationsMap() {
         return internalGetTranslations().getMap();
       }
@@ -1476,10 +1442,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getTranslationsOrDefault(
+      public /* nullable */
+java.lang.String getTranslationsOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetTranslations().getMap();
@@ -1493,7 +1460,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
       @java.lang.Override
-
       public java.lang.String getTranslationsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1504,8 +1470,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearTranslations() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableTranslations().getMutableMap()
             .clear();
         return this;
@@ -1517,7 +1483,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
-
       public Builder removeTranslations(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1530,7 +1495,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableTranslations() {
+          getMutableTranslations() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableTranslations().getMutableMap();
       }
       /**
@@ -1544,12 +1510,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableTranslations().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -1559,11 +1523,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; translations = 1;</code>
        */
-
       public Builder putAllTranslations(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableTranslations().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override

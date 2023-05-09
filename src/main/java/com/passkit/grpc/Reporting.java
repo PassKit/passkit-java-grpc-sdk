@@ -284,7 +284,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
-
     int getUtmSourceBreakdownOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -295,7 +294,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
-
     int getUtmSourceBreakdownOrThrow(
         java.lang.String key);
 
@@ -382,7 +380,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
-
     int getUtmMediumBreakdownOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -393,7 +390,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
-
     int getUtmMediumBreakdownOrThrow(
         java.lang.String key);
 
@@ -436,7 +432,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
-
     int getUtmNameBreakdownOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -447,7 +442,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
-
     int getUtmNameBreakdownOrThrow(
         java.lang.String key);
 
@@ -490,7 +484,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
-
     int getUtmTermBreakdownOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -501,7 +494,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
-
     int getUtmTermBreakdownOrThrow(
         java.lang.String key);
 
@@ -544,7 +536,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
-
     int getUtmContentBreakdownOrDefault(
         java.lang.String key,
         int defaultValue);
@@ -555,7 +546,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
-
     int getUtmContentBreakdownOrThrow(
         java.lang.String key);
   }
@@ -583,11 +573,6 @@ public final class Reporting {
       return new AnalyticsResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_AnalyticsResponse_descriptor;
@@ -622,7 +607,7 @@ public final class Reporting {
     }
 
     public static final int PERIOD_FIELD_NUMBER = 1;
-    private int period_;
+    private int period_ = 0;
     /**
      * <pre>
      * The Period that the response data is grouped by by: per DAY, MONTH or YEAR.
@@ -643,13 +628,12 @@ public final class Reporting {
      * @return The period.
      */
     @java.lang.Override public com.passkit.grpc.Reporting.Period getPeriod() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
       return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
     }
 
     public static final int CREATED_FIELD_NUMBER = 2;
-    private int created_;
+    private int created_ = 0;
     /**
      * <pre>
      * Total number of passes created during the requested period.
@@ -664,7 +648,7 @@ public final class Reporting {
     }
 
     public static final int INSTALLED_FIELD_NUMBER = 3;
-    private int installed_;
+    private int installed_ = 0;
     /**
      * <pre>
      * Total number of passes installed during the requested period.
@@ -679,7 +663,7 @@ public final class Reporting {
     }
 
     public static final int DELETED_FIELD_NUMBER = 4;
-    private int deleted_;
+    private int deleted_ = 0;
     /**
      * <pre>
      * Total number of passes deleted during the requested period.
@@ -694,7 +678,7 @@ public final class Reporting {
     }
 
     public static final int INVALIDATED_FIELD_NUMBER = 5;
-    private int invalidated_;
+    private int invalidated_ = 0;
     /**
      * <pre>
      * Total number of passes invalidated during the requested period.
@@ -743,7 +727,7 @@ public final class Reporting {
      */
     @java.lang.Override
     public com.passkit.grpc.Reporting.DeviceBreakdownOrBuilder getDeviceBreakdownOrBuilder() {
-      return getDeviceBreakdown();
+      return deviceBreakdown_ == null ? com.passkit.grpc.Reporting.DeviceBreakdown.getDefaultInstance() : deviceBreakdown_;
     }
 
     public static final int UTMSOURCEBREAKDOWN_FIELD_NUMBER = 7;
@@ -758,6 +742,7 @@ public final class Reporting {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> utmSourceBreakdown_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -768,7 +753,6 @@ public final class Reporting {
       }
       return utmSourceBreakdown_;
     }
-
     public int getUtmSourceBreakdownCount() {
       return internalGetUtmSourceBreakdown().getMap().size();
     }
@@ -779,7 +763,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
-
     @java.lang.Override
     public boolean containsUtmSourceBreakdown(
         java.lang.String key) {
@@ -802,7 +785,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getUtmSourceBreakdownMap() {
       return internalGetUtmSourceBreakdown().getMap();
     }
@@ -814,7 +796,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
     @java.lang.Override
-
     public int getUtmSourceBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -831,7 +812,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
      */
     @java.lang.Override
-
     public int getUtmSourceBreakdownOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -844,6 +824,7 @@ public final class Reporting {
     }
 
     public static final int DATA_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Reporting.ChartDataPoints> data_;
     /**
      * <pre>
@@ -915,6 +896,7 @@ public final class Reporting {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> utmMediumBreakdown_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -925,7 +907,6 @@ public final class Reporting {
       }
       return utmMediumBreakdown_;
     }
-
     public int getUtmMediumBreakdownCount() {
       return internalGetUtmMediumBreakdown().getMap().size();
     }
@@ -936,7 +917,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
-
     @java.lang.Override
     public boolean containsUtmMediumBreakdown(
         java.lang.String key) {
@@ -959,7 +939,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getUtmMediumBreakdownMap() {
       return internalGetUtmMediumBreakdown().getMap();
     }
@@ -971,7 +950,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
     @java.lang.Override
-
     public int getUtmMediumBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -988,7 +966,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
      */
     @java.lang.Override
-
     public int getUtmMediumBreakdownOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1012,6 +989,7 @@ public final class Reporting {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> utmNameBreakdown_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -1022,7 +1000,6 @@ public final class Reporting {
       }
       return utmNameBreakdown_;
     }
-
     public int getUtmNameBreakdownCount() {
       return internalGetUtmNameBreakdown().getMap().size();
     }
@@ -1033,7 +1010,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
-
     @java.lang.Override
     public boolean containsUtmNameBreakdown(
         java.lang.String key) {
@@ -1056,7 +1032,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getUtmNameBreakdownMap() {
       return internalGetUtmNameBreakdown().getMap();
     }
@@ -1068,7 +1043,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
     @java.lang.Override
-
     public int getUtmNameBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -1085,7 +1059,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
      */
     @java.lang.Override
-
     public int getUtmNameBreakdownOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1109,6 +1082,7 @@ public final class Reporting {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> utmTermBreakdown_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -1119,7 +1093,6 @@ public final class Reporting {
       }
       return utmTermBreakdown_;
     }
-
     public int getUtmTermBreakdownCount() {
       return internalGetUtmTermBreakdown().getMap().size();
     }
@@ -1130,7 +1103,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
-
     @java.lang.Override
     public boolean containsUtmTermBreakdown(
         java.lang.String key) {
@@ -1153,7 +1125,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getUtmTermBreakdownMap() {
       return internalGetUtmTermBreakdown().getMap();
     }
@@ -1165,7 +1136,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
     @java.lang.Override
-
     public int getUtmTermBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -1182,7 +1152,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
      */
     @java.lang.Override
-
     public int getUtmTermBreakdownOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1206,6 +1175,7 @@ public final class Reporting {
                   com.google.protobuf.WireFormat.FieldType.UINT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> utmContentBreakdown_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -1216,7 +1186,6 @@ public final class Reporting {
       }
       return utmContentBreakdown_;
     }
-
     public int getUtmContentBreakdownCount() {
       return internalGetUtmContentBreakdown().getMap().size();
     }
@@ -1227,7 +1196,6 @@ public final class Reporting {
      *
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
-
     @java.lang.Override
     public boolean containsUtmContentBreakdown(
         java.lang.String key) {
@@ -1250,7 +1218,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getUtmContentBreakdownMap() {
       return internalGetUtmContentBreakdown().getMap();
     }
@@ -1262,7 +1229,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
     @java.lang.Override
-
     public int getUtmContentBreakdownOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -1279,7 +1245,6 @@ public final class Reporting {
      * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
      */
     @java.lang.Override
-
     public int getUtmContentBreakdownOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1699,20 +1664,15 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         period_ = 0;
-
         created_ = 0;
-
         installed_ = 0;
-
         deleted_ = 0;
-
         invalidated_ = 0;
-
-        if (deviceBreakdownBuilder_ == null) {
-          deviceBreakdown_ = null;
-        } else {
-          deviceBreakdown_ = null;
+        deviceBreakdown_ = null;
+        if (deviceBreakdownBuilder_ != null) {
+          deviceBreakdownBuilder_.dispose();
           deviceBreakdownBuilder_ = null;
         }
         internalGetMutableUtmSourceBreakdown().clear();
@@ -1722,7 +1682,7 @@ public final class Reporting {
           data_ = null;
           dataBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000080);
         internalGetMutableUtmMediumBreakdown().clear();
         internalGetMutableUtmNameBreakdown().clear();
         internalGetMutableUtmTermBreakdown().clear();
@@ -1753,72 +1713,68 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.AnalyticsResponse buildPartial() {
         com.passkit.grpc.Reporting.AnalyticsResponse result = new com.passkit.grpc.Reporting.AnalyticsResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.period_ = period_;
-        result.created_ = created_;
-        result.installed_ = installed_;
-        result.deleted_ = deleted_;
-        result.invalidated_ = invalidated_;
-        if (deviceBreakdownBuilder_ == null) {
-          result.deviceBreakdown_ = deviceBreakdown_;
-        } else {
-          result.deviceBreakdown_ = deviceBreakdownBuilder_.build();
-        }
-        result.utmSourceBreakdown_ = internalGetUtmSourceBreakdown();
-        result.utmSourceBreakdown_.makeImmutable();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Reporting.AnalyticsResponse result) {
         if (dataBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             data_ = java.util.Collections.unmodifiableList(data_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.data_ = data_;
         } else {
           result.data_ = dataBuilder_.build();
         }
-        result.utmMediumBreakdown_ = internalGetUtmMediumBreakdown();
-        result.utmMediumBreakdown_.makeImmutable();
-        result.utmNameBreakdown_ = internalGetUtmNameBreakdown();
-        result.utmNameBreakdown_.makeImmutable();
-        result.utmTermBreakdown_ = internalGetUtmTermBreakdown();
-        result.utmTermBreakdown_.makeImmutable();
-        result.utmContentBreakdown_ = internalGetUtmContentBreakdown();
-        result.utmContentBreakdown_.makeImmutable();
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.AnalyticsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.period_ = period_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.created_ = created_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.installed_ = installed_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deleted_ = deleted_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.invalidated_ = invalidated_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.deviceBreakdown_ = deviceBreakdownBuilder_ == null
+              ? deviceBreakdown_
+              : deviceBreakdownBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.utmSourceBreakdown_ = internalGetUtmSourceBreakdown();
+          result.utmSourceBreakdown_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.utmMediumBreakdown_ = internalGetUtmMediumBreakdown();
+          result.utmMediumBreakdown_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.utmNameBreakdown_ = internalGetUtmNameBreakdown();
+          result.utmNameBreakdown_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.utmTermBreakdown_ = internalGetUtmTermBreakdown();
+          result.utmTermBreakdown_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.utmContentBreakdown_ = internalGetUtmContentBreakdown();
+          result.utmContentBreakdown_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.AnalyticsResponse) {
@@ -1851,11 +1807,12 @@ public final class Reporting {
         }
         internalGetMutableUtmSourceBreakdown().mergeFrom(
             other.internalGetUtmSourceBreakdown());
+        bitField0_ |= 0x00000040;
         if (dataBuilder_ == null) {
           if (!other.data_.isEmpty()) {
             if (data_.isEmpty()) {
               data_ = other.data_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureDataIsMutable();
               data_.addAll(other.data_);
@@ -1868,7 +1825,7 @@ public final class Reporting {
               dataBuilder_.dispose();
               dataBuilder_ = null;
               data_ = other.data_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000080);
               dataBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDataFieldBuilder() : null;
@@ -1879,12 +1836,16 @@ public final class Reporting {
         }
         internalGetMutableUtmMediumBreakdown().mergeFrom(
             other.internalGetUtmMediumBreakdown());
+        bitField0_ |= 0x00000100;
         internalGetMutableUtmNameBreakdown().mergeFrom(
             other.internalGetUtmNameBreakdown());
+        bitField0_ |= 0x00000200;
         internalGetMutableUtmTermBreakdown().mergeFrom(
             other.internalGetUtmTermBreakdown());
+        bitField0_ |= 0x00000400;
         internalGetMutableUtmContentBreakdown().mergeFrom(
             other.internalGetUtmContentBreakdown());
+        bitField0_ |= 0x00000800;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1913,34 +1874,34 @@ public final class Reporting {
                 break;
               case 8: {
                 period_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 created_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 installed_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 deleted_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 invalidated_ = input.readUInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 input.readMessage(
                     getDeviceBreakdownFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
@@ -1949,6 +1910,7 @@ public final class Reporting {
                     UtmSourceBreakdownDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableUtmSourceBreakdown().getMutableMap().put(
                     utmSourceBreakdown__.getKey(), utmSourceBreakdown__.getValue());
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
@@ -1970,6 +1932,7 @@ public final class Reporting {
                     UtmMediumBreakdownDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableUtmMediumBreakdown().getMutableMap().put(
                     utmMediumBreakdown__.getKey(), utmMediumBreakdown__.getValue());
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
@@ -1978,6 +1941,7 @@ public final class Reporting {
                     UtmNameBreakdownDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableUtmNameBreakdown().getMutableMap().put(
                     utmNameBreakdown__.getKey(), utmNameBreakdown__.getValue());
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
@@ -1986,6 +1950,7 @@ public final class Reporting {
                     UtmTermBreakdownDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableUtmTermBreakdown().getMutableMap().put(
                     utmTermBreakdown__.getKey(), utmTermBreakdown__.getValue());
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
@@ -1994,6 +1959,7 @@ public final class Reporting {
                     UtmContentBreakdownDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableUtmContentBreakdown().getMutableMap().put(
                     utmContentBreakdown__.getKey(), utmContentBreakdown__.getValue());
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               default: {
@@ -2035,8 +2001,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setPeriodValue(int value) {
-        
         period_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2050,8 +2016,7 @@ public final class Reporting {
        */
       @java.lang.Override
       public com.passkit.grpc.Reporting.Period getPeriod() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
         return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
       }
       /**
@@ -2067,7 +2032,7 @@ public final class Reporting {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         period_ = value.getNumber();
         onChanged();
         return this;
@@ -2081,7 +2046,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearPeriod() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         period_ = 0;
         onChanged();
         return this;
@@ -2110,8 +2075,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setCreated(int value) {
-        
+
         created_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2124,7 +2090,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearCreated() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         created_ = 0;
         onChanged();
         return this;
@@ -2153,8 +2119,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setInstalled(int value) {
-        
+
         installed_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2167,7 +2134,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearInstalled() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         installed_ = 0;
         onChanged();
         return this;
@@ -2196,8 +2163,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setDeleted(int value) {
-        
+
         deleted_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2210,7 +2178,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearDeleted() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         deleted_ = 0;
         onChanged();
         return this;
@@ -2239,8 +2207,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setInvalidated(int value) {
-        
+
         invalidated_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2253,7 +2222,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearInvalidated() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         invalidated_ = 0;
         onChanged();
         return this;
@@ -2271,7 +2240,7 @@ public final class Reporting {
        * @return Whether the deviceBreakdown field is set.
        */
       public boolean hasDeviceBreakdown() {
-        return deviceBreakdownBuilder_ != null || deviceBreakdown_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -2301,11 +2270,11 @@ public final class Reporting {
             throw new NullPointerException();
           }
           deviceBreakdown_ = value;
-          onChanged();
         } else {
           deviceBreakdownBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2319,11 +2288,11 @@ public final class Reporting {
           com.passkit.grpc.Reporting.DeviceBreakdown.Builder builderForValue) {
         if (deviceBreakdownBuilder_ == null) {
           deviceBreakdown_ = builderForValue.build();
-          onChanged();
         } else {
           deviceBreakdownBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2335,17 +2304,18 @@ public final class Reporting {
        */
       public Builder mergeDeviceBreakdown(com.passkit.grpc.Reporting.DeviceBreakdown value) {
         if (deviceBreakdownBuilder_ == null) {
-          if (deviceBreakdown_ != null) {
-            deviceBreakdown_ =
-              com.passkit.grpc.Reporting.DeviceBreakdown.newBuilder(deviceBreakdown_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            deviceBreakdown_ != null &&
+            deviceBreakdown_ != com.passkit.grpc.Reporting.DeviceBreakdown.getDefaultInstance()) {
+            getDeviceBreakdownBuilder().mergeFrom(value);
           } else {
             deviceBreakdown_ = value;
           }
-          onChanged();
         } else {
           deviceBreakdownBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2356,14 +2326,13 @@ public final class Reporting {
        * <code>.io.DeviceBreakdown deviceBreakdown = 6;</code>
        */
       public Builder clearDeviceBreakdown() {
-        if (deviceBreakdownBuilder_ == null) {
-          deviceBreakdown_ = null;
-          onChanged();
-        } else {
-          deviceBreakdown_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        deviceBreakdown_ = null;
+        if (deviceBreakdownBuilder_ != null) {
+          deviceBreakdownBuilder_.dispose();
           deviceBreakdownBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2374,7 +2343,7 @@ public final class Reporting {
        * <code>.io.DeviceBreakdown deviceBreakdown = 6;</code>
        */
       public com.passkit.grpc.Reporting.DeviceBreakdown.Builder getDeviceBreakdownBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getDeviceBreakdownFieldBuilder().getBuilder();
       }
@@ -2417,7 +2386,7 @@ public final class Reporting {
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> utmSourceBreakdown_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetUtmSourceBreakdown() {
+          internalGetUtmSourceBreakdown() {
         if (utmSourceBreakdown_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               UtmSourceBreakdownDefaultEntryHolder.defaultEntry);
@@ -2425,8 +2394,7 @@ public final class Reporting {
         return utmSourceBreakdown_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableUtmSourceBreakdown() {
-        onChanged();;
+          internalGetMutableUtmSourceBreakdown() {
         if (utmSourceBreakdown_ == null) {
           utmSourceBreakdown_ = com.google.protobuf.MapField.newMapField(
               UtmSourceBreakdownDefaultEntryHolder.defaultEntry);
@@ -2434,9 +2402,10 @@ public final class Reporting {
         if (!utmSourceBreakdown_.isMutable()) {
           utmSourceBreakdown_ = utmSourceBreakdown_.copy();
         }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return utmSourceBreakdown_;
       }
-
       public int getUtmSourceBreakdownCount() {
         return internalGetUtmSourceBreakdown().getMap().size();
       }
@@ -2447,7 +2416,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
-
       @java.lang.Override
       public boolean containsUtmSourceBreakdown(
           java.lang.String key) {
@@ -2470,7 +2438,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getUtmSourceBreakdownMap() {
         return internalGetUtmSourceBreakdown().getMap();
       }
@@ -2482,7 +2449,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
       @java.lang.Override
-
       public int getUtmSourceBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -2499,7 +2465,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
       @java.lang.Override
-
       public int getUtmSourceBreakdownOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -2510,8 +2475,8 @@ public final class Reporting {
         }
         return map.get(key);
       }
-
       public Builder clearUtmSourceBreakdown() {
+        bitField0_ = (bitField0_ & ~0x00000040);
         internalGetMutableUtmSourceBreakdown().getMutableMap()
             .clear();
         return this;
@@ -2523,7 +2488,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
-
       public Builder removeUtmSourceBreakdown(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -2536,7 +2500,8 @@ public final class Reporting {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableUtmSourceBreakdown() {
+          getMutableUtmSourceBreakdown() {
+        bitField0_ |= 0x00000040;
         return internalGetMutableUtmSourceBreakdown().getMutableMap();
       }
       /**
@@ -2550,9 +2515,10 @@ public final class Reporting {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableUtmSourceBreakdown().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
@@ -2562,20 +2528,20 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmSourceBreakdown = 7;</code>
        */
-
       public Builder putAllUtmSourceBreakdown(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableUtmSourceBreakdown().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000040;
         return this;
       }
 
       private java.util.List<com.passkit.grpc.Reporting.ChartDataPoints> data_ =
         java.util.Collections.emptyList();
       private void ensureDataIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           data_ = new java.util.ArrayList<com.passkit.grpc.Reporting.ChartDataPoints>(data_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -2769,7 +2735,7 @@ public final class Reporting {
       public Builder clearData() {
         if (dataBuilder_ == null) {
           data_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           dataBuilder_.clear();
@@ -2874,7 +2840,7 @@ public final class Reporting {
           dataBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Reporting.ChartDataPoints, com.passkit.grpc.Reporting.ChartDataPoints.Builder, com.passkit.grpc.Reporting.ChartDataPointsOrBuilder>(
                   data_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           data_ = null;
@@ -2885,7 +2851,7 @@ public final class Reporting {
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> utmMediumBreakdown_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetUtmMediumBreakdown() {
+          internalGetUtmMediumBreakdown() {
         if (utmMediumBreakdown_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               UtmMediumBreakdownDefaultEntryHolder.defaultEntry);
@@ -2893,8 +2859,7 @@ public final class Reporting {
         return utmMediumBreakdown_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableUtmMediumBreakdown() {
-        onChanged();;
+          internalGetMutableUtmMediumBreakdown() {
         if (utmMediumBreakdown_ == null) {
           utmMediumBreakdown_ = com.google.protobuf.MapField.newMapField(
               UtmMediumBreakdownDefaultEntryHolder.defaultEntry);
@@ -2902,9 +2867,10 @@ public final class Reporting {
         if (!utmMediumBreakdown_.isMutable()) {
           utmMediumBreakdown_ = utmMediumBreakdown_.copy();
         }
+        bitField0_ |= 0x00000100;
+        onChanged();
         return utmMediumBreakdown_;
       }
-
       public int getUtmMediumBreakdownCount() {
         return internalGetUtmMediumBreakdown().getMap().size();
       }
@@ -2915,7 +2881,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
-
       @java.lang.Override
       public boolean containsUtmMediumBreakdown(
           java.lang.String key) {
@@ -2938,7 +2903,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getUtmMediumBreakdownMap() {
         return internalGetUtmMediumBreakdown().getMap();
       }
@@ -2950,7 +2914,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
       @java.lang.Override
-
       public int getUtmMediumBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -2967,7 +2930,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
       @java.lang.Override
-
       public int getUtmMediumBreakdownOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -2978,8 +2940,8 @@ public final class Reporting {
         }
         return map.get(key);
       }
-
       public Builder clearUtmMediumBreakdown() {
+        bitField0_ = (bitField0_ & ~0x00000100);
         internalGetMutableUtmMediumBreakdown().getMutableMap()
             .clear();
         return this;
@@ -2991,7 +2953,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
-
       public Builder removeUtmMediumBreakdown(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3004,7 +2965,8 @@ public final class Reporting {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableUtmMediumBreakdown() {
+          getMutableUtmMediumBreakdown() {
+        bitField0_ |= 0x00000100;
         return internalGetMutableUtmMediumBreakdown().getMutableMap();
       }
       /**
@@ -3018,9 +2980,10 @@ public final class Reporting {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableUtmMediumBreakdown().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000100;
         return this;
       }
       /**
@@ -3030,18 +2993,18 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmMediumBreakdown = 9;</code>
        */
-
       public Builder putAllUtmMediumBreakdown(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableUtmMediumBreakdown().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000100;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> utmNameBreakdown_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetUtmNameBreakdown() {
+          internalGetUtmNameBreakdown() {
         if (utmNameBreakdown_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               UtmNameBreakdownDefaultEntryHolder.defaultEntry);
@@ -3049,8 +3012,7 @@ public final class Reporting {
         return utmNameBreakdown_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableUtmNameBreakdown() {
-        onChanged();;
+          internalGetMutableUtmNameBreakdown() {
         if (utmNameBreakdown_ == null) {
           utmNameBreakdown_ = com.google.protobuf.MapField.newMapField(
               UtmNameBreakdownDefaultEntryHolder.defaultEntry);
@@ -3058,9 +3020,10 @@ public final class Reporting {
         if (!utmNameBreakdown_.isMutable()) {
           utmNameBreakdown_ = utmNameBreakdown_.copy();
         }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return utmNameBreakdown_;
       }
-
       public int getUtmNameBreakdownCount() {
         return internalGetUtmNameBreakdown().getMap().size();
       }
@@ -3071,7 +3034,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
-
       @java.lang.Override
       public boolean containsUtmNameBreakdown(
           java.lang.String key) {
@@ -3094,7 +3056,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getUtmNameBreakdownMap() {
         return internalGetUtmNameBreakdown().getMap();
       }
@@ -3106,7 +3067,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
       @java.lang.Override
-
       public int getUtmNameBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -3123,7 +3083,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
       @java.lang.Override
-
       public int getUtmNameBreakdownOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3134,8 +3093,8 @@ public final class Reporting {
         }
         return map.get(key);
       }
-
       public Builder clearUtmNameBreakdown() {
+        bitField0_ = (bitField0_ & ~0x00000200);
         internalGetMutableUtmNameBreakdown().getMutableMap()
             .clear();
         return this;
@@ -3147,7 +3106,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
-
       public Builder removeUtmNameBreakdown(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3160,7 +3118,8 @@ public final class Reporting {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableUtmNameBreakdown() {
+          getMutableUtmNameBreakdown() {
+        bitField0_ |= 0x00000200;
         return internalGetMutableUtmNameBreakdown().getMutableMap();
       }
       /**
@@ -3174,9 +3133,10 @@ public final class Reporting {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableUtmNameBreakdown().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -3186,18 +3146,18 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmNameBreakdown = 10;</code>
        */
-
       public Builder putAllUtmNameBreakdown(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableUtmNameBreakdown().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000200;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> utmTermBreakdown_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetUtmTermBreakdown() {
+          internalGetUtmTermBreakdown() {
         if (utmTermBreakdown_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               UtmTermBreakdownDefaultEntryHolder.defaultEntry);
@@ -3205,8 +3165,7 @@ public final class Reporting {
         return utmTermBreakdown_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableUtmTermBreakdown() {
-        onChanged();;
+          internalGetMutableUtmTermBreakdown() {
         if (utmTermBreakdown_ == null) {
           utmTermBreakdown_ = com.google.protobuf.MapField.newMapField(
               UtmTermBreakdownDefaultEntryHolder.defaultEntry);
@@ -3214,9 +3173,10 @@ public final class Reporting {
         if (!utmTermBreakdown_.isMutable()) {
           utmTermBreakdown_ = utmTermBreakdown_.copy();
         }
+        bitField0_ |= 0x00000400;
+        onChanged();
         return utmTermBreakdown_;
       }
-
       public int getUtmTermBreakdownCount() {
         return internalGetUtmTermBreakdown().getMap().size();
       }
@@ -3227,7 +3187,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
-
       @java.lang.Override
       public boolean containsUtmTermBreakdown(
           java.lang.String key) {
@@ -3250,7 +3209,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getUtmTermBreakdownMap() {
         return internalGetUtmTermBreakdown().getMap();
       }
@@ -3262,7 +3220,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
       @java.lang.Override
-
       public int getUtmTermBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -3279,7 +3236,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
       @java.lang.Override
-
       public int getUtmTermBreakdownOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3290,8 +3246,8 @@ public final class Reporting {
         }
         return map.get(key);
       }
-
       public Builder clearUtmTermBreakdown() {
+        bitField0_ = (bitField0_ & ~0x00000400);
         internalGetMutableUtmTermBreakdown().getMutableMap()
             .clear();
         return this;
@@ -3303,7 +3259,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
-
       public Builder removeUtmTermBreakdown(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3316,7 +3271,8 @@ public final class Reporting {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableUtmTermBreakdown() {
+          getMutableUtmTermBreakdown() {
+        bitField0_ |= 0x00000400;
         return internalGetMutableUtmTermBreakdown().getMutableMap();
       }
       /**
@@ -3330,9 +3286,10 @@ public final class Reporting {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableUtmTermBreakdown().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000400;
         return this;
       }
       /**
@@ -3342,18 +3299,18 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmTermBreakdown = 11;</code>
        */
-
       public Builder putAllUtmTermBreakdown(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableUtmTermBreakdown().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000400;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> utmContentBreakdown_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetUtmContentBreakdown() {
+          internalGetUtmContentBreakdown() {
         if (utmContentBreakdown_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               UtmContentBreakdownDefaultEntryHolder.defaultEntry);
@@ -3361,8 +3318,7 @@ public final class Reporting {
         return utmContentBreakdown_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableUtmContentBreakdown() {
-        onChanged();;
+          internalGetMutableUtmContentBreakdown() {
         if (utmContentBreakdown_ == null) {
           utmContentBreakdown_ = com.google.protobuf.MapField.newMapField(
               UtmContentBreakdownDefaultEntryHolder.defaultEntry);
@@ -3370,9 +3326,10 @@ public final class Reporting {
         if (!utmContentBreakdown_.isMutable()) {
           utmContentBreakdown_ = utmContentBreakdown_.copy();
         }
+        bitField0_ |= 0x00000800;
+        onChanged();
         return utmContentBreakdown_;
       }
-
       public int getUtmContentBreakdownCount() {
         return internalGetUtmContentBreakdown().getMap().size();
       }
@@ -3383,7 +3340,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
-
       @java.lang.Override
       public boolean containsUtmContentBreakdown(
           java.lang.String key) {
@@ -3406,7 +3362,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getUtmContentBreakdownMap() {
         return internalGetUtmContentBreakdown().getMap();
       }
@@ -3418,7 +3373,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
       @java.lang.Override
-
       public int getUtmContentBreakdownOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -3435,7 +3389,6 @@ public final class Reporting {
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
       @java.lang.Override
-
       public int getUtmContentBreakdownOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3446,8 +3399,8 @@ public final class Reporting {
         }
         return map.get(key);
       }
-
       public Builder clearUtmContentBreakdown() {
+        bitField0_ = (bitField0_ & ~0x00000800);
         internalGetMutableUtmContentBreakdown().getMutableMap()
             .clear();
         return this;
@@ -3459,7 +3412,6 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
-
       public Builder removeUtmContentBreakdown(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -3472,7 +3424,8 @@ public final class Reporting {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableUtmContentBreakdown() {
+          getMutableUtmContentBreakdown() {
+        bitField0_ |= 0x00000800;
         return internalGetMutableUtmContentBreakdown().getMutableMap();
       }
       /**
@@ -3486,9 +3439,10 @@ public final class Reporting {
           java.lang.String key,
           int value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        
+
         internalGetMutableUtmContentBreakdown().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000800;
         return this;
       }
       /**
@@ -3498,11 +3452,11 @@ public final class Reporting {
        *
        * <code>map&lt;string, uint32&gt; utmContentBreakdown = 12;</code>
        */
-
       public Builder putAllUtmContentBreakdown(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableUtmContentBreakdown().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000800;
         return this;
       }
       @java.lang.Override
@@ -3625,11 +3579,6 @@ public final class Reporting {
       return new DeviceBreakdown();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_DeviceBreakdown_descriptor;
@@ -3644,7 +3593,7 @@ public final class Reporting {
     }
 
     public static final int APPLEWALLET_FIELD_NUMBER = 1;
-    private int appleWallet_;
+    private int appleWallet_ = 0;
     /**
      * <pre>
      * Total number of passes installed in Apple Wallet.
@@ -3659,7 +3608,7 @@ public final class Reporting {
     }
 
     public static final int GOOGLEPAY_FIELD_NUMBER = 2;
-    private int googlePay_;
+    private int googlePay_ = 0;
     /**
      * <pre>
      * Total number of passes installed in Google Pay.
@@ -3674,7 +3623,7 @@ public final class Reporting {
     }
 
     public static final int OTHERWALLET_FIELD_NUMBER = 3;
-    private int otherWallet_;
+    private int otherWallet_ = 0;
     /**
      * <pre>
      * Total number of passes installed in Other Wallet.
@@ -3898,12 +3847,10 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         appleWallet_ = 0;
-
         googlePay_ = 0;
-
         otherWallet_ = 0;
-
         return this;
       }
 
@@ -3930,45 +3877,24 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.DeviceBreakdown buildPartial() {
         com.passkit.grpc.Reporting.DeviceBreakdown result = new com.passkit.grpc.Reporting.DeviceBreakdown(this);
-        result.appleWallet_ = appleWallet_;
-        result.googlePay_ = googlePay_;
-        result.otherWallet_ = otherWallet_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.DeviceBreakdown result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.appleWallet_ = appleWallet_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.googlePay_ = googlePay_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.otherWallet_ = otherWallet_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.DeviceBreakdown) {
@@ -4018,17 +3944,17 @@ public final class Reporting {
                 break;
               case 8: {
                 appleWallet_ = input.readUInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 googlePay_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 otherWallet_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -4046,6 +3972,7 @@ public final class Reporting {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int appleWallet_ ;
       /**
@@ -4070,8 +3997,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setAppleWallet(int value) {
-        
+
         appleWallet_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4084,7 +4012,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearAppleWallet() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         appleWallet_ = 0;
         onChanged();
         return this;
@@ -4113,8 +4041,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setGooglePay(int value) {
-        
+
         googlePay_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4127,7 +4056,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearGooglePay() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         googlePay_ = 0;
         onChanged();
         return this;
@@ -4156,8 +4085,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setOtherWallet(int value) {
-        
+
         otherWallet_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4170,7 +4100,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearOtherWallet() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         otherWallet_ = 0;
         onChanged();
         return this;
@@ -4346,11 +4276,6 @@ public final class Reporting {
       return new ChartDataPoints();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_ChartDataPoints_descriptor;
@@ -4365,7 +4290,8 @@ public final class Reporting {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * ie. January, Monday
@@ -4411,7 +4337,7 @@ public final class Reporting {
     }
 
     public static final int CREATED_FIELD_NUMBER = 2;
-    private int created_;
+    private int created_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of pass created.
@@ -4426,7 +4352,7 @@ public final class Reporting {
     }
 
     public static final int INSTALLED_FIELD_NUMBER = 3;
-    private int installed_;
+    private int installed_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of pass installed.
@@ -4441,7 +4367,7 @@ public final class Reporting {
     }
 
     public static final int UPDATED_FIELD_NUMBER = 4;
-    private int updated_;
+    private int updated_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of pass updated.
@@ -4456,7 +4382,7 @@ public final class Reporting {
     }
 
     public static final int DELETED_FIELD_NUMBER = 5;
-    private int deleted_;
+    private int deleted_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of pass deleted.
@@ -4471,7 +4397,7 @@ public final class Reporting {
     }
 
     public static final int INVALIDATED_FIELD_NUMBER = 6;
-    private int invalidated_;
+    private int invalidated_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of pass invalidated.
@@ -4486,7 +4412,7 @@ public final class Reporting {
     }
 
     public static final int CUSTOM_FIELD_NUMBER = 7;
-    private int custom_;
+    private int custom_ = 0;
     /**
      * <pre>
      * Daily, monthly or yearly total of custom data (in case this field used by a protocol; it can put whatever is preferred in here).
@@ -4753,20 +4679,14 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         created_ = 0;
-
         installed_ = 0;
-
         updated_ = 0;
-
         deleted_ = 0;
-
         invalidated_ = 0;
-
         custom_ = 0;
-
         return this;
       }
 
@@ -4793,49 +4713,36 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.ChartDataPoints buildPartial() {
         com.passkit.grpc.Reporting.ChartDataPoints result = new com.passkit.grpc.Reporting.ChartDataPoints(this);
-        result.name_ = name_;
-        result.created_ = created_;
-        result.installed_ = installed_;
-        result.updated_ = updated_;
-        result.deleted_ = deleted_;
-        result.invalidated_ = invalidated_;
-        result.custom_ = custom_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.ChartDataPoints result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.created_ = created_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.installed_ = installed_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.updated_ = updated_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deleted_ = deleted_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.invalidated_ = invalidated_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.custom_ = custom_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.ChartDataPoints) {
@@ -4850,6 +4757,7 @@ public final class Reporting {
         if (other == com.passkit.grpc.Reporting.ChartDataPoints.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getCreated() != 0) {
@@ -4898,37 +4806,37 @@ public final class Reporting {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 created_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 installed_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 updated_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 deleted_ = input.readUInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
                 invalidated_ = input.readUInt32();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
                 custom_ = input.readUInt32();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               default: {
@@ -4946,6 +4854,7 @@ public final class Reporting {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -5000,11 +4909,9 @@ public final class Reporting {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5017,8 +4924,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5033,12 +4940,10 @@ public final class Reporting {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5066,8 +4971,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setCreated(int value) {
-        
+
         created_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5080,7 +4986,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearCreated() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         created_ = 0;
         onChanged();
         return this;
@@ -5109,8 +5015,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setInstalled(int value) {
-        
+
         installed_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5123,7 +5030,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearInstalled() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         installed_ = 0;
         onChanged();
         return this;
@@ -5152,8 +5059,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setUpdated(int value) {
-        
+
         updated_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5166,7 +5074,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearUpdated() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         updated_ = 0;
         onChanged();
         return this;
@@ -5195,8 +5103,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setDeleted(int value) {
-        
+
         deleted_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5209,7 +5118,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearDeleted() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         deleted_ = 0;
         onChanged();
         return this;
@@ -5238,8 +5147,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setInvalidated(int value) {
-        
+
         invalidated_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -5252,7 +5162,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearInvalidated() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         invalidated_ = 0;
         onChanged();
         return this;
@@ -5281,8 +5191,9 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setCustom(int value) {
-        
+
         custom_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5295,7 +5206,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearCustom() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         custom_ = 0;
         onChanged();
         return this;
@@ -5531,7 +5442,7 @@ public final class Reporting {
      */
     com.passkit.grpc.Reporting.EventTicketAnalyticsFilterOrBuilder getEventTicketOrBuilder();
 
-    public com.passkit.grpc.Reporting.AnalyticsRequest.FilterCase getFilterCase();
+    com.passkit.grpc.Reporting.AnalyticsRequest.FilterCase getFilterCase();
   }
   /**
    * Protobuf type {@code io.AnalyticsRequest}
@@ -5561,11 +5472,6 @@ public final class Reporting {
       return new AnalyticsRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_AnalyticsRequest_descriptor;
@@ -5580,6 +5486,7 @@ public final class Reporting {
     }
 
     private int filterCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object filter_;
     public enum FilterCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -5623,7 +5530,7 @@ public final class Reporting {
     }
 
     public static final int PROTOCOL_FIELD_NUMBER = 1;
-    private int protocol_;
+    private int protocol_ = 0;
     /**
      * <pre>
      * The protocol that you are requesting analytics for, i.e. MEMBERSHIP, SINGLE_USE_COUPON, EVENT_TICKETS, FLIGHTS, etc.
@@ -5644,13 +5551,13 @@ public final class Reporting {
      * @return The protocol.
      */
     @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
       return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
     }
 
     public static final int CLASSID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object classId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
     /**
      * <pre>
      * The ID of the highest level element in the protocol. For Membership this is the Program ID, for coupons this is the Campaign ID, For Event Tickets this is Production, For Flight this is CarrierCode.
@@ -5696,7 +5603,7 @@ public final class Reporting {
     }
 
     public static final int PERIOD_FIELD_NUMBER = 3;
-    private int period_;
+    private int period_ = 0;
     /**
      * <pre>
      * The Period to group the response data by: per DAY, MONTH or YEAR.
@@ -5717,13 +5624,13 @@ public final class Reporting {
      * @return The period.
      */
     @java.lang.Override public com.passkit.grpc.Reporting.Period getPeriod() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+      com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
       return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
     }
 
     public static final int STARTDATE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object startDate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object startDate_ = "";
     /**
      * <pre>
      * Start date sets the oldest date of the data to be shown.
@@ -5769,7 +5676,8 @@ public final class Reporting {
     }
 
     public static final int ENDDATE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object endDate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object endDate_ = "";
     /**
      * <pre>
      * End date sets the latest date of the data to be shown.
@@ -5815,7 +5723,8 @@ public final class Reporting {
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object timezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timezone_ = "";
     /**
      * <pre>
      * Timezone in IANA format; defaults to UTC if not provided.
@@ -6244,18 +6153,13 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         protocol_ = 0;
-
         classId_ = "";
-
         period_ = 0;
-
         startDate_ = "";
-
         endDate_ = "";
-
         timezone_ = "";
-
         if (couponBuilder_ != null) {
           couponBuilder_.clear();
         }
@@ -6293,70 +6197,51 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.AnalyticsRequest buildPartial() {
         com.passkit.grpc.Reporting.AnalyticsRequest result = new com.passkit.grpc.Reporting.AnalyticsRequest(this);
-        result.protocol_ = protocol_;
-        result.classId_ = classId_;
-        result.period_ = period_;
-        result.startDate_ = startDate_;
-        result.endDate_ = endDate_;
-        result.timezone_ = timezone_;
-        if (filterCase_ == 15) {
-          if (couponBuilder_ == null) {
-            result.filter_ = filter_;
-          } else {
-            result.filter_ = couponBuilder_.build();
-          }
-        }
-        if (filterCase_ == 16) {
-          if (flightBuilder_ == null) {
-            result.filter_ = filter_;
-          } else {
-            result.filter_ = flightBuilder_.build();
-          }
-        }
-        if (filterCase_ == 17) {
-          if (eventTicketBuilder_ == null) {
-            result.filter_ = filter_;
-          } else {
-            result.filter_ = eventTicketBuilder_.build();
-          }
-        }
-        result.filterCase_ = filterCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.AnalyticsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.protocol_ = protocol_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.period_ = period_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startDate_ = startDate_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endDate_ = endDate_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.timezone_ = timezone_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.Reporting.AnalyticsRequest result) {
+        result.filterCase_ = filterCase_;
+        result.filter_ = this.filter_;
+        if (filterCase_ == 15 &&
+            couponBuilder_ != null) {
+          result.filter_ = couponBuilder_.build();
+        }
+        if (filterCase_ == 16 &&
+            flightBuilder_ != null) {
+          result.filter_ = flightBuilder_.build();
+        }
+        if (filterCase_ == 17 &&
+            eventTicketBuilder_ != null) {
+          result.filter_ = eventTicketBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.AnalyticsRequest) {
@@ -6374,6 +6259,7 @@ public final class Reporting {
         }
         if (!other.getClassId().isEmpty()) {
           classId_ = other.classId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.period_ != 0) {
@@ -6381,14 +6267,17 @@ public final class Reporting {
         }
         if (!other.getStartDate().isEmpty()) {
           startDate_ = other.startDate_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEndDate().isEmpty()) {
           endDate_ = other.endDate_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         switch (other.getFilterCase()) {
@@ -6436,32 +6325,32 @@ public final class Reporting {
                 break;
               case 8: {
                 protocol_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 classId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 period_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
                 startDate_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 endDate_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 timezone_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 122: {
@@ -6515,6 +6404,7 @@ public final class Reporting {
         return this;
       }
 
+      private int bitField0_;
 
       private int protocol_ = 0;
       /**
@@ -6538,8 +6428,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setProtocolValue(int value) {
-        
         protocol_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6553,8 +6443,7 @@ public final class Reporting {
        */
       @java.lang.Override
       public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
         return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
       }
       /**
@@ -6570,7 +6459,7 @@ public final class Reporting {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         protocol_ = value.getNumber();
         onChanged();
         return this;
@@ -6584,7 +6473,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         protocol_ = 0;
         onChanged();
         return this;
@@ -6643,11 +6532,9 @@ public final class Reporting {
        */
       public Builder setClassId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6660,8 +6547,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearClassId() {
-        
         classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6676,12 +6563,10 @@ public final class Reporting {
        */
       public Builder setClassIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6708,8 +6593,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder setPeriodValue(int value) {
-        
         period_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6723,8 +6608,7 @@ public final class Reporting {
        */
       @java.lang.Override
       public com.passkit.grpc.Reporting.Period getPeriod() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.valueOf(period_);
+        com.passkit.grpc.Reporting.Period result = com.passkit.grpc.Reporting.Period.forNumber(period_);
         return result == null ? com.passkit.grpc.Reporting.Period.UNRECOGNIZED : result;
       }
       /**
@@ -6740,7 +6624,7 @@ public final class Reporting {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         period_ = value.getNumber();
         onChanged();
         return this;
@@ -6754,7 +6638,7 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearPeriod() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         period_ = 0;
         onChanged();
         return this;
@@ -6813,11 +6697,9 @@ public final class Reporting {
        */
       public Builder setStartDate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         startDate_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6830,8 +6712,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearStartDate() {
-        
         startDate_ = getDefaultInstance().getStartDate();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -6846,12 +6728,10 @@ public final class Reporting {
        */
       public Builder setStartDateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         startDate_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -6909,11 +6789,9 @@ public final class Reporting {
        */
       public Builder setEndDate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         endDate_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6926,8 +6804,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearEndDate() {
-        
         endDate_ = getDefaultInstance().getEndDate();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -6942,12 +6820,10 @@ public final class Reporting {
        */
       public Builder setEndDateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         endDate_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -7005,11 +6881,9 @@ public final class Reporting {
        */
       public Builder setTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timezone_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -7022,8 +6896,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearTimezone() {
-        
         timezone_ = getDefaultInstance().getTimezone();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -7038,12 +6912,10 @@ public final class Reporting {
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timezone_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -7186,7 +7058,7 @@ public final class Reporting {
           filter_ = null;
         }
         filterCase_ = 15;
-        onChanged();;
+        onChanged();
         return couponBuilder_;
       }
 
@@ -7328,7 +7200,7 @@ public final class Reporting {
           filter_ = null;
         }
         filterCase_ = 16;
-        onChanged();;
+        onChanged();
         return flightBuilder_;
       }
 
@@ -7470,7 +7342,7 @@ public final class Reporting {
           filter_ = null;
         }
         filterCase_ = 17;
-        onChanged();;
+        onChanged();
         return eventTicketBuilder_;
       }
       @java.lang.Override
@@ -7576,11 +7448,6 @@ public final class Reporting {
       return new CouponAnalyticsFilter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_CouponAnalyticsFilter_descriptor;
@@ -7595,7 +7462,8 @@ public final class Reporting {
     }
 
     public static final int OFFERID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object offerId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerId_ = "";
     /**
      * <code>string offerId = 1;</code>
      * @return The offerId.
@@ -7819,8 +7687,8 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         offerId_ = "";
-
         return this;
       }
 
@@ -7847,43 +7715,18 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.CouponAnalyticsFilter buildPartial() {
         com.passkit.grpc.Reporting.CouponAnalyticsFilter result = new com.passkit.grpc.Reporting.CouponAnalyticsFilter(this);
-        result.offerId_ = offerId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.CouponAnalyticsFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.offerId_ = offerId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.CouponAnalyticsFilter) {
@@ -7898,6 +7741,7 @@ public final class Reporting {
         if (other == com.passkit.grpc.Reporting.CouponAnalyticsFilter.getDefaultInstance()) return this;
         if (!other.getOfferId().isEmpty()) {
           offerId_ = other.offerId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -7928,7 +7772,7 @@ public final class Reporting {
                 break;
               case 10: {
                 offerId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -7946,6 +7790,7 @@ public final class Reporting {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object offerId_ = "";
       /**
@@ -7988,11 +7833,9 @@ public final class Reporting {
        */
       public Builder setOfferId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8001,8 +7844,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearOfferId() {
-        
         offerId_ = getDefaultInstance().getOfferId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8013,12 +7856,10 @@ public final class Reporting {
        */
       public Builder setOfferIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8171,11 +8012,6 @@ public final class Reporting {
       return new FlightAnalyticsFilter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_FlightAnalyticsFilter_descriptor;
@@ -8190,7 +8026,8 @@ public final class Reporting {
     }
 
     public static final int FLIGHTNUMBER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object flightNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flightNumber_ = "";
     /**
      * <code>string flightNumber = 1;</code>
      * @return The flightNumber.
@@ -8250,11 +8087,12 @@ public final class Reporting {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getDepartureDateOrBuilder() {
-      return getDepartureDate();
+      return departureDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : departureDate_;
     }
 
     public static final int BOARDINGPOINT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object boardingPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object boardingPoint_ = "";
     /**
      * <code>string boardingPoint = 3;</code>
      * @return The boardingPoint.
@@ -8292,7 +8130,8 @@ public final class Reporting {
     }
 
     public static final int DEPLANINGPOINT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object deplaningPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deplaningPoint_ = "";
     /**
      * <code>string deplaningPoint = 4;</code>
      * @return The deplaningPoint.
@@ -8557,18 +8396,15 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         flightNumber_ = "";
-
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-        } else {
-          departureDate_ = null;
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
         boardingPoint_ = "";
-
         deplaningPoint_ = "";
-
         return this;
       }
 
@@ -8595,50 +8431,29 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.FlightAnalyticsFilter buildPartial() {
         com.passkit.grpc.Reporting.FlightAnalyticsFilter result = new com.passkit.grpc.Reporting.FlightAnalyticsFilter(this);
-        result.flightNumber_ = flightNumber_;
-        if (departureDateBuilder_ == null) {
-          result.departureDate_ = departureDate_;
-        } else {
-          result.departureDate_ = departureDateBuilder_.build();
-        }
-        result.boardingPoint_ = boardingPoint_;
-        result.deplaningPoint_ = deplaningPoint_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.FlightAnalyticsFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.flightNumber_ = flightNumber_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.departureDate_ = departureDateBuilder_ == null
+              ? departureDate_
+              : departureDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.boardingPoint_ = boardingPoint_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deplaningPoint_ = deplaningPoint_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.FlightAnalyticsFilter) {
@@ -8653,6 +8468,7 @@ public final class Reporting {
         if (other == com.passkit.grpc.Reporting.FlightAnalyticsFilter.getDefaultInstance()) return this;
         if (!other.getFlightNumber().isEmpty()) {
           flightNumber_ = other.flightNumber_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasDepartureDate()) {
@@ -8660,10 +8476,12 @@ public final class Reporting {
         }
         if (!other.getBoardingPoint().isEmpty()) {
           boardingPoint_ = other.boardingPoint_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDeplaningPoint().isEmpty()) {
           deplaningPoint_ = other.deplaningPoint_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -8694,24 +8512,24 @@ public final class Reporting {
                 break;
               case 10: {
                 flightNumber_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getDepartureDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 boardingPoint_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 deplaningPoint_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -8729,6 +8547,7 @@ public final class Reporting {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object flightNumber_ = "";
       /**
@@ -8771,11 +8590,9 @@ public final class Reporting {
        */
       public Builder setFlightNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         flightNumber_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8784,8 +8601,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearFlightNumber() {
-        
         flightNumber_ = getDefaultInstance().getFlightNumber();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8796,12 +8613,10 @@ public final class Reporting {
        */
       public Builder setFlightNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         flightNumber_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8814,7 +8629,7 @@ public final class Reporting {
        * @return Whether the departureDate field is set.
        */
       public boolean hasDepartureDate() {
-        return departureDateBuilder_ != null || departureDate_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.Date departureDate = 2;</code>
@@ -8836,11 +8651,11 @@ public final class Reporting {
             throw new NullPointerException();
           }
           departureDate_ = value;
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8850,11 +8665,11 @@ public final class Reporting {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (departureDateBuilder_ == null) {
           departureDate_ = builderForValue.build();
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8862,38 +8677,38 @@ public final class Reporting {
        */
       public Builder mergeDepartureDate(com.passkit.grpc.CommonObjects.Date value) {
         if (departureDateBuilder_ == null) {
-          if (departureDate_ != null) {
-            departureDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(departureDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            departureDate_ != null &&
+            departureDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getDepartureDateBuilder().mergeFrom(value);
           } else {
             departureDate_ = value;
           }
-          onChanged();
         } else {
           departureDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Date departureDate = 2;</code>
        */
       public Builder clearDepartureDate() {
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-          onChanged();
-        } else {
-          departureDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Date departureDate = 2;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getDepartureDateBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getDepartureDateFieldBuilder().getBuilder();
       }
@@ -8966,11 +8781,9 @@ public final class Reporting {
        */
       public Builder setBoardingPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         boardingPoint_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8979,8 +8792,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPoint() {
-        
         boardingPoint_ = getDefaultInstance().getBoardingPoint();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -8991,12 +8804,10 @@ public final class Reporting {
        */
       public Builder setBoardingPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         boardingPoint_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9042,11 +8853,9 @@ public final class Reporting {
        */
       public Builder setDeplaningPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9055,8 +8864,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearDeplaningPoint() {
-        
         deplaningPoint_ = getDefaultInstance().getDeplaningPoint();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -9067,12 +8876,10 @@ public final class Reporting {
        */
       public Builder setDeplaningPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9231,11 +9038,6 @@ public final class Reporting {
       return new EventTicketAnalyticsFilter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Reporting.internal_static_io_EventTicketAnalyticsFilter_descriptor;
@@ -9250,7 +9052,8 @@ public final class Reporting {
     }
 
     public static final int TICKETTYPEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object ticketTypeId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketTypeId_ = "";
     /**
      * <code>string ticketTypeId = 1;</code>
      * @return The ticketTypeId.
@@ -9288,7 +9091,8 @@ public final class Reporting {
     }
 
     public static final int TICKETTYPEUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object ticketTypeUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketTypeUid_ = "";
     /**
      * <code>string ticketTypeUid = 2;</code>
      * @return The ticketTypeUid.
@@ -9326,7 +9130,8 @@ public final class Reporting {
     }
 
     public static final int VENUEID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object venueId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object venueId_ = "";
     /**
      * <code>string venueId = 3;</code>
      * @return The venueId.
@@ -9364,7 +9169,8 @@ public final class Reporting {
     }
 
     public static final int VENUEUID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object venueUid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object venueUid_ = "";
     /**
      * <code>string venueUid = 4;</code>
      * @return The venueUid.
@@ -9402,7 +9208,8 @@ public final class Reporting {
     }
 
     public static final int EVENTID_FIELD_NUMBER = 5;
-    private volatile java.lang.Object eventId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object eventId_ = "";
     /**
      * <code>string eventId = 5;</code>
      * @return The eventId.
@@ -9666,16 +9473,12 @@ public final class Reporting {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         ticketTypeId_ = "";
-
         ticketTypeUid_ = "";
-
         venueId_ = "";
-
         venueUid_ = "";
-
         eventId_ = "";
-
         return this;
       }
 
@@ -9702,47 +9505,30 @@ public final class Reporting {
       @java.lang.Override
       public com.passkit.grpc.Reporting.EventTicketAnalyticsFilter buildPartial() {
         com.passkit.grpc.Reporting.EventTicketAnalyticsFilter result = new com.passkit.grpc.Reporting.EventTicketAnalyticsFilter(this);
-        result.ticketTypeId_ = ticketTypeId_;
-        result.ticketTypeUid_ = ticketTypeUid_;
-        result.venueId_ = venueId_;
-        result.venueUid_ = venueUid_;
-        result.eventId_ = eventId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Reporting.EventTicketAnalyticsFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ticketTypeId_ = ticketTypeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ticketTypeUid_ = ticketTypeUid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.venueId_ = venueId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.venueUid_ = venueUid_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.eventId_ = eventId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Reporting.EventTicketAnalyticsFilter) {
@@ -9757,22 +9543,27 @@ public final class Reporting {
         if (other == com.passkit.grpc.Reporting.EventTicketAnalyticsFilter.getDefaultInstance()) return this;
         if (!other.getTicketTypeId().isEmpty()) {
           ticketTypeId_ = other.ticketTypeId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTicketTypeUid().isEmpty()) {
           ticketTypeUid_ = other.ticketTypeUid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getVenueId().isEmpty()) {
           venueId_ = other.venueId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getVenueUid().isEmpty()) {
           venueUid_ = other.venueUid_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEventId().isEmpty()) {
           eventId_ = other.eventId_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9803,27 +9594,27 @@ public final class Reporting {
                 break;
               case 10: {
                 ticketTypeId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 ticketTypeUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 venueId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 venueUid_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 eventId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               default: {
@@ -9841,6 +9632,7 @@ public final class Reporting {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object ticketTypeId_ = "";
       /**
@@ -9883,11 +9675,9 @@ public final class Reporting {
        */
       public Builder setTicketTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9896,8 +9686,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearTicketTypeId() {
-        
         ticketTypeId_ = getDefaultInstance().getTicketTypeId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9908,12 +9698,10 @@ public final class Reporting {
        */
       public Builder setTicketTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9959,11 +9747,9 @@ public final class Reporting {
        */
       public Builder setTicketTypeUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketTypeUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9972,8 +9758,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearTicketTypeUid() {
-        
         ticketTypeUid_ = getDefaultInstance().getTicketTypeUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9984,12 +9770,10 @@ public final class Reporting {
        */
       public Builder setTicketTypeUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeUid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10035,11 +9819,9 @@ public final class Reporting {
        */
       public Builder setVenueId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         venueId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10048,8 +9830,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearVenueId() {
-        
         venueId_ = getDefaultInstance().getVenueId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -10060,12 +9842,10 @@ public final class Reporting {
        */
       public Builder setVenueIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         venueId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -10111,11 +9891,9 @@ public final class Reporting {
        */
       public Builder setVenueUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         venueUid_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10124,8 +9902,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearVenueUid() {
-        
         venueUid_ = getDefaultInstance().getVenueUid();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -10136,12 +9914,10 @@ public final class Reporting {
        */
       public Builder setVenueUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         venueUid_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -10187,11 +9963,9 @@ public final class Reporting {
        */
       public Builder setEventId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         eventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -10200,8 +9974,8 @@ public final class Reporting {
        * @return This builder for chaining.
        */
       public Builder clearEventId() {
-        
         eventId_ = getDefaultInstance().getEventId();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -10212,12 +9986,10 @@ public final class Reporting {
        */
       public Builder setEventIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         eventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
