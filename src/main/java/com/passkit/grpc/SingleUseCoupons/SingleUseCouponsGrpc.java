@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.48.0)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/single_use_coupons/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SingleUseCouponsGrpc {
@@ -960,423 +960,228 @@ public final class SingleUseCouponsGrpc {
 
   /**
    */
-  public static abstract class SingleUseCouponsImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
+    default void createCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
+    default void updateCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
+    default void getCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
+    default void deleteCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponCampaignsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
+    default void listCouponCampaignsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponCampaignsDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponCampaigns(com.passkit.grpc.Filter.Filters request,
+    default void listCouponCampaigns(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponCampaignsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
+    default void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAnalyticsMethod(), responseObserver);
     }
 
     /**
      */
-    public void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
+    default void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCouponOfferMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
+    default void updateCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCouponOfferMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCouponOffer(com.passkit.grpc.CommonObjects.Id request,
+    default void getCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCouponOfferMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteCouponOffer(com.passkit.grpc.CommonObjects.Id request,
+    default void deleteCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteCouponOfferMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponOffersDeprecated(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated request,
+    default void listCouponOffersDeprecated(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponOffersDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponOffers(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest request,
+    default void listCouponOffers(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponOffersMethod(), responseObserver);
     }
 
     /**
      */
-    public void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
+    default void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateCouponMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
+    default void updateCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCouponMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponUpdates(
+    default io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponUpdates(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamCouponUpdatesMethod(), responseObserver);
     }
 
     /**
      */
-    public void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
+    default void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRedeemCouponMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateCouponExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request,
+    default void updateCouponExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateCouponExternalIdMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponRedemptions(
+    default io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponRedemptions(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getStreamCouponRedemptionsMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCouponById(com.passkit.grpc.CommonObjects.Id request,
+    default void getCouponById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCouponByIdMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCouponByExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request,
+    default void getCouponByExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCouponByExternalIdMethod(), responseObserver);
     }
 
     /**
      */
-    public void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
+    default void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getVoidCouponMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
+    default void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponsByCouponCampaignDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void listCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
+    default void listCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponsByCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void countCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
+    default void countCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountCouponsByCouponCampaignDeprecatedMethod(), responseObserver);
     }
 
     /**
      */
-    public void countCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
+    default void countCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountCouponsByCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
+    default void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchPersonMethod(), responseObserver);
     }
 
     /**
      */
-    public void copyCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request,
+    default void copyCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCopyCouponCampaignMethod(), responseObserver);
     }
 
     /**
      */
-    public void getMetaKeysForCampaign(com.passkit.grpc.CommonObjects.Id request,
+    default void getMetaKeysForCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMetaKeysForCampaignMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_COUPON_CAMPAIGN)))
-          .addMethod(
-            getUpdateCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
-                  this, METHODID_UPDATE_COUPON_CAMPAIGN)))
-          .addMethod(
-            getGetCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
-                  this, METHODID_GET_COUPON_CAMPAIGN)))
-          .addMethod(
-            getDeleteCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_COUPON_CAMPAIGN)))
-          .addMethod(
-            getListCouponCampaignsDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.PaginationOuterClass.Pagination,
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
-                  this, METHODID_LIST_COUPON_CAMPAIGNS_DEPRECATED)))
-          .addMethod(
-            getListCouponCampaignsMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.Filter.Filters,
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
-                  this, METHODID_LIST_COUPON_CAMPAIGNS)))
-          .addMethod(
-            getGetAnalyticsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Reporting.AnalyticsRequest,
-                com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse>(
-                  this, METHODID_GET_ANALYTICS)))
-          .addMethod(
-            getCreateCouponOfferMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_COUPON_OFFER)))
-          .addMethod(
-            getUpdateCouponOfferMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
-                  this, METHODID_UPDATE_COUPON_OFFER)))
-          .addMethod(
-            getGetCouponOfferMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
-                  this, METHODID_GET_COUPON_OFFER)))
-          .addMethod(
-            getDeleteCouponOfferMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_COUPON_OFFER)))
-          .addMethod(
-            getListCouponOffersDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated,
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
-                  this, METHODID_LIST_COUPON_OFFERS_DEPRECATED)))
-          .addMethod(
-            getListCouponOffersMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest,
-                com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
-                  this, METHODID_LIST_COUPON_OFFERS)))
-          .addMethod(
-            getCreateCouponMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_CREATE_COUPON)))
-          .addMethod(
-            getUpdateCouponMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_UPDATE_COUPON)))
-          .addMethod(
-            getStreamCouponUpdatesMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_STREAM_COUPON_UPDATES)))
-          .addMethod(
-            getRedeemCouponMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_REDEEM_COUPON)))
-          .addMethod(
-            getUpdateCouponExternalIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_UPDATE_COUPON_EXTERNAL_ID)))
-          .addMethod(
-            getStreamCouponRedemptionsMethod(),
-            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_STREAM_COUPON_REDEMPTIONS)))
-          .addMethod(
-            getGetCouponByIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
-                  this, METHODID_GET_COUPON_BY_ID)))
-          .addMethod(
-            getGetCouponByExternalIdMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest,
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
-                  this, METHODID_GET_COUPON_BY_EXTERNAL_ID)))
-          .addMethod(
-            getVoidCouponMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
-                com.google.protobuf.Empty>(
-                  this, METHODID_VOID_COUPON)))
-          .addMethod(
-            getListCouponsByCouponCampaignDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
-                  this, METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED)))
-          .addMethod(
-            getListCouponsByCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
-                  this, METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN)))
-          .addMethod(
-            getCountCouponsByCouponCampaignDeprecatedMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
-                com.passkit.grpc.CommonObjects.Count>(
-                  this, METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED)))
-          .addMethod(
-            getCountCouponsByCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
-                com.passkit.grpc.CommonObjects.Count>(
-                  this, METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN)))
-          .addMethod(
-            getPatchPersonMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Personal.PersonRequest,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_PATCH_PERSON)))
-          .addMethod(
-            getCopyCouponCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest,
-                com.passkit.grpc.CommonObjects.Id>(
-                  this, METHODID_COPY_COUPON_CAMPAIGN)))
-          .addMethod(
-            getGetMetaKeysForCampaignMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.CommonObjects.Strings>(
-                  this, METHODID_GET_META_KEYS_FOR_CAMPAIGN)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SingleUseCoupons.
    */
-  public static final class SingleUseCouponsStub extends io.grpc.stub.AbstractAsyncStub<SingleUseCouponsStub> {
+  public static abstract class SingleUseCouponsImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SingleUseCouponsGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SingleUseCoupons.
+   */
+  public static final class SingleUseCouponsStub
+      extends io.grpc.stub.AbstractAsyncStub<SingleUseCouponsStub> {
     private SingleUseCouponsStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1622,8 +1427,10 @@ public final class SingleUseCouponsGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SingleUseCoupons.
    */
-  public static final class SingleUseCouponsBlockingStub extends io.grpc.stub.AbstractBlockingStub<SingleUseCouponsBlockingStub> {
+  public static final class SingleUseCouponsBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SingleUseCouponsBlockingStub> {
     private SingleUseCouponsBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1832,8 +1639,10 @@ public final class SingleUseCouponsGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SingleUseCoupons.
    */
-  public static final class SingleUseCouponsFutureStub extends io.grpc.stub.AbstractFutureStub<SingleUseCouponsFutureStub> {
+  public static final class SingleUseCouponsFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SingleUseCouponsFutureStub> {
     private SingleUseCouponsFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -2049,10 +1858,10 @@ public final class SingleUseCouponsGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SingleUseCouponsImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SingleUseCouponsImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -2189,6 +1998,214 @@ public final class SingleUseCouponsGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_COUPON_CAMPAIGN)))
+        .addMethod(
+          getUpdateCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
+                service, METHODID_UPDATE_COUPON_CAMPAIGN)))
+        .addMethod(
+          getGetCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
+                service, METHODID_GET_COUPON_CAMPAIGN)))
+        .addMethod(
+          getDeleteCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_COUPON_CAMPAIGN)))
+        .addMethod(
+          getListCouponCampaignsDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.PaginationOuterClass.Pagination,
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
+                service, METHODID_LIST_COUPON_CAMPAIGNS_DEPRECATED)))
+        .addMethod(
+          getListCouponCampaignsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.Filter.Filters,
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign>(
+                service, METHODID_LIST_COUPON_CAMPAIGNS)))
+        .addMethod(
+          getGetAnalyticsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Reporting.AnalyticsRequest,
+              com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse>(
+                service, METHODID_GET_ANALYTICS)))
+        .addMethod(
+          getCreateCouponOfferMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_COUPON_OFFER)))
+        .addMethod(
+          getUpdateCouponOfferMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer,
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
+                service, METHODID_UPDATE_COUPON_OFFER)))
+        .addMethod(
+          getGetCouponOfferMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
+                service, METHODID_GET_COUPON_OFFER)))
+        .addMethod(
+          getDeleteCouponOfferMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_COUPON_OFFER)))
+        .addMethod(
+          getListCouponOffersDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated,
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
+                service, METHODID_LIST_COUPON_OFFERS_DEPRECATED)))
+        .addMethod(
+          getListCouponOffersMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest,
+              com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer>(
+                service, METHODID_LIST_COUPON_OFFERS)))
+        .addMethod(
+          getCreateCouponMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_COUPON)))
+        .addMethod(
+          getUpdateCouponMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_UPDATE_COUPON)))
+        .addMethod(
+          getStreamCouponUpdatesMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_STREAM_COUPON_UPDATES)))
+        .addMethod(
+          getRedeemCouponMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_REDEEM_COUPON)))
+        .addMethod(
+          getUpdateCouponExternalIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_UPDATE_COUPON_EXTERNAL_ID)))
+        .addMethod(
+          getStreamCouponRedemptionsMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_STREAM_COUPON_REDEMPTIONS)))
+        .addMethod(
+          getGetCouponByIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
+                service, METHODID_GET_COUPON_BY_ID)))
+        .addMethod(
+          getGetCouponByExternalIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest,
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
+                service, METHODID_GET_COUPON_BY_EXTERNAL_ID)))
+        .addMethod(
+          getVoidCouponMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon,
+              com.google.protobuf.Empty>(
+                service, METHODID_VOID_COUPON)))
+        .addMethod(
+          getListCouponsByCouponCampaignDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
+                service, METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED)))
+        .addMethod(
+          getListCouponsByCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon>(
+                service, METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN)))
+        .addMethod(
+          getCountCouponsByCouponCampaignDeprecatedMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
+              com.passkit.grpc.CommonObjects.Count>(
+                service, METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED)))
+        .addMethod(
+          getCountCouponsByCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest,
+              com.passkit.grpc.CommonObjects.Count>(
+                service, METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN)))
+        .addMethod(
+          getPatchPersonMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Personal.PersonRequest,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_PATCH_PERSON)))
+        .addMethod(
+          getCopyCouponCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_COPY_COUPON_CAMPAIGN)))
+        .addMethod(
+          getGetMetaKeysForCampaignMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.CommonObjects.Strings>(
+                service, METHODID_GET_META_KEYS_FOR_CAMPAIGN)))
+        .build();
   }
 
   private static abstract class SingleUseCouponsBaseDescriptorSupplier

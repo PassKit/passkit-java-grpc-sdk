@@ -32,282 +32,282 @@ public final class ARpcTemplates {
       "inks.proto\032\032io/common/pagination.proto\032\026" +
       "io/common/filter.proto2\324V\n\tTemplates\022\212\001\n" +
       "\016createTemplate\022\020.io.PassTemplate\032\006.io.I" +
-      "d\"^\202\323\344\223\002\016\"\t/template:\001*\222AG\n\016Pass Templat" +
-      "es\022\024Create Pass Template\032\037Creates a pass" +
-      " template record.\022\225\001\n\016updateTemplate\022\020.i" +
-      "o.PassTemplate\032\020.io.PassTemplate\"_\202\323\344\223\002\016" +
-      "\032\t/template:\001*\222AH\n\016Pass Templates\022\024Updat" +
-      "e Pass Template\032 Updates an pass templat" +
-      "e record.\022\234\001\n\013getTemplate\022\006.io.Id\032\030.io.P" +
-      "assTemplateResponse\"k\202\323\344\223\002\025\022\023/template/d" +
-      "ata/{id}\222AM\n\016Pass Templates\022\030Get Pass Te" +
-      "mplate Record\032!Retrieves a pass template" +
-      " record.\022\313\001\n\022getDefaultTemplate\022\032.io.Def" +
+      "d\"^\222AG\n\016Pass Templates\022\024Create Pass Temp" +
+      "late\032\037Creates a pass template record.\202\323\344" +
+      "\223\002\016\"\t/template:\001*\022\225\001\n\016updateTemplate\022\020.i" +
+      "o.PassTemplate\032\020.io.PassTemplate\"_\222AH\n\016P" +
+      "ass Templates\022\024Update Pass Template\032 Upd" +
+      "ates an pass template record.\202\323\344\223\002\016\032\t/te" +
+      "mplate:\001*\022\234\001\n\013getTemplate\022\006.io.Id\032\030.io.P" +
+      "assTemplateResponse\"k\222AM\n\016Pass Templates" +
+      "\022\030Get Pass Template Record\032!Retrieves a " +
+      "pass template record.\202\323\344\223\002\025\022\023/template/d" +
+      "ata/{id}\022\313\001\n\022getDefaultTemplate\022\032.io.Def" +
       "aultTemplateRequest\032\020.io.PassTemplate\"\206\001" +
-      "\202\323\344\223\002&\022$/template/data/{protocol}/{revis" +
-      "ion}\222AW\n\016Pass Templates\022\"Get A Default P" +
-      "ass Template Record\032!Retrieves a pass te" +
-      "mplate record.\022\253\001\n\014copyTemplate\022\023.io.Cop" +
-      "yObjectInput\032\006.io.Id\"~\202\323\344\223\002\023\"\016/template/" +
-      "copy:\001*\222Ab\n\016Pass Templates\022\033Copy a Pass " +
-      "Template Record\0323Copies a pass template " +
-      "record and returns a new id.\022\222\001\n\016deleteT" +
+      "\222AW\n\016Pass Templates\022\"Get A Default Pass " +
+      "Template Record\032!Retrieves a pass templa" +
+      "te record.\202\323\344\223\002&\022$/template/data/{protoc" +
+      "ol}/{revision}\022\253\001\n\014copyTemplate\022\023.io.Cop" +
+      "yObjectInput\032\006.io.Id\"~\222Ab\n\016Pass Template" +
+      "s\022\033Copy a Pass Template Record\0323Copies a" +
+      " pass template record and returns a new " +
+      "id.\202\323\344\223\002\023\"\016/template/copy:\001*\022\222\001\n\016deleteT" +
       "emplate\022\006.io.Id\032\026.google.protobuf.Empty\"" +
-      "`\202\323\344\223\002\020*\016/template/{id}\222AG\n\016Pass Templat" +
-      "es\022\024Delete Pass Template\032\037Deletes an pas" +
-      "s template record\022\220\002\n\036listTemplatesForUs" +
+      "`\222AG\n\016Pass Templates\022\024Delete Pass Templa" +
+      "te\032\037Deletes an pass template record\202\323\344\223\002" +
+      "\020*\016/template/{id}\022\220\002\n\036listTemplatesForUs" +
       "erDeprecated\022\016.io.Pagination\032\030.io.PassTe" +
-      "mplateResponse\"\301\001\202\323\344\223\002\021\022\017/templates/user" +
-      "\222A\246\001\n\016Pass Templates\022,Get All Pass Templ" +
-      "ates For User [DEPRECATED]\032f[DEPRECATED:" +
-      " OR operator is not supported] Retrieves" +
-      " all pass templates stored under the use" +
-      "r account.0\001\022\362\004\n\024listTemplatesForUser\022\013." +
-      "io.Filters\032\030.io.PassTemplateResponse\"\260\004\202" +
-      "\323\344\223\002\031\"\024/templates/user/list:\001*\222A\215\004\n\016Pass" +
-      " Templates\022\037Get All Pass Templates For U" +
-      "ser\032\331\003Retrieves all pass templates store" +
-      "d under the user account.\n\n<span style=\"" +
-      "font-weight:bold\">About filter field nam" +
-      "es, operators and sample payloads:</span" +
-      "> <a target=\"_blank\" href=\"https://help." +
-      "passkit.com/en/articles/4200250-pass-tem" +
-      "plates-locations-beacons-links-filtering" +
-      "-listing-and-counting-by-api#filter-pass" +
-      "-templates\">https://help.passkit.com/en/" +
-      "articles/4200250-pass-templates-location" +
-      "s-beacons-links-filtering-listing-and-co" +
-      "unting-by-api#filter-pass-templates</a>0" +
+      "mplateResponse\"\301\001\222A\246\001\n\016Pass Templates\022,G" +
+      "et All Pass Templates For User [DEPRECAT" +
+      "ED]\032f[DEPRECATED: OR operator is not sup" +
+      "ported] Retrieves all pass templates sto" +
+      "red under the user account.\202\323\344\223\002\021\022\017/temp" +
+      "lates/user0\001\022\362\004\n\024listTemplatesForUser\022\013." +
+      "io.Filters\032\030.io.PassTemplateResponse\"\260\004\222" +
+      "A\215\004\n\016Pass Templates\022\037Get All Pass Templa" +
+      "tes For User\032\331\003Retrieves all pass templa" +
+      "tes stored under the user account.\n\n<spa" +
+      "n style=\"font-weight:bold\">About filter " +
+      "field names, operators and sample payloa" +
+      "ds:</span> <a target=\"_blank\" href=\"http" +
+      "s://help.passkit.com/en/articles/4200250" +
+      "-pass-templates-locations-beacons-links-" +
+      "filtering-listing-and-counting-by-api#fi" +
+      "lter-pass-templates\">https://help.passki" +
+      "t.com/en/articles/4200250-pass-templates" +
+      "-locations-beacons-links-filtering-listi" +
+      "ng-and-counting-by-api#filter-pass-templ" +
+      "ates</a>\202\323\344\223\002\031\"\024/templates/user/list:\001*0" +
       "\001\022\202\002\n\027listTemplatesDeprecated\022\016.io.Pagin" +
-      "ation\032\030.io.PassTemplateResponse\"\272\001\202\323\344\223\002\014" +
-      "\022\n/templates\222A\244\001\n\016Pass Templates\022/Get Al" +
-      "l Pass Templates For Company [DEPRECATED" +
-      "]\032a[DEPRECATED: OR operator is not suppo" +
-      "rted] Retrieves all pass templates store" +
-      "d under the company.0\001\022\344\004\n\rlistTemplates" +
+      "ation\032\030.io.PassTemplateResponse\"\272\001\222A\244\001\n\016" +
+      "Pass Templates\022/Get All Pass Templates F" +
+      "or Company [DEPRECATED]\032a[DEPRECATED: OR" +
+      " operator is not supported] Retrieves al" +
+      "l pass templates stored under the compan" +
+      "y.\202\323\344\223\002\014\022\n/templates0\001\022\344\004\n\rlistTemplates" +
       "\022\013.io.Filters\032\030.io.PassTemplateResponse\"" +
-      "\251\004\202\323\344\223\002\024\"\017/templates/list:\001*\222A\213\004\n\016Pass T" +
-      "emplates\022\"Get All Pass Templates For Com" +
-      "pany\032\324\003Retrieves all pass templates stor" +
-      "ed under the company.\n\n<span style=\"font" +
-      "-weight:bold\">About filter field names, " +
-      "operators and sample payloads:</span> <a" +
-      " target=\"_blank\" href=\"https://help.pass" +
-      "kit.com/en/articles/4200250-pass-templat" +
-      "es-locations-beacons-links-filtering-lis" +
-      "ting-and-counting-by-api#filter-pass-tem" +
-      "plates\">https://help.passkit.com/en/arti" +
-      "cles/4200250-pass-templates-locations-be" +
-      "acons-links-filtering-listing-and-counti" +
-      "ng-by-api#filter-pass-templates</a>0\001\022\222\002" +
+      "\251\004\222A\213\004\n\016Pass Templates\022\"Get All Pass Tem" +
+      "plates For Company\032\324\003Retrieves all pass " +
+      "templates stored under the company.\n\n<sp" +
+      "an style=\"font-weight:bold\">About filter" +
+      " field names, operators and sample paylo" +
+      "ads:</span> <a target=\"_blank\" href=\"htt" +
+      "ps://help.passkit.com/en/articles/420025" +
+      "0-pass-templates-locations-beacons-links" +
+      "-filtering-listing-and-counting-by-api#f" +
+      "ilter-pass-templates\">https://help.passk" +
+      "it.com/en/articles/4200250-pass-template" +
+      "s-locations-beacons-links-filtering-list" +
+      "ing-and-counting-by-api#filter-pass-temp" +
+      "lates</a>\202\323\344\223\002\024\"\017/templates/list:\001*0\001\022\222\002" +
       "\n\030countTemplatesDeprecated\022\016.io.Paginati" +
-      "on\032\t.io.Count\"\332\001\202\323\344\223\002\022\022\020/templates/count" +
-      "\222A\276\001\n\016Pass Templates\022;Count All Pass Tem" +
-      "plates Available to The User [DEPRECATED" +
-      "]\032o[DEPRECATED: OR operator is not suppo" +
-      "rted] Retrieves a count of pass template" +
-      "s stored under the user\'s company.\022\357\004\n\016c" +
+      "on\032\t.io.Count\"\332\001\222A\276\001\n\016Pass Templates\022;Co" +
+      "unt All Pass Templates Available to The " +
+      "User [DEPRECATED]\032o[DEPRECATED: OR opera" +
+      "tor is not supported] Retrieves a count " +
+      "of pass templates stored under the user\'" +
+      "s company.\202\323\344\223\002\022\022\020/templates/count\022\357\004\n\016c" +
       "ountTemplates\022\013.io.Filters\032\t.io.Count\"\304\004" +
-      "\202\323\344\223\002\025\"\020/templates/count:\001*\222A\245\004\n\016Pass Te" +
-      "mplates\022.Count All Pass Templates Availa" +
-      "ble to The User\032\342\003Retrieves a count of p" +
-      "ass templates stored under the user\'s co" +
-      "mpany.\n\n<span style=\"font-weight:bold\">A" +
-      "bout filter field names, operators and s" +
-      "ample payloads:</span> <a target=\"_blank" +
-      "\" href=\"https://help.passkit.com/en/arti" +
-      "cles/4200250-pass-templates-locations-be" +
-      "acons-links-filtering-listing-and-counti" +
-      "ng-by-api#filter-pass-templates\">https:/" +
-      "/help.passkit.com/en/articles/4200250-pa" +
-      "ss-templates-locations-beacons-links-fil" +
-      "tering-listing-and-counting-by-api#filte" +
-      "r-pass-templates</a>\022\223\002\n\037countTemplatesF" +
+      "\222A\245\004\n\016Pass Templates\022.Count All Pass Tem" +
+      "plates Available to The User\032\342\003Retrieves" +
+      " a count of pass templates stored under " +
+      "the user\'s company.\n\n<span style=\"font-w" +
+      "eight:bold\">About filter field names, op" +
+      "erators and sample payloads:</span> <a t" +
+      "arget=\"_blank\" href=\"https://help.passki" +
+      "t.com/en/articles/4200250-pass-templates" +
+      "-locations-beacons-links-filtering-listi" +
+      "ng-and-counting-by-api#filter-pass-templ" +
+      "ates\">https://help.passkit.com/en/articl" +
+      "es/4200250-pass-templates-locations-beac" +
+      "ons-links-filtering-listing-and-counting" +
+      "-by-api#filter-pass-templates</a>\202\323\344\223\002\025\"" +
+      "\020/templates/count:\001*\022\223\002\n\037countTemplatesF" +
       "orUserDeprecated\022\016.io.Pagination\032\t.io.Co" +
-      "unt\"\324\001\202\323\344\223\002\027\022\025/templates/user/count\222A\263\001\n" +
-      "\016Pass Templates\0227Count All Pass Template" +
-      "s Owned by The User [DEPRECATED]\032h[DEPRE" +
-      "CATED: OR operator is not supported] Ret" +
-      "rieves all pass templates stored under t" +
-      "he user\'s account.\022\360\004\n\025countTemplatesFor" +
-      "User\022\013.io.Filters\032\t.io.Count\"\276\004\202\323\344\223\002\032\"\025/" +
-      "templates/user/count:\001*\222A\232\004\n\016Pass Templa" +
-      "tes\022*Count All Pass Templates Owned by T" +
-      "he User\032\333\003Retrieves all pass templates s" +
-      "tored under the user\'s account.\n\n<span s" +
-      "tyle=\"font-weight:bold\">About filter fie" +
-      "ld names, operators and sample payloads:" +
-      "</span> <a target=\"_blank\" href=\"https:/" +
-      "/help.passkit.com/en/articles/4200250-pa" +
-      "ss-templates-locations-beacons-links-fil" +
-      "tering-listing-and-counting-by-api#filte" +
-      "r-pass-templates\">https://help.passkit.c" +
-      "om/en/articles/4200250-pass-templates-lo" +
-      "cations-beacons-links-filtering-listing-" +
-      "and-counting-by-api#filter-pass-template" +
-      "s</a>\022z\n\016createLocation\022\017.io.GPSLocation" +
-      "\032\006.io.Id\"O\202\323\344\223\002\016\"\t/location:\001*\222A8\n\tLocat" +
-      "ions\022\017Create Location\032\032Creates a locatio" +
-      "n object.\022\203\001\n\016updateLocation\022\017.io.GPSLoc" +
-      "ation\032\017.io.GPSLocation\"O\202\323\344\223\002\016\032\t/locatio" +
-      "n:\001*\222A8\n\tLocations\022\017Update Location\032\032Upd" +
-      "ates a location object.\022\177\n\013getLocation\022\006" +
-      ".io.Id\032\017.io.GPSLocation\"W\202\323\344\223\002\020\022\016/locati" +
-      "on/{id}\222A>\n\tLocations\022\014Get Location\032#Ret" +
-      "rieves a single location object.\022\347\001\n\027lis" +
+      "unt\"\324\001\222A\263\001\n\016Pass Templates\0227Count All Pa" +
+      "ss Templates Owned by The User [DEPRECAT" +
+      "ED]\032h[DEPRECATED: OR operator is not sup" +
+      "ported] Retrieves all pass templates sto" +
+      "red under the user\'s account.\202\323\344\223\002\027\022\025/te" +
+      "mplates/user/count\022\360\004\n\025countTemplatesFor" +
+      "User\022\013.io.Filters\032\t.io.Count\"\276\004\222A\232\004\n\016Pas" +
+      "s Templates\022*Count All Pass Templates Ow" +
+      "ned by The User\032\333\003Retrieves all pass tem" +
+      "plates stored under the user\'s account.\n" +
+      "\n<span style=\"font-weight:bold\">About fi" +
+      "lter field names, operators and sample p" +
+      "ayloads:</span> <a target=\"_blank\" href=" +
+      "\"https://help.passkit.com/en/articles/42" +
+      "00250-pass-templates-locations-beacons-l" +
+      "inks-filtering-listing-and-counting-by-a" +
+      "pi#filter-pass-templates\">https://help.p" +
+      "asskit.com/en/articles/4200250-pass-temp" +
+      "lates-locations-beacons-links-filtering-" +
+      "listing-and-counting-by-api#filter-pass-" +
+      "templates</a>\202\323\344\223\002\032\"\025/templates/user/cou" +
+      "nt:\001*\022z\n\016createLocation\022\017.io.GPSLocation" +
+      "\032\006.io.Id\"O\222A8\n\tLocations\022\017Create Locatio" +
+      "n\032\032Creates a location object.\202\323\344\223\002\016\"\t/lo" +
+      "cation:\001*\022\203\001\n\016updateLocation\022\017.io.GPSLoc" +
+      "ation\032\017.io.GPSLocation\"O\222A8\n\tLocations\022\017" +
+      "Update Location\032\032Updates a location obje" +
+      "ct.\202\323\344\223\002\016\032\t/location:\001*\022\177\n\013getLocation\022\006" +
+      ".io.Id\032\017.io.GPSLocation\"W\222A>\n\tLocations\022" +
+      "\014Get Location\032#Retrieves a single locati" +
+      "on object.\202\323\344\223\002\020\022\016/location/{id}\022\347\001\n\027lis" +
       "tLocationsDeprecated\022\016.io.Pagination\032\017.i" +
-      "o.GPSLocation\"\250\001\202\323\344\223\002\014\022\n/locations\222A\222\001\n\t" +
-      "Locations\022\033List Locations [DEPRECATED]\032h" +
-      "[DEPRECATED: OR operator is not supporte" +
-      "d] Retrieves locations objects that matc" +
-      "h the supplied criteria.0\001\022\277\004\n\rlistLocat" +
-      "ions\022\013.io.Filters\032\017.io.GPSLocation\"\215\004\202\323\344" +
-      "\223\002\024\"\017/locations/list:\001*\222A\357\003\n\tLocations\022\016" +
-      "List Locations\032\321\003Retrieves locations obj" +
-      "ects that match the supplied criteria.\n\n" +
+      "o.GPSLocation\"\250\001\222A\222\001\n\tLocations\022\033List Lo" +
+      "cations [DEPRECATED]\032h[DEPRECATED: OR op" +
+      "erator is not supported] Retrieves locat" +
+      "ions objects that match the supplied cri" +
+      "teria.\202\323\344\223\002\014\022\n/locations0\001\022\277\004\n\rlistLocat" +
+      "ions\022\013.io.Filters\032\017.io.GPSLocation\"\215\004\222A\357" +
+      "\003\n\tLocations\022\016List Locations\032\321\003Retrieves" +
+      " locations objects that match the suppli" +
+      "ed criteria.\n\n<span style=\"font-weight:b" +
+      "old\">About filter field names, operators" +
+      " and sample payloads:</span> <a target=\"" +
+      "_blank\" href=\"https://help.passkit.com/e" +
+      "n/articles/4200250-pass-templates-locati" +
+      "ons-beacons-links-filtering-listing-and-" +
+      "counting-by-api#filter-locations\">https:" +
+      "//help.passkit.com/en/articles/4200250-p" +
+      "ass-templates-locations-beacons-links-fi" +
+      "ltering-listing-and-counting-by-api#filt" +
+      "er-locations</a>\202\323\344\223\002\024\"\017/locations/list:" +
+      "\001*0\001\022\223\001\n\014copyLocation\022\023.io.CopyObjectInp" +
+      "ut\032\006.io.Id\"f\222AJ\n\tLocations\022\rCopy Locatio" +
+      "n\032.Copies a location record and returns " +
+      "a new id.\202\323\344\223\002\023\"\016/location/copy:\001*\022\202\001\n\016d" +
+      "eleteLocation\022\006.io.Id\032\026.google.protobuf." +
+      "Empty\"P\222A7\n\tLocations\022\017Delete Location\032\031" +
+      "Deletes a location object\202\323\344\223\002\020*\016/locati" +
+      "on/{id}\022\352\001\n\030countLocationsDeprecated\022\016.i" +
+      "o.Pagination\032\t.io.Count\"\262\001\222A\226\001\n\tLocation" +
+      "s\022\034Count Locations [DEPRECATED]\032k[DEPREC" +
+      "ATED: OR operator is not supported] Retr" +
+      "ieves a count of locations that match th" +
+      "e supplied criteria.\202\323\344\223\002\022\022\020/locations/c" +
+      "ount\022\275\004\n\016countLocations\022\013.io.Filters\032\t.i" +
+      "o.Count\"\222\004\222A\363\003\n\tLocations\022\017Count Locatio" +
+      "ns\032\324\003Retrieves a count of locations that" +
+      " match the supplied criteria.\n\n<span sty" +
+      "le=\"font-weight:bold\">About filter field" +
+      " names, operators and sample payloads:</" +
+      "span> <a target=\"_blank\" href=\"https://h" +
+      "elp.passkit.com/en/articles/4200250-pass" +
+      "-templates-locations-beacons-links-filte" +
+      "ring-listing-and-counting-by-api#filter-" +
+      "locations\">https://help.passkit.com/en/a" +
+      "rticles/4200250-pass-templates-locations" +
+      "-beacons-links-filtering-listing-and-cou" +
+      "nting-by-api#filter-locations</a>\202\323\344\223\002\025\"" +
+      "\020/locations/count:\001*\022k\n\014createBeacon\022\n.i" +
+      "o.Beacon\032\006.io.Id\"G\222A2\n\007Beacons\022\rCreate B" +
+      "eacon\032\030Creates a beacon object.\202\323\344\223\002\014\"\007/" +
+      "beacon:\001*\022o\n\014updateBeacon\022\n.io.Beacon\032\n." +
+      "io.Beacon\"G\222A2\n\007Beacons\022\rUpdate Beacon\032\030" +
+      "Updates a beacon object.\202\323\344\223\002\014\032\007/beacon:" +
+      "\001*\022p\n\tgetBeacon\022\006.io.Id\032\n.io.Beacon\"O\222A8" +
+      "\n\007Beacons\022\nGet Beacon\032!Retrieves a singl" +
+      "e beacon object.\202\323\344\223\002\016\022\014/beacon/{id}\022\327\001\n" +
+      "\025listBeaconsDeprecated\022\016.io.Pagination\032\n" +
+      ".io.Beacon\"\237\001\222A\213\001\n\007Beacons\022\031List Beacons" +
+      " [DEPRECATED]\032e[DEPRECATED: OR operator " +
+      "is not supported] Retrieves beacon objec" +
+      "ts that match the supplied criteria.\202\323\344\223" +
+      "\002\n\022\010/beacons0\001\022\253\004\n\013listBeacons\022\013.io.Filt" +
+      "ers\032\n.io.Beacon\"\200\004\222A\344\003\n\007Beacons\022\014List Be" +
+      "acons\032\312\003Retrieves beacon objects that ma" +
+      "tch the supplied criteria.\n\n<span style=" +
+      "\"font-weight:bold\">About filter field na" +
+      "mes, operators and sample payloads:</spa" +
+      "n> <a target=\"_blank\" href=\"https://help" +
+      ".passkit.com/en/articles/4200250-pass-te" +
+      "mplates-locations-beacons-links-filterin" +
+      "g-listing-and-counting-by-api#filter-bea" +
+      "cons\">https://help.passkit.com/en/articl" +
+      "es/4200250-pass-templates-locations-beac" +
+      "ons-links-filtering-listing-and-counting" +
+      "-by-api#filter-beacons</a>\202\323\344\223\002\022\"\r/beaco" +
+      "ns/list:\001*0\001\022\211\001\n\ncopyBeacon\022\023.io.CopyObj" +
+      "ectInput\032\006.io.Id\"^\222AD\n\007Beacons\022\013Copy Bea" +
+      "con\032,Copies a beacon record and returns " +
+      "a new id.\202\323\344\223\002\021\"\014/beacon/copy:\001*\022x\n\014dele" +
+      "teBeacon\022\006.io.Id\032\026.google.protobuf.Empty" +
+      "\"H\222A1\n\007Beacons\022\rDelete Beacon\032\027Deletes a" +
+      " beacon object\202\323\344\223\002\016*\014/beacon/{id}\022\340\001\n\026c" +
+      "ountBeaconsDeprecated\022\016.io.Pagination\032\t." +
+      "io.Count\"\252\001\222A\220\001\n\007Beacons\022\032Count Beacons " +
+      "[DEPRECATED]\032i[DEPRECATED: OR operator i" +
+      "s not supported] Retrieves a count of be" +
+      "acons that match the supplied criteria.\202" +
+      "\323\344\223\002\020\022\016/beacons/count\022\257\004\n\014countBeacons\022\013" +
+      ".io.Filters\032\t.io.Count\"\206\004\222A\351\003\n\007Beacons\022\r" +
+      "Count Beacons\032\316\003Retrieves a count of bea" +
+      "cons that match the supplied criteria.\n\n" +
       "<span style=\"font-weight:bold\">About fil" +
       "ter field names, operators and sample pa" +
       "yloads:</span> <a target=\"_blank\" href=\"" +
       "https://help.passkit.com/en/articles/420" +
       "0250-pass-templates-locations-beacons-li" +
       "nks-filtering-listing-and-counting-by-ap" +
-      "i#filter-locations\">https://help.passkit" +
-      ".com/en/articles/4200250-pass-templates-" +
-      "locations-beacons-links-filtering-listin" +
-      "g-and-counting-by-api#filter-locations</" +
-      "a>0\001\022\223\001\n\014copyLocation\022\023.io.CopyObjectInp" +
-      "ut\032\006.io.Id\"f\202\323\344\223\002\023\"\016/location/copy:\001*\222AJ" +
-      "\n\tLocations\022\rCopy Location\032.Copies a loc" +
-      "ation record and returns a new id.\022\202\001\n\016d" +
-      "eleteLocation\022\006.io.Id\032\026.google.protobuf." +
-      "Empty\"P\202\323\344\223\002\020*\016/location/{id}\222A7\n\tLocati" +
-      "ons\022\017Delete Location\032\031Deletes a location" +
-      " object\022\352\001\n\030countLocationsDeprecated\022\016.i" +
-      "o.Pagination\032\t.io.Count\"\262\001\202\323\344\223\002\022\022\020/locat" +
-      "ions/count\222A\226\001\n\tLocations\022\034Count Locatio" +
-      "ns [DEPRECATED]\032k[DEPRECATED: OR operato" +
-      "r is not supported] Retrieves a count of" +
-      " locations that match the supplied crite" +
-      "ria.\022\275\004\n\016countLocations\022\013.io.Filters\032\t.i" +
-      "o.Count\"\222\004\202\323\344\223\002\025\"\020/locations/count:\001*\222A\363" +
-      "\003\n\tLocations\022\017Count Locations\032\324\003Retrieve" +
-      "s a count of locations that match the su" +
-      "pplied criteria.\n\n<span style=\"font-weig" +
-      "ht:bold\">About filter field names, opera" +
-      "tors and sample payloads:</span> <a targ" +
-      "et=\"_blank\" href=\"https://help.passkit.c" +
+      "i#filter-beacons\">https://help.passkit.c" +
       "om/en/articles/4200250-pass-templates-lo" +
       "cations-beacons-links-filtering-listing-" +
-      "and-counting-by-api#filter-locations\">ht" +
-      "tps://help.passkit.com/en/articles/42002" +
-      "50-pass-templates-locations-beacons-link" +
-      "s-filtering-listing-and-counting-by-api#" +
-      "filter-locations</a>\022k\n\014createBeacon\022\n.i" +
-      "o.Beacon\032\006.io.Id\"G\202\323\344\223\002\014\"\007/beacon:\001*\222A2\n" +
-      "\007Beacons\022\rCreate Beacon\032\030Creates a beaco" +
-      "n object.\022o\n\014updateBeacon\022\n.io.Beacon\032\n." +
-      "io.Beacon\"G\202\323\344\223\002\014\032\007/beacon:\001*\222A2\n\007Beacon" +
-      "s\022\rUpdate Beacon\032\030Updates a beacon objec" +
-      "t.\022p\n\tgetBeacon\022\006.io.Id\032\n.io.Beacon\"O\202\323\344" +
-      "\223\002\016\022\014/beacon/{id}\222A8\n\007Beacons\022\nGet Beaco" +
-      "n\032!Retrieves a single beacon object.\022\327\001\n" +
-      "\025listBeaconsDeprecated\022\016.io.Pagination\032\n" +
-      ".io.Beacon\"\237\001\202\323\344\223\002\n\022\010/beacons\222A\213\001\n\007Beaco" +
-      "ns\022\031List Beacons [DEPRECATED]\032e[DEPRECAT" +
-      "ED: OR operator is not supported] Retrie" +
-      "ves beacon objects that match the suppli" +
-      "ed criteria.0\001\022\253\004\n\013listBeacons\022\013.io.Filt" +
-      "ers\032\n.io.Beacon\"\200\004\202\323\344\223\002\022\"\r/beacons/list:" +
-      "\001*\222A\344\003\n\007Beacons\022\014List Beacons\032\312\003Retrieve" +
-      "s beacon objects that match the supplied" +
-      " criteria.\n\n<span style=\"font-weight:bol" +
-      "d\">About filter field names, operators a" +
-      "nd sample payloads:</span> <a target=\"_b" +
-      "lank\" href=\"https://help.passkit.com/en/" +
-      "articles/4200250-pass-templates-location" +
-      "s-beacons-links-filtering-listing-and-co" +
-      "unting-by-api#filter-beacons\">https://he" +
-      "lp.passkit.com/en/articles/4200250-pass-" +
-      "templates-locations-beacons-links-filter" +
-      "ing-listing-and-counting-by-api#filter-b" +
-      "eacons</a>0\001\022\211\001\n\ncopyBeacon\022\023.io.CopyObj" +
-      "ectInput\032\006.io.Id\"^\202\323\344\223\002\021\"\014/beacon/copy:\001" +
-      "*\222AD\n\007Beacons\022\013Copy Beacon\032,Copies a bea" +
-      "con record and returns a new id.\022x\n\014dele" +
-      "teBeacon\022\006.io.Id\032\026.google.protobuf.Empty" +
-      "\"H\202\323\344\223\002\016*\014/beacon/{id}\222A1\n\007Beacons\022\rDele" +
-      "te Beacon\032\027Deletes a beacon object\022\340\001\n\026c" +
-      "ountBeaconsDeprecated\022\016.io.Pagination\032\t." +
-      "io.Count\"\252\001\202\323\344\223\002\020\022\016/beacons/count\222A\220\001\n\007B" +
-      "eacons\022\032Count Beacons [DEPRECATED]\032i[DEP" +
-      "RECATED: OR operator is not supported] R" +
-      "etrieves a count of beacons that match t" +
-      "he supplied criteria.\022\257\004\n\014countBeacons\022\013" +
-      ".io.Filters\032\t.io.Count\"\206\004\202\323\344\223\002\023\"\016/beacon" +
-      "s/count:\001*\222A\351\003\n\007Beacons\022\rCount Beacons\032\316" +
-      "\003Retrieves a count of beacons that match" +
-      " the supplied criteria.\n\n<span style=\"fo" +
-      "nt-weight:bold\">About filter field names" +
-      ", operators and sample payloads:</span> " +
-      "<a target=\"_blank\" href=\"https://help.pa" +
-      "sskit.com/en/articles/4200250-pass-templ" +
-      "ates-locations-beacons-links-filtering-l" +
-      "isting-and-counting-by-api#filter-beacon" +
-      "s\">https://help.passkit.com/en/articles/" +
-      "4200250-pass-templates-locations-beacons" +
-      "-links-filtering-listing-and-counting-by" +
-      "-api#filter-beacons</a>\022_\n\ncreateLink\022\010." +
-      "io.Link\032\006.io.Id\"?\202\323\344\223\002\n\"\005/link:\001*\222A,\n\005Li" +
-      "nks\022\013Create Link\032\026Creates a link object." +
-      "\022a\n\nupdateLink\022\010.io.Link\032\010.io.Link\"?\202\323\344\223" +
-      "\002\n\032\005/link:\001*\222A,\n\005Links\022\013Update Link\032\026Upd" +
-      "ates a link object.\022d\n\007getLink\022\006.io.Id\032\010" +
-      ".io.Link\"G\202\323\344\223\002\014\022\n/link/{id}\222A2\n\005Links\022\010" +
-      "Get Link\032\037Retrieves a single link object" +
-      ".\022\314\001\n\023listLinksDeprecated\022\016.io.Paginatio" +
-      "n\032\010.io.Link\"\230\001\202\323\344\223\002\010\022\006/links\222A\206\001\n\005Links\022" +
-      "\027List Links [DEPRECATED]\032d[DEPRECATED: O" +
-      "R operator is not supported] Retrieves l" +
-      "inks objects that match the supplied cri" +
-      "teria.0\001\022\234\004\n\tlistLinks\022\013.io.Filters\032\010.io" +
-      ".Link\"\365\003\202\323\344\223\002\020\"\013/links/list:\001*\222A\333\003\n\005Link" +
-      "s\022\nList Links\032\305\003Retrieves links objects " +
-      "that match the supplied criteria.\n\n<span" +
-      " style=\"font-weight:bold\">About filter f" +
-      "ield names, operators and sample payload" +
-      "s:</span> <a target=\"_blank\" href=\"https" +
-      "://help.passkit.com/en/articles/4200250-" +
-      "pass-templates-locations-beacons-links-f" +
-      "iltering-listing-and-counting-by-api#fil" +
-      "ter-links\">https://help.passkit.com/en/a" +
-      "rticles/4200250-pass-templates-locations" +
-      "-beacons-links-filtering-listing-and-cou" +
-      "nting-by-api#filter-links</a>0\001\022\177\n\010copyL" +
-      "ink\022\023.io.CopyObjectInput\032\006.io.Id\"V\202\323\344\223\002\017" +
-      "\"\n/link/copy:\001*\222A>\n\005Links\022\tCopy Link\032*Co" +
-      "pies a link record and returns a new id." +
+      "and-counting-by-api#filter-beacons</a>\202\323" +
+      "\344\223\002\023\"\016/beacons/count:\001*\022_\n\ncreateLink\022\010." +
+      "io.Link\032\006.io.Id\"?\222A,\n\005Links\022\013Create Link" +
+      "\032\026Creates a link object.\202\323\344\223\002\n\"\005/link:\001*" +
+      "\022a\n\nupdateLink\022\010.io.Link\032\010.io.Link\"?\222A,\n" +
+      "\005Links\022\013Update Link\032\026Updates a link obje" +
+      "ct.\202\323\344\223\002\n\032\005/link:\001*\022d\n\007getLink\022\006.io.Id\032\010" +
+      ".io.Link\"G\222A2\n\005Links\022\010Get Link\032\037Retrieve" +
+      "s a single link object.\202\323\344\223\002\014\022\n/link/{id" +
+      "}\022\314\001\n\023listLinksDeprecated\022\016.io.Paginatio" +
+      "n\032\010.io.Link\"\230\001\222A\206\001\n\005Links\022\027List Links [D" +
+      "EPRECATED]\032d[DEPRECATED: OR operator is " +
+      "not supported] Retrieves links objects t" +
+      "hat match the supplied criteria.\202\323\344\223\002\010\022\006" +
+      "/links0\001\022\234\004\n\tlistLinks\022\013.io.Filters\032\010.io" +
+      ".Link\"\365\003\222A\333\003\n\005Links\022\nList Links\032\305\003Retrie" +
+      "ves links objects that match the supplie" +
+      "d criteria.\n\n<span style=\"font-weight:bo" +
+      "ld\">About filter field names, operators " +
+      "and sample payloads:</span> <a target=\"_" +
+      "blank\" href=\"https://help.passkit.com/en" +
+      "/articles/4200250-pass-templates-locatio" +
+      "ns-beacons-links-filtering-listing-and-c" +
+      "ounting-by-api#filter-links\">https://hel" +
+      "p.passkit.com/en/articles/4200250-pass-t" +
+      "emplates-locations-beacons-links-filteri" +
+      "ng-listing-and-counting-by-api#filter-li" +
+      "nks</a>\202\323\344\223\002\020\"\013/links/list:\001*0\001\022\177\n\010copyL" +
+      "ink\022\023.io.CopyObjectInput\032\006.io.Id\"V\222A>\n\005L" +
+      "inks\022\tCopy Link\032*Copies a link record an" +
+      "d returns a new id.\202\323\344\223\002\017\"\n/link/copy:\001*" +
       "\022n\n\ndeleteLink\022\006.io.Id\032\026.google.protobuf" +
-      ".Empty\"@\202\323\344\223\002\014*\n/link/{id}\222A+\n\005Links\022\013De" +
-      "lete Link\032\025Deletes a link object\022\326\001\n\024cou" +
+      ".Empty\"@\222A+\n\005Links\022\013Delete Link\032\025Deletes" +
+      " a link object\202\323\344\223\002\014*\n/link/{id}\022\326\001\n\024cou" +
       "ntLinksDeprecated\022\016.io.Pagination\032\t.io.C" +
-      "ount\"\242\001\202\323\344\223\002\016\022\014/links/count\222A\212\001\n\005Links\022\030" +
-      "Count Links [DEPRECATED]\032g[DEPRECATED: O" +
-      "R operator is not supported] Retrieves a" +
-      " count of links that match the supplied " +
-      "criteria.\022\241\004\n\ncountLinks\022\013.io.Filters\032\t." +
-      "io.Count\"\372\003\202\323\344\223\002\021\"\014/links/count:\001*\222A\337\003\n\005" +
-      "Links\022\013Count Links\032\310\003Retrieves a count o" +
-      "f links that match the supplied criteria" +
-      ".\n\n<span style=\"font-weight:bold\">About " +
-      "filter field names, operators and sample" +
-      " payloads:</span> <a target=\"_blank\" hre" +
-      "f=\"https://help.passkit.com/en/articles/" +
-      "4200250-pass-templates-locations-beacons" +
-      "-links-filtering-listing-and-counting-by" +
-      "-api#filter-links\">https://help.passkit." +
-      "com/en/articles/4200250-pass-templates-l" +
-      "ocations-beacons-links-filtering-listing" +
-      "-and-counting-by-api#filter-links</a>B\205\007" +
+      "ount\"\242\001\222A\212\001\n\005Links\022\030Count Links [DEPRECA" +
+      "TED]\032g[DEPRECATED: OR operator is not su" +
+      "pported] Retrieves a count of links that" +
+      " match the supplied criteria.\202\323\344\223\002\016\022\014/li" +
+      "nks/count\022\241\004\n\ncountLinks\022\013.io.Filters\032\t." +
+      "io.Count\"\372\003\222A\337\003\n\005Links\022\013Count Links\032\310\003Re" +
+      "trieves a count of links that match the " +
+      "supplied criteria.\n\n<span style=\"font-we" +
+      "ight:bold\">About filter field names, ope" +
+      "rators and sample payloads:</span> <a ta" +
+      "rget=\"_blank\" href=\"https://help.passkit" +
+      ".com/en/articles/4200250-pass-templates-" +
+      "locations-beacons-links-filtering-listin" +
+      "g-and-counting-by-api#filter-links\">http" +
+      "s://help.passkit.com/en/articles/4200250" +
+      "-pass-templates-locations-beacons-links-" +
+      "filtering-listing-and-counting-by-api#fi" +
+      "lter-links</a>\202\323\344\223\002\021\"\014/links/count:\001*B\205\007" +
       "\n\020com.passkit.grpcZ$stash.passkit.com/io" +
       "/model/sdk/go/io\252\002\014PassKit.Grpc\222A\272\006\022\365\001\n\025" +
       "PassKit Templates API\022aAPI for managing " +

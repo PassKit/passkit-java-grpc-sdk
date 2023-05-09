@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.48.0)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/scheduler/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SchedulerGrpc {
@@ -278,115 +278,74 @@ public final class SchedulerGrpc {
 
   /**
    */
-  public static abstract class SchedulerImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+    default void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
+    default void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+    default void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
+    default void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
+    default void deleteSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSchedulingJobMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
+    default void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSchedulingJobHistoryMethod(), responseObserver);
     }
 
     /**
      */
-    public void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
+    default void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSchedulingJobHistoriesMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateSchedulingJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.ct.Scheduler.SchedulingJob,
-                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
-                  this, METHODID_CREATE_SCHEDULING_JOB)))
-          .addMethod(
-            getGetSchedulingJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.ct.Scheduler.SchedulingJob>(
-                  this, METHODID_GET_SCHEDULING_JOB)))
-          .addMethod(
-            getUpdateSchedulingJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.ct.Scheduler.SchedulingJob,
-                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
-                  this, METHODID_UPDATE_SCHEDULING_JOB)))
-          .addMethod(
-            getPatchSchedulingJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.ct.Scheduler.SchedulingJob,
-                com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
-                  this, METHODID_PATCH_SCHEDULING_JOB)))
-          .addMethod(
-            getDeleteSchedulingJobMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_SCHEDULING_JOB)))
-          .addMethod(
-            getGetSchedulingJobHistoryMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Id,
-                com.passkit.grpc.ct.Scheduler.JobHistory>(
-                  this, METHODID_GET_SCHEDULING_JOB_HISTORY)))
-          .addMethod(
-            getListSchedulingJobHistoriesMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                com.passkit.grpc.Scheduler.Scheduler.ListRequest,
-                com.passkit.grpc.ct.Scheduler.JobHistory>(
-                  this, METHODID_LIST_SCHEDULING_JOB_HISTORIES)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Scheduler.
    */
-  public static final class SchedulerStub extends io.grpc.stub.AbstractAsyncStub<SchedulerStub> {
+  public static abstract class SchedulerImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SchedulerGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Scheduler.
+   */
+  public static final class SchedulerStub
+      extends io.grpc.stub.AbstractAsyncStub<SchedulerStub> {
     private SchedulerStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -456,8 +415,10 @@ public final class SchedulerGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Scheduler.
    */
-  public static final class SchedulerBlockingStub extends io.grpc.stub.AbstractBlockingStub<SchedulerBlockingStub> {
+  public static final class SchedulerBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SchedulerBlockingStub> {
     private SchedulerBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -521,8 +482,10 @@ public final class SchedulerGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Scheduler.
    */
-  public static final class SchedulerFutureStub extends io.grpc.stub.AbstractFutureStub<SchedulerFutureStub> {
+  public static final class SchedulerFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SchedulerFutureStub> {
     private SchedulerFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -596,10 +559,10 @@ public final class SchedulerGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SchedulerImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SchedulerImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -650,6 +613,60 @@ public final class SchedulerGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateSchedulingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.ct.Scheduler.SchedulingJob,
+              com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
+                service, METHODID_CREATE_SCHEDULING_JOB)))
+        .addMethod(
+          getGetSchedulingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.ct.Scheduler.SchedulingJob>(
+                service, METHODID_GET_SCHEDULING_JOB)))
+        .addMethod(
+          getUpdateSchedulingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.ct.Scheduler.SchedulingJob,
+              com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
+                service, METHODID_UPDATE_SCHEDULING_JOB)))
+        .addMethod(
+          getPatchSchedulingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.ct.Scheduler.SchedulingJob,
+              com.passkit.grpc.ct.Scheduler.SchedulingJobResponse>(
+                service, METHODID_PATCH_SCHEDULING_JOB)))
+        .addMethod(
+          getDeleteSchedulingJobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_SCHEDULING_JOB)))
+        .addMethod(
+          getGetSchedulingJobHistoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.ct.Scheduler.JobHistory>(
+                service, METHODID_GET_SCHEDULING_JOB_HISTORY)))
+        .addMethod(
+          getListSchedulingJobHistoriesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.Scheduler.Scheduler.ListRequest,
+              com.passkit.grpc.ct.Scheduler.JobHistory>(
+                service, METHODID_LIST_SCHEDULING_JOB_HISTORIES)))
+        .build();
   }
 
   private static abstract class SchedulerBaseDescriptorSupplier

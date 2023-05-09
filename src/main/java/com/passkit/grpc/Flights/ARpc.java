@@ -31,185 +31,185 @@ public final class ARpc {
       "io/flights/flight.proto\032\"io/flights/flig" +
       "ht_designator.proto\032\030io/flights/carrier." +
       "proto2\2278\n\007Flights\022\362\001\n\ncreatePort\022\r.fligh" +
-      "ts.Port\032\026.google.protobuf.Empty\"\274\001\202\323\344\223\002\025" +
-      "\"\020/flights/airport:\001*\222A\235\001\n\010Airports\022\016Cre" +
-      "ate Airport\032\031Creates an airport recordJ0" +
-      "\n\003400\022)\n\'There is a problem with the inp" +
-      "ut data.J4\n\003403\022-\n+Returned when the use" +
-      "r lacks authorization.\022\322\001\n\007getPort\022\024.fli" +
-      "ghts.AirportCode\032\r.flights.Port\"\241\001\202\323\344\223\002 " +
-      "\022\036/flights/airport/{airportCode}\222Ax\n\010Air" +
-      "ports\022\013Get Airport\032\033Retrieves an airport" +
-      " recordJ\"\n\003403\022\033\n\031User lacks authorizati" +
-      "on.J\036\n\003404\022\027\n\025Record was not found.\022\320\002\n\n" +
+      "ts.Port\032\026.google.protobuf.Empty\"\274\001\222A\235\001\n\010" +
+      "Airports\022\016Create Airport\032\031Creates an air" +
+      "port recordJ0\n\003400\022)\n\'There is a problem" +
+      " with the input data.J4\n\003403\022-\n+Returned" +
+      " when the user lacks authorization.\202\323\344\223\002" +
+      "\025\"\020/flights/airport:\001*\022\322\001\n\007getPort\022\024.fli" +
+      "ghts.AirportCode\032\r.flights.Port\"\241\001\222Ax\n\010A" +
+      "irports\022\013Get Airport\032\033Retrieves an airpo" +
+      "rt recordJ\"\n\003403\022\033\n\031User lacks authoriza" +
+      "tion.J\036\n\003404\022\027\n\025Record was not found.\202\323\344" +
+      "\223\002 \022\036/flights/airport/{airportCode}\022\320\002\n\n" +
       "updatePort\022\r.flights.Port\032\r.flights.Port" +
-      "\"\243\002\202\323\344\223\002\025\032\020/flights/airport:\001*\222A\204\002\n\010Airp" +
-      "orts\022\016Update Airport\032\031Updates an airport" +
+      "\"\243\002\222A\204\002\n\010Airports\022\016Update Airport\032\031Updat" +
+      "es an airport recordJ0\n\003400\022)\n\'There is " +
+      "a problem with the input data.J\"\n\003403\022\033\n" +
+      "\031User lacks authorization.J\036\n\003404\022\027\n\025Rec" +
+      "ord was not found.JW\n\003503\022P\nNServer is u" +
+      "navailable. Back off for 250ms and repea" +
+      "t request until successful.\202\323\344\223\002\025\032\020/flig" +
+      "hts/airport:\001*\022\347\001\n\ndeletePort\022\024.flights." +
+      "AirportCode\032\026.google.protobuf.Empty\"\252\001\222A" +
+      "\213\001\n\010Airports\022\016Delete Airport\032\031Deletes a " +
+      "airport record.J4\n\003403\022-\n+Returned when " +
+      "the user lacks authorization.J\036\n\003404\022\027\n\025" +
+      "Record was not found.\202\323\344\223\002\025*\020/flights/ai" +
+      "rport:\001*\022\367\001\n\rcreateCarrier\022\020.flights.Car" +
+      "rier\032\026.google.protobuf.Empty\"\273\001\222A\234\001\n\010Car" +
+      "riers\022\016Create Carrier\032\030Creates a carrier" +
       " recordJ0\n\003400\022)\n\'There is a problem wit" +
-      "h the input data.J\"\n\003403\022\033\n\031User lacks a" +
-      "uthorization.J\036\n\003404\022\027\n\025Record was not f" +
-      "ound.JW\n\003503\022P\nNServer is unavailable. B" +
-      "ack off for 250ms and repeat request unt" +
-      "il successful.\022\347\001\n\ndeletePort\022\024.flights." +
-      "AirportCode\032\026.google.protobuf.Empty\"\252\001\202\323" +
-      "\344\223\002\025*\020/flights/airport:\001*\222A\213\001\n\010Airports\022" +
-      "\016Delete Airport\032\031Deletes a airport recor" +
-      "d.J4\n\003403\022-\n+Returned when the user lack" +
-      "s authorization.J\036\n\003404\022\027\n\025Record was no" +
-      "t found.\022\367\001\n\rcreateCarrier\022\020.flights.Car" +
-      "rier\032\026.google.protobuf.Empty\"\273\001\202\323\344\223\002\025\"\020/" +
-      "flights/carrier:\001*\222A\234\001\n\010Carriers\022\016Create" +
-      " Carrier\032\030Creates a carrier recordJ0\n\00340" +
-      "0\022)\n\'There is a problem with the input d" +
-      "ata.J4\n\003403\022-\n+Returned when the user la" +
-      "cks authorization.\022\327\001\n\ngetCarrier\022\024.flig" +
-      "hts.CarrierCode\032\020.flights.Carrier\"\240\001\202\323\344\223" +
-      "\002 \022\036/flights/carrier/{carrierCode}\222Aw\n\010C" +
-      "arriers\022\013Get Carrier\032\032Retrieves a carrie" +
-      "r recordJ\"\n\003403\022\033\n\031User lacks authorizat" +
-      "ion.J\036\n\003404\022\027\n\025Record was not found.\022\330\002\n" +
+      "h the input data.J4\n\003403\022-\n+Returned whe" +
+      "n the user lacks authorization.\202\323\344\223\002\025\"\020/" +
+      "flights/carrier:\001*\022\327\001\n\ngetCarrier\022\024.flig" +
+      "hts.CarrierCode\032\020.flights.Carrier\"\240\001\222Aw\n" +
+      "\010Carriers\022\013Get Carrier\032\032Retrieves a carr" +
+      "ier recordJ\"\n\003403\022\033\n\031User lacks authoriz" +
+      "ation.J\036\n\003404\022\027\n\025Record was not found.\202\323" +
+      "\344\223\002 \022\036/flights/carrier/{carrierCode}\022\330\002\n" +
       "\rupdateCarrier\022\020.flights.Carrier\032\020.fligh" +
-      "ts.Carrier\"\242\002\202\323\344\223\002\025\032\020/flights/carrier:\001*" +
-      "\222A\203\002\n\010Carriers\022\016Update Carrier\032\030Updates " +
-      "a carrier recordJ0\n\003400\022)\n\'There is a pr" +
-      "oblem with the input data.J\"\n\003403\022\033\n\031Use" +
-      "r lacks authorization.J\036\n\003404\022\027\n\025Record " +
-      "was not found.JW\n\003503\022P\nNServer is unava" +
-      "ilable. Back off for 250ms and repeat re" +
-      "quest until successful.\022\352\001\n\rdeleteCarrie" +
+      "ts.Carrier\"\242\002\222A\203\002\n\010Carriers\022\016Update Carr" +
+      "ier\032\030Updates a carrier recordJ0\n\003400\022)\n\'" +
+      "There is a problem with the input data.J" +
+      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
+      "04\022\027\n\025Record was not found.JW\n\003503\022P\nNSe" +
+      "rver is unavailable. Back off for 250ms " +
+      "and repeat request until successful.\202\323\344\223" +
+      "\002\025\032\020/flights/carrier:\001*\022\352\001\n\rdeleteCarrie" +
       "r\022\024.flights.CarrierCode\032\026.google.protobu" +
-      "f.Empty\"\252\001\202\323\344\223\002\025*\020/flights/carrier:\001*\222A\213" +
-      "\001\n\010Carriers\022\016Delete Carrier\032\031Deletes a c" +
-      "arrier record.J4\n\003403\022-\n+Returned when t" +
-      "he user lacks authorization.J\036\n\003404\022\027\n\025R" +
-      "ecord was not found.\022\222\003\n\026createFlightDes" +
+      "f.Empty\"\252\001\222A\213\001\n\010Carriers\022\016Delete Carrier" +
+      "\032\031Deletes a carrier record.J4\n\003403\022-\n+Re" +
+      "turned when the user lacks authorization" +
+      ".J\036\n\003404\022\027\n\025Record was not found.\202\323\344\223\002\025*" +
+      "\020/flights/carrier:\001*\022\222\003\n\026createFlightDes" +
       "ignator\022\031.flights.FlightDesignator\032\026.goo" +
-      "gle.protobuf.Empty\"\304\002\202\323\344\223\002\030\"\023/flights/de" +
-      "signator:\001*\222A\242\002\n\022Flight Designators\022\031Cre" +
-      "ate Flight Designation\032\"Creates a flight" +
-      " designator recordJ0\n\003400\022)\n\'There is a " +
-      "problem with the input data.J\"\n\003403\022\033\n\031U" +
-      "ser lacks authorization.J\036\n\003404\022\027\n\025Recor" +
-      "d was not found.JW\n\003503\022P\nNServer is una" +
-      "vailable. Back off for 250ms and repeat " +
-      "request until successful.\022\262\002\n\023getFlightD" +
+      "gle.protobuf.Empty\"\304\002\222A\242\002\n\022Flight Design" +
+      "ators\022\031Create Flight Designation\032\"Create" +
+      "s a flight designator recordJ0\n\003400\022)\n\'T" +
+      "here is a problem with the input data.J\"" +
+      "\n\003403\022\033\n\031User lacks authorization.J\036\n\00340" +
+      "4\022\027\n\025Record was not found.JW\n\003503\022P\nNSer" +
+      "ver is unavailable. Back off for 250ms a" +
+      "nd repeat request until successful.\202\323\344\223\002" +
+      "\030\"\023/flights/designator:\001*\022\262\002\n\023getFlightD" +
       "esignator\022 .flights.FlightDesignatorRequ" +
-      "est\032\031.flights.FlightDesignator\"\335\001\202\323\344\223\002=\022" +
-      ";/flights/designator/{carrierCode}/{flig" +
-      "htNumber}/{revision}\222A\226\001\n\022Flight Designa" +
-      "tors\022\026Get Flight Designation\032$Retrieves " +
-      "a flight designator recordJ\"\n\003403\022\033\n\031Use" +
-      "r lacks authorization.J\036\n\003404\022\027\n\025Record " +
-      "was not found.\022\225\003\n\026updateFlightDesignato" +
+      "est\032\031.flights.FlightDesignator\"\335\001\222A\226\001\n\022F" +
+      "light Designators\022\026Get Flight Designatio" +
+      "n\032$Retrieves a flight designator recordJ" +
+      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
+      "04\022\027\n\025Record was not found.\202\323\344\223\002=\022;/flig" +
+      "hts/designator/{carrierCode}/{flightNumb" +
+      "er}/{revision}\022\225\003\n\026updateFlightDesignato" +
       "r\022\031.flights.FlightDesignator\032\031.flights.F" +
-      "lightDesignator\"\304\002\202\323\344\223\002\030\032\023/flights/desig" +
-      "nator:\001*\222A\242\002\n\022Flight Designators\022\031Update" +
-      " Flight Designation\032\"Updates a flight de" +
-      "signator recordJ0\n\003400\022)\n\'There is a pro" +
+      "lightDesignator\"\304\002\222A\242\002\n\022Flight Designato" +
+      "rs\022\031Update Flight Designation\032\"Updates a" +
+      " flight designator recordJ0\n\003400\022)\n\'Ther" +
+      "e is a problem with the input data.J\"\n\0034" +
+      "03\022\033\n\031User lacks authorization.J\036\n\003404\022\027" +
+      "\n\025Record was not found.JW\n\003503\022P\nNServer" +
+      " is unavailable. Back off for 250ms and " +
+      "repeat request until successful.\202\323\344\223\002\030\032\023" +
+      "/flights/designator:\001*\022\217\002\n\026deleteFlightD" +
+      "esignator\022 .flights.FlightDesignatorRequ" +
+      "est\032\026.google.protobuf.Empty\"\272\001\222A\230\001\n\022Flig" +
+      "ht Designators\022\031Delete Flight Designatio" +
+      "n\032#Deletes a flight designator record.J\"" +
+      "\n\003403\022\033\n\031User lacks authorization.J\036\n\00340" +
+      "4\022\027\n\025Record was not found.\202\323\344\223\002\030*\023/fligh" +
+      "ts/designator:\001*\022\300\003\n\014createFlight\022\017.flig" +
+      "hts.Flight\032\026.google.protobuf.Empty\"\206\003\222A\350" +
+      "\002\n\007Flights\022\rCreate Flight\032~Creates a fli" +
+      "ght record.  Note that this method will " +
+      "often not be used, since new flight reco" +
+      "rds can be automatically created.J0\n\003400" +
+      "\022)\n\'There is a problem with the input da" +
+      "ta.J\"\n\003403\022\033\n\031User lacks authorization.J" +
+      "\037\n\003409\022\030\n\026Record already exists.JW\n\003503\022" +
+      "P\nNServer is unavailable. Back off for 2" +
+      "50ms and repeat request until successful" +
+      ".\202\323\344\223\002\024\"\017/flights/flight:\001*\022\304\002\n\tgetFligh" +
+      "t\022\026.flights.FlightRequest\032\017.flights.Flig" +
+      "ht\"\215\002\222At\n\007Flights\022\nGet Flight\032\031Retrieves" +
+      " a flight recordJ\"\n\003403\022\033\n\031User lacks au" +
+      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
+      "und.\202\323\344\223\002\217\001\022\214\001/flights/flight/{carrierCo" +
+      "de}/{flightNumber}/{departureDate.year}/" +
+      "{departureDate.month}/{departureDate.day" +
+      "}/{boardingPoint}/{deplaningPoint}\022\211\004\n\014u" +
+      "pdateFlight\022\017.flights.Flight\032\017.flights.F" +
+      "light\"\326\003\222A\270\003\n\007Flights\022\024Update Flight Num" +
+      "ber\032\307\001Updates a flight number record.  N" +
+      "ote that if the flight number is subscri" +
+      "bed to automatic flight alerts, this met" +
+      "hod may not be required and that changes" +
+      " made may be overwritten by automatic up" +
+      "datesJ0\n\003400\022)\n\'There is a problem with " +
+      "the input data.J\"\n\003403\022\033\n\031User lacks aut" +
+      "horization.J\036\n\003404\022\027\n\025Record was not fou" +
+      "nd.JW\n\003503\022P\nNServer is unavailable. Bac" +
+      "k off for 250ms and repeat request until" +
+      " successful.\202\323\344\223\002\024\032\017/flights/flight:\001*\022\335" +
+      "\002\n\014deleteFlight\022\026.flights.FlightRequest\032" +
+      "\026.google.protobuf.Empty\"\234\002\222A\376\001\n\007Flights\022" +
+      "\rDelete Flight\032\237\001Deletes a flight record" +
+      ". Note that a deleted flight record may " +
+      "be automatically recreated, unless the [" +
+      "active] flag on the Flight Number record" +
+      " is set to falseJ\"\n\003403\022\033\n\031User lacks au" +
+      "thorization.J\036\n\003404\022\027\n\025Record was not fo" +
+      "und.\202\323\344\223\002\024*\017/flights/flight:\001*\022\221\004\n\022creat" +
+      "eBoardingPass\022\033.flights.BoardingPassReco" +
+      "rd\032\037.flights.BoardingPassesResponse\"\274\003\222A" +
+      "\230\003\n\017Boarding Passes\022\024Create Boarding Pas" +
+      "s\032\236\001Creates a boarding pass record. If f" +
+      "light record for the date does not yet e" +
+      "xist, it will be created using the Fligh" +
+      "t Designation defaults. Returns a pass i" +
+      "d.J0\n\003400\022)\n\'There is a problem with the" +
+      " input data.J\"\n\003403\022\033\n\031User lacks author" +
+      "ization.J\037\n\003409\022\030\n\026Record already exists" +
+      ".JW\n\003503\022P\nNServer is unavailable. Back " +
+      "off for 250ms and repeat request until s" +
+      "uccessful.\202\323\344\223\002\032\"\025/flights/boardingPass:" +
+      "\001*\022\312\002\n\025getBoardingPassRecord\022\".flights.B" +
+      "oardingPassRecordRequest\032\033.flights.Board" +
+      "ingPassRecord\"\357\001\222A\311\001\n\017Boarding Passes\022\030G" +
+      "et Boarding Pass Record\032XRetrieves a boa" +
+      "rding pass record. One of ticketNumber, " +
+      "index or passId must be provided.J\"\n\003403" +
+      "\022\033\n\031User lacks authorization.J\036\n\003404\022\027\n\025" +
+      "Record was not found.\202\323\344\223\002\034\"\027/flights/bo" +
+      "ardingRecord:\001*\022\351\002\n\017getBoardingPass\022\034.fl" +
+      "ights.BoardingPassRequest\032\037.flights.Boar" +
+      "dingPassesResponse\"\226\002\222A\372\001\n\017Boarding Pass" +
+      "es\022\021Get Boarding Pass\032\217\001Retrieves digita" +
+      "l boarding pass(es) in the requested for" +
+      "mat based on the index provided. Supply " +
+      "only one of ticketNumber, index, pnr or " +
+      "passId.J\"\n\003403\022\033\n\031User lacks authorizati" +
+      "on.J\036\n\003404\022\027\n\025Record was not found.\202\323\344\223\002" +
+      "\022\"\r/flights/pass:\001*\022\252\004\n\022updateBoardingPa" +
+      "ss\022\033.flights.BoardingPassRecord\032\033.flight" +
+      "s.BoardingPassRecord\"\331\003\222A\263\003\n\017Boarding Pa" +
+      "sses\022\024Update Boarding Pass\032\272\001Updates a b" +
+      "oarding pass record. Either ticketNumber" +
+      " and ticketLeg or carrier, flight number" +
+      ", flightDate, boardingPoint and sequence" +
+      "Number must be provided. All other field" +
+      "s are optional.J0\n\003400\022)\n\'There is a pro" +
       "blem with the input data.J\"\n\003403\022\033\n\031User" +
       " lacks authorization.J\036\n\003404\022\027\n\025Record w" +
       "as not found.JW\n\003503\022P\nNServer is unavai" +
       "lable. Back off for 250ms and repeat req" +
-      "uest until successful.\022\217\002\n\026deleteFlightD" +
-      "esignator\022 .flights.FlightDesignatorRequ" +
-      "est\032\026.google.protobuf.Empty\"\272\001\202\323\344\223\002\030*\023/f" +
-      "lights/designator:\001*\222A\230\001\n\022Flight Designa" +
-      "tors\022\031Delete Flight Designation\032#Deletes" +
-      " a flight designator record.J\"\n\003403\022\033\n\031U" +
-      "ser lacks authorization.J\036\n\003404\022\027\n\025Recor" +
-      "d was not found.\022\300\003\n\014createFlight\022\017.flig" +
-      "hts.Flight\032\026.google.protobuf.Empty\"\206\003\202\323\344" +
-      "\223\002\024\"\017/flights/flight:\001*\222A\350\002\n\007Flights\022\rCr" +
-      "eate Flight\032~Creates a flight record.  N" +
-      "ote that this method will often not be u" +
-      "sed, since new flight records can be aut" +
-      "omatically created.J0\n\003400\022)\n\'There is a" +
-      " problem with the input data.J\"\n\003403\022\033\n\031" +
-      "User lacks authorization.J\037\n\003409\022\030\n\026Reco" +
-      "rd already exists.JW\n\003503\022P\nNServer is u" +
-      "navailable. Back off for 250ms and repea" +
-      "t request until successful.\022\304\002\n\tgetFligh" +
-      "t\022\026.flights.FlightRequest\032\017.flights.Flig" +
-      "ht\"\215\002\202\323\344\223\002\217\001\022\214\001/flights/flight/{carrierC" +
-      "ode}/{flightNumber}/{departureDate.year}" +
-      "/{departureDate.month}/{departureDate.da" +
-      "y}/{boardingPoint}/{deplaningPoint}\222At\n\007" +
-      "Flights\022\nGet Flight\032\031Retrieves a flight " +
-      "recordJ\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.\022\211\004\n\014u" +
-      "pdateFlight\022\017.flights.Flight\032\017.flights.F" +
-      "light\"\326\003\202\323\344\223\002\024\032\017/flights/flight:\001*\222A\270\003\n\007" +
-      "Flights\022\024Update Flight Number\032\307\001Updates " +
-      "a flight number record.  Note that if th" +
-      "e flight number is subscribed to automat" +
-      "ic flight alerts, this method may not be" +
-      " required and that changes made may be o" +
-      "verwritten by automatic updatesJ0\n\003400\022)" +
-      "\n\'There is a problem with the input data" +
-      ".J\"\n\003403\022\033\n\031User lacks authorization.J\036\n" +
-      "\003404\022\027\n\025Record was not found.JW\n\003503\022P\nN" +
-      "Server is unavailable. Back off for 250m" +
-      "s and repeat request until successful.\022\335" +
-      "\002\n\014deleteFlight\022\026.flights.FlightRequest\032" +
-      "\026.google.protobuf.Empty\"\234\002\202\323\344\223\002\024*\017/fligh" +
-      "ts/flight:\001*\222A\376\001\n\007Flights\022\rDelete Flight" +
-      "\032\237\001Deletes a flight record. Note that a " +
-      "deleted flight record may be automatical" +
-      "ly recreated, unless the [active] flag o" +
-      "n the Flight Number record is set to fal" +
-      "seJ\"\n\003403\022\033\n\031User lacks authorization.J\036" +
-      "\n\003404\022\027\n\025Record was not found.\022\221\004\n\022creat" +
-      "eBoardingPass\022\033.flights.BoardingPassReco" +
-      "rd\032\037.flights.BoardingPassesResponse\"\274\003\202\323" +
-      "\344\223\002\032\"\025/flights/boardingPass:\001*\222A\230\003\n\017Boar" +
-      "ding Passes\022\024Create Boarding Pass\032\236\001Crea" +
-      "tes a boarding pass record. If flight re" +
-      "cord for the date does not yet exist, it" +
-      " will be created using the Flight Design" +
-      "ation defaults. Returns a pass id.J0\n\00340" +
-      "0\022)\n\'There is a problem with the input d" +
-      "ata.J\"\n\003403\022\033\n\031User lacks authorization." +
-      "J\037\n\003409\022\030\n\026Record already exists.JW\n\003503" +
-      "\022P\nNServer is unavailable. Back off for " +
-      "250ms and repeat request until successfu" +
-      "l.\022\312\002\n\025getBoardingPassRecord\022\".flights.B" +
-      "oardingPassRecordRequest\032\033.flights.Board" +
-      "ingPassRecord\"\357\001\202\323\344\223\002\034\"\027/flights/boardin" +
-      "gRecord:\001*\222A\311\001\n\017Boarding Passes\022\030Get Boa" +
-      "rding Pass Record\032XRetrieves a boarding " +
-      "pass record. One of ticketNumber, index " +
-      "or passId must be provided.J\"\n\003403\022\033\n\031Us" +
-      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
-      " was not found.\022\351\002\n\017getBoardingPass\022\034.fl" +
-      "ights.BoardingPassRequest\032\037.flights.Boar" +
-      "dingPassesResponse\"\226\002\202\323\344\223\002\022\"\r/flights/pa" +
-      "ss:\001*\222A\372\001\n\017Boarding Passes\022\021Get Boarding" +
-      " Pass\032\217\001Retrieves digital boarding pass(" +
-      "es) in the requested format based on the" +
-      " index provided. Supply only one of tick" +
-      "etNumber, index, pnr or passId.J\"\n\003403\022\033" +
-      "\n\031User lacks authorization.J\036\n\003404\022\027\n\025Re" +
-      "cord was not found.\022\252\004\n\022updateBoardingPa" +
-      "ss\022\033.flights.BoardingPassRecord\032\033.flight" +
-      "s.BoardingPassRecord\"\331\003\202\323\344\223\002\034\032\027/flights/" +
-      "boardingRecord:\001*\222A\263\003\n\017Boarding Passes\022\024" +
-      "Update Boarding Pass\032\272\001Updates a boardin" +
-      "g pass record. Either ticketNumber and t" +
-      "icketLeg or carrier, flight number, flig" +
-      "htDate, boardingPoint and sequenceNumber" +
-      " must be provided. All other fields are " +
-      "optional.J0\n\003400\022)\n\'There is a problem w" +
-      "ith the input data.J\"\n\003403\022\033\n\031User lacks" +
-      " authorization.J\036\n\003404\022\027\n\025Record was not" +
-      " found.JW\n\003503\022P\nNServer is unavailable." +
-      " Back off for 250ms and repeat request u" +
-      "ntil successful.\022\204\002\n\022deleteBoardingPass\022" +
+      "uest until successful.\202\323\344\223\002\034\032\027/flights/b" +
+      "oardingRecord:\001*\022\204\002\n\022deleteBoardingPass\022" +
       "\".flights.BoardingPassRecordRequest\032\026.go" +
-      "ogle.protobuf.Empty\"\261\001\202\323\344\223\002\034*\027/flights/b" +
-      "oardingRecord:\001*\222A\213\001\n\017Boarding Passes\022\024D" +
-      "elete Boarding Pass\032\036Deletes a boarding " +
-      "pass recordJ\"\n\003403\022\033\n\031User lacks authori" +
-      "zation.J\036\n\003404\022\027\n\025Record was not found.B" +
+      "ogle.protobuf.Empty\"\261\001\222A\213\001\n\017Boarding Pas" +
+      "ses\022\024Delete Boarding Pass\032\036Deletes a boa" +
+      "rding pass recordJ\"\n\003403\022\033\n\031User lacks a" +
+      "uthorization.J\036\n\003404\022\027\n\025Record was not f" +
+      "ound.\202\323\344\223\002\034*\027/flights/boardingRecord:\001*B" +
       "\215\003\n\030com.passkit.grpc.FlightsZ,stash.pass" +
       "kit.com/io/model/sdk/go/io/flights\252\002\024Pas" +
       "sKit.Grpc.Flights\222A\252\002\022\200\002\n\023PassKit Flight" +

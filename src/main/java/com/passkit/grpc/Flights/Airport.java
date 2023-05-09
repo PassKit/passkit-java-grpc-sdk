@@ -224,112 +224,6 @@ public final class Airport {
       return new Port();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Port(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              iataAirportCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              icaoAirportCode_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              cityName_ = s;
-              break;
-            }
-            case 34: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedCityName_ != null) {
-                subBuilder = localizedCityName_.toBuilder();
-              }
-              localizedCityName_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedCityName_);
-                localizedCityName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              airportName_ = s;
-              break;
-            }
-            case 50: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedAirportName_ != null) {
-                subBuilder = localizedAirportName_.toBuilder();
-              }
-              localizedAirportName_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedAirportName_);
-                localizedAirportName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              countryCode_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              timezone_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.Airport.internal_static_flights_Port_descriptor;
@@ -344,7 +238,8 @@ public final class Airport {
     }
 
     public static final int IATAAIRPORTCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object iataAirportCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iataAirportCode_ = "";
     /**
      * <pre>
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
@@ -390,7 +285,8 @@ public final class Airport {
     }
 
     public static final int ICAOAIRPORTCODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object icaoAirportCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object icaoAirportCode_ = "";
     /**
      * <pre>
      * The IATA code of the port. At least one of IATA or ICAO airport code is required.
@@ -436,7 +332,8 @@ public final class Airport {
     }
 
     public static final int CITYNAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object cityName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object cityName_ = "";
     /**
      * <pre>
      * The name of the city associated with the airport can be used in back/text fields.
@@ -516,11 +413,12 @@ public final class Airport {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedCityNameOrBuilder() {
-      return getLocalizedCityName();
+      return localizedCityName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedCityName_;
     }
 
     public static final int AIRPORTNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object airportName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airportName_ = "";
     /**
      * <pre>
      * The name of the airport to be displayed on the boarding pass above the airport code.
@@ -600,11 +498,12 @@ public final class Airport {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAirportNameOrBuilder() {
-      return getLocalizedAirportName();
+      return localizedAirportName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAirportName_;
     }
 
     public static final int COUNTRYCODE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object countryCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object countryCode_ = "";
     /**
      * <pre>
      * The ISO 3166 country code of the port.
@@ -650,7 +549,8 @@ public final class Airport {
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 8;
-    private volatile java.lang.Object timezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timezone_ = "";
     /**
      * <pre>
      * The timezone of the airport in IANA timezone format. This is required to ensure the correct rendering of times and dates in the time local to the port.
@@ -733,7 +633,7 @@ public final class Airport {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, timezone_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -768,7 +668,7 @@ public final class Airport {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(timezone_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, timezone_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -805,7 +705,7 @@ public final class Airport {
           .equals(other.getCountryCode())) return false;
       if (!getTimezone()
           .equals(other.getTimezone())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -836,7 +736,7 @@ public final class Airport {
       hash = (53 * hash) + getCountryCode().hashCode();
       hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
       hash = (53 * hash) + getTimezone().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -957,46 +857,34 @@ public final class Airport {
 
       // Construct using com.passkit.grpc.Flights.Airport.Port.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         iataAirportCode_ = "";
-
         icaoAirportCode_ = "";
-
         cityName_ = "";
-
-        if (localizedCityNameBuilder_ == null) {
-          localizedCityName_ = null;
-        } else {
-          localizedCityName_ = null;
+        localizedCityName_ = null;
+        if (localizedCityNameBuilder_ != null) {
+          localizedCityNameBuilder_.dispose();
           localizedCityNameBuilder_ = null;
         }
         airportName_ = "";
-
-        if (localizedAirportNameBuilder_ == null) {
-          localizedAirportName_ = null;
-        } else {
-          localizedAirportName_ = null;
+        localizedAirportName_ = null;
+        if (localizedAirportNameBuilder_ != null) {
+          localizedAirportNameBuilder_.dispose();
           localizedAirportNameBuilder_ = null;
         }
         countryCode_ = "";
-
         timezone_ = "";
-
         return this;
       }
 
@@ -1023,58 +911,43 @@ public final class Airport {
       @java.lang.Override
       public com.passkit.grpc.Flights.Airport.Port buildPartial() {
         com.passkit.grpc.Flights.Airport.Port result = new com.passkit.grpc.Flights.Airport.Port(this);
-        result.iataAirportCode_ = iataAirportCode_;
-        result.icaoAirportCode_ = icaoAirportCode_;
-        result.cityName_ = cityName_;
-        if (localizedCityNameBuilder_ == null) {
-          result.localizedCityName_ = localizedCityName_;
-        } else {
-          result.localizedCityName_ = localizedCityNameBuilder_.build();
-        }
-        result.airportName_ = airportName_;
-        if (localizedAirportNameBuilder_ == null) {
-          result.localizedAirportName_ = localizedAirportName_;
-        } else {
-          result.localizedAirportName_ = localizedAirportNameBuilder_.build();
-        }
-        result.countryCode_ = countryCode_;
-        result.timezone_ = timezone_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.Airport.Port result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iataAirportCode_ = iataAirportCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.icaoAirportCode_ = icaoAirportCode_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cityName_ = cityName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.localizedCityName_ = localizedCityNameBuilder_ == null
+              ? localizedCityName_
+              : localizedCityNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.airportName_ = airportName_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedAirportName_ = localizedAirportNameBuilder_ == null
+              ? localizedAirportName_
+              : localizedAirportNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.countryCode_ = countryCode_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timezone_ = timezone_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.Airport.Port) {
@@ -1089,14 +962,17 @@ public final class Airport {
         if (other == com.passkit.grpc.Flights.Airport.Port.getDefaultInstance()) return this;
         if (!other.getIataAirportCode().isEmpty()) {
           iataAirportCode_ = other.iataAirportCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getIcaoAirportCode().isEmpty()) {
           icaoAirportCode_ = other.icaoAirportCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getCityName().isEmpty()) {
           cityName_ = other.cityName_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasLocalizedCityName()) {
@@ -1104,6 +980,7 @@ public final class Airport {
         }
         if (!other.getAirportName().isEmpty()) {
           airportName_ = other.airportName_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasLocalizedAirportName()) {
@@ -1111,13 +988,15 @@ public final class Airport {
         }
         if (!other.getCountryCode().isEmpty()) {
           countryCode_ = other.countryCode_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1132,19 +1011,77 @@ public final class Airport {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.Airport.Port parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iataAirportCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                icaoAirportCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                cityName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getLocalizedCityNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                airportName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getLocalizedAirportNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                countryCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                timezone_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.Airport.Port) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object iataAirportCode_ = "";
       /**
@@ -1199,11 +1136,9 @@ public final class Airport {
        */
       public Builder setIataAirportCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         iataAirportCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1216,8 +1151,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearIataAirportCode() {
-        
         iataAirportCode_ = getDefaultInstance().getIataAirportCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1232,12 +1167,10 @@ public final class Airport {
        */
       public Builder setIataAirportCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         iataAirportCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1295,11 +1228,9 @@ public final class Airport {
        */
       public Builder setIcaoAirportCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         icaoAirportCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1312,8 +1243,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearIcaoAirportCode() {
-        
         icaoAirportCode_ = getDefaultInstance().getIcaoAirportCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1328,12 +1259,10 @@ public final class Airport {
        */
       public Builder setIcaoAirportCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         icaoAirportCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1391,11 +1320,9 @@ public final class Airport {
        */
       public Builder setCityName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         cityName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1408,8 +1335,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearCityName() {
-        
         cityName_ = getDefaultInstance().getCityName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1424,12 +1351,10 @@ public final class Airport {
        */
       public Builder setCityNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         cityName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1446,7 +1371,7 @@ public final class Airport {
        * @return Whether the localizedCityName field is set.
        */
       public boolean hasLocalizedCityName() {
-        return localizedCityNameBuilder_ != null || localizedCityName_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -1476,11 +1401,11 @@ public final class Airport {
             throw new NullPointerException();
           }
           localizedCityName_ = value;
-          onChanged();
         } else {
           localizedCityNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1494,11 +1419,11 @@ public final class Airport {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedCityNameBuilder_ == null) {
           localizedCityName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedCityNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1510,17 +1435,18 @@ public final class Airport {
        */
       public Builder mergeLocalizedCityName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedCityNameBuilder_ == null) {
-          if (localizedCityName_ != null) {
-            localizedCityName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedCityName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            localizedCityName_ != null &&
+            localizedCityName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedCityNameBuilder().mergeFrom(value);
           } else {
             localizedCityName_ = value;
           }
-          onChanged();
         } else {
           localizedCityNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1531,14 +1457,13 @@ public final class Airport {
        * <code>.io.LocalizedString localizedCityName = 4;</code>
        */
       public Builder clearLocalizedCityName() {
-        if (localizedCityNameBuilder_ == null) {
-          localizedCityName_ = null;
-          onChanged();
-        } else {
-          localizedCityName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        localizedCityName_ = null;
+        if (localizedCityNameBuilder_ != null) {
+          localizedCityNameBuilder_.dispose();
           localizedCityNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1549,7 +1474,7 @@ public final class Airport {
        * <code>.io.LocalizedString localizedCityName = 4;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedCityNameBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getLocalizedCityNameFieldBuilder().getBuilder();
       }
@@ -1642,11 +1567,9 @@ public final class Airport {
        */
       public Builder setAirportName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airportName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1659,8 +1582,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearAirportName() {
-        
         airportName_ = getDefaultInstance().getAirportName();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1675,12 +1598,10 @@ public final class Airport {
        */
       public Builder setAirportNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airportName_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1697,7 +1618,7 @@ public final class Airport {
        * @return Whether the localizedAirportName field is set.
        */
       public boolean hasLocalizedAirportName() {
-        return localizedAirportNameBuilder_ != null || localizedAirportName_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -1727,11 +1648,11 @@ public final class Airport {
             throw new NullPointerException();
           }
           localizedAirportName_ = value;
-          onChanged();
         } else {
           localizedAirportNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1745,11 +1666,11 @@ public final class Airport {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAirportNameBuilder_ == null) {
           localizedAirportName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAirportNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1761,17 +1682,18 @@ public final class Airport {
        */
       public Builder mergeLocalizedAirportName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAirportNameBuilder_ == null) {
-          if (localizedAirportName_ != null) {
-            localizedAirportName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAirportName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedAirportName_ != null &&
+            localizedAirportName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAirportNameBuilder().mergeFrom(value);
           } else {
             localizedAirportName_ = value;
           }
-          onChanged();
         } else {
           localizedAirportNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1782,14 +1704,13 @@ public final class Airport {
        * <code>.io.LocalizedString localizedAirportName = 6;</code>
        */
       public Builder clearLocalizedAirportName() {
-        if (localizedAirportNameBuilder_ == null) {
-          localizedAirportName_ = null;
-          onChanged();
-        } else {
-          localizedAirportName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedAirportName_ = null;
+        if (localizedAirportNameBuilder_ != null) {
+          localizedAirportNameBuilder_.dispose();
           localizedAirportNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1800,7 +1721,7 @@ public final class Airport {
        * <code>.io.LocalizedString localizedAirportName = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAirportNameBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedAirportNameFieldBuilder().getBuilder();
       }
@@ -1893,11 +1814,9 @@ public final class Airport {
        */
       public Builder setCountryCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         countryCode_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1910,8 +1829,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
-        
         countryCode_ = getDefaultInstance().getCountryCode();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1926,12 +1845,10 @@ public final class Airport {
        */
       public Builder setCountryCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         countryCode_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1989,11 +1906,9 @@ public final class Airport {
        */
       public Builder setTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timezone_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2006,8 +1921,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearTimezone() {
-        
         timezone_ = getDefaultInstance().getTimezone();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2022,12 +1937,10 @@ public final class Airport {
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timezone_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2064,7 +1977,18 @@ public final class Airport {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Port(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2135,56 +2059,6 @@ public final class Airport {
       return new AirportCode();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private AirportCode(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              airportCode_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.Airport.internal_static_flights_AirportCode_descriptor;
@@ -2199,7 +2073,8 @@ public final class Airport {
     }
 
     public static final int AIRPORTCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object airportCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airportCode_ = "";
     /**
      * <pre>
      * The IATA or ICAO airport code.
@@ -2261,7 +2136,7 @@ public final class Airport {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, airportCode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2273,7 +2148,7 @@ public final class Airport {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(airportCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, airportCode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2290,7 +2165,7 @@ public final class Airport {
 
       if (!getAirportCode()
           .equals(other.getAirportCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2303,7 +2178,7 @@ public final class Airport {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + AIRPORTCODE_FIELD_NUMBER;
       hash = (53 * hash) + getAirportCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2424,24 +2299,19 @@ public final class Airport {
 
       // Construct using com.passkit.grpc.Flights.Airport.AirportCode.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         airportCode_ = "";
-
         return this;
       }
 
@@ -2468,43 +2338,18 @@ public final class Airport {
       @java.lang.Override
       public com.passkit.grpc.Flights.Airport.AirportCode buildPartial() {
         com.passkit.grpc.Flights.Airport.AirportCode result = new com.passkit.grpc.Flights.Airport.AirportCode(this);
-        result.airportCode_ = airportCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.Airport.AirportCode result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.airportCode_ = airportCode_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.Airport.AirportCode) {
@@ -2519,9 +2364,10 @@ public final class Airport {
         if (other == com.passkit.grpc.Flights.Airport.AirportCode.getDefaultInstance()) return this;
         if (!other.getAirportCode().isEmpty()) {
           airportCode_ = other.airportCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2536,19 +2382,38 @@ public final class Airport {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.Airport.AirportCode parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                airportCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.Airport.AirportCode) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object airportCode_ = "";
       /**
@@ -2603,11 +2468,9 @@ public final class Airport {
        */
       public Builder setAirportCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airportCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2620,8 +2483,8 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder clearAirportCode() {
-        
         airportCode_ = getDefaultInstance().getAirportCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2636,12 +2499,10 @@ public final class Airport {
        */
       public Builder setAirportCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airportCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2678,7 +2539,18 @@ public final class Airport {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AirportCode(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

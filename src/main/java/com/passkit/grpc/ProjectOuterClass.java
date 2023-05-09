@@ -453,105 +453,6 @@ public final class ProjectOuterClass {
       return new Project();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Project(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              protocol_ = rawValue;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              classId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              shortCode_ = s;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              secret_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              key_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              encryptedClassId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ProjectOuterClass.internal_static_io_Project_descriptor;
@@ -566,7 +467,7 @@ public final class ProjectOuterClass {
     }
 
     public static final int PROTOCOL_FIELD_NUMBER = 1;
-    private int protocol_;
+    private int protocol_ = 0;
     /**
      * <pre>
      * The PassProtocol the project implements.
@@ -587,13 +488,13 @@ public final class ProjectOuterClass {
      * @return The protocol.
      */
     @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
       return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
     }
 
     public static final int CLASSID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object classId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
     /**
      * <pre>
      * The class ID that the projects refers to (highest level protocol object; i.e. member program id, coupon campaign id, etc).
@@ -639,7 +540,8 @@ public final class ProjectOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * The project name.
@@ -685,7 +587,8 @@ public final class ProjectOuterClass {
     }
 
     public static final int SHORTCODE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object shortCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object shortCode_ = "";
     /**
      * <pre>
      * The project short-code; used for creating public project URL's.
@@ -765,11 +668,12 @@ public final class ProjectOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int SECRET_FIELD_NUMBER = 6;
-    private volatile java.lang.Object secret_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object secret_ = "";
     /**
      * <pre>
      * A shared secret used for creating signed links.
@@ -815,7 +719,8 @@ public final class ProjectOuterClass {
     }
 
     public static final int KEY_FIELD_NUMBER = 7;
-    private volatile java.lang.Object key_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
     /**
      * <pre>
      * A key used to create encrypted, signed links.
@@ -861,7 +766,8 @@ public final class ProjectOuterClass {
     }
 
     public static final int ENCRYPTEDCLASSID_FIELD_NUMBER = 9;
-    private volatile java.lang.Object encryptedClassId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object encryptedClassId_ = "";
     /**
      * <pre>
      * Encrypted class ID. Can be used in integrations where the Class ID needs to be publicly exposed.
@@ -944,7 +850,7 @@ public final class ProjectOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptedClassId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, encryptedClassId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -979,7 +885,7 @@ public final class ProjectOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(encryptedClassId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, encryptedClassId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1012,7 +918,7 @@ public final class ProjectOuterClass {
           .equals(other.getKey())) return false;
       if (!getEncryptedClassId()
           .equals(other.getEncryptedClassId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1041,7 +947,7 @@ public final class ProjectOuterClass {
       hash = (53 * hash) + getKey().hashCode();
       hash = (37 * hash) + ENCRYPTEDCLASSID_FIELD_NUMBER;
       hash = (53 * hash) + getEncryptedClassId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1158,42 +1064,30 @@ public final class ProjectOuterClass {
 
       // Construct using com.passkit.grpc.ProjectOuterClass.Project.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         protocol_ = 0;
-
         classId_ = "";
-
         name_ = "";
-
         shortCode_ = "";
-
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
         secret_ = "";
-
         key_ = "";
-
         encryptedClassId_ = "";
-
         return this;
       }
 
@@ -1220,54 +1114,41 @@ public final class ProjectOuterClass {
       @java.lang.Override
       public com.passkit.grpc.ProjectOuterClass.Project buildPartial() {
         com.passkit.grpc.ProjectOuterClass.Project result = new com.passkit.grpc.ProjectOuterClass.Project(this);
-        result.protocol_ = protocol_;
-        result.classId_ = classId_;
-        result.name_ = name_;
-        result.shortCode_ = shortCode_;
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        result.secret_ = secret_;
-        result.key_ = key_;
-        result.encryptedClassId_ = encryptedClassId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ProjectOuterClass.Project result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.protocol_ = protocol_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.shortCode_ = shortCode_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.secret_ = secret_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.encryptedClassId_ = encryptedClassId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ProjectOuterClass.Project) {
@@ -1285,14 +1166,17 @@ public final class ProjectOuterClass {
         }
         if (!other.getClassId().isEmpty()) {
           classId_ = other.classId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getShortCode().isEmpty()) {
           shortCode_ = other.shortCode_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasCreated()) {
@@ -1300,17 +1184,20 @@ public final class ProjectOuterClass {
         }
         if (!other.getSecret().isEmpty()) {
           secret_ = other.secret_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getEncryptedClassId().isEmpty()) {
           encryptedClassId_ = other.encryptedClassId_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1325,19 +1212,75 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ProjectOuterClass.Project parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                protocol_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                shortCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                secret_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                key_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 74: {
+                encryptedClassId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ProjectOuterClass.Project) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int protocol_ = 0;
       /**
@@ -1361,8 +1304,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder setProtocolValue(int value) {
-        
         protocol_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1376,8 +1319,7 @@ public final class ProjectOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
         return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
       }
       /**
@@ -1393,7 +1335,7 @@ public final class ProjectOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         protocol_ = value.getNumber();
         onChanged();
         return this;
@@ -1407,7 +1349,7 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         protocol_ = 0;
         onChanged();
         return this;
@@ -1466,11 +1408,9 @@ public final class ProjectOuterClass {
        */
       public Builder setClassId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1483,8 +1423,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearClassId() {
-        
         classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1499,12 +1439,10 @@ public final class ProjectOuterClass {
        */
       public Builder setClassIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1562,11 +1500,9 @@ public final class ProjectOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1579,8 +1515,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1595,12 +1531,10 @@ public final class ProjectOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1658,11 +1592,9 @@ public final class ProjectOuterClass {
        */
       public Builder setShortCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         shortCode_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1675,8 +1607,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearShortCode() {
-        
         shortCode_ = getDefaultInstance().getShortCode();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1691,12 +1623,10 @@ public final class ProjectOuterClass {
        */
       public Builder setShortCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         shortCode_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1713,7 +1643,7 @@ public final class ProjectOuterClass {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1743,11 +1673,11 @@ public final class ProjectOuterClass {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1761,11 +1691,11 @@ public final class ProjectOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1777,17 +1707,18 @@ public final class ProjectOuterClass {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1798,14 +1729,13 @@ public final class ProjectOuterClass {
        * <code>.google.protobuf.Timestamp created = 5;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1816,7 +1746,7 @@ public final class ProjectOuterClass {
        * <code>.google.protobuf.Timestamp created = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -1909,11 +1839,9 @@ public final class ProjectOuterClass {
        */
       public Builder setSecret(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         secret_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1926,8 +1854,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSecret() {
-        
         secret_ = getDefaultInstance().getSecret();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1942,12 +1870,10 @@ public final class ProjectOuterClass {
        */
       public Builder setSecretBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         secret_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2005,11 +1931,9 @@ public final class ProjectOuterClass {
        */
       public Builder setKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         key_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2022,8 +1946,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKey() {
-        
         key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2038,12 +1962,10 @@ public final class ProjectOuterClass {
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         key_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2101,11 +2023,9 @@ public final class ProjectOuterClass {
        */
       public Builder setEncryptedClassId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         encryptedClassId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2118,8 +2038,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearEncryptedClassId() {
-        
         encryptedClassId_ = getDefaultInstance().getEncryptedClassId();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2134,12 +2054,10 @@ public final class ProjectOuterClass {
        */
       public Builder setEncryptedClassIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         encryptedClassId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2176,7 +2094,18 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Project(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2252,76 +2181,6 @@ public final class ProjectOuterClass {
       return new ProjectByShortCodeResult();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ProjectByShortCodeResult(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.ProjectOuterClass.Project.Builder subBuilder = null;
-              if (project_ != null) {
-                subBuilder = project_.toBuilder();
-              }
-              project_ = input.readMessage(com.passkit.grpc.ProjectOuterClass.Project.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(project_);
-                project_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Template.PassTemplate.Builder subBuilder = null;
-              if (template_ != null) {
-                subBuilder = template_.toBuilder();
-              }
-              template_ = input.readMessage(com.passkit.grpc.Template.PassTemplate.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(template_);
-                template_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ProjectOuterClass.internal_static_io_ProjectByShortCodeResult_descriptor;
@@ -2358,7 +2217,7 @@ public final class ProjectOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.ProjectOuterClass.ProjectOrBuilder getProjectOrBuilder() {
-      return getProject();
+      return project_ == null ? com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance() : project_;
     }
 
     public static final int TEMPLATE_FIELD_NUMBER = 2;
@@ -2384,7 +2243,7 @@ public final class ProjectOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Template.PassTemplateOrBuilder getTemplateOrBuilder() {
-      return getTemplate();
+      return template_ == null ? com.passkit.grpc.Template.PassTemplate.getDefaultInstance() : template_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2407,7 +2266,7 @@ public final class ProjectOuterClass {
       if (template_ != null) {
         output.writeMessage(2, getTemplate());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2424,7 +2283,7 @@ public final class ProjectOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTemplate());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2449,7 +2308,7 @@ public final class ProjectOuterClass {
         if (!getTemplate()
             .equals(other.getTemplate())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2468,7 +2327,7 @@ public final class ProjectOuterClass {
         hash = (37 * hash) + TEMPLATE_FIELD_NUMBER;
         hash = (53 * hash) + getTemplate().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2585,32 +2444,26 @@ public final class ProjectOuterClass {
 
       // Construct using com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (projectBuilder_ == null) {
-          project_ = null;
-        } else {
-          project_ = null;
+        bitField0_ = 0;
+        project_ = null;
+        if (projectBuilder_ != null) {
+          projectBuilder_.dispose();
           projectBuilder_ = null;
         }
-        if (templateBuilder_ == null) {
-          template_ = null;
-        } else {
-          template_ = null;
+        template_ = null;
+        if (templateBuilder_ != null) {
+          templateBuilder_.dispose();
           templateBuilder_ = null;
         }
         return this;
@@ -2639,52 +2492,25 @@ public final class ProjectOuterClass {
       @java.lang.Override
       public com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult buildPartial() {
         com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult result = new com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult(this);
-        if (projectBuilder_ == null) {
-          result.project_ = project_;
-        } else {
-          result.project_ = projectBuilder_.build();
-        }
-        if (templateBuilder_ == null) {
-          result.template_ = template_;
-        } else {
-          result.template_ = templateBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.project_ = projectBuilder_ == null
+              ? project_
+              : projectBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.template_ = templateBuilder_ == null
+              ? template_
+              : templateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult) {
@@ -2703,7 +2529,7 @@ public final class ProjectOuterClass {
         if (other.hasTemplate()) {
           mergeTemplate(other.getTemplate());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2718,19 +2544,47 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getProjectFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTemplateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.ProjectOuterClass.Project project_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2740,7 +2594,7 @@ public final class ProjectOuterClass {
        * @return Whether the project field is set.
        */
       public boolean hasProject() {
-        return projectBuilder_ != null || project_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.io.Project project = 1;</code>
@@ -2762,11 +2616,11 @@ public final class ProjectOuterClass {
             throw new NullPointerException();
           }
           project_ = value;
-          onChanged();
         } else {
           projectBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2776,11 +2630,11 @@ public final class ProjectOuterClass {
           com.passkit.grpc.ProjectOuterClass.Project.Builder builderForValue) {
         if (projectBuilder_ == null) {
           project_ = builderForValue.build();
-          onChanged();
         } else {
           projectBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2788,38 +2642,38 @@ public final class ProjectOuterClass {
        */
       public Builder mergeProject(com.passkit.grpc.ProjectOuterClass.Project value) {
         if (projectBuilder_ == null) {
-          if (project_ != null) {
-            project_ =
-              com.passkit.grpc.ProjectOuterClass.Project.newBuilder(project_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            project_ != null &&
+            project_ != com.passkit.grpc.ProjectOuterClass.Project.getDefaultInstance()) {
+            getProjectBuilder().mergeFrom(value);
           } else {
             project_ = value;
           }
-          onChanged();
         } else {
           projectBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Project project = 1;</code>
        */
       public Builder clearProject() {
-        if (projectBuilder_ == null) {
-          project_ = null;
-          onChanged();
-        } else {
-          project_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        project_ = null;
+        if (projectBuilder_ != null) {
+          projectBuilder_.dispose();
           projectBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Project project = 1;</code>
        */
       public com.passkit.grpc.ProjectOuterClass.Project.Builder getProjectBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getProjectFieldBuilder().getBuilder();
       }
@@ -2859,7 +2713,7 @@ public final class ProjectOuterClass {
        * @return Whether the template field is set.
        */
       public boolean hasTemplate() {
-        return templateBuilder_ != null || template_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.PassTemplate template = 2;</code>
@@ -2881,11 +2735,11 @@ public final class ProjectOuterClass {
             throw new NullPointerException();
           }
           template_ = value;
-          onChanged();
         } else {
           templateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2895,11 +2749,11 @@ public final class ProjectOuterClass {
           com.passkit.grpc.Template.PassTemplate.Builder builderForValue) {
         if (templateBuilder_ == null) {
           template_ = builderForValue.build();
-          onChanged();
         } else {
           templateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2907,38 +2761,38 @@ public final class ProjectOuterClass {
        */
       public Builder mergeTemplate(com.passkit.grpc.Template.PassTemplate value) {
         if (templateBuilder_ == null) {
-          if (template_ != null) {
-            template_ =
-              com.passkit.grpc.Template.PassTemplate.newBuilder(template_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            template_ != null &&
+            template_ != com.passkit.grpc.Template.PassTemplate.getDefaultInstance()) {
+            getTemplateBuilder().mergeFrom(value);
           } else {
             template_ = value;
           }
-          onChanged();
         } else {
           templateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.PassTemplate template = 2;</code>
        */
       public Builder clearTemplate() {
-        if (templateBuilder_ == null) {
-          template_ = null;
-          onChanged();
-        } else {
-          template_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        template_ = null;
+        if (templateBuilder_ != null) {
+          templateBuilder_.dispose();
           templateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.PassTemplate template = 2;</code>
        */
       public com.passkit.grpc.Template.PassTemplate.Builder getTemplateBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTemplateFieldBuilder().getBuilder();
       }
@@ -3002,7 +2856,18 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProjectByShortCodeResult(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3060,56 +2925,6 @@ public final class ProjectOuterClass {
       return new ProjectStatusFilter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ProjectStatusFilter(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ProjectOuterClass.internal_static_io_ProjectStatusFilter_descriptor;
@@ -3124,7 +2939,7 @@ public final class ProjectOuterClass {
     }
 
     public static final int STATUS_FIELD_NUMBER = 1;
-    private int status_;
+    private int status_ = 0;
     /**
      * <code>.io.ProjectStatus status = 1;</code>
      * @return The enum numeric value on the wire for status.
@@ -3137,8 +2952,7 @@ public final class ProjectOuterClass {
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.ProjectOuterClass.ProjectStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(status_);
+      com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
     }
 
@@ -3159,7 +2973,7 @@ public final class ProjectOuterClass {
       if (status_ != com.passkit.grpc.ProjectOuterClass.ProjectStatus.NO_PROJECT_STATUS.getNumber()) {
         output.writeEnum(1, status_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3172,7 +2986,7 @@ public final class ProjectOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, status_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3188,7 +3002,7 @@ public final class ProjectOuterClass {
       com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter other = (com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter) obj;
 
       if (status_ != other.status_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3201,7 +3015,7 @@ public final class ProjectOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3318,24 +3132,19 @@ public final class ProjectOuterClass {
 
       // Construct using com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         status_ = 0;
-
         return this;
       }
 
@@ -3362,43 +3171,18 @@ public final class ProjectOuterClass {
       @java.lang.Override
       public com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter buildPartial() {
         com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter result = new com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter(this);
-        result.status_ = status_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.status_ = status_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter) {
@@ -3414,7 +3198,7 @@ public final class ProjectOuterClass {
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3429,19 +3213,38 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int status_ = 0;
       /**
@@ -3457,8 +3260,8 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3468,8 +3271,7 @@ public final class ProjectOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.ProjectOuterClass.ProjectStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.valueOf(status_);
+        com.passkit.grpc.ProjectOuterClass.ProjectStatus result = com.passkit.grpc.ProjectOuterClass.ProjectStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.ProjectOuterClass.ProjectStatus.UNRECOGNIZED : result;
       }
       /**
@@ -3481,7 +3283,7 @@ public final class ProjectOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -3491,7 +3293,7 @@ public final class ProjectOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         status_ = 0;
         onChanged();
         return this;
@@ -3529,7 +3331,18 @@ public final class ProjectOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProjectStatusFilter(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

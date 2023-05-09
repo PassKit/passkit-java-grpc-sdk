@@ -299,144 +299,6 @@ public final class TicketTypeOuterClass {
       return new TicketType();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TicketType(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              productionId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedName_ != null) {
-                subBuilder = localizedName_.toBuilder();
-              }
-              localizedName_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedName_);
-                localizedName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ticketTypeConditions_ = s;
-              break;
-            }
-            case 58: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedTicketTypeConditions_ != null) {
-                subBuilder = localizedTicketTypeConditions_.toBuilder();
-              }
-              localizedTicketTypeConditions_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedTicketTypeConditions_);
-                localizedTicketTypeConditions_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              beforeRedeemPassTemplateId_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              afterRedeemPassTemplateId_ = s;
-              break;
-            }
-            case 82: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 90: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updated_ != null) {
-                subBuilder = updated_.toBuilder();
-              }
-              updated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updated_);
-                updated_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketTypeOuterClass.internal_static_event_tickets_TicketType_descriptor;
@@ -451,7 +313,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated ticket type id (22 characters).
@@ -497,7 +360,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * User generated ticket type id; unique within the Production.
@@ -543,7 +407,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * The Production the ticket type belongs to
@@ -589,7 +454,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of the ticket type. Internal use only.
@@ -669,11 +535,12 @@ public final class TicketTypeOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedNameOrBuilder() {
-      return getLocalizedName();
+      return localizedName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedName_;
     }
 
     public static final int TICKETTYPECONDITIONS_FIELD_NUMBER = 6;
-    private volatile java.lang.Object ticketTypeConditions_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ticketTypeConditions_ = "";
     /**
      * <pre>
      * Terms &amp; conditions specifically for this ticket type.
@@ -753,11 +620,12 @@ public final class TicketTypeOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTicketTypeConditionsOrBuilder() {
-      return getLocalizedTicketTypeConditions();
+      return localizedTicketTypeConditions_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTicketTypeConditions_;
     }
 
     public static final int BEFOREREDEEMPASSTEMPLATEID_FIELD_NUMBER = 8;
-    private volatile java.lang.Object beforeRedeemPassTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object beforeRedeemPassTemplateId_ = "";
     /**
      * <pre>
      * The pass template design ID that tickets will use when initially issued.
@@ -803,7 +671,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int AFTERREDEEMPASSTEMPLATEID_FIELD_NUMBER = 9;
-    private volatile java.lang.Object afterRedeemPassTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object afterRedeemPassTemplateId_ = "";
     /**
      * <pre>
      * Optional pass template ID that tickets will use after the ticket holder checked into the venue (when the ticket switches to its redeemed state).
@@ -883,7 +752,7 @@ public final class TicketTypeOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 11;
@@ -921,7 +790,7 @@ public final class TicketTypeOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -971,7 +840,7 @@ public final class TicketTypeOuterClass {
       if (updated_ != null) {
         output.writeMessage(11, getUpdated());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1017,7 +886,7 @@ public final class TicketTypeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getUpdated());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1066,7 +935,7 @@ public final class TicketTypeOuterClass {
         if (!getUpdated()
             .equals(other.getUpdated())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1107,7 +976,7 @@ public final class TicketTypeOuterClass {
         hash = (37 * hash) + UPDATED_FIELD_NUMBER;
         hash = (53 * hash) + getUpdated().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1228,58 +1097,43 @@ public final class TicketTypeOuterClass {
 
       // Construct using com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         uid_ = "";
-
         productionId_ = "";
-
         name_ = "";
-
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-        } else {
-          localizedName_ = null;
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
         ticketTypeConditions_ = "";
-
-        if (localizedTicketTypeConditionsBuilder_ == null) {
-          localizedTicketTypeConditions_ = null;
-        } else {
-          localizedTicketTypeConditions_ = null;
+        localizedTicketTypeConditions_ = null;
+        if (localizedTicketTypeConditionsBuilder_ != null) {
+          localizedTicketTypeConditionsBuilder_.dispose();
           localizedTicketTypeConditionsBuilder_ = null;
         }
         beforeRedeemPassTemplateId_ = "";
-
         afterRedeemPassTemplateId_ = "";
-
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -1308,69 +1162,56 @@ public final class TicketTypeOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType buildPartial() {
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType result = new com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType(this);
-        result.id_ = id_;
-        result.uid_ = uid_;
-        result.productionId_ = productionId_;
-        result.name_ = name_;
-        if (localizedNameBuilder_ == null) {
-          result.localizedName_ = localizedName_;
-        } else {
-          result.localizedName_ = localizedNameBuilder_.build();
-        }
-        result.ticketTypeConditions_ = ticketTypeConditions_;
-        if (localizedTicketTypeConditionsBuilder_ == null) {
-          result.localizedTicketTypeConditions_ = localizedTicketTypeConditions_;
-        } else {
-          result.localizedTicketTypeConditions_ = localizedTicketTypeConditionsBuilder_.build();
-        }
-        result.beforeRedeemPassTemplateId_ = beforeRedeemPassTemplateId_;
-        result.afterRedeemPassTemplateId_ = afterRedeemPassTemplateId_;
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localizedName_ = localizedNameBuilder_ == null
+              ? localizedName_
+              : localizedNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.ticketTypeConditions_ = ticketTypeConditions_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.localizedTicketTypeConditions_ = localizedTicketTypeConditionsBuilder_ == null
+              ? localizedTicketTypeConditions_
+              : localizedTicketTypeConditionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.beforeRedeemPassTemplateId_ = beforeRedeemPassTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.afterRedeemPassTemplateId_ = afterRedeemPassTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType) {
@@ -1385,18 +1226,22 @@ public final class TicketTypeOuterClass {
         if (other == com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasLocalizedName()) {
@@ -1404,6 +1249,7 @@ public final class TicketTypeOuterClass {
         }
         if (!other.getTicketTypeConditions().isEmpty()) {
           ticketTypeConditions_ = other.ticketTypeConditions_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasLocalizedTicketTypeConditions()) {
@@ -1411,10 +1257,12 @@ public final class TicketTypeOuterClass {
         }
         if (!other.getBeforeRedeemPassTemplateId().isEmpty()) {
           beforeRedeemPassTemplateId_ = other.beforeRedeemPassTemplateId_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getAfterRedeemPassTemplateId().isEmpty()) {
           afterRedeemPassTemplateId_ = other.afterRedeemPassTemplateId_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasCreated()) {
@@ -1423,7 +1271,7 @@ public final class TicketTypeOuterClass {
         if (other.hasUpdated()) {
           mergeUpdated(other.getUpdated());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1438,19 +1286,96 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                productionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getLocalizedNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                ticketTypeConditions_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getLocalizedTicketTypeConditionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                beforeRedeemPassTemplateId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                afterRedeemPassTemplateId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getUpdatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1505,11 +1430,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1522,8 +1445,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1538,12 +1461,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1601,11 +1522,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1618,8 +1537,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1634,12 +1553,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1697,11 +1614,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1714,8 +1629,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1730,12 +1645,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1793,11 +1706,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1810,8 +1721,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1826,12 +1737,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1848,7 +1757,7 @@ public final class TicketTypeOuterClass {
        * @return Whether the localizedName field is set.
        */
       public boolean hasLocalizedName() {
-        return localizedNameBuilder_ != null || localizedName_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1878,11 +1787,11 @@ public final class TicketTypeOuterClass {
             throw new NullPointerException();
           }
           localizedName_ = value;
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1896,11 +1805,11 @@ public final class TicketTypeOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedNameBuilder_ == null) {
           localizedName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1912,17 +1821,18 @@ public final class TicketTypeOuterClass {
        */
       public Builder mergeLocalizedName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedNameBuilder_ == null) {
-          if (localizedName_ != null) {
-            localizedName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            localizedName_ != null &&
+            localizedName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedNameBuilder().mergeFrom(value);
           } else {
             localizedName_ = value;
           }
-          onChanged();
         } else {
           localizedNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1933,14 +1843,13 @@ public final class TicketTypeOuterClass {
        * <code>.io.LocalizedString localizedName = 5;</code>
        */
       public Builder clearLocalizedName() {
-        if (localizedNameBuilder_ == null) {
-          localizedName_ = null;
-          onChanged();
-        } else {
-          localizedName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        localizedName_ = null;
+        if (localizedNameBuilder_ != null) {
+          localizedNameBuilder_.dispose();
           localizedNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1951,7 +1860,7 @@ public final class TicketTypeOuterClass {
        * <code>.io.LocalizedString localizedName = 5;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedNameBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getLocalizedNameFieldBuilder().getBuilder();
       }
@@ -2044,11 +1953,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setTicketTypeConditions(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ticketTypeConditions_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2061,8 +1968,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTicketTypeConditions() {
-        
         ticketTypeConditions_ = getDefaultInstance().getTicketTypeConditions();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -2077,12 +1984,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setTicketTypeConditionsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ticketTypeConditions_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2099,7 +2004,7 @@ public final class TicketTypeOuterClass {
        * @return Whether the localizedTicketTypeConditions field is set.
        */
       public boolean hasLocalizedTicketTypeConditions() {
-        return localizedTicketTypeConditionsBuilder_ != null || localizedTicketTypeConditions_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -2129,11 +2034,11 @@ public final class TicketTypeOuterClass {
             throw new NullPointerException();
           }
           localizedTicketTypeConditions_ = value;
-          onChanged();
         } else {
           localizedTicketTypeConditionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2147,11 +2052,11 @@ public final class TicketTypeOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTicketTypeConditionsBuilder_ == null) {
           localizedTicketTypeConditions_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTicketTypeConditionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2163,17 +2068,18 @@ public final class TicketTypeOuterClass {
        */
       public Builder mergeLocalizedTicketTypeConditions(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTicketTypeConditionsBuilder_ == null) {
-          if (localizedTicketTypeConditions_ != null) {
-            localizedTicketTypeConditions_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTicketTypeConditions_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            localizedTicketTypeConditions_ != null &&
+            localizedTicketTypeConditions_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTicketTypeConditionsBuilder().mergeFrom(value);
           } else {
             localizedTicketTypeConditions_ = value;
           }
-          onChanged();
         } else {
           localizedTicketTypeConditionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2184,14 +2090,13 @@ public final class TicketTypeOuterClass {
        * <code>.io.LocalizedString localizedTicketTypeConditions = 7;</code>
        */
       public Builder clearLocalizedTicketTypeConditions() {
-        if (localizedTicketTypeConditionsBuilder_ == null) {
-          localizedTicketTypeConditions_ = null;
-          onChanged();
-        } else {
-          localizedTicketTypeConditions_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        localizedTicketTypeConditions_ = null;
+        if (localizedTicketTypeConditionsBuilder_ != null) {
+          localizedTicketTypeConditionsBuilder_.dispose();
           localizedTicketTypeConditionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2202,7 +2107,7 @@ public final class TicketTypeOuterClass {
        * <code>.io.LocalizedString localizedTicketTypeConditions = 7;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTicketTypeConditionsBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getLocalizedTicketTypeConditionsFieldBuilder().getBuilder();
       }
@@ -2295,11 +2200,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setBeforeRedeemPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         beforeRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2312,8 +2215,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBeforeRedeemPassTemplateId() {
-        
         beforeRedeemPassTemplateId_ = getDefaultInstance().getBeforeRedeemPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -2328,12 +2231,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setBeforeRedeemPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         beforeRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2391,11 +2292,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setAfterRedeemPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         afterRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2408,8 +2307,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAfterRedeemPassTemplateId() {
-        
         afterRedeemPassTemplateId_ = getDefaultInstance().getAfterRedeemPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -2424,12 +2323,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setAfterRedeemPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         afterRedeemPassTemplateId_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2446,7 +2343,7 @@ public final class TicketTypeOuterClass {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -2476,11 +2373,11 @@ public final class TicketTypeOuterClass {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2494,11 +2391,11 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2510,17 +2407,18 @@ public final class TicketTypeOuterClass {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2531,14 +2429,13 @@ public final class TicketTypeOuterClass {
        * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2549,7 +2446,7 @@ public final class TicketTypeOuterClass {
        * <code>.google.protobuf.Timestamp created = 10 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -2601,7 +2498,7 @@ public final class TicketTypeOuterClass {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -2631,11 +2528,11 @@ public final class TicketTypeOuterClass {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2649,11 +2546,11 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2665,17 +2562,18 @@ public final class TicketTypeOuterClass {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -2686,14 +2584,13 @@ public final class TicketTypeOuterClass {
        * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2704,7 +2601,7 @@ public final class TicketTypeOuterClass {
        * <code>.google.protobuf.Timestamp updated = 11 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -2776,7 +2673,18 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TicketType(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2864,62 +2772,6 @@ public final class TicketTypeOuterClass {
       return new GetByUidRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GetByUidRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              productionId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketTypeOuterClass.internal_static_event_tickets_GetByUidRequest_descriptor;
@@ -2934,7 +2786,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <pre>
      * The production id of the ticket type.
@@ -2980,7 +2833,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * User defined id of the ticket type.
@@ -3045,7 +2899,7 @@ public final class TicketTypeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, uid_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3060,7 +2914,7 @@ public final class TicketTypeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(uid_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, uid_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3079,7 +2933,7 @@ public final class TicketTypeOuterClass {
           .equals(other.getProductionId())) return false;
       if (!getUid()
           .equals(other.getUid())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3094,7 +2948,7 @@ public final class TicketTypeOuterClass {
       hash = (53 * hash) + getProductionId().hashCode();
       hash = (37 * hash) + UID_FIELD_NUMBER;
       hash = (53 * hash) + getUid().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3211,26 +3065,20 @@ public final class TicketTypeOuterClass {
 
       // Construct using com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
         uid_ = "";
-
         return this;
       }
 
@@ -3257,44 +3105,21 @@ public final class TicketTypeOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest result = new com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest(this);
-        result.productionId_ = productionId_;
-        result.uid_ = uid_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest) {
@@ -3309,13 +3134,15 @@ public final class TicketTypeOuterClass {
         if (other == com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3330,19 +3157,43 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                productionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -3397,11 +3248,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3414,8 +3263,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3430,12 +3279,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3493,11 +3340,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3510,8 +3355,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3526,12 +3371,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3568,7 +3411,18 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GetByUidRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3677,68 +3531,6 @@ public final class TicketTypeOuterClass {
       return new TicketTypeLimitedFields();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TicketTypeLimitedFields(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uid_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketTypeOuterClass.internal_static_event_tickets_TicketTypeLimitedFields_descriptor;
@@ -3753,7 +3545,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated ticket type id (22 characters).
@@ -3799,7 +3592,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int UID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uid_ = "";
     /**
      * <pre>
      * User generated ticket type id; unique within the Production.
@@ -3845,7 +3639,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Name of the ticket type. Internal use only.
@@ -3913,7 +3708,7 @@ public final class TicketTypeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3931,7 +3726,7 @@ public final class TicketTypeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3952,7 +3747,7 @@ public final class TicketTypeOuterClass {
           .equals(other.getUid())) return false;
       if (!getName()
           .equals(other.getName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3969,7 +3764,7 @@ public final class TicketTypeOuterClass {
       hash = (53 * hash) + getUid().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4086,28 +3881,21 @@ public final class TicketTypeOuterClass {
 
       // Construct using com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         uid_ = "";
-
         name_ = "";
-
         return this;
       }
 
@@ -4134,45 +3922,24 @@ public final class TicketTypeOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields buildPartial() {
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields result = new com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields(this);
-        result.id_ = id_;
-        result.uid_ = uid_;
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uid_ = uid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields) {
@@ -4187,17 +3954,20 @@ public final class TicketTypeOuterClass {
         if (other == com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUid().isEmpty()) {
           uid_ = other.uid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4212,19 +3982,48 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeLimitedFields) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -4279,11 +4078,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4296,8 +4093,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4312,12 +4109,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4375,11 +4170,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4392,8 +4185,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUid() {
-        
         uid_ = getDefaultInstance().getUid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4408,12 +4201,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setUidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4471,11 +4262,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4488,8 +4277,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4504,12 +4293,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4546,7 +4333,18 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TicketTypeLimitedFields(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4620,69 +4418,6 @@ public final class TicketTypeOuterClass {
       return new TicketTypeListRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TicketTypeListRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              productionId_ = s;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Filter.Filters.Builder subBuilder = null;
-              if (filters_ != null) {
-                subBuilder = filters_.toBuilder();
-              }
-              filters_ = input.readMessage(com.passkit.grpc.Filter.Filters.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(filters_);
-                filters_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.EventTickets.TicketTypeOuterClass.internal_static_event_tickets_TicketTypeListRequest_descriptor;
@@ -4697,7 +4432,8 @@ public final class TicketTypeOuterClass {
     }
 
     public static final int PRODUCTIONID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object productionId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object productionId_ = "";
     /**
      * <code>string productionId = 1;</code>
      * @return The productionId.
@@ -4757,7 +4493,7 @@ public final class TicketTypeOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder() {
-      return getFilters();
+      return filters_ == null ? com.passkit.grpc.Filter.Filters.getDefaultInstance() : filters_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4780,7 +4516,7 @@ public final class TicketTypeOuterClass {
       if (filters_ != null) {
         output.writeMessage(2, getFilters());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4796,7 +4532,7 @@ public final class TicketTypeOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getFilters());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4818,7 +4554,7 @@ public final class TicketTypeOuterClass {
         if (!getFilters()
             .equals(other.getFilters())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4835,7 +4571,7 @@ public final class TicketTypeOuterClass {
         hash = (37 * hash) + FILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getFilters().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4952,28 +4688,22 @@ public final class TicketTypeOuterClass {
 
       // Construct using com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         productionId_ = "";
-
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-        } else {
-          filters_ = null;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
         return this;
@@ -5002,48 +4732,23 @@ public final class TicketTypeOuterClass {
       @java.lang.Override
       public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest buildPartial() {
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest result = new com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest(this);
-        result.productionId_ = productionId_;
-        if (filtersBuilder_ == null) {
-          result.filters_ = filters_;
-        } else {
-          result.filters_ = filtersBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.productionId_ = productionId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest) {
@@ -5058,12 +4763,13 @@ public final class TicketTypeOuterClass {
         if (other == com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest.getDefaultInstance()) return this;
         if (!other.getProductionId().isEmpty()) {
           productionId_ = other.productionId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasFilters()) {
           mergeFilters(other.getFilters());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5078,19 +4784,45 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                productionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object productionId_ = "";
       /**
@@ -5133,11 +4865,9 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5146,8 +4876,8 @@ public final class TicketTypeOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearProductionId() {
-        
         productionId_ = getDefaultInstance().getProductionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5158,12 +4888,10 @@ public final class TicketTypeOuterClass {
        */
       public Builder setProductionIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         productionId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5176,7 +4904,7 @@ public final class TicketTypeOuterClass {
        * @return Whether the filters field is set.
        */
       public boolean hasFilters() {
-        return filtersBuilder_ != null || filters_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.Filters filters = 2;</code>
@@ -5198,11 +4926,11 @@ public final class TicketTypeOuterClass {
             throw new NullPointerException();
           }
           filters_ = value;
-          onChanged();
         } else {
           filtersBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5212,11 +4940,11 @@ public final class TicketTypeOuterClass {
           com.passkit.grpc.Filter.Filters.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           filters_ = builderForValue.build();
-          onChanged();
         } else {
           filtersBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5224,38 +4952,38 @@ public final class TicketTypeOuterClass {
        */
       public Builder mergeFilters(com.passkit.grpc.Filter.Filters value) {
         if (filtersBuilder_ == null) {
-          if (filters_ != null) {
-            filters_ =
-              com.passkit.grpc.Filter.Filters.newBuilder(filters_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            filters_ != null &&
+            filters_ != com.passkit.grpc.Filter.Filters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
           } else {
             filters_ = value;
           }
-          onChanged();
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Filters filters = 2;</code>
        */
       public Builder clearFilters() {
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-          onChanged();
-        } else {
-          filters_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.Filters filters = 2;</code>
        */
       public com.passkit.grpc.Filter.Filters.Builder getFiltersBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFiltersFieldBuilder().getBuilder();
       }
@@ -5319,7 +5047,18 @@ public final class TicketTypeOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TicketTypeListRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

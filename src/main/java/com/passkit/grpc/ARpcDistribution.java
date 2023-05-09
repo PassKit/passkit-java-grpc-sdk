@@ -30,38 +30,37 @@ public final class ARpcDistribution {
       "mon_objects.proto\032\034io/common/distributio" +
       "n.proto2\242\r\n\014Distribution\022\257\001\n\020sendWelcome" +
       "Email\022\034.io.EmailDistributionRequest\032\026.go" +
-      "ogle.protobuf.Empty\"e\202\323\344\223\002\030\"\023/distributi" +
-      "on/email:\001*\222AD\022\022Send Welcome Email\032.Send" +
-      "s a welcome email to an individual recor" +
-      "d.\022\335\001\n\020getSmartPassLink\022\030.io.SmartPassLi" +
-      "nkRequest\032\007.io.Url\"\245\001\202\323\344\223\002 \"\033/distributi" +
-      "on/smartpasslink:\001*\222A|\022\022Get SmartPass Li" +
-      "nk\032fGet SmartPass returns encrypted Smar" +
-      "tPass link based on a pass payload for a" +
-      " member, coupon or ticket.\022\305\002\n\033getDataCo" +
+      "ogle.protobuf.Empty\"e\222AD\022\022Send Welcome E" +
+      "mail\032.Sends a welcome email to an indivi" +
+      "dual record.\202\323\344\223\002\030\"\023/distribution/email:" +
+      "\001*\022\335\001\n\020getSmartPassLink\022\030.io.SmartPassLi" +
+      "nkRequest\032\007.io.Url\"\245\001\222A|\022\022Get SmartPass " +
+      "Link\032fGet SmartPass returns encrypted Sm" +
+      "artPass link based on a pass payload for" +
+      " a member, coupon or ticket.\202\323\344\223\002 \"\033/dis" +
+      "tribution/smartpasslink:\001*\022\305\002\n\033getDataCo" +
       "llectionPageFields\022\024.io.ClassObjectInput" +
-      "\032\030.io.DataCollectionFields\"\365\001\202\323\344\223\002\026\022\024/di" +
-      "stribution/fields\222A\325\001\022\037Get Data Collecti" +
-      "on Page Fields\032nRetrieves a list of fiel" +
-      "ds used on the data collection page. Cla" +
-      "ssId is required only for the Member pro" +
-      "tocol.J\"\n\003403\022\033\n\031User lacks authorizatio" +
-      "n.J\036\n\003404\022\027\n\025Record was not found.\022\230\002\n\022u" +
+      "\032\030.io.DataCollectionFields\"\365\001\222A\325\001\022\037Get D" +
+      "ata Collection Page Fields\032nRetrieves a " +
+      "list of fields used on the data collecti" +
+      "on page. ClassId is required only for th" +
+      "e Member protocol.J\"\n\003403\022\033\n\031User lacks " +
+      "authorization.J\036\n\003404\022\027\n\025Record was not " +
+      "found.\202\323\344\223\002\026\022\024/distribution/fields\022\230\002\n\022u" +
       "ploadSmartPassCsv\022\035.io.SmartPassCsvUploa" +
-      "dRequest\032\026.google.protobuf.Empty\"\312\001\202\323\344\223\002" +
-      "\034\"\027/distribution/smartpass:\001*\222A\244\001\022\024Uploa" +
-      "d SmartPass Csv\032\213\001Upload SmartPass Csv s" +
-      "ends a projects short code and file byte" +
-      "s to be processed. Processed file will b" +
-      "e sent to the users registered email.\022\337\001" +
+      "dRequest\032\026.google.protobuf.Empty\"\312\001\222A\244\001\022" +
+      "\024Upload SmartPass Csv\032\213\001Upload SmartPass" +
+      " Csv sends a projects short code and fil" +
+      "e bytes to be processed. Processed file " +
+      "will be sent to the users registered ema" +
+      "il.\202\323\344\223\002\034\"\027/distribution/smartpass:\001*\022\337\001" +
       "\n\021importProtocolCsv\022\031.io.ImportProtocolR" +
-      "equest\032\026.google.protobuf.Empty\"\226\001\202\323\344\223\002\035\"" +
-      "\030/distribution/csv-import:\001*\222Ap\022\023Import " +
-      "Protocol Csv\032YImport protocol csv takes " +
-      "a formatted CSV and creates billable pro" +
-      "tocol specific records.\022\272\003\n\017validateBarc" +
-      "ode\022\013.io.Payload\032\013.io.Payload\"\214\003\202\323\344\223\002\"\"\035" +
-      "/distribution/validateBarcode:\001*\222A\340\002\022\020Va" +
+      "equest\032\026.google.protobuf.Empty\"\226\001\222Ap\022\023Im" +
+      "port Protocol Csv\032YImport protocol csv t" +
+      "akes a formatted CSV and creates billabl" +
+      "e protocol specific records.\202\323\344\223\002\035\"\030/dis" +
+      "tribution/csv-import:\001*\022\272\003\n\017validateBarc" +
+      "ode\022\013.io.Payload\032\013.io.Payload\"\214\003\222A\340\002\022\020Va" +
       "lidate Barcode\032\270\001Validate a TOTP barcode" +
       ". Send the full barcode format {{payload" +
       "}}||{{key}||{{timestamp}}||{{totp}}. If " +
@@ -70,7 +69,8 @@ public final class ARpcDistribution {
       ".JL\n\003400\022E\nCBarcode payload provided was" +
       " not in a format recognized by PassKit.J" +
       "C\n\003401\022<\n:The barcode TOTP was not valid" +
-      " and should not be accepted.B\201\007\n\020com.pas" +
+      " and should not be accepted.\202\323\344\223\002\"\"\035/dis" +
+      "tribution/validateBarcode:\001*B\201\007\n\020com.pas" +
       "skit.grpcZ$stash.passkit.com/io/model/sd" +
       "k/go/io\252\002\014PassKit.Grpc\222A\266\006\022\361\001\n\030PassKit D" +
       "istribution API\022ZAPI for generating Smar" +

@@ -169,114 +169,6 @@ public final class BrowserAgent {
       return new UserAgent();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private UserAgent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              raw_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              platform_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              os_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              osVersion_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              engine_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              engineVersion_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              browser_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              browserVersion_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              localization_ = s;
-              break;
-            }
-            case 80: {
-
-              mobile_ = input.readBool();
-              break;
-            }
-            case 88: {
-
-              walletCompatible_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.BrowserAgent.internal_static_io_UserAgent_descriptor;
@@ -291,7 +183,8 @@ public final class BrowserAgent {
     }
 
     public static final int RAW_FIELD_NUMBER = 1;
-    private volatile java.lang.Object raw_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object raw_ = "";
     /**
      * <code>string raw = 1;</code>
      * @return The raw.
@@ -329,7 +222,8 @@ public final class BrowserAgent {
     }
 
     public static final int PLATFORM_FIELD_NUMBER = 2;
-    private volatile java.lang.Object platform_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object platform_ = "";
     /**
      * <code>string platform = 2;</code>
      * @return The platform.
@@ -367,7 +261,8 @@ public final class BrowserAgent {
     }
 
     public static final int OS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object os_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object os_ = "";
     /**
      * <code>string os = 3;</code>
      * @return The os.
@@ -405,7 +300,8 @@ public final class BrowserAgent {
     }
 
     public static final int OSVERSION_FIELD_NUMBER = 4;
-    private volatile java.lang.Object osVersion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object osVersion_ = "";
     /**
      * <code>string osVersion = 4;</code>
      * @return The osVersion.
@@ -443,7 +339,8 @@ public final class BrowserAgent {
     }
 
     public static final int ENGINE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object engine_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object engine_ = "";
     /**
      * <code>string engine = 5;</code>
      * @return The engine.
@@ -481,7 +378,8 @@ public final class BrowserAgent {
     }
 
     public static final int ENGINEVERSION_FIELD_NUMBER = 6;
-    private volatile java.lang.Object engineVersion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object engineVersion_ = "";
     /**
      * <code>string engineVersion = 6;</code>
      * @return The engineVersion.
@@ -519,7 +417,8 @@ public final class BrowserAgent {
     }
 
     public static final int BROWSER_FIELD_NUMBER = 7;
-    private volatile java.lang.Object browser_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object browser_ = "";
     /**
      * <code>string browser = 7;</code>
      * @return The browser.
@@ -557,7 +456,8 @@ public final class BrowserAgent {
     }
 
     public static final int BROWSERVERSION_FIELD_NUMBER = 8;
-    private volatile java.lang.Object browserVersion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object browserVersion_ = "";
     /**
      * <code>string browserVersion = 8;</code>
      * @return The browserVersion.
@@ -595,7 +495,8 @@ public final class BrowserAgent {
     }
 
     public static final int LOCALIZATION_FIELD_NUMBER = 9;
-    private volatile java.lang.Object localization_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object localization_ = "";
     /**
      * <code>string localization = 9;</code>
      * @return The localization.
@@ -633,7 +534,7 @@ public final class BrowserAgent {
     }
 
     public static final int MOBILE_FIELD_NUMBER = 10;
-    private boolean mobile_;
+    private boolean mobile_ = false;
     /**
      * <code>bool mobile = 10;</code>
      * @return The mobile.
@@ -644,7 +545,7 @@ public final class BrowserAgent {
     }
 
     public static final int WALLETCOMPATIBLE_FIELD_NUMBER = 11;
-    private boolean walletCompatible_;
+    private boolean walletCompatible_ = false;
     /**
      * <code>bool walletCompatible = 11;</code>
      * @return The walletCompatible.
@@ -701,7 +602,7 @@ public final class BrowserAgent {
       if (walletCompatible_ != false) {
         output.writeBool(11, walletCompatible_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -745,7 +646,7 @@ public final class BrowserAgent {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(11, walletCompatible_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -782,7 +683,7 @@ public final class BrowserAgent {
           != other.getMobile()) return false;
       if (getWalletCompatible()
           != other.getWalletCompatible()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -817,7 +718,7 @@ public final class BrowserAgent {
       hash = (37 * hash) + WALLETCOMPATIBLE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getWalletCompatible());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -934,44 +835,29 @@ public final class BrowserAgent {
 
       // Construct using com.passkit.grpc.BrowserAgent.UserAgent.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         raw_ = "";
-
         platform_ = "";
-
         os_ = "";
-
         osVersion_ = "";
-
         engine_ = "";
-
         engineVersion_ = "";
-
         browser_ = "";
-
         browserVersion_ = "";
-
         localization_ = "";
-
         mobile_ = false;
-
         walletCompatible_ = false;
-
         return this;
       }
 
@@ -998,53 +884,48 @@ public final class BrowserAgent {
       @java.lang.Override
       public com.passkit.grpc.BrowserAgent.UserAgent buildPartial() {
         com.passkit.grpc.BrowserAgent.UserAgent result = new com.passkit.grpc.BrowserAgent.UserAgent(this);
-        result.raw_ = raw_;
-        result.platform_ = platform_;
-        result.os_ = os_;
-        result.osVersion_ = osVersion_;
-        result.engine_ = engine_;
-        result.engineVersion_ = engineVersion_;
-        result.browser_ = browser_;
-        result.browserVersion_ = browserVersion_;
-        result.localization_ = localization_;
-        result.mobile_ = mobile_;
-        result.walletCompatible_ = walletCompatible_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.BrowserAgent.UserAgent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.raw_ = raw_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.platform_ = platform_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.os_ = os_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.osVersion_ = osVersion_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.engine_ = engine_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.engineVersion_ = engineVersion_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.browser_ = browser_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.browserVersion_ = browserVersion_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.localization_ = localization_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.mobile_ = mobile_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.walletCompatible_ = walletCompatible_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.BrowserAgent.UserAgent) {
@@ -1059,38 +940,47 @@ public final class BrowserAgent {
         if (other == com.passkit.grpc.BrowserAgent.UserAgent.getDefaultInstance()) return this;
         if (!other.getRaw().isEmpty()) {
           raw_ = other.raw_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPlatform().isEmpty()) {
           platform_ = other.platform_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getOs().isEmpty()) {
           os_ = other.os_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getOsVersion().isEmpty()) {
           osVersion_ = other.osVersion_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getEngine().isEmpty()) {
           engine_ = other.engine_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getEngineVersion().isEmpty()) {
           engineVersion_ = other.engineVersion_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getBrowser().isEmpty()) {
           browser_ = other.browser_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getBrowserVersion().isEmpty()) {
           browserVersion_ = other.browserVersion_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getLocalization().isEmpty()) {
           localization_ = other.localization_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.getMobile() != false) {
@@ -1099,7 +989,7 @@ public final class BrowserAgent {
         if (other.getWalletCompatible() != false) {
           setWalletCompatible(other.getWalletCompatible());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1114,19 +1004,88 @@ public final class BrowserAgent {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.BrowserAgent.UserAgent parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                raw_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                platform_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                os_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                osVersion_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                engine_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                engineVersion_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                browser_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                browserVersion_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                localization_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 80: {
+                mobile_ = input.readBool();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                walletCompatible_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.BrowserAgent.UserAgent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object raw_ = "";
       /**
@@ -1169,11 +1128,9 @@ public final class BrowserAgent {
        */
       public Builder setRaw(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         raw_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1182,8 +1139,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearRaw() {
-        
         raw_ = getDefaultInstance().getRaw();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1194,12 +1151,10 @@ public final class BrowserAgent {
        */
       public Builder setRawBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         raw_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1245,11 +1200,9 @@ public final class BrowserAgent {
        */
       public Builder setPlatform(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         platform_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1258,8 +1211,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        
         platform_ = getDefaultInstance().getPlatform();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1270,12 +1223,10 @@ public final class BrowserAgent {
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         platform_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1321,11 +1272,9 @@ public final class BrowserAgent {
        */
       public Builder setOs(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         os_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1334,8 +1283,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearOs() {
-        
         os_ = getDefaultInstance().getOs();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1346,12 +1295,10 @@ public final class BrowserAgent {
        */
       public Builder setOsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         os_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1397,11 +1344,9 @@ public final class BrowserAgent {
        */
       public Builder setOsVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         osVersion_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1410,8 +1355,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearOsVersion() {
-        
         osVersion_ = getDefaultInstance().getOsVersion();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1422,12 +1367,10 @@ public final class BrowserAgent {
        */
       public Builder setOsVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         osVersion_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1473,11 +1416,9 @@ public final class BrowserAgent {
        */
       public Builder setEngine(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         engine_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1486,8 +1427,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearEngine() {
-        
         engine_ = getDefaultInstance().getEngine();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1498,12 +1439,10 @@ public final class BrowserAgent {
        */
       public Builder setEngineBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         engine_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1549,11 +1488,9 @@ public final class BrowserAgent {
        */
       public Builder setEngineVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         engineVersion_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1562,8 +1499,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearEngineVersion() {
-        
         engineVersion_ = getDefaultInstance().getEngineVersion();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1574,12 +1511,10 @@ public final class BrowserAgent {
        */
       public Builder setEngineVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         engineVersion_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1625,11 +1560,9 @@ public final class BrowserAgent {
        */
       public Builder setBrowser(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         browser_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1638,8 +1571,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearBrowser() {
-        
         browser_ = getDefaultInstance().getBrowser();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1650,12 +1583,10 @@ public final class BrowserAgent {
        */
       public Builder setBrowserBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         browser_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1701,11 +1632,9 @@ public final class BrowserAgent {
        */
       public Builder setBrowserVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         browserVersion_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1714,8 +1643,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearBrowserVersion() {
-        
         browserVersion_ = getDefaultInstance().getBrowserVersion();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -1726,12 +1655,10 @@ public final class BrowserAgent {
        */
       public Builder setBrowserVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         browserVersion_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1777,11 +1704,9 @@ public final class BrowserAgent {
        */
       public Builder setLocalization(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         localization_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1790,8 +1715,8 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearLocalization() {
-        
         localization_ = getDefaultInstance().getLocalization();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -1802,12 +1727,10 @@ public final class BrowserAgent {
        */
       public Builder setLocalizationBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         localization_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1827,8 +1750,9 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder setMobile(boolean value) {
-        
+
         mobile_ = value;
+        bitField0_ |= 0x00000200;
         onChanged();
         return this;
       }
@@ -1837,7 +1761,7 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearMobile() {
-        
+        bitField0_ = (bitField0_ & ~0x00000200);
         mobile_ = false;
         onChanged();
         return this;
@@ -1858,8 +1782,9 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder setWalletCompatible(boolean value) {
-        
+
         walletCompatible_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -1868,7 +1793,7 @@ public final class BrowserAgent {
        * @return This builder for chaining.
        */
       public Builder clearWalletCompatible() {
-        
+        bitField0_ = (bitField0_ & ~0x00000400);
         walletCompatible_ = false;
         onChanged();
         return this;
@@ -1906,7 +1831,18 @@ public final class BrowserAgent {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new UserAgent(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

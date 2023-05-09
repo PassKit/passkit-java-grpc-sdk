@@ -28,11 +28,11 @@ public final class ARpc {
       "openapiv2/options/annotations.proto\032\031io/" +
       "common/reporting.proto2\346\001\n\tAnalytics\022\330\001\n" +
       "\014getAnalytics\022\024.io.AnalyticsRequest\032\025.io" +
-      ".AnalyticsResponse\"\232\001\202\323\344\223\002\026\022\024/analytics/" +
-      "{classId}\222A{\n\tAnalytics\022\rGet Analytics\032\033" +
-      "Retrieves an analytics dataJ\"\n\003403\022\033\n\031Us" +
-      "er lacks authorization.J\036\n\003404\022\027\n\025Record" +
-      " was not found.B\241\007\n\032com.passkit.grpc.Ana" +
+      ".AnalyticsResponse\"\232\001\222A{\n\tAnalytics\022\rGet" +
+      " Analytics\032\033Retrieves an analytics dataJ" +
+      "\"\n\003403\022\033\n\031User lacks authorization.J\036\n\0034" +
+      "04\022\027\n\025Record was not found.\202\323\344\223\002\026\022\024/anal" +
+      "ytics/{classId}B\241\007\n\032com.passkit.grpc.Ana" +
       "lyticsZ.stash.passkit.com/io/model/sdk/g" +
       "o/io/analytics\252\002\026PassKit.Grpc.Analytics\222" +
       "A\270\006\022\363\001\n\025PassKit Analytics API\022_The PassK" +

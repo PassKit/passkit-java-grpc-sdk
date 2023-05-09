@@ -1296,7 +1296,8 @@ public final class FlightOuterClass {
       arrivalGate_ = "";
       operatingCarrierCode_ = "";
       operatingFlightNumber_ = "";
-      codeShareFlightNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      codeShareFlightNumbers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       passTemplateId_ = "";
       baggageBelt_ = "";
       locationMessages_ = java.util.Collections.emptyList();
@@ -1318,337 +1319,6 @@ public final class FlightOuterClass {
       return new Flight();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Flight(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deplaningPoint_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              departureTerminal_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              arrivalTerminal_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              departureGate_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              arrivalGate_ = s;
-              break;
-            }
-            case 82: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (scheduledDepartureTime_ != null) {
-                subBuilder = scheduledDepartureTime_.toBuilder();
-              }
-              scheduledDepartureTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledDepartureTime_);
-                scheduledDepartureTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 90: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (estimatedDepartureTime_ != null) {
-                subBuilder = estimatedDepartureTime_.toBuilder();
-              }
-              estimatedDepartureTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(estimatedDepartureTime_);
-                estimatedDepartureTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (boardingTime_ != null) {
-                subBuilder = boardingTime_.toBuilder();
-              }
-              boardingTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(boardingTime_);
-                boardingTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (gateClosingTime_ != null) {
-                subBuilder = gateClosingTime_.toBuilder();
-              }
-              gateClosingTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(gateClosingTime_);
-                gateClosingTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (scheduledArrivalTime_ != null) {
-                subBuilder = scheduledArrivalTime_.toBuilder();
-              }
-              scheduledArrivalTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledArrivalTime_);
-                scheduledArrivalTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 122: {
-              com.passkit.grpc.CommonObjects.LocalDateTime.Builder subBuilder = null;
-              if (estimatedArrivalTime_ != null) {
-                subBuilder = estimatedArrivalTime_.toBuilder();
-              }
-              estimatedArrivalTime_ = input.readMessage(com.passkit.grpc.CommonObjects.LocalDateTime.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(estimatedArrivalTime_);
-                estimatedArrivalTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 130: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operatingCarrierCode_ = s;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              operatingFlightNumber_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                codeShareFlightNumbers_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              codeShareFlightNumbers_.add(s);
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              passTemplateId_ = s;
-              break;
-            }
-            case 170: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              baggageBelt_ = s;
-              break;
-            }
-            case 176: {
-
-              autoInvalidateAfter_ = input.readUInt32();
-              break;
-            }
-            case 184: {
-
-              autoInvalidateCancelledPasses_ = input.readBool();
-              break;
-            }
-            case 194: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                locationMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              locationMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.GPSLocation.parser(), extensionRegistry));
-              break;
-            }
-            case 202: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                beaconMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              beaconMessages_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.Beacon.parser(), extensionRegistry));
-              break;
-            }
-            case 210: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              links_.add(
-                  input.readMessage(com.passkit.grpc.Links.Link.parser(), extensionRegistry));
-              break;
-            }
-            case 216: {
-
-              suspendAutomaticUpdates_ = input.readBool();
-              break;
-            }
-            case 224: {
-              int rawValue = input.readEnum();
-
-              boardingPolicy_ = rawValue;
-              break;
-            }
-            case 232: {
-              int rawValue = input.readEnum();
-
-              seatingPolicy_ = rawValue;
-              break;
-            }
-            case 240: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 248: {
-
-              conditionalItems_ = input.readBool();
-              break;
-            }
-            case 258: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              barcodeAdditionalData_ = s;
-              break;
-            }
-            case 266: {
-              com.passkit.grpc.MetricsOuterClass.Metrics.Builder subBuilder = null;
-              if (metrics_ != null) {
-                subBuilder = metrics_.toBuilder();
-              }
-              metrics_ = input.readMessage(com.passkit.grpc.MetricsOuterClass.Metrics.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metrics_);
-                metrics_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 272: {
-              int rawValue = input.readEnum();
-
-              createMethod_ = rawValue;
-              break;
-            }
-            case 282: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              designatorId_ = s;
-              break;
-            }
-            case 288: {
-              int rawValue = input.readEnum();
-
-              invalidateCancelledPasses_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          codeShareFlightNumbers_ = codeShareFlightNumbers_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          locationMessages_ = java.util.Collections.unmodifiableList(locationMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          beaconMessages_ = java.util.Collections.unmodifiableList(beaconMessages_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          links_ = java.util.Collections.unmodifiableList(links_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.FlightOuterClass.internal_static_flights_Flight_descriptor;
@@ -1663,7 +1333,8 @@ public final class FlightOuterClass {
     }
 
     public static final int CARRIERCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object carrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object carrierCode_ = "";
     /**
      * <pre>
      * The IATA or ICAO carrier code for the flight. In the case of a code-share, this should be the carrier code that you wish to present to the customer. This could be the marketing code, or the operating airline code. A carrier record for this code must exist.
@@ -1709,7 +1380,8 @@ public final class FlightOuterClass {
     }
 
     public static final int FLIGHTNUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object flightNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flightNumber_ = "";
     /**
      * <pre>
      * The flight number.
@@ -1755,7 +1427,8 @@ public final class FlightOuterClass {
     }
 
     public static final int BOARDINGPOINT_FIELD_NUMBER = 3;
-    private volatile java.lang.Object boardingPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object boardingPoint_ = "";
     /**
      * <pre>
      * The IATA airport code of the boarding point. Only required is segment is not provided.
@@ -1801,7 +1474,8 @@ public final class FlightOuterClass {
     }
 
     public static final int DEPLANINGPOINT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object deplaningPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deplaningPoint_ = "";
     /**
      * <pre>
      * The IATA airport code of the deplaning point.
@@ -1881,11 +1555,12 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getDepartureDateOrBuilder() {
-      return getDepartureDate();
+      return departureDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : departureDate_;
     }
 
     public static final int DEPARTURETERMINAL_FIELD_NUMBER = 6;
-    private volatile java.lang.Object departureTerminal_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object departureTerminal_ = "";
     /**
      * <pre>
      * Departure Terminal.
@@ -1931,7 +1606,8 @@ public final class FlightOuterClass {
     }
 
     public static final int ARRIVALTERMINAL_FIELD_NUMBER = 7;
-    private volatile java.lang.Object arrivalTerminal_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object arrivalTerminal_ = "";
     /**
      * <pre>
      * Arrival Terminal.
@@ -1977,7 +1653,8 @@ public final class FlightOuterClass {
     }
 
     public static final int DEPARTUREGATE_FIELD_NUMBER = 8;
-    private volatile java.lang.Object departureGate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object departureGate_ = "";
     /**
      * <pre>
      * Departure Gate.
@@ -2023,7 +1700,8 @@ public final class FlightOuterClass {
     }
 
     public static final int ARRIVALGATE_FIELD_NUMBER = 9;
-    private volatile java.lang.Object arrivalGate_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object arrivalGate_ = "";
     /**
      * <pre>
      * Arrival Gate.
@@ -2103,7 +1781,7 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getScheduledDepartureTimeOrBuilder() {
-      return getScheduledDepartureTime();
+      return scheduledDepartureTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : scheduledDepartureTime_;
     }
 
     public static final int ESTIMATEDDEPARTURETIME_FIELD_NUMBER = 11;
@@ -2141,7 +1819,7 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getEstimatedDepartureTimeOrBuilder() {
-      return getEstimatedDepartureTime();
+      return estimatedDepartureTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : estimatedDepartureTime_;
     }
 
     public static final int BOARDINGTIME_FIELD_NUMBER = 12;
@@ -2179,7 +1857,7 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getBoardingTimeOrBuilder() {
-      return getBoardingTime();
+      return boardingTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : boardingTime_;
     }
 
     public static final int GATECLOSINGTIME_FIELD_NUMBER = 13;
@@ -2217,7 +1895,7 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getGateClosingTimeOrBuilder() {
-      return getGateClosingTime();
+      return gateClosingTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : gateClosingTime_;
     }
 
     public static final int SCHEDULEDARRIVALTIME_FIELD_NUMBER = 14;
@@ -2255,7 +1933,7 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getScheduledArrivalTimeOrBuilder() {
-      return getScheduledArrivalTime();
+      return scheduledArrivalTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : scheduledArrivalTime_;
     }
 
     public static final int ESTIMATEDARRIVALTIME_FIELD_NUMBER = 15;
@@ -2293,11 +1971,12 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.LocalDateTimeOrBuilder getEstimatedArrivalTimeOrBuilder() {
-      return getEstimatedArrivalTime();
+      return estimatedArrivalTime_ == null ? com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance() : estimatedArrivalTime_;
     }
 
     public static final int OPERATINGCARRIERCODE_FIELD_NUMBER = 16;
-    private volatile java.lang.Object operatingCarrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatingCarrierCode_ = "";
     /**
      * <pre>
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the IATA or ICAO carrier code for the operating carrier.  A carrier record must exist.
@@ -2343,7 +2022,8 @@ public final class FlightOuterClass {
     }
 
     public static final int OPERATINGFLIGHTNUMBER_FIELD_NUMBER = 17;
-    private volatile java.lang.Object operatingFlightNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object operatingFlightNumber_ = "";
     /**
      * <pre>
      * If the flight is operated by a carrier other than the carrierCode supplied, provide the flight number for the operating carrier.
@@ -2389,7 +2069,9 @@ public final class FlightOuterClass {
     }
 
     public static final int CODESHAREFLIGHTNUMBERS_FIELD_NUMBER = 18;
-    private com.google.protobuf.LazyStringList codeShareFlightNumbers_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList codeShareFlightNumbers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * If the flight has code shares, then enter the carrier code and flight number. If there is an operating carrier, then do not include this in the list. Code share carriers will not be validated.
@@ -2440,7 +2122,8 @@ public final class FlightOuterClass {
     }
 
     public static final int PASSTEMPLATEID_FIELD_NUMBER = 19;
-    private volatile java.lang.Object passTemplateId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTemplateId_ = "";
     /**
      * <pre>
      * The pass template id.
@@ -2486,7 +2169,8 @@ public final class FlightOuterClass {
     }
 
     public static final int BAGGAGEBELT_FIELD_NUMBER = 21;
-    private volatile java.lang.Object baggageBelt_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object baggageBelt_ = "";
     /**
      * <pre>
      * The baggage belt at the destination.
@@ -2532,7 +2216,7 @@ public final class FlightOuterClass {
     }
 
     public static final int AUTOINVALIDATEAFTER_FIELD_NUMBER = 22;
-    private int autoInvalidateAfter_;
+    private int autoInvalidateAfter_ = 0;
     /**
      * <pre>
      * Minutes after estimated or scheduled arrival to automatically invalidate the pass. Enter a value of 9999999 or greater if the pass should not auto invalidate. Default is 48 hours.
@@ -2547,7 +2231,7 @@ public final class FlightOuterClass {
     }
 
     public static final int AUTOINVALIDATECANCELLEDPASSES_FIELD_NUMBER = 23;
-    private boolean autoInvalidateCancelledPasses_;
+    private boolean autoInvalidateCancelledPasses_ = false;
     /**
      * <pre>
      * Deprecated: Use InvalidateCancelledPasses.
@@ -2564,6 +2248,7 @@ public final class FlightOuterClass {
     }
 
     public static final int LOCATIONMESSAGES_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locationMessages_;
     /**
      * <pre>
@@ -2624,6 +2309,7 @@ public final class FlightOuterClass {
     }
 
     public static final int BEACONMESSAGES_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Proximity.Beacon> beaconMessages_;
     /**
      * <pre>
@@ -2684,6 +2370,7 @@ public final class FlightOuterClass {
     }
 
     public static final int LINKS_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Links.Link> links_;
     /**
      * <pre>
@@ -2744,7 +2431,7 @@ public final class FlightOuterClass {
     }
 
     public static final int SUSPENDAUTOMATICUPDATES_FIELD_NUMBER = 27;
-    private boolean suspendAutomaticUpdates_;
+    private boolean suspendAutomaticUpdates_ = false;
     /**
      * <pre>
      * Suspend automatic updates to all boarding passes for this flight.
@@ -2759,7 +2446,7 @@ public final class FlightOuterClass {
     }
 
     public static final int BOARDINGPOLICY_FIELD_NUMBER = 28;
-    private int boardingPolicy_;
+    private int boardingPolicy_ = 0;
     /**
      * <pre>
      * Used to determine the label printed above the boarding group on the Google Pay pass.
@@ -2780,13 +2467,12 @@ public final class FlightOuterClass {
      * @return The boardingPolicy.
      */
     @java.lang.Override public com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy getBoardingPolicy() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.valueOf(boardingPolicy_);
+      com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.forNumber(boardingPolicy_);
       return result == null ? com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.UNRECOGNIZED : result;
     }
 
     public static final int SEATINGPOLICY_FIELD_NUMBER = 29;
-    private int seatingPolicy_;
+    private int seatingPolicy_ = 0;
     /**
      * <pre>
      * Used to determine the label printed above the seat class on the Google Pay pass. E.g. Economy, Economy Plus.
@@ -2807,13 +2493,12 @@ public final class FlightOuterClass {
      * @return The seatingPolicy.
      */
     @java.lang.Override public com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy getSeatingPolicy() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.valueOf(seatingPolicy_);
+      com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.forNumber(seatingPolicy_);
       return result == null ? com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.UNRECOGNIZED : result;
     }
 
     public static final int STATUS_FIELD_NUMBER = 30;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * The status of the flight. This can be manually set, or automatically set for customers subscribing to automatic updates.
@@ -2834,13 +2519,12 @@ public final class FlightOuterClass {
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.Flights.FlightOuterClass.FlightStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.FlightOuterClass.FlightStatus result = com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.valueOf(status_);
+      com.passkit.grpc.Flights.FlightOuterClass.FlightStatus result = com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.UNRECOGNIZED : result;
     }
 
     public static final int CONDITIONALITEMS_FIELD_NUMBER = 31;
-    private boolean conditionalItems_;
+    private boolean conditionalItems_ = false;
     /**
      * <pre>
      * If PassKit are generating barcodes, include conditional items. Default false.
@@ -2855,7 +2539,8 @@ public final class FlightOuterClass {
     }
 
     public static final int BARCODEADDITIONALDATA_FIELD_NUMBER = 32;
-    private volatile java.lang.Object barcodeAdditionalData_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object barcodeAdditionalData_ = "";
     /**
      * <pre>
      * If PassKit are generating barcodes, default airline use data (IATA item 4). This can be overwritten at the flight and boarding pass level.
@@ -2935,11 +2620,11 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetricsOrBuilder getMetricsOrBuilder() {
-      return getMetrics();
+      return metrics_ == null ? com.passkit.grpc.MetricsOuterClass.Metrics.getDefaultInstance() : metrics_;
     }
 
     public static final int CREATEMETHOD_FIELD_NUMBER = 34;
-    private int createMethod_;
+    private int createMethod_ = 0;
     /**
      * <pre>
      * How the flight was created Create mode, manually or automatically.
@@ -2960,13 +2645,13 @@ public final class FlightOuterClass {
      * @return The createMethod.
      */
     @java.lang.Override public com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode getCreateMethod() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode result = com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.valueOf(createMethod_);
+      com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode result = com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.forNumber(createMethod_);
       return result == null ? com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.UNRECOGNIZED : result;
     }
 
     public static final int DESIGNATORID_FIELD_NUMBER = 35;
-    private volatile java.lang.Object designatorId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object designatorId_ = "";
     /**
      * <pre>
      * For automatically created flights, shows the ID of the designator that bootstrapped the flight record.
@@ -3012,7 +2697,7 @@ public final class FlightOuterClass {
     }
 
     public static final int INVALIDATECANCELLEDPASSES_FIELD_NUMBER = 36;
-    private int invalidateCancelledPasses_;
+    private int invalidateCancelledPasses_ = 0;
     /**
      * <pre>
      * Invalidate passes where either the booking or the flight have been cancelled. Default is ON.
@@ -3033,8 +2718,7 @@ public final class FlightOuterClass {
      * @return The invalidateCancelledPasses.
      */
     @java.lang.Override public com.passkit.grpc.CommonObjects.Toggle getInvalidateCancelledPasses() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(invalidateCancelledPasses_);
+      com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.forNumber(invalidateCancelledPasses_);
       return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
     }
 
@@ -3157,7 +2841,7 @@ public final class FlightOuterClass {
       if (invalidateCancelledPasses_ != com.passkit.grpc.CommonObjects.Toggle.DO_NOT_USE.getNumber()) {
         output.writeEnum(36, invalidateCancelledPasses_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3296,7 +2980,7 @@ public final class FlightOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(36, invalidateCancelledPasses_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3400,7 +3084,7 @@ public final class FlightOuterClass {
       if (!getDesignatorId()
           .equals(other.getDesignatorId())) return false;
       if (invalidateCancelledPasses_ != other.invalidateCancelledPasses_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3508,7 +3192,7 @@ public final class FlightOuterClass {
       hash = (53 * hash) + getDesignatorId().hashCode();
       hash = (37 * hash) + INVALIDATECANCELLEDPASSES_FIELD_NUMBER;
       hash = (53 * hash) + invalidateCancelledPasses_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3625,139 +3309,105 @@ public final class FlightOuterClass {
 
       // Construct using com.passkit.grpc.Flights.FlightOuterClass.Flight.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationMessagesFieldBuilder();
-          getBeaconMessagesFieldBuilder();
-          getLinksFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         carrierCode_ = "";
-
         flightNumber_ = "";
-
         boardingPoint_ = "";
-
         deplaningPoint_ = "";
-
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-        } else {
-          departureDate_ = null;
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
         departureTerminal_ = "";
-
         arrivalTerminal_ = "";
-
         departureGate_ = "";
-
         arrivalGate_ = "";
-
-        if (scheduledDepartureTimeBuilder_ == null) {
-          scheduledDepartureTime_ = null;
-        } else {
-          scheduledDepartureTime_ = null;
+        scheduledDepartureTime_ = null;
+        if (scheduledDepartureTimeBuilder_ != null) {
+          scheduledDepartureTimeBuilder_.dispose();
           scheduledDepartureTimeBuilder_ = null;
         }
-        if (estimatedDepartureTimeBuilder_ == null) {
-          estimatedDepartureTime_ = null;
-        } else {
-          estimatedDepartureTime_ = null;
+        estimatedDepartureTime_ = null;
+        if (estimatedDepartureTimeBuilder_ != null) {
+          estimatedDepartureTimeBuilder_.dispose();
           estimatedDepartureTimeBuilder_ = null;
         }
-        if (boardingTimeBuilder_ == null) {
-          boardingTime_ = null;
-        } else {
-          boardingTime_ = null;
+        boardingTime_ = null;
+        if (boardingTimeBuilder_ != null) {
+          boardingTimeBuilder_.dispose();
           boardingTimeBuilder_ = null;
         }
-        if (gateClosingTimeBuilder_ == null) {
-          gateClosingTime_ = null;
-        } else {
-          gateClosingTime_ = null;
+        gateClosingTime_ = null;
+        if (gateClosingTimeBuilder_ != null) {
+          gateClosingTimeBuilder_.dispose();
           gateClosingTimeBuilder_ = null;
         }
-        if (scheduledArrivalTimeBuilder_ == null) {
-          scheduledArrivalTime_ = null;
-        } else {
-          scheduledArrivalTime_ = null;
+        scheduledArrivalTime_ = null;
+        if (scheduledArrivalTimeBuilder_ != null) {
+          scheduledArrivalTimeBuilder_.dispose();
           scheduledArrivalTimeBuilder_ = null;
         }
-        if (estimatedArrivalTimeBuilder_ == null) {
-          estimatedArrivalTime_ = null;
-        } else {
-          estimatedArrivalTime_ = null;
+        estimatedArrivalTime_ = null;
+        if (estimatedArrivalTimeBuilder_ != null) {
+          estimatedArrivalTimeBuilder_.dispose();
           estimatedArrivalTimeBuilder_ = null;
         }
         operatingCarrierCode_ = "";
-
         operatingFlightNumber_ = "";
-
-        codeShareFlightNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        codeShareFlightNumbers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         passTemplateId_ = "";
-
         baggageBelt_ = "";
-
         autoInvalidateAfter_ = 0;
-
         autoInvalidateCancelledPasses_ = false;
-
         if (locationMessagesBuilder_ == null) {
           locationMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          locationMessages_ = null;
           locationMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00400000);
         if (beaconMessagesBuilder_ == null) {
           beaconMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          beaconMessages_ = null;
           beaconMessagesBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00800000);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
+          links_ = null;
           linksBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x01000000);
         suspendAutomaticUpdates_ = false;
-
         boardingPolicy_ = 0;
-
         seatingPolicy_ = 0;
-
         status_ = 0;
-
         conditionalItems_ = false;
-
         barcodeAdditionalData_ = "";
-
-        if (metricsBuilder_ == null) {
-          metrics_ = null;
-        } else {
-          metrics_ = null;
+        metrics_ = null;
+        if (metricsBuilder_ != null) {
+          metricsBuilder_.dispose();
           metricsBuilder_ = null;
         }
         createMethod_ = 0;
-
         designatorId_ = "";
-
         invalidateCancelledPasses_ = 0;
-
         return this;
       }
 
@@ -3784,138 +3434,164 @@ public final class FlightOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightOuterClass.Flight buildPartial() {
         com.passkit.grpc.Flights.FlightOuterClass.Flight result = new com.passkit.grpc.Flights.FlightOuterClass.Flight(this);
-        int from_bitField0_ = bitField0_;
-        result.carrierCode_ = carrierCode_;
-        result.flightNumber_ = flightNumber_;
-        result.boardingPoint_ = boardingPoint_;
-        result.deplaningPoint_ = deplaningPoint_;
-        if (departureDateBuilder_ == null) {
-          result.departureDate_ = departureDate_;
-        } else {
-          result.departureDate_ = departureDateBuilder_.build();
-        }
-        result.departureTerminal_ = departureTerminal_;
-        result.arrivalTerminal_ = arrivalTerminal_;
-        result.departureGate_ = departureGate_;
-        result.arrivalGate_ = arrivalGate_;
-        if (scheduledDepartureTimeBuilder_ == null) {
-          result.scheduledDepartureTime_ = scheduledDepartureTime_;
-        } else {
-          result.scheduledDepartureTime_ = scheduledDepartureTimeBuilder_.build();
-        }
-        if (estimatedDepartureTimeBuilder_ == null) {
-          result.estimatedDepartureTime_ = estimatedDepartureTime_;
-        } else {
-          result.estimatedDepartureTime_ = estimatedDepartureTimeBuilder_.build();
-        }
-        if (boardingTimeBuilder_ == null) {
-          result.boardingTime_ = boardingTime_;
-        } else {
-          result.boardingTime_ = boardingTimeBuilder_.build();
-        }
-        if (gateClosingTimeBuilder_ == null) {
-          result.gateClosingTime_ = gateClosingTime_;
-        } else {
-          result.gateClosingTime_ = gateClosingTimeBuilder_.build();
-        }
-        if (scheduledArrivalTimeBuilder_ == null) {
-          result.scheduledArrivalTime_ = scheduledArrivalTime_;
-        } else {
-          result.scheduledArrivalTime_ = scheduledArrivalTimeBuilder_.build();
-        }
-        if (estimatedArrivalTimeBuilder_ == null) {
-          result.estimatedArrivalTime_ = estimatedArrivalTime_;
-        } else {
-          result.estimatedArrivalTime_ = estimatedArrivalTimeBuilder_.build();
-        }
-        result.operatingCarrierCode_ = operatingCarrierCode_;
-        result.operatingFlightNumber_ = operatingFlightNumber_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          codeShareFlightNumbers_ = codeShareFlightNumbers_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.codeShareFlightNumbers_ = codeShareFlightNumbers_;
-        result.passTemplateId_ = passTemplateId_;
-        result.baggageBelt_ = baggageBelt_;
-        result.autoInvalidateAfter_ = autoInvalidateAfter_;
-        result.autoInvalidateCancelledPasses_ = autoInvalidateCancelledPasses_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Flights.FlightOuterClass.Flight result) {
         if (locationMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00400000) != 0)) {
             locationMessages_ = java.util.Collections.unmodifiableList(locationMessages_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00400000);
           }
           result.locationMessages_ = locationMessages_;
         } else {
           result.locationMessages_ = locationMessagesBuilder_.build();
         }
         if (beaconMessagesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00800000) != 0)) {
             beaconMessages_ = java.util.Collections.unmodifiableList(beaconMessages_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00800000);
           }
           result.beaconMessages_ = beaconMessages_;
         } else {
           result.beaconMessages_ = beaconMessagesBuilder_.build();
         }
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x01000000) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x01000000);
           }
           result.links_ = links_;
         } else {
           result.links_ = linksBuilder_.build();
         }
-        result.suspendAutomaticUpdates_ = suspendAutomaticUpdates_;
-        result.boardingPolicy_ = boardingPolicy_;
-        result.seatingPolicy_ = seatingPolicy_;
-        result.status_ = status_;
-        result.conditionalItems_ = conditionalItems_;
-        result.barcodeAdditionalData_ = barcodeAdditionalData_;
-        if (metricsBuilder_ == null) {
-          result.metrics_ = metrics_;
-        } else {
-          result.metrics_ = metricsBuilder_.build();
-        }
-        result.createMethod_ = createMethod_;
-        result.designatorId_ = designatorId_;
-        result.invalidateCancelledPasses_ = invalidateCancelledPasses_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.FlightOuterClass.Flight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.carrierCode_ = carrierCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.flightNumber_ = flightNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.boardingPoint_ = boardingPoint_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.deplaningPoint_ = deplaningPoint_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.departureDate_ = departureDateBuilder_ == null
+              ? departureDate_
+              : departureDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.departureTerminal_ = departureTerminal_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.arrivalTerminal_ = arrivalTerminal_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.departureGate_ = departureGate_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.arrivalGate_ = arrivalGate_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.scheduledDepartureTime_ = scheduledDepartureTimeBuilder_ == null
+              ? scheduledDepartureTime_
+              : scheduledDepartureTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.estimatedDepartureTime_ = estimatedDepartureTimeBuilder_ == null
+              ? estimatedDepartureTime_
+              : estimatedDepartureTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.boardingTime_ = boardingTimeBuilder_ == null
+              ? boardingTime_
+              : boardingTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.gateClosingTime_ = gateClosingTimeBuilder_ == null
+              ? gateClosingTime_
+              : gateClosingTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.scheduledArrivalTime_ = scheduledArrivalTimeBuilder_ == null
+              ? scheduledArrivalTime_
+              : scheduledArrivalTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.estimatedArrivalTime_ = estimatedArrivalTimeBuilder_ == null
+              ? estimatedArrivalTime_
+              : estimatedArrivalTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.operatingCarrierCode_ = operatingCarrierCode_;
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.operatingFlightNumber_ = operatingFlightNumber_;
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          codeShareFlightNumbers_.makeImmutable();
+          result.codeShareFlightNumbers_ = codeShareFlightNumbers_;
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.passTemplateId_ = passTemplateId_;
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.baggageBelt_ = baggageBelt_;
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.autoInvalidateAfter_ = autoInvalidateAfter_;
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.autoInvalidateCancelledPasses_ = autoInvalidateCancelledPasses_;
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.suspendAutomaticUpdates_ = suspendAutomaticUpdates_;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.boardingPolicy_ = boardingPolicy_;
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.seatingPolicy_ = seatingPolicy_;
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.conditionalItems_ = conditionalItems_;
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.barcodeAdditionalData_ = barcodeAdditionalData_;
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.metrics_ = metricsBuilder_ == null
+              ? metrics_
+              : metricsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial1(com.passkit.grpc.Flights.FlightOuterClass.Flight result) {
+        int from_bitField1_ = bitField1_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.createMethod_ = createMethod_;
+        }
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.designatorId_ = designatorId_;
+        }
+        if (((from_bitField1_ & 0x00000004) != 0)) {
+          result.invalidateCancelledPasses_ = invalidateCancelledPasses_;
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.FlightOuterClass.Flight) {
@@ -3930,18 +3606,22 @@ public final class FlightOuterClass {
         if (other == com.passkit.grpc.Flights.FlightOuterClass.Flight.getDefaultInstance()) return this;
         if (!other.getCarrierCode().isEmpty()) {
           carrierCode_ = other.carrierCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getFlightNumber().isEmpty()) {
           flightNumber_ = other.flightNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getBoardingPoint().isEmpty()) {
           boardingPoint_ = other.boardingPoint_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getDeplaningPoint().isEmpty()) {
           deplaningPoint_ = other.deplaningPoint_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasDepartureDate()) {
@@ -3949,18 +3629,22 @@ public final class FlightOuterClass {
         }
         if (!other.getDepartureTerminal().isEmpty()) {
           departureTerminal_ = other.departureTerminal_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getArrivalTerminal().isEmpty()) {
           arrivalTerminal_ = other.arrivalTerminal_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getDepartureGate().isEmpty()) {
           departureGate_ = other.departureGate_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (!other.getArrivalGate().isEmpty()) {
           arrivalGate_ = other.arrivalGate_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         if (other.hasScheduledDepartureTime()) {
@@ -3983,16 +3667,18 @@ public final class FlightOuterClass {
         }
         if (!other.getOperatingCarrierCode().isEmpty()) {
           operatingCarrierCode_ = other.operatingCarrierCode_;
+          bitField0_ |= 0x00008000;
           onChanged();
         }
         if (!other.getOperatingFlightNumber().isEmpty()) {
           operatingFlightNumber_ = other.operatingFlightNumber_;
+          bitField0_ |= 0x00010000;
           onChanged();
         }
         if (!other.codeShareFlightNumbers_.isEmpty()) {
           if (codeShareFlightNumbers_.isEmpty()) {
             codeShareFlightNumbers_ = other.codeShareFlightNumbers_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00020000;
           } else {
             ensureCodeShareFlightNumbersIsMutable();
             codeShareFlightNumbers_.addAll(other.codeShareFlightNumbers_);
@@ -4001,10 +3687,12 @@ public final class FlightOuterClass {
         }
         if (!other.getPassTemplateId().isEmpty()) {
           passTemplateId_ = other.passTemplateId_;
+          bitField0_ |= 0x00040000;
           onChanged();
         }
         if (!other.getBaggageBelt().isEmpty()) {
           baggageBelt_ = other.baggageBelt_;
+          bitField0_ |= 0x00080000;
           onChanged();
         }
         if (other.getAutoInvalidateAfter() != 0) {
@@ -4017,7 +3705,7 @@ public final class FlightOuterClass {
           if (!other.locationMessages_.isEmpty()) {
             if (locationMessages_.isEmpty()) {
               locationMessages_ = other.locationMessages_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00400000);
             } else {
               ensureLocationMessagesIsMutable();
               locationMessages_.addAll(other.locationMessages_);
@@ -4030,7 +3718,7 @@ public final class FlightOuterClass {
               locationMessagesBuilder_.dispose();
               locationMessagesBuilder_ = null;
               locationMessages_ = other.locationMessages_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00400000);
               locationMessagesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLocationMessagesFieldBuilder() : null;
@@ -4043,7 +3731,7 @@ public final class FlightOuterClass {
           if (!other.beaconMessages_.isEmpty()) {
             if (beaconMessages_.isEmpty()) {
               beaconMessages_ = other.beaconMessages_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00800000);
             } else {
               ensureBeaconMessagesIsMutable();
               beaconMessages_.addAll(other.beaconMessages_);
@@ -4056,7 +3744,7 @@ public final class FlightOuterClass {
               beaconMessagesBuilder_.dispose();
               beaconMessagesBuilder_ = null;
               beaconMessages_ = other.beaconMessages_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00800000);
               beaconMessagesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBeaconMessagesFieldBuilder() : null;
@@ -4069,7 +3757,7 @@ public final class FlightOuterClass {
           if (!other.links_.isEmpty()) {
             if (links_.isEmpty()) {
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x01000000);
             } else {
               ensureLinksIsMutable();
               links_.addAll(other.links_);
@@ -4082,7 +3770,7 @@ public final class FlightOuterClass {
               linksBuilder_.dispose();
               linksBuilder_ = null;
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x01000000);
               linksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLinksFieldBuilder() : null;
@@ -4108,6 +3796,7 @@ public final class FlightOuterClass {
         }
         if (!other.getBarcodeAdditionalData().isEmpty()) {
           barcodeAdditionalData_ = other.barcodeAdditionalData_;
+          bitField0_ |= 0x40000000;
           onChanged();
         }
         if (other.hasMetrics()) {
@@ -4118,12 +3807,13 @@ public final class FlightOuterClass {
         }
         if (!other.getDesignatorId().isEmpty()) {
           designatorId_ = other.designatorId_;
+          bitField1_ |= 0x00000002;
           onChanged();
         }
         if (other.invalidateCancelledPasses_ != 0) {
           setInvalidateCancelledPassesValue(other.getInvalidateCancelledPassesValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4138,20 +3828,250 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.FlightOuterClass.Flight parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                flightNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                boardingPoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                deplaningPoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                departureTerminal_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                arrivalTerminal_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                departureGate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                arrivalGate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getScheduledDepartureTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getEstimatedDepartureTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getBoardingTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getGateClosingTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getScheduledArrivalTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getEstimatedArrivalTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
+              case 130: {
+                operatingCarrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00008000;
+                break;
+              } // case 130
+              case 138: {
+                operatingFlightNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00010000;
+                break;
+              } // case 138
+              case 146: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCodeShareFlightNumbersIsMutable();
+                codeShareFlightNumbers_.add(s);
+                break;
+              } // case 146
+              case 154: {
+                passTemplateId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00040000;
+                break;
+              } // case 154
+              case 170: {
+                baggageBelt_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00080000;
+                break;
+              } // case 170
+              case 176: {
+                autoInvalidateAfter_ = input.readUInt32();
+                bitField0_ |= 0x00100000;
+                break;
+              } // case 176
+              case 184: {
+                autoInvalidateCancelledPasses_ = input.readBool();
+                bitField0_ |= 0x00200000;
+                break;
+              } // case 184
+              case 194: {
+                com.passkit.grpc.Proximity.GPSLocation m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.GPSLocation.parser(),
+                        extensionRegistry);
+                if (locationMessagesBuilder_ == null) {
+                  ensureLocationMessagesIsMutable();
+                  locationMessages_.add(m);
+                } else {
+                  locationMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 194
+              case 202: {
+                com.passkit.grpc.Proximity.Beacon m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.Beacon.parser(),
+                        extensionRegistry);
+                if (beaconMessagesBuilder_ == null) {
+                  ensureBeaconMessagesIsMutable();
+                  beaconMessages_.add(m);
+                } else {
+                  beaconMessagesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 202
+              case 210: {
+                com.passkit.grpc.Links.Link m =
+                    input.readMessage(
+                        com.passkit.grpc.Links.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 210
+              case 216: {
+                suspendAutomaticUpdates_ = input.readBool();
+                bitField0_ |= 0x02000000;
+                break;
+              } // case 216
+              case 224: {
+                boardingPolicy_ = input.readEnum();
+                bitField0_ |= 0x04000000;
+                break;
+              } // case 224
+              case 232: {
+                seatingPolicy_ = input.readEnum();
+                bitField0_ |= 0x08000000;
+                break;
+              } // case 232
+              case 240: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x10000000;
+                break;
+              } // case 240
+              case 248: {
+                conditionalItems_ = input.readBool();
+                bitField0_ |= 0x20000000;
+                break;
+              } // case 248
+              case 258: {
+                barcodeAdditionalData_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x40000000;
+                break;
+              } // case 258
+              case 266: {
+                input.readMessage(
+                    getMetricsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x80000000;
+                break;
+              } // case 266
+              case 272: {
+                createMethod_ = input.readEnum();
+                bitField1_ |= 0x00000001;
+                break;
+              } // case 272
+              case 282: {
+                designatorId_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000002;
+                break;
+              } // case 282
+              case 288: {
+                invalidateCancelledPasses_ = input.readEnum();
+                bitField1_ |= 0x00000004;
+                break;
+              } // case 288
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.FlightOuterClass.Flight) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private java.lang.Object carrierCode_ = "";
       /**
@@ -4206,11 +4126,9 @@ public final class FlightOuterClass {
        */
       public Builder setCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4223,8 +4141,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCarrierCode() {
-        
         carrierCode_ = getDefaultInstance().getCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4239,12 +4157,10 @@ public final class FlightOuterClass {
        */
       public Builder setCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4302,11 +4218,9 @@ public final class FlightOuterClass {
        */
       public Builder setFlightNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         flightNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4319,8 +4233,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFlightNumber() {
-        
         flightNumber_ = getDefaultInstance().getFlightNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4335,12 +4249,10 @@ public final class FlightOuterClass {
        */
       public Builder setFlightNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         flightNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4398,11 +4310,9 @@ public final class FlightOuterClass {
        */
       public Builder setBoardingPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         boardingPoint_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4415,8 +4325,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPoint() {
-        
         boardingPoint_ = getDefaultInstance().getBoardingPoint();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4431,12 +4341,10 @@ public final class FlightOuterClass {
        */
       public Builder setBoardingPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         boardingPoint_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4494,11 +4402,9 @@ public final class FlightOuterClass {
        */
       public Builder setDeplaningPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4511,8 +4417,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDeplaningPoint() {
-        
         deplaningPoint_ = getDefaultInstance().getDeplaningPoint();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -4527,12 +4433,10 @@ public final class FlightOuterClass {
        */
       public Builder setDeplaningPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -4549,7 +4453,7 @@ public final class FlightOuterClass {
        * @return Whether the departureDate field is set.
        */
       public boolean hasDepartureDate() {
-        return departureDateBuilder_ != null || departureDate_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -4579,11 +4483,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           departureDate_ = value;
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4597,11 +4501,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (departureDateBuilder_ == null) {
           departureDate_ = builderForValue.build();
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4613,17 +4517,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeDepartureDate(com.passkit.grpc.CommonObjects.Date value) {
         if (departureDateBuilder_ == null) {
-          if (departureDate_ != null) {
-            departureDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(departureDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            departureDate_ != null &&
+            departureDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getDepartureDateBuilder().mergeFrom(value);
           } else {
             departureDate_ = value;
           }
-          onChanged();
         } else {
           departureDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4634,14 +4539,13 @@ public final class FlightOuterClass {
        * <code>.io.Date departureDate = 5;</code>
        */
       public Builder clearDepartureDate() {
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-          onChanged();
-        } else {
-          departureDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4652,7 +4556,7 @@ public final class FlightOuterClass {
        * <code>.io.Date departureDate = 5;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getDepartureDateBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getDepartureDateFieldBuilder().getBuilder();
       }
@@ -4745,11 +4649,9 @@ public final class FlightOuterClass {
        */
       public Builder setDepartureTerminal(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         departureTerminal_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4762,8 +4664,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDepartureTerminal() {
-        
         departureTerminal_ = getDefaultInstance().getDepartureTerminal();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -4778,12 +4680,10 @@ public final class FlightOuterClass {
        */
       public Builder setDepartureTerminalBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         departureTerminal_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4841,11 +4741,9 @@ public final class FlightOuterClass {
        */
       public Builder setArrivalTerminal(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         arrivalTerminal_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4858,8 +4756,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearArrivalTerminal() {
-        
         arrivalTerminal_ = getDefaultInstance().getArrivalTerminal();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -4874,12 +4772,10 @@ public final class FlightOuterClass {
        */
       public Builder setArrivalTerminalBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         arrivalTerminal_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -4937,11 +4833,9 @@ public final class FlightOuterClass {
        */
       public Builder setDepartureGate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         departureGate_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -4954,8 +4848,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDepartureGate() {
-        
         departureGate_ = getDefaultInstance().getDepartureGate();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -4970,12 +4864,10 @@ public final class FlightOuterClass {
        */
       public Builder setDepartureGateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         departureGate_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5033,11 +4925,9 @@ public final class FlightOuterClass {
        */
       public Builder setArrivalGate(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         arrivalGate_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -5050,8 +4940,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearArrivalGate() {
-        
         arrivalGate_ = getDefaultInstance().getArrivalGate();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -5066,12 +4956,10 @@ public final class FlightOuterClass {
        */
       public Builder setArrivalGateBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         arrivalGate_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -5088,7 +4976,7 @@ public final class FlightOuterClass {
        * @return Whether the scheduledDepartureTime field is set.
        */
       public boolean hasScheduledDepartureTime() {
-        return scheduledDepartureTimeBuilder_ != null || scheduledDepartureTime_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -5118,11 +5006,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           scheduledDepartureTime_ = value;
-          onChanged();
         } else {
           scheduledDepartureTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5136,11 +5024,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (scheduledDepartureTimeBuilder_ == null) {
           scheduledDepartureTime_ = builderForValue.build();
-          onChanged();
         } else {
           scheduledDepartureTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5152,17 +5040,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeScheduledDepartureTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (scheduledDepartureTimeBuilder_ == null) {
-          if (scheduledDepartureTime_ != null) {
-            scheduledDepartureTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(scheduledDepartureTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            scheduledDepartureTime_ != null &&
+            scheduledDepartureTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getScheduledDepartureTimeBuilder().mergeFrom(value);
           } else {
             scheduledDepartureTime_ = value;
           }
-          onChanged();
         } else {
           scheduledDepartureTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -5173,14 +5062,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
        */
       public Builder clearScheduledDepartureTime() {
-        if (scheduledDepartureTimeBuilder_ == null) {
-          scheduledDepartureTime_ = null;
-          onChanged();
-        } else {
-          scheduledDepartureTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        scheduledDepartureTime_ = null;
+        if (scheduledDepartureTimeBuilder_ != null) {
+          scheduledDepartureTimeBuilder_.dispose();
           scheduledDepartureTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5191,7 +5079,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime scheduledDepartureTime = 10;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getScheduledDepartureTimeBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getScheduledDepartureTimeFieldBuilder().getBuilder();
       }
@@ -5243,7 +5131,7 @@ public final class FlightOuterClass {
        * @return Whether the estimatedDepartureTime field is set.
        */
       public boolean hasEstimatedDepartureTime() {
-        return estimatedDepartureTimeBuilder_ != null || estimatedDepartureTime_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -5273,11 +5161,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           estimatedDepartureTime_ = value;
-          onChanged();
         } else {
           estimatedDepartureTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -5291,11 +5179,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (estimatedDepartureTimeBuilder_ == null) {
           estimatedDepartureTime_ = builderForValue.build();
-          onChanged();
         } else {
           estimatedDepartureTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -5307,17 +5195,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeEstimatedDepartureTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (estimatedDepartureTimeBuilder_ == null) {
-          if (estimatedDepartureTime_ != null) {
-            estimatedDepartureTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(estimatedDepartureTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            estimatedDepartureTime_ != null &&
+            estimatedDepartureTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getEstimatedDepartureTimeBuilder().mergeFrom(value);
           } else {
             estimatedDepartureTime_ = value;
           }
-          onChanged();
         } else {
           estimatedDepartureTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -5328,14 +5217,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
        */
       public Builder clearEstimatedDepartureTime() {
-        if (estimatedDepartureTimeBuilder_ == null) {
-          estimatedDepartureTime_ = null;
-          onChanged();
-        } else {
-          estimatedDepartureTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        estimatedDepartureTime_ = null;
+        if (estimatedDepartureTimeBuilder_ != null) {
+          estimatedDepartureTimeBuilder_.dispose();
           estimatedDepartureTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5346,7 +5234,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime estimatedDepartureTime = 11;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getEstimatedDepartureTimeBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getEstimatedDepartureTimeFieldBuilder().getBuilder();
       }
@@ -5398,7 +5286,7 @@ public final class FlightOuterClass {
        * @return Whether the boardingTime field is set.
        */
       public boolean hasBoardingTime() {
-        return boardingTimeBuilder_ != null || boardingTime_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -5428,11 +5316,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           boardingTime_ = value;
-          onChanged();
         } else {
           boardingTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -5446,11 +5334,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (boardingTimeBuilder_ == null) {
           boardingTime_ = builderForValue.build();
-          onChanged();
         } else {
           boardingTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -5462,17 +5350,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeBoardingTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (boardingTimeBuilder_ == null) {
-          if (boardingTime_ != null) {
-            boardingTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(boardingTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            boardingTime_ != null &&
+            boardingTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getBoardingTimeBuilder().mergeFrom(value);
           } else {
             boardingTime_ = value;
           }
-          onChanged();
         } else {
           boardingTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -5483,14 +5372,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime boardingTime = 12;</code>
        */
       public Builder clearBoardingTime() {
-        if (boardingTimeBuilder_ == null) {
-          boardingTime_ = null;
-          onChanged();
-        } else {
-          boardingTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        boardingTime_ = null;
+        if (boardingTimeBuilder_ != null) {
+          boardingTimeBuilder_.dispose();
           boardingTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5501,7 +5389,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime boardingTime = 12;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getBoardingTimeBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getBoardingTimeFieldBuilder().getBuilder();
       }
@@ -5553,7 +5441,7 @@ public final class FlightOuterClass {
        * @return Whether the gateClosingTime field is set.
        */
       public boolean hasGateClosingTime() {
-        return gateClosingTimeBuilder_ != null || gateClosingTime_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -5583,11 +5471,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           gateClosingTime_ = value;
-          onChanged();
         } else {
           gateClosingTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -5601,11 +5489,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (gateClosingTimeBuilder_ == null) {
           gateClosingTime_ = builderForValue.build();
-          onChanged();
         } else {
           gateClosingTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -5617,17 +5505,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeGateClosingTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (gateClosingTimeBuilder_ == null) {
-          if (gateClosingTime_ != null) {
-            gateClosingTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(gateClosingTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            gateClosingTime_ != null &&
+            gateClosingTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getGateClosingTimeBuilder().mergeFrom(value);
           } else {
             gateClosingTime_ = value;
           }
-          onChanged();
         } else {
           gateClosingTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -5638,14 +5527,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime gateClosingTime = 13;</code>
        */
       public Builder clearGateClosingTime() {
-        if (gateClosingTimeBuilder_ == null) {
-          gateClosingTime_ = null;
-          onChanged();
-        } else {
-          gateClosingTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        gateClosingTime_ = null;
+        if (gateClosingTimeBuilder_ != null) {
+          gateClosingTimeBuilder_.dispose();
           gateClosingTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5656,7 +5544,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime gateClosingTime = 13;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getGateClosingTimeBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getGateClosingTimeFieldBuilder().getBuilder();
       }
@@ -5708,7 +5596,7 @@ public final class FlightOuterClass {
        * @return Whether the scheduledArrivalTime field is set.
        */
       public boolean hasScheduledArrivalTime() {
-        return scheduledArrivalTimeBuilder_ != null || scheduledArrivalTime_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -5738,11 +5626,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           scheduledArrivalTime_ = value;
-          onChanged();
         } else {
           scheduledArrivalTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -5756,11 +5644,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (scheduledArrivalTimeBuilder_ == null) {
           scheduledArrivalTime_ = builderForValue.build();
-          onChanged();
         } else {
           scheduledArrivalTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -5772,17 +5660,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeScheduledArrivalTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (scheduledArrivalTimeBuilder_ == null) {
-          if (scheduledArrivalTime_ != null) {
-            scheduledArrivalTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(scheduledArrivalTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            scheduledArrivalTime_ != null &&
+            scheduledArrivalTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getScheduledArrivalTimeBuilder().mergeFrom(value);
           } else {
             scheduledArrivalTime_ = value;
           }
-          onChanged();
         } else {
           scheduledArrivalTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -5793,14 +5682,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
        */
       public Builder clearScheduledArrivalTime() {
-        if (scheduledArrivalTimeBuilder_ == null) {
-          scheduledArrivalTime_ = null;
-          onChanged();
-        } else {
-          scheduledArrivalTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        scheduledArrivalTime_ = null;
+        if (scheduledArrivalTimeBuilder_ != null) {
+          scheduledArrivalTimeBuilder_.dispose();
           scheduledArrivalTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5811,7 +5699,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime scheduledArrivalTime = 14;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getScheduledArrivalTimeBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getScheduledArrivalTimeFieldBuilder().getBuilder();
       }
@@ -5863,7 +5751,7 @@ public final class FlightOuterClass {
        * @return Whether the estimatedArrivalTime field is set.
        */
       public boolean hasEstimatedArrivalTime() {
-        return estimatedArrivalTimeBuilder_ != null || estimatedArrivalTime_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -5893,11 +5781,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           estimatedArrivalTime_ = value;
-          onChanged();
         } else {
           estimatedArrivalTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -5911,11 +5799,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.LocalDateTime.Builder builderForValue) {
         if (estimatedArrivalTimeBuilder_ == null) {
           estimatedArrivalTime_ = builderForValue.build();
-          onChanged();
         } else {
           estimatedArrivalTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -5927,17 +5815,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeEstimatedArrivalTime(com.passkit.grpc.CommonObjects.LocalDateTime value) {
         if (estimatedArrivalTimeBuilder_ == null) {
-          if (estimatedArrivalTime_ != null) {
-            estimatedArrivalTime_ =
-              com.passkit.grpc.CommonObjects.LocalDateTime.newBuilder(estimatedArrivalTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            estimatedArrivalTime_ != null &&
+            estimatedArrivalTime_ != com.passkit.grpc.CommonObjects.LocalDateTime.getDefaultInstance()) {
+            getEstimatedArrivalTimeBuilder().mergeFrom(value);
           } else {
             estimatedArrivalTime_ = value;
           }
-          onChanged();
         } else {
           estimatedArrivalTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -5948,14 +5837,13 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
        */
       public Builder clearEstimatedArrivalTime() {
-        if (estimatedArrivalTimeBuilder_ == null) {
-          estimatedArrivalTime_ = null;
-          onChanged();
-        } else {
-          estimatedArrivalTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        estimatedArrivalTime_ = null;
+        if (estimatedArrivalTimeBuilder_ != null) {
+          estimatedArrivalTimeBuilder_.dispose();
           estimatedArrivalTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5966,7 +5854,7 @@ public final class FlightOuterClass {
        * <code>.io.LocalDateTime estimatedArrivalTime = 15;</code>
        */
       public com.passkit.grpc.CommonObjects.LocalDateTime.Builder getEstimatedArrivalTimeBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getEstimatedArrivalTimeFieldBuilder().getBuilder();
       }
@@ -6059,11 +5947,9 @@ public final class FlightOuterClass {
        */
       public Builder setOperatingCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         operatingCarrierCode_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -6076,8 +5962,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOperatingCarrierCode() {
-        
         operatingCarrierCode_ = getDefaultInstance().getOperatingCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00008000);
         onChanged();
         return this;
       }
@@ -6092,12 +5978,10 @@ public final class FlightOuterClass {
        */
       public Builder setOperatingCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         operatingCarrierCode_ = value;
+        bitField0_ |= 0x00008000;
         onChanged();
         return this;
       }
@@ -6155,11 +6039,9 @@ public final class FlightOuterClass {
        */
       public Builder setOperatingFlightNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         operatingFlightNumber_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
@@ -6172,8 +6054,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOperatingFlightNumber() {
-        
         operatingFlightNumber_ = getDefaultInstance().getOperatingFlightNumber();
+        bitField0_ = (bitField0_ & ~0x00010000);
         onChanged();
         return this;
       }
@@ -6188,22 +6070,21 @@ public final class FlightOuterClass {
        */
       public Builder setOperatingFlightNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         operatingFlightNumber_ = value;
+        bitField0_ |= 0x00010000;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList codeShareFlightNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList codeShareFlightNumbers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureCodeShareFlightNumbersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!codeShareFlightNumbers_.isModifiable()) {
           codeShareFlightNumbers_ = new com.google.protobuf.LazyStringArrayList(codeShareFlightNumbers_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00020000;
       }
       /**
        * <pre>
@@ -6215,7 +6096,8 @@ public final class FlightOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getCodeShareFlightNumbersList() {
-        return codeShareFlightNumbers_.getUnmodifiableView();
+        codeShareFlightNumbers_.makeImmutable();
+        return codeShareFlightNumbers_;
       }
       /**
        * <pre>
@@ -6265,11 +6147,10 @@ public final class FlightOuterClass {
        */
       public Builder setCodeShareFlightNumbers(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCodeShareFlightNumbersIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureCodeShareFlightNumbersIsMutable();
         codeShareFlightNumbers_.set(index, value);
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -6284,11 +6165,10 @@ public final class FlightOuterClass {
        */
       public Builder addCodeShareFlightNumbers(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureCodeShareFlightNumbersIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureCodeShareFlightNumbersIsMutable();
         codeShareFlightNumbers_.add(value);
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -6306,6 +6186,7 @@ public final class FlightOuterClass {
         ensureCodeShareFlightNumbersIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, codeShareFlightNumbers_);
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -6318,8 +6199,9 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCodeShareFlightNumbers() {
-        codeShareFlightNumbers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        codeShareFlightNumbers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00020000);;
         onChanged();
         return this;
       }
@@ -6334,12 +6216,11 @@ public final class FlightOuterClass {
        */
       public Builder addCodeShareFlightNumbersBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureCodeShareFlightNumbersIsMutable();
         codeShareFlightNumbers_.add(value);
+        bitField0_ |= 0x00020000;
         onChanged();
         return this;
       }
@@ -6397,11 +6278,9 @@ public final class FlightOuterClass {
        */
       public Builder setPassTemplateId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTemplateId_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -6414,8 +6293,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPassTemplateId() {
-        
         passTemplateId_ = getDefaultInstance().getPassTemplateId();
+        bitField0_ = (bitField0_ & ~0x00040000);
         onChanged();
         return this;
       }
@@ -6430,12 +6309,10 @@ public final class FlightOuterClass {
        */
       public Builder setPassTemplateIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTemplateId_ = value;
+        bitField0_ |= 0x00040000;
         onChanged();
         return this;
       }
@@ -6493,11 +6370,9 @@ public final class FlightOuterClass {
        */
       public Builder setBaggageBelt(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         baggageBelt_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -6510,8 +6385,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBaggageBelt() {
-        
         baggageBelt_ = getDefaultInstance().getBaggageBelt();
+        bitField0_ = (bitField0_ & ~0x00080000);
         onChanged();
         return this;
       }
@@ -6526,12 +6401,10 @@ public final class FlightOuterClass {
        */
       public Builder setBaggageBeltBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         baggageBelt_ = value;
+        bitField0_ |= 0x00080000;
         onChanged();
         return this;
       }
@@ -6559,8 +6432,9 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAutoInvalidateAfter(int value) {
-        
+
         autoInvalidateAfter_ = value;
+        bitField0_ |= 0x00100000;
         onChanged();
         return this;
       }
@@ -6573,7 +6447,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAutoInvalidateAfter() {
-        
+        bitField0_ = (bitField0_ & ~0x00100000);
         autoInvalidateAfter_ = 0;
         onChanged();
         return this;
@@ -6606,8 +6480,9 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder setAutoInvalidateCancelledPasses(boolean value) {
-        
+
         autoInvalidateCancelledPasses_ = value;
+        bitField0_ |= 0x00200000;
         onChanged();
         return this;
       }
@@ -6622,7 +6497,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearAutoInvalidateCancelledPasses() {
-        
+        bitField0_ = (bitField0_ & ~0x00200000);
         autoInvalidateCancelledPasses_ = false;
         onChanged();
         return this;
@@ -6631,9 +6506,9 @@ public final class FlightOuterClass {
       private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locationMessages_ =
         java.util.Collections.emptyList();
       private void ensureLocationMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00400000) != 0)) {
           locationMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>(locationMessages_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00400000;
          }
       }
 
@@ -6827,7 +6702,7 @@ public final class FlightOuterClass {
       public Builder clearLocationMessages() {
         if (locationMessagesBuilder_ == null) {
           locationMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00400000);
           onChanged();
         } else {
           locationMessagesBuilder_.clear();
@@ -6932,7 +6807,7 @@ public final class FlightOuterClass {
           locationMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Proximity.GPSLocation, com.passkit.grpc.Proximity.GPSLocation.Builder, com.passkit.grpc.Proximity.GPSLocationOrBuilder>(
                   locationMessages_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00400000) != 0),
                   getParentForChildren(),
                   isClean());
           locationMessages_ = null;
@@ -6943,9 +6818,9 @@ public final class FlightOuterClass {
       private java.util.List<com.passkit.grpc.Proximity.Beacon> beaconMessages_ =
         java.util.Collections.emptyList();
       private void ensureBeaconMessagesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00800000) != 0)) {
           beaconMessages_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>(beaconMessages_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00800000;
          }
       }
 
@@ -7139,7 +7014,7 @@ public final class FlightOuterClass {
       public Builder clearBeaconMessages() {
         if (beaconMessagesBuilder_ == null) {
           beaconMessages_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00800000);
           onChanged();
         } else {
           beaconMessagesBuilder_.clear();
@@ -7244,7 +7119,7 @@ public final class FlightOuterClass {
           beaconMessagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Proximity.Beacon, com.passkit.grpc.Proximity.Beacon.Builder, com.passkit.grpc.Proximity.BeaconOrBuilder>(
                   beaconMessages_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00800000) != 0),
                   getParentForChildren(),
                   isClean());
           beaconMessages_ = null;
@@ -7255,9 +7130,9 @@ public final class FlightOuterClass {
       private java.util.List<com.passkit.grpc.Links.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x01000000) != 0)) {
           links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>(links_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x01000000;
          }
       }
 
@@ -7451,7 +7326,7 @@ public final class FlightOuterClass {
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x01000000);
           onChanged();
         } else {
           linksBuilder_.clear();
@@ -7556,7 +7431,7 @@ public final class FlightOuterClass {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Links.Link, com.passkit.grpc.Links.Link.Builder, com.passkit.grpc.Links.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x01000000) != 0),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -7587,8 +7462,9 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSuspendAutomaticUpdates(boolean value) {
-        
+
         suspendAutomaticUpdates_ = value;
+        bitField0_ |= 0x02000000;
         onChanged();
         return this;
       }
@@ -7601,7 +7477,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSuspendAutomaticUpdates() {
-        
+        bitField0_ = (bitField0_ & ~0x02000000);
         suspendAutomaticUpdates_ = false;
         onChanged();
         return this;
@@ -7629,8 +7505,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setBoardingPolicyValue(int value) {
-        
         boardingPolicy_ = value;
+        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -7644,8 +7520,7 @@ public final class FlightOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy getBoardingPolicy() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.valueOf(boardingPolicy_);
+        com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.forNumber(boardingPolicy_);
         return result == null ? com.passkit.grpc.Flights.FlightDesignatorOuterClass.BoardingPolicy.UNRECOGNIZED : result;
       }
       /**
@@ -7661,7 +7536,7 @@ public final class FlightOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x04000000;
         boardingPolicy_ = value.getNumber();
         onChanged();
         return this;
@@ -7675,7 +7550,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPolicy() {
-        
+        bitField0_ = (bitField0_ & ~0x04000000);
         boardingPolicy_ = 0;
         onChanged();
         return this;
@@ -7703,8 +7578,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setSeatingPolicyValue(int value) {
-        
         seatingPolicy_ = value;
+        bitField0_ |= 0x08000000;
         onChanged();
         return this;
       }
@@ -7718,8 +7593,7 @@ public final class FlightOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy getSeatingPolicy() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.valueOf(seatingPolicy_);
+        com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy result = com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.forNumber(seatingPolicy_);
         return result == null ? com.passkit.grpc.Flights.FlightDesignatorOuterClass.SeatClassPolicy.UNRECOGNIZED : result;
       }
       /**
@@ -7735,7 +7609,7 @@ public final class FlightOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x08000000;
         seatingPolicy_ = value.getNumber();
         onChanged();
         return this;
@@ -7749,7 +7623,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSeatingPolicy() {
-        
+        bitField0_ = (bitField0_ & ~0x08000000);
         seatingPolicy_ = 0;
         onChanged();
         return this;
@@ -7777,8 +7651,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x10000000;
         onChanged();
         return this;
       }
@@ -7792,8 +7666,7 @@ public final class FlightOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightOuterClass.FlightStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.FlightOuterClass.FlightStatus result = com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.valueOf(status_);
+        com.passkit.grpc.Flights.FlightOuterClass.FlightStatus result = com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.Flights.FlightOuterClass.FlightStatus.UNRECOGNIZED : result;
       }
       /**
@@ -7809,7 +7682,7 @@ public final class FlightOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x10000000;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -7823,7 +7696,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x10000000);
         status_ = 0;
         onChanged();
         return this;
@@ -7852,8 +7725,9 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setConditionalItems(boolean value) {
-        
+
         conditionalItems_ = value;
+        bitField0_ |= 0x20000000;
         onChanged();
         return this;
       }
@@ -7866,7 +7740,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearConditionalItems() {
-        
+        bitField0_ = (bitField0_ & ~0x20000000);
         conditionalItems_ = false;
         onChanged();
         return this;
@@ -7925,11 +7799,9 @@ public final class FlightOuterClass {
        */
       public Builder setBarcodeAdditionalData(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         barcodeAdditionalData_ = value;
+        bitField0_ |= 0x40000000;
         onChanged();
         return this;
       }
@@ -7942,8 +7814,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBarcodeAdditionalData() {
-        
         barcodeAdditionalData_ = getDefaultInstance().getBarcodeAdditionalData();
+        bitField0_ = (bitField0_ & ~0x40000000);
         onChanged();
         return this;
       }
@@ -7958,12 +7830,10 @@ public final class FlightOuterClass {
        */
       public Builder setBarcodeAdditionalDataBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         barcodeAdditionalData_ = value;
+        bitField0_ |= 0x40000000;
         onChanged();
         return this;
       }
@@ -7980,7 +7850,7 @@ public final class FlightOuterClass {
        * @return Whether the metrics field is set.
        */
       public boolean hasMetrics() {
-        return metricsBuilder_ != null || metrics_ != null;
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <pre>
@@ -8010,11 +7880,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           metrics_ = value;
-          onChanged();
         } else {
           metricsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -8028,11 +7898,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.MetricsOuterClass.Metrics.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           metrics_ = builderForValue.build();
-          onChanged();
         } else {
           metricsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -8044,17 +7914,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeMetrics(com.passkit.grpc.MetricsOuterClass.Metrics value) {
         if (metricsBuilder_ == null) {
-          if (metrics_ != null) {
-            metrics_ =
-              com.passkit.grpc.MetricsOuterClass.Metrics.newBuilder(metrics_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x80000000) != 0) &&
+            metrics_ != null &&
+            metrics_ != com.passkit.grpc.MetricsOuterClass.Metrics.getDefaultInstance()) {
+            getMetricsBuilder().mergeFrom(value);
           } else {
             metrics_ = value;
           }
-          onChanged();
         } else {
           metricsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -8065,14 +7936,13 @@ public final class FlightOuterClass {
        * <code>.io.Metrics metrics = 33;</code>
        */
       public Builder clearMetrics() {
-        if (metricsBuilder_ == null) {
-          metrics_ = null;
-          onChanged();
-        } else {
-          metrics_ = null;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        metrics_ = null;
+        if (metricsBuilder_ != null) {
+          metricsBuilder_.dispose();
           metricsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8083,7 +7953,7 @@ public final class FlightOuterClass {
        * <code>.io.Metrics metrics = 33;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metrics.Builder getMetricsBuilder() {
-        
+        bitField0_ |= 0x80000000;
         onChanged();
         return getMetricsFieldBuilder().getBuilder();
       }
@@ -8145,8 +8015,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setCreateMethodValue(int value) {
-        
         createMethod_ = value;
+        bitField1_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8160,8 +8030,7 @@ public final class FlightOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode getCreateMethod() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode result = com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.valueOf(createMethod_);
+        com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode result = com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.forNumber(createMethod_);
         return result == null ? com.passkit.grpc.Flights.FlightOuterClass.FlightCreateMode.UNRECOGNIZED : result;
       }
       /**
@@ -8177,7 +8046,7 @@ public final class FlightOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField1_ |= 0x00000001;
         createMethod_ = value.getNumber();
         onChanged();
         return this;
@@ -8191,7 +8060,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCreateMethod() {
-        
+        bitField1_ = (bitField1_ & ~0x00000001);
         createMethod_ = 0;
         onChanged();
         return this;
@@ -8250,11 +8119,9 @@ public final class FlightOuterClass {
        */
       public Builder setDesignatorId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         designatorId_ = value;
+        bitField1_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8267,8 +8134,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDesignatorId() {
-        
         designatorId_ = getDefaultInstance().getDesignatorId();
+        bitField1_ = (bitField1_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8283,12 +8150,10 @@ public final class FlightOuterClass {
        */
       public Builder setDesignatorIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         designatorId_ = value;
+        bitField1_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8315,8 +8180,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder setInvalidateCancelledPassesValue(int value) {
-        
         invalidateCancelledPasses_ = value;
+        bitField1_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8330,8 +8195,7 @@ public final class FlightOuterClass {
        */
       @java.lang.Override
       public com.passkit.grpc.CommonObjects.Toggle getInvalidateCancelledPasses() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.valueOf(invalidateCancelledPasses_);
+        com.passkit.grpc.CommonObjects.Toggle result = com.passkit.grpc.CommonObjects.Toggle.forNumber(invalidateCancelledPasses_);
         return result == null ? com.passkit.grpc.CommonObjects.Toggle.UNRECOGNIZED : result;
       }
       /**
@@ -8347,7 +8211,7 @@ public final class FlightOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField1_ |= 0x00000004;
         invalidateCancelledPasses_ = value.getNumber();
         onChanged();
         return this;
@@ -8361,7 +8225,7 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearInvalidateCancelledPasses() {
-        
+        bitField1_ = (bitField1_ & ~0x00000004);
         invalidateCancelledPasses_ = 0;
         onChanged();
         return this;
@@ -8399,7 +8263,18 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Flight(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8560,87 +8435,6 @@ public final class FlightOuterClass {
       return new FlightRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FlightRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              flightNumber_ = s;
-              break;
-            }
-            case 26: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (departureDate_ != null) {
-                subBuilder = departureDate_.toBuilder();
-              }
-              departureDate_ = input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(departureDate_);
-                departureDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              boardingPoint_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              deplaningPoint_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.FlightOuterClass.internal_static_flights_FlightRequest_descriptor;
@@ -8655,7 +8449,8 @@ public final class FlightOuterClass {
     }
 
     public static final int CARRIERCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object carrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object carrierCode_ = "";
     /**
      * <pre>
      * The 2 character IATA code or 3 character ICAO code.
@@ -8701,7 +8496,8 @@ public final class FlightOuterClass {
     }
 
     public static final int FLIGHTNUMBER_FIELD_NUMBER = 2;
-    private volatile java.lang.Object flightNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flightNumber_ = "";
     /**
      * <pre>
      * The flight number.
@@ -8781,11 +8577,12 @@ public final class FlightOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.CommonObjects.DateOrBuilder getDepartureDateOrBuilder() {
-      return getDepartureDate();
+      return departureDate_ == null ? com.passkit.grpc.CommonObjects.Date.getDefaultInstance() : departureDate_;
     }
 
     public static final int BOARDINGPOINT_FIELD_NUMBER = 5;
-    private volatile java.lang.Object boardingPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object boardingPoint_ = "";
     /**
      * <pre>
      * The IATA airport code for the boarding point of the flight. Only required for direct flights with stops where the boarding point is after the first port and segment is not provided.
@@ -8831,7 +8628,8 @@ public final class FlightOuterClass {
     }
 
     public static final int DEPLANINGPOINT_FIELD_NUMBER = 6;
-    private volatile java.lang.Object deplaningPoint_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object deplaningPoint_ = "";
     /**
      * <pre>
      * The IATA airport code for the destination of the flight. Only required for direct flights with stops where the flight ends before the final port.
@@ -8905,7 +8703,7 @@ public final class FlightOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, deplaningPoint_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8930,7 +8728,7 @@ public final class FlightOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(deplaningPoint_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, deplaningPoint_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8958,7 +8756,7 @@ public final class FlightOuterClass {
           .equals(other.getBoardingPoint())) return false;
       if (!getDeplaningPoint()
           .equals(other.getDeplaningPoint())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8981,7 +8779,7 @@ public final class FlightOuterClass {
       hash = (53 * hash) + getBoardingPoint().hashCode();
       hash = (37 * hash) + DEPLANINGPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getDeplaningPoint().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9102,36 +8900,27 @@ public final class FlightOuterClass {
 
       // Construct using com.passkit.grpc.Flights.FlightOuterClass.FlightRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         carrierCode_ = "";
-
         flightNumber_ = "";
-
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-        } else {
-          departureDate_ = null;
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
         boardingPoint_ = "";
-
         deplaningPoint_ = "";
-
         return this;
       }
 
@@ -9158,51 +8947,32 @@ public final class FlightOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.FlightOuterClass.FlightRequest buildPartial() {
         com.passkit.grpc.Flights.FlightOuterClass.FlightRequest result = new com.passkit.grpc.Flights.FlightOuterClass.FlightRequest(this);
-        result.carrierCode_ = carrierCode_;
-        result.flightNumber_ = flightNumber_;
-        if (departureDateBuilder_ == null) {
-          result.departureDate_ = departureDate_;
-        } else {
-          result.departureDate_ = departureDateBuilder_.build();
-        }
-        result.boardingPoint_ = boardingPoint_;
-        result.deplaningPoint_ = deplaningPoint_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.carrierCode_ = carrierCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.flightNumber_ = flightNumber_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.departureDate_ = departureDateBuilder_ == null
+              ? departureDate_
+              : departureDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.boardingPoint_ = boardingPoint_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.deplaningPoint_ = deplaningPoint_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.FlightOuterClass.FlightRequest) {
@@ -9217,10 +8987,12 @@ public final class FlightOuterClass {
         if (other == com.passkit.grpc.Flights.FlightOuterClass.FlightRequest.getDefaultInstance()) return this;
         if (!other.getCarrierCode().isEmpty()) {
           carrierCode_ = other.carrierCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getFlightNumber().isEmpty()) {
           flightNumber_ = other.flightNumber_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasDepartureDate()) {
@@ -9228,13 +9000,15 @@ public final class FlightOuterClass {
         }
         if (!other.getBoardingPoint().isEmpty()) {
           boardingPoint_ = other.boardingPoint_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getDeplaningPoint().isEmpty()) {
           deplaningPoint_ = other.deplaningPoint_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9249,19 +9023,60 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.FlightOuterClass.FlightRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                flightNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDepartureDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 42: {
+                boardingPoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 42
+              case 50: {
+                deplaningPoint_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.FlightOuterClass.FlightRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object carrierCode_ = "";
       /**
@@ -9316,11 +9131,9 @@ public final class FlightOuterClass {
        */
       public Builder setCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9333,8 +9146,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCarrierCode() {
-        
         carrierCode_ = getDefaultInstance().getCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9349,12 +9162,10 @@ public final class FlightOuterClass {
        */
       public Builder setCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9412,11 +9223,9 @@ public final class FlightOuterClass {
        */
       public Builder setFlightNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         flightNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9429,8 +9238,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFlightNumber() {
-        
         flightNumber_ = getDefaultInstance().getFlightNumber();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9445,12 +9254,10 @@ public final class FlightOuterClass {
        */
       public Builder setFlightNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         flightNumber_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9467,7 +9274,7 @@ public final class FlightOuterClass {
        * @return Whether the departureDate field is set.
        */
       public boolean hasDepartureDate() {
-        return departureDateBuilder_ != null || departureDate_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -9497,11 +9304,11 @@ public final class FlightOuterClass {
             throw new NullPointerException();
           }
           departureDate_ = value;
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -9515,11 +9322,11 @@ public final class FlightOuterClass {
           com.passkit.grpc.CommonObjects.Date.Builder builderForValue) {
         if (departureDateBuilder_ == null) {
           departureDate_ = builderForValue.build();
-          onChanged();
         } else {
           departureDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -9531,17 +9338,18 @@ public final class FlightOuterClass {
        */
       public Builder mergeDepartureDate(com.passkit.grpc.CommonObjects.Date value) {
         if (departureDateBuilder_ == null) {
-          if (departureDate_ != null) {
-            departureDate_ =
-              com.passkit.grpc.CommonObjects.Date.newBuilder(departureDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            departureDate_ != null &&
+            departureDate_ != com.passkit.grpc.CommonObjects.Date.getDefaultInstance()) {
+            getDepartureDateBuilder().mergeFrom(value);
           } else {
             departureDate_ = value;
           }
-          onChanged();
         } else {
           departureDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -9552,14 +9360,13 @@ public final class FlightOuterClass {
        * <code>.io.Date departureDate = 3;</code>
        */
       public Builder clearDepartureDate() {
-        if (departureDateBuilder_ == null) {
-          departureDate_ = null;
-          onChanged();
-        } else {
-          departureDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        departureDate_ = null;
+        if (departureDateBuilder_ != null) {
+          departureDateBuilder_.dispose();
           departureDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9570,7 +9377,7 @@ public final class FlightOuterClass {
        * <code>.io.Date departureDate = 3;</code>
        */
       public com.passkit.grpc.CommonObjects.Date.Builder getDepartureDateBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getDepartureDateFieldBuilder().getBuilder();
       }
@@ -9663,11 +9470,9 @@ public final class FlightOuterClass {
        */
       public Builder setBoardingPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         boardingPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9680,8 +9485,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearBoardingPoint() {
-        
         boardingPoint_ = getDefaultInstance().getBoardingPoint();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -9696,12 +9501,10 @@ public final class FlightOuterClass {
        */
       public Builder setBoardingPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         boardingPoint_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9759,11 +9562,9 @@ public final class FlightOuterClass {
        */
       public Builder setDeplaningPoint(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -9776,8 +9577,8 @@ public final class FlightOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDeplaningPoint() {
-        
         deplaningPoint_ = getDefaultInstance().getDeplaningPoint();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -9792,12 +9593,10 @@ public final class FlightOuterClass {
        */
       public Builder setDeplaningPointBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         deplaningPoint_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -9834,7 +9633,18 @@ public final class FlightOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FlightRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

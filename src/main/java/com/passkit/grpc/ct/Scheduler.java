@@ -613,177 +613,6 @@ public final class Scheduler {
       return new SchedulingJob();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SchedulingJob(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobFunction_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobPayload_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-            case 50: {
-              com.passkit.grpc.ct.Scheduler.Schedule.Builder subBuilder = null;
-              if (schedule_ != null) {
-                subBuilder = schedule_.toBuilder();
-              }
-              schedule_ = input.readMessage(com.passkit.grpc.ct.Scheduler.Schedule.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(schedule_);
-                schedule_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 66: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (nextRunDatetime_ != null) {
-                subBuilder = nextRunDatetime_.toBuilder();
-              }
-              nextRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nextRunDatetime_);
-                nextRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (lastRunDatetime_ != null) {
-                subBuilder = lastRunDatetime_.toBuilder();
-              }
-              lastRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(lastRunDatetime_);
-                lastRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                logs_ = new java.util.ArrayList<com.passkit.grpc.ct.Scheduler.JobHistory>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              logs_.add(
-                  input.readMessage(com.passkit.grpc.ct.Scheduler.JobHistory.parser(), extensionRegistry));
-              break;
-            }
-            case 90: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updated_ != null) {
-                subBuilder = updated_.toBuilder();
-              }
-              updated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updated_);
-                updated_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          logs_ = java.util.Collections.unmodifiableList(logs_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ct.Scheduler.internal_static_ct_SchedulingJob_descriptor;
@@ -798,7 +627,8 @@ public final class Scheduler {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Auto generated 22 char identifier. Read only.
@@ -844,7 +674,8 @@ public final class Scheduler {
     }
 
     public static final int JOBFUNCTION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object jobFunction_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jobFunction_ = "";
     /**
      * <pre>
      * HttpMethod and Endpoint with comma separation.
@@ -892,7 +723,8 @@ public final class Scheduler {
     }
 
     public static final int JOBPAYLOAD_FIELD_NUMBER = 3;
-    private volatile java.lang.Object jobPayload_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jobPayload_ = "";
     /**
      * <pre>
      * Json string of the job function payload.
@@ -938,7 +770,8 @@ public final class Scheduler {
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Job name.
@@ -984,7 +817,8 @@ public final class Scheduler {
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 5;
-    private volatile java.lang.Object description_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
     /**
      * <pre>
      * Job description.
@@ -1064,11 +898,11 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.passkit.grpc.ct.Scheduler.ScheduleOrBuilder getScheduleOrBuilder() {
-      return getSchedule();
+      return schedule_ == null ? com.passkit.grpc.ct.Scheduler.Schedule.getDefaultInstance() : schedule_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 7;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Job status. Writable values are JOB_STATUS_READY and JOB_STATUS_PAUSED only. Default is JOB_STATUS_READY.
@@ -1093,8 +927,7 @@ public final class Scheduler {
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.ct.Scheduler.JobStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.valueOf(status_);
+      com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.ct.Scheduler.JobStatus.UNRECOGNIZED : result;
     }
 
@@ -1133,7 +966,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getNextRunDatetimeOrBuilder() {
-      return getNextRunDatetime();
+      return nextRunDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : nextRunDatetime_;
     }
 
     public static final int LASTRUNDATETIME_FIELD_NUMBER = 9;
@@ -1171,10 +1004,11 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getLastRunDatetimeOrBuilder() {
-      return getLastRunDatetime();
+      return lastRunDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lastRunDatetime_;
     }
 
     public static final int LOGS_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.ct.Scheduler.JobHistory> logs_;
     /**
      * <pre>
@@ -1269,7 +1103,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 12;
@@ -1307,7 +1141,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     public static final int EXPIRY_FIELD_NUMBER = 13;
@@ -1345,7 +1179,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
-      return getExpiry();
+      return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1401,7 +1235,7 @@ public final class Scheduler {
       if (expiry_ != null) {
         output.writeMessage(13, getExpiry());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1457,7 +1291,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getExpiry());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1515,7 +1349,7 @@ public final class Scheduler {
         if (!getExpiry()
             .equals(other.getExpiry())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1566,7 +1400,7 @@ public final class Scheduler {
         hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
         hash = (53 * hash) + getExpiry().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1683,75 +1517,59 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.SchedulingJob.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLogsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         jobFunction_ = "";
-
         jobPayload_ = "";
-
         name_ = "";
-
         description_ = "";
-
-        if (scheduleBuilder_ == null) {
-          schedule_ = null;
-        } else {
-          schedule_ = null;
+        schedule_ = null;
+        if (scheduleBuilder_ != null) {
+          scheduleBuilder_.dispose();
           scheduleBuilder_ = null;
         }
         status_ = 0;
-
-        if (nextRunDatetimeBuilder_ == null) {
-          nextRunDatetime_ = null;
-        } else {
-          nextRunDatetime_ = null;
+        nextRunDatetime_ = null;
+        if (nextRunDatetimeBuilder_ != null) {
+          nextRunDatetimeBuilder_.dispose();
           nextRunDatetimeBuilder_ = null;
         }
-        if (lastRunDatetimeBuilder_ == null) {
-          lastRunDatetime_ = null;
-        } else {
-          lastRunDatetime_ = null;
+        lastRunDatetime_ = null;
+        if (lastRunDatetimeBuilder_ != null) {
+          lastRunDatetimeBuilder_.dispose();
           lastRunDatetimeBuilder_ = null;
         }
         if (logsBuilder_ == null) {
           logs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          logs_ = null;
           logsBuilder_.clear();
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-        } else {
-          expiry_ = null;
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
         return this;
@@ -1780,88 +1598,76 @@ public final class Scheduler {
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.SchedulingJob buildPartial() {
         com.passkit.grpc.ct.Scheduler.SchedulingJob result = new com.passkit.grpc.ct.Scheduler.SchedulingJob(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.jobFunction_ = jobFunction_;
-        result.jobPayload_ = jobPayload_;
-        result.name_ = name_;
-        result.description_ = description_;
-        if (scheduleBuilder_ == null) {
-          result.schedule_ = schedule_;
-        } else {
-          result.schedule_ = scheduleBuilder_.build();
-        }
-        result.status_ = status_;
-        if (nextRunDatetimeBuilder_ == null) {
-          result.nextRunDatetime_ = nextRunDatetime_;
-        } else {
-          result.nextRunDatetime_ = nextRunDatetimeBuilder_.build();
-        }
-        if (lastRunDatetimeBuilder_ == null) {
-          result.lastRunDatetime_ = lastRunDatetime_;
-        } else {
-          result.lastRunDatetime_ = lastRunDatetimeBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.ct.Scheduler.SchedulingJob result) {
         if (logsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000200) != 0)) {
             logs_ = java.util.Collections.unmodifiableList(logs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000200);
           }
           result.logs_ = logs_;
         } else {
           result.logs_ = logsBuilder_.build();
         }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
-        if (expiryBuilder_ == null) {
-          result.expiry_ = expiry_;
-        } else {
-          result.expiry_ = expiryBuilder_.build();
-        }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ct.Scheduler.SchedulingJob result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.jobFunction_ = jobFunction_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.jobPayload_ = jobPayload_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.schedule_ = scheduleBuilder_ == null
+              ? schedule_
+              : scheduleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.nextRunDatetime_ = nextRunDatetimeBuilder_ == null
+              ? nextRunDatetime_
+              : nextRunDatetimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.lastRunDatetime_ = lastRunDatetimeBuilder_ == null
+              ? lastRunDatetime_
+              : lastRunDatetimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.expiry_ = expiryBuilder_ == null
+              ? expiry_
+              : expiryBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ct.Scheduler.SchedulingJob) {
@@ -1876,22 +1682,27 @@ public final class Scheduler {
         if (other == com.passkit.grpc.ct.Scheduler.SchedulingJob.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getJobFunction().isEmpty()) {
           jobFunction_ = other.jobFunction_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getJobPayload().isEmpty()) {
           jobPayload_ = other.jobPayload_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.hasSchedule()) {
@@ -1910,7 +1721,7 @@ public final class Scheduler {
           if (!other.logs_.isEmpty()) {
             if (logs_.isEmpty()) {
               logs_ = other.logs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000200);
             } else {
               ensureLogsIsMutable();
               logs_.addAll(other.logs_);
@@ -1923,7 +1734,7 @@ public final class Scheduler {
               logsBuilder_.dispose();
               logsBuilder_ = null;
               logs_ = other.logs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000200);
               logsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLogsFieldBuilder() : null;
@@ -1941,7 +1752,7 @@ public final class Scheduler {
         if (other.hasExpiry()) {
           mergeExpiry(other.getExpiry());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1956,17 +1767,115 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.SchedulingJob parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                jobFunction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                jobPayload_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getScheduleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 66: {
+                input.readMessage(
+                    getNextRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getLastRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                com.passkit.grpc.ct.Scheduler.JobHistory m =
+                    input.readMessage(
+                        com.passkit.grpc.ct.Scheduler.JobHistory.parser(),
+                        extensionRegistry);
+                if (logsBuilder_ == null) {
+                  ensureLogsIsMutable();
+                  logs_.add(m);
+                } else {
+                  logsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getUpdatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.SchedulingJob) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2024,11 +1933,9 @@ public final class Scheduler {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2041,8 +1948,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2057,12 +1964,10 @@ public final class Scheduler {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2123,11 +2028,9 @@ public final class Scheduler {
        */
       public Builder setJobFunction(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         jobFunction_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2141,8 +2044,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearJobFunction() {
-        
         jobFunction_ = getDefaultInstance().getJobFunction();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2158,12 +2061,10 @@ public final class Scheduler {
        */
       public Builder setJobFunctionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         jobFunction_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2221,11 +2122,9 @@ public final class Scheduler {
        */
       public Builder setJobPayload(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         jobPayload_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2238,8 +2137,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearJobPayload() {
-        
         jobPayload_ = getDefaultInstance().getJobPayload();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2254,12 +2153,10 @@ public final class Scheduler {
        */
       public Builder setJobPayloadBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         jobPayload_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2317,11 +2214,9 @@ public final class Scheduler {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2334,8 +2229,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2350,12 +2245,10 @@ public final class Scheduler {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2413,11 +2306,9 @@ public final class Scheduler {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         description_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2430,8 +2321,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        
         description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2446,12 +2337,10 @@ public final class Scheduler {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         description_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2468,7 +2357,7 @@ public final class Scheduler {
        * @return Whether the schedule field is set.
        */
       public boolean hasSchedule() {
-        return scheduleBuilder_ != null || schedule_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -2498,11 +2387,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           schedule_ = value;
-          onChanged();
         } else {
           scheduleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2516,11 +2405,11 @@ public final class Scheduler {
           com.passkit.grpc.ct.Scheduler.Schedule.Builder builderForValue) {
         if (scheduleBuilder_ == null) {
           schedule_ = builderForValue.build();
-          onChanged();
         } else {
           scheduleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2532,17 +2421,18 @@ public final class Scheduler {
        */
       public Builder mergeSchedule(com.passkit.grpc.ct.Scheduler.Schedule value) {
         if (scheduleBuilder_ == null) {
-          if (schedule_ != null) {
-            schedule_ =
-              com.passkit.grpc.ct.Scheduler.Schedule.newBuilder(schedule_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            schedule_ != null &&
+            schedule_ != com.passkit.grpc.ct.Scheduler.Schedule.getDefaultInstance()) {
+            getScheduleBuilder().mergeFrom(value);
           } else {
             schedule_ = value;
           }
-          onChanged();
         } else {
           scheduleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2553,14 +2443,13 @@ public final class Scheduler {
        * <code>.ct.Schedule schedule = 6;</code>
        */
       public Builder clearSchedule() {
-        if (scheduleBuilder_ == null) {
-          schedule_ = null;
-          onChanged();
-        } else {
-          schedule_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        schedule_ = null;
+        if (scheduleBuilder_ != null) {
+          scheduleBuilder_.dispose();
           scheduleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2571,7 +2460,7 @@ public final class Scheduler {
        * <code>.ct.Schedule schedule = 6;</code>
        */
       public com.passkit.grpc.ct.Scheduler.Schedule.Builder getScheduleBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getScheduleFieldBuilder().getBuilder();
       }
@@ -2637,8 +2526,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2654,8 +2543,7 @@ public final class Scheduler {
        */
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.JobStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.valueOf(status_);
+        com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.ct.Scheduler.JobStatus.UNRECOGNIZED : result;
       }
       /**
@@ -2673,7 +2561,7 @@ public final class Scheduler {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000040;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -2689,7 +2577,7 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         status_ = 0;
         onChanged();
         return this;
@@ -2707,7 +2595,7 @@ public final class Scheduler {
        * @return Whether the nextRunDatetime field is set.
        */
       public boolean hasNextRunDatetime() {
-        return nextRunDatetimeBuilder_ != null || nextRunDatetime_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -2737,11 +2625,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           nextRunDatetime_ = value;
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2755,11 +2643,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (nextRunDatetimeBuilder_ == null) {
           nextRunDatetime_ = builderForValue.build();
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2771,17 +2659,18 @@ public final class Scheduler {
        */
       public Builder mergeNextRunDatetime(com.google.protobuf.Timestamp value) {
         if (nextRunDatetimeBuilder_ == null) {
-          if (nextRunDatetime_ != null) {
-            nextRunDatetime_ =
-              com.google.protobuf.Timestamp.newBuilder(nextRunDatetime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            nextRunDatetime_ != null &&
+            nextRunDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getNextRunDatetimeBuilder().mergeFrom(value);
           } else {
             nextRunDatetime_ = value;
           }
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -2792,14 +2681,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp nextRunDatetime = 8;</code>
        */
       public Builder clearNextRunDatetime() {
-        if (nextRunDatetimeBuilder_ == null) {
-          nextRunDatetime_ = null;
-          onChanged();
-        } else {
-          nextRunDatetime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        nextRunDatetime_ = null;
+        if (nextRunDatetimeBuilder_ != null) {
+          nextRunDatetimeBuilder_.dispose();
           nextRunDatetimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2810,7 +2698,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp nextRunDatetime = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getNextRunDatetimeBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getNextRunDatetimeFieldBuilder().getBuilder();
       }
@@ -2862,7 +2750,7 @@ public final class Scheduler {
        * @return Whether the lastRunDatetime field is set.
        */
       public boolean hasLastRunDatetime() {
-        return lastRunDatetimeBuilder_ != null || lastRunDatetime_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <pre>
@@ -2892,11 +2780,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           lastRunDatetime_ = value;
-          onChanged();
         } else {
           lastRunDatetimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2910,11 +2798,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (lastRunDatetimeBuilder_ == null) {
           lastRunDatetime_ = builderForValue.build();
-          onChanged();
         } else {
           lastRunDatetimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2926,17 +2814,18 @@ public final class Scheduler {
        */
       public Builder mergeLastRunDatetime(com.google.protobuf.Timestamp value) {
         if (lastRunDatetimeBuilder_ == null) {
-          if (lastRunDatetime_ != null) {
-            lastRunDatetime_ =
-              com.google.protobuf.Timestamp.newBuilder(lastRunDatetime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            lastRunDatetime_ != null &&
+            lastRunDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getLastRunDatetimeBuilder().mergeFrom(value);
           } else {
             lastRunDatetime_ = value;
           }
-          onChanged();
         } else {
           lastRunDatetimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -2947,14 +2836,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp lastRunDatetime = 9;</code>
        */
       public Builder clearLastRunDatetime() {
-        if (lastRunDatetimeBuilder_ == null) {
-          lastRunDatetime_ = null;
-          onChanged();
-        } else {
-          lastRunDatetime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        lastRunDatetime_ = null;
+        if (lastRunDatetimeBuilder_ != null) {
+          lastRunDatetimeBuilder_.dispose();
           lastRunDatetimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2965,7 +2853,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp lastRunDatetime = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getLastRunDatetimeBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getLastRunDatetimeFieldBuilder().getBuilder();
       }
@@ -3008,9 +2896,9 @@ public final class Scheduler {
       private java.util.List<com.passkit.grpc.ct.Scheduler.JobHistory> logs_ =
         java.util.Collections.emptyList();
       private void ensureLogsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000200) != 0)) {
           logs_ = new java.util.ArrayList<com.passkit.grpc.ct.Scheduler.JobHistory>(logs_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000200;
          }
       }
 
@@ -3204,7 +3092,7 @@ public final class Scheduler {
       public Builder clearLogs() {
         if (logsBuilder_ == null) {
           logs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
         } else {
           logsBuilder_.clear();
@@ -3309,7 +3197,7 @@ public final class Scheduler {
           logsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.ct.Scheduler.JobHistory, com.passkit.grpc.ct.Scheduler.JobHistory.Builder, com.passkit.grpc.ct.Scheduler.JobHistoryOrBuilder>(
                   logs_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000200) != 0),
                   getParentForChildren(),
                   isClean());
           logs_ = null;
@@ -3329,7 +3217,7 @@ public final class Scheduler {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -3359,11 +3247,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3377,11 +3265,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3393,17 +3281,18 @@ public final class Scheduler {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3414,14 +3303,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp created = 11;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3432,7 +3320,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp created = 11;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -3484,7 +3372,7 @@ public final class Scheduler {
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -3514,11 +3402,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3532,11 +3420,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3548,17 +3436,18 @@ public final class Scheduler {
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3569,14 +3458,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp updated = 12;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3587,7 +3475,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp updated = 12;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -3639,7 +3527,7 @@ public final class Scheduler {
        * @return Whether the expiry field is set.
        */
       public boolean hasExpiry() {
-        return expiryBuilder_ != null || expiry_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -3669,11 +3557,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           expiry_ = value;
-          onChanged();
         } else {
           expiryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3687,11 +3575,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryBuilder_ == null) {
           expiry_ = builderForValue.build();
-          onChanged();
         } else {
           expiryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3703,17 +3591,18 @@ public final class Scheduler {
        */
       public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
         if (expiryBuilder_ == null) {
-          if (expiry_ != null) {
-            expiry_ =
-              com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            expiry_ != null &&
+            expiry_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryBuilder().mergeFrom(value);
           } else {
             expiry_ = value;
           }
-          onChanged();
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3724,14 +3613,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp expiry = 13;</code>
        */
       public Builder clearExpiry() {
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-          onChanged();
-        } else {
-          expiry_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3742,7 +3630,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp expiry = 13;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getExpiryFieldBuilder().getBuilder();
       }
@@ -3814,7 +3702,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SchedulingJob(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3961,7 +3860,7 @@ public final class Scheduler {
      */
     com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder();
 
-    public com.passkit.grpc.ct.Scheduler.Schedule.ExpiryCase getExpiryCase();
+    com.passkit.grpc.ct.Scheduler.Schedule.ExpiryCase getExpiryCase();
   }
   /**
    * Protobuf type {@code ct.Schedule}
@@ -3987,94 +3886,6 @@ public final class Scheduler {
       return new Schedule();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Schedule(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              schedule_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              timezone_ = s;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startsAt_ != null) {
-                subBuilder = startsAt_.toBuilder();
-              }
-              startsAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(startsAt_);
-                startsAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 120: {
-              expiry_ = input.readSInt32();
-              expiryCase_ = 15;
-              break;
-            }
-            case 130: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiryCase_ == 16) {
-                subBuilder = ((com.google.protobuf.Timestamp) expiry_).toBuilder();
-              }
-              expiry_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.protobuf.Timestamp) expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-              expiryCase_ = 16;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ct.Scheduler.internal_static_ct_Schedule_descriptor;
@@ -4089,6 +3900,7 @@ public final class Scheduler {
     }
 
     private int expiryCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object expiry_;
     public enum ExpiryCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -4130,7 +3942,8 @@ public final class Scheduler {
     }
 
     public static final int SCHEDULE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object schedule_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object schedule_ = "";
     /**
      * <pre>
      * Crontab schedule expression. e.g. '0 * * * *', '&#64;hourly'
@@ -4184,7 +3997,8 @@ public final class Scheduler {
     }
 
     public static final int TIMEZONE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object timezone_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object timezone_ = "";
     /**
      * <pre>
      * Iana timezone. Default is UTC.
@@ -4264,7 +4078,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartsAtOrBuilder() {
-      return getStartsAt();
+      return startsAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startsAt_;
     }
 
     public static final int REPEATCOUNT_FIELD_NUMBER = 15;
@@ -4371,7 +4185,7 @@ public final class Scheduler {
       if (expiryCase_ == 16) {
         output.writeMessage(16, (com.google.protobuf.Timestamp) expiry_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4399,7 +4213,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, (com.google.protobuf.Timestamp) expiry_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4436,7 +4250,7 @@ public final class Scheduler {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4467,7 +4281,7 @@ public final class Scheduler {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4584,31 +4398,27 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.Schedule.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         schedule_ = "";
-
         timezone_ = "";
-
-        if (startsAtBuilder_ == null) {
-          startsAt_ = null;
-        } else {
-          startsAt_ = null;
+        startsAt_ = null;
+        if (startsAtBuilder_ != null) {
+          startsAtBuilder_.dispose();
           startsAtBuilder_ = null;
+        }
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.clear();
         }
         expiryCase_ = 0;
         expiry_ = null;
@@ -4638,60 +4448,36 @@ public final class Scheduler {
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.Schedule buildPartial() {
         com.passkit.grpc.ct.Scheduler.Schedule result = new com.passkit.grpc.ct.Scheduler.Schedule(this);
-        result.schedule_ = schedule_;
-        result.timezone_ = timezone_;
-        if (startsAtBuilder_ == null) {
-          result.startsAt_ = startsAt_;
-        } else {
-          result.startsAt_ = startsAtBuilder_.build();
-        }
-        if (expiryCase_ == 15) {
-          result.expiry_ = expiry_;
-        }
-        if (expiryCase_ == 16) {
-          if (expiryDateBuilder_ == null) {
-            result.expiry_ = expiry_;
-          } else {
-            result.expiry_ = expiryDateBuilder_.build();
-          }
-        }
-        result.expiryCase_ = expiryCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ct.Scheduler.Schedule result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.schedule_ = schedule_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.timezone_ = timezone_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startsAt_ = startsAtBuilder_ == null
+              ? startsAt_
+              : startsAtBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.ct.Scheduler.Schedule result) {
+        result.expiryCase_ = expiryCase_;
+        result.expiry_ = this.expiry_;
+        if (expiryCase_ == 16 &&
+            expiryDateBuilder_ != null) {
+          result.expiry_ = expiryDateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ct.Scheduler.Schedule) {
@@ -4706,10 +4492,12 @@ public final class Scheduler {
         if (other == com.passkit.grpc.ct.Scheduler.Schedule.getDefaultInstance()) return this;
         if (!other.getSchedule().isEmpty()) {
           schedule_ = other.schedule_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTimezone().isEmpty()) {
           timezone_ = other.timezone_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasStartsAt()) {
@@ -4728,7 +4516,7 @@ public final class Scheduler {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4743,17 +4531,59 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.Schedule parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                schedule_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                timezone_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStartsAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 120: {
+                expiry_ = input.readSInt32();
+                expiryCase_ = 15;
+                break;
+              } // case 120
+              case 130: {
+                input.readMessage(
+                    getExpiryDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                expiryCase_ = 16;
+                break;
+              } // case 130
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.Schedule) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int expiryCase_ = 0;
@@ -4771,6 +4601,7 @@ public final class Scheduler {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object schedule_ = "";
       /**
@@ -4837,11 +4668,9 @@ public final class Scheduler {
        */
       public Builder setSchedule(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         schedule_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4858,8 +4687,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearSchedule() {
-        
         schedule_ = getDefaultInstance().getSchedule();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4878,12 +4707,10 @@ public final class Scheduler {
        */
       public Builder setScheduleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         schedule_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4941,11 +4768,9 @@ public final class Scheduler {
        */
       public Builder setTimezone(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         timezone_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4958,8 +4783,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearTimezone() {
-        
         timezone_ = getDefaultInstance().getTimezone();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4974,12 +4799,10 @@ public final class Scheduler {
        */
       public Builder setTimezoneBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         timezone_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4996,7 +4819,7 @@ public final class Scheduler {
        * @return Whether the startsAt field is set.
        */
       public boolean hasStartsAt() {
-        return startsAtBuilder_ != null || startsAt_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -5026,11 +4849,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           startsAt_ = value;
-          onChanged();
         } else {
           startsAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5044,11 +4867,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (startsAtBuilder_ == null) {
           startsAt_ = builderForValue.build();
-          onChanged();
         } else {
           startsAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5060,17 +4883,18 @@ public final class Scheduler {
        */
       public Builder mergeStartsAt(com.google.protobuf.Timestamp value) {
         if (startsAtBuilder_ == null) {
-          if (startsAt_ != null) {
-            startsAt_ =
-              com.google.protobuf.Timestamp.newBuilder(startsAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            startsAt_ != null &&
+            startsAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartsAtBuilder().mergeFrom(value);
           } else {
             startsAt_ = value;
           }
-          onChanged();
         } else {
           startsAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5081,14 +4905,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp startsAt = 3;</code>
        */
       public Builder clearStartsAt() {
-        if (startsAtBuilder_ == null) {
-          startsAt_ = null;
-          onChanged();
-        } else {
-          startsAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startsAt_ = null;
+        if (startsAtBuilder_ != null) {
+          startsAtBuilder_.dispose();
           startsAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5099,7 +4922,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp startsAt = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartsAtBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getStartsAtFieldBuilder().getBuilder();
       }
@@ -5177,6 +5000,7 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder setRepeatCount(int value) {
+
         expiryCase_ = 15;
         expiry_ = value;
         onChanged();
@@ -5374,7 +5198,7 @@ public final class Scheduler {
           expiry_ = null;
         }
         expiryCase_ = 16;
-        onChanged();;
+        onChanged();
         return expiryDateBuilder_;
       }
       @java.lang.Override
@@ -5410,7 +5234,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Schedule(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5551,88 +5386,6 @@ public final class Scheduler {
       return new SchedulingJobResponse();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SchedulingJobResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (nextRunDatetime_ != null) {
-                subBuilder = nextRunDatetime_.toBuilder();
-              }
-              nextRunDatetime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nextRunDatetime_);
-                nextRunDatetime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ct.Scheduler.internal_static_ct_SchedulingJobResponse_descriptor;
@@ -5647,7 +5400,8 @@ public final class Scheduler {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Auto generated 22 char identifier. Read only.
@@ -5693,7 +5447,7 @@ public final class Scheduler {
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Job status. Writable values are JOB_STATUS_READY and JOB_STATUS_PAUSED only.
@@ -5714,8 +5468,7 @@ public final class Scheduler {
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.ct.Scheduler.JobStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.valueOf(status_);
+      com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.ct.Scheduler.JobStatus.UNRECOGNIZED : result;
     }
 
@@ -5754,7 +5507,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getNextRunDatetimeOrBuilder() {
-      return getNextRunDatetime();
+      return nextRunDatetime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : nextRunDatetime_;
     }
 
     public static final int EXPIRY_FIELD_NUMBER = 4;
@@ -5792,7 +5545,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
-      return getExpiry();
+      return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5821,7 +5574,7 @@ public final class Scheduler {
       if (expiry_ != null) {
         output.writeMessage(4, getExpiry());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5845,7 +5598,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getExpiry());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5873,7 +5626,7 @@ public final class Scheduler {
         if (!getExpiry()
             .equals(other.getExpiry())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5896,7 +5649,7 @@ public final class Scheduler {
         hash = (37 * hash) + EXPIRY_FIELD_NUMBER;
         hash = (53 * hash) + getExpiry().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6013,36 +5766,28 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         status_ = 0;
-
-        if (nextRunDatetimeBuilder_ == null) {
-          nextRunDatetime_ = null;
-        } else {
-          nextRunDatetime_ = null;
+        nextRunDatetime_ = null;
+        if (nextRunDatetimeBuilder_ != null) {
+          nextRunDatetimeBuilder_.dispose();
           nextRunDatetimeBuilder_ = null;
         }
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-        } else {
-          expiry_ = null;
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
         return this;
@@ -6071,54 +5816,31 @@ public final class Scheduler {
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse buildPartial() {
         com.passkit.grpc.ct.Scheduler.SchedulingJobResponse result = new com.passkit.grpc.ct.Scheduler.SchedulingJobResponse(this);
-        result.id_ = id_;
-        result.status_ = status_;
-        if (nextRunDatetimeBuilder_ == null) {
-          result.nextRunDatetime_ = nextRunDatetime_;
-        } else {
-          result.nextRunDatetime_ = nextRunDatetimeBuilder_.build();
-        }
-        if (expiryBuilder_ == null) {
-          result.expiry_ = expiry_;
-        } else {
-          result.expiry_ = expiryBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ct.Scheduler.SchedulingJobResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.nextRunDatetime_ = nextRunDatetimeBuilder_ == null
+              ? nextRunDatetime_
+              : nextRunDatetimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.expiry_ = expiryBuilder_ == null
+              ? expiry_
+              : expiryBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ct.Scheduler.SchedulingJobResponse) {
@@ -6133,6 +5855,7 @@ public final class Scheduler {
         if (other == com.passkit.grpc.ct.Scheduler.SchedulingJobResponse.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.status_ != 0) {
@@ -6144,7 +5867,7 @@ public final class Scheduler {
         if (other.hasExpiry()) {
           mergeExpiry(other.getExpiry());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6159,19 +5882,57 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.SchedulingJobResponse parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getNextRunDatetimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.SchedulingJobResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -6226,11 +5987,9 @@ public final class Scheduler {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6243,8 +6002,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6259,12 +6018,10 @@ public final class Scheduler {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6291,8 +6048,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6306,8 +6063,7 @@ public final class Scheduler {
        */
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.JobStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.valueOf(status_);
+        com.passkit.grpc.ct.Scheduler.JobStatus result = com.passkit.grpc.ct.Scheduler.JobStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.ct.Scheduler.JobStatus.UNRECOGNIZED : result;
       }
       /**
@@ -6323,7 +6079,7 @@ public final class Scheduler {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -6337,7 +6093,7 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0;
         onChanged();
         return this;
@@ -6355,7 +6111,7 @@ public final class Scheduler {
        * @return Whether the nextRunDatetime field is set.
        */
       public boolean hasNextRunDatetime() {
-        return nextRunDatetimeBuilder_ != null || nextRunDatetime_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -6385,11 +6141,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           nextRunDatetime_ = value;
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6403,11 +6159,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (nextRunDatetimeBuilder_ == null) {
           nextRunDatetime_ = builderForValue.build();
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6419,17 +6175,18 @@ public final class Scheduler {
        */
       public Builder mergeNextRunDatetime(com.google.protobuf.Timestamp value) {
         if (nextRunDatetimeBuilder_ == null) {
-          if (nextRunDatetime_ != null) {
-            nextRunDatetime_ =
-              com.google.protobuf.Timestamp.newBuilder(nextRunDatetime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            nextRunDatetime_ != null &&
+            nextRunDatetime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getNextRunDatetimeBuilder().mergeFrom(value);
           } else {
             nextRunDatetime_ = value;
           }
-          onChanged();
         } else {
           nextRunDatetimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -6440,14 +6197,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp nextRunDatetime = 3;</code>
        */
       public Builder clearNextRunDatetime() {
-        if (nextRunDatetimeBuilder_ == null) {
-          nextRunDatetime_ = null;
-          onChanged();
-        } else {
-          nextRunDatetime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        nextRunDatetime_ = null;
+        if (nextRunDatetimeBuilder_ != null) {
+          nextRunDatetimeBuilder_.dispose();
           nextRunDatetimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6458,7 +6214,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp nextRunDatetime = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getNextRunDatetimeBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getNextRunDatetimeFieldBuilder().getBuilder();
       }
@@ -6510,7 +6266,7 @@ public final class Scheduler {
        * @return Whether the expiry field is set.
        */
       public boolean hasExpiry() {
-        return expiryBuilder_ != null || expiry_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -6540,11 +6296,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           expiry_ = value;
-          onChanged();
         } else {
           expiryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6558,11 +6314,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryBuilder_ == null) {
           expiry_ = builderForValue.build();
-          onChanged();
         } else {
           expiryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6574,17 +6330,18 @@ public final class Scheduler {
        */
       public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
         if (expiryBuilder_ == null) {
-          if (expiry_ != null) {
-            expiry_ =
-              com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            expiry_ != null &&
+            expiry_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryBuilder().mergeFrom(value);
           } else {
             expiry_ = value;
           }
-          onChanged();
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6595,14 +6352,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp expiry = 4;</code>
        */
       public Builder clearExpiry() {
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-          onChanged();
-        } else {
-          expiry_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -6613,7 +6369,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp expiry = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getExpiryFieldBuilder().getBuilder();
       }
@@ -6685,7 +6441,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SchedulingJobResponse(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6868,104 +6635,6 @@ public final class Scheduler {
       return new JobHistory();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private JobHistory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              jobId_ = s;
-              break;
-            }
-            case 24: {
-
-              success_ = input.readBool();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              log_ = s;
-              break;
-            }
-            case 40: {
-
-              statusCode_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (scheduledRunDateTime_ != null) {
-                subBuilder = scheduledRunDateTime_.toBuilder();
-              }
-              scheduledRunDateTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(scheduledRunDateTime_);
-                scheduledRunDateTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (completedAt_ != null) {
-                subBuilder = completedAt_.toBuilder();
-              }
-              completedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(completedAt_);
-                completedAt_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.ct.Scheduler.internal_static_ct_JobHistory_descriptor;
@@ -6980,7 +6649,8 @@ public final class Scheduler {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Job history id.
@@ -7026,7 +6696,8 @@ public final class Scheduler {
     }
 
     public static final int JOBID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object jobId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object jobId_ = "";
     /**
      * <pre>
      * Job ID.
@@ -7072,7 +6743,7 @@ public final class Scheduler {
     }
 
     public static final int SUCCESS_FIELD_NUMBER = 3;
-    private boolean success_;
+    private boolean success_ = false;
     /**
      * <pre>
      * True if the job has succeeded. False if the job has failed.
@@ -7087,7 +6758,8 @@ public final class Scheduler {
     }
 
     public static final int LOG_FIELD_NUMBER = 4;
-    private volatile java.lang.Object log_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object log_ = "";
     /**
      * <pre>
      * The job output log.
@@ -7133,7 +6805,7 @@ public final class Scheduler {
     }
 
     public static final int STATUSCODE_FIELD_NUMBER = 5;
-    private int statusCode_;
+    private int statusCode_ = 0;
     /**
      * <pre>
      * The status code.
@@ -7182,7 +6854,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getScheduledRunDateTimeOrBuilder() {
-      return getScheduledRunDateTime();
+      return scheduledRunDateTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduledRunDateTime_;
     }
 
     public static final int COMPLETEDAT_FIELD_NUMBER = 7;
@@ -7220,7 +6892,7 @@ public final class Scheduler {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder() {
-      return getCompletedAt();
+      return completedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : completedAt_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7258,7 +6930,7 @@ public final class Scheduler {
       if (completedAt_ != null) {
         output.writeMessage(7, getCompletedAt());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7292,7 +6964,7 @@ public final class Scheduler {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCompletedAt());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7327,7 +6999,7 @@ public final class Scheduler {
         if (!getCompletedAt()
             .equals(other.getCompletedAt())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7357,7 +7029,7 @@ public final class Scheduler {
         hash = (37 * hash) + COMPLETEDAT_FIELD_NUMBER;
         hash = (53 * hash) + getCompletedAt().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7474,42 +7146,31 @@ public final class Scheduler {
 
       // Construct using com.passkit.grpc.ct.Scheduler.JobHistory.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         jobId_ = "";
-
         success_ = false;
-
         log_ = "";
-
         statusCode_ = 0;
-
-        if (scheduledRunDateTimeBuilder_ == null) {
-          scheduledRunDateTime_ = null;
-        } else {
-          scheduledRunDateTime_ = null;
+        scheduledRunDateTime_ = null;
+        if (scheduledRunDateTimeBuilder_ != null) {
+          scheduledRunDateTimeBuilder_.dispose();
           scheduledRunDateTimeBuilder_ = null;
         }
-        if (completedAtBuilder_ == null) {
-          completedAt_ = null;
-        } else {
-          completedAt_ = null;
+        completedAt_ = null;
+        if (completedAtBuilder_ != null) {
+          completedAtBuilder_.dispose();
           completedAtBuilder_ = null;
         }
         return this;
@@ -7538,57 +7199,40 @@ public final class Scheduler {
       @java.lang.Override
       public com.passkit.grpc.ct.Scheduler.JobHistory buildPartial() {
         com.passkit.grpc.ct.Scheduler.JobHistory result = new com.passkit.grpc.ct.Scheduler.JobHistory(this);
-        result.id_ = id_;
-        result.jobId_ = jobId_;
-        result.success_ = success_;
-        result.log_ = log_;
-        result.statusCode_ = statusCode_;
-        if (scheduledRunDateTimeBuilder_ == null) {
-          result.scheduledRunDateTime_ = scheduledRunDateTime_;
-        } else {
-          result.scheduledRunDateTime_ = scheduledRunDateTimeBuilder_.build();
-        }
-        if (completedAtBuilder_ == null) {
-          result.completedAt_ = completedAt_;
-        } else {
-          result.completedAt_ = completedAtBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.ct.Scheduler.JobHistory result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.jobId_ = jobId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.success_ = success_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.log_ = log_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.statusCode_ = statusCode_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.scheduledRunDateTime_ = scheduledRunDateTimeBuilder_ == null
+              ? scheduledRunDateTime_
+              : scheduledRunDateTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.completedAt_ = completedAtBuilder_ == null
+              ? completedAt_
+              : completedAtBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.ct.Scheduler.JobHistory) {
@@ -7603,10 +7247,12 @@ public final class Scheduler {
         if (other == com.passkit.grpc.ct.Scheduler.JobHistory.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getJobId().isEmpty()) {
           jobId_ = other.jobId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getSuccess() != false) {
@@ -7614,6 +7260,7 @@ public final class Scheduler {
         }
         if (!other.getLog().isEmpty()) {
           log_ = other.log_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getStatusCode() != 0) {
@@ -7625,7 +7272,7 @@ public final class Scheduler {
         if (other.hasCompletedAt()) {
           mergeCompletedAt(other.getCompletedAt());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7640,19 +7287,72 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.ct.Scheduler.JobHistory parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                jobId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                success_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                log_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                statusCode_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                input.readMessage(
+                    getScheduledRunDateTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getCompletedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.ct.Scheduler.JobHistory) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -7707,11 +7407,9 @@ public final class Scheduler {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7724,8 +7422,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7740,12 +7438,10 @@ public final class Scheduler {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7803,11 +7499,9 @@ public final class Scheduler {
        */
       public Builder setJobId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         jobId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7820,8 +7514,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearJobId() {
-        
         jobId_ = getDefaultInstance().getJobId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -7836,12 +7530,10 @@ public final class Scheduler {
        */
       public Builder setJobIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         jobId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7869,8 +7561,9 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder setSuccess(boolean value) {
-        
+
         success_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -7883,7 +7576,7 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearSuccess() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         success_ = false;
         onChanged();
         return this;
@@ -7942,11 +7635,9 @@ public final class Scheduler {
        */
       public Builder setLog(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         log_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -7959,8 +7650,8 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearLog() {
-        
         log_ = getDefaultInstance().getLog();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -7975,12 +7666,10 @@ public final class Scheduler {
        */
       public Builder setLogBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         log_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -8008,8 +7697,9 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder setStatusCode(int value) {
-        
+
         statusCode_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -8022,7 +7712,7 @@ public final class Scheduler {
        * @return This builder for chaining.
        */
       public Builder clearStatusCode() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         statusCode_ = 0;
         onChanged();
         return this;
@@ -8040,7 +7730,7 @@ public final class Scheduler {
        * @return Whether the scheduledRunDateTime field is set.
        */
       public boolean hasScheduledRunDateTime() {
-        return scheduledRunDateTimeBuilder_ != null || scheduledRunDateTime_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -8070,11 +7760,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           scheduledRunDateTime_ = value;
-          onChanged();
         } else {
           scheduledRunDateTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8088,11 +7778,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (scheduledRunDateTimeBuilder_ == null) {
           scheduledRunDateTime_ = builderForValue.build();
-          onChanged();
         } else {
           scheduledRunDateTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8104,17 +7794,18 @@ public final class Scheduler {
        */
       public Builder mergeScheduledRunDateTime(com.google.protobuf.Timestamp value) {
         if (scheduledRunDateTimeBuilder_ == null) {
-          if (scheduledRunDateTime_ != null) {
-            scheduledRunDateTime_ =
-              com.google.protobuf.Timestamp.newBuilder(scheduledRunDateTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            scheduledRunDateTime_ != null &&
+            scheduledRunDateTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getScheduledRunDateTimeBuilder().mergeFrom(value);
           } else {
             scheduledRunDateTime_ = value;
           }
-          onChanged();
         } else {
           scheduledRunDateTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -8125,14 +7816,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp scheduledRunDateTime = 6;</code>
        */
       public Builder clearScheduledRunDateTime() {
-        if (scheduledRunDateTimeBuilder_ == null) {
-          scheduledRunDateTime_ = null;
-          onChanged();
-        } else {
-          scheduledRunDateTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        scheduledRunDateTime_ = null;
+        if (scheduledRunDateTimeBuilder_ != null) {
+          scheduledRunDateTimeBuilder_.dispose();
           scheduledRunDateTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8143,7 +7833,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp scheduledRunDateTime = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getScheduledRunDateTimeBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getScheduledRunDateTimeFieldBuilder().getBuilder();
       }
@@ -8195,7 +7885,7 @@ public final class Scheduler {
        * @return Whether the completedAt field is set.
        */
       public boolean hasCompletedAt() {
-        return completedAtBuilder_ != null || completedAt_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -8225,11 +7915,11 @@ public final class Scheduler {
             throw new NullPointerException();
           }
           completedAt_ = value;
-          onChanged();
         } else {
           completedAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -8243,11 +7933,11 @@ public final class Scheduler {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (completedAtBuilder_ == null) {
           completedAt_ = builderForValue.build();
-          onChanged();
         } else {
           completedAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -8259,17 +7949,18 @@ public final class Scheduler {
        */
       public Builder mergeCompletedAt(com.google.protobuf.Timestamp value) {
         if (completedAtBuilder_ == null) {
-          if (completedAt_ != null) {
-            completedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(completedAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            completedAt_ != null &&
+            completedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCompletedAtBuilder().mergeFrom(value);
           } else {
             completedAt_ = value;
           }
-          onChanged();
         } else {
           completedAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -8280,14 +7971,13 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp completedAt = 7;</code>
        */
       public Builder clearCompletedAt() {
-        if (completedAtBuilder_ == null) {
-          completedAt_ = null;
-          onChanged();
-        } else {
-          completedAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        completedAt_ = null;
+        if (completedAtBuilder_ != null) {
+          completedAtBuilder_.dispose();
           completedAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8298,7 +7988,7 @@ public final class Scheduler {
        * <code>.google.protobuf.Timestamp completedAt = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCompletedAtBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCompletedAtFieldBuilder().getBuilder();
       }
@@ -8370,7 +8060,18 @@ public final class Scheduler {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new JobHistory(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

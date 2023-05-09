@@ -154,117 +154,6 @@ public final class Certificate {
       return new CertificateData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CertificateData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              passTypeId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              teamId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              teamName_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serialNumber_ = s;
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (validFrom_ != null) {
-                subBuilder = validFrom_.toBuilder();
-              }
-              validFrom_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(validFrom_);
-                validFrom_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (validTo_ != null) {
-                subBuilder = validTo_.toBuilder();
-              }
-              validTo_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(validTo_);
-                validTo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modulus_ = s;
-              break;
-            }
-            case 64: {
-
-              nfcCapable_ = input.readBool();
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ownerUsername_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_CertificateData_descriptor;
@@ -279,7 +168,8 @@ public final class Certificate {
     }
 
     public static final int PASSTYPEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object passTypeId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeId_ = "";
     /**
      * <code>string passTypeId = 1;</code>
      * @return The passTypeId.
@@ -317,7 +207,8 @@ public final class Certificate {
     }
 
     public static final int TEAMID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object teamId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object teamId_ = "";
     /**
      * <code>string teamId = 2;</code>
      * @return The teamId.
@@ -355,7 +246,8 @@ public final class Certificate {
     }
 
     public static final int TEAMNAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object teamName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object teamName_ = "";
     /**
      * <code>string teamName = 3;</code>
      * @return The teamName.
@@ -393,7 +285,8 @@ public final class Certificate {
     }
 
     public static final int SERIALNUMBER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object serialNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serialNumber_ = "";
     /**
      * <code>string serialNumber = 4;</code>
      * @return The serialNumber.
@@ -453,7 +346,7 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getValidFromOrBuilder() {
-      return getValidFrom();
+      return validFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validFrom_;
     }
 
     public static final int VALIDTO_FIELD_NUMBER = 6;
@@ -479,11 +372,12 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getValidToOrBuilder() {
-      return getValidTo();
+      return validTo_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validTo_;
     }
 
     public static final int MODULUS_FIELD_NUMBER = 7;
-    private volatile java.lang.Object modulus_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modulus_ = "";
     /**
      * <code>string modulus = 7;</code>
      * @return The modulus.
@@ -521,7 +415,7 @@ public final class Certificate {
     }
 
     public static final int NFCCAPABLE_FIELD_NUMBER = 8;
-    private boolean nfcCapable_;
+    private boolean nfcCapable_ = false;
     /**
      * <code>bool nfcCapable = 8;</code>
      * @return The nfcCapable.
@@ -532,7 +426,8 @@ public final class Certificate {
     }
 
     public static final int OWNERUSERNAME_FIELD_NUMBER = 9;
-    private volatile java.lang.Object ownerUsername_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerUsername_ = "";
     /**
      * <code>string ownerUsername = 9;</code>
      * @return The ownerUsername.
@@ -610,7 +505,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, ownerUsername_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -649,7 +544,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, ownerUsername_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -688,7 +583,7 @@ public final class Certificate {
           != other.getNfcCapable()) return false;
       if (!getOwnerUsername()
           .equals(other.getOwnerUsername())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -722,7 +617,7 @@ public final class Certificate {
           getNfcCapable());
       hash = (37 * hash) + OWNERUSERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getOwnerUsername().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -839,48 +734,35 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.CertificateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         passTypeId_ = "";
-
         teamId_ = "";
-
         teamName_ = "";
-
         serialNumber_ = "";
-
-        if (validFromBuilder_ == null) {
-          validFrom_ = null;
-        } else {
-          validFrom_ = null;
+        validFrom_ = null;
+        if (validFromBuilder_ != null) {
+          validFromBuilder_.dispose();
           validFromBuilder_ = null;
         }
-        if (validToBuilder_ == null) {
-          validTo_ = null;
-        } else {
-          validTo_ = null;
+        validTo_ = null;
+        if (validToBuilder_ != null) {
+          validToBuilder_.dispose();
           validToBuilder_ = null;
         }
         modulus_ = "";
-
         nfcCapable_ = false;
-
         ownerUsername_ = "";
-
         return this;
       }
 
@@ -907,59 +789,46 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.CertificateData buildPartial() {
         com.passkit.grpc.Certificate.CertificateData result = new com.passkit.grpc.Certificate.CertificateData(this);
-        result.passTypeId_ = passTypeId_;
-        result.teamId_ = teamId_;
-        result.teamName_ = teamName_;
-        result.serialNumber_ = serialNumber_;
-        if (validFromBuilder_ == null) {
-          result.validFrom_ = validFrom_;
-        } else {
-          result.validFrom_ = validFromBuilder_.build();
-        }
-        if (validToBuilder_ == null) {
-          result.validTo_ = validTo_;
-        } else {
-          result.validTo_ = validToBuilder_.build();
-        }
-        result.modulus_ = modulus_;
-        result.nfcCapable_ = nfcCapable_;
-        result.ownerUsername_ = ownerUsername_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.CertificateData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.passTypeId_ = passTypeId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.teamId_ = teamId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.teamName_ = teamName_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.serialNumber_ = serialNumber_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.validFrom_ = validFromBuilder_ == null
+              ? validFrom_
+              : validFromBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.validTo_ = validToBuilder_ == null
+              ? validTo_
+              : validToBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.modulus_ = modulus_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.nfcCapable_ = nfcCapable_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.ownerUsername_ = ownerUsername_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.CertificateData) {
@@ -974,18 +843,22 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.CertificateData.getDefaultInstance()) return this;
         if (!other.getPassTypeId().isEmpty()) {
           passTypeId_ = other.passTypeId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTeamId().isEmpty()) {
           teamId_ = other.teamId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getTeamName().isEmpty()) {
           teamName_ = other.teamName_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getSerialNumber().isEmpty()) {
           serialNumber_ = other.serialNumber_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasValidFrom()) {
@@ -996,6 +869,7 @@ public final class Certificate {
         }
         if (!other.getModulus().isEmpty()) {
           modulus_ = other.modulus_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.getNfcCapable() != false) {
@@ -1003,9 +877,10 @@ public final class Certificate {
         }
         if (!other.getOwnerUsername().isEmpty()) {
           ownerUsername_ = other.ownerUsername_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1020,19 +895,82 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.CertificateData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                passTypeId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                teamId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                teamName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                serialNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getValidFromFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getValidToFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                modulus_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                nfcCapable_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                ownerUsername_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.CertificateData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object passTypeId_ = "";
       /**
@@ -1075,11 +1013,9 @@ public final class Certificate {
        */
       public Builder setPassTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1088,8 +1024,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeId() {
-        
         passTypeId_ = getDefaultInstance().getPassTypeId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1100,12 +1036,10 @@ public final class Certificate {
        */
       public Builder setPassTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1151,11 +1085,9 @@ public final class Certificate {
        */
       public Builder setTeamId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         teamId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1164,8 +1096,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearTeamId() {
-        
         teamId_ = getDefaultInstance().getTeamId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1176,12 +1108,10 @@ public final class Certificate {
        */
       public Builder setTeamIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         teamId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1227,11 +1157,9 @@ public final class Certificate {
        */
       public Builder setTeamName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         teamName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1240,8 +1168,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearTeamName() {
-        
         teamName_ = getDefaultInstance().getTeamName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1252,12 +1180,10 @@ public final class Certificate {
        */
       public Builder setTeamNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         teamName_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1303,11 +1229,9 @@ public final class Certificate {
        */
       public Builder setSerialNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         serialNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1316,8 +1240,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearSerialNumber() {
-        
         serialNumber_ = getDefaultInstance().getSerialNumber();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1328,12 +1252,10 @@ public final class Certificate {
        */
       public Builder setSerialNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         serialNumber_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1346,7 +1268,7 @@ public final class Certificate {
        * @return Whether the validFrom field is set.
        */
       public boolean hasValidFrom() {
-        return validFromBuilder_ != null || validFrom_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 5;</code>
@@ -1368,11 +1290,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           validFrom_ = value;
-          onChanged();
         } else {
           validFromBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1382,11 +1304,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (validFromBuilder_ == null) {
           validFrom_ = builderForValue.build();
-          onChanged();
         } else {
           validFromBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1394,38 +1316,38 @@ public final class Certificate {
        */
       public Builder mergeValidFrom(com.google.protobuf.Timestamp value) {
         if (validFromBuilder_ == null) {
-          if (validFrom_ != null) {
-            validFrom_ =
-              com.google.protobuf.Timestamp.newBuilder(validFrom_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            validFrom_ != null &&
+            validFrom_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getValidFromBuilder().mergeFrom(value);
           } else {
             validFrom_ = value;
           }
-          onChanged();
         } else {
           validFromBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 5;</code>
        */
       public Builder clearValidFrom() {
-        if (validFromBuilder_ == null) {
-          validFrom_ = null;
-          onChanged();
-        } else {
-          validFrom_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        validFrom_ = null;
+        if (validFromBuilder_ != null) {
+          validFromBuilder_.dispose();
           validFromBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getValidFromBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getValidFromFieldBuilder().getBuilder();
       }
@@ -1465,7 +1387,7 @@ public final class Certificate {
        * @return Whether the validTo field is set.
        */
       public boolean hasValidTo() {
-        return validToBuilder_ != null || validTo_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 6;</code>
@@ -1487,11 +1409,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           validTo_ = value;
-          onChanged();
         } else {
           validToBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1501,11 +1423,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (validToBuilder_ == null) {
           validTo_ = builderForValue.build();
-          onChanged();
         } else {
           validToBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1513,38 +1435,38 @@ public final class Certificate {
        */
       public Builder mergeValidTo(com.google.protobuf.Timestamp value) {
         if (validToBuilder_ == null) {
-          if (validTo_ != null) {
-            validTo_ =
-              com.google.protobuf.Timestamp.newBuilder(validTo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            validTo_ != null &&
+            validTo_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getValidToBuilder().mergeFrom(value);
           } else {
             validTo_ = value;
           }
-          onChanged();
         } else {
           validToBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 6;</code>
        */
       public Builder clearValidTo() {
-        if (validToBuilder_ == null) {
-          validTo_ = null;
-          onChanged();
-        } else {
-          validTo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        validTo_ = null;
+        if (validToBuilder_ != null) {
+          validToBuilder_.dispose();
           validToBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getValidToBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getValidToFieldBuilder().getBuilder();
       }
@@ -1617,11 +1539,9 @@ public final class Certificate {
        */
       public Builder setModulus(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modulus_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1630,8 +1550,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearModulus() {
-        
         modulus_ = getDefaultInstance().getModulus();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1642,12 +1562,10 @@ public final class Certificate {
        */
       public Builder setModulusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modulus_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1667,8 +1585,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder setNfcCapable(boolean value) {
-        
+
         nfcCapable_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1677,7 +1596,7 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearNfcCapable() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         nfcCapable_ = false;
         onChanged();
         return this;
@@ -1724,11 +1643,9 @@ public final class Certificate {
        */
       public Builder setOwnerUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ownerUsername_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1737,8 +1654,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearOwnerUsername() {
-        
         ownerUsername_ = getDefaultInstance().getOwnerUsername();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -1749,12 +1666,10 @@ public final class Certificate {
        */
       public Builder setOwnerUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ownerUsername_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1791,7 +1706,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CertificateData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1885,80 +1811,6 @@ public final class Certificate {
       return new PrivateKeyRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PrivateKeyRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-
-              privateKey_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_PrivateKeyRequest_descriptor;
@@ -1973,7 +1825,8 @@ public final class Certificate {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1;</code>
      * @return The name.
@@ -2011,7 +1864,8 @@ public final class Certificate {
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object description_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
     /**
      * <code>string description = 2;</code>
      * @return The description.
@@ -2071,11 +1925,11 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
-      return getExpiry();
+      return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
     }
 
     public static final int PRIVATEKEY_FIELD_NUMBER = 4;
-    private com.google.protobuf.ByteString privateKey_;
+    private com.google.protobuf.ByteString privateKey_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes privateKey = 4;</code>
      * @return The privateKey.
@@ -2111,7 +1965,7 @@ public final class Certificate {
       if (!privateKey_.isEmpty()) {
         output.writeBytes(4, privateKey_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2134,7 +1988,7 @@ public final class Certificate {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(4, privateKey_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2160,7 +2014,7 @@ public final class Certificate {
       }
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2181,7 +2035,7 @@ public final class Certificate {
       }
       hash = (37 * hash) + PRIVATEKEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2298,34 +2152,26 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.PrivateKeyRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         description_ = "";
-
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-        } else {
-          expiry_ = null;
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
         privateKey_ = com.google.protobuf.ByteString.EMPTY;
-
         return this;
       }
 
@@ -2352,50 +2198,29 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.PrivateKeyRequest buildPartial() {
         com.passkit.grpc.Certificate.PrivateKeyRequest result = new com.passkit.grpc.Certificate.PrivateKeyRequest(this);
-        result.name_ = name_;
-        result.description_ = description_;
-        if (expiryBuilder_ == null) {
-          result.expiry_ = expiry_;
-        } else {
-          result.expiry_ = expiryBuilder_.build();
-        }
-        result.privateKey_ = privateKey_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.PrivateKeyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.expiry_ = expiryBuilder_ == null
+              ? expiry_
+              : expiryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.privateKey_ = privateKey_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.PrivateKeyRequest) {
@@ -2410,10 +2235,12 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.PrivateKeyRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasExpiry()) {
@@ -2422,7 +2249,7 @@ public final class Certificate {
         if (other.getPrivateKey() != com.google.protobuf.ByteString.EMPTY) {
           setPrivateKey(other.getPrivateKey());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2437,19 +2264,55 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.PrivateKeyRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                privateKey_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.PrivateKeyRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -2492,11 +2355,9 @@ public final class Certificate {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2505,8 +2366,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2517,12 +2378,10 @@ public final class Certificate {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2568,11 +2427,9 @@ public final class Certificate {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         description_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2581,8 +2438,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        
         description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2593,12 +2450,10 @@ public final class Certificate {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         description_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2611,7 +2466,7 @@ public final class Certificate {
        * @return Whether the expiry field is set.
        */
       public boolean hasExpiry() {
-        return expiryBuilder_ != null || expiry_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 3;</code>
@@ -2633,11 +2488,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           expiry_ = value;
-          onChanged();
         } else {
           expiryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2647,11 +2502,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryBuilder_ == null) {
           expiry_ = builderForValue.build();
-          onChanged();
         } else {
           expiryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2659,38 +2514,38 @@ public final class Certificate {
        */
       public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
         if (expiryBuilder_ == null) {
-          if (expiry_ != null) {
-            expiry_ =
-              com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            expiry_ != null &&
+            expiry_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryBuilder().mergeFrom(value);
           } else {
             expiry_ = value;
           }
-          onChanged();
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 3;</code>
        */
       public Builder clearExpiry() {
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-          onChanged();
-        } else {
-          expiry_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 3;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getExpiryFieldBuilder().getBuilder();
       }
@@ -2737,11 +2592,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder setPrivateKey(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privateKey_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2750,7 +2603,7 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPrivateKey() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         privateKey_ = getDefaultInstance().getPrivateKey();
         onChanged();
         return this;
@@ -2788,7 +2641,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrivateKeyRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2855,65 +2719,6 @@ public final class Certificate {
       return new TLSCertificateRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TLSCertificateRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-
-              certificate_ = input.readBytes();
-              break;
-            }
-            case 18: {
-
-              caChain_ = input.readBytes();
-              break;
-            }
-            case 26: {
-
-              privateKey_ = input.readBytes();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_TLSCertificateRequest_descriptor;
@@ -2928,7 +2733,7 @@ public final class Certificate {
     }
 
     public static final int CERTIFICATE_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString certificate_;
+    private com.google.protobuf.ByteString certificate_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes certificate = 1;</code>
      * @return The certificate.
@@ -2939,7 +2744,7 @@ public final class Certificate {
     }
 
     public static final int CACHAIN_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString caChain_;
+    private com.google.protobuf.ByteString caChain_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes caChain = 2;</code>
      * @return The caChain.
@@ -2950,7 +2755,7 @@ public final class Certificate {
     }
 
     public static final int PRIVATEKEY_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString privateKey_;
+    private com.google.protobuf.ByteString privateKey_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes privateKey = 3;</code>
      * @return The privateKey.
@@ -2983,7 +2788,7 @@ public final class Certificate {
       if (!privateKey_.isEmpty()) {
         output.writeBytes(3, privateKey_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3004,7 +2809,7 @@ public final class Certificate {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, privateKey_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3025,7 +2830,7 @@ public final class Certificate {
           .equals(other.getCaChain())) return false;
       if (!getPrivateKey()
           .equals(other.getPrivateKey())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3042,7 +2847,7 @@ public final class Certificate {
       hash = (53 * hash) + getCaChain().hashCode();
       hash = (37 * hash) + PRIVATEKEY_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKey().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3159,28 +2964,21 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.TLSCertificateRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         certificate_ = com.google.protobuf.ByteString.EMPTY;
-
         caChain_ = com.google.protobuf.ByteString.EMPTY;
-
         privateKey_ = com.google.protobuf.ByteString.EMPTY;
-
         return this;
       }
 
@@ -3207,45 +3005,24 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.TLSCertificateRequest buildPartial() {
         com.passkit.grpc.Certificate.TLSCertificateRequest result = new com.passkit.grpc.Certificate.TLSCertificateRequest(this);
-        result.certificate_ = certificate_;
-        result.caChain_ = caChain_;
-        result.privateKey_ = privateKey_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.TLSCertificateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.certificate_ = certificate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.caChain_ = caChain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.privateKey_ = privateKey_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.TLSCertificateRequest) {
@@ -3267,7 +3044,7 @@ public final class Certificate {
         if (other.getPrivateKey() != com.google.protobuf.ByteString.EMPTY) {
           setPrivateKey(other.getPrivateKey());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3282,19 +3059,48 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.TLSCertificateRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                certificate_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                caChain_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                privateKey_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.TLSCertificateRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.ByteString certificate_ = com.google.protobuf.ByteString.EMPTY;
       /**
@@ -3311,11 +3117,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder setCertificate(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         certificate_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3324,7 +3128,7 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearCertificate() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         certificate_ = getDefaultInstance().getCertificate();
         onChanged();
         return this;
@@ -3345,11 +3149,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder setCaChain(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         caChain_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3358,7 +3160,7 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearCaChain() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         caChain_ = getDefaultInstance().getCaChain();
         onChanged();
         return this;
@@ -3379,11 +3181,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder setPrivateKey(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privateKey_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3392,7 +3192,7 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPrivateKey() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         privateKey_ = getDefaultInstance().getPrivateKey();
         onChanged();
         return this;
@@ -3430,7 +3230,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TLSCertificateRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3586,7 +3397,8 @@ public final class Certificate {
       commonName_ = "";
       serialNumber_ = "";
       modulus_ = "";
-      subjectAlternativeNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      subjectAlternativeNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       ownerUsername_ = "";
     }
 
@@ -3597,119 +3409,6 @@ public final class Certificate {
       return new TLSCertificateData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private TLSCertificateData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              commonName_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              serialNumber_ = s;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (validFrom_ != null) {
-                subBuilder = validFrom_.toBuilder();
-              }
-              validFrom_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(validFrom_);
-                validFrom_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (validTo_ != null) {
-                subBuilder = validTo_.toBuilder();
-              }
-              validTo_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(validTo_);
-                validTo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modulus_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                subjectAlternativeNames_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              subjectAlternativeNames_.add(s);
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ownerUsername_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          subjectAlternativeNames_ = subjectAlternativeNames_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_TLSCertificateData_descriptor;
@@ -3724,7 +3423,8 @@ public final class Certificate {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
      * @return The id.
@@ -3762,7 +3462,8 @@ public final class Certificate {
     }
 
     public static final int COMMONNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object commonName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commonName_ = "";
     /**
      * <code>string commonName = 2;</code>
      * @return The commonName.
@@ -3800,7 +3501,8 @@ public final class Certificate {
     }
 
     public static final int SERIALNUMBER_FIELD_NUMBER = 3;
-    private volatile java.lang.Object serialNumber_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serialNumber_ = "";
     /**
      * <code>string serialNumber = 3;</code>
      * @return The serialNumber.
@@ -3860,7 +3562,7 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getValidFromOrBuilder() {
-      return getValidFrom();
+      return validFrom_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validFrom_;
     }
 
     public static final int VALIDTO_FIELD_NUMBER = 5;
@@ -3886,11 +3588,12 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getValidToOrBuilder() {
-      return getValidTo();
+      return validTo_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : validTo_;
     }
 
     public static final int MODULUS_FIELD_NUMBER = 6;
-    private volatile java.lang.Object modulus_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modulus_ = "";
     /**
      * <code>string modulus = 6;</code>
      * @return The modulus.
@@ -3928,7 +3631,9 @@ public final class Certificate {
     }
 
     public static final int SUBJECTALTERNATIVENAMES_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList subjectAlternativeNames_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList subjectAlternativeNames_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string subjectAlternativeNames = 7;</code>
      * @return A list containing the subjectAlternativeNames.
@@ -3963,7 +3668,8 @@ public final class Certificate {
     }
 
     public static final int OWNERUSERNAME_FIELD_NUMBER = 8;
-    private volatile java.lang.Object ownerUsername_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerUsername_ = "";
     /**
      * <code>string ownerUsername = 8;</code>
      * @return The ownerUsername.
@@ -4038,7 +3744,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, ownerUsername_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4078,7 +3784,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, ownerUsername_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4115,7 +3821,7 @@ public final class Certificate {
           .equals(other.getSubjectAlternativeNamesList())) return false;
       if (!getOwnerUsername()
           .equals(other.getOwnerUsername())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4148,7 +3854,7 @@ public final class Certificate {
       }
       hash = (37 * hash) + OWNERUSERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getOwnerUsername().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4265,46 +3971,35 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.TLSCertificateData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         commonName_ = "";
-
         serialNumber_ = "";
-
-        if (validFromBuilder_ == null) {
-          validFrom_ = null;
-        } else {
-          validFrom_ = null;
+        validFrom_ = null;
+        if (validFromBuilder_ != null) {
+          validFromBuilder_.dispose();
           validFromBuilder_ = null;
         }
-        if (validToBuilder_ == null) {
-          validTo_ = null;
-        } else {
-          validTo_ = null;
+        validTo_ = null;
+        if (validToBuilder_ != null) {
+          validToBuilder_.dispose();
           validToBuilder_ = null;
         }
         modulus_ = "";
-
-        subjectAlternativeNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        subjectAlternativeNames_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         ownerUsername_ = "";
-
         return this;
       }
 
@@ -4331,63 +4026,44 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.TLSCertificateData buildPartial() {
         com.passkit.grpc.Certificate.TLSCertificateData result = new com.passkit.grpc.Certificate.TLSCertificateData(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.commonName_ = commonName_;
-        result.serialNumber_ = serialNumber_;
-        if (validFromBuilder_ == null) {
-          result.validFrom_ = validFrom_;
-        } else {
-          result.validFrom_ = validFromBuilder_.build();
-        }
-        if (validToBuilder_ == null) {
-          result.validTo_ = validTo_;
-        } else {
-          result.validTo_ = validToBuilder_.build();
-        }
-        result.modulus_ = modulus_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          subjectAlternativeNames_ = subjectAlternativeNames_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.subjectAlternativeNames_ = subjectAlternativeNames_;
-        result.ownerUsername_ = ownerUsername_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.TLSCertificateData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.commonName_ = commonName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.serialNumber_ = serialNumber_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.validFrom_ = validFromBuilder_ == null
+              ? validFrom_
+              : validFromBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.validTo_ = validToBuilder_ == null
+              ? validTo_
+              : validToBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.modulus_ = modulus_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          subjectAlternativeNames_.makeImmutable();
+          result.subjectAlternativeNames_ = subjectAlternativeNames_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.ownerUsername_ = ownerUsername_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.TLSCertificateData) {
@@ -4402,14 +4078,17 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.TLSCertificateData.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getCommonName().isEmpty()) {
           commonName_ = other.commonName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getSerialNumber().isEmpty()) {
           serialNumber_ = other.serialNumber_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasValidFrom()) {
@@ -4420,12 +4099,13 @@ public final class Certificate {
         }
         if (!other.getModulus().isEmpty()) {
           modulus_ = other.modulus_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.subjectAlternativeNames_.isEmpty()) {
           if (subjectAlternativeNames_.isEmpty()) {
             subjectAlternativeNames_ = other.subjectAlternativeNames_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000040;
           } else {
             ensureSubjectAlternativeNamesIsMutable();
             subjectAlternativeNames_.addAll(other.subjectAlternativeNames_);
@@ -4434,9 +4114,10 @@ public final class Certificate {
         }
         if (!other.getOwnerUsername().isEmpty()) {
           ownerUsername_ = other.ownerUsername_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4451,17 +4132,75 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.TLSCertificateData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                commonName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                serialNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getValidFromFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getValidToFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                modulus_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSubjectAlternativeNamesIsMutable();
+                subjectAlternativeNames_.add(s);
+                break;
+              } // case 58
+              case 66: {
+                ownerUsername_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.TLSCertificateData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4507,11 +4246,9 @@ public final class Certificate {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4520,8 +4257,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4532,12 +4269,10 @@ public final class Certificate {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4583,11 +4318,9 @@ public final class Certificate {
        */
       public Builder setCommonName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         commonName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4596,8 +4329,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearCommonName() {
-        
         commonName_ = getDefaultInstance().getCommonName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4608,12 +4341,10 @@ public final class Certificate {
        */
       public Builder setCommonNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         commonName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4659,11 +4390,9 @@ public final class Certificate {
        */
       public Builder setSerialNumber(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         serialNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4672,8 +4401,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearSerialNumber() {
-        
         serialNumber_ = getDefaultInstance().getSerialNumber();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4684,12 +4413,10 @@ public final class Certificate {
        */
       public Builder setSerialNumberBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         serialNumber_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4702,7 +4429,7 @@ public final class Certificate {
        * @return Whether the validFrom field is set.
        */
       public boolean hasValidFrom() {
-        return validFromBuilder_ != null || validFrom_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 4;</code>
@@ -4724,11 +4451,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           validFrom_ = value;
-          onChanged();
         } else {
           validFromBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4738,11 +4465,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (validFromBuilder_ == null) {
           validFrom_ = builderForValue.build();
-          onChanged();
         } else {
           validFromBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4750,38 +4477,38 @@ public final class Certificate {
        */
       public Builder mergeValidFrom(com.google.protobuf.Timestamp value) {
         if (validFromBuilder_ == null) {
-          if (validFrom_ != null) {
-            validFrom_ =
-              com.google.protobuf.Timestamp.newBuilder(validFrom_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            validFrom_ != null &&
+            validFrom_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getValidFromBuilder().mergeFrom(value);
           } else {
             validFrom_ = value;
           }
-          onChanged();
         } else {
           validFromBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 4;</code>
        */
       public Builder clearValidFrom() {
-        if (validFromBuilder_ == null) {
-          validFrom_ = null;
-          onChanged();
-        } else {
-          validFrom_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        validFrom_ = null;
+        if (validFromBuilder_ != null) {
+          validFromBuilder_.dispose();
           validFromBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validFrom = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getValidFromBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getValidFromFieldBuilder().getBuilder();
       }
@@ -4821,7 +4548,7 @@ public final class Certificate {
        * @return Whether the validTo field is set.
        */
       public boolean hasValidTo() {
-        return validToBuilder_ != null || validTo_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 5;</code>
@@ -4843,11 +4570,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           validTo_ = value;
-          onChanged();
         } else {
           validToBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4857,11 +4584,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (validToBuilder_ == null) {
           validTo_ = builderForValue.build();
-          onChanged();
         } else {
           validToBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -4869,38 +4596,38 @@ public final class Certificate {
        */
       public Builder mergeValidTo(com.google.protobuf.Timestamp value) {
         if (validToBuilder_ == null) {
-          if (validTo_ != null) {
-            validTo_ =
-              com.google.protobuf.Timestamp.newBuilder(validTo_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            validTo_ != null &&
+            validTo_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getValidToBuilder().mergeFrom(value);
           } else {
             validTo_ = value;
           }
-          onChanged();
         } else {
           validToBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 5;</code>
        */
       public Builder clearValidTo() {
-        if (validToBuilder_ == null) {
-          validTo_ = null;
-          onChanged();
-        } else {
-          validTo_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        validTo_ = null;
+        if (validToBuilder_ != null) {
+          validToBuilder_.dispose();
           validToBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp validTo = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getValidToBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getValidToFieldBuilder().getBuilder();
       }
@@ -4973,11 +4700,9 @@ public final class Certificate {
        */
       public Builder setModulus(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modulus_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -4986,8 +4711,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearModulus() {
-        
         modulus_ = getDefaultInstance().getModulus();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -4998,22 +4723,21 @@ public final class Certificate {
        */
       public Builder setModulusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modulus_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList subjectAlternativeNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList subjectAlternativeNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureSubjectAlternativeNamesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!subjectAlternativeNames_.isModifiable()) {
           subjectAlternativeNames_ = new com.google.protobuf.LazyStringArrayList(subjectAlternativeNames_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000040;
       }
       /**
        * <code>repeated string subjectAlternativeNames = 7;</code>
@@ -5021,7 +4745,8 @@ public final class Certificate {
        */
       public com.google.protobuf.ProtocolStringList
           getSubjectAlternativeNamesList() {
-        return subjectAlternativeNames_.getUnmodifiableView();
+        subjectAlternativeNames_.makeImmutable();
+        return subjectAlternativeNames_;
       }
       /**
        * <code>repeated string subjectAlternativeNames = 7;</code>
@@ -5055,11 +4780,10 @@ public final class Certificate {
        */
       public Builder setSubjectAlternativeNames(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSubjectAlternativeNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSubjectAlternativeNamesIsMutable();
         subjectAlternativeNames_.set(index, value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5070,11 +4794,10 @@ public final class Certificate {
        */
       public Builder addSubjectAlternativeNames(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSubjectAlternativeNamesIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSubjectAlternativeNamesIsMutable();
         subjectAlternativeNames_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5088,6 +4811,7 @@ public final class Certificate {
         ensureSubjectAlternativeNamesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, subjectAlternativeNames_);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5096,8 +4820,9 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearSubjectAlternativeNames() {
-        subjectAlternativeNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        subjectAlternativeNames_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
         onChanged();
         return this;
       }
@@ -5108,12 +4833,11 @@ public final class Certificate {
        */
       public Builder addSubjectAlternativeNamesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSubjectAlternativeNamesIsMutable();
         subjectAlternativeNames_.add(value);
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5159,11 +4883,9 @@ public final class Certificate {
        */
       public Builder setOwnerUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ownerUsername_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5172,8 +4894,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearOwnerUsername() {
-        
         ownerUsername_ = getDefaultInstance().getOwnerUsername();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -5184,12 +4906,10 @@ public final class Certificate {
        */
       public Builder setOwnerUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ownerUsername_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5226,7 +4946,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TLSCertificateData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5339,87 +5070,6 @@ public final class Certificate {
       return new PrivateKeyData();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PrivateKeyData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiry_ != null) {
-                subBuilder = expiry_.toBuilder();
-              }
-              expiry_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiry_);
-                expiry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              ownerUsername_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_PrivateKeyData_descriptor;
@@ -5434,7 +5084,8 @@ public final class Certificate {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1;</code>
      * @return The id.
@@ -5472,7 +5123,8 @@ public final class Certificate {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 2;</code>
      * @return The name.
@@ -5510,7 +5162,8 @@ public final class Certificate {
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
-    private volatile java.lang.Object description_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
     /**
      * <code>string description = 3;</code>
      * @return The description.
@@ -5570,11 +5223,12 @@ public final class Certificate {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryOrBuilder() {
-      return getExpiry();
+      return expiry_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiry_;
     }
 
     public static final int OWNERUSERNAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object ownerUsername_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ownerUsername_ = "";
     /**
      * <code>string ownerUsername = 5;</code>
      * @return The ownerUsername.
@@ -5640,7 +5294,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerUsername_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5665,7 +5319,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerUsername_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerUsername_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5693,7 +5347,7 @@ public final class Certificate {
       }
       if (!getOwnerUsername()
           .equals(other.getOwnerUsername())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5716,7 +5370,7 @@ public final class Certificate {
       }
       hash = (37 * hash) + OWNERUSERNAME_FIELD_NUMBER;
       hash = (53 * hash) + getOwnerUsername().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5833,36 +5487,27 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.PrivateKeyData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         description_ = "";
-
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-        } else {
-          expiry_ = null;
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
         ownerUsername_ = "";
-
         return this;
       }
 
@@ -5889,51 +5534,32 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.PrivateKeyData buildPartial() {
         com.passkit.grpc.Certificate.PrivateKeyData result = new com.passkit.grpc.Certificate.PrivateKeyData(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.description_ = description_;
-        if (expiryBuilder_ == null) {
-          result.expiry_ = expiry_;
-        } else {
-          result.expiry_ = expiryBuilder_.build();
-        }
-        result.ownerUsername_ = ownerUsername_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.PrivateKeyData result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.expiry_ = expiryBuilder_ == null
+              ? expiry_
+              : expiryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.ownerUsername_ = ownerUsername_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.PrivateKeyData) {
@@ -5948,14 +5574,17 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.PrivateKeyData.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasExpiry()) {
@@ -5963,9 +5592,10 @@ public final class Certificate {
         }
         if (!other.getOwnerUsername().isEmpty()) {
           ownerUsername_ = other.ownerUsername_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5980,19 +5610,60 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.PrivateKeyData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getExpiryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                ownerUsername_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.PrivateKeyData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -6035,11 +5706,9 @@ public final class Certificate {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6048,8 +5717,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6060,12 +5729,10 @@ public final class Certificate {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6111,11 +5778,9 @@ public final class Certificate {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6124,8 +5789,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6136,12 +5801,10 @@ public final class Certificate {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6187,11 +5850,9 @@ public final class Certificate {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         description_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6200,8 +5861,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        
         description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -6212,12 +5873,10 @@ public final class Certificate {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         description_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6230,7 +5889,7 @@ public final class Certificate {
        * @return Whether the expiry field is set.
        */
       public boolean hasExpiry() {
-        return expiryBuilder_ != null || expiry_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 4;</code>
@@ -6252,11 +5911,11 @@ public final class Certificate {
             throw new NullPointerException();
           }
           expiry_ = value;
-          onChanged();
         } else {
           expiryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6266,11 +5925,11 @@ public final class Certificate {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryBuilder_ == null) {
           expiry_ = builderForValue.build();
-          onChanged();
         } else {
           expiryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -6278,38 +5937,38 @@ public final class Certificate {
        */
       public Builder mergeExpiry(com.google.protobuf.Timestamp value) {
         if (expiryBuilder_ == null) {
-          if (expiry_ != null) {
-            expiry_ =
-              com.google.protobuf.Timestamp.newBuilder(expiry_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            expiry_ != null &&
+            expiry_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryBuilder().mergeFrom(value);
           } else {
             expiry_ = value;
           }
-          onChanged();
         } else {
           expiryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 4;</code>
        */
       public Builder clearExpiry() {
-        if (expiryBuilder_ == null) {
-          expiry_ = null;
-          onChanged();
-        } else {
-          expiry_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        expiry_ = null;
+        if (expiryBuilder_ != null) {
+          expiryBuilder_.dispose();
           expiryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp expiry = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getExpiryFieldBuilder().getBuilder();
       }
@@ -6382,11 +6041,9 @@ public final class Certificate {
        */
       public Builder setOwnerUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         ownerUsername_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6395,8 +6052,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearOwnerUsername() {
-        
         ownerUsername_ = getDefaultInstance().getOwnerUsername();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -6407,12 +6064,10 @@ public final class Certificate {
        */
       public Builder setOwnerUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ownerUsername_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -6449,7 +6104,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrivateKeyData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6508,56 +6174,6 @@ public final class Certificate {
       return new PassTypeIdentifier();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PassTypeIdentifier(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              passTypeId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_PassTypeIdentifier_descriptor;
@@ -6572,7 +6188,8 @@ public final class Certificate {
     }
 
     public static final int PASSTYPEID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object passTypeId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeId_ = "";
     /**
      * <code>string passTypeId = 1;</code>
      * @return The passTypeId.
@@ -6626,7 +6243,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, passTypeId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6638,7 +6255,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(passTypeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, passTypeId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6655,7 +6272,7 @@ public final class Certificate {
 
       if (!getPassTypeId()
           .equals(other.getPassTypeId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6668,7 +6285,7 @@ public final class Certificate {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + PASSTYPEID_FIELD_NUMBER;
       hash = (53 * hash) + getPassTypeId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6785,24 +6402,19 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.PassTypeIdentifier.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         passTypeId_ = "";
-
         return this;
       }
 
@@ -6829,43 +6441,18 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.PassTypeIdentifier buildPartial() {
         com.passkit.grpc.Certificate.PassTypeIdentifier result = new com.passkit.grpc.Certificate.PassTypeIdentifier(this);
-        result.passTypeId_ = passTypeId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.PassTypeIdentifier result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.passTypeId_ = passTypeId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.PassTypeIdentifier) {
@@ -6880,9 +6467,10 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.PassTypeIdentifier.getDefaultInstance()) return this;
         if (!other.getPassTypeId().isEmpty()) {
           passTypeId_ = other.passTypeId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6897,19 +6485,38 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.PassTypeIdentifier parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                passTypeId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.PassTypeIdentifier) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object passTypeId_ = "";
       /**
@@ -6952,11 +6559,9 @@ public final class Certificate {
        */
       public Builder setPassTypeId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6965,8 +6570,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeId() {
-        
         passTypeId_ = getDefaultInstance().getPassTypeId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6977,12 +6582,10 @@ public final class Certificate {
        */
       public Builder setPassTypeIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7019,7 +6622,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PassTypeIdentifier(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7078,56 +6692,6 @@ public final class Certificate {
       return new CertificateSigningRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CertificateSigningRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              csr_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_CertificateSigningRequest_descriptor;
@@ -7142,7 +6706,8 @@ public final class Certificate {
     }
 
     public static final int CSR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object csr_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object csr_ = "";
     /**
      * <code>string csr = 1;</code>
      * @return The csr.
@@ -7196,7 +6761,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csr_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, csr_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7208,7 +6773,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(csr_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, csr_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7225,7 +6790,7 @@ public final class Certificate {
 
       if (!getCsr()
           .equals(other.getCsr())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7238,7 +6803,7 @@ public final class Certificate {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CSR_FIELD_NUMBER;
       hash = (53 * hash) + getCsr().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7355,24 +6920,19 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.CertificateSigningRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         csr_ = "";
-
         return this;
       }
 
@@ -7399,43 +6959,18 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.CertificateSigningRequest buildPartial() {
         com.passkit.grpc.Certificate.CertificateSigningRequest result = new com.passkit.grpc.Certificate.CertificateSigningRequest(this);
-        result.csr_ = csr_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.CertificateSigningRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.csr_ = csr_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.CertificateSigningRequest) {
@@ -7450,9 +6985,10 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.CertificateSigningRequest.getDefaultInstance()) return this;
         if (!other.getCsr().isEmpty()) {
           csr_ = other.csr_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7467,19 +7003,38 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.CertificateSigningRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                csr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.CertificateSigningRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object csr_ = "";
       /**
@@ -7522,11 +7077,9 @@ public final class Certificate {
        */
       public Builder setCsr(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         csr_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7535,8 +7088,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearCsr() {
-        
         csr_ = getDefaultInstance().getCsr();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7547,12 +7100,10 @@ public final class Certificate {
        */
       public Builder setCsrBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         csr_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7589,7 +7140,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CertificateSigningRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7661,62 +7223,6 @@ public final class Certificate {
       return new NFCSigningCredentialsRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private NFCSigningCredentialsRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              password_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privateKeyId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Certificate.internal_static_io_NFCSigningCredentialsRequest_descriptor;
@@ -7731,7 +7237,8 @@ public final class Certificate {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 1;
-    private volatile java.lang.Object password_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object password_ = "";
     /**
      * <code>string password = 1;</code>
      * @return The password.
@@ -7769,7 +7276,8 @@ public final class Certificate {
     }
 
     public static final int PRIVATEKEYID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object privateKeyId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privateKeyId_ = "";
     /**
      * <code>string privateKeyId = 2;</code>
      * @return The privateKeyId.
@@ -7826,7 +7334,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, privateKeyId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7841,7 +7349,7 @@ public final class Certificate {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, privateKeyId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7860,7 +7368,7 @@ public final class Certificate {
           .equals(other.getPassword())) return false;
       if (!getPrivateKeyId()
           .equals(other.getPrivateKeyId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7875,7 +7383,7 @@ public final class Certificate {
       hash = (53 * hash) + getPassword().hashCode();
       hash = (37 * hash) + PRIVATEKEYID_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKeyId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7992,26 +7500,20 @@ public final class Certificate {
 
       // Construct using com.passkit.grpc.Certificate.NFCSigningCredentialsRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         password_ = "";
-
         privateKeyId_ = "";
-
         return this;
       }
 
@@ -8038,44 +7540,21 @@ public final class Certificate {
       @java.lang.Override
       public com.passkit.grpc.Certificate.NFCSigningCredentialsRequest buildPartial() {
         com.passkit.grpc.Certificate.NFCSigningCredentialsRequest result = new com.passkit.grpc.Certificate.NFCSigningCredentialsRequest(this);
-        result.password_ = password_;
-        result.privateKeyId_ = privateKeyId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.password_ = password_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.privateKeyId_ = privateKeyId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Certificate.NFCSigningCredentialsRequest) {
@@ -8090,13 +7569,15 @@ public final class Certificate {
         if (other == com.passkit.grpc.Certificate.NFCSigningCredentialsRequest.getDefaultInstance()) return this;
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPrivateKeyId().isEmpty()) {
           privateKeyId_ = other.privateKeyId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8111,19 +7592,43 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Certificate.NFCSigningCredentialsRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                password_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                privateKeyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Certificate.NFCSigningCredentialsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object password_ = "";
       /**
@@ -8166,11 +7671,9 @@ public final class Certificate {
        */
       public Builder setPassword(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         password_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8179,8 +7682,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
         password_ = getDefaultInstance().getPassword();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8191,12 +7694,10 @@ public final class Certificate {
        */
       public Builder setPasswordBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         password_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8242,11 +7743,9 @@ public final class Certificate {
        */
       public Builder setPrivateKeyId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privateKeyId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8255,8 +7754,8 @@ public final class Certificate {
        * @return This builder for chaining.
        */
       public Builder clearPrivateKeyId() {
-        
         privateKeyId_ = getDefaultInstance().getPrivateKeyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8267,12 +7766,10 @@ public final class Certificate {
        */
       public Builder setPrivateKeyIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privateKeyId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8309,7 +7806,18 @@ public final class Certificate {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new NFCSigningCredentialsRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

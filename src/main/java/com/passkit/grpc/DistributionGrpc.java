@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.48.0)",
+    value = "by gRPC proto compiler (version 1.54.1)",
     comments = "Source: io/core/a_rpc_distribution.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DistributionGrpc {
@@ -247,101 +247,67 @@ public final class DistributionGrpc {
 
   /**
    */
-  public static abstract class DistributionImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
+    default void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendWelcomeEmailMethod(), responseObserver);
     }
 
     /**
      */
-    public void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
+    default void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSmartPassLinkMethod(), responseObserver);
     }
 
     /**
      */
-    public void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
+    default void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDataCollectionPageFieldsMethod(), responseObserver);
     }
 
     /**
      */
-    public void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
+    default void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUploadSmartPassCsvMethod(), responseObserver);
     }
 
     /**
      */
-    public void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
+    default void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getImportProtocolCsvMethod(), responseObserver);
     }
 
     /**
      */
-    public void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
+    default void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateBarcodeMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSendWelcomeEmailMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Distribution.EmailDistributionRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_SEND_WELCOME_EMAIL)))
-          .addMethod(
-            getGetSmartPassLinkMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Distribution.SmartPassLinkRequest,
-                com.passkit.grpc.CommonObjects.Url>(
-                  this, METHODID_GET_SMART_PASS_LINK)))
-          .addMethod(
-            getGetDataCollectionPageFieldsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.ClassObjectInput,
-                com.passkit.grpc.Distribution.DataCollectionFields>(
-                  this, METHODID_GET_DATA_COLLECTION_PAGE_FIELDS)))
-          .addMethod(
-            getUploadSmartPassCsvMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UPLOAD_SMART_PASS_CSV)))
-          .addMethod(
-            getImportProtocolCsvMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.Distribution.ImportProtocolRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_IMPORT_PROTOCOL_CSV)))
-          .addMethod(
-            getValidateBarcodeMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.passkit.grpc.CommonObjects.Payload,
-                com.passkit.grpc.CommonObjects.Payload>(
-                  this, METHODID_VALIDATE_BARCODE)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Distribution.
    */
-  public static final class DistributionStub extends io.grpc.stub.AbstractAsyncStub<DistributionStub> {
+  public static abstract class DistributionImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DistributionGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Distribution.
+   */
+  public static final class DistributionStub
+      extends io.grpc.stub.AbstractAsyncStub<DistributionStub> {
     private DistributionStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -403,8 +369,10 @@ public final class DistributionGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Distribution.
    */
-  public static final class DistributionBlockingStub extends io.grpc.stub.AbstractBlockingStub<DistributionBlockingStub> {
+  public static final class DistributionBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DistributionBlockingStub> {
     private DistributionBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -460,8 +428,10 @@ public final class DistributionGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Distribution.
    */
-  public static final class DistributionFutureStub extends io.grpc.stub.AbstractFutureStub<DistributionFutureStub> {
+  public static final class DistributionFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DistributionFutureStub> {
     private DistributionFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -534,10 +504,10 @@ public final class DistributionGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DistributionImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DistributionImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -584,6 +554,53 @@ public final class DistributionGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSendWelcomeEmailMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Distribution.EmailDistributionRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_SEND_WELCOME_EMAIL)))
+        .addMethod(
+          getGetSmartPassLinkMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Distribution.SmartPassLinkRequest,
+              com.passkit.grpc.CommonObjects.Url>(
+                service, METHODID_GET_SMART_PASS_LINK)))
+        .addMethod(
+          getGetDataCollectionPageFieldsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.ClassObjectInput,
+              com.passkit.grpc.Distribution.DataCollectionFields>(
+                service, METHODID_GET_DATA_COLLECTION_PAGE_FIELDS)))
+        .addMethod(
+          getUploadSmartPassCsvMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Distribution.SmartPassCsvUploadRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPLOAD_SMART_PASS_CSV)))
+        .addMethod(
+          getImportProtocolCsvMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Distribution.ImportProtocolRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_IMPORT_PROTOCOL_CSV)))
+        .addMethod(
+          getValidateBarcodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Payload,
+              com.passkit.grpc.CommonObjects.Payload>(
+                service, METHODID_VALIDATE_BARCODE)))
+        .build();
   }
 
   private static abstract class DistributionBaseDescriptorSupplier

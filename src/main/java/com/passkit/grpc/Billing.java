@@ -57,7 +57,6 @@ public final class Billing {
      *
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
-
     /* nullable */
 com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
         int key,
@@ -70,7 +69,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
      *
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
-
     com.passkit.grpc.Billing.QuotaDetails getDetailsOrThrow(
         int key);
   }
@@ -96,64 +94,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       return new Quota();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Quota(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                details_ = com.google.protobuf.MapField.newMapField(
-                    DetailsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
-              details__ = input.readMessage(
-                  DetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              details_.getMutableMap().put(
-                  details__.getKey(), details__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Billing.internal_static_io_Quota_descriptor;
@@ -191,6 +131,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   com.passkit.grpc.Billing.QuotaDetails.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> details_;
     private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
@@ -201,7 +142,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       }
       return details_;
     }
-
     public int getDetailsCount() {
       return internalGetDetails().getMap().size();
     }
@@ -212,11 +152,10 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
      *
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
-
     @java.lang.Override
     public boolean containsDetails(
         int key) {
-      
+
       return internalGetDetails().getMap().containsKey(key);
     }
     /**
@@ -235,7 +174,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> getDetailsMap() {
       return internalGetDetails().getMap();
     }
@@ -247,11 +185,12 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
     @java.lang.Override
-
-    public com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
+    public /* nullable */
+com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
         int key,
-        com.passkit.grpc.Billing.QuotaDetails defaultValue) {
-      
+        /* nullable */
+com.passkit.grpc.Billing.QuotaDetails defaultValue) {
+
       java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> map =
           internalGetDetails().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -264,10 +203,9 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
      * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
      */
     @java.lang.Override
-
     public com.passkit.grpc.Billing.QuotaDetails getDetailsOrThrow(
         int key) {
-      
+
       java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> map =
           internalGetDetails().getMap();
       if (!map.containsKey(key)) {
@@ -296,7 +234,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           internalGetDetails(),
           DetailsDefaultEntryHolder.defaultEntry,
           1);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -315,7 +253,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, details__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -332,7 +270,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
 
       if (!internalGetDetails().equals(
           other.internalGetDetails())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -347,7 +285,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         hash = (37 * hash) + DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetDetails().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -486,22 +424,18 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
 
       // Construct using com.passkit.grpc.Billing.Quota.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableDetails().clear();
         return this;
       }
@@ -529,45 +463,19 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Billing.Quota buildPartial() {
         com.passkit.grpc.Billing.Quota result = new com.passkit.grpc.Billing.Quota(this);
-        int from_bitField0_ = bitField0_;
-        result.details_ = internalGetDetails();
-        result.details_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Billing.Quota result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.details_ = internalGetDetails();
+          result.details_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Billing.Quota) {
@@ -582,7 +490,8 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         if (other == com.passkit.grpc.Billing.Quota.getDefaultInstance()) return this;
         internalGetMutableDetails().mergeFrom(
             other.internalGetDetails());
-        this.mergeUnknownFields(other.unknownFields);
+        bitField0_ |= 0x00000001;
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -597,17 +506,39 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Billing.Quota parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.MapEntry<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
+                details__ = input.readMessage(
+                    DetailsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableDetails().getMutableMap().put(
+                    details__.getKey(), details__.getValue());
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Billing.Quota) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -615,7 +546,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       private com.google.protobuf.MapField<
           java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> details_;
       private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
-      internalGetDetails() {
+          internalGetDetails() {
         if (details_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               DetailsDefaultEntryHolder.defaultEntry);
@@ -623,8 +554,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         return details_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
-      internalGetMutableDetails() {
-        onChanged();;
+          internalGetMutableDetails() {
         if (details_ == null) {
           details_ = com.google.protobuf.MapField.newMapField(
               DetailsDefaultEntryHolder.defaultEntry);
@@ -632,9 +562,10 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         if (!details_.isMutable()) {
           details_ = details_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return details_;
       }
-
       public int getDetailsCount() {
         return internalGetDetails().getMap().size();
       }
@@ -645,11 +576,10 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        *
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
-
       @java.lang.Override
       public boolean containsDetails(
           int key) {
-        
+
         return internalGetDetails().getMap().containsKey(key);
       }
       /**
@@ -668,7 +598,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> getDetailsMap() {
         return internalGetDetails().getMap();
       }
@@ -680,11 +609,12 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
       @java.lang.Override
-
-      public com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
+      public /* nullable */
+com.passkit.grpc.Billing.QuotaDetails getDetailsOrDefault(
           int key,
-          com.passkit.grpc.Billing.QuotaDetails defaultValue) {
-        
+          /* nullable */
+com.passkit.grpc.Billing.QuotaDetails defaultValue) {
+
         java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> map =
             internalGetDetails().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -697,10 +627,9 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
       @java.lang.Override
-
       public com.passkit.grpc.Billing.QuotaDetails getDetailsOrThrow(
           int key) {
-        
+
         java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> map =
             internalGetDetails().getMap();
         if (!map.containsKey(key)) {
@@ -708,8 +637,8 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearDetails() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableDetails().getMutableMap()
             .clear();
         return this;
@@ -721,10 +650,9 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        *
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
-
       public Builder removeDetails(
           int key) {
-        
+
         internalGetMutableDetails().getMutableMap()
             .remove(key);
         return this;
@@ -734,7 +662,8 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails>
-      getMutableDetails() {
+          getMutableDetails() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableDetails().getMutableMap();
       }
       /**
@@ -747,13 +676,11 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       public Builder putDetails(
           int key,
           com.passkit.grpc.Billing.QuotaDetails value) {
-        
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
 
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableDetails().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -763,11 +690,11 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        *
        * <code>map&lt;uint32, .io.QuotaDetails&gt; details = 1;</code>
        */
-
       public Builder putAllDetails(
           java.util.Map<java.lang.Integer, com.passkit.grpc.Billing.QuotaDetails> values) {
         internalGetMutableDetails().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -803,7 +730,18 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Quota(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -865,60 +803,6 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       return new QuotaDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private QuotaDetails(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              quota_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              status_ = input.readUInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Billing.internal_static_io_QuotaDetails_descriptor;
@@ -933,7 +817,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
     }
 
     public static final int QUOTA_FIELD_NUMBER = 1;
-    private int quota_;
+    private int quota_ = 0;
     /**
      * <code>int32 quota = 1;</code>
      * @return The quota.
@@ -944,7 +828,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private long status_;
+    private long status_ = 0L;
     /**
      * <pre>
      * contains bitmask of pk.Status
@@ -978,7 +862,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       if (status_ != 0L) {
         output.writeUInt64(2, status_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -995,7 +879,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(2, status_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1014,7 +898,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           != other.getQuota()) return false;
       if (getStatus()
           != other.getStatus()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1030,7 +914,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStatus());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1147,26 +1031,20 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
 
       // Construct using com.passkit.grpc.Billing.QuotaDetails.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         quota_ = 0;
-
         status_ = 0L;
-
         return this;
       }
 
@@ -1193,44 +1071,21 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Billing.QuotaDetails buildPartial() {
         com.passkit.grpc.Billing.QuotaDetails result = new com.passkit.grpc.Billing.QuotaDetails(this);
-        result.quota_ = quota_;
-        result.status_ = status_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Billing.QuotaDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.quota_ = quota_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Billing.QuotaDetails) {
@@ -1249,7 +1104,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
         if (other.getStatus() != 0L) {
           setStatus(other.getStatus());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1264,19 +1119,43 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Billing.QuotaDetails parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                quota_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                status_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Billing.QuotaDetails) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int quota_ ;
       /**
@@ -1293,8 +1172,9 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * @return This builder for chaining.
        */
       public Builder setQuota(int value) {
-        
+
         quota_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1303,7 +1183,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearQuota() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         quota_ = 0;
         onChanged();
         return this;
@@ -1332,8 +1212,9 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * @return This builder for chaining.
        */
       public Builder setStatus(long value) {
-        
+
         status_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1346,7 +1227,7 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         status_ = 0L;
         onChanged();
         return this;
@@ -1384,7 +1265,18 @@ com.passkit.grpc.Billing.QuotaDetails defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new QuotaDetails(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

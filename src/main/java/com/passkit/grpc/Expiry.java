@@ -259,7 +259,7 @@ public final class Expiry {
      */
     int getExpireAfterXDays();
 
-    public com.passkit.grpc.Expiry.ExpirySettings.ExpiryOneofCase getExpiryOneofCase();
+    com.passkit.grpc.Expiry.ExpirySettings.ExpiryOneofCase getExpiryOneofCase();
   }
   /**
    * <pre>
@@ -288,75 +288,6 @@ public final class Expiry {
       return new ExpirySettings();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ExpirySettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              expiryType_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.CommonObjects.Date.Builder subBuilder = null;
-              if (expiryOneofCase_ == 2) {
-                subBuilder = ((com.passkit.grpc.CommonObjects.Date) expiryOneof_).toBuilder();
-              }
-              expiryOneof_ =
-                  input.readMessage(com.passkit.grpc.CommonObjects.Date.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.passkit.grpc.CommonObjects.Date) expiryOneof_);
-                expiryOneof_ = subBuilder.buildPartial();
-              }
-              expiryOneofCase_ = 2;
-              break;
-            }
-            case 24: {
-              expiryOneof_ = input.readUInt32();
-              expiryOneofCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Expiry.internal_static_io_ExpirySettings_descriptor;
@@ -371,6 +302,7 @@ public final class Expiry {
     }
 
     private int expiryOneofCase_ = 0;
+    @SuppressWarnings("serial")
     private java.lang.Object expiryOneof_;
     public enum ExpiryOneofCase
         implements com.google.protobuf.Internal.EnumLite,
@@ -412,7 +344,7 @@ public final class Expiry {
     }
 
     public static final int EXPIRYTYPE_FIELD_NUMBER = 1;
-    private int expiryType_;
+    private int expiryType_ = 0;
     /**
      * <code>.io.ExpiryType expiryType = 1;</code>
      * @return The enum numeric value on the wire for expiryType.
@@ -425,8 +357,7 @@ public final class Expiry {
      * @return The expiryType.
      */
     @java.lang.Override public com.passkit.grpc.Expiry.ExpiryType getExpiryType() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Expiry.ExpiryType result = com.passkit.grpc.Expiry.ExpiryType.valueOf(expiryType_);
+      com.passkit.grpc.Expiry.ExpiryType result = com.passkit.grpc.Expiry.ExpiryType.forNumber(expiryType_);
       return result == null ? com.passkit.grpc.Expiry.ExpiryType.UNRECOGNIZED : result;
     }
 
@@ -531,7 +462,7 @@ public final class Expiry {
         output.writeUInt32(
             3, (int)((java.lang.Integer) expiryOneof_));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -553,7 +484,7 @@ public final class Expiry {
           .computeUInt32Size(
               3, (int)((java.lang.Integer) expiryOneof_));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -582,7 +513,7 @@ public final class Expiry {
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -607,7 +538,7 @@ public final class Expiry {
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -728,24 +659,22 @@ public final class Expiry {
 
       // Construct using com.passkit.grpc.Expiry.ExpirySettings.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         expiryType_ = 0;
-
+        if (fixedExpiryDateBuilder_ != null) {
+          fixedExpiryDateBuilder_.clear();
+        }
         expiryOneofCase_ = 0;
         expiryOneof_ = null;
         return this;
@@ -774,54 +703,28 @@ public final class Expiry {
       @java.lang.Override
       public com.passkit.grpc.Expiry.ExpirySettings buildPartial() {
         com.passkit.grpc.Expiry.ExpirySettings result = new com.passkit.grpc.Expiry.ExpirySettings(this);
-        result.expiryType_ = expiryType_;
-        if (expiryOneofCase_ == 2) {
-          if (fixedExpiryDateBuilder_ == null) {
-            result.expiryOneof_ = expiryOneof_;
-          } else {
-            result.expiryOneof_ = fixedExpiryDateBuilder_.build();
-          }
-        }
-        if (expiryOneofCase_ == 3) {
-          result.expiryOneof_ = expiryOneof_;
-        }
-        result.expiryOneofCase_ = expiryOneofCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Expiry.ExpirySettings result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.expiryType_ = expiryType_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartialOneofs(com.passkit.grpc.Expiry.ExpirySettings result) {
+        result.expiryOneofCase_ = expiryOneofCase_;
+        result.expiryOneof_ = this.expiryOneof_;
+        if (expiryOneofCase_ == 2 &&
+            fixedExpiryDateBuilder_ != null) {
+          result.expiryOneof_ = fixedExpiryDateBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Expiry.ExpirySettings) {
@@ -850,7 +753,7 @@ public final class Expiry {
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -865,17 +768,47 @@ public final class Expiry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Expiry.ExpirySettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                expiryType_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getFixedExpiryDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                expiryOneofCase_ = 2;
+                break;
+              } // case 18
+              case 24: {
+                expiryOneof_ = input.readUInt32();
+                expiryOneofCase_ = 3;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Expiry.ExpirySettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int expiryOneofCase_ = 0;
@@ -893,6 +826,7 @@ public final class Expiry {
         return this;
       }
 
+      private int bitField0_;
 
       private int expiryType_ = 0;
       /**
@@ -908,8 +842,8 @@ public final class Expiry {
        * @return This builder for chaining.
        */
       public Builder setExpiryTypeValue(int value) {
-        
         expiryType_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -919,8 +853,7 @@ public final class Expiry {
        */
       @java.lang.Override
       public com.passkit.grpc.Expiry.ExpiryType getExpiryType() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Expiry.ExpiryType result = com.passkit.grpc.Expiry.ExpiryType.valueOf(expiryType_);
+        com.passkit.grpc.Expiry.ExpiryType result = com.passkit.grpc.Expiry.ExpiryType.forNumber(expiryType_);
         return result == null ? com.passkit.grpc.Expiry.ExpiryType.UNRECOGNIZED : result;
       }
       /**
@@ -932,7 +865,7 @@ public final class Expiry {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         expiryType_ = value.getNumber();
         onChanged();
         return this;
@@ -942,7 +875,7 @@ public final class Expiry {
        * @return This builder for chaining.
        */
       public Builder clearExpiryType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         expiryType_ = 0;
         onChanged();
         return this;
@@ -1131,7 +1064,7 @@ public final class Expiry {
           expiryOneof_ = null;
         }
         expiryOneofCase_ = 2;
-        onChanged();;
+        onChanged();
         return fixedExpiryDateBuilder_;
       }
 
@@ -1173,6 +1106,7 @@ public final class Expiry {
        * @return This builder for chaining.
        */
       public Builder setExpireAfterXDays(int value) {
+
         expiryOneofCase_ = 3;
         expiryOneof_ = value;
         onChanged();
@@ -1228,7 +1162,18 @@ public final class Expiry {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ExpirySettings(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

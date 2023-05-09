@@ -204,9 +204,12 @@ public final class PaginationOuterClass {
       super(builder);
     }
     private Pagination() {
-      filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       orderBy_ = "";
     }
 
@@ -217,108 +220,6 @@ public final class PaginationOuterClass {
       return new Pagination();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Pagination(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              limit_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              offset_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                filterField_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              filterField_.add(s);
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                filterValue_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              filterValue_.add(s);
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                filterOperator_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              filterOperator_.add(s);
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              orderBy_ = s;
-              break;
-            }
-            case 56: {
-
-              orderAsc_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          filterField_ = filterField_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          filterValue_ = filterValue_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          filterOperator_ = filterOperator_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.PaginationOuterClass.internal_static_io_Pagination_descriptor;
@@ -333,7 +234,7 @@ public final class PaginationOuterClass {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 1;
-    private int limit_;
+    private int limit_ = 0;
     /**
      * <pre>
      * Limit the number of records returned. If not specified, a default of 25 is used.  Enter -1 for all records.
@@ -348,7 +249,7 @@ public final class PaginationOuterClass {
     }
 
     public static final int OFFSET_FIELD_NUMBER = 2;
-    private int offset_;
+    private int offset_ = 0;
     /**
      * <pre>
      * Allows you to offset the first record returned by the limit.
@@ -363,7 +264,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTERFIELD_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList filterField_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterField_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Array of column names to filter results by.
@@ -414,7 +317,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTERVALUE_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList filterValue_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterValue_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Array of values to test against the filter fields.
@@ -465,7 +370,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTEROPERATOR_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList filterOperator_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterOperator_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * will be whitelisted operators in io core
@@ -516,7 +423,8 @@ public final class PaginationOuterClass {
     }
 
     public static final int ORDERBY_FIELD_NUMBER = 6;
-    private volatile java.lang.Object orderBy_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderBy_ = "";
     /**
      * <pre>
      * Field to order results by.
@@ -562,7 +470,7 @@ public final class PaginationOuterClass {
     }
 
     public static final int ORDERASC_FIELD_NUMBER = 7;
-    private boolean orderAsc_;
+    private boolean orderAsc_ = false;
     /**
      * <pre>
      * Will return in ascending order if true, or descending order if false.
@@ -611,7 +519,7 @@ public final class PaginationOuterClass {
       if (orderAsc_ != false) {
         output.writeBool(7, orderAsc_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -659,7 +567,7 @@ public final class PaginationOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, orderAsc_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -688,7 +596,7 @@ public final class PaginationOuterClass {
           .equals(other.getOrderBy())) return false;
       if (getOrderAsc()
           != other.getOrderAsc()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -720,7 +628,7 @@ public final class PaginationOuterClass {
       hash = (37 * hash) + ORDERASC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getOrderAsc());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -837,36 +745,28 @@ public final class PaginationOuterClass {
 
       // Construct using com.passkit.grpc.PaginationOuterClass.Pagination.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         limit_ = 0;
-
         offset_ = 0;
-
-        filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        filterField_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        filterValue_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        filterOperator_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         orderBy_ = "";
-
         orderAsc_ = false;
-
         return this;
       }
 
@@ -893,62 +793,39 @@ public final class PaginationOuterClass {
       @java.lang.Override
       public com.passkit.grpc.PaginationOuterClass.Pagination buildPartial() {
         com.passkit.grpc.PaginationOuterClass.Pagination result = new com.passkit.grpc.PaginationOuterClass.Pagination(this);
-        int from_bitField0_ = bitField0_;
-        result.limit_ = limit_;
-        result.offset_ = offset_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          filterField_ = filterField_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.filterField_ = filterField_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          filterValue_ = filterValue_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.filterValue_ = filterValue_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          filterOperator_ = filterOperator_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.filterOperator_ = filterOperator_;
-        result.orderBy_ = orderBy_;
-        result.orderAsc_ = orderAsc_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.PaginationOuterClass.Pagination result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.limit_ = limit_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.offset_ = offset_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          filterField_.makeImmutable();
+          result.filterField_ = filterField_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          filterValue_.makeImmutable();
+          result.filterValue_ = filterValue_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          filterOperator_.makeImmutable();
+          result.filterOperator_ = filterOperator_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.orderBy_ = orderBy_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.orderAsc_ = orderAsc_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.PaginationOuterClass.Pagination) {
@@ -970,7 +847,7 @@ public final class PaginationOuterClass {
         if (!other.filterField_.isEmpty()) {
           if (filterField_.isEmpty()) {
             filterField_ = other.filterField_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000004;
           } else {
             ensureFilterFieldIsMutable();
             filterField_.addAll(other.filterField_);
@@ -980,7 +857,7 @@ public final class PaginationOuterClass {
         if (!other.filterValue_.isEmpty()) {
           if (filterValue_.isEmpty()) {
             filterValue_ = other.filterValue_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000008;
           } else {
             ensureFilterValueIsMutable();
             filterValue_.addAll(other.filterValue_);
@@ -990,7 +867,7 @@ public final class PaginationOuterClass {
         if (!other.filterOperator_.isEmpty()) {
           if (filterOperator_.isEmpty()) {
             filterOperator_ = other.filterOperator_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ |= 0x00000010;
           } else {
             ensureFilterOperatorIsMutable();
             filterOperator_.addAll(other.filterOperator_);
@@ -999,12 +876,13 @@ public final class PaginationOuterClass {
         }
         if (!other.getOrderBy().isEmpty()) {
           orderBy_ = other.orderBy_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.getOrderAsc() != false) {
           setOrderAsc(other.getOrderAsc());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1019,17 +897,68 @@ public final class PaginationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.PaginationOuterClass.Pagination parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                limit_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                offset_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterFieldIsMutable();
+                filterField_.add(s);
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterValueIsMutable();
+                filterValue_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterOperatorIsMutable();
+                filterOperator_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                orderBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                orderAsc_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.PaginationOuterClass.Pagination) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1057,8 +986,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLimit(int value) {
-        
+
         limit_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1071,7 +1001,7 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         limit_ = 0;
         onChanged();
         return this;
@@ -1100,8 +1030,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setOffset(int value) {
-        
+
         offset_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1114,18 +1045,19 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOffset() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         offset_ = 0;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterFieldIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!filterField_.isModifiable()) {
           filterField_ = new com.google.protobuf.LazyStringArrayList(filterField_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -1137,7 +1069,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterFieldList() {
-        return filterField_.getUnmodifiableView();
+        filterField_.makeImmutable();
+        return filterField_;
       }
       /**
        * <pre>
@@ -1187,11 +1120,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterField(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterFieldIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterFieldIsMutable();
         filterField_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1206,11 +1138,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterField(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterFieldIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterFieldIsMutable();
         filterField_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1228,6 +1159,7 @@ public final class PaginationOuterClass {
         ensureFilterFieldIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterField_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1240,8 +1172,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterField() {
-        filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
@@ -1256,22 +1189,22 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterFieldBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterFieldIsMutable();
         filterField_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterValueIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!filterValue_.isModifiable()) {
           filterValue_ = new com.google.protobuf.LazyStringArrayList(filterValue_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000008;
       }
       /**
        * <pre>
@@ -1283,7 +1216,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterValueList() {
-        return filterValue_.getUnmodifiableView();
+        filterValue_.makeImmutable();
+        return filterValue_;
       }
       /**
        * <pre>
@@ -1333,11 +1267,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterValue(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterValueIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterValueIsMutable();
         filterValue_.set(index, value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1352,11 +1285,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterValueIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterValueIsMutable();
         filterValue_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1374,6 +1306,7 @@ public final class PaginationOuterClass {
         ensureFilterValueIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterValue_);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1386,8 +1319,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterValue() {
-        filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
         onChanged();
         return this;
       }
@@ -1402,22 +1336,22 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterValueIsMutable();
         filterValue_.add(value);
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterOperatorIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!filterOperator_.isModifiable()) {
           filterOperator_ = new com.google.protobuf.LazyStringArrayList(filterOperator_);
-          bitField0_ |= 0x00000004;
-         }
+        }
+        bitField0_ |= 0x00000010;
       }
       /**
        * <pre>
@@ -1429,7 +1363,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterOperatorList() {
-        return filterOperator_.getUnmodifiableView();
+        filterOperator_.makeImmutable();
+        return filterOperator_;
       }
       /**
        * <pre>
@@ -1479,11 +1414,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterOperator(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterOperatorIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterOperatorIsMutable();
         filterOperator_.set(index, value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1498,11 +1432,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterOperator(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterOperatorIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterOperatorIsMutable();
         filterOperator_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1520,6 +1453,7 @@ public final class PaginationOuterClass {
         ensureFilterOperatorIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterOperator_);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1532,8 +1466,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterOperator() {
-        filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
         onChanged();
         return this;
       }
@@ -1548,12 +1483,11 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterOperatorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterOperatorIsMutable();
         filterOperator_.add(value);
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1611,11 +1545,9 @@ public final class PaginationOuterClass {
        */
       public Builder setOrderBy(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderBy_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1628,8 +1560,8 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
-        
         orderBy_ = getDefaultInstance().getOrderBy();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1644,12 +1576,10 @@ public final class PaginationOuterClass {
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderBy_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1677,8 +1607,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder setOrderAsc(boolean value) {
-        
+
         orderAsc_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1691,7 +1622,7 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOrderAsc() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         orderAsc_ = false;
         onChanged();
         return this;
@@ -1729,7 +1660,18 @@ public final class PaginationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Pagination(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1889,9 +1831,12 @@ public final class PaginationOuterClass {
       super(builder);
     }
     private Filter() {
-      filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -1901,87 +1846,6 @@ public final class PaginationOuterClass {
       return new Filter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Filter(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                filterField_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              filterField_.add(s);
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                filterValue_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              filterValue_.add(s);
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                filterOperator_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              filterOperator_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          filterField_ = filterField_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          filterValue_ = filterValue_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          filterOperator_ = filterOperator_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.PaginationOuterClass.internal_static_io_Filter_descriptor;
@@ -1996,7 +1860,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTERFIELD_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList filterField_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterField_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Array of column names to filter results by.
@@ -2047,7 +1913,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTERVALUE_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList filterValue_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterValue_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * Array of values to test against the filter fields.
@@ -2098,7 +1966,9 @@ public final class PaginationOuterClass {
     }
 
     public static final int FILTEROPERATOR_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList filterOperator_;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList filterOperator_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <pre>
      * will be whitelisted operators in io core
@@ -2171,7 +2041,7 @@ public final class PaginationOuterClass {
       for (int i = 0; i < filterOperator_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filterOperator_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2204,7 +2074,7 @@ public final class PaginationOuterClass {
         size += dataSize;
         size += 1 * getFilterOperatorList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2225,7 +2095,7 @@ public final class PaginationOuterClass {
           .equals(other.getFilterValueList())) return false;
       if (!getFilterOperatorList()
           .equals(other.getFilterOperatorList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2248,7 +2118,7 @@ public final class PaginationOuterClass {
         hash = (37 * hash) + FILTEROPERATOR_FIELD_NUMBER;
         hash = (53 * hash) + getFilterOperatorList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2365,28 +2235,24 @@ public final class PaginationOuterClass {
 
       // Construct using com.passkit.grpc.PaginationOuterClass.Filter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = 0;
+        filterField_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        filterValue_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        filterOperator_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -2413,58 +2279,27 @@ public final class PaginationOuterClass {
       @java.lang.Override
       public com.passkit.grpc.PaginationOuterClass.Filter buildPartial() {
         com.passkit.grpc.PaginationOuterClass.Filter result = new com.passkit.grpc.PaginationOuterClass.Filter(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          filterField_ = filterField_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.filterField_ = filterField_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          filterValue_ = filterValue_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.filterValue_ = filterValue_;
-        if (((bitField0_ & 0x00000004) != 0)) {
-          filterOperator_ = filterOperator_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.filterOperator_ = filterOperator_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.PaginationOuterClass.Filter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          filterField_.makeImmutable();
+          result.filterField_ = filterField_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          filterValue_.makeImmutable();
+          result.filterValue_ = filterValue_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          filterOperator_.makeImmutable();
+          result.filterOperator_ = filterOperator_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.PaginationOuterClass.Filter) {
@@ -2480,7 +2315,7 @@ public final class PaginationOuterClass {
         if (!other.filterField_.isEmpty()) {
           if (filterField_.isEmpty()) {
             filterField_ = other.filterField_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureFilterFieldIsMutable();
             filterField_.addAll(other.filterField_);
@@ -2490,7 +2325,7 @@ public final class PaginationOuterClass {
         if (!other.filterValue_.isEmpty()) {
           if (filterValue_.isEmpty()) {
             filterValue_ = other.filterValue_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ |= 0x00000002;
           } else {
             ensureFilterValueIsMutable();
             filterValue_.addAll(other.filterValue_);
@@ -2500,14 +2335,14 @@ public final class PaginationOuterClass {
         if (!other.filterOperator_.isEmpty()) {
           if (filterOperator_.isEmpty()) {
             filterOperator_ = other.filterOperator_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ |= 0x00000004;
           } else {
             ensureFilterOperatorIsMutable();
             filterOperator_.addAll(other.filterOperator_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2522,27 +2357,59 @@ public final class PaginationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.PaginationOuterClass.Filter parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterFieldIsMutable();
+                filterField_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterValueIsMutable();
+                filterValue_.add(s);
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureFilterOperatorIsMutable();
+                filterOperator_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.PaginationOuterClass.Filter) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterFieldIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!filterField_.isModifiable()) {
           filterField_ = new com.google.protobuf.LazyStringArrayList(filterField_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -2554,7 +2421,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterFieldList() {
-        return filterField_.getUnmodifiableView();
+        filterField_.makeImmutable();
+        return filterField_;
       }
       /**
        * <pre>
@@ -2604,11 +2472,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterField(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterFieldIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterFieldIsMutable();
         filterField_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2623,11 +2490,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterField(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterFieldIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterFieldIsMutable();
         filterField_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2645,6 +2511,7 @@ public final class PaginationOuterClass {
         ensureFilterFieldIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterField_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2657,8 +2524,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterField() {
-        filterField_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        filterField_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -2673,22 +2541,22 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterFieldBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterFieldIsMutable();
         filterField_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterValueIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!filterValue_.isModifiable()) {
           filterValue_ = new com.google.protobuf.LazyStringArrayList(filterValue_);
-          bitField0_ |= 0x00000002;
-         }
+        }
+        bitField0_ |= 0x00000002;
       }
       /**
        * <pre>
@@ -2700,7 +2568,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterValueList() {
-        return filterValue_.getUnmodifiableView();
+        filterValue_.makeImmutable();
+        return filterValue_;
       }
       /**
        * <pre>
@@ -2750,11 +2619,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterValue(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterValueIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterValueIsMutable();
         filterValue_.set(index, value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2769,11 +2637,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterValueIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterValueIsMutable();
         filterValue_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2791,6 +2658,7 @@ public final class PaginationOuterClass {
         ensureFilterValueIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterValue_);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2803,8 +2671,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterValue() {
-        filterValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        filterValue_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
         onChanged();
         return this;
       }
@@ -2819,22 +2688,22 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterValueIsMutable();
         filterValue_.add(value);
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureFilterOperatorIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!filterOperator_.isModifiable()) {
           filterOperator_ = new com.google.protobuf.LazyStringArrayList(filterOperator_);
-          bitField0_ |= 0x00000004;
-         }
+        }
+        bitField0_ |= 0x00000004;
       }
       /**
        * <pre>
@@ -2846,7 +2715,8 @@ public final class PaginationOuterClass {
        */
       public com.google.protobuf.ProtocolStringList
           getFilterOperatorList() {
-        return filterOperator_.getUnmodifiableView();
+        filterOperator_.makeImmutable();
+        return filterOperator_;
       }
       /**
        * <pre>
@@ -2896,11 +2766,10 @@ public final class PaginationOuterClass {
        */
       public Builder setFilterOperator(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterOperatorIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterOperatorIsMutable();
         filterOperator_.set(index, value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2915,11 +2784,10 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterOperator(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFilterOperatorIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFilterOperatorIsMutable();
         filterOperator_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2937,6 +2805,7 @@ public final class PaginationOuterClass {
         ensureFilterOperatorIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, filterOperator_);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2949,8 +2818,9 @@ public final class PaginationOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFilterOperator() {
-        filterOperator_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        filterOperator_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
         onChanged();
         return this;
       }
@@ -2965,12 +2835,11 @@ public final class PaginationOuterClass {
        */
       public Builder addFilterOperatorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFilterOperatorIsMutable();
         filterOperator_.add(value);
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3007,7 +2876,18 @@ public final class PaginationOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Filter(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

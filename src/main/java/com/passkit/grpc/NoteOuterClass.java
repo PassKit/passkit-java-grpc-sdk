@@ -130,81 +130,6 @@ public final class NoteOuterClass {
       return new Note();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Note(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subjectId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              username_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
-              break;
-            }
-            case 34: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.NoteOuterClass.internal_static_io_Note_descriptor;
@@ -219,7 +144,8 @@ public final class NoteOuterClass {
     }
 
     public static final int SUBJECTID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object subjectId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subjectId_ = "";
     /**
      * <pre>
      * the id of the subject who note is a written against
@@ -265,7 +191,8 @@ public final class NoteOuterClass {
     }
 
     public static final int USERNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object username_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object username_ = "";
     /**
      * <pre>
      * the username of who creates the note
@@ -311,7 +238,8 @@ public final class NoteOuterClass {
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object message_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object message_ = "";
     /**
      * <pre>
      * the content of the note
@@ -391,7 +319,7 @@ public final class NoteOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -420,7 +348,7 @@ public final class NoteOuterClass {
       if (created_ != null) {
         output.writeMessage(4, getCreated());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -442,7 +370,7 @@ public final class NoteOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCreated());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -468,7 +396,7 @@ public final class NoteOuterClass {
         if (!getCreated()
             .equals(other.getCreated())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -489,7 +417,7 @@ public final class NoteOuterClass {
         hash = (37 * hash) + CREATED_FIELD_NUMBER;
         hash = (53 * hash) + getCreated().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -606,32 +534,24 @@ public final class NoteOuterClass {
 
       // Construct using com.passkit.grpc.NoteOuterClass.Note.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         subjectId_ = "";
-
         username_ = "";
-
         message_ = "";
-
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
         return this;
@@ -660,50 +580,29 @@ public final class NoteOuterClass {
       @java.lang.Override
       public com.passkit.grpc.NoteOuterClass.Note buildPartial() {
         com.passkit.grpc.NoteOuterClass.Note result = new com.passkit.grpc.NoteOuterClass.Note(this);
-        result.subjectId_ = subjectId_;
-        result.username_ = username_;
-        result.message_ = message_;
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.NoteOuterClass.Note result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subjectId_ = subjectId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.username_ = username_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.message_ = message_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.NoteOuterClass.Note) {
@@ -718,20 +617,23 @@ public final class NoteOuterClass {
         if (other == com.passkit.grpc.NoteOuterClass.Note.getDefaultInstance()) return this;
         if (!other.getSubjectId().isEmpty()) {
           subjectId_ = other.subjectId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasCreated()) {
           mergeCreated(other.getCreated());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -746,19 +648,55 @@ public final class NoteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.NoteOuterClass.Note parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subjectId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                username_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                message_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.NoteOuterClass.Note) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object subjectId_ = "";
       /**
@@ -813,11 +751,9 @@ public final class NoteOuterClass {
        */
       public Builder setSubjectId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         subjectId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -830,8 +766,8 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSubjectId() {
-        
         subjectId_ = getDefaultInstance().getSubjectId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -846,12 +782,10 @@ public final class NoteOuterClass {
        */
       public Builder setSubjectIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         subjectId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -909,11 +843,9 @@ public final class NoteOuterClass {
        */
       public Builder setUsername(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         username_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -926,8 +858,8 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
         username_ = getDefaultInstance().getUsername();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -942,12 +874,10 @@ public final class NoteOuterClass {
        */
       public Builder setUsernameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         username_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1005,11 +935,9 @@ public final class NoteOuterClass {
        */
       public Builder setMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         message_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1022,8 +950,8 @@ public final class NoteOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
         message_ = getDefaultInstance().getMessage();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1038,12 +966,10 @@ public final class NoteOuterClass {
        */
       public Builder setMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         message_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1060,7 +986,7 @@ public final class NoteOuterClass {
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -1090,11 +1016,11 @@ public final class NoteOuterClass {
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1108,11 +1034,11 @@ public final class NoteOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1124,17 +1050,18 @@ public final class NoteOuterClass {
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -1145,14 +1072,13 @@ public final class NoteOuterClass {
        * <code>.google.protobuf.Timestamp created = 4;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1163,7 +1089,7 @@ public final class NoteOuterClass {
        * <code>.google.protobuf.Timestamp created = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -1235,7 +1161,18 @@ public final class NoteOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Note(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

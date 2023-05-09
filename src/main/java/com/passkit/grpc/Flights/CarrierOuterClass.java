@@ -186,98 +186,6 @@ public final class CarrierOuterClass {
       return new Carrier();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Carrier(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              iataCarrierCode_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              icaoCarrierCode_ = s;
-              break;
-            }
-            case 24: {
-
-              iataAccountingCode_ = input.readInt32();
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              airlineName_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedAirlineName_ != null) {
-                subBuilder = localizedAirlineName_.toBuilder();
-              }
-              localizedAirlineName_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedAirlineName_);
-                localizedAirlineName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              passTypeIdentifier_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              privateKeyId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.CarrierOuterClass.internal_static_flights_Carrier_descriptor;
@@ -292,7 +200,8 @@ public final class CarrierOuterClass {
     }
 
     public static final int IATACARRIERCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object iataCarrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object iataCarrierCode_ = "";
     /**
      * <pre>
      * The IATA carrier code. If the carrier has not been issued an IATA carrier code or an ICAO carrier code, use YY.
@@ -338,7 +247,8 @@ public final class CarrierOuterClass {
     }
 
     public static final int ICAOCARRIERCODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object icaoCarrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object icaoCarrierCode_ = "";
     /**
      * <pre>
      * The ICAO carrier code. Required if an iataCarrierCode is not provided.
@@ -384,7 +294,7 @@ public final class CarrierOuterClass {
     }
 
     public static final int IATAACCOUNTINGCODE_FIELD_NUMBER = 3;
-    private int iataAccountingCode_;
+    private int iataAccountingCode_ = 0;
     /**
      * <pre>
      * The IATA accounting code / AWB prefix.  If no code has been allocated, enter zero.
@@ -399,7 +309,8 @@ public final class CarrierOuterClass {
     }
 
     public static final int AIRLINENAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object airlineName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object airlineName_ = "";
     /**
      * <pre>
      * The name of the airline. This will be printed below the logo on the Google Pay pass.
@@ -479,11 +390,12 @@ public final class CarrierOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedAirlineNameOrBuilder() {
-      return getLocalizedAirlineName();
+      return localizedAirlineName_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedAirlineName_;
     }
 
     public static final int PASSTYPEIDENTIFIER_FIELD_NUMBER = 6;
-    private volatile java.lang.Object passTypeIdentifier_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object passTypeIdentifier_ = "";
     /**
      * <pre>
      * If the carrier will issue Apple Wallet passes, supply the certificate id (E.g. pass.com.passkitair). The certificate must have previously been uploaded.
@@ -529,7 +441,8 @@ public final class CarrierOuterClass {
     }
 
     public static final int PRIVATEKEYID_FIELD_NUMBER = 7;
-    private volatile java.lang.Object privateKeyId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object privateKeyId_ = "";
     /**
      * <pre>
      * If PassKit are generating the boarding pass barcode, and the barcode needs signing, the ID of the private key used to sign the barcode payload.
@@ -609,7 +522,7 @@ public final class CarrierOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, privateKeyId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -641,7 +554,7 @@ public final class CarrierOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privateKeyId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, privateKeyId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -673,7 +586,7 @@ public final class CarrierOuterClass {
           .equals(other.getPassTypeIdentifier())) return false;
       if (!getPrivateKeyId()
           .equals(other.getPrivateKeyId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -700,7 +613,7 @@ public final class CarrierOuterClass {
       hash = (53 * hash) + getPassTypeIdentifier().hashCode();
       hash = (37 * hash) + PRIVATEKEYID_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateKeyId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -821,40 +734,29 @@ public final class CarrierOuterClass {
 
       // Construct using com.passkit.grpc.Flights.CarrierOuterClass.Carrier.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         iataCarrierCode_ = "";
-
         icaoCarrierCode_ = "";
-
         iataAccountingCode_ = 0;
-
         airlineName_ = "";
-
-        if (localizedAirlineNameBuilder_ == null) {
-          localizedAirlineName_ = null;
-        } else {
-          localizedAirlineName_ = null;
+        localizedAirlineName_ = null;
+        if (localizedAirlineNameBuilder_ != null) {
+          localizedAirlineNameBuilder_.dispose();
           localizedAirlineNameBuilder_ = null;
         }
         passTypeIdentifier_ = "";
-
         privateKeyId_ = "";
-
         return this;
       }
 
@@ -881,53 +783,38 @@ public final class CarrierOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.CarrierOuterClass.Carrier buildPartial() {
         com.passkit.grpc.Flights.CarrierOuterClass.Carrier result = new com.passkit.grpc.Flights.CarrierOuterClass.Carrier(this);
-        result.iataCarrierCode_ = iataCarrierCode_;
-        result.icaoCarrierCode_ = icaoCarrierCode_;
-        result.iataAccountingCode_ = iataAccountingCode_;
-        result.airlineName_ = airlineName_;
-        if (localizedAirlineNameBuilder_ == null) {
-          result.localizedAirlineName_ = localizedAirlineName_;
-        } else {
-          result.localizedAirlineName_ = localizedAirlineNameBuilder_.build();
-        }
-        result.passTypeIdentifier_ = passTypeIdentifier_;
-        result.privateKeyId_ = privateKeyId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.CarrierOuterClass.Carrier result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.iataCarrierCode_ = iataCarrierCode_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.icaoCarrierCode_ = icaoCarrierCode_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.iataAccountingCode_ = iataAccountingCode_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.airlineName_ = airlineName_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localizedAirlineName_ = localizedAirlineNameBuilder_ == null
+              ? localizedAirlineName_
+              : localizedAirlineNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.passTypeIdentifier_ = passTypeIdentifier_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.privateKeyId_ = privateKeyId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.CarrierOuterClass.Carrier) {
@@ -942,10 +829,12 @@ public final class CarrierOuterClass {
         if (other == com.passkit.grpc.Flights.CarrierOuterClass.Carrier.getDefaultInstance()) return this;
         if (!other.getIataCarrierCode().isEmpty()) {
           iataCarrierCode_ = other.iataCarrierCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getIcaoCarrierCode().isEmpty()) {
           icaoCarrierCode_ = other.icaoCarrierCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getIataAccountingCode() != 0) {
@@ -953,6 +842,7 @@ public final class CarrierOuterClass {
         }
         if (!other.getAirlineName().isEmpty()) {
           airlineName_ = other.airlineName_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasLocalizedAirlineName()) {
@@ -960,13 +850,15 @@ public final class CarrierOuterClass {
         }
         if (!other.getPassTypeIdentifier().isEmpty()) {
           passTypeIdentifier_ = other.passTypeIdentifier_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getPrivateKeyId().isEmpty()) {
           privateKeyId_ = other.privateKeyId_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -981,19 +873,70 @@ public final class CarrierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.CarrierOuterClass.Carrier parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                iataCarrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                icaoCarrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                iataAccountingCode_ = input.readInt32();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                airlineName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getLocalizedAirlineNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                passTypeIdentifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                privateKeyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.CarrierOuterClass.Carrier) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object iataCarrierCode_ = "";
       /**
@@ -1048,11 +991,9 @@ public final class CarrierOuterClass {
        */
       public Builder setIataCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         iataCarrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1065,8 +1006,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIataCarrierCode() {
-        
         iataCarrierCode_ = getDefaultInstance().getIataCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1081,12 +1022,10 @@ public final class CarrierOuterClass {
        */
       public Builder setIataCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         iataCarrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1144,11 +1083,9 @@ public final class CarrierOuterClass {
        */
       public Builder setIcaoCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         icaoCarrierCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1161,8 +1098,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIcaoCarrierCode() {
-        
         icaoCarrierCode_ = getDefaultInstance().getIcaoCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1177,12 +1114,10 @@ public final class CarrierOuterClass {
        */
       public Builder setIcaoCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         icaoCarrierCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1210,8 +1145,9 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder setIataAccountingCode(int value) {
-        
+
         iataAccountingCode_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1224,7 +1160,7 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIataAccountingCode() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         iataAccountingCode_ = 0;
         onChanged();
         return this;
@@ -1283,11 +1219,9 @@ public final class CarrierOuterClass {
        */
       public Builder setAirlineName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         airlineName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1300,8 +1234,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAirlineName() {
-        
         airlineName_ = getDefaultInstance().getAirlineName();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1316,12 +1250,10 @@ public final class CarrierOuterClass {
        */
       public Builder setAirlineNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         airlineName_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1338,7 +1270,7 @@ public final class CarrierOuterClass {
        * @return Whether the localizedAirlineName field is set.
        */
       public boolean hasLocalizedAirlineName() {
-        return localizedAirlineNameBuilder_ != null || localizedAirlineName_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1368,11 +1300,11 @@ public final class CarrierOuterClass {
             throw new NullPointerException();
           }
           localizedAirlineName_ = value;
-          onChanged();
         } else {
           localizedAirlineNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1386,11 +1318,11 @@ public final class CarrierOuterClass {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedAirlineNameBuilder_ == null) {
           localizedAirlineName_ = builderForValue.build();
-          onChanged();
         } else {
           localizedAirlineNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1402,17 +1334,18 @@ public final class CarrierOuterClass {
        */
       public Builder mergeLocalizedAirlineName(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedAirlineNameBuilder_ == null) {
-          if (localizedAirlineName_ != null) {
-            localizedAirlineName_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedAirlineName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            localizedAirlineName_ != null &&
+            localizedAirlineName_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedAirlineNameBuilder().mergeFrom(value);
           } else {
             localizedAirlineName_ = value;
           }
-          onChanged();
         } else {
           localizedAirlineNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1423,14 +1356,13 @@ public final class CarrierOuterClass {
        * <code>.io.LocalizedString localizedAirlineName = 5;</code>
        */
       public Builder clearLocalizedAirlineName() {
-        if (localizedAirlineNameBuilder_ == null) {
-          localizedAirlineName_ = null;
-          onChanged();
-        } else {
-          localizedAirlineName_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        localizedAirlineName_ = null;
+        if (localizedAirlineNameBuilder_ != null) {
+          localizedAirlineNameBuilder_.dispose();
           localizedAirlineNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1441,7 +1373,7 @@ public final class CarrierOuterClass {
        * <code>.io.LocalizedString localizedAirlineName = 5;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedAirlineNameBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getLocalizedAirlineNameFieldBuilder().getBuilder();
       }
@@ -1534,11 +1466,9 @@ public final class CarrierOuterClass {
        */
       public Builder setPassTypeIdentifier(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1551,8 +1481,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPassTypeIdentifier() {
-        
         passTypeIdentifier_ = getDefaultInstance().getPassTypeIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1567,12 +1497,10 @@ public final class CarrierOuterClass {
        */
       public Builder setPassTypeIdentifierBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         passTypeIdentifier_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1630,11 +1558,9 @@ public final class CarrierOuterClass {
        */
       public Builder setPrivateKeyId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         privateKeyId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1647,8 +1573,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPrivateKeyId() {
-        
         privateKeyId_ = getDefaultInstance().getPrivateKeyId();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1663,12 +1589,10 @@ public final class CarrierOuterClass {
        */
       public Builder setPrivateKeyIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         privateKeyId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1705,7 +1629,18 @@ public final class CarrierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Carrier(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1776,56 +1711,6 @@ public final class CarrierOuterClass {
       return new CarrierCode();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CarrierCode(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              carrierCode_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Flights.CarrierOuterClass.internal_static_flights_CarrierCode_descriptor;
@@ -1840,7 +1725,8 @@ public final class CarrierOuterClass {
     }
 
     public static final int CARRIERCODE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object carrierCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object carrierCode_ = "";
     /**
      * <pre>
      * The IATA or ICAO carrier code.
@@ -1902,7 +1788,7 @@ public final class CarrierOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, carrierCode_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1914,7 +1800,7 @@ public final class CarrierOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(carrierCode_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, carrierCode_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1931,7 +1817,7 @@ public final class CarrierOuterClass {
 
       if (!getCarrierCode()
           .equals(other.getCarrierCode())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1944,7 +1830,7 @@ public final class CarrierOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CARRIERCODE_FIELD_NUMBER;
       hash = (53 * hash) + getCarrierCode().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2065,24 +1951,19 @@ public final class CarrierOuterClass {
 
       // Construct using com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         carrierCode_ = "";
-
         return this;
       }
 
@@ -2109,43 +1990,18 @@ public final class CarrierOuterClass {
       @java.lang.Override
       public com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode buildPartial() {
         com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode result = new com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode(this);
-        result.carrierCode_ = carrierCode_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.carrierCode_ = carrierCode_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode) {
@@ -2160,9 +2016,10 @@ public final class CarrierOuterClass {
         if (other == com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode.getDefaultInstance()) return this;
         if (!other.getCarrierCode().isEmpty()) {
           carrierCode_ = other.carrierCode_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2177,19 +2034,38 @@ public final class CarrierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                carrierCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object carrierCode_ = "";
       /**
@@ -2244,11 +2120,9 @@ public final class CarrierOuterClass {
        */
       public Builder setCarrierCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2261,8 +2135,8 @@ public final class CarrierOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCarrierCode() {
-        
         carrierCode_ = getDefaultInstance().getCarrierCode();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2277,12 +2151,10 @@ public final class CarrierOuterClass {
        */
       public Builder setCarrierCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         carrierCode_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2319,7 +2191,18 @@ public final class CarrierOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CarrierCode(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

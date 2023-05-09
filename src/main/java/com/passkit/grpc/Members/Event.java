@@ -167,7 +167,6 @@ public final class Event {
      *
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -180,7 +179,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
@@ -235,109 +233,6 @@ java.lang.String defaultValue);
       return new EventDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private EventDetails(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              address_ = s;
-              break;
-            }
-            case 17: {
-
-              lat_ = input.readDouble();
-              break;
-            }
-            case 25: {
-
-              lon_ = input.readDouble();
-              break;
-            }
-            case 32: {
-
-              alt_ = input.readInt32();
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalEventId_ = s;
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalDeviceId_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalServiceId_ = s;
-              break;
-            }
-            case 66: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metaData_ = com.google.protobuf.MapField.newMapField(
-                    MetaDataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              metaData__ = input.readMessage(
-                  MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metaData_.getMutableMap().put(
-                  metaData__.getKey(), metaData__.getValue());
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              notes_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Members.Event.internal_static_members_EventDetails_descriptor;
@@ -364,7 +259,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ADDRESS_FIELD_NUMBER = 1;
-    private volatile java.lang.Object address_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
     /**
      * <pre>
      * Address the event took place.
@@ -410,7 +306,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LAT_FIELD_NUMBER = 2;
-    private double lat_;
+    private double lat_ = 0D;
     /**
      * <pre>
      * Latitude the event took place.
@@ -425,7 +321,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LON_FIELD_NUMBER = 3;
-    private double lon_;
+    private double lon_ = 0D;
     /**
      * <pre>
      * Longitude the event took place.
@@ -440,7 +336,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ALT_FIELD_NUMBER = 4;
-    private int alt_;
+    private int alt_ = 0;
     /**
      * <pre>
      * Altitude the event took place (in metres).
@@ -455,7 +351,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALEVENTID_FIELD_NUMBER = 5;
-    private volatile java.lang.Object externalEventId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalEventId_ = "";
     /**
      * <pre>
      * External unique ID of the event.
@@ -501,7 +398,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALDEVICEID_FIELD_NUMBER = 6;
-    private volatile java.lang.Object externalDeviceId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalDeviceId_ = "";
     /**
      * <pre>
      * External device ID of the device that was used to capture the event (for example when using an external scanning app).
@@ -547,7 +445,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALSERVICEID_FIELD_NUMBER = 7;
-    private volatile java.lang.Object externalServiceId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalServiceId_ = "";
     /**
      * <pre>
      * External service ID of the service that was used for capturing the event (for example when using an external scanning app).
@@ -604,6 +503,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -614,7 +514,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -625,7 +524,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -648,7 +546,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -660,10 +557,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -677,7 +575,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 8;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -690,7 +587,8 @@ java.lang.String defaultValue);
     }
 
     public static final int NOTES_FIELD_NUMBER = 9;
-    private volatile java.lang.Object notes_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object notes_ = "";
     /**
      * <pre>
      * Any relevant notes for the event.
@@ -779,7 +677,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, notes_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -825,7 +723,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(notes_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, notes_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -860,7 +758,7 @@ java.lang.String defaultValue);
           other.internalGetMetaData())) return false;
       if (!getNotes()
           .equals(other.getNotes())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -893,7 +791,7 @@ java.lang.String defaultValue);
       }
       hash = (37 * hash) + NOTES_FIELD_NUMBER;
       hash = (53 * hash) + getNotes().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1036,39 +934,27 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.Members.Event.EventDetails.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         address_ = "";
-
         lat_ = 0D;
-
         lon_ = 0D;
-
         alt_ = 0;
-
         externalEventId_ = "";
-
         externalDeviceId_ = "";
-
         externalServiceId_ = "";
-
         internalGetMutableMetaData().clear();
         notes_ = "";
-
         return this;
       }
 
@@ -1095,53 +981,43 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.Members.Event.EventDetails buildPartial() {
         com.passkit.grpc.Members.Event.EventDetails result = new com.passkit.grpc.Members.Event.EventDetails(this);
-        int from_bitField0_ = bitField0_;
-        result.address_ = address_;
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.alt_ = alt_;
-        result.externalEventId_ = externalEventId_;
-        result.externalDeviceId_ = externalDeviceId_;
-        result.externalServiceId_ = externalServiceId_;
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
-        result.notes_ = notes_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Members.Event.EventDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lat_ = lat_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lon_ = lon_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.alt_ = alt_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.externalEventId_ = externalEventId_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.externalDeviceId_ = externalDeviceId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.externalServiceId_ = externalServiceId_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.notes_ = notes_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Members.Event.EventDetails) {
@@ -1156,6 +1032,7 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.Members.Event.EventDetails.getDefaultInstance()) return this;
         if (!other.getAddress().isEmpty()) {
           address_ = other.address_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getLat() != 0D) {
@@ -1169,23 +1046,28 @@ java.lang.String defaultValue);
         }
         if (!other.getExternalEventId().isEmpty()) {
           externalEventId_ = other.externalEventId_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (!other.getExternalDeviceId().isEmpty()) {
           externalDeviceId_ = other.externalDeviceId_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getExternalServiceId().isEmpty()) {
           externalServiceId_ = other.externalServiceId_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
+        bitField0_ |= 0x00000080;
         if (!other.getNotes().isEmpty()) {
           notes_ = other.notes_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1200,17 +1082,79 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Members.Event.EventDetails parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 17: {
+                lat_ = input.readDouble();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 17
+              case 25: {
+                lon_ = input.readDouble();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 25
+              case 32: {
+                alt_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                externalEventId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                externalDeviceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                externalServiceId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metaData__ = input.readMessage(
+                    MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetaData().getMutableMap().put(
+                    metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                notes_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Members.Event.EventDetails) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1268,11 +1212,9 @@ java.lang.String defaultValue);
        */
       public Builder setAddress(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         address_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1285,8 +1227,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAddress() {
-        
         address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1301,12 +1243,10 @@ java.lang.String defaultValue);
        */
       public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         address_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1334,8 +1274,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1348,7 +1289,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         lat_ = 0D;
         onChanged();
         return this;
@@ -1377,8 +1318,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1391,7 +1333,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lon_ = 0D;
         onChanged();
         return this;
@@ -1420,8 +1362,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setAlt(int value) {
-        
+
         alt_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1434,7 +1377,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAlt() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         alt_ = 0;
         onChanged();
         return this;
@@ -1493,11 +1436,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalEventId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalEventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1510,8 +1451,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalEventId() {
-        
         externalEventId_ = getDefaultInstance().getExternalEventId();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1526,12 +1467,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalEventIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalEventId_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1589,11 +1528,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalDeviceId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalDeviceId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1606,8 +1543,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalDeviceId() {
-        
         externalDeviceId_ = getDefaultInstance().getExternalDeviceId();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1622,12 +1559,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalDeviceIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalDeviceId_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1685,11 +1620,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalServiceId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalServiceId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1702,8 +1635,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalServiceId() {
-        
         externalServiceId_ = getDefaultInstance().getExternalServiceId();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1718,12 +1651,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalServiceIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalServiceId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1731,7 +1662,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -1739,8 +1670,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -1748,9 +1678,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00000080;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -1761,7 +1692,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -1784,7 +1714,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -1796,10 +1725,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -1813,7 +1743,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1824,8 +1753,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000080);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -1837,7 +1766,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1850,7 +1778,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00000080;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -1864,12 +1793,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000080;
         return this;
       }
       /**
@@ -1879,11 +1806,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 8;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000080;
         return this;
       }
 
@@ -1940,11 +1867,9 @@ java.lang.String defaultValue);
        */
       public Builder setNotes(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         notes_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1957,8 +1882,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearNotes() {
-        
         notes_ = getDefaultInstance().getNotes();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -1973,12 +1898,10 @@ java.lang.String defaultValue);
        */
       public Builder setNotesBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         notes_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2015,7 +1938,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new EventDetails(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

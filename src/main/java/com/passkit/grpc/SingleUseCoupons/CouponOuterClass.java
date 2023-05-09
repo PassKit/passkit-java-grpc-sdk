@@ -288,7 +288,6 @@ public final class CouponOuterClass {
      *
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -301,7 +300,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
 
@@ -548,196 +546,6 @@ java.lang.String defaultValue);
       return new Coupon();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Coupon(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              offerId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              campaignId_ = s;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.Personal.Person.Builder subBuilder = null;
-              if (person_ != null) {
-                subBuilder = person_.toBuilder();
-              }
-              person_ = input.readMessage(com.passkit.grpc.Personal.Person.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(person_);
-                person_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metaData_ = com.google.protobuf.MapField.newMapField(
-                    MetaDataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              metaData__ = input.readMessage(
-                  MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metaData_.getMutableMap().put(
-                  metaData__.getKey(), metaData__.getValue());
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              sku_ = s;
-              break;
-            }
-            case 64: {
-
-              optOut_ = input.readBool();
-              break;
-            }
-            case 80: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            case 90: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (expiryDate_ != null) {
-                subBuilder = expiryDate_.toBuilder();
-              }
-              expiryDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(expiryDate_);
-                expiryDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.Builder subBuilder = null;
-              if (redemptionDetails_ != null) {
-                subBuilder = redemptionDetails_.toBuilder();
-              }
-              redemptionDetails_ = input.readMessage(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(redemptionDetails_);
-                redemptionDetails_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.passkit.grpc.PassOuterClass.PassOverrides.Builder subBuilder = null;
-              if (passOverrides_ != null) {
-                subBuilder = passOverrides_.toBuilder();
-              }
-              passOverrides_ = input.readMessage(com.passkit.grpc.PassOuterClass.PassOverrides.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(passOverrides_);
-                passOverrides_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              com.passkit.grpc.MetricsOuterClass.Metadata.Builder subBuilder = null;
-              if (passMetaData_ != null) {
-                subBuilder = passMetaData_.toBuilder();
-              }
-              passMetaData_ = input.readMessage(com.passkit.grpc.MetricsOuterClass.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(passMetaData_);
-                passMetaData_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 122: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (created_ != null) {
-                subBuilder = created_.toBuilder();
-              }
-              created_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(created_);
-                created_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 130: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (updated_ != null) {
-                subBuilder = updated_.toBuilder();
-              }
-              updated_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(updated_);
-                updated_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_Coupon_descriptor;
@@ -764,7 +572,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated coupon id (22 characters).
@@ -810,7 +619,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * This can be used to set the 'external' ID of the coupon (i.e. the unique coupon code as it's being used in your system). If provided then this can be used to query &amp; update coupon. This field will be treated as unique within the campaign, and cannot be updated at a later stage.
@@ -856,7 +666,8 @@ java.lang.String defaultValue);
     }
 
     public static final int OFFERID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object offerId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object offerId_ = "";
     /**
      * <pre>
      * The coupon offer id that the coupon belongs to.
@@ -902,7 +713,8 @@ java.lang.String defaultValue);
     }
 
     public static final int CAMPAIGNID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object campaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object campaignId_ = "";
     /**
      * <pre>
      * The coupon campaign id the the coupon belongs to.
@@ -982,7 +794,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonOrBuilder() {
-      return getPerson();
+      return person_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : person_;
     }
 
     public static final int METADATA_FIELD_NUMBER = 6;
@@ -997,6 +809,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -1007,7 +820,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -1018,7 +830,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -1041,7 +852,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -1053,10 +863,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -1070,7 +881,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 6;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -1083,7 +893,8 @@ java.lang.String defaultValue);
     }
 
     public static final int SKU_FIELD_NUMBER = 7;
-    private volatile java.lang.Object sku_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sku_ = "";
     /**
      * <pre>
      * Optional SKU. Can be used in the barcode by setting ${coupon.sku} in the template barcode settings.
@@ -1129,7 +940,7 @@ java.lang.String defaultValue);
     }
 
     public static final int OPTOUT_FIELD_NUMBER = 8;
-    private boolean optOut_;
+    private boolean optOut_ = false;
     /**
      * <pre>
      * Indicates if the user of the coupon opted out to receive marketing promotions (defaults to false).
@@ -1144,7 +955,7 @@ java.lang.String defaultValue);
     }
 
     public static final int STATUS_FIELD_NUMBER = 10;
-    private int status_;
+    private int status_ = 0;
     /**
      * <pre>
      * Holds the coupon status.
@@ -1165,8 +976,7 @@ java.lang.String defaultValue);
      * @return The status.
      */
     @java.lang.Override public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus result = com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.valueOf(status_);
+      com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus result = com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.forNumber(status_);
       return result == null ? com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.UNRECOGNIZED : result;
     }
 
@@ -1205,7 +1015,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getExpiryDateOrBuilder() {
-      return getExpiryDate();
+      return expiryDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expiryDate_;
     }
 
     public static final int REDEMPTIONDETAILS_FIELD_NUMBER = 12;
@@ -1243,7 +1053,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetailsOrBuilder getRedemptionDetailsOrBuilder() {
-      return getRedemptionDetails();
+      return redemptionDetails_ == null ? com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.getDefaultInstance() : redemptionDetails_;
     }
 
     public static final int PASSOVERRIDES_FIELD_NUMBER = 13;
@@ -1281,7 +1091,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.PassOuterClass.PassOverridesOrBuilder getPassOverridesOrBuilder() {
-      return getPassOverrides();
+      return passOverrides_ == null ? com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance() : passOverrides_;
     }
 
     public static final int PASSMETADATA_FIELD_NUMBER = 14;
@@ -1319,7 +1129,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetadataOrBuilder getPassMetaDataOrBuilder() {
-      return getPassMetaData();
+      return passMetaData_ == null ? com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance() : passMetaData_;
     }
 
     public static final int CREATED_FIELD_NUMBER = 15;
@@ -1357,7 +1167,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedOrBuilder() {
-      return getCreated();
+      return created_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : created_;
     }
 
     public static final int UPDATED_FIELD_NUMBER = 16;
@@ -1395,7 +1205,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedOrBuilder() {
-      return getUpdated();
+      return updated_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updated_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1460,7 +1270,7 @@ java.lang.String defaultValue);
       if (updated_ != null) {
         output.writeMessage(16, getUpdated());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1530,7 +1340,7 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getUpdated());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1595,7 +1405,7 @@ java.lang.String defaultValue);
         if (!getUpdated()
             .equals(other.getUpdated())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1653,7 +1463,7 @@ java.lang.String defaultValue);
         hash = (37 * hash) + UPDATED_FIELD_NUMBER;
         hash = (53 * hash) + getUpdated().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1796,77 +1606,59 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         externalId_ = "";
-
         offerId_ = "";
-
         campaignId_ = "";
-
-        if (personBuilder_ == null) {
-          person_ = null;
-        } else {
-          person_ = null;
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
         internalGetMutableMetaData().clear();
         sku_ = "";
-
         optOut_ = false;
-
         status_ = 0;
-
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-        } else {
-          expiryDate_ = null;
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-        } else {
-          redemptionDetails_ = null;
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-        } else {
-          passOverrides_ = null;
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-        } else {
-          passMetaData_ = null;
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-        if (createdBuilder_ == null) {
-          created_ = null;
-        } else {
-          created_ = null;
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-        } else {
-          updated_ = null;
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
         return this;
@@ -1895,87 +1687,75 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.externalId_ = externalId_;
-        result.offerId_ = offerId_;
-        result.campaignId_ = campaignId_;
-        if (personBuilder_ == null) {
-          result.person_ = person_;
-        } else {
-          result.person_ = personBuilder_.build();
-        }
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
-        result.sku_ = sku_;
-        result.optOut_ = optOut_;
-        result.status_ = status_;
-        if (expiryDateBuilder_ == null) {
-          result.expiryDate_ = expiryDate_;
-        } else {
-          result.expiryDate_ = expiryDateBuilder_.build();
-        }
-        if (redemptionDetailsBuilder_ == null) {
-          result.redemptionDetails_ = redemptionDetails_;
-        } else {
-          result.redemptionDetails_ = redemptionDetailsBuilder_.build();
-        }
-        if (passOverridesBuilder_ == null) {
-          result.passOverrides_ = passOverrides_;
-        } else {
-          result.passOverrides_ = passOverridesBuilder_.build();
-        }
-        if (passMetaDataBuilder_ == null) {
-          result.passMetaData_ = passMetaData_;
-        } else {
-          result.passMetaData_ = passMetaDataBuilder_.build();
-        }
-        if (createdBuilder_ == null) {
-          result.created_ = created_;
-        } else {
-          result.created_ = createdBuilder_.build();
-        }
-        if (updatedBuilder_ == null) {
-          result.updated_ = updated_;
-        } else {
-          result.updated_ = updatedBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.externalId_ = externalId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.offerId_ = offerId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.campaignId_ = campaignId_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.person_ = personBuilder_ == null
+              ? person_
+              : personBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.sku_ = sku_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.optOut_ = optOut_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.expiryDate_ = expiryDateBuilder_ == null
+              ? expiryDate_
+              : expiryDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.redemptionDetails_ = redemptionDetailsBuilder_ == null
+              ? redemptionDetails_
+              : redemptionDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.passOverrides_ = passOverridesBuilder_ == null
+              ? passOverrides_
+              : passOverridesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.passMetaData_ = passMetaDataBuilder_ == null
+              ? passMetaData_
+              : passMetaDataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.created_ = createdBuilder_ == null
+              ? created_
+              : createdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.updated_ = updatedBuilder_ == null
+              ? updated_
+              : updatedBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon) {
@@ -1990,18 +1770,22 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getOfferId().isEmpty()) {
           offerId_ = other.offerId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getCampaignId().isEmpty()) {
           campaignId_ = other.campaignId_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasPerson()) {
@@ -2009,8 +1793,10 @@ java.lang.String defaultValue);
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
+        bitField0_ |= 0x00000020;
         if (!other.getSku().isEmpty()) {
           sku_ = other.sku_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (other.getOptOut() != false) {
@@ -2037,7 +1823,7 @@ java.lang.String defaultValue);
         if (other.hasUpdated()) {
           mergeUpdated(other.getUpdated());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2052,17 +1838,123 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                externalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                offerId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                campaignId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getPersonFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metaData__ = input.readMessage(
+                    MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetaData().getMutableMap().put(
+                    metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                sku_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                optOut_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 80: {
+                status_ = input.readEnum();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 80
+              case 90: {
+                input.readMessage(
+                    getExpiryDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getRedemptionDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getPassOverridesFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getPassMetaDataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getCreatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 122
+              case 130: {
+                input.readMessage(
+                    getUpdatedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 130
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2120,11 +2012,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2137,8 +2027,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2153,12 +2043,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2216,11 +2104,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2233,8 +2119,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2249,12 +2135,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2312,11 +2196,9 @@ java.lang.String defaultValue);
        */
       public Builder setOfferId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         offerId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2329,8 +2211,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOfferId() {
-        
         offerId_ = getDefaultInstance().getOfferId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2345,12 +2227,10 @@ java.lang.String defaultValue);
        */
       public Builder setOfferIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         offerId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2408,11 +2288,9 @@ java.lang.String defaultValue);
        */
       public Builder setCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         campaignId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2425,8 +2303,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCampaignId() {
-        
         campaignId_ = getDefaultInstance().getCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -2441,12 +2319,10 @@ java.lang.String defaultValue);
        */
       public Builder setCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         campaignId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2463,7 +2339,7 @@ java.lang.String defaultValue);
        * @return Whether the person field is set.
        */
       public boolean hasPerson() {
-        return personBuilder_ != null || person_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -2493,11 +2369,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           person_ = value;
-          onChanged();
         } else {
           personBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2511,11 +2387,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personBuilder_ == null) {
           person_ = builderForValue.build();
-          onChanged();
         } else {
           personBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2527,17 +2403,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePerson(com.passkit.grpc.Personal.Person value) {
         if (personBuilder_ == null) {
-          if (person_ != null) {
-            person_ =
-              com.passkit.grpc.Personal.Person.newBuilder(person_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            person_ != null &&
+            person_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonBuilder().mergeFrom(value);
           } else {
             person_ = value;
           }
-          onChanged();
         } else {
           personBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2548,14 +2425,13 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 5;</code>
        */
       public Builder clearPerson() {
-        if (personBuilder_ == null) {
-          person_ = null;
-          onChanged();
-        } else {
-          person_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        person_ = null;
+        if (personBuilder_ != null) {
+          personBuilder_.dispose();
           personBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2566,7 +2442,7 @@ java.lang.String defaultValue);
        * <code>.io.Person person = 5;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getPersonFieldBuilder().getBuilder();
       }
@@ -2609,7 +2485,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -2617,8 +2493,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -2626,9 +2501,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -2639,7 +2515,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -2662,7 +2537,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -2674,10 +2548,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -2691,7 +2566,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -2702,8 +2576,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000020);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -2715,7 +2589,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -2728,7 +2601,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00000020;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -2742,12 +2616,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -2757,11 +2629,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 6;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000020;
         return this;
       }
 
@@ -2818,11 +2690,9 @@ java.lang.String defaultValue);
        */
       public Builder setSku(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         sku_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2835,8 +2705,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSku() {
-        
         sku_ = getDefaultInstance().getSku();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2851,12 +2721,10 @@ java.lang.String defaultValue);
        */
       public Builder setSkuBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         sku_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2884,8 +2752,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setOptOut(boolean value) {
-        
+
         optOut_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2898,7 +2767,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearOptOut() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         optOut_ = false;
         onChanged();
         return this;
@@ -2926,8 +2795,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setStatusValue(int value) {
-        
         status_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -2941,8 +2810,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus result = com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.valueOf(status_);
+        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus result = com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.forNumber(status_);
         return result == null ? com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponStatus.UNRECOGNIZED : result;
       }
       /**
@@ -2958,7 +2826,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000100;
         status_ = value.getNumber();
         onChanged();
         return this;
@@ -2972,7 +2840,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         status_ = 0;
         onChanged();
         return this;
@@ -2990,7 +2858,7 @@ java.lang.String defaultValue);
        * @return Whether the expiryDate field is set.
        */
       public boolean hasExpiryDate() {
-        return expiryDateBuilder_ != null || expiryDate_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -3020,11 +2888,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           expiryDate_ = value;
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3038,11 +2906,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (expiryDateBuilder_ == null) {
           expiryDate_ = builderForValue.build();
-          onChanged();
         } else {
           expiryDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3054,17 +2922,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeExpiryDate(com.google.protobuf.Timestamp value) {
         if (expiryDateBuilder_ == null) {
-          if (expiryDate_ != null) {
-            expiryDate_ =
-              com.google.protobuf.Timestamp.newBuilder(expiryDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            expiryDate_ != null &&
+            expiryDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getExpiryDateBuilder().mergeFrom(value);
           } else {
             expiryDate_ = value;
           }
-          onChanged();
         } else {
           expiryDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -3075,14 +2944,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 11;</code>
        */
       public Builder clearExpiryDate() {
-        if (expiryDateBuilder_ == null) {
-          expiryDate_ = null;
-          onChanged();
-        } else {
-          expiryDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        expiryDate_ = null;
+        if (expiryDateBuilder_ != null) {
+          expiryDateBuilder_.dispose();
           expiryDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3093,7 +2961,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp expiryDate = 11;</code>
        */
       public com.google.protobuf.Timestamp.Builder getExpiryDateBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getExpiryDateFieldBuilder().getBuilder();
       }
@@ -3145,7 +3013,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDetails field is set.
        */
       public boolean hasRedemptionDetails() {
-        return redemptionDetailsBuilder_ != null || redemptionDetails_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <pre>
@@ -3175,11 +3043,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDetails_ = value;
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3193,11 +3061,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.Builder builderForValue) {
         if (redemptionDetailsBuilder_ == null) {
           redemptionDetails_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3209,17 +3077,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDetails(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails value) {
         if (redemptionDetailsBuilder_ == null) {
-          if (redemptionDetails_ != null) {
-            redemptionDetails_ =
-              com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.newBuilder(redemptionDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            redemptionDetails_ != null &&
+            redemptionDetails_ != com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.getDefaultInstance()) {
+            getRedemptionDetailsBuilder().mergeFrom(value);
           } else {
             redemptionDetails_ = value;
           }
-          onChanged();
         } else {
           redemptionDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -3230,14 +3099,13 @@ java.lang.String defaultValue);
        * <code>.single_use_coupons.RedemptionDetails redemptionDetails = 12;</code>
        */
       public Builder clearRedemptionDetails() {
-        if (redemptionDetailsBuilder_ == null) {
-          redemptionDetails_ = null;
-          onChanged();
-        } else {
-          redemptionDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        redemptionDetails_ = null;
+        if (redemptionDetailsBuilder_ != null) {
+          redemptionDetailsBuilder_.dispose();
           redemptionDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3248,7 +3116,7 @@ java.lang.String defaultValue);
        * <code>.single_use_coupons.RedemptionDetails redemptionDetails = 12;</code>
        */
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.Builder getRedemptionDetailsBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getRedemptionDetailsFieldBuilder().getBuilder();
       }
@@ -3300,7 +3168,7 @@ java.lang.String defaultValue);
        * @return Whether the passOverrides field is set.
        */
       public boolean hasPassOverrides() {
-        return passOverridesBuilder_ != null || passOverrides_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <pre>
@@ -3330,11 +3198,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passOverrides_ = value;
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3348,11 +3216,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.PassOuterClass.PassOverrides.Builder builderForValue) {
         if (passOverridesBuilder_ == null) {
           passOverrides_ = builderForValue.build();
-          onChanged();
         } else {
           passOverridesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3364,17 +3232,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassOverrides(com.passkit.grpc.PassOuterClass.PassOverrides value) {
         if (passOverridesBuilder_ == null) {
-          if (passOverrides_ != null) {
-            passOverrides_ =
-              com.passkit.grpc.PassOuterClass.PassOverrides.newBuilder(passOverrides_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            passOverrides_ != null &&
+            passOverrides_ != com.passkit.grpc.PassOuterClass.PassOverrides.getDefaultInstance()) {
+            getPassOverridesBuilder().mergeFrom(value);
           } else {
             passOverrides_ = value;
           }
-          onChanged();
         } else {
           passOverridesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -3385,14 +3254,13 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 13;</code>
        */
       public Builder clearPassOverrides() {
-        if (passOverridesBuilder_ == null) {
-          passOverrides_ = null;
-          onChanged();
-        } else {
-          passOverrides_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        passOverrides_ = null;
+        if (passOverridesBuilder_ != null) {
+          passOverridesBuilder_.dispose();
           passOverridesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3403,7 +3271,7 @@ java.lang.String defaultValue);
        * <code>.io.PassOverrides passOverrides = 13;</code>
        */
       public com.passkit.grpc.PassOuterClass.PassOverrides.Builder getPassOverridesBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getPassOverridesFieldBuilder().getBuilder();
       }
@@ -3455,7 +3323,7 @@ java.lang.String defaultValue);
        * @return Whether the passMetaData field is set.
        */
       public boolean hasPassMetaData() {
-        return passMetaDataBuilder_ != null || passMetaData_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -3485,11 +3353,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           passMetaData_ = value;
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3503,11 +3371,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.MetricsOuterClass.Metadata.Builder builderForValue) {
         if (passMetaDataBuilder_ == null) {
           passMetaData_ = builderForValue.build();
-          onChanged();
         } else {
           passMetaDataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3519,17 +3387,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePassMetaData(com.passkit.grpc.MetricsOuterClass.Metadata value) {
         if (passMetaDataBuilder_ == null) {
-          if (passMetaData_ != null) {
-            passMetaData_ =
-              com.passkit.grpc.MetricsOuterClass.Metadata.newBuilder(passMetaData_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            passMetaData_ != null &&
+            passMetaData_ != com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance()) {
+            getPassMetaDataBuilder().mergeFrom(value);
           } else {
             passMetaData_ = value;
           }
-          onChanged();
         } else {
           passMetaDataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -3540,14 +3409,13 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 14;</code>
        */
       public Builder clearPassMetaData() {
-        if (passMetaDataBuilder_ == null) {
-          passMetaData_ = null;
-          onChanged();
-        } else {
-          passMetaData_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        passMetaData_ = null;
+        if (passMetaDataBuilder_ != null) {
+          passMetaDataBuilder_.dispose();
           passMetaDataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3558,7 +3426,7 @@ java.lang.String defaultValue);
        * <code>.io.Metadata passMetaData = 14;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metadata.Builder getPassMetaDataBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getPassMetaDataFieldBuilder().getBuilder();
       }
@@ -3610,7 +3478,7 @@ java.lang.String defaultValue);
        * @return Whether the created field is set.
        */
       public boolean hasCreated() {
-        return createdBuilder_ != null || created_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <pre>
@@ -3640,11 +3508,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           created_ = value;
-          onChanged();
         } else {
           createdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3658,11 +3526,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdBuilder_ == null) {
           created_ = builderForValue.build();
-          onChanged();
         } else {
           createdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3674,17 +3542,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeCreated(com.google.protobuf.Timestamp value) {
         if (createdBuilder_ == null) {
-          if (created_ != null) {
-            created_ =
-              com.google.protobuf.Timestamp.newBuilder(created_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            created_ != null &&
+            created_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedBuilder().mergeFrom(value);
           } else {
             created_ = value;
           }
-          onChanged();
         } else {
           createdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -3695,14 +3564,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 15;</code>
        */
       public Builder clearCreated() {
-        if (createdBuilder_ == null) {
-          created_ = null;
-          onChanged();
-        } else {
-          created_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        created_ = null;
+        if (createdBuilder_ != null) {
+          createdBuilder_.dispose();
           createdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3713,7 +3581,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp created = 15;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getCreatedFieldBuilder().getBuilder();
       }
@@ -3765,7 +3633,7 @@ java.lang.String defaultValue);
        * @return Whether the updated field is set.
        */
       public boolean hasUpdated() {
-        return updatedBuilder_ != null || updated_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <pre>
@@ -3795,11 +3663,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           updated_ = value;
-          onChanged();
         } else {
           updatedBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -3813,11 +3681,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedBuilder_ == null) {
           updated_ = builderForValue.build();
-          onChanged();
         } else {
           updatedBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -3829,17 +3697,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeUpdated(com.google.protobuf.Timestamp value) {
         if (updatedBuilder_ == null) {
-          if (updated_ != null) {
-            updated_ =
-              com.google.protobuf.Timestamp.newBuilder(updated_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            updated_ != null &&
+            updated_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedBuilder().mergeFrom(value);
           } else {
             updated_ = value;
           }
-          onChanged();
         } else {
           updatedBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -3850,14 +3719,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 16;</code>
        */
       public Builder clearUpdated() {
-        if (updatedBuilder_ == null) {
-          updated_ = null;
-          onChanged();
-        } else {
-          updated_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        updated_ = null;
+        if (updatedBuilder_ != null) {
+          updatedBuilder_.dispose();
           updatedBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3868,7 +3736,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp updated = 16;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getUpdatedFieldBuilder().getBuilder();
       }
@@ -3940,7 +3808,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Coupon(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4150,7 +4029,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
-
     /* nullable */
 java.lang.String getMetaDataOrDefault(
         java.lang.String key,
@@ -4163,7 +4041,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
-
     java.lang.String getMetaDataOrThrow(
         java.lang.String key);
   }
@@ -4193,121 +4070,6 @@ java.lang.String defaultValue);
       return new RedemptionDetails();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RedemptionDetails(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (redemptionDate_ != null) {
-                subBuilder = redemptionDate_.toBuilder();
-              }
-              redemptionDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(redemptionDate_);
-                redemptionDate_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              redemptionCode_ = s;
-              break;
-            }
-            case 25: {
-
-              lat_ = input.readDouble();
-              break;
-            }
-            case 33: {
-
-              lon_ = input.readDouble();
-              break;
-            }
-            case 40: {
-
-              alt_ = input.readInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              redemptionSource_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              redemptionReference_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              transactionReference_ = s;
-              break;
-            }
-            case 73: {
-
-              transactionAmount_ = input.readDouble();
-              break;
-            }
-            case 82: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                metaData_ = com.google.protobuf.MapField.newMapField(
-                    MetaDataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              metaData__ = input.readMessage(
-                  MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              metaData_.getMutableMap().put(
-                  metaData__.getKey(), metaData__.getValue());
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_RedemptionDetails_descriptor;
@@ -4368,11 +4130,12 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getRedemptionDateOrBuilder() {
-      return getRedemptionDate();
+      return redemptionDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : redemptionDate_;
     }
 
     public static final int REDEMPTIONCODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object redemptionCode_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionCode_ = "";
     /**
      * <pre>
      * Optional field that contains the redemption code provided on redeem (either the fixed one if set, or user provided).
@@ -4418,7 +4181,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LAT_FIELD_NUMBER = 3;
-    private double lat_;
+    private double lat_ = 0D;
     /**
      * <pre>
      * Option redemption GPS lat, lon &amp;  alt.
@@ -4433,7 +4196,7 @@ java.lang.String defaultValue);
     }
 
     public static final int LON_FIELD_NUMBER = 4;
-    private double lon_;
+    private double lon_ = 0D;
     /**
      * <pre>
      * Longitude.
@@ -4448,7 +4211,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ALT_FIELD_NUMBER = 5;
-    private int alt_;
+    private int alt_ = 0;
     /**
      * <pre>
      * Altitude in metres.
@@ -4463,7 +4226,8 @@ java.lang.String defaultValue);
     }
 
     public static final int REDEMPTIONSOURCE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object redemptionSource_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionSource_ = "";
     /**
      * <pre>
      * Optional redemption user agent, can be used in case where a Merchant uses the PassKit scanning solution combined with their own POS redemption and wants to differentiate the source of redemption.
@@ -4509,7 +4273,8 @@ java.lang.String defaultValue);
     }
 
     public static final int REDEMPTIONREFERENCE_FIELD_NUMBER = 7;
-    private volatile java.lang.Object redemptionReference_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redemptionReference_ = "";
     /**
      * <pre>
      * Optional redemption reference, can be used for staff name, username, POS ID, location ID, etc.
@@ -4555,7 +4320,8 @@ java.lang.String defaultValue);
     }
 
     public static final int TRANSACTIONREFERENCE_FIELD_NUMBER = 8;
-    private volatile java.lang.Object transactionReference_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transactionReference_ = "";
     /**
      * <pre>
      * Optional transaction reference, can be used to consolidate baskets at a later stage via a manual process.
@@ -4601,7 +4367,7 @@ java.lang.String defaultValue);
     }
 
     public static final int TRANSACTIONAMOUNT_FIELD_NUMBER = 9;
-    private double transactionAmount_;
+    private double transactionAmount_ = 0D;
     /**
      * <pre>
      * Optional total transaction amount.
@@ -4627,6 +4393,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metaData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -4637,7 +4404,6 @@ java.lang.String defaultValue);
       }
       return metaData_;
     }
-
     public int getMetaDataCount() {
       return internalGetMetaData().getMap().size();
     }
@@ -4648,7 +4414,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
-
     @java.lang.Override
     public boolean containsMetaData(
         java.lang.String key) {
@@ -4671,7 +4436,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
       return internalGetMetaData().getMap();
     }
@@ -4683,10 +4447,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetaDataOrDefault(
+    public /* nullable */
+java.lang.String getMetaDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetaData().getMap();
@@ -4700,7 +4465,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; metaData = 10;</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetaDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -4759,7 +4523,7 @@ java.lang.String defaultValue);
           internalGetMetaData(),
           MetaDataDefaultEntryHolder.defaultEntry,
           10);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4810,7 +4574,7 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(10, metaData__);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4851,7 +4615,7 @@ java.lang.String defaultValue);
               other.getTransactionAmount())) return false;
       if (!internalGetMetaData().equals(
           other.internalGetMetaData())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4889,7 +4653,7 @@ java.lang.String defaultValue);
         hash = (37 * hash) + METADATA_FIELD_NUMBER;
         hash = (53 * hash) + internalGetMetaData().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5028,44 +4792,31 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (redemptionDateBuilder_ == null) {
-          redemptionDate_ = null;
-        } else {
-          redemptionDate_ = null;
+        bitField0_ = 0;
+        redemptionDate_ = null;
+        if (redemptionDateBuilder_ != null) {
+          redemptionDateBuilder_.dispose();
           redemptionDateBuilder_ = null;
         }
         redemptionCode_ = "";
-
         lat_ = 0D;
-
         lon_ = 0D;
-
         alt_ = 0;
-
         redemptionSource_ = "";
-
         redemptionReference_ = "";
-
         transactionReference_ = "";
-
         transactionAmount_ = 0D;
-
         internalGetMutableMetaData().clear();
         return this;
       }
@@ -5093,58 +4844,48 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails(this);
-        int from_bitField0_ = bitField0_;
-        if (redemptionDateBuilder_ == null) {
-          result.redemptionDate_ = redemptionDate_;
-        } else {
-          result.redemptionDate_ = redemptionDateBuilder_.build();
-        }
-        result.redemptionCode_ = redemptionCode_;
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.alt_ = alt_;
-        result.redemptionSource_ = redemptionSource_;
-        result.redemptionReference_ = redemptionReference_;
-        result.transactionReference_ = transactionReference_;
-        result.transactionAmount_ = transactionAmount_;
-        result.metaData_ = internalGetMetaData();
-        result.metaData_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.redemptionDate_ = redemptionDateBuilder_ == null
+              ? redemptionDate_
+              : redemptionDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.redemptionCode_ = redemptionCode_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lat_ = lat_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lon_ = lon_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.alt_ = alt_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.redemptionSource_ = redemptionSource_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.redemptionReference_ = redemptionReference_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.transactionReference_ = transactionReference_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.transactionAmount_ = transactionAmount_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.metaData_ = internalGetMetaData();
+          result.metaData_.makeImmutable();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails) {
@@ -5162,6 +4903,7 @@ java.lang.String defaultValue);
         }
         if (!other.getRedemptionCode().isEmpty()) {
           redemptionCode_ = other.redemptionCode_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getLat() != 0D) {
@@ -5175,14 +4917,17 @@ java.lang.String defaultValue);
         }
         if (!other.getRedemptionSource().isEmpty()) {
           redemptionSource_ = other.redemptionSource_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (!other.getRedemptionReference().isEmpty()) {
           redemptionReference_ = other.redemptionReference_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         if (!other.getTransactionReference().isEmpty()) {
           transactionReference_ = other.transactionReference_;
+          bitField0_ |= 0x00000080;
           onChanged();
         }
         if (other.getTransactionAmount() != 0D) {
@@ -5190,7 +4935,8 @@ java.lang.String defaultValue);
         }
         internalGetMutableMetaData().mergeFrom(
             other.internalGetMetaData());
-        this.mergeUnknownFields(other.unknownFields);
+        bitField0_ |= 0x00000200;
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -5205,17 +4951,86 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRedemptionDateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                redemptionCode_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 25: {
+                lat_ = input.readDouble();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 25
+              case 33: {
+                lon_ = input.readDouble();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 33
+              case 40: {
+                alt_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                redemptionSource_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                redemptionReference_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                transactionReference_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 73: {
+                transactionAmount_ = input.readDouble();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 73
+              case 82: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                metaData__ = input.readMessage(
+                    MetaDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableMetaData().getMutableMap().put(
+                    metaData__.getKey(), metaData__.getValue());
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.RedemptionDetails) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -5232,7 +5047,7 @@ java.lang.String defaultValue);
        * @return Whether the redemptionDate field is set.
        */
       public boolean hasRedemptionDate() {
-        return redemptionDateBuilder_ != null || redemptionDate_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -5262,11 +5077,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           redemptionDate_ = value;
-          onChanged();
         } else {
           redemptionDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5280,11 +5095,11 @@ java.lang.String defaultValue);
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (redemptionDateBuilder_ == null) {
           redemptionDate_ = builderForValue.build();
-          onChanged();
         } else {
           redemptionDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5296,17 +5111,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeRedemptionDate(com.google.protobuf.Timestamp value) {
         if (redemptionDateBuilder_ == null) {
-          if (redemptionDate_ != null) {
-            redemptionDate_ =
-              com.google.protobuf.Timestamp.newBuilder(redemptionDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            redemptionDate_ != null &&
+            redemptionDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRedemptionDateBuilder().mergeFrom(value);
           } else {
             redemptionDate_ = value;
           }
-          onChanged();
         } else {
           redemptionDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5317,14 +5133,13 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp redemptionDate = 1;</code>
        */
       public Builder clearRedemptionDate() {
-        if (redemptionDateBuilder_ == null) {
-          redemptionDate_ = null;
-          onChanged();
-        } else {
-          redemptionDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        redemptionDate_ = null;
+        if (redemptionDateBuilder_ != null) {
+          redemptionDateBuilder_.dispose();
           redemptionDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5335,7 +5150,7 @@ java.lang.String defaultValue);
        * <code>.google.protobuf.Timestamp redemptionDate = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getRedemptionDateBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getRedemptionDateFieldBuilder().getBuilder();
       }
@@ -5428,11 +5243,9 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionCode(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5445,8 +5258,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRedemptionCode() {
-        
         redemptionCode_ = getDefaultInstance().getRedemptionCode();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5461,12 +5274,10 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionCodeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionCode_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5494,8 +5305,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5508,7 +5320,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lat_ = 0D;
         onChanged();
         return this;
@@ -5537,8 +5349,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -5551,7 +5364,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         lon_ = 0D;
         onChanged();
         return this;
@@ -5580,8 +5393,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setAlt(int value) {
-        
+
         alt_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -5594,7 +5408,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAlt() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         alt_ = 0;
         onChanged();
         return this;
@@ -5653,11 +5467,9 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionSource(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionSource_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -5670,8 +5482,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRedemptionSource() {
-        
         redemptionSource_ = getDefaultInstance().getRedemptionSource();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -5686,12 +5498,10 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionSourceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionSource_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -5749,11 +5559,9 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionReference(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         redemptionReference_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5766,8 +5574,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRedemptionReference() {
-        
         redemptionReference_ = getDefaultInstance().getRedemptionReference();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -5782,12 +5590,10 @@ java.lang.String defaultValue);
        */
       public Builder setRedemptionReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         redemptionReference_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5845,11 +5651,9 @@ java.lang.String defaultValue);
        */
       public Builder setTransactionReference(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         transactionReference_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5862,8 +5666,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTransactionReference() {
-        
         transactionReference_ = getDefaultInstance().getTransactionReference();
+        bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
         return this;
       }
@@ -5878,12 +5682,10 @@ java.lang.String defaultValue);
        */
       public Builder setTransactionReferenceBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         transactionReference_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -5911,8 +5713,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setTransactionAmount(double value) {
-        
+
         transactionAmount_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -5925,7 +5728,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTransactionAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         transactionAmount_ = 0D;
         onChanged();
         return this;
@@ -5934,7 +5737,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metaData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetaData() {
+          internalGetMetaData() {
         if (metaData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -5942,8 +5745,7 @@ java.lang.String defaultValue);
         return metaData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetaData() {
-        onChanged();;
+          internalGetMutableMetaData() {
         if (metaData_ == null) {
           metaData_ = com.google.protobuf.MapField.newMapField(
               MetaDataDefaultEntryHolder.defaultEntry);
@@ -5951,9 +5753,10 @@ java.lang.String defaultValue);
         if (!metaData_.isMutable()) {
           metaData_ = metaData_.copy();
         }
+        bitField0_ |= 0x00000200;
+        onChanged();
         return metaData_;
       }
-
       public int getMetaDataCount() {
         return internalGetMetaData().getMap().size();
       }
@@ -5964,7 +5767,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
-
       @java.lang.Override
       public boolean containsMetaData(
           java.lang.String key) {
@@ -5987,7 +5789,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetaDataMap() {
         return internalGetMetaData().getMap();
       }
@@ -5999,10 +5800,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetaDataOrDefault(
+      public /* nullable */
+java.lang.String getMetaDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetaData().getMap();
@@ -6016,7 +5818,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetaDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -6027,8 +5828,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetaData() {
+        bitField0_ = (bitField0_ & ~0x00000200);
         internalGetMutableMetaData().getMutableMap()
             .clear();
         return this;
@@ -6040,7 +5841,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
-
       public Builder removeMetaData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -6053,7 +5853,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetaData() {
+          getMutableMetaData() {
+        bitField0_ |= 0x00000200;
         return internalGetMutableMetaData().getMutableMap();
       }
       /**
@@ -6067,12 +5868,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetaData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000200;
         return this;
       }
       /**
@@ -6082,11 +5881,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; metaData = 10;</code>
        */
-
       public Builder putAllMetaData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetaData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000200;
         return this;
       }
       @java.lang.Override
@@ -6122,7 +5921,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RedemptionDetails(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6210,62 +6020,6 @@ java.lang.String defaultValue);
       return new ExternalIdRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ExternalIdRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              couponCampaignId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_ExternalIdRequest_descriptor;
@@ -6280,7 +6034,8 @@ java.lang.String defaultValue);
     }
 
     public static final int COUPONCAMPAIGNID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object couponCampaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponCampaignId_ = "";
     /**
      * <pre>
      * Coupon Campaign ID
@@ -6326,7 +6081,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * External ID
@@ -6391,7 +6147,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -6406,7 +6162,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -6425,7 +6181,7 @@ java.lang.String defaultValue);
           .equals(other.getCouponCampaignId())) return false;
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -6440,7 +6196,7 @@ java.lang.String defaultValue);
       hash = (53 * hash) + getCouponCampaignId().hashCode();
       hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -6557,26 +6313,20 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         couponCampaignId_ = "";
-
         externalId_ = "";
-
         return this;
       }
 
@@ -6603,44 +6353,21 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest(this);
-        result.couponCampaignId_ = couponCampaignId_;
-        result.externalId_ = externalId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.couponCampaignId_ = couponCampaignId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.externalId_ = externalId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest) {
@@ -6655,13 +6382,15 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest.getDefaultInstance()) return this;
         if (!other.getCouponCampaignId().isEmpty()) {
           couponCampaignId_ = other.couponCampaignId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6676,19 +6405,43 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                couponCampaignId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                externalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object couponCampaignId_ = "";
       /**
@@ -6743,11 +6496,9 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6760,8 +6511,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCouponCampaignId() {
-        
         couponCampaignId_ = getDefaultInstance().getCouponCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6776,12 +6527,10 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6839,11 +6588,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6856,8 +6603,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -6872,12 +6619,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6914,7 +6659,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ExternalIdRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7008,69 +6764,6 @@ java.lang.String defaultValue);
       return new ListRequestDeprecated();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ListRequestDeprecated(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              couponCampaignId_ = s;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.PaginationOuterClass.Pagination.Builder subBuilder = null;
-              if (pagination_ != null) {
-                subBuilder = pagination_.toBuilder();
-              }
-              pagination_ = input.readMessage(com.passkit.grpc.PaginationOuterClass.Pagination.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pagination_);
-                pagination_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_ListRequestDeprecated_descriptor;
@@ -7085,7 +6778,8 @@ java.lang.String defaultValue);
     }
 
     public static final int COUPONCAMPAIGNID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object couponCampaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponCampaignId_ = "";
     /**
      * <pre>
      * Coupon Campaign ID
@@ -7165,7 +6859,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.PaginationOuterClass.PaginationOrBuilder getPaginationOrBuilder() {
-      return getPagination();
+      return pagination_ == null ? com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance() : pagination_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7188,7 +6882,7 @@ java.lang.String defaultValue);
       if (pagination_ != null) {
         output.writeMessage(2, getPagination());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7204,7 +6898,7 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getPagination());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7226,7 +6920,7 @@ java.lang.String defaultValue);
         if (!getPagination()
             .equals(other.getPagination())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7243,7 +6937,7 @@ java.lang.String defaultValue);
         hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
         hash = (53 * hash) + getPagination().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7360,28 +7054,22 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         couponCampaignId_ = "";
-
-        if (paginationBuilder_ == null) {
-          pagination_ = null;
-        } else {
-          pagination_ = null;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
           paginationBuilder_ = null;
         }
         return this;
@@ -7410,48 +7098,23 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated(this);
-        result.couponCampaignId_ = couponCampaignId_;
-        if (paginationBuilder_ == null) {
-          result.pagination_ = pagination_;
-        } else {
-          result.pagination_ = paginationBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.couponCampaignId_ = couponCampaignId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated) {
@@ -7466,12 +7129,13 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated.getDefaultInstance()) return this;
         if (!other.getCouponCampaignId().isEmpty()) {
           couponCampaignId_ = other.couponCampaignId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasPagination()) {
           mergePagination(other.getPagination());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7486,19 +7150,45 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                couponCampaignId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object couponCampaignId_ = "";
       /**
@@ -7553,11 +7243,9 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7570,8 +7258,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCouponCampaignId() {
-        
         couponCampaignId_ = getDefaultInstance().getCouponCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7586,12 +7274,10 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7608,7 +7294,7 @@ java.lang.String defaultValue);
        * @return Whether the pagination field is set.
        */
       public boolean hasPagination() {
-        return paginationBuilder_ != null || pagination_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -7638,11 +7324,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           pagination_ = value;
-          onChanged();
         } else {
           paginationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7656,11 +7342,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.PaginationOuterClass.Pagination.Builder builderForValue) {
         if (paginationBuilder_ == null) {
           pagination_ = builderForValue.build();
-          onChanged();
         } else {
           paginationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7672,17 +7358,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePagination(com.passkit.grpc.PaginationOuterClass.Pagination value) {
         if (paginationBuilder_ == null) {
-          if (pagination_ != null) {
-            pagination_ =
-              com.passkit.grpc.PaginationOuterClass.Pagination.newBuilder(pagination_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.passkit.grpc.PaginationOuterClass.Pagination.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
           } else {
             pagination_ = value;
           }
-          onChanged();
         } else {
           paginationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7693,14 +7380,13 @@ java.lang.String defaultValue);
        * <code>.io.Pagination pagination = 2;</code>
        */
       public Builder clearPagination() {
-        if (paginationBuilder_ == null) {
-          pagination_ = null;
-          onChanged();
-        } else {
-          pagination_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
           paginationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -7711,7 +7397,7 @@ java.lang.String defaultValue);
        * <code>.io.Pagination pagination = 2;</code>
        */
       public com.passkit.grpc.PaginationOuterClass.Pagination.Builder getPaginationBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPaginationFieldBuilder().getBuilder();
       }
@@ -7783,7 +7469,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ListRequestDeprecated(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -7883,74 +7580,6 @@ java.lang.String defaultValue);
       return new ListRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ListRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              couponCampaignId_ = s;
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Filter.Filters.Builder subBuilder = null;
-              if (filters_ != null) {
-                subBuilder = filters_.toBuilder();
-              }
-              filters_ = input.readMessage(com.passkit.grpc.Filter.Filters.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(filters_);
-                filters_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 24: {
-
-              emailAsCsv_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_ListRequest_descriptor;
@@ -7965,7 +7594,8 @@ java.lang.String defaultValue);
     }
 
     public static final int COUPONCAMPAIGNID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object couponCampaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponCampaignId_ = "";
     /**
      * <pre>
      * Coupon Campaign ID
@@ -8045,11 +7675,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Filter.FiltersOrBuilder getFiltersOrBuilder() {
-      return getFilters();
+      return filters_ == null ? com.passkit.grpc.Filter.Filters.getDefaultInstance() : filters_;
     }
 
     public static final int EMAILASCSV_FIELD_NUMBER = 3;
-    private boolean emailAsCsv_;
+    private boolean emailAsCsv_ = false;
     /**
      * <code>bool emailAsCsv = 3;</code>
      * @return The emailAsCsv.
@@ -8082,7 +7712,7 @@ java.lang.String defaultValue);
       if (emailAsCsv_ != false) {
         output.writeBool(3, emailAsCsv_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8102,7 +7732,7 @@ java.lang.String defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(3, emailAsCsv_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8126,7 +7756,7 @@ java.lang.String defaultValue);
       }
       if (getEmailAsCsv()
           != other.getEmailAsCsv()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8146,7 +7776,7 @@ java.lang.String defaultValue);
       hash = (37 * hash) + EMAILASCSV_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getEmailAsCsv());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8263,32 +7893,25 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         couponCampaignId_ = "";
-
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-        } else {
-          filters_ = null;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
         emailAsCsv_ = false;
-
         return this;
       }
 
@@ -8315,49 +7938,26 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest(this);
-        result.couponCampaignId_ = couponCampaignId_;
-        if (filtersBuilder_ == null) {
-          result.filters_ = filters_;
-        } else {
-          result.filters_ = filtersBuilder_.build();
-        }
-        result.emailAsCsv_ = emailAsCsv_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.couponCampaignId_ = couponCampaignId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.emailAsCsv_ = emailAsCsv_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest) {
@@ -8372,6 +7972,7 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest.getDefaultInstance()) return this;
         if (!other.getCouponCampaignId().isEmpty()) {
           couponCampaignId_ = other.couponCampaignId_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasFilters()) {
@@ -8380,7 +7981,7 @@ java.lang.String defaultValue);
         if (other.getEmailAsCsv() != false) {
           setEmailAsCsv(other.getEmailAsCsv());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8395,19 +7996,50 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                couponCampaignId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                emailAsCsv_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object couponCampaignId_ = "";
       /**
@@ -8462,11 +8094,9 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8479,8 +8109,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCouponCampaignId() {
-        
         couponCampaignId_ = getDefaultInstance().getCouponCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8495,12 +8125,10 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8517,7 +8145,7 @@ java.lang.String defaultValue);
        * @return Whether the filters field is set.
        */
       public boolean hasFilters() {
-        return filtersBuilder_ != null || filters_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -8547,11 +8175,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           filters_ = value;
-          onChanged();
         } else {
           filtersBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8565,11 +8193,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Filter.Filters.Builder builderForValue) {
         if (filtersBuilder_ == null) {
           filters_ = builderForValue.build();
-          onChanged();
         } else {
           filtersBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8581,17 +8209,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeFilters(com.passkit.grpc.Filter.Filters value) {
         if (filtersBuilder_ == null) {
-          if (filters_ != null) {
-            filters_ =
-              com.passkit.grpc.Filter.Filters.newBuilder(filters_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            filters_ != null &&
+            filters_ != com.passkit.grpc.Filter.Filters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
           } else {
             filters_ = value;
           }
-          onChanged();
         } else {
           filtersBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8602,14 +8231,13 @@ java.lang.String defaultValue);
        * <code>.io.Filters filters = 2;</code>
        */
       public Builder clearFilters() {
-        if (filtersBuilder_ == null) {
-          filters_ = null;
-          onChanged();
-        } else {
-          filters_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
           filtersBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8620,7 +8248,7 @@ java.lang.String defaultValue);
        * <code>.io.Filters filters = 2;</code>
        */
       public com.passkit.grpc.Filter.Filters.Builder getFiltersBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFiltersFieldBuilder().getBuilder();
       }
@@ -8675,8 +8303,9 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setEmailAsCsv(boolean value) {
-        
+
         emailAsCsv_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8685,7 +8314,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearEmailAsCsv() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         emailAsCsv_ = false;
         onChanged();
         return this;
@@ -8723,7 +8352,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ListRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -8853,74 +8493,6 @@ java.lang.String defaultValue);
       return new CouponNewExternalIdRequest();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CouponNewExternalIdRequest(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              couponCampaignId_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalId_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              newExternalId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.SingleUseCoupons.CouponOuterClass.internal_static_single_use_coupons_CouponNewExternalIdRequest_descriptor;
@@ -8935,7 +8507,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * PassKit generated coupon ID (22 characters). Required if couponCampaignId and externalId are not provided.
@@ -8981,7 +8554,8 @@ java.lang.String defaultValue);
     }
 
     public static final int COUPONCAMPAIGNID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object couponCampaignId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object couponCampaignId_ = "";
     /**
      * <pre>
      * Coupon Campaign ID. Required if external id is used.
@@ -9027,7 +8601,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * Current external ID. Required if coupon id is not provided.
@@ -9073,7 +8648,8 @@ java.lang.String defaultValue);
     }
 
     public static final int NEWEXTERNALID_FIELD_NUMBER = 4;
-    private volatile java.lang.Object newExternalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newExternalId_ = "";
     /**
      * <pre>
      * New external ID.
@@ -9144,7 +8720,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newExternalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newExternalId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -9165,7 +8741,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newExternalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newExternalId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -9188,7 +8764,7 @@ java.lang.String defaultValue);
           .equals(other.getExternalId())) return false;
       if (!getNewExternalId()
           .equals(other.getNewExternalId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -9207,7 +8783,7 @@ java.lang.String defaultValue);
       hash = (53 * hash) + getExternalId().hashCode();
       hash = (37 * hash) + NEWEXTERNALID_FIELD_NUMBER;
       hash = (53 * hash) + getNewExternalId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -9324,30 +8900,22 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         couponCampaignId_ = "";
-
         externalId_ = "";
-
         newExternalId_ = "";
-
         return this;
       }
 
@@ -9374,46 +8942,27 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest buildPartial() {
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest result = new com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest(this);
-        result.id_ = id_;
-        result.couponCampaignId_ = couponCampaignId_;
-        result.externalId_ = externalId_;
-        result.newExternalId_ = newExternalId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.couponCampaignId_ = couponCampaignId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.externalId_ = externalId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newExternalId_ = newExternalId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest) {
@@ -9428,21 +8977,25 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getCouponCampaignId().isEmpty()) {
           couponCampaignId_ = other.couponCampaignId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getNewExternalId().isEmpty()) {
           newExternalId_ = other.newExternalId_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -9457,19 +9010,53 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                couponCampaignId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                externalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                newExternalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -9524,11 +9111,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9541,8 +9126,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9557,12 +9142,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9620,11 +9203,9 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9637,8 +9218,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCouponCampaignId() {
-        
         couponCampaignId_ = getDefaultInstance().getCouponCampaignId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9653,12 +9234,10 @@ java.lang.String defaultValue);
        */
       public Builder setCouponCampaignIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         couponCampaignId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9716,11 +9295,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9733,8 +9310,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -9749,12 +9326,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9812,11 +9387,9 @@ java.lang.String defaultValue);
        */
       public Builder setNewExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         newExternalId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9829,8 +9402,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearNewExternalId() {
-        
         newExternalId_ = getDefaultInstance().getNewExternalId();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -9845,12 +9418,10 @@ java.lang.String defaultValue);
        */
       public Builder setNewExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         newExternalId_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -9887,7 +9458,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CouponNewExternalIdRequest(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

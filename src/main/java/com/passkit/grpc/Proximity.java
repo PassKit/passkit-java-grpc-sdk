@@ -185,102 +185,6 @@ public final class Proximity {
       return new Beacon();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Beacon(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              uuid_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 32: {
-
-              major_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-
-              minor_ = input.readUInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lockScreenMessage_ = s;
-              break;
-            }
-            case 58: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedLockScreenMessage_ != null) {
-                subBuilder = localizedLockScreenMessage_.toBuilder();
-              }
-              localizedLockScreenMessage_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedLockScreenMessage_);
-                localizedLockScreenMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 64: {
-
-              position_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Proximity.internal_static_io_Beacon_descriptor;
@@ -295,7 +199,8 @@ public final class Proximity {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * System generated unique identifier for your beacon
@@ -341,7 +246,8 @@ public final class Proximity {
     }
 
     public static final int UUID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object uuid_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object uuid_ = "";
     /**
      * <pre>
      * A valid UUID that is being broadcast from your beacon.
@@ -387,7 +293,8 @@ public final class Proximity {
     }
 
     public static final int NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * A friendly name used to display the beacon in the admin portal
@@ -433,7 +340,7 @@ public final class Proximity {
     }
 
     public static final int MAJOR_FIELD_NUMBER = 4;
-    private int major_;
+    private int major_ = 0;
     /**
      * <pre>
      * Major indicator.
@@ -448,7 +355,7 @@ public final class Proximity {
     }
 
     public static final int MINOR_FIELD_NUMBER = 5;
-    private int minor_;
+    private int minor_ = 0;
     /**
      * <pre>
      * Minor indicator.
@@ -463,7 +370,8 @@ public final class Proximity {
     }
 
     public static final int LOCKSCREENMESSAGE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object lockScreenMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lockScreenMessage_ = "";
     /**
      * <pre>
      * Message to be displayed on lock screen when user is in proximity of the beacon (iOS only).
@@ -543,11 +451,11 @@ public final class Proximity {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLockScreenMessageOrBuilder() {
-      return getLocalizedLockScreenMessage();
+      return localizedLockScreenMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLockScreenMessage_;
     }
 
     public static final int POSITION_FIELD_NUMBER = 8;
-    private int position_;
+    private int position_ = 0;
     /**
      * <pre>
      * Beacons will be added in order of their position, from lowest to highest. Position can be any value, E.g. 3 Beacons with positions 30, 10, 20 would be added 10 first, 20 second and 30 third.  If no position is provided and the number of beacons exceeds 10, there is no guarantee which beacon(s) would be excluded from the pass.
@@ -599,7 +507,7 @@ public final class Proximity {
       if (position_ != 0) {
         output.writeUInt32(8, position_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -636,7 +544,7 @@ public final class Proximity {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, position_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -670,7 +578,7 @@ public final class Proximity {
       }
       if (getPosition()
           != other.getPosition()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -699,7 +607,7 @@ public final class Proximity {
       }
       hash = (37 * hash) + POSITION_FIELD_NUMBER;
       hash = (53 * hash) + getPosition();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -820,42 +728,30 @@ public final class Proximity {
 
       // Construct using com.passkit.grpc.Proximity.Beacon.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         uuid_ = "";
-
         name_ = "";
-
         major_ = 0;
-
         minor_ = 0;
-
         lockScreenMessage_ = "";
-
-        if (localizedLockScreenMessageBuilder_ == null) {
-          localizedLockScreenMessage_ = null;
-        } else {
-          localizedLockScreenMessage_ = null;
+        localizedLockScreenMessage_ = null;
+        if (localizedLockScreenMessageBuilder_ != null) {
+          localizedLockScreenMessageBuilder_.dispose();
           localizedLockScreenMessageBuilder_ = null;
         }
         position_ = 0;
-
         return this;
       }
 
@@ -882,54 +778,41 @@ public final class Proximity {
       @java.lang.Override
       public com.passkit.grpc.Proximity.Beacon buildPartial() {
         com.passkit.grpc.Proximity.Beacon result = new com.passkit.grpc.Proximity.Beacon(this);
-        result.id_ = id_;
-        result.uuid_ = uuid_;
-        result.name_ = name_;
-        result.major_ = major_;
-        result.minor_ = minor_;
-        result.lockScreenMessage_ = lockScreenMessage_;
-        if (localizedLockScreenMessageBuilder_ == null) {
-          result.localizedLockScreenMessage_ = localizedLockScreenMessage_;
-        } else {
-          result.localizedLockScreenMessage_ = localizedLockScreenMessageBuilder_.build();
-        }
-        result.position_ = position_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Proximity.Beacon result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.uuid_ = uuid_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.major_ = major_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.minor_ = minor_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lockScreenMessage_ = lockScreenMessage_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.localizedLockScreenMessage_ = localizedLockScreenMessageBuilder_ == null
+              ? localizedLockScreenMessage_
+              : localizedLockScreenMessageBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.position_ = position_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Proximity.Beacon) {
@@ -944,14 +827,17 @@ public final class Proximity {
         if (other == com.passkit.grpc.Proximity.Beacon.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.getMajor() != 0) {
@@ -962,6 +848,7 @@ public final class Proximity {
         }
         if (!other.getLockScreenMessage().isEmpty()) {
           lockScreenMessage_ = other.lockScreenMessage_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasLocalizedLockScreenMessage()) {
@@ -970,7 +857,7 @@ public final class Proximity {
         if (other.getPosition() != 0) {
           setPosition(other.getPosition());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -985,19 +872,75 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Proximity.Beacon parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                uuid_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                major_ = input.readUInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                minor_ = input.readUInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                lockScreenMessage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getLocalizedLockScreenMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                position_ = input.readUInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Proximity.Beacon) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1052,11 +995,9 @@ public final class Proximity {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1069,8 +1010,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1085,12 +1026,10 @@ public final class Proximity {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1148,11 +1087,9 @@ public final class Proximity {
        */
       public Builder setUuid(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         uuid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1165,8 +1102,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearUuid() {
-        
         uuid_ = getDefaultInstance().getUuid();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1181,12 +1118,10 @@ public final class Proximity {
        */
       public Builder setUuidBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         uuid_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1244,11 +1179,9 @@ public final class Proximity {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1261,8 +1194,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1277,12 +1210,10 @@ public final class Proximity {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1310,8 +1241,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setMajor(int value) {
-        
+
         major_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1324,7 +1256,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearMajor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         major_ = 0;
         onChanged();
         return this;
@@ -1353,8 +1285,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setMinor(int value) {
-        
+
         minor_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1367,7 +1300,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearMinor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         minor_ = 0;
         onChanged();
         return this;
@@ -1426,11 +1359,9 @@ public final class Proximity {
        */
       public Builder setLockScreenMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         lockScreenMessage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1443,8 +1374,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearLockScreenMessage() {
-        
         lockScreenMessage_ = getDefaultInstance().getLockScreenMessage();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -1459,12 +1390,10 @@ public final class Proximity {
        */
       public Builder setLockScreenMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         lockScreenMessage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1481,7 +1410,7 @@ public final class Proximity {
        * @return Whether the localizedLockScreenMessage field is set.
        */
       public boolean hasLocalizedLockScreenMessage() {
-        return localizedLockScreenMessageBuilder_ != null || localizedLockScreenMessage_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -1511,11 +1440,11 @@ public final class Proximity {
             throw new NullPointerException();
           }
           localizedLockScreenMessage_ = value;
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1529,11 +1458,11 @@ public final class Proximity {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLockScreenMessageBuilder_ == null) {
           localizedLockScreenMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1545,17 +1474,18 @@ public final class Proximity {
        */
       public Builder mergeLocalizedLockScreenMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLockScreenMessageBuilder_ == null) {
-          if (localizedLockScreenMessage_ != null) {
-            localizedLockScreenMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLockScreenMessage_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            localizedLockScreenMessage_ != null &&
+            localizedLockScreenMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLockScreenMessageBuilder().mergeFrom(value);
           } else {
             localizedLockScreenMessage_ = value;
           }
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1566,14 +1496,13 @@ public final class Proximity {
        * <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
        */
       public Builder clearLocalizedLockScreenMessage() {
-        if (localizedLockScreenMessageBuilder_ == null) {
-          localizedLockScreenMessage_ = null;
-          onChanged();
-        } else {
-          localizedLockScreenMessage_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        localizedLockScreenMessage_ = null;
+        if (localizedLockScreenMessageBuilder_ != null) {
+          localizedLockScreenMessageBuilder_.dispose();
           localizedLockScreenMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1584,7 +1513,7 @@ public final class Proximity {
        * <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLockScreenMessageBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getLocalizedLockScreenMessageFieldBuilder().getBuilder();
       }
@@ -1647,8 +1576,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setPosition(int value) {
-        
+
         position_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1661,7 +1591,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearPosition() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         position_ = 0;
         onChanged();
         return this;
@@ -1699,7 +1629,18 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Beacon(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1879,101 +1820,6 @@ public final class Proximity {
       return new GPSLocation();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private GPSLocation(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 25: {
-
-              lat_ = input.readDouble();
-              break;
-            }
-            case 33: {
-
-              lon_ = input.readDouble();
-              break;
-            }
-            case 40: {
-
-              alt_ = input.readInt32();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              lockScreenMessage_ = s;
-              break;
-            }
-            case 58: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedLockScreenMessage_ != null) {
-                subBuilder = localizedLockScreenMessage_.toBuilder();
-              }
-              localizedLockScreenMessage_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedLockScreenMessage_);
-                localizedLockScreenMessage_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 64: {
-
-              position_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Proximity.internal_static_io_GPSLocation_descriptor;
@@ -1988,7 +1834,8 @@ public final class Proximity {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * System generated unique identifier for your GPS Location
@@ -2034,7 +1881,8 @@ public final class Proximity {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * a friendly name for the location used to display the location in the admin portal
@@ -2080,7 +1928,7 @@ public final class Proximity {
     }
 
     public static final int LAT_FIELD_NUMBER = 3;
-    private double lat_;
+    private double lat_ = 0D;
     /**
      * <pre>
      * Latitude.
@@ -2095,7 +1943,7 @@ public final class Proximity {
     }
 
     public static final int LON_FIELD_NUMBER = 4;
-    private double lon_;
+    private double lon_ = 0D;
     /**
      * <pre>
      * Longitude.
@@ -2110,7 +1958,7 @@ public final class Proximity {
     }
 
     public static final int ALT_FIELD_NUMBER = 5;
-    private int alt_;
+    private int alt_ = 0;
     /**
      * <pre>
      * Altitude in metres.
@@ -2125,7 +1973,8 @@ public final class Proximity {
     }
 
     public static final int LOCKSCREENMESSAGE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object lockScreenMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lockScreenMessage_ = "";
     /**
      * <pre>
      * Message to be displayed on lock screen when user is in the location (iOS only).
@@ -2205,11 +2054,11 @@ public final class Proximity {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLockScreenMessageOrBuilder() {
-      return getLocalizedLockScreenMessage();
+      return localizedLockScreenMessage_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLockScreenMessage_;
     }
 
     public static final int POSITION_FIELD_NUMBER = 8;
-    private int position_;
+    private int position_ = 0;
     /**
      * <pre>
      * Locations will be added in order of their position, from lowest to highest. Position can be any value, E.g. 3 Locations with positions 30, 10, 20 would be added 10 first, 20 second and 30 third.  If no position is provided and the number of locations exceeds 10, there is no guarantee which location(s) would be excluded from the pass.
@@ -2261,7 +2110,7 @@ public final class Proximity {
       if (position_ != 0) {
         output.writeUInt32(8, position_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2299,7 +2148,7 @@ public final class Proximity {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, position_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2335,7 +2184,7 @@ public final class Proximity {
       }
       if (getPosition()
           != other.getPosition()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2366,7 +2215,7 @@ public final class Proximity {
       }
       hash = (37 * hash) + POSITION_FIELD_NUMBER;
       hash = (53 * hash) + getPosition();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2487,42 +2336,30 @@ public final class Proximity {
 
       // Construct using com.passkit.grpc.Proximity.GPSLocation.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         lat_ = 0D;
-
         lon_ = 0D;
-
         alt_ = 0;
-
         lockScreenMessage_ = "";
-
-        if (localizedLockScreenMessageBuilder_ == null) {
-          localizedLockScreenMessage_ = null;
-        } else {
-          localizedLockScreenMessage_ = null;
+        localizedLockScreenMessage_ = null;
+        if (localizedLockScreenMessageBuilder_ != null) {
+          localizedLockScreenMessageBuilder_.dispose();
           localizedLockScreenMessageBuilder_ = null;
         }
         position_ = 0;
-
         return this;
       }
 
@@ -2549,54 +2386,41 @@ public final class Proximity {
       @java.lang.Override
       public com.passkit.grpc.Proximity.GPSLocation buildPartial() {
         com.passkit.grpc.Proximity.GPSLocation result = new com.passkit.grpc.Proximity.GPSLocation(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.lat_ = lat_;
-        result.lon_ = lon_;
-        result.alt_ = alt_;
-        result.lockScreenMessage_ = lockScreenMessage_;
-        if (localizedLockScreenMessageBuilder_ == null) {
-          result.localizedLockScreenMessage_ = localizedLockScreenMessage_;
-        } else {
-          result.localizedLockScreenMessage_ = localizedLockScreenMessageBuilder_.build();
-        }
-        result.position_ = position_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Proximity.GPSLocation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lat_ = lat_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lon_ = lon_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.alt_ = alt_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.lockScreenMessage_ = lockScreenMessage_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.localizedLockScreenMessage_ = localizedLockScreenMessageBuilder_ == null
+              ? localizedLockScreenMessage_
+              : localizedLockScreenMessageBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.position_ = position_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Proximity.GPSLocation) {
@@ -2611,10 +2435,12 @@ public final class Proximity {
         if (other == com.passkit.grpc.Proximity.GPSLocation.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getLat() != 0D) {
@@ -2628,6 +2454,7 @@ public final class Proximity {
         }
         if (!other.getLockScreenMessage().isEmpty()) {
           lockScreenMessage_ = other.lockScreenMessage_;
+          bitField0_ |= 0x00000020;
           onChanged();
         }
         if (other.hasLocalizedLockScreenMessage()) {
@@ -2636,7 +2463,7 @@ public final class Proximity {
         if (other.getPosition() != 0) {
           setPosition(other.getPosition());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2651,19 +2478,75 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Proximity.GPSLocation parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 25: {
+                lat_ = input.readDouble();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 25
+              case 33: {
+                lon_ = input.readDouble();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 33
+              case 40: {
+                alt_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                lockScreenMessage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getLocalizedLockScreenMessageFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                position_ = input.readUInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Proximity.GPSLocation) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -2718,11 +2601,9 @@ public final class Proximity {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2735,8 +2616,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2751,12 +2632,10 @@ public final class Proximity {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2814,11 +2693,9 @@ public final class Proximity {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2831,8 +2708,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2847,12 +2724,10 @@ public final class Proximity {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2880,8 +2755,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setLat(double value) {
-        
+
         lat_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2894,7 +2770,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearLat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lat_ = 0D;
         onChanged();
         return this;
@@ -2923,8 +2799,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setLon(double value) {
-        
+
         lon_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2937,7 +2814,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearLon() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         lon_ = 0D;
         onChanged();
         return this;
@@ -2966,8 +2843,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setAlt(int value) {
-        
+
         alt_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2980,7 +2858,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearAlt() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         alt_ = 0;
         onChanged();
         return this;
@@ -3039,11 +2917,9 @@ public final class Proximity {
        */
       public Builder setLockScreenMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         lockScreenMessage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3056,8 +2932,8 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearLockScreenMessage() {
-        
         lockScreenMessage_ = getDefaultInstance().getLockScreenMessage();
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -3072,12 +2948,10 @@ public final class Proximity {
        */
       public Builder setLockScreenMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         lockScreenMessage_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -3094,7 +2968,7 @@ public final class Proximity {
        * @return Whether the localizedLockScreenMessage field is set.
        */
       public boolean hasLocalizedLockScreenMessage() {
-        return localizedLockScreenMessageBuilder_ != null || localizedLockScreenMessage_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -3124,11 +2998,11 @@ public final class Proximity {
             throw new NullPointerException();
           }
           localizedLockScreenMessage_ = value;
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3142,11 +3016,11 @@ public final class Proximity {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLockScreenMessageBuilder_ == null) {
           localizedLockScreenMessage_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3158,17 +3032,18 @@ public final class Proximity {
        */
       public Builder mergeLocalizedLockScreenMessage(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLockScreenMessageBuilder_ == null) {
-          if (localizedLockScreenMessage_ != null) {
-            localizedLockScreenMessage_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLockScreenMessage_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            localizedLockScreenMessage_ != null &&
+            localizedLockScreenMessage_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLockScreenMessageBuilder().mergeFrom(value);
           } else {
             localizedLockScreenMessage_ = value;
           }
-          onChanged();
         } else {
           localizedLockScreenMessageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -3179,14 +3054,13 @@ public final class Proximity {
        * <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
        */
       public Builder clearLocalizedLockScreenMessage() {
-        if (localizedLockScreenMessageBuilder_ == null) {
-          localizedLockScreenMessage_ = null;
-          onChanged();
-        } else {
-          localizedLockScreenMessage_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        localizedLockScreenMessage_ = null;
+        if (localizedLockScreenMessageBuilder_ != null) {
+          localizedLockScreenMessageBuilder_.dispose();
           localizedLockScreenMessageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3197,7 +3071,7 @@ public final class Proximity {
        * <code>.io.LocalizedString localizedLockScreenMessage = 7;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLockScreenMessageBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getLocalizedLockScreenMessageFieldBuilder().getBuilder();
       }
@@ -3260,8 +3134,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setPosition(int value) {
-        
+
         position_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -3274,7 +3149,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearPosition() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         position_ = 0;
         onChanged();
         return this;
@@ -3312,7 +3187,18 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new GPSLocation(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3372,55 +3258,6 @@ public final class Proximity {
       return new RelevantDate();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private RelevantDate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              timestamp_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Proximity.internal_static_io_RelevantDate_descriptor;
@@ -3435,7 +3272,7 @@ public final class Proximity {
     }
 
     public static final int TIMESTAMP_FIELD_NUMBER = 1;
-    private int timestamp_;
+    private int timestamp_ = 0;
     /**
      * <pre>
      * Unix timestamp. ISO8601 datetime.
@@ -3466,7 +3303,7 @@ public final class Proximity {
       if (timestamp_ != 0) {
         output.writeUInt32(1, timestamp_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3479,7 +3316,7 @@ public final class Proximity {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, timestamp_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3496,7 +3333,7 @@ public final class Proximity {
 
       if (getTimestamp()
           != other.getTimestamp()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3509,7 +3346,7 @@ public final class Proximity {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + TIMESTAMP_FIELD_NUMBER;
       hash = (53 * hash) + getTimestamp();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3630,24 +3467,19 @@ public final class Proximity {
 
       // Construct using com.passkit.grpc.Proximity.RelevantDate.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         timestamp_ = 0;
-
         return this;
       }
 
@@ -3674,43 +3506,18 @@ public final class Proximity {
       @java.lang.Override
       public com.passkit.grpc.Proximity.RelevantDate buildPartial() {
         com.passkit.grpc.Proximity.RelevantDate result = new com.passkit.grpc.Proximity.RelevantDate(this);
-        result.timestamp_ = timestamp_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Proximity.RelevantDate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timestamp_ = timestamp_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Proximity.RelevantDate) {
@@ -3726,7 +3533,7 @@ public final class Proximity {
         if (other.getTimestamp() != 0) {
           setTimestamp(other.getTimestamp());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3741,19 +3548,38 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Proximity.RelevantDate parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                timestamp_ = input.readUInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Proximity.RelevantDate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private int timestamp_ ;
       /**
@@ -3778,8 +3604,9 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder setTimestamp(int value) {
-        
+
         timestamp_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3792,7 +3619,7 @@ public final class Proximity {
        * @return This builder for chaining.
        */
       public Builder clearTimestamp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         timestamp_ = 0;
         onChanged();
         return this;
@@ -3830,7 +3657,18 @@ public final class Proximity {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new RelevantDate(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

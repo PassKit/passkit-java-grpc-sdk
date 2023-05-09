@@ -437,132 +437,6 @@ public final class Links {
       return new Link();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Link(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              url_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              title_ = s;
-              break;
-            }
-            case 32: {
-              int rawValue = input.readEnum();
-
-              type_ = rawValue;
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedLink_ != null) {
-                subBuilder = localizedLink_.toBuilder();
-              }
-              localizedLink_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedLink_);
-                localizedLink_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.passkit.grpc.Localization.LocalizedString.Builder subBuilder = null;
-              if (localizedTitle_ != null) {
-                subBuilder = localizedTitle_.toBuilder();
-              }
-              localizedTitle_ = input.readMessage(com.passkit.grpc.Localization.LocalizedString.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(localizedTitle_);
-                localizedTitle_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                usage_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              usage_.add(rawValue);
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int oldLimit = input.pushLimit(length);
-              while(input.getBytesUntilLimit() > 0) {
-                int rawValue = input.readEnum();
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  usage_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                usage_.add(rawValue);
-              }
-              input.popLimit(oldLimit);
-              break;
-            }
-            case 64: {
-
-              position_ = input.readUInt32();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          usage_ = java.util.Collections.unmodifiableList(usage_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Links.internal_static_io_Link_descriptor;
@@ -577,7 +451,8 @@ public final class Links {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Link Id. Not writable.
@@ -623,7 +498,8 @@ public final class Links {
     }
 
     public static final int URL_FIELD_NUMBER = 2;
-    private volatile java.lang.Object url_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object url_ = "";
     /**
      * <pre>
      * A link text.
@@ -669,7 +545,8 @@ public final class Links {
     }
 
     public static final int TITLE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object title_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
     /**
      * <pre>
      * Title for the link.
@@ -715,7 +592,7 @@ public final class Links {
     }
 
     public static final int TYPE_FIELD_NUMBER = 4;
-    private int type_;
+    private int type_ = 0;
     /**
      * <pre>
      * Type of link data.
@@ -736,8 +613,7 @@ public final class Links {
      * @return The type.
      */
     @java.lang.Override public com.passkit.grpc.Links.LinkType getType() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Links.LinkType result = com.passkit.grpc.Links.LinkType.valueOf(type_);
+      com.passkit.grpc.Links.LinkType result = com.passkit.grpc.Links.LinkType.forNumber(type_);
       return result == null ? com.passkit.grpc.Links.LinkType.UNRECOGNIZED : result;
     }
 
@@ -776,7 +652,7 @@ public final class Links {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedLinkOrBuilder() {
-      return getLocalizedLink();
+      return localizedLink_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedLink_;
     }
 
     public static final int LOCALIZEDTITLE_FIELD_NUMBER = 6;
@@ -814,18 +690,18 @@ public final class Links {
      */
     @java.lang.Override
     public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedTitleOrBuilder() {
-      return getLocalizedTitle();
+      return localizedTitle_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedTitle_;
     }
 
     public static final int USAGE_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<java.lang.Integer> usage_;
     private static final com.google.protobuf.Internal.ListAdapter.Converter<
         java.lang.Integer, com.passkit.grpc.CommonObjects.UsageType> usage_converter_ =
             new com.google.protobuf.Internal.ListAdapter.Converter<
                 java.lang.Integer, com.passkit.grpc.CommonObjects.UsageType>() {
               public com.passkit.grpc.CommonObjects.UsageType convert(java.lang.Integer from) {
-                @SuppressWarnings("deprecation")
-                com.passkit.grpc.CommonObjects.UsageType result = com.passkit.grpc.CommonObjects.UsageType.valueOf(from);
+                com.passkit.grpc.CommonObjects.UsageType result = com.passkit.grpc.CommonObjects.UsageType.forNumber(from);
                 return result == null ? com.passkit.grpc.CommonObjects.UsageType.UNRECOGNIZED : result;
               }
             };
@@ -896,7 +772,7 @@ public final class Links {
     private int usageMemoizedSerializedSize;
 
     public static final int POSITION_FIELD_NUMBER = 8;
-    private int position_;
+    private int position_ = 0;
     /**
      * <pre>
      * Links will be rendered in order of their position, from lowest to highest. Position can be any value, E.g. 3 links with positions 30, 10, 20 would render 10 first, 20 second and 30 third.  If no position is provided, the order of the links cannot be guaranteed.
@@ -953,7 +829,7 @@ public final class Links {
       if (position_ != 0) {
         output.writeUInt32(8, position_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -999,7 +875,7 @@ public final class Links {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(8, position_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1034,7 +910,7 @@ public final class Links {
       if (!usage_.equals(other.usage_)) return false;
       if (getPosition()
           != other.getPosition()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1067,7 +943,7 @@ public final class Links {
       }
       hash = (37 * hash) + POSITION_FIELD_NUMBER;
       hash = (53 * hash) + getPosition();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1188,46 +1064,35 @@ public final class Links {
 
       // Construct using com.passkit.grpc.Links.Link.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         url_ = "";
-
         title_ = "";
-
         type_ = 0;
-
-        if (localizedLinkBuilder_ == null) {
-          localizedLink_ = null;
-        } else {
-          localizedLink_ = null;
+        localizedLink_ = null;
+        if (localizedLinkBuilder_ != null) {
+          localizedLinkBuilder_.dispose();
           localizedLinkBuilder_ = null;
         }
-        if (localizedTitleBuilder_ == null) {
-          localizedTitle_ = null;
-        } else {
-          localizedTitle_ = null;
+        localizedTitle_ = null;
+        if (localizedTitleBuilder_ != null) {
+          localizedTitleBuilder_.dispose();
           localizedTitleBuilder_ = null;
         }
         usage_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000040);
         position_ = 0;
-
         return this;
       }
 
@@ -1254,63 +1119,49 @@ public final class Links {
       @java.lang.Override
       public com.passkit.grpc.Links.Link buildPartial() {
         com.passkit.grpc.Links.Link result = new com.passkit.grpc.Links.Link(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.url_ = url_;
-        result.title_ = title_;
-        result.type_ = type_;
-        if (localizedLinkBuilder_ == null) {
-          result.localizedLink_ = localizedLink_;
-        } else {
-          result.localizedLink_ = localizedLinkBuilder_.build();
-        }
-        if (localizedTitleBuilder_ == null) {
-          result.localizedTitle_ = localizedTitle_;
-        } else {
-          result.localizedTitle_ = localizedTitleBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          usage_ = java.util.Collections.unmodifiableList(usage_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.usage_ = usage_;
-        result.position_ = position_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartialRepeatedFields(com.passkit.grpc.Links.Link result) {
+        if (((bitField0_ & 0x00000040) != 0)) {
+          usage_ = java.util.Collections.unmodifiableList(usage_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.usage_ = usage_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
+
+      private void buildPartial0(com.passkit.grpc.Links.Link result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.url_ = url_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.localizedLink_ = localizedLinkBuilder_ == null
+              ? localizedLink_
+              : localizedLinkBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.localizedTitle_ = localizedTitleBuilder_ == null
+              ? localizedTitle_
+              : localizedTitleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.position_ = position_;
+        }
       }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Links.Link) {
@@ -1325,14 +1176,17 @@ public final class Links {
         if (other == com.passkit.grpc.Links.Link.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getUrl().isEmpty()) {
           url_ = other.url_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.type_ != 0) {
@@ -1347,7 +1201,7 @@ public final class Links {
         if (!other.usage_.isEmpty()) {
           if (usage_.isEmpty()) {
             usage_ = other.usage_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureUsageIsMutable();
             usage_.addAll(other.usage_);
@@ -1357,7 +1211,7 @@ public final class Links {
         if (other.getPosition() != 0) {
           setPosition(other.getPosition());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1372,17 +1226,86 @@ public final class Links {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Links.Link parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                url_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 42: {
+                input.readMessage(
+                    getLocalizedLinkFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getLocalizedTitleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                int tmpRaw = input.readEnum();
+                ensureUsageIsMutable();
+                usage_.add(tmpRaw);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensureUsageIsMutable();
+                  usage_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 58
+              case 64: {
+                position_ = input.readUInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Links.Link) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1440,11 +1363,9 @@ public final class Links {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1457,8 +1378,8 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1473,12 +1394,10 @@ public final class Links {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1536,11 +1455,9 @@ public final class Links {
        */
       public Builder setUrl(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         url_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1553,8 +1470,8 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder clearUrl() {
-        
         url_ = getDefaultInstance().getUrl();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1569,12 +1486,10 @@ public final class Links {
        */
       public Builder setUrlBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         url_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1632,11 +1547,9 @@ public final class Links {
        */
       public Builder setTitle(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         title_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1649,8 +1562,8 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
-        
         title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1665,12 +1578,10 @@ public final class Links {
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         title_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1697,8 +1608,8 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        
         type_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1712,8 +1623,7 @@ public final class Links {
        */
       @java.lang.Override
       public com.passkit.grpc.Links.LinkType getType() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Links.LinkType result = com.passkit.grpc.Links.LinkType.valueOf(type_);
+        com.passkit.grpc.Links.LinkType result = com.passkit.grpc.Links.LinkType.forNumber(type_);
         return result == null ? com.passkit.grpc.Links.LinkType.UNRECOGNIZED : result;
       }
       /**
@@ -1729,7 +1639,7 @@ public final class Links {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         type_ = value.getNumber();
         onChanged();
         return this;
@@ -1743,7 +1653,7 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         type_ = 0;
         onChanged();
         return this;
@@ -1761,7 +1671,7 @@ public final class Links {
        * @return Whether the localizedLink field is set.
        */
       public boolean hasLocalizedLink() {
-        return localizedLinkBuilder_ != null || localizedLink_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1791,11 +1701,11 @@ public final class Links {
             throw new NullPointerException();
           }
           localizedLink_ = value;
-          onChanged();
         } else {
           localizedLinkBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1809,11 +1719,11 @@ public final class Links {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedLinkBuilder_ == null) {
           localizedLink_ = builderForValue.build();
-          onChanged();
         } else {
           localizedLinkBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1825,17 +1735,18 @@ public final class Links {
        */
       public Builder mergeLocalizedLink(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedLinkBuilder_ == null) {
-          if (localizedLink_ != null) {
-            localizedLink_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedLink_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            localizedLink_ != null &&
+            localizedLink_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedLinkBuilder().mergeFrom(value);
           } else {
             localizedLink_ = value;
           }
-          onChanged();
         } else {
           localizedLinkBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1846,14 +1757,13 @@ public final class Links {
        * <code>.io.LocalizedString localizedLink = 5;</code>
        */
       public Builder clearLocalizedLink() {
-        if (localizedLinkBuilder_ == null) {
-          localizedLink_ = null;
-          onChanged();
-        } else {
-          localizedLink_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        localizedLink_ = null;
+        if (localizedLinkBuilder_ != null) {
+          localizedLinkBuilder_.dispose();
           localizedLinkBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1864,7 +1774,7 @@ public final class Links {
        * <code>.io.LocalizedString localizedLink = 5;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedLinkBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getLocalizedLinkFieldBuilder().getBuilder();
       }
@@ -1916,7 +1826,7 @@ public final class Links {
        * @return Whether the localizedTitle field is set.
        */
       public boolean hasLocalizedTitle() {
-        return localizedTitleBuilder_ != null || localizedTitle_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -1946,11 +1856,11 @@ public final class Links {
             throw new NullPointerException();
           }
           localizedTitle_ = value;
-          onChanged();
         } else {
           localizedTitleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1964,11 +1874,11 @@ public final class Links {
           com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
         if (localizedTitleBuilder_ == null) {
           localizedTitle_ = builderForValue.build();
-          onChanged();
         } else {
           localizedTitleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1980,17 +1890,18 @@ public final class Links {
        */
       public Builder mergeLocalizedTitle(com.passkit.grpc.Localization.LocalizedString value) {
         if (localizedTitleBuilder_ == null) {
-          if (localizedTitle_ != null) {
-            localizedTitle_ =
-              com.passkit.grpc.Localization.LocalizedString.newBuilder(localizedTitle_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            localizedTitle_ != null &&
+            localizedTitle_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedTitleBuilder().mergeFrom(value);
           } else {
             localizedTitle_ = value;
           }
-          onChanged();
         } else {
           localizedTitleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -2001,14 +1912,13 @@ public final class Links {
        * <code>.io.LocalizedString localizedTitle = 6;</code>
        */
       public Builder clearLocalizedTitle() {
-        if (localizedTitleBuilder_ == null) {
-          localizedTitle_ = null;
-          onChanged();
-        } else {
-          localizedTitle_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        localizedTitle_ = null;
+        if (localizedTitleBuilder_ != null) {
+          localizedTitleBuilder_.dispose();
           localizedTitleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2019,7 +1929,7 @@ public final class Links {
        * <code>.io.LocalizedString localizedTitle = 6;</code>
        */
       public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedTitleBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getLocalizedTitleFieldBuilder().getBuilder();
       }
@@ -2062,9 +1972,9 @@ public final class Links {
       private java.util.List<java.lang.Integer> usage_ =
         java.util.Collections.emptyList();
       private void ensureUsageIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           usage_ = new java.util.ArrayList<java.lang.Integer>(usage_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000040;
         }
       }
       /**
@@ -2168,7 +2078,7 @@ public final class Links {
        */
       public Builder clearUsage() {
         usage_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2270,8 +2180,9 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder setPosition(int value) {
-        
+
         position_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -2284,7 +2195,7 @@ public final class Links {
        * @return This builder for chaining.
        */
       public Builder clearPosition() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         position_ = 0;
         onChanged();
         return this;
@@ -2322,7 +2233,18 @@ public final class Links {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Link(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2393,63 +2315,6 @@ public final class Links {
       return new DbLink();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private DbLink(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              links_.add(
-                  input.readMessage(com.passkit.grpc.Links.Link.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          links_ = java.util.Collections.unmodifiableList(links_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Links.internal_static_io_DbLink_descriptor;
@@ -2464,6 +2329,7 @@ public final class Links {
     }
 
     public static final int LINKS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Links.Link> links_;
     /**
      * <code>repeated .io.Link links = 1;</code>
@@ -2520,7 +2386,7 @@ public final class Links {
       for (int i = 0; i < links_.size(); i++) {
         output.writeMessage(1, links_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2533,7 +2399,7 @@ public final class Links {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, links_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2550,7 +2416,7 @@ public final class Links {
 
       if (!getLinksList()
           .equals(other.getLinksList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2565,7 +2431,7 @@ public final class Links {
         hash = (37 * hash) + LINKS_FIELD_NUMBER;
         hash = (53 * hash) + getLinksList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2682,29 +2548,25 @@ public final class Links {
 
       // Construct using com.passkit.grpc.Links.DbLink.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLinksFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          links_ = null;
           linksBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -2731,7 +2593,13 @@ public final class Links {
       @java.lang.Override
       public com.passkit.grpc.Links.DbLink buildPartial() {
         com.passkit.grpc.Links.DbLink result = new com.passkit.grpc.Links.DbLink(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Links.DbLink result) {
         if (linksBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
@@ -2741,42 +2609,12 @@ public final class Links {
         } else {
           result.links_ = linksBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Links.DbLink result) {
+        int from_bitField0_ = bitField0_;
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Links.DbLink) {
@@ -2815,7 +2653,7 @@ public final class Links {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2830,17 +2668,43 @@ public final class Links {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Links.DbLink parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.passkit.grpc.Links.Link m =
+                    input.readMessage(
+                        com.passkit.grpc.Links.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Links.DbLink) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3117,7 +2981,18 @@ public final class Links {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DbLink(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

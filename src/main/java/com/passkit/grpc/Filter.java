@@ -240,84 +240,6 @@ public final class Filter {
       return new Filters();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Filters(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              limit_ = input.readInt32();
-              break;
-            }
-            case 16: {
-
-              offset_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                filterGroups_ = new java.util.ArrayList<com.passkit.grpc.Filter.FilterGroup>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              filterGroups_.add(
-                  input.readMessage(com.passkit.grpc.Filter.FilterGroup.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              orderBy_ = s;
-              break;
-            }
-            case 40: {
-
-              orderAsc_ = input.readBool();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          filterGroups_ = java.util.Collections.unmodifiableList(filterGroups_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Filter.internal_static_io_Filters_descriptor;
@@ -332,7 +254,7 @@ public final class Filter {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 1;
-    private int limit_;
+    private int limit_ = 0;
     /**
      * <pre>
      * Limit the number of records returned. If not specified, a default of 25 is used.  Enter -1 for all records.
@@ -347,7 +269,7 @@ public final class Filter {
     }
 
     public static final int OFFSET_FIELD_NUMBER = 2;
-    private int offset_;
+    private int offset_ = 0;
     /**
      * <pre>
      * Allows you to offset the first record returned by the limit.
@@ -362,6 +284,7 @@ public final class Filter {
     }
 
     public static final int FILTERGROUPS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Filter.FilterGroup> filterGroups_;
     /**
      * <code>repeated .io.FilterGroup filterGroups = 3;</code>
@@ -402,7 +325,8 @@ public final class Filter {
     }
 
     public static final int ORDERBY_FIELD_NUMBER = 4;
-    private volatile java.lang.Object orderBy_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object orderBy_ = "";
     /**
      * <pre>
      * Field to order results by.
@@ -448,7 +372,7 @@ public final class Filter {
     }
 
     public static final int ORDERASC_FIELD_NUMBER = 5;
-    private boolean orderAsc_;
+    private boolean orderAsc_ = false;
     /**
      * <pre>
      * Will return in ascending order if true, or descending order if false.
@@ -491,7 +415,7 @@ public final class Filter {
       if (orderAsc_ != false) {
         output.writeBool(5, orderAsc_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -519,7 +443,7 @@ public final class Filter {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(5, orderAsc_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -544,7 +468,7 @@ public final class Filter {
           .equals(other.getOrderBy())) return false;
       if (getOrderAsc()
           != other.getOrderAsc()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -568,7 +492,7 @@ public final class Filter {
       hash = (37 * hash) + ORDERASC_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getOrderAsc());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -685,37 +609,29 @@ public final class Filter {
 
       // Construct using com.passkit.grpc.Filter.Filters.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFilterGroupsFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         limit_ = 0;
-
         offset_ = 0;
-
         if (filterGroupsBuilder_ == null) {
           filterGroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          filterGroups_ = null;
           filterGroupsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         orderBy_ = "";
-
         orderAsc_ = false;
-
         return this;
       }
 
@@ -742,56 +658,40 @@ public final class Filter {
       @java.lang.Override
       public com.passkit.grpc.Filter.Filters buildPartial() {
         com.passkit.grpc.Filter.Filters result = new com.passkit.grpc.Filter.Filters(this);
-        int from_bitField0_ = bitField0_;
-        result.limit_ = limit_;
-        result.offset_ = offset_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Filter.Filters result) {
         if (filterGroupsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             filterGroups_ = java.util.Collections.unmodifiableList(filterGroups_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.filterGroups_ = filterGroups_;
         } else {
           result.filterGroups_ = filterGroupsBuilder_.build();
         }
-        result.orderBy_ = orderBy_;
-        result.orderAsc_ = orderAsc_;
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Filter.Filters result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.limit_ = limit_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.offset_ = offset_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.orderBy_ = orderBy_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.orderAsc_ = orderAsc_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Filter.Filters) {
@@ -814,7 +714,7 @@ public final class Filter {
           if (!other.filterGroups_.isEmpty()) {
             if (filterGroups_.isEmpty()) {
               filterGroups_ = other.filterGroups_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureFilterGroupsIsMutable();
               filterGroups_.addAll(other.filterGroups_);
@@ -827,7 +727,7 @@ public final class Filter {
               filterGroupsBuilder_.dispose();
               filterGroupsBuilder_ = null;
               filterGroups_ = other.filterGroups_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               filterGroupsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFilterGroupsFieldBuilder() : null;
@@ -838,12 +738,13 @@ public final class Filter {
         }
         if (!other.getOrderBy().isEmpty()) {
           orderBy_ = other.orderBy_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.getOrderAsc() != false) {
           setOrderAsc(other.getOrderAsc());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -858,17 +759,63 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Filter.Filters parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                limit_ = input.readInt32();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                offset_ = input.readInt32();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.passkit.grpc.Filter.FilterGroup m =
+                    input.readMessage(
+                        com.passkit.grpc.Filter.FilterGroup.parser(),
+                        extensionRegistry);
+                if (filterGroupsBuilder_ == null) {
+                  ensureFilterGroupsIsMutable();
+                  filterGroups_.add(m);
+                } else {
+                  filterGroupsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                orderBy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                orderAsc_ = input.readBool();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Filter.Filters) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -896,8 +843,9 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder setLimit(int value) {
-        
+
         limit_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -910,7 +858,7 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         limit_ = 0;
         onChanged();
         return this;
@@ -939,8 +887,9 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder setOffset(int value) {
-        
+
         offset_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -953,7 +902,7 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearOffset() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         offset_ = 0;
         onChanged();
         return this;
@@ -962,9 +911,9 @@ public final class Filter {
       private java.util.List<com.passkit.grpc.Filter.FilterGroup> filterGroups_ =
         java.util.Collections.emptyList();
       private void ensureFilterGroupsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           filterGroups_ = new java.util.ArrayList<com.passkit.grpc.Filter.FilterGroup>(filterGroups_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1114,7 +1063,7 @@ public final class Filter {
       public Builder clearFilterGroups() {
         if (filterGroupsBuilder_ == null) {
           filterGroups_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           filterGroupsBuilder_.clear();
@@ -1191,7 +1140,7 @@ public final class Filter {
           filterGroupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Filter.FilterGroup, com.passkit.grpc.Filter.FilterGroup.Builder, com.passkit.grpc.Filter.FilterGroupOrBuilder>(
                   filterGroups_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           filterGroups_ = null;
@@ -1252,11 +1201,9 @@ public final class Filter {
        */
       public Builder setOrderBy(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         orderBy_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1269,8 +1216,8 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
-        
         orderBy_ = getDefaultInstance().getOrderBy();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1285,12 +1232,10 @@ public final class Filter {
        */
       public Builder setOrderByBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         orderBy_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1318,8 +1263,9 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder setOrderAsc(boolean value) {
-        
+
         orderAsc_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1332,7 +1278,7 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearOrderAsc() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         orderAsc_ = false;
         onChanged();
         return this;
@@ -1370,7 +1316,18 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Filters(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -1479,68 +1436,6 @@ public final class Filter {
       return new FieldFilter();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FieldFilter(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              filterField_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              filterValue_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              filterOperator_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Filter.internal_static_io_FieldFilter_descriptor;
@@ -1555,7 +1450,8 @@ public final class Filter {
     }
 
     public static final int FILTERFIELD_FIELD_NUMBER = 1;
-    private volatile java.lang.Object filterField_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object filterField_ = "";
     /**
      * <pre>
      * Column name to filter results by.
@@ -1601,7 +1497,8 @@ public final class Filter {
     }
 
     public static final int FILTERVALUE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object filterValue_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object filterValue_ = "";
     /**
      * <pre>
      * Values to test against the filter fields.
@@ -1647,7 +1544,8 @@ public final class Filter {
     }
 
     public static final int FILTEROPERATOR_FIELD_NUMBER = 3;
-    private volatile java.lang.Object filterOperator_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object filterOperator_ = "";
     /**
      * <pre>
      * Operator (e.g. eq, gt, gte, lt, lte, like)
@@ -1715,7 +1613,7 @@ public final class Filter {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterOperator_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, filterOperator_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1733,7 +1631,7 @@ public final class Filter {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filterOperator_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, filterOperator_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1754,7 +1652,7 @@ public final class Filter {
           .equals(other.getFilterValue())) return false;
       if (!getFilterOperator()
           .equals(other.getFilterOperator())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1771,7 +1669,7 @@ public final class Filter {
       hash = (53 * hash) + getFilterValue().hashCode();
       hash = (37 * hash) + FILTEROPERATOR_FIELD_NUMBER;
       hash = (53 * hash) + getFilterOperator().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1888,28 +1786,21 @@ public final class Filter {
 
       // Construct using com.passkit.grpc.Filter.FieldFilter.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         filterField_ = "";
-
         filterValue_ = "";
-
         filterOperator_ = "";
-
         return this;
       }
 
@@ -1936,45 +1827,24 @@ public final class Filter {
       @java.lang.Override
       public com.passkit.grpc.Filter.FieldFilter buildPartial() {
         com.passkit.grpc.Filter.FieldFilter result = new com.passkit.grpc.Filter.FieldFilter(this);
-        result.filterField_ = filterField_;
-        result.filterValue_ = filterValue_;
-        result.filterOperator_ = filterOperator_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Filter.FieldFilter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filterField_ = filterField_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.filterValue_ = filterValue_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.filterOperator_ = filterOperator_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Filter.FieldFilter) {
@@ -1989,17 +1859,20 @@ public final class Filter {
         if (other == com.passkit.grpc.Filter.FieldFilter.getDefaultInstance()) return this;
         if (!other.getFilterField().isEmpty()) {
           filterField_ = other.filterField_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getFilterValue().isEmpty()) {
           filterValue_ = other.filterValue_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getFilterOperator().isEmpty()) {
           filterOperator_ = other.filterOperator_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2014,19 +1887,48 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Filter.FieldFilter parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                filterField_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                filterValue_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                filterOperator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Filter.FieldFilter) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object filterField_ = "";
       /**
@@ -2081,11 +1983,9 @@ public final class Filter {
        */
       public Builder setFilterField(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         filterField_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2098,8 +1998,8 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearFilterField() {
-        
         filterField_ = getDefaultInstance().getFilterField();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2114,12 +2014,10 @@ public final class Filter {
        */
       public Builder setFilterFieldBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         filterField_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2177,11 +2075,9 @@ public final class Filter {
        */
       public Builder setFilterValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         filterValue_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2194,8 +2090,8 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearFilterValue() {
-        
         filterValue_ = getDefaultInstance().getFilterValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2210,12 +2106,10 @@ public final class Filter {
        */
       public Builder setFilterValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         filterValue_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2273,11 +2167,9 @@ public final class Filter {
        */
       public Builder setFilterOperator(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         filterOperator_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2290,8 +2182,8 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearFilterOperator() {
-        
         filterOperator_ = getDefaultInstance().getFilterOperator();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2306,12 +2198,10 @@ public final class Filter {
        */
       public Builder setFilterOperatorBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         filterOperator_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2348,7 +2238,18 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FieldFilter(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2459,69 +2360,6 @@ public final class Filter {
       return new FilterGroup();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FilterGroup(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              condition_ = rawValue;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                fieldFilters_ = new java.util.ArrayList<com.passkit.grpc.Filter.FieldFilter>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              fieldFilters_.add(
-                  input.readMessage(com.passkit.grpc.Filter.FieldFilter.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          fieldFilters_ = java.util.Collections.unmodifiableList(fieldFilters_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.Filter.internal_static_io_FilterGroup_descriptor;
@@ -2536,7 +2374,7 @@ public final class Filter {
     }
 
     public static final int CONDITION_FIELD_NUMBER = 1;
-    private int condition_;
+    private int condition_ = 0;
     /**
      * <pre>
      * Use AND or OR conditions to join each filter field. E.g. (tier_id = bronze AND tier_id = silver) (tier_id = bronze OR tier_id = silver)
@@ -2557,12 +2395,12 @@ public final class Filter {
      * @return The condition.
      */
     @java.lang.Override public com.passkit.grpc.Filter.Operator getCondition() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Filter.Operator result = com.passkit.grpc.Filter.Operator.valueOf(condition_);
+      com.passkit.grpc.Filter.Operator result = com.passkit.grpc.Filter.Operator.forNumber(condition_);
       return result == null ? com.passkit.grpc.Filter.Operator.UNRECOGNIZED : result;
     }
 
     public static final int FIELDFILTERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Filter.FieldFilter> fieldFilters_;
     /**
      * <pre>
@@ -2642,7 +2480,7 @@ public final class Filter {
       for (int i = 0; i < fieldFilters_.size(); i++) {
         output.writeMessage(2, fieldFilters_.get(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2659,7 +2497,7 @@ public final class Filter {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, fieldFilters_.get(i));
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2677,7 +2515,7 @@ public final class Filter {
       if (condition_ != other.condition_) return false;
       if (!getFieldFiltersList()
           .equals(other.getFieldFiltersList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2694,7 +2532,7 @@ public final class Filter {
         hash = (37 * hash) + FIELDFILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getFieldFiltersList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2811,31 +2649,26 @@ public final class Filter {
 
       // Construct using com.passkit.grpc.Filter.FilterGroup.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getFieldFiltersFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         condition_ = 0;
-
         if (fieldFiltersBuilder_ == null) {
           fieldFilters_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          fieldFilters_ = null;
           fieldFiltersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2862,53 +2695,31 @@ public final class Filter {
       @java.lang.Override
       public com.passkit.grpc.Filter.FilterGroup buildPartial() {
         com.passkit.grpc.Filter.FilterGroup result = new com.passkit.grpc.Filter.FilterGroup(this);
-        int from_bitField0_ = bitField0_;
-        result.condition_ = condition_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.Filter.FilterGroup result) {
         if (fieldFiltersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             fieldFilters_ = java.util.Collections.unmodifiableList(fieldFilters_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.fieldFilters_ = fieldFilters_;
         } else {
           result.fieldFilters_ = fieldFiltersBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.Filter.FilterGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.condition_ = condition_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.Filter.FilterGroup) {
@@ -2928,7 +2739,7 @@ public final class Filter {
           if (!other.fieldFilters_.isEmpty()) {
             if (fieldFilters_.isEmpty()) {
               fieldFilters_ = other.fieldFilters_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureFieldFiltersIsMutable();
               fieldFilters_.addAll(other.fieldFilters_);
@@ -2941,7 +2752,7 @@ public final class Filter {
               fieldFiltersBuilder_.dispose();
               fieldFiltersBuilder_ = null;
               fieldFilters_ = other.fieldFilters_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               fieldFiltersBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFieldFiltersFieldBuilder() : null;
@@ -2950,7 +2761,7 @@ public final class Filter {
             }
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2965,17 +2776,48 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.Filter.FilterGroup parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                condition_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                com.passkit.grpc.Filter.FieldFilter m =
+                    input.readMessage(
+                        com.passkit.grpc.Filter.FieldFilter.parser(),
+                        extensionRegistry);
+                if (fieldFiltersBuilder_ == null) {
+                  ensureFieldFiltersIsMutable();
+                  fieldFilters_.add(m);
+                } else {
+                  fieldFiltersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.Filter.FilterGroup) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3002,8 +2844,8 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder setConditionValue(int value) {
-        
         condition_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3017,8 +2859,7 @@ public final class Filter {
        */
       @java.lang.Override
       public com.passkit.grpc.Filter.Operator getCondition() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Filter.Operator result = com.passkit.grpc.Filter.Operator.valueOf(condition_);
+        com.passkit.grpc.Filter.Operator result = com.passkit.grpc.Filter.Operator.forNumber(condition_);
         return result == null ? com.passkit.grpc.Filter.Operator.UNRECOGNIZED : result;
       }
       /**
@@ -3034,7 +2875,7 @@ public final class Filter {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         condition_ = value.getNumber();
         onChanged();
         return this;
@@ -3048,7 +2889,7 @@ public final class Filter {
        * @return This builder for chaining.
        */
       public Builder clearCondition() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         condition_ = 0;
         onChanged();
         return this;
@@ -3057,9 +2898,9 @@ public final class Filter {
       private java.util.List<com.passkit.grpc.Filter.FieldFilter> fieldFilters_ =
         java.util.Collections.emptyList();
       private void ensureFieldFiltersIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           fieldFilters_ = new java.util.ArrayList<com.passkit.grpc.Filter.FieldFilter>(fieldFilters_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3253,7 +3094,7 @@ public final class Filter {
       public Builder clearFieldFilters() {
         if (fieldFiltersBuilder_ == null) {
           fieldFilters_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           fieldFiltersBuilder_.clear();
@@ -3358,7 +3199,7 @@ public final class Filter {
           fieldFiltersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Filter.FieldFilter, com.passkit.grpc.Filter.FieldFilter.Builder, com.passkit.grpc.Filter.FieldFilterOrBuilder>(
                   fieldFilters_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           fieldFilters_ = null;
@@ -3398,7 +3239,18 @@ public final class Filter {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FilterGroup(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 

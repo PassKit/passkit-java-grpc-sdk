@@ -206,7 +206,7 @@ public final class PassOuterClass {
 
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -215,7 +215,7 @@ public final class PassOuterClass {
     java.util.List<java.lang.Integer> getAssociatedStoreIdentifiersList();
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -224,7 +224,7 @@ public final class PassOuterClass {
     int getAssociatedStoreIdentifiersCount();
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -232,6 +232,35 @@ public final class PassOuterClass {
      * @return The associatedStoreIdentifiers at the given index.
      */
     int getAssociatedStoreIdentifiers(int index);
+
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @return A list containing the appStoreIdentifiers.
+     */
+    java.util.List<java.lang.Long> getAppStoreIdentifiersList();
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @return The count of appStoreIdentifiers.
+     */
+    int getAppStoreIdentifiersCount();
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @param index The index of the element to return.
+     * @return The appStoreIdentifiers at the given index.
+     */
+    long getAppStoreIdentifiers(int index);
   }
   /**
    * <pre>
@@ -254,6 +283,7 @@ public final class PassOuterClass {
       beacons_ = java.util.Collections.emptyList();
       links_ = java.util.Collections.emptyList();
       associatedStoreIdentifiers_ = emptyIntList();
+      appStoreIdentifiers_ = emptyLongList();
     }
 
     @java.lang.Override
@@ -263,137 +293,6 @@ public final class PassOuterClass {
       return new PassOverrides();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PassOverrides(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.Image.ImageIds.Builder subBuilder = null;
-              if (imageIds_ != null) {
-                subBuilder = imageIds_.toBuilder();
-              }
-              imageIds_ = input.readMessage(com.passkit.grpc.Image.ImageIds.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(imageIds_);
-                imageIds_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                locations_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              locations_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.GPSLocation.parser(), extensionRegistry));
-              break;
-            }
-            case 34: {
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                beacons_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              beacons_.add(
-                  input.readMessage(com.passkit.grpc.Proximity.Beacon.parser(), extensionRegistry));
-              break;
-            }
-            case 42: {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              links_.add(
-                  input.readMessage(com.passkit.grpc.Links.Link.parser(), extensionRegistry));
-              break;
-            }
-            case 50: {
-              com.passkit.grpc.Template.Colors.Builder subBuilder = null;
-              if (colors_ != null) {
-                subBuilder = colors_.toBuilder();
-              }
-              colors_ = input.readMessage(com.passkit.grpc.Template.Colors.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(colors_);
-                colors_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 56: {
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                associatedStoreIdentifiers_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              associatedStoreIdentifiers_.addInt(input.readUInt32());
-              break;
-            }
-            case 58: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
-                associatedStoreIdentifiers_ = newIntList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                associatedStoreIdentifiers_.addInt(input.readUInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          locations_ = java.util.Collections.unmodifiableList(locations_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          beacons_ = java.util.Collections.unmodifiableList(beacons_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          links_ = java.util.Collections.unmodifiableList(links_);
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          associatedStoreIdentifiers_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.PassOuterClass.internal_static_io_PassOverrides_descriptor;
@@ -442,10 +341,11 @@ public final class PassOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Image.ImageIdsOrBuilder getImageIdsOrBuilder() {
-      return getImageIds();
+      return imageIds_ == null ? com.passkit.grpc.Image.ImageIds.getDefaultInstance() : imageIds_;
     }
 
     public static final int LOCATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locations_;
     /**
      * <pre>
@@ -506,6 +406,7 @@ public final class PassOuterClass {
     }
 
     public static final int BEACONS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Proximity.Beacon> beacons_;
     /**
      * <pre>
@@ -566,6 +467,7 @@ public final class PassOuterClass {
     }
 
     public static final int LINKS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.passkit.grpc.Links.Link> links_;
     /**
      * <pre>
@@ -660,14 +562,15 @@ public final class PassOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Template.ColorsOrBuilder getColorsOrBuilder() {
-      return getColors();
+      return colors_ == null ? com.passkit.grpc.Template.Colors.getDefaultInstance() : colors_;
     }
 
     public static final int ASSOCIATEDSTOREIDENTIFIERS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList associatedStoreIdentifiers_;
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -680,7 +583,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -691,7 +594,7 @@ public final class PassOuterClass {
     }
     /**
      * <pre>
-     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
      * </pre>
      *
      * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -702,6 +605,47 @@ public final class PassOuterClass {
       return associatedStoreIdentifiers_.getInt(index);
     }
     private int associatedStoreIdentifiersMemoizedSerializedSize = -1;
+
+    public static final int APPSTOREIDENTIFIERS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList appStoreIdentifiers_;
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @return A list containing the appStoreIdentifiers.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getAppStoreIdentifiersList() {
+      return appStoreIdentifiers_;
+    }
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @return The count of appStoreIdentifiers.
+     */
+    public int getAppStoreIdentifiersCount() {
+      return appStoreIdentifiers_.size();
+    }
+    /**
+     * <pre>
+     * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+     * </pre>
+     *
+     * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+     * @param index The index of the element to return.
+     * @return The appStoreIdentifiers at the given index.
+     */
+    public long getAppStoreIdentifiers(int index) {
+      return appStoreIdentifiers_.getLong(index);
+    }
+    private int appStoreIdentifiersMemoizedSerializedSize = -1;
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -740,7 +684,14 @@ public final class PassOuterClass {
       for (int i = 0; i < associatedStoreIdentifiers_.size(); i++) {
         output.writeUInt32NoTag(associatedStoreIdentifiers_.getInt(i));
       }
-      unknownFields.writeTo(output);
+      if (getAppStoreIdentifiersList().size() > 0) {
+        output.writeUInt32NoTag(66);
+        output.writeUInt32NoTag(appStoreIdentifiersMemoizedSerializedSize);
+      }
+      for (int i = 0; i < appStoreIdentifiers_.size(); i++) {
+        output.writeUInt64NoTag(appStoreIdentifiers_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -783,7 +734,21 @@ public final class PassOuterClass {
         }
         associatedStoreIdentifiersMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      {
+        int dataSize = 0;
+        for (int i = 0; i < appStoreIdentifiers_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(appStoreIdentifiers_.getLong(i));
+        }
+        size += dataSize;
+        if (!getAppStoreIdentifiersList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        appStoreIdentifiersMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -816,7 +781,9 @@ public final class PassOuterClass {
       }
       if (!getAssociatedStoreIdentifiersList()
           .equals(other.getAssociatedStoreIdentifiersList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getAppStoreIdentifiersList()
+          .equals(other.getAppStoreIdentifiersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -851,7 +818,11 @@ public final class PassOuterClass {
         hash = (37 * hash) + ASSOCIATEDSTOREIDENTIFIERS_FIELD_NUMBER;
         hash = (53 * hash) + getAssociatedStoreIdentifiersList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      if (getAppStoreIdentifiersCount() > 0) {
+        hash = (37 * hash) + APPSTOREIDENTIFIERS_FIELD_NUMBER;
+        hash = (53 * hash) + getAppStoreIdentifiersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -972,57 +943,51 @@ public final class PassOuterClass {
 
       // Construct using com.passkit.grpc.PassOuterClass.PassOverrides.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getLocationsFieldBuilder();
-          getBeaconsFieldBuilder();
-          getLinksFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (imageIdsBuilder_ == null) {
-          imageIds_ = null;
-        } else {
-          imageIds_ = null;
+        bitField0_ = 0;
+        imageIds_ = null;
+        if (imageIdsBuilder_ != null) {
+          imageIdsBuilder_.dispose();
           imageIdsBuilder_ = null;
         }
         if (locationsBuilder_ == null) {
           locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          locations_ = null;
           locationsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (beaconsBuilder_ == null) {
           beacons_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
+          beacons_ = null;
           beaconsBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
+          links_ = null;
           linksBuilder_.clear();
         }
-        if (colorsBuilder_ == null) {
-          colors_ = null;
-        } else {
-          colors_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        colors_ = null;
+        if (colorsBuilder_ != null) {
+          colorsBuilder_.dispose();
           colorsBuilder_ = null;
         }
         associatedStoreIdentifiers_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        appStoreIdentifiers_ = emptyLongList();
         return this;
       }
 
@@ -1049,85 +1014,66 @@ public final class PassOuterClass {
       @java.lang.Override
       public com.passkit.grpc.PassOuterClass.PassOverrides buildPartial() {
         com.passkit.grpc.PassOuterClass.PassOverrides result = new com.passkit.grpc.PassOuterClass.PassOverrides(this);
-        int from_bitField0_ = bitField0_;
-        if (imageIdsBuilder_ == null) {
-          result.imageIds_ = imageIds_;
-        } else {
-          result.imageIds_ = imageIdsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.passkit.grpc.PassOuterClass.PassOverrides result) {
         if (locationsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             locations_ = java.util.Collections.unmodifiableList(locations_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.locations_ = locations_;
         } else {
           result.locations_ = locationsBuilder_.build();
         }
         if (beaconsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             beacons_ = java.util.Collections.unmodifiableList(beacons_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.beacons_ = beacons_;
         } else {
           result.beacons_ = beaconsBuilder_.build();
         }
         if (linksBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             links_ = java.util.Collections.unmodifiableList(links_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.links_ = links_;
         } else {
           result.links_ = linksBuilder_.build();
         }
-        if (colorsBuilder_ == null) {
-          result.colors_ = colors_;
-        } else {
-          result.colors_ = colorsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           associatedStoreIdentifiers_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.associatedStoreIdentifiers_ = associatedStoreIdentifiers_;
-        onBuilt();
-        return result;
+        if (((bitField0_ & 0x00000040) != 0)) {
+          appStoreIdentifiers_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.appStoreIdentifiers_ = appStoreIdentifiers_;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.PassOuterClass.PassOverrides result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.imageIds_ = imageIdsBuilder_ == null
+              ? imageIds_
+              : imageIdsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.colors_ = colorsBuilder_ == null
+              ? colors_
+              : colorsBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.PassOuterClass.PassOverrides) {
@@ -1147,7 +1093,7 @@ public final class PassOuterClass {
           if (!other.locations_.isEmpty()) {
             if (locations_.isEmpty()) {
               locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureLocationsIsMutable();
               locations_.addAll(other.locations_);
@@ -1160,7 +1106,7 @@ public final class PassOuterClass {
               locationsBuilder_.dispose();
               locationsBuilder_ = null;
               locations_ = other.locations_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               locationsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLocationsFieldBuilder() : null;
@@ -1173,7 +1119,7 @@ public final class PassOuterClass {
           if (!other.beacons_.isEmpty()) {
             if (beacons_.isEmpty()) {
               beacons_ = other.beacons_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureBeaconsIsMutable();
               beacons_.addAll(other.beacons_);
@@ -1186,7 +1132,7 @@ public final class PassOuterClass {
               beaconsBuilder_.dispose();
               beaconsBuilder_ = null;
               beacons_ = other.beacons_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
               beaconsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBeaconsFieldBuilder() : null;
@@ -1199,7 +1145,7 @@ public final class PassOuterClass {
           if (!other.links_.isEmpty()) {
             if (links_.isEmpty()) {
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureLinksIsMutable();
               links_.addAll(other.links_);
@@ -1212,7 +1158,7 @@ public final class PassOuterClass {
               linksBuilder_.dispose();
               linksBuilder_ = null;
               links_ = other.links_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               linksBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLinksFieldBuilder() : null;
@@ -1227,14 +1173,24 @@ public final class PassOuterClass {
         if (!other.associatedStoreIdentifiers_.isEmpty()) {
           if (associatedStoreIdentifiers_.isEmpty()) {
             associatedStoreIdentifiers_ = other.associatedStoreIdentifiers_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureAssociatedStoreIdentifiersIsMutable();
             associatedStoreIdentifiers_.addAll(other.associatedStoreIdentifiers_);
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        if (!other.appStoreIdentifiers_.isEmpty()) {
+          if (appStoreIdentifiers_.isEmpty()) {
+            appStoreIdentifiers_ = other.appStoreIdentifiers_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureAppStoreIdentifiersIsMutable();
+            appStoreIdentifiers_.addAll(other.appStoreIdentifiers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1249,17 +1205,115 @@ public final class PassOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.PassOuterClass.PassOverrides parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getImageIdsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 26: {
+                com.passkit.grpc.Proximity.GPSLocation m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.GPSLocation.parser(),
+                        extensionRegistry);
+                if (locationsBuilder_ == null) {
+                  ensureLocationsIsMutable();
+                  locations_.add(m);
+                } else {
+                  locationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.passkit.grpc.Proximity.Beacon m =
+                    input.readMessage(
+                        com.passkit.grpc.Proximity.Beacon.parser(),
+                        extensionRegistry);
+                if (beaconsBuilder_ == null) {
+                  ensureBeaconsIsMutable();
+                  beacons_.add(m);
+                } else {
+                  beaconsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.passkit.grpc.Links.Link m =
+                    input.readMessage(
+                        com.passkit.grpc.Links.Link.parser(),
+                        extensionRegistry);
+                if (linksBuilder_ == null) {
+                  ensureLinksIsMutable();
+                  links_.add(m);
+                } else {
+                  linksBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getColorsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 50
+              case 56: {
+                int v = input.readUInt32();
+                ensureAssociatedStoreIdentifiersIsMutable();
+                associatedStoreIdentifiers_.addInt(v);
+                break;
+              } // case 56
+              case 58: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAssociatedStoreIdentifiersIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  associatedStoreIdentifiers_.addInt(input.readUInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 58
+              case 64: {
+                long v = input.readUInt64();
+                ensureAppStoreIdentifiersIsMutable();
+                appStoreIdentifiers_.addLong(v);
+                break;
+              } // case 64
+              case 66: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureAppStoreIdentifiersIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  appStoreIdentifiers_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 66
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.PassOuterClass.PassOverrides) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1276,7 +1330,7 @@ public final class PassOuterClass {
        * @return Whether the imageIds field is set.
        */
       public boolean hasImageIds() {
-        return imageIdsBuilder_ != null || imageIds_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -1306,11 +1360,11 @@ public final class PassOuterClass {
             throw new NullPointerException();
           }
           imageIds_ = value;
-          onChanged();
         } else {
           imageIdsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1324,11 +1378,11 @@ public final class PassOuterClass {
           com.passkit.grpc.Image.ImageIds.Builder builderForValue) {
         if (imageIdsBuilder_ == null) {
           imageIds_ = builderForValue.build();
-          onChanged();
         } else {
           imageIdsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1340,17 +1394,18 @@ public final class PassOuterClass {
        */
       public Builder mergeImageIds(com.passkit.grpc.Image.ImageIds value) {
         if (imageIdsBuilder_ == null) {
-          if (imageIds_ != null) {
-            imageIds_ =
-              com.passkit.grpc.Image.ImageIds.newBuilder(imageIds_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            imageIds_ != null &&
+            imageIds_ != com.passkit.grpc.Image.ImageIds.getDefaultInstance()) {
+            getImageIdsBuilder().mergeFrom(value);
           } else {
             imageIds_ = value;
           }
-          onChanged();
         } else {
           imageIdsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1361,14 +1416,13 @@ public final class PassOuterClass {
        * <code>.io.ImageIds imageIds = 1;</code>
        */
       public Builder clearImageIds() {
-        if (imageIdsBuilder_ == null) {
-          imageIds_ = null;
-          onChanged();
-        } else {
-          imageIds_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        imageIds_ = null;
+        if (imageIdsBuilder_ != null) {
+          imageIdsBuilder_.dispose();
           imageIdsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1379,7 +1433,7 @@ public final class PassOuterClass {
        * <code>.io.ImageIds imageIds = 1;</code>
        */
       public com.passkit.grpc.Image.ImageIds.Builder getImageIdsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getImageIdsFieldBuilder().getBuilder();
       }
@@ -1422,9 +1476,9 @@ public final class PassOuterClass {
       private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locations_ =
         java.util.Collections.emptyList();
       private void ensureLocationsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           locations_ = new java.util.ArrayList<com.passkit.grpc.Proximity.GPSLocation>(locations_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -1618,7 +1672,7 @@ public final class PassOuterClass {
       public Builder clearLocations() {
         if (locationsBuilder_ == null) {
           locations_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           locationsBuilder_.clear();
@@ -1723,7 +1777,7 @@ public final class PassOuterClass {
           locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Proximity.GPSLocation, com.passkit.grpc.Proximity.GPSLocation.Builder, com.passkit.grpc.Proximity.GPSLocationOrBuilder>(
                   locations_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           locations_ = null;
@@ -1734,9 +1788,9 @@ public final class PassOuterClass {
       private java.util.List<com.passkit.grpc.Proximity.Beacon> beacons_ =
         java.util.Collections.emptyList();
       private void ensureBeaconsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           beacons_ = new java.util.ArrayList<com.passkit.grpc.Proximity.Beacon>(beacons_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -1930,7 +1984,7 @@ public final class PassOuterClass {
       public Builder clearBeacons() {
         if (beaconsBuilder_ == null) {
           beacons_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           beaconsBuilder_.clear();
@@ -2035,7 +2089,7 @@ public final class PassOuterClass {
           beaconsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Proximity.Beacon, com.passkit.grpc.Proximity.Beacon.Builder, com.passkit.grpc.Proximity.BeaconOrBuilder>(
                   beacons_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           beacons_ = null;
@@ -2046,9 +2100,9 @@ public final class PassOuterClass {
       private java.util.List<com.passkit.grpc.Links.Link> links_ =
         java.util.Collections.emptyList();
       private void ensureLinksIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           links_ = new java.util.ArrayList<com.passkit.grpc.Links.Link>(links_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -2242,7 +2296,7 @@ public final class PassOuterClass {
       public Builder clearLinks() {
         if (linksBuilder_ == null) {
           links_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           linksBuilder_.clear();
@@ -2347,7 +2401,7 @@ public final class PassOuterClass {
           linksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.passkit.grpc.Links.Link, com.passkit.grpc.Links.Link.Builder, com.passkit.grpc.Links.LinkOrBuilder>(
                   links_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           links_ = null;
@@ -2367,7 +2421,7 @@ public final class PassOuterClass {
        * @return Whether the colors field is set.
        */
       public boolean hasColors() {
-        return colorsBuilder_ != null || colors_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -2397,11 +2451,11 @@ public final class PassOuterClass {
             throw new NullPointerException();
           }
           colors_ = value;
-          onChanged();
         } else {
           colorsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2415,11 +2469,11 @@ public final class PassOuterClass {
           com.passkit.grpc.Template.Colors.Builder builderForValue) {
         if (colorsBuilder_ == null) {
           colors_ = builderForValue.build();
-          onChanged();
         } else {
           colorsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2431,17 +2485,18 @@ public final class PassOuterClass {
        */
       public Builder mergeColors(com.passkit.grpc.Template.Colors value) {
         if (colorsBuilder_ == null) {
-          if (colors_ != null) {
-            colors_ =
-              com.passkit.grpc.Template.Colors.newBuilder(colors_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            colors_ != null &&
+            colors_ != com.passkit.grpc.Template.Colors.getDefaultInstance()) {
+            getColorsBuilder().mergeFrom(value);
           } else {
             colors_ = value;
           }
-          onChanged();
         } else {
           colorsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -2452,14 +2507,13 @@ public final class PassOuterClass {
        * <code>.io.Colors colors = 6;</code>
        */
       public Builder clearColors() {
-        if (colorsBuilder_ == null) {
-          colors_ = null;
-          onChanged();
-        } else {
-          colors_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        colors_ = null;
+        if (colorsBuilder_ != null) {
+          colorsBuilder_.dispose();
           colorsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2470,7 +2524,7 @@ public final class PassOuterClass {
        * <code>.io.Colors colors = 6;</code>
        */
       public com.passkit.grpc.Template.Colors.Builder getColorsBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getColorsFieldBuilder().getBuilder();
       }
@@ -2512,14 +2566,14 @@ public final class PassOuterClass {
 
       private com.google.protobuf.Internal.IntList associatedStoreIdentifiers_ = emptyIntList();
       private void ensureAssociatedStoreIdentifiersIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           associatedStoreIdentifiers_ = mutableCopy(associatedStoreIdentifiers_);
-          bitField0_ |= 0x00000008;
-         }
+          bitField0_ |= 0x00000020;
+        }
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2527,12 +2581,12 @@ public final class PassOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getAssociatedStoreIdentifiersList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(associatedStoreIdentifiers_) : associatedStoreIdentifiers_;
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2543,7 +2597,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2555,7 +2609,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2565,6 +2619,7 @@ public final class PassOuterClass {
        */
       public Builder setAssociatedStoreIdentifiers(
           int index, int value) {
+
         ensureAssociatedStoreIdentifiersIsMutable();
         associatedStoreIdentifiers_.setInt(index, value);
         onChanged();
@@ -2572,7 +2627,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2580,6 +2635,7 @@ public final class PassOuterClass {
        * @return This builder for chaining.
        */
       public Builder addAssociatedStoreIdentifiers(int value) {
+
         ensureAssociatedStoreIdentifiersIsMutable();
         associatedStoreIdentifiers_.addInt(value);
         onChanged();
@@ -2587,7 +2643,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2604,7 +2660,7 @@ public final class PassOuterClass {
       }
       /**
        * <pre>
-       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * Deprecated - user appStoreIdentifiers.  A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
        * </pre>
        *
        * <code>repeated uint32 associatedStoreIdentifiers = 7;</code>
@@ -2612,7 +2668,116 @@ public final class PassOuterClass {
        */
       public Builder clearAssociatedStoreIdentifiers() {
         associatedStoreIdentifiers_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList appStoreIdentifiers_ = emptyLongList();
+      private void ensureAppStoreIdentifiersIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          appStoreIdentifiers_ = mutableCopy(appStoreIdentifiers_);
+          bitField0_ |= 0x00000040;
+        }
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @return A list containing the appStoreIdentifiers.
+       */
+      public java.util.List<java.lang.Long>
+          getAppStoreIdentifiersList() {
+        return ((bitField0_ & 0x00000040) != 0) ?
+                 java.util.Collections.unmodifiableList(appStoreIdentifiers_) : appStoreIdentifiers_;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @return The count of appStoreIdentifiers.
+       */
+      public int getAppStoreIdentifiersCount() {
+        return appStoreIdentifiers_.size();
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @param index The index of the element to return.
+       * @return The appStoreIdentifiers at the given index.
+       */
+      public long getAppStoreIdentifiers(int index) {
+        return appStoreIdentifiers_.getLong(index);
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The appStoreIdentifiers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAppStoreIdentifiers(
+          int index, long value) {
+
+        ensureAppStoreIdentifiersIsMutable();
+        appStoreIdentifiers_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @param value The appStoreIdentifiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAppStoreIdentifiers(long value) {
+
+        ensureAppStoreIdentifiersIsMutable();
+        appStoreIdentifiers_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @param values The appStoreIdentifiers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAppStoreIdentifiers(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureAppStoreIdentifiersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, appStoreIdentifiers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A list of iTunes Store item identifiers for the associated apps. Only one item in the list is used — the first item identifier for an app compatible with the user's App Store account and device (hardware/iOS version). If the app is not installed, the link opens the App Store and shows the app. If the app is already installed, the link launches the app.
+       * </pre>
+       *
+       * <code>repeated uint64 appStoreIdentifiers = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAppStoreIdentifiers() {
+        appStoreIdentifiers_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -2649,7 +2814,18 @@ public final class PassOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PassOverrides(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2725,76 +2901,6 @@ public final class PassOuterClass {
       return new PassOptions();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PassOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.passkit.grpc.Template.AppleWalletSettings.Builder subBuilder = null;
-              if (apple_ != null) {
-                subBuilder = apple_.toBuilder();
-              }
-              apple_ = input.readMessage(com.passkit.grpc.Template.AppleWalletSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(apple_);
-                apple_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.passkit.grpc.Template.GooglePaySettings.Builder subBuilder = null;
-              if (google_ != null) {
-                subBuilder = google_.toBuilder();
-              }
-              google_ = input.readMessage(com.passkit.grpc.Template.GooglePaySettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(google_);
-                google_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.PassOuterClass.internal_static_io_PassOptions_descriptor;
@@ -2831,7 +2937,7 @@ public final class PassOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Template.AppleWalletSettingsOrBuilder getAppleOrBuilder() {
-      return getApple();
+      return apple_ == null ? com.passkit.grpc.Template.AppleWalletSettings.getDefaultInstance() : apple_;
     }
 
     public static final int GOOGLE_FIELD_NUMBER = 2;
@@ -2857,7 +2963,7 @@ public final class PassOuterClass {
      */
     @java.lang.Override
     public com.passkit.grpc.Template.GooglePaySettingsOrBuilder getGoogleOrBuilder() {
-      return getGoogle();
+      return google_ == null ? com.passkit.grpc.Template.GooglePaySettings.getDefaultInstance() : google_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2880,7 +2986,7 @@ public final class PassOuterClass {
       if (google_ != null) {
         output.writeMessage(2, getGoogle());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2897,7 +3003,7 @@ public final class PassOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getGoogle());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2922,7 +3028,7 @@ public final class PassOuterClass {
         if (!getGoogle()
             .equals(other.getGoogle())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2941,7 +3047,7 @@ public final class PassOuterClass {
         hash = (37 * hash) + GOOGLE_FIELD_NUMBER;
         hash = (53 * hash) + getGoogle().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3058,32 +3164,26 @@ public final class PassOuterClass {
 
       // Construct using com.passkit.grpc.PassOuterClass.PassOptions.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (appleBuilder_ == null) {
-          apple_ = null;
-        } else {
-          apple_ = null;
+        bitField0_ = 0;
+        apple_ = null;
+        if (appleBuilder_ != null) {
+          appleBuilder_.dispose();
           appleBuilder_ = null;
         }
-        if (googleBuilder_ == null) {
-          google_ = null;
-        } else {
-          google_ = null;
+        google_ = null;
+        if (googleBuilder_ != null) {
+          googleBuilder_.dispose();
           googleBuilder_ = null;
         }
         return this;
@@ -3112,52 +3212,25 @@ public final class PassOuterClass {
       @java.lang.Override
       public com.passkit.grpc.PassOuterClass.PassOptions buildPartial() {
         com.passkit.grpc.PassOuterClass.PassOptions result = new com.passkit.grpc.PassOuterClass.PassOptions(this);
-        if (appleBuilder_ == null) {
-          result.apple_ = apple_;
-        } else {
-          result.apple_ = appleBuilder_.build();
-        }
-        if (googleBuilder_ == null) {
-          result.google_ = google_;
-        } else {
-          result.google_ = googleBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.PassOuterClass.PassOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.apple_ = appleBuilder_ == null
+              ? apple_
+              : appleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.google_ = googleBuilder_ == null
+              ? google_
+              : googleBuilder_.build();
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.PassOuterClass.PassOptions) {
@@ -3176,7 +3249,7 @@ public final class PassOuterClass {
         if (other.hasGoogle()) {
           mergeGoogle(other.getGoogle());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3191,19 +3264,47 @@ public final class PassOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.PassOuterClass.PassOptions parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAppleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getGoogleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.PassOuterClass.PassOptions) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.passkit.grpc.Template.AppleWalletSettings apple_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3213,7 +3314,7 @@ public final class PassOuterClass {
        * @return Whether the apple field is set.
        */
       public boolean hasApple() {
-        return appleBuilder_ != null || apple_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.io.AppleWalletSettings apple = 1;</code>
@@ -3235,11 +3336,11 @@ public final class PassOuterClass {
             throw new NullPointerException();
           }
           apple_ = value;
-          onChanged();
         } else {
           appleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3249,11 +3350,11 @@ public final class PassOuterClass {
           com.passkit.grpc.Template.AppleWalletSettings.Builder builderForValue) {
         if (appleBuilder_ == null) {
           apple_ = builderForValue.build();
-          onChanged();
         } else {
           appleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3261,38 +3362,38 @@ public final class PassOuterClass {
        */
       public Builder mergeApple(com.passkit.grpc.Template.AppleWalletSettings value) {
         if (appleBuilder_ == null) {
-          if (apple_ != null) {
-            apple_ =
-              com.passkit.grpc.Template.AppleWalletSettings.newBuilder(apple_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            apple_ != null &&
+            apple_ != com.passkit.grpc.Template.AppleWalletSettings.getDefaultInstance()) {
+            getAppleBuilder().mergeFrom(value);
           } else {
             apple_ = value;
           }
-          onChanged();
         } else {
           appleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.AppleWalletSettings apple = 1;</code>
        */
       public Builder clearApple() {
-        if (appleBuilder_ == null) {
-          apple_ = null;
-          onChanged();
-        } else {
-          apple_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        apple_ = null;
+        if (appleBuilder_ != null) {
+          appleBuilder_.dispose();
           appleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.AppleWalletSettings apple = 1;</code>
        */
       public com.passkit.grpc.Template.AppleWalletSettings.Builder getAppleBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getAppleFieldBuilder().getBuilder();
       }
@@ -3332,7 +3433,7 @@ public final class PassOuterClass {
        * @return Whether the google field is set.
        */
       public boolean hasGoogle() {
-        return googleBuilder_ != null || google_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.io.GooglePaySettings google = 2;</code>
@@ -3354,11 +3455,11 @@ public final class PassOuterClass {
             throw new NullPointerException();
           }
           google_ = value;
-          onChanged();
         } else {
           googleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3368,11 +3469,11 @@ public final class PassOuterClass {
           com.passkit.grpc.Template.GooglePaySettings.Builder builderForValue) {
         if (googleBuilder_ == null) {
           google_ = builderForValue.build();
-          onChanged();
         } else {
           googleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3380,38 +3481,38 @@ public final class PassOuterClass {
        */
       public Builder mergeGoogle(com.passkit.grpc.Template.GooglePaySettings value) {
         if (googleBuilder_ == null) {
-          if (google_ != null) {
-            google_ =
-              com.passkit.grpc.Template.GooglePaySettings.newBuilder(google_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            google_ != null &&
+            google_ != com.passkit.grpc.Template.GooglePaySettings.getDefaultInstance()) {
+            getGoogleBuilder().mergeFrom(value);
           } else {
             google_ = value;
           }
-          onChanged();
         } else {
           googleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.io.GooglePaySettings google = 2;</code>
        */
       public Builder clearGoogle() {
-        if (googleBuilder_ == null) {
-          google_ = null;
-          onChanged();
-        } else {
-          google_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        google_ = null;
+        if (googleBuilder_ != null) {
+          googleBuilder_.dispose();
           googleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.io.GooglePaySettings google = 2;</code>
        */
       public com.passkit.grpc.Template.GooglePaySettings.Builder getGoogleBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getGoogleFieldBuilder().getBuilder();
       }
@@ -3475,7 +3576,18 @@ public final class PassOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PassOptions(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3651,7 +3763,6 @@ public final class PassOuterClass {
      *
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
-
     /* nullable */
 java.lang.String getRecordDataOrDefault(
         java.lang.String key,
@@ -3664,7 +3775,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
-
     java.lang.String getRecordDataOrThrow(
         java.lang.String key);
 
@@ -3718,114 +3828,6 @@ java.lang.String defaultValue);
       return new Pass();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Pass(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              classId_ = s;
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              protocol_ = rawValue;
-              break;
-            }
-            case 34: {
-              com.passkit.grpc.Personal.Person.Builder subBuilder = null;
-              if (personDetails_ != null) {
-                subBuilder = personDetails_.toBuilder();
-              }
-              personDetails_ = input.readMessage(com.passkit.grpc.Personal.Person.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(personDetails_);
-                personDetails_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.passkit.grpc.MetricsOuterClass.Metadata.Builder subBuilder = null;
-              if (metadata_ != null) {
-                subBuilder = metadata_.toBuilder();
-              }
-              metadata_ = input.readMessage(com.passkit.grpc.MetricsOuterClass.Metadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(metadata_);
-                metadata_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                recordData_ = com.google.protobuf.MapField.newMapField(
-                    RecordDataDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              recordData__ = input.readMessage(
-                  RecordDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              recordData_.getMutableMap().put(
-                  recordData__.getKey(), recordData__.getValue());
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              externalId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.passkit.grpc.PassOuterClass.internal_static_io_Pass_descriptor;
@@ -3852,7 +3854,8 @@ java.lang.String defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * The uuid of the pass.
@@ -3898,7 +3901,8 @@ java.lang.String defaultValue);
     }
 
     public static final int CLASSID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object classId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object classId_ = "";
     /**
      * <pre>
      * The class id of the pass which it belongs to.
@@ -3944,7 +3948,7 @@ java.lang.String defaultValue);
     }
 
     public static final int PROTOCOL_FIELD_NUMBER = 3;
-    private int protocol_;
+    private int protocol_ = 0;
     /**
      * <pre>
      * Protocol module which this pass was issued by.
@@ -3965,8 +3969,7 @@ java.lang.String defaultValue);
      * @return The protocol.
      */
     @java.lang.Override public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-      @SuppressWarnings("deprecation")
-      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+      com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
       return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
     }
 
@@ -4005,7 +4008,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.Personal.PersonOrBuilder getPersonDetailsOrBuilder() {
-      return getPersonDetails();
+      return personDetails_ == null ? com.passkit.grpc.Personal.Person.getDefaultInstance() : personDetails_;
     }
 
     public static final int METADATA_FIELD_NUMBER = 5;
@@ -4043,7 +4046,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public com.passkit.grpc.MetricsOuterClass.MetadataOrBuilder getMetadataOrBuilder() {
-      return getMetadata();
+      return metadata_ == null ? com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance() : metadata_;
     }
 
     public static final int RECORDDATA_FIELD_NUMBER = 6;
@@ -4058,6 +4061,7 @@ java.lang.String defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> recordData_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -4068,7 +4072,6 @@ java.lang.String defaultValue);
       }
       return recordData_;
     }
-
     public int getRecordDataCount() {
       return internalGetRecordData().getMap().size();
     }
@@ -4079,7 +4082,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
-
     @java.lang.Override
     public boolean containsRecordData(
         java.lang.String key) {
@@ -4102,7 +4104,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getRecordDataMap() {
       return internalGetRecordData().getMap();
     }
@@ -4114,10 +4115,11 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
     @java.lang.Override
-
-    public java.lang.String getRecordDataOrDefault(
+    public /* nullable */
+java.lang.String getRecordDataOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetRecordData().getMap();
@@ -4131,7 +4133,6 @@ java.lang.String defaultValue);
      * <code>map&lt;string, string&gt; recordData = 6;</code>
      */
     @java.lang.Override
-
     public java.lang.String getRecordDataOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -4144,7 +4145,8 @@ java.lang.String defaultValue);
     }
 
     public static final int EXTERNALID_FIELD_NUMBER = 7;
-    private volatile java.lang.Object externalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object externalId_ = "";
     /**
      * <pre>
      * Will hold the external id of the object (as set by protocol)
@@ -4227,7 +4229,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, externalId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4267,7 +4269,7 @@ java.lang.String defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, externalId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4301,7 +4303,7 @@ java.lang.String defaultValue);
           other.internalGetRecordData())) return false;
       if (!getExternalId()
           .equals(other.getExternalId())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4332,7 +4334,7 @@ java.lang.String defaultValue);
       }
       hash = (37 * hash) + EXTERNALID_FIELD_NUMBER;
       hash = (53 * hash) + getExternalId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4475,43 +4477,33 @@ java.lang.String defaultValue);
 
       // Construct using com.passkit.grpc.PassOuterClass.Pass.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         classId_ = "";
-
         protocol_ = 0;
-
-        if (personDetailsBuilder_ == null) {
-          personDetails_ = null;
-        } else {
-          personDetails_ = null;
+        personDetails_ = null;
+        if (personDetailsBuilder_ != null) {
+          personDetailsBuilder_.dispose();
           personDetailsBuilder_ = null;
         }
-        if (metadataBuilder_ == null) {
-          metadata_ = null;
-        } else {
-          metadata_ = null;
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
           metadataBuilder_ = null;
         }
         internalGetMutableRecordData().clear();
         externalId_ = "";
-
         return this;
       }
 
@@ -4538,59 +4530,41 @@ java.lang.String defaultValue);
       @java.lang.Override
       public com.passkit.grpc.PassOuterClass.Pass buildPartial() {
         com.passkit.grpc.PassOuterClass.Pass result = new com.passkit.grpc.PassOuterClass.Pass(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        result.classId_ = classId_;
-        result.protocol_ = protocol_;
-        if (personDetailsBuilder_ == null) {
-          result.personDetails_ = personDetails_;
-        } else {
-          result.personDetails_ = personDetailsBuilder_.build();
-        }
-        if (metadataBuilder_ == null) {
-          result.metadata_ = metadata_;
-        } else {
-          result.metadata_ = metadataBuilder_.build();
-        }
-        result.recordData_ = internalGetRecordData();
-        result.recordData_.makeImmutable();
-        result.externalId_ = externalId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
+      private void buildPartial0(com.passkit.grpc.PassOuterClass.Pass result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.classId_ = classId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.protocol_ = protocol_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.personDetails_ = personDetailsBuilder_ == null
+              ? personDetails_
+              : personDetailsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.recordData_ = internalGetRecordData();
+          result.recordData_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.externalId_ = externalId_;
+        }
       }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.passkit.grpc.PassOuterClass.Pass) {
@@ -4605,10 +4579,12 @@ java.lang.String defaultValue);
         if (other == com.passkit.grpc.PassOuterClass.Pass.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getClassId().isEmpty()) {
           classId_ = other.classId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.protocol_ != 0) {
@@ -4622,11 +4598,13 @@ java.lang.String defaultValue);
         }
         internalGetMutableRecordData().mergeFrom(
             other.internalGetRecordData());
+        bitField0_ |= 0x00000020;
         if (!other.getExternalId().isEmpty()) {
           externalId_ = other.externalId_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4641,17 +4619,73 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.passkit.grpc.PassOuterClass.Pass parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                id_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                classId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                protocol_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getPersonDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+                recordData__ = input.readMessage(
+                    RecordDataDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableRecordData().getMutableMap().put(
+                    recordData__.getKey(), recordData__.getValue());
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                externalId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.passkit.grpc.PassOuterClass.Pass) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4709,11 +4743,9 @@ java.lang.String defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4726,8 +4758,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4742,12 +4774,10 @@ java.lang.String defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4805,11 +4835,9 @@ java.lang.String defaultValue);
        */
       public Builder setClassId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4822,8 +4850,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearClassId() {
-        
         classId_ = getDefaultInstance().getClassId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4838,12 +4866,10 @@ java.lang.String defaultValue);
        */
       public Builder setClassIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         classId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4870,8 +4896,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setProtocolValue(int value) {
-        
         protocol_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4885,8 +4911,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public com.passkit.grpc.Protocols.PassProtocol getProtocol() {
-        @SuppressWarnings("deprecation")
-        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.valueOf(protocol_);
+        com.passkit.grpc.Protocols.PassProtocol result = com.passkit.grpc.Protocols.PassProtocol.forNumber(protocol_);
         return result == null ? com.passkit.grpc.Protocols.PassProtocol.UNRECOGNIZED : result;
       }
       /**
@@ -4902,7 +4927,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         protocol_ = value.getNumber();
         onChanged();
         return this;
@@ -4916,7 +4941,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearProtocol() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         protocol_ = 0;
         onChanged();
         return this;
@@ -4934,7 +4959,7 @@ java.lang.String defaultValue);
        * @return Whether the personDetails field is set.
        */
       public boolean hasPersonDetails() {
-        return personDetailsBuilder_ != null || personDetails_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -4964,11 +4989,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           personDetails_ = value;
-          onChanged();
         } else {
           personDetailsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4982,11 +5007,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.Personal.Person.Builder builderForValue) {
         if (personDetailsBuilder_ == null) {
           personDetails_ = builderForValue.build();
-          onChanged();
         } else {
           personDetailsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -4998,17 +5023,18 @@ java.lang.String defaultValue);
        */
       public Builder mergePersonDetails(com.passkit.grpc.Personal.Person value) {
         if (personDetailsBuilder_ == null) {
-          if (personDetails_ != null) {
-            personDetails_ =
-              com.passkit.grpc.Personal.Person.newBuilder(personDetails_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            personDetails_ != null &&
+            personDetails_ != com.passkit.grpc.Personal.Person.getDefaultInstance()) {
+            getPersonDetailsBuilder().mergeFrom(value);
           } else {
             personDetails_ = value;
           }
-          onChanged();
         } else {
           personDetailsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5019,14 +5045,13 @@ java.lang.String defaultValue);
        * <code>.io.Person personDetails = 4;</code>
        */
       public Builder clearPersonDetails() {
-        if (personDetailsBuilder_ == null) {
-          personDetails_ = null;
-          onChanged();
-        } else {
-          personDetails_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        personDetails_ = null;
+        if (personDetailsBuilder_ != null) {
+          personDetailsBuilder_.dispose();
           personDetailsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5037,7 +5062,7 @@ java.lang.String defaultValue);
        * <code>.io.Person personDetails = 4;</code>
        */
       public com.passkit.grpc.Personal.Person.Builder getPersonDetailsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getPersonDetailsFieldBuilder().getBuilder();
       }
@@ -5089,7 +5114,7 @@ java.lang.String defaultValue);
        * @return Whether the metadata field is set.
        */
       public boolean hasMetadata() {
-        return metadataBuilder_ != null || metadata_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -5119,11 +5144,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           metadata_ = value;
-          onChanged();
         } else {
           metadataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5137,11 +5162,11 @@ java.lang.String defaultValue);
           com.passkit.grpc.MetricsOuterClass.Metadata.Builder builderForValue) {
         if (metadataBuilder_ == null) {
           metadata_ = builderForValue.build();
-          onChanged();
         } else {
           metadataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5153,17 +5178,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeMetadata(com.passkit.grpc.MetricsOuterClass.Metadata value) {
         if (metadataBuilder_ == null) {
-          if (metadata_ != null) {
-            metadata_ =
-              com.passkit.grpc.MetricsOuterClass.Metadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.passkit.grpc.MetricsOuterClass.Metadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
           } else {
             metadata_ = value;
           }
-          onChanged();
         } else {
           metadataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5174,14 +5200,13 @@ java.lang.String defaultValue);
        * <code>.io.Metadata metadata = 5;</code>
        */
       public Builder clearMetadata() {
-        if (metadataBuilder_ == null) {
-          metadata_ = null;
-          onChanged();
-        } else {
-          metadata_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
           metadataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5192,7 +5217,7 @@ java.lang.String defaultValue);
        * <code>.io.Metadata metadata = 5;</code>
        */
       public com.passkit.grpc.MetricsOuterClass.Metadata.Builder getMetadataBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getMetadataFieldBuilder().getBuilder();
       }
@@ -5235,7 +5260,7 @@ java.lang.String defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> recordData_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetRecordData() {
+          internalGetRecordData() {
         if (recordData_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               RecordDataDefaultEntryHolder.defaultEntry);
@@ -5243,8 +5268,7 @@ java.lang.String defaultValue);
         return recordData_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableRecordData() {
-        onChanged();;
+          internalGetMutableRecordData() {
         if (recordData_ == null) {
           recordData_ = com.google.protobuf.MapField.newMapField(
               RecordDataDefaultEntryHolder.defaultEntry);
@@ -5252,9 +5276,10 @@ java.lang.String defaultValue);
         if (!recordData_.isMutable()) {
           recordData_ = recordData_.copy();
         }
+        bitField0_ |= 0x00000020;
+        onChanged();
         return recordData_;
       }
-
       public int getRecordDataCount() {
         return internalGetRecordData().getMap().size();
       }
@@ -5265,7 +5290,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
-
       @java.lang.Override
       public boolean containsRecordData(
           java.lang.String key) {
@@ -5288,7 +5312,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getRecordDataMap() {
         return internalGetRecordData().getMap();
       }
@@ -5300,10 +5323,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
       @java.lang.Override
-
-      public java.lang.String getRecordDataOrDefault(
+      public /* nullable */
+java.lang.String getRecordDataOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetRecordData().getMap();
@@ -5317,7 +5341,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
       @java.lang.Override
-
       public java.lang.String getRecordDataOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -5328,8 +5351,8 @@ java.lang.String defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearRecordData() {
+        bitField0_ = (bitField0_ & ~0x00000020);
         internalGetMutableRecordData().getMutableMap()
             .clear();
         return this;
@@ -5341,7 +5364,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
-
       public Builder removeRecordData(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -5354,7 +5376,8 @@ java.lang.String defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableRecordData() {
+          getMutableRecordData() {
+        bitField0_ |= 0x00000020;
         return internalGetMutableRecordData().getMutableMap();
       }
       /**
@@ -5368,12 +5391,10 @@ java.lang.String defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableRecordData().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000020;
         return this;
       }
       /**
@@ -5383,11 +5404,11 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; recordData = 6;</code>
        */
-
       public Builder putAllRecordData(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableRecordData().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000020;
         return this;
       }
 
@@ -5444,11 +5465,9 @@ java.lang.String defaultValue);
        */
       public Builder setExternalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         externalId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5461,8 +5480,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExternalId() {
-        
         externalId_ = getDefaultInstance().getExternalId();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -5477,12 +5496,10 @@ java.lang.String defaultValue);
        */
       public Builder setExternalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         externalId_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -5519,7 +5536,18 @@ java.lang.String defaultValue);
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Pass(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5574,23 +5602,24 @@ java.lang.String defaultValue);
       "to\032\031io/common/protocols.proto\032\031io/common" +
       "/proximity.proto\032\030io/common/template.pro" +
       "to\032.protoc-gen-openapiv2/options/annotat" +
-      "ions.proto\"\347\001\n\rPassOverrides\022\036\n\010imageIds" +
+      "ions.proto\"\204\002\n\rPassOverrides\022\036\n\010imageIds" +
       "\030\001 \001(\0132\014.io.ImageIds\022*\n\tlocations\030\003 \003(\0132" +
       "\017.io.GPSLocationB\006\222A\003\240\001\n\022#\n\007beacons\030\004 \003(" +
       "\0132\n.io.BeaconB\006\222A\003\240\001\n\022\037\n\005links\030\005 \003(\0132\010.i" +
       "o.LinkB\006\222A\003\240\001\n\022\032\n\006colors\030\006 \001(\0132\n.io.Colo" +
-      "rs\022\"\n\032associatedStoreIdentifiers\030\007 \003(\rJ\004" +
-      "\010\002\020\003\"\\\n\013PassOptions\022&\n\005apple\030\001 \001(\0132\027.io." +
-      "AppleWalletSettings\022%\n\006google\030\002 \001(\0132\025.io" +
-      ".GooglePaySettings\"\377\001\n\004Pass\022\n\n\002id\030\001 \001(\t\022" +
-      "\017\n\007classId\030\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020.io." +
-      "PassProtocol\022!\n\rpersonDetails\030\004 \001(\0132\n.io" +
-      ".Person\022\036\n\010metadata\030\005 \001(\0132\014.io.Metadata\022" +
-      ",\n\nrecordData\030\006 \003(\0132\030.io.Pass.RecordData" +
-      "Entry\022\022\n\nexternalId\030\007 \001(\t\0321\n\017RecordDataE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BG\n\020" +
-      "com.passkit.grpcZ$stash.passkit.com/io/m" +
-      "odel/sdk/go/io\252\002\014PassKit.Grpcb\006proto3"
+      "rs\022\"\n\032associatedStoreIdentifiers\030\007 \003(\r\022\033" +
+      "\n\023appStoreIdentifiers\030\010 \003(\004J\004\010\002\020\003\"\\\n\013Pas" +
+      "sOptions\022&\n\005apple\030\001 \001(\0132\027.io.AppleWallet" +
+      "Settings\022%\n\006google\030\002 \001(\0132\025.io.GooglePayS" +
+      "ettings\"\377\001\n\004Pass\022\n\n\002id\030\001 \001(\t\022\017\n\007classId\030" +
+      "\002 \001(\t\022\"\n\010protocol\030\003 \001(\0162\020.io.PassProtoco" +
+      "l\022!\n\rpersonDetails\030\004 \001(\0132\n.io.Person\022\036\n\010" +
+      "metadata\030\005 \001(\0132\014.io.Metadata\022,\n\nrecordDa" +
+      "ta\030\006 \003(\0132\030.io.Pass.RecordDataEntry\022\022\n\nex" +
+      "ternalId\030\007 \001(\t\0321\n\017RecordDataEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001BG\n\020com.passkit" +
+      ".grpcZ$stash.passkit.com/io/model/sdk/go" +
+      "/io\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5609,7 +5638,7 @@ java.lang.String defaultValue);
     internal_static_io_PassOverrides_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_PassOverrides_descriptor,
-        new java.lang.String[] { "ImageIds", "Locations", "Beacons", "Links", "Colors", "AssociatedStoreIdentifiers", });
+        new java.lang.String[] { "ImageIds", "Locations", "Beacons", "Links", "Colors", "AssociatedStoreIdentifiers", "AppStoreIdentifiers", });
     internal_static_io_PassOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_io_PassOptions_fieldAccessorTable = new
