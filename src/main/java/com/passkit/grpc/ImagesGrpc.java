@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/core/a_rpc_images.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ImagesGrpc {
 
   private ImagesGrpc() {}
 
-  public static final String SERVICE_NAME = "io.Images";
+  public static final java.lang.String SERVICE_NAME = "io.Images";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.ProfileImageInput,
@@ -199,6 +199,99 @@ public final class ImagesGrpc {
       }
     }
     return getGetStampImageURLMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.StampImageConfig> getGetStampImageConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getStampImageConfig",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.Image.StampImageConfig.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.Image.StampImageConfig> getGetStampImageConfigMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.StampImageConfig> getGetStampImageConfigMethod;
+    if ((getGetStampImageConfigMethod = ImagesGrpc.getGetStampImageConfigMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getGetStampImageConfigMethod = ImagesGrpc.getGetStampImageConfigMethod) == null) {
+          ImagesGrpc.getGetStampImageConfigMethod = getGetStampImageConfigMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.Image.StampImageConfig>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getStampImageConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.StampImageConfig.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getStampImageConfig"))
+              .build();
+        }
+      }
+    }
+    return getGetStampImageConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImageConfig,
+      com.passkit.grpc.CommonObjects.Id> getUpdateStampImageConfigMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updateStampImageConfig",
+      requestType = com.passkit.grpc.Image.StampImageConfig.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImageConfig,
+      com.passkit.grpc.CommonObjects.Id> getUpdateStampImageConfigMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImageConfig, com.passkit.grpc.CommonObjects.Id> getUpdateStampImageConfigMethod;
+    if ((getUpdateStampImageConfigMethod = ImagesGrpc.getUpdateStampImageConfigMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getUpdateStampImageConfigMethod = ImagesGrpc.getUpdateStampImageConfigMethod) == null) {
+          ImagesGrpc.getUpdateStampImageConfigMethod = getUpdateStampImageConfigMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Image.StampImageConfig, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateStampImageConfig"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.StampImageConfig.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("updateStampImageConfig"))
+              .build();
+        }
+      }
+    }
+    return getUpdateStampImageConfigMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImagePreviewRequest,
+      com.passkit.grpc.Image.StampImagePreview> getGetStampImagePreviewMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getStampImagePreview",
+      requestType = com.passkit.grpc.Image.StampImagePreviewRequest.class,
+      responseType = com.passkit.grpc.Image.StampImagePreview.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImagePreviewRequest,
+      com.passkit.grpc.Image.StampImagePreview> getGetStampImagePreviewMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Image.StampImagePreviewRequest, com.passkit.grpc.Image.StampImagePreview> getGetStampImagePreviewMethod;
+    if ((getGetStampImagePreviewMethod = ImagesGrpc.getGetStampImagePreviewMethod) == null) {
+      synchronized (ImagesGrpc.class) {
+        if ((getGetStampImagePreviewMethod = ImagesGrpc.getGetStampImagePreviewMethod) == null) {
+          ImagesGrpc.getGetStampImagePreviewMethod = getGetStampImagePreviewMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Image.StampImagePreviewRequest, com.passkit.grpc.Image.StampImagePreview>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getStampImagePreview"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.StampImagePreviewRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Image.StampImagePreview.getDefaultInstance()))
+              .setSchemaDescriptor(new ImagesMethodDescriptorSupplier("getStampImagePreview"))
+              .build();
+        }
+      }
+    }
+    return getGetStampImagePreviewMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Image.LocalizedImageInput,
@@ -727,6 +820,27 @@ public final class ImagesGrpc {
 
     /**
      */
+    default void getStampImageConfig(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImageConfig> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStampImageConfigMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateStampImageConfigMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImagePreview> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetStampImagePreviewMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetLocalizedImageURLMethod(), responseObserver);
@@ -900,6 +1014,30 @@ public final class ImagesGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetStampImageURLMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getStampImageConfig(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImageConfig> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStampImageConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateStampImageConfigMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImagePreview> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetStampImagePreviewMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1078,6 +1216,27 @@ public final class ImagesGrpc {
 
     /**
      */
+    public com.passkit.grpc.Image.StampImageConfig getStampImageConfig(com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStampImageConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateStampImageConfigMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.Image.StampImagePreview getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetStampImagePreviewMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.passkit.grpc.CommonObjects.Url getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetLocalizedImageURLMethod(), getCallOptions(), request);
@@ -1248,6 +1407,30 @@ public final class ImagesGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.StampImageConfig> getStampImageConfig(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStampImageConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateStampImageConfig(
+        com.passkit.grpc.Image.StampImageConfig request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateStampImageConfigMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.StampImagePreview> getStampImagePreview(
+        com.passkit.grpc.Image.StampImagePreviewRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetStampImagePreviewMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getLocalizedImageURL(
         com.passkit.grpc.Image.LocalizedImageInput request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1336,20 +1519,23 @@ public final class ImagesGrpc {
   private static final int METHODID_UPDATE_IMAGE = 3;
   private static final int METHODID_GET_IMAGE_URL = 4;
   private static final int METHODID_GET_STAMP_IMAGE_URL = 5;
-  private static final int METHODID_GET_LOCALIZED_IMAGE_URL = 6;
-  private static final int METHODID_GET_PROFILE_IMAGE_BY_ID = 7;
-  private static final int METHODID_GET_IMAGE_BUNDLE = 8;
-  private static final int METHODID_GET_IMAGE_DATA = 9;
-  private static final int METHODID_DELETE_IMAGE = 10;
-  private static final int METHODID_DELETE_LOCALIZED_IMAGE = 11;
-  private static final int METHODID_LIST_IMAGES_FOR_USER_DEPRECATED = 12;
-  private static final int METHODID_LIST_IMAGES_FOR_USER = 13;
-  private static final int METHODID_LIST_IMAGES_DEPRECATED = 14;
-  private static final int METHODID_LIST_IMAGES = 15;
-  private static final int METHODID_COUNT_IMAGES_DEPRECATED = 16;
-  private static final int METHODID_COUNT_IMAGES = 17;
-  private static final int METHODID_COUNT_IMAGES_FOR_USER_DEPRECATED = 18;
-  private static final int METHODID_COUNT_IMAGES_FOR_USER = 19;
+  private static final int METHODID_GET_STAMP_IMAGE_CONFIG = 6;
+  private static final int METHODID_UPDATE_STAMP_IMAGE_CONFIG = 7;
+  private static final int METHODID_GET_STAMP_IMAGE_PREVIEW = 8;
+  private static final int METHODID_GET_LOCALIZED_IMAGE_URL = 9;
+  private static final int METHODID_GET_PROFILE_IMAGE_BY_ID = 10;
+  private static final int METHODID_GET_IMAGE_BUNDLE = 11;
+  private static final int METHODID_GET_IMAGE_DATA = 12;
+  private static final int METHODID_DELETE_IMAGE = 13;
+  private static final int METHODID_DELETE_LOCALIZED_IMAGE = 14;
+  private static final int METHODID_LIST_IMAGES_FOR_USER_DEPRECATED = 15;
+  private static final int METHODID_LIST_IMAGES_FOR_USER = 16;
+  private static final int METHODID_LIST_IMAGES_DEPRECATED = 17;
+  private static final int METHODID_LIST_IMAGES = 18;
+  private static final int METHODID_COUNT_IMAGES_DEPRECATED = 19;
+  private static final int METHODID_COUNT_IMAGES = 20;
+  private static final int METHODID_COUNT_IMAGES_FOR_USER_DEPRECATED = 21;
+  private static final int METHODID_COUNT_IMAGES_FOR_USER = 22;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1391,6 +1577,18 @@ public final class ImagesGrpc {
         case METHODID_GET_STAMP_IMAGE_URL:
           serviceImpl.getStampImageURL((com.passkit.grpc.Image.StampImageRequest) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
+          break;
+        case METHODID_GET_STAMP_IMAGE_CONFIG:
+          serviceImpl.getStampImageConfig((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImageConfig>) responseObserver);
+          break;
+        case METHODID_UPDATE_STAMP_IMAGE_CONFIG:
+          serviceImpl.updateStampImageConfig((com.passkit.grpc.Image.StampImageConfig) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_GET_STAMP_IMAGE_PREVIEW:
+          serviceImpl.getStampImagePreview((com.passkit.grpc.Image.StampImagePreviewRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImagePreview>) responseObserver);
           break;
         case METHODID_GET_LOCALIZED_IMAGE_URL:
           serviceImpl.getLocalizedImageURL((com.passkit.grpc.Image.LocalizedImageInput) request,
@@ -1508,6 +1706,27 @@ public final class ImagesGrpc {
               com.passkit.grpc.Image.StampImageRequest,
               com.passkit.grpc.CommonObjects.Url>(
                 service, METHODID_GET_STAMP_IMAGE_URL)))
+        .addMethod(
+          getGetStampImageConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.Image.StampImageConfig>(
+                service, METHODID_GET_STAMP_IMAGE_CONFIG)))
+        .addMethod(
+          getUpdateStampImageConfigMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Image.StampImageConfig,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_UPDATE_STAMP_IMAGE_CONFIG)))
+        .addMethod(
+          getGetStampImagePreviewMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Image.StampImagePreviewRequest,
+              com.passkit.grpc.Image.StampImagePreview>(
+                service, METHODID_GET_STAMP_IMAGE_PREVIEW)))
         .addMethod(
           getGetLocalizedImageURLMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1632,9 +1851,9 @@ public final class ImagesGrpc {
   private static final class ImagesMethodDescriptorSupplier
       extends ImagesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ImagesMethodDescriptorSupplier(String methodName) {
+    ImagesMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -1660,6 +1879,9 @@ public final class ImagesGrpc {
               .addMethod(getUpdateImageMethod())
               .addMethod(getGetImageURLMethod())
               .addMethod(getGetStampImageURLMethod())
+              .addMethod(getGetStampImageConfigMethod())
+              .addMethod(getUpdateStampImageConfigMethod())
+              .addMethod(getGetStampImagePreviewMethod())
               .addMethod(getGetLocalizedImageURLMethod())
               .addMethod(getGetProfileImageByIdMethod())
               .addMethod(getGetImageBundleMethod())

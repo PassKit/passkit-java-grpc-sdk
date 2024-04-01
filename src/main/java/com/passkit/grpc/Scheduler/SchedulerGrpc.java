@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/scheduler/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SchedulerGrpc {
 
   private SchedulerGrpc() {}
 
-  public static final String SERVICE_NAME = "scheduler.Scheduler";
+  public static final java.lang.String SERVICE_NAME = "scheduler.Scheduler";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.ct.Scheduler.SchedulingJob,
@@ -692,9 +692,9 @@ public final class SchedulerGrpc {
   private static final class SchedulerMethodDescriptorSupplier
       extends SchedulerBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SchedulerMethodDescriptorSupplier(String methodName) {
+    SchedulerMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

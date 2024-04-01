@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/core/a_rpc_others.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class UsersGrpc {
 
   private UsersGrpc() {}
 
-  public static final String SERVICE_NAME = "io.Users";
+  public static final java.lang.String SERVICE_NAME = "io.Users";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.NewUser,
@@ -199,6 +199,37 @@ public final class UsersGrpc {
       }
     }
     return getLoginMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.CommonObjects.Url> getGet2faBarcodeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "get2faBarcode",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.passkit.grpc.CommonObjects.Url.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.CommonObjects.Url> getGet2faBarcodeMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.passkit.grpc.CommonObjects.Url> getGet2faBarcodeMethod;
+    if ((getGet2faBarcodeMethod = UsersGrpc.getGet2faBarcodeMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getGet2faBarcodeMethod = UsersGrpc.getGet2faBarcodeMethod) == null) {
+          UsersGrpc.getGet2faBarcodeMethod = getGet2faBarcodeMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.CommonObjects.Url>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "get2faBarcode"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Url.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("get2faBarcode"))
+              .build();
+        }
+      }
+    }
+    return getGet2faBarcodeMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.Credentials,
@@ -790,6 +821,37 @@ public final class UsersGrpc {
     return getDeleteAuthorizationResourceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getRefreshApiSecretMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "refreshApiSecret",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getRefreshApiSecretMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.google.protobuf.Empty> getRefreshApiSecretMethod;
+    if ((getRefreshApiSecretMethod = UsersGrpc.getRefreshApiSecretMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getRefreshApiSecretMethod = UsersGrpc.getRefreshApiSecretMethod) == null) {
+          UsersGrpc.getRefreshApiSecretMethod = getRefreshApiSecretMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "refreshApiSecret"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("refreshApiSecret"))
+              .build();
+        }
+      }
+    }
+    return getRefreshApiSecretMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.DeleteAccountRequest,
       com.google.protobuf.Empty> getDeleteAccountMethod;
 
@@ -819,6 +881,37 @@ public final class UsersGrpc {
       }
     }
     return getDeleteAccountMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getRevokeLegacyCredentialsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "revokeLegacyCredentials",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.google.protobuf.Empty> getRevokeLegacyCredentialsMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.google.protobuf.Empty> getRevokeLegacyCredentialsMethod;
+    if ((getRevokeLegacyCredentialsMethod = UsersGrpc.getRevokeLegacyCredentialsMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getRevokeLegacyCredentialsMethod = UsersGrpc.getRevokeLegacyCredentialsMethod) == null) {
+          UsersGrpc.getRevokeLegacyCredentialsMethod = getRevokeLegacyCredentialsMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "revokeLegacyCredentials"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("revokeLegacyCredentials"))
+              .build();
+        }
+      }
+    }
+    return getRevokeLegacyCredentialsMethod;
   }
 
   /**
@@ -909,6 +1002,13 @@ public final class UsersGrpc {
     default void login(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void get2faBarcode(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGet2faBarcodeMethod(), responseObserver);
     }
 
     /**
@@ -1049,9 +1149,23 @@ public final class UsersGrpc {
 
     /**
      */
+    default void refreshApiSecret(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRefreshApiSecretMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAccountMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void revokeLegacyCredentials(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeLegacyCredentialsMethod(), responseObserver);
     }
   }
 
@@ -1128,6 +1242,14 @@ public final class UsersGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void get2faBarcode(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGet2faBarcodeMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1287,10 +1409,26 @@ public final class UsersGrpc {
 
     /**
      */
+    public void refreshApiSecret(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRefreshApiSecretMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteAccountMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void revokeLegacyCredentials(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRevokeLegacyCredentialsMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -1350,6 +1488,13 @@ public final class UsersGrpc {
     public com.passkit.grpc.User.JWT login(com.passkit.grpc.User.Credentials request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Url get2faBarcode(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGet2faBarcodeMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1496,9 +1641,23 @@ public final class UsersGrpc {
 
     /**
      */
+    public com.google.protobuf.Empty refreshApiSecret(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRefreshApiSecretMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.google.protobuf.Empty deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteAccountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty revokeLegacyCredentials(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRevokeLegacyCredentialsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1564,6 +1723,14 @@ public final class UsersGrpc {
         com.passkit.grpc.User.Credentials request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> get2faBarcode(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGet2faBarcodeMethod(), getCallOptions()), request);
     }
 
     /**
@@ -1675,10 +1842,26 @@ public final class UsersGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> refreshApiSecret(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRefreshApiSecretMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteAccount(
         com.passkit.grpc.User.DeleteAccountRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteAccountMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> revokeLegacyCredentials(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRevokeLegacyCredentialsMethod(), getCallOptions()), request);
     }
   }
 
@@ -1688,26 +1871,29 @@ public final class UsersGrpc {
   private static final int METHODID_RESEND_VERIFICATION_EMAIL = 3;
   private static final int METHODID_GET_USER = 4;
   private static final int METHODID_LOGIN = 5;
-  private static final int METHODID_RESET_PASSWORD = 6;
-  private static final int METHODID_SEND_PASSWORD_RESET_LINK = 7;
-  private static final int METHODID_CHANGE_PASSWORD = 8;
-  private static final int METHODID_CHANGE_EMAIL = 9;
-  private static final int METHODID_CONFIRM_EMAIL_CHANGE = 10;
-  private static final int METHODID_UPDATE_COMPANY_NAME = 11;
-  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED = 12;
-  private static final int METHODID_GET_PROJECTS_QUERY_DEPRECATED = 13;
-  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY = 14;
-  private static final int METHODID_GET_PROJECTS_QUERY = 15;
-  private static final int METHODID_GET_PROJECT_BY_UUID = 16;
-  private static final int METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE = 17;
-  private static final int METHODID_GET_PROJECTS_FOR_USER = 18;
-  private static final int METHODID_GET_PROJECTS = 19;
-  private static final int METHODID_GET_SCANNER_CONFIG = 20;
-  private static final int METHODID_CREATE_SCANNER_CONFIG = 21;
-  private static final int METHODID_UPDATE_SCANNER_CONFIG = 22;
-  private static final int METHODID_CREATE_AUTHORIZATION_RESOURCE = 23;
-  private static final int METHODID_DELETE_AUTHORIZATION_RESOURCE = 24;
-  private static final int METHODID_DELETE_ACCOUNT = 25;
+  private static final int METHODID_GET2FA_BARCODE = 6;
+  private static final int METHODID_RESET_PASSWORD = 7;
+  private static final int METHODID_SEND_PASSWORD_RESET_LINK = 8;
+  private static final int METHODID_CHANGE_PASSWORD = 9;
+  private static final int METHODID_CHANGE_EMAIL = 10;
+  private static final int METHODID_CONFIRM_EMAIL_CHANGE = 11;
+  private static final int METHODID_UPDATE_COMPANY_NAME = 12;
+  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED = 13;
+  private static final int METHODID_GET_PROJECTS_QUERY_DEPRECATED = 14;
+  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY = 15;
+  private static final int METHODID_GET_PROJECTS_QUERY = 16;
+  private static final int METHODID_GET_PROJECT_BY_UUID = 17;
+  private static final int METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE = 18;
+  private static final int METHODID_GET_PROJECTS_FOR_USER = 19;
+  private static final int METHODID_GET_PROJECTS = 20;
+  private static final int METHODID_GET_SCANNER_CONFIG = 21;
+  private static final int METHODID_CREATE_SCANNER_CONFIG = 22;
+  private static final int METHODID_UPDATE_SCANNER_CONFIG = 23;
+  private static final int METHODID_CREATE_AUTHORIZATION_RESOURCE = 24;
+  private static final int METHODID_DELETE_AUTHORIZATION_RESOURCE = 25;
+  private static final int METHODID_REFRESH_API_SECRET = 26;
+  private static final int METHODID_DELETE_ACCOUNT = 27;
+  private static final int METHODID_REVOKE_LEGACY_CREDENTIALS = 28;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1749,6 +1935,10 @@ public final class UsersGrpc {
         case METHODID_LOGIN:
           serviceImpl.login((com.passkit.grpc.User.Credentials) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT>) responseObserver);
+          break;
+        case METHODID_GET2FA_BARCODE:
+          serviceImpl.get2faBarcode((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url>) responseObserver);
           break;
         case METHODID_RESET_PASSWORD:
           serviceImpl.resetPassword((com.passkit.grpc.User.Credentials) request,
@@ -1826,8 +2016,16 @@ public final class UsersGrpc {
           serviceImpl.deleteAuthorizationResource((com.passkit.grpc.CommonObjects.Id) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
+        case METHODID_REFRESH_API_SECRET:
+          serviceImpl.refreshApiSecret((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
         case METHODID_DELETE_ACCOUNT:
           serviceImpl.deleteAccount((com.passkit.grpc.User.DeleteAccountRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_REVOKE_LEGACY_CREDENTIALS:
+          serviceImpl.revokeLegacyCredentials((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -1890,6 +2088,13 @@ public final class UsersGrpc {
               com.passkit.grpc.User.Credentials,
               com.passkit.grpc.User.JWT>(
                 service, METHODID_LOGIN)))
+        .addMethod(
+          getGet2faBarcodeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.CommonObjects.Url>(
+                service, METHODID_GET2FA_BARCODE)))
         .addMethod(
           getResetPasswordMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -2024,12 +2229,26 @@ public final class UsersGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_AUTHORIZATION_RESOURCE)))
         .addMethod(
+          getRefreshApiSecretMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.google.protobuf.Empty>(
+                service, METHODID_REFRESH_API_SECRET)))
+        .addMethod(
           getDeleteAccountMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.passkit.grpc.User.DeleteAccountRequest,
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_ACCOUNT)))
+        .addMethod(
+          getRevokeLegacyCredentialsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.google.protobuf.Empty>(
+                service, METHODID_REVOKE_LEGACY_CREDENTIALS)))
         .build();
   }
 
@@ -2056,9 +2275,9 @@ public final class UsersGrpc {
   private static final class UsersMethodDescriptorSupplier
       extends UsersBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    UsersMethodDescriptorSupplier(String methodName) {
+    UsersMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -2084,6 +2303,7 @@ public final class UsersGrpc {
               .addMethod(getResendVerificationEmailMethod())
               .addMethod(getGetUserMethod())
               .addMethod(getLoginMethod())
+              .addMethod(getGet2faBarcodeMethod())
               .addMethod(getResetPasswordMethod())
               .addMethod(getSendPasswordResetLinkMethod())
               .addMethod(getChangePasswordMethod())
@@ -2103,7 +2323,9 @@ public final class UsersGrpc {
               .addMethod(getUpdateScannerConfigMethod())
               .addMethod(getCreateAuthorizationResourceMethod())
               .addMethod(getDeleteAuthorizationResourceMethod())
+              .addMethod(getRefreshApiSecretMethod())
               .addMethod(getDeleteAccountMethod())
+              .addMethod(getRevokeLegacyCredentialsMethod())
               .build();
         }
       }

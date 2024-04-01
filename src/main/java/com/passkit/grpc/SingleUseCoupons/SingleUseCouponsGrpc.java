@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/single_use_coupons/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SingleUseCouponsGrpc {
 
   private SingleUseCouponsGrpc() {}
 
-  public static final String SERVICE_NAME = "single_use_coupons.SingleUseCoupons";
+  public static final java.lang.String SERVICE_NAME = "single_use_coupons.SingleUseCoupons";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign,
@@ -2231,9 +2231,9 @@ public final class SingleUseCouponsGrpc {
   private static final class SingleUseCouponsMethodDescriptorSupplier
       extends SingleUseCouponsBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SingleUseCouponsMethodDescriptorSupplier(String methodName) {
+    SingleUseCouponsMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

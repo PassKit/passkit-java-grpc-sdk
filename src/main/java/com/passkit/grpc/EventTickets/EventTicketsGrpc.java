@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/event_tickets/a_rpc.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class EventTicketsGrpc {
 
   private EventTicketsGrpc() {}
 
-  public static final String SERVICE_NAME = "event_tickets.EventTickets";
+  public static final java.lang.String SERVICE_NAME = "event_tickets.EventTickets";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.ProductionOuterClass.Production,
@@ -3292,9 +3292,9 @@ public final class EventTicketsGrpc {
   private static final class EventTicketsMethodDescriptorSupplier
       extends EventTicketsBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    EventTicketsMethodDescriptorSupplier(String methodName) {
+    EventTicketsMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

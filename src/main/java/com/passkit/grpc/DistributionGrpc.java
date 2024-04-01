@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/core/a_rpc_distribution.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DistributionGrpc {
 
   private DistributionGrpc() {}
 
-  public static final String SERVICE_NAME = "io.Distribution";
+  public static final java.lang.String SERVICE_NAME = "io.Distribution";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Distribution.EmailDistributionRequest,
@@ -626,9 +626,9 @@ public final class DistributionGrpc {
   private static final class DistributionMethodDescriptorSupplier
       extends DistributionBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DistributionMethodDescriptorSupplier(String methodName) {
+    DistributionMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

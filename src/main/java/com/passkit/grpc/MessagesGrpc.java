@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.54.1)",
+    value = "by gRPC proto compiler (version 1.60.0)",
     comments = "Source: io/core/a_rpc_messages.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MessagesGrpc {
 
   private MessagesGrpc() {}
 
-  public static final String SERVICE_NAME = "io.Messages";
+  public static final java.lang.String SERVICE_NAME = "io.Messages";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
@@ -553,9 +553,9 @@ public final class MessagesGrpc {
   private static final class MessagesMethodDescriptorSupplier
       extends MessagesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MessagesMethodDescriptorSupplier(String methodName) {
+    MessagesMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
