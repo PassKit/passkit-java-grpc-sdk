@@ -3,7 +3,7 @@
     <groupId>com.passkit.grpc</groupId>
     <artifactId>sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.118-SNAPSHOT</version>
+    <version>1.1.119-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
