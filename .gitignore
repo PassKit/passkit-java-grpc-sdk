@@ -2,3 +2,5 @@ target/
 .DS_Store
 release.sh
 release-instructions.txt
+release.properties
+pom.xml.releaseBackup
