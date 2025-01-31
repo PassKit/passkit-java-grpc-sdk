@@ -1255,6 +1255,37 @@ public final class EventTicketsGrpc {
     return getDeleteTicketMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkDeleteTicketsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "bulkDeleteTickets",
+      requestType = com.passkit.grpc.CommonObjects.BulkPassActionRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkDeleteTicketsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty> getBulkDeleteTicketsMethod;
+    if ((getBulkDeleteTicketsMethod = EventTicketsGrpc.getBulkDeleteTicketsMethod) == null) {
+      synchronized (EventTicketsGrpc.class) {
+        if ((getBulkDeleteTicketsMethod = EventTicketsGrpc.getBulkDeleteTicketsMethod) == null) {
+          EventTicketsGrpc.getBulkDeleteTicketsMethod = getBulkDeleteTicketsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "bulkDeleteTickets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.BulkPassActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new EventTicketsMethodDescriptorSupplier("bulkDeleteTickets"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteTicketsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest,
       com.google.protobuf.Empty> getDeleteTicketsByOrderNumberMethod;
 
@@ -1678,6 +1709,13 @@ public final class EventTicketsGrpc {
 
     /**
      */
+    default void bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteTicketsMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTicketsByOrderNumberMethod(), responseObserver);
@@ -2047,6 +2085,14 @@ public final class EventTicketsGrpc {
 
     /**
      */
+    public void bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteTicketsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2368,6 +2414,13 @@ public final class EventTicketsGrpc {
     public com.google.protobuf.Empty deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteTicketMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteTicketsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2699,6 +2752,14 @@ public final class EventTicketsGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkDeleteTickets(
+        com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteTicketsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2754,9 +2815,10 @@ public final class EventTicketsGrpc {
   private static final int METHODID_GET_TICKETS_BY_ORDER_NUMBER = 37;
   private static final int METHODID_GET_EVENT_TICKET_PASS = 38;
   private static final int METHODID_DELETE_TICKET = 39;
-  private static final int METHODID_DELETE_TICKETS_BY_ORDER_NUMBER = 40;
-  private static final int METHODID_LIST_TICKETS = 41;
-  private static final int METHODID_COUNT_TICKETS = 42;
+  private static final int METHODID_BULK_DELETE_TICKETS = 40;
+  private static final int METHODID_DELETE_TICKETS_BY_ORDER_NUMBER = 41;
+  private static final int METHODID_LIST_TICKETS = 42;
+  private static final int METHODID_COUNT_TICKETS = 43;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2933,6 +2995,10 @@ public final class EventTicketsGrpc {
           break;
         case METHODID_DELETE_TICKET:
           serviceImpl.deleteTicket((com.passkit.grpc.EventTickets.TicketOuterClass.TicketId) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_BULK_DELETE_TICKETS:
+          serviceImpl.bulkDeleteTickets((com.passkit.grpc.CommonObjects.BulkPassActionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_DELETE_TICKETS_BY_ORDER_NUMBER:
@@ -3246,6 +3312,13 @@ public final class EventTicketsGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_TICKET)))
         .addMethod(
+          getBulkDeleteTicketsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_BULK_DELETE_TICKETS)))
+        .addMethod(
           getDeleteTicketsByOrderNumberMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3354,6 +3427,7 @@ public final class EventTicketsGrpc {
               .addMethod(getGetTicketsByOrderNumberMethod())
               .addMethod(getGetEventTicketPassMethod())
               .addMethod(getDeleteTicketMethod())
+              .addMethod(getBulkDeleteTicketsMethod())
               .addMethod(getDeleteTicketsByOrderNumberMethod())
               .addMethod(getListTicketsMethod())
               .addMethod(getCountTicketsMethod())

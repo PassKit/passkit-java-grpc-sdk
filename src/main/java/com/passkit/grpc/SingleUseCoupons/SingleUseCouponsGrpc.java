@@ -697,6 +697,37 @@ public final class SingleUseCouponsGrpc {
     return getVoidCouponMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkVoidCouponsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "bulkVoidCoupons",
+      requestType = com.passkit.grpc.CommonObjects.BulkPassActionRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkVoidCouponsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty> getBulkVoidCouponsMethod;
+    if ((getBulkVoidCouponsMethod = SingleUseCouponsGrpc.getBulkVoidCouponsMethod) == null) {
+      synchronized (SingleUseCouponsGrpc.class) {
+        if ((getBulkVoidCouponsMethod = SingleUseCouponsGrpc.getBulkVoidCouponsMethod) == null) {
+          SingleUseCouponsGrpc.getBulkVoidCouponsMethod = getBulkVoidCouponsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "bulkVoidCoupons"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.BulkPassActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new SingleUseCouponsMethodDescriptorSupplier("bulkVoidCoupons"))
+              .build();
+        }
+      }
+    }
+    return getBulkVoidCouponsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated,
       com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> getListCouponsByCouponCampaignDeprecatedMethod;
 
@@ -1118,6 +1149,13 @@ public final class SingleUseCouponsGrpc {
 
     /**
      */
+    default void bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkVoidCouponsMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListCouponsByCouponCampaignDeprecatedMethod(), responseObserver);
@@ -1371,6 +1409,14 @@ public final class SingleUseCouponsGrpc {
 
     /**
      */
+    public void bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkVoidCouponsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -1588,6 +1634,13 @@ public final class SingleUseCouponsGrpc {
 
     /**
      */
+    public com.google.protobuf.Empty bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkVoidCouponsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> listCouponsByCouponCampaignDeprecated(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
@@ -1784,6 +1837,14 @@ public final class SingleUseCouponsGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkVoidCoupons(
+        com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkVoidCouponsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countCouponsByCouponCampaignDeprecated(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -1843,15 +1904,16 @@ public final class SingleUseCouponsGrpc {
   private static final int METHODID_GET_COUPON_BY_ID = 17;
   private static final int METHODID_GET_COUPON_BY_EXTERNAL_ID = 18;
   private static final int METHODID_VOID_COUPON = 19;
-  private static final int METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED = 20;
-  private static final int METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN = 21;
-  private static final int METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED = 22;
-  private static final int METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN = 23;
-  private static final int METHODID_PATCH_PERSON = 24;
-  private static final int METHODID_COPY_COUPON_CAMPAIGN = 25;
-  private static final int METHODID_GET_META_KEYS_FOR_CAMPAIGN = 26;
-  private static final int METHODID_STREAM_COUPON_UPDATES = 27;
-  private static final int METHODID_STREAM_COUPON_REDEMPTIONS = 28;
+  private static final int METHODID_BULK_VOID_COUPONS = 20;
+  private static final int METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED = 21;
+  private static final int METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN = 22;
+  private static final int METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED = 23;
+  private static final int METHODID_COUNT_COUPONS_BY_COUPON_CAMPAIGN = 24;
+  private static final int METHODID_PATCH_PERSON = 25;
+  private static final int METHODID_COPY_COUPON_CAMPAIGN = 26;
+  private static final int METHODID_GET_META_KEYS_FOR_CAMPAIGN = 27;
+  private static final int METHODID_STREAM_COUPON_UPDATES = 28;
+  private static final int METHODID_STREAM_COUPON_REDEMPTIONS = 29;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1948,6 +2010,10 @@ public final class SingleUseCouponsGrpc {
           break;
         case METHODID_VOID_COUPON:
           serviceImpl.voidCoupon((com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_BULK_VOID_COUPONS:
+          serviceImpl.bulkVoidCoupons((com.passkit.grpc.CommonObjects.BulkPassActionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_LIST_COUPONS_BY_COUPON_CAMPAIGN_DEPRECATED:
@@ -2157,6 +2223,13 @@ public final class SingleUseCouponsGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_VOID_COUPON)))
         .addMethod(
+          getBulkVoidCouponsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_BULK_VOID_COUPONS)))
+        .addMethod(
           getListCouponsByCouponCampaignDeprecatedMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
@@ -2275,6 +2348,7 @@ public final class SingleUseCouponsGrpc {
               .addMethod(getGetCouponByIdMethod())
               .addMethod(getGetCouponByExternalIdMethod())
               .addMethod(getVoidCouponMethod())
+              .addMethod(getBulkVoidCouponsMethod())
               .addMethod(getListCouponsByCouponCampaignDeprecatedMethod())
               .addMethod(getListCouponsByCouponCampaignMethod())
               .addMethod(getCountCouponsByCouponCampaignDeprecatedMethod())

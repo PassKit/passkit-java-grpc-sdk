@@ -914,6 +914,254 @@ public final class UsersGrpc {
     return getRevokeLegacyCredentialsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.NewTeamMember,
+      com.passkit.grpc.CommonObjects.Id> getCreateTeamMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createTeamMember",
+      requestType = com.passkit.grpc.User.NewTeamMember.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.NewTeamMember,
+      com.passkit.grpc.CommonObjects.Id> getCreateTeamMemberMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.NewTeamMember, com.passkit.grpc.CommonObjects.Id> getCreateTeamMemberMethod;
+    if ((getCreateTeamMemberMethod = UsersGrpc.getCreateTeamMemberMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getCreateTeamMemberMethod = UsersGrpc.getCreateTeamMemberMethod) == null) {
+          UsersGrpc.getCreateTeamMemberMethod = getCreateTeamMemberMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.NewTeamMember, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createTeamMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.NewTeamMember.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("createTeamMember"))
+              .build();
+        }
+      }
+    }
+    return getCreateTeamMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.CommonObjects.Id> getCreatePermissionsForTeamMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createPermissionsForTeamMember",
+      requestType = com.passkit.grpc.User.TeamMemberPermissions.class,
+      responseType = com.passkit.grpc.CommonObjects.Id.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.CommonObjects.Id> getCreatePermissionsForTeamMemberMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.CommonObjects.Id> getCreatePermissionsForTeamMemberMethod;
+    if ((getCreatePermissionsForTeamMemberMethod = UsersGrpc.getCreatePermissionsForTeamMemberMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getCreatePermissionsForTeamMemberMethod = UsersGrpc.getCreatePermissionsForTeamMemberMethod) == null) {
+          UsersGrpc.getCreatePermissionsForTeamMemberMethod = getCreatePermissionsForTeamMemberMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.CommonObjects.Id>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createPermissionsForTeamMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.TeamMemberPermissions.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("createPermissionsForTeamMember"))
+              .build();
+        }
+      }
+    }
+    return getCreatePermissionsForTeamMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.User.TeamMemberPermissions> getUpdateTeamMemberPermissionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updateTeamMemberPermissions",
+      requestType = com.passkit.grpc.User.TeamMemberPermissions.class,
+      responseType = com.passkit.grpc.User.TeamMemberPermissions.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.User.TeamMemberPermissions> getUpdateTeamMemberPermissionsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.User.TeamMemberPermissions> getUpdateTeamMemberPermissionsMethod;
+    if ((getUpdateTeamMemberPermissionsMethod = UsersGrpc.getUpdateTeamMemberPermissionsMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getUpdateTeamMemberPermissionsMethod = UsersGrpc.getUpdateTeamMemberPermissionsMethod) == null) {
+          UsersGrpc.getUpdateTeamMemberPermissionsMethod = getUpdateTeamMemberPermissionsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.User.TeamMemberPermissions>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateTeamMemberPermissions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.TeamMemberPermissions.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.TeamMemberPermissions.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("updateTeamMemberPermissions"))
+              .build();
+        }
+      }
+    }
+    return getUpdateTeamMemberPermissionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.User.TeamMemberPermissions> getPatchTeamMemberPermissionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "patchTeamMemberPermissions",
+      requestType = com.passkit.grpc.User.TeamMemberPermissions.class,
+      responseType = com.passkit.grpc.User.TeamMemberPermissions.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions,
+      com.passkit.grpc.User.TeamMemberPermissions> getPatchTeamMemberPermissionsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.User.TeamMemberPermissions> getPatchTeamMemberPermissionsMethod;
+    if ((getPatchTeamMemberPermissionsMethod = UsersGrpc.getPatchTeamMemberPermissionsMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getPatchTeamMemberPermissionsMethod = UsersGrpc.getPatchTeamMemberPermissionsMethod) == null) {
+          UsersGrpc.getPatchTeamMemberPermissionsMethod = getPatchTeamMemberPermissionsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.TeamMemberPermissions, com.passkit.grpc.User.TeamMemberPermissions>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "patchTeamMemberPermissions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.TeamMemberPermissions.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.TeamMemberPermissions.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("patchTeamMemberPermissions"))
+              .build();
+        }
+      }
+    }
+    return getPatchTeamMemberPermissionsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.User.GetTeamMemberResponse> getGetTeamMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getTeamMember",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.User.GetTeamMemberResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.User.GetTeamMemberResponse> getGetTeamMemberMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.User.GetTeamMemberResponse> getGetTeamMemberMethod;
+    if ((getGetTeamMemberMethod = UsersGrpc.getGetTeamMemberMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getGetTeamMemberMethod = UsersGrpc.getGetTeamMemberMethod) == null) {
+          UsersGrpc.getGetTeamMemberMethod = getGetTeamMemberMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.User.GetTeamMemberResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTeamMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.GetTeamMemberResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getTeamMember"))
+              .build();
+        }
+      }
+    }
+    return getGetTeamMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.User.ListTeamMembersResponse> getGetTeamMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getTeamMembers",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.passkit.grpc.User.ListTeamMembersResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.User.ListTeamMembersResponse> getGetTeamMembersMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.passkit.grpc.User.ListTeamMembersResponse> getGetTeamMembersMethod;
+    if ((getGetTeamMembersMethod = UsersGrpc.getGetTeamMembersMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getGetTeamMembersMethod = UsersGrpc.getGetTeamMembersMethod) == null) {
+          UsersGrpc.getGetTeamMembersMethod = getGetTeamMembersMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.User.ListTeamMembersResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTeamMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.ListTeamMembersResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getTeamMembers"))
+              .build();
+        }
+      }
+    }
+    return getGetTeamMembersMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getDeleteTeamMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteTeamMember",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getDeleteTeamMemberMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty> getDeleteTeamMemberMethod;
+    if ((getDeleteTeamMemberMethod = UsersGrpc.getDeleteTeamMemberMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getDeleteTeamMemberMethod = UsersGrpc.getDeleteTeamMemberMethod) == null) {
+          UsersGrpc.getDeleteTeamMemberMethod = getDeleteTeamMemberMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteTeamMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("deleteTeamMember"))
+              .build();
+        }
+      }
+    }
+    return getDeleteTeamMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.AuditLogRequest,
+      com.passkit.grpc.User.AuditLog> getGetTeamMemberLogsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getTeamMemberLogs",
+      requestType = com.passkit.grpc.User.AuditLogRequest.class,
+      responseType = com.passkit.grpc.User.AuditLog.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.AuditLogRequest,
+      com.passkit.grpc.User.AuditLog> getGetTeamMemberLogsMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.AuditLogRequest, com.passkit.grpc.User.AuditLog> getGetTeamMemberLogsMethod;
+    if ((getGetTeamMemberLogsMethod = UsersGrpc.getGetTeamMemberLogsMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getGetTeamMemberLogsMethod = UsersGrpc.getGetTeamMemberLogsMethod) == null) {
+          UsersGrpc.getGetTeamMemberLogsMethod = getGetTeamMemberLogsMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.AuditLogRequest, com.passkit.grpc.User.AuditLog>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getTeamMemberLogs"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.AuditLogRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.AuditLog.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("getTeamMemberLogs"))
+              .build();
+        }
+      }
+    }
+    return getGetTeamMemberLogsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1166,6 +1414,65 @@ public final class UsersGrpc {
     default void revokeLegacyCredentials(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRevokeLegacyCredentialsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Team Members
+     * </pre>
+     */
+    default void createTeamMember(com.passkit.grpc.User.NewTeamMember request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateTeamMemberMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreatePermissionsForTeamMemberMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateTeamMemberPermissionsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPatchTeamMemberPermissionsMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getTeamMember(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetTeamMemberResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTeamMemberMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getTeamMembers(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.ListTeamMembersResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTeamMembersMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteTeamMember(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTeamMemberMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getTeamMemberLogs(com.passkit.grpc.User.AuditLogRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.AuditLog> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTeamMemberLogsMethod(), responseObserver);
     }
   }
 
@@ -1430,6 +1737,73 @@ public final class UsersGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getRevokeLegacyCredentialsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Team Members
+     * </pre>
+     */
+    public void createTeamMember(com.passkit.grpc.User.NewTeamMember request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateTeamMemberMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreatePermissionsForTeamMemberMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateTeamMemberPermissionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPatchTeamMemberPermissionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getTeamMember(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetTeamMemberResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetTeamMemberMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getTeamMembers(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.ListTeamMembersResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetTeamMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteTeamMember(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteTeamMemberMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getTeamMemberLogs(com.passkit.grpc.User.AuditLogRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.AuditLog> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetTeamMemberLogsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1659,6 +2033,67 @@ public final class UsersGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRevokeLegacyCredentialsMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Team Members
+     * </pre>
+     */
+    public com.passkit.grpc.CommonObjects.Id createTeamMember(com.passkit.grpc.User.NewTeamMember request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTeamMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.CommonObjects.Id createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreatePermissionsForTeamMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.User.TeamMemberPermissions updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateTeamMemberPermissionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.User.TeamMemberPermissions patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPatchTeamMemberPermissionsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.User.GetTeamMemberResponse getTeamMember(com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTeamMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.passkit.grpc.User.ListTeamMembersResponse> getTeamMembers(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetTeamMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty deleteTeamMember(com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTeamMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.passkit.grpc.User.AuditLog> getTeamMemberLogs(
+        com.passkit.grpc.User.AuditLogRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetTeamMemberLogsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1863,6 +2298,57 @@ public final class UsersGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getRevokeLegacyCredentialsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Team Members
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTeamMember(
+        com.passkit.grpc.User.NewTeamMember request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateTeamMemberMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPermissionsForTeamMember(
+        com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreatePermissionsForTeamMemberMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.TeamMemberPermissions> updateTeamMemberPermissions(
+        com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateTeamMemberPermissionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.TeamMemberPermissions> patchTeamMemberPermissions(
+        com.passkit.grpc.User.TeamMemberPermissions request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPatchTeamMemberPermissionsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.GetTeamMemberResponse> getTeamMember(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetTeamMemberMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTeamMember(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteTeamMemberMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_USER = 0;
@@ -1894,6 +2380,14 @@ public final class UsersGrpc {
   private static final int METHODID_REFRESH_API_SECRET = 26;
   private static final int METHODID_DELETE_ACCOUNT = 27;
   private static final int METHODID_REVOKE_LEGACY_CREDENTIALS = 28;
+  private static final int METHODID_CREATE_TEAM_MEMBER = 29;
+  private static final int METHODID_CREATE_PERMISSIONS_FOR_TEAM_MEMBER = 30;
+  private static final int METHODID_UPDATE_TEAM_MEMBER_PERMISSIONS = 31;
+  private static final int METHODID_PATCH_TEAM_MEMBER_PERMISSIONS = 32;
+  private static final int METHODID_GET_TEAM_MEMBER = 33;
+  private static final int METHODID_GET_TEAM_MEMBERS = 34;
+  private static final int METHODID_DELETE_TEAM_MEMBER = 35;
+  private static final int METHODID_GET_TEAM_MEMBER_LOGS = 36;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2027,6 +2521,38 @@ public final class UsersGrpc {
         case METHODID_REVOKE_LEGACY_CREDENTIALS:
           serviceImpl.revokeLegacyCredentials((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_CREATE_TEAM_MEMBER:
+          serviceImpl.createTeamMember((com.passkit.grpc.User.NewTeamMember) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_CREATE_PERMISSIONS_FOR_TEAM_MEMBER:
+          serviceImpl.createPermissionsForTeamMember((com.passkit.grpc.User.TeamMemberPermissions) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id>) responseObserver);
+          break;
+        case METHODID_UPDATE_TEAM_MEMBER_PERMISSIONS:
+          serviceImpl.updateTeamMemberPermissions((com.passkit.grpc.User.TeamMemberPermissions) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions>) responseObserver);
+          break;
+        case METHODID_PATCH_TEAM_MEMBER_PERMISSIONS:
+          serviceImpl.patchTeamMemberPermissions((com.passkit.grpc.User.TeamMemberPermissions) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions>) responseObserver);
+          break;
+        case METHODID_GET_TEAM_MEMBER:
+          serviceImpl.getTeamMember((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetTeamMemberResponse>) responseObserver);
+          break;
+        case METHODID_GET_TEAM_MEMBERS:
+          serviceImpl.getTeamMembers((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.ListTeamMembersResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_TEAM_MEMBER:
+          serviceImpl.deleteTeamMember((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_GET_TEAM_MEMBER_LOGS:
+          serviceImpl.getTeamMemberLogs((com.passkit.grpc.User.AuditLogRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.AuditLog>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -2249,6 +2775,62 @@ public final class UsersGrpc {
               com.google.protobuf.Empty,
               com.google.protobuf.Empty>(
                 service, METHODID_REVOKE_LEGACY_CREDENTIALS)))
+        .addMethod(
+          getCreateTeamMemberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.NewTeamMember,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_TEAM_MEMBER)))
+        .addMethod(
+          getCreatePermissionsForTeamMemberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.TeamMemberPermissions,
+              com.passkit.grpc.CommonObjects.Id>(
+                service, METHODID_CREATE_PERMISSIONS_FOR_TEAM_MEMBER)))
+        .addMethod(
+          getUpdateTeamMemberPermissionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.TeamMemberPermissions,
+              com.passkit.grpc.User.TeamMemberPermissions>(
+                service, METHODID_UPDATE_TEAM_MEMBER_PERMISSIONS)))
+        .addMethod(
+          getPatchTeamMemberPermissionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.TeamMemberPermissions,
+              com.passkit.grpc.User.TeamMemberPermissions>(
+                service, METHODID_PATCH_TEAM_MEMBER_PERMISSIONS)))
+        .addMethod(
+          getGetTeamMemberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.User.GetTeamMemberResponse>(
+                service, METHODID_GET_TEAM_MEMBER)))
+        .addMethod(
+          getGetTeamMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.User.ListTeamMembersResponse>(
+                service, METHODID_GET_TEAM_MEMBERS)))
+        .addMethod(
+          getDeleteTeamMemberMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_TEAM_MEMBER)))
+        .addMethod(
+          getGetTeamMemberLogsMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.AuditLogRequest,
+              com.passkit.grpc.User.AuditLog>(
+                service, METHODID_GET_TEAM_MEMBER_LOGS)))
         .build();
   }
 
@@ -2326,6 +2908,14 @@ public final class UsersGrpc {
               .addMethod(getRefreshApiSecretMethod())
               .addMethod(getDeleteAccountMethod())
               .addMethod(getRevokeLegacyCredentialsMethod())
+              .addMethod(getCreateTeamMemberMethod())
+              .addMethod(getCreatePermissionsForTeamMemberMethod())
+              .addMethod(getUpdateTeamMemberPermissionsMethod())
+              .addMethod(getPatchTeamMemberPermissionsMethod())
+              .addMethod(getGetTeamMemberMethod())
+              .addMethod(getGetTeamMembersMethod())
+              .addMethod(getDeleteTeamMemberMethod())
+              .addMethod(getGetTeamMemberLogsMethod())
               .build();
         }
       }

@@ -914,6 +914,37 @@ public final class MembersGrpc {
     return getDeleteMemberMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkDeleteMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "bulkDeleteMembers",
+      requestType = com.passkit.grpc.CommonObjects.BulkPassActionRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+      com.google.protobuf.Empty> getBulkDeleteMembersMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty> getBulkDeleteMembersMethod;
+    if ((getBulkDeleteMembersMethod = MembersGrpc.getBulkDeleteMembersMethod) == null) {
+      synchronized (MembersGrpc.class) {
+        if ((getBulkDeleteMembersMethod = MembersGrpc.getBulkDeleteMembersMethod) == null) {
+          MembersGrpc.getBulkDeleteMembersMethod = getBulkDeleteMembersMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.BulkPassActionRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "bulkDeleteMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.BulkPassActionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("bulkDeleteMembers"))
+              .build();
+        }
+      }
+    }
+    return getBulkDeleteMembersMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated,
       com.passkit.grpc.CommonObjects.Count> getCountMembersDeprecatedMethod;
 
@@ -1683,6 +1714,13 @@ public final class MembersGrpc {
 
     /**
      */
+    default void bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBulkDeleteMembersMethod(), responseObserver);
+    }
+
+    /**
+     */
     default void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCountMembersDeprecatedMethod(), responseObserver);
@@ -2099,6 +2137,14 @@ public final class MembersGrpc {
 
     /**
      */
+    public void bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBulkDeleteMembersMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -2496,6 +2542,13 @@ public final class MembersGrpc {
 
     /**
      */
+    public com.google.protobuf.Empty bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBulkDeleteMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
     public com.passkit.grpc.CommonObjects.Count countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCountMembersDeprecatedMethod(), getCallOptions(), request);
@@ -2844,6 +2897,14 @@ public final class MembersGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkDeleteMembers(
+        com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBulkDeleteMembersMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMembersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -2968,21 +3029,22 @@ public final class MembersGrpc {
   private static final int METHODID_UPDATE_MEMBERS_BY_SEGMENT = 26;
   private static final int METHODID_DELETE_MEMBERS_BY_SEGMENT = 27;
   private static final int METHODID_DELETE_MEMBER = 28;
-  private static final int METHODID_COUNT_MEMBERS_DEPRECATED = 29;
-  private static final int METHODID_COUNT_MEMBERS = 30;
-  private static final int METHODID_GET_MESSAGE_HISTORY_FOR_MEMBER = 31;
-  private static final int METHODID_GET_META_KEYS_FOR_PROGRAM = 32;
-  private static final int METHODID_RENEW_MEMBERS_EXPIRY = 33;
-  private static final int METHODID_UPDATE_MEMBER_EXPIRY = 34;
-  private static final int METHODID_PATCH_PERSON = 35;
-  private static final int METHODID_COUNT_MEMBER_EVENTS = 36;
-  private static final int METHODID_LIST_MEMBER_EVENTS = 37;
-  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 38;
-  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 39;
-  private static final int METHODID_DELETE_MEMBER_EVENTS = 40;
-  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 41;
-  private static final int METHODID_DELETE_MEMBER_EVENT = 42;
-  private static final int METHODID_GET_PROGRAM_ENROLMENT = 43;
+  private static final int METHODID_BULK_DELETE_MEMBERS = 29;
+  private static final int METHODID_COUNT_MEMBERS_DEPRECATED = 30;
+  private static final int METHODID_COUNT_MEMBERS = 31;
+  private static final int METHODID_GET_MESSAGE_HISTORY_FOR_MEMBER = 32;
+  private static final int METHODID_GET_META_KEYS_FOR_PROGRAM = 33;
+  private static final int METHODID_RENEW_MEMBERS_EXPIRY = 34;
+  private static final int METHODID_UPDATE_MEMBER_EXPIRY = 35;
+  private static final int METHODID_PATCH_PERSON = 36;
+  private static final int METHODID_COUNT_MEMBER_EVENTS = 37;
+  private static final int METHODID_LIST_MEMBER_EVENTS = 38;
+  private static final int METHODID_GET_MEMBER_EVENT_META_KEYS_FOR_PROGRAM = 39;
+  private static final int METHODID_LIST_EVENTS_FOR_MEMBER = 40;
+  private static final int METHODID_DELETE_MEMBER_EVENTS = 41;
+  private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 42;
+  private static final int METHODID_DELETE_MEMBER_EVENT = 43;
+  private static final int METHODID_GET_PROGRAM_ENROLMENT = 44;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3115,6 +3177,10 @@ public final class MembersGrpc {
           break;
         case METHODID_DELETE_MEMBER:
           serviceImpl.deleteMember((com.passkit.grpc.Members.MemberOuterClass.Member) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_BULK_DELETE_MEMBERS:
+          serviceImpl.bulkDeleteMembers((com.passkit.grpc.CommonObjects.BulkPassActionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_COUNT_MEMBERS_DEPRECATED:
@@ -3399,6 +3465,13 @@ public final class MembersGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_MEMBER)))
         .addMethod(
+          getBulkDeleteMembersMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.BulkPassActionRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_BULK_DELETE_MEMBERS)))
+        .addMethod(
           getCountMembersDeprecatedMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -3580,6 +3653,7 @@ public final class MembersGrpc {
               .addMethod(getUpdateMembersBySegmentMethod())
               .addMethod(getDeleteMembersBySegmentMethod())
               .addMethod(getDeleteMemberMethod())
+              .addMethod(getBulkDeleteMembersMethod())
               .addMethod(getCountMembersDeprecatedMethod())
               .addMethod(getCountMembersMethod())
               .addMethod(getGetMessageHistoryForMemberMethod())
