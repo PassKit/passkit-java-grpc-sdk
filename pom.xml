@@ -5,13 +5,13 @@
     <packaging>jar</packaging>
     <version>1.1.118-SNAPSHOT</version>
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>SDK for the PassKit gRPC API that can be used to create, configure and manage Membership, Loyalty, Event Ticket, Coupon, Transit and Boarding Pass content for mobile wallet applications, including Apple Pay and Google Pay.</description>
+    <description>SDK for the PassKit gRPC API that can be used to create, configure and manage Membership, Loyalty, Event Ticket, Coupon, Transit and Boarding Pass content for mobile wallet applications, including Apple Wallet and Google Wallet.</description>
     <url>https://app.passkit.com</url>
     <licenses>
         <license>
@@ -31,7 +31,7 @@
         <connection>scm:git:git://github.com/PassKit/passkit-java-grpc-sdk.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/PassKit/passkit-java-grpc-sdk.git</developerConnection>
         <url>https://github.com/PassKit/passkit-java-grpc-sdk/tree/main</url>
-        <tag>v1.1.96</tag>
+        <tag>v1.1.118</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
