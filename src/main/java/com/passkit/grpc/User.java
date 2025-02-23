@@ -8106,6 +8106,18 @@ public final class User {
      * @return The userPermissions.
      */
     long getUserPermissions();
+
+    /**
+     * <code>string userId = 11;</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string userId = 11;</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
   }
   /**
    * <pre>
@@ -8138,6 +8150,7 @@ public final class User {
       companyId_ = "";
       companyName_ = "";
       regionId_ = "";
+      userId_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -8438,6 +8451,45 @@ public final class User {
       return userPermissions_;
     }
 
+    public static final int USERID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object userId_ = "";
+    /**
+     * <code>string userId = 11;</code>
+     * @return The userId.
+     */
+    @java.lang.Override
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string userId = 11;</code>
+     * @return The bytes for userId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8481,6 +8533,9 @@ public final class User {
       }
       if (userPermissions_ != 0L) {
         output.writeUInt64(10, userPermissions_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userId_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, userId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -8526,6 +8581,9 @@ public final class User {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(10, userPermissions_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userId_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, userId_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8567,6 +8625,8 @@ public final class User {
           != other.getUserStatus()) return false;
       if (getUserPermissions()
           != other.getUserPermissions()) return false;
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -8605,6 +8665,8 @@ public final class User {
       hash = (37 * hash) + USERPERMISSIONS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getUserPermissions());
+      hash = (37 * hash) + USERID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8765,6 +8827,7 @@ public final class User {
         regionId_ = "";
         userStatus_ = 0L;
         userPermissions_ = 0L;
+        userId_ = "";
         return this;
       }
 
@@ -8835,6 +8898,9 @@ public final class User {
         if (((from_bitField0_ & 0x00000200) != 0)) {
           result.userPermissions_ = userPermissions_;
         }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.userId_ = userId_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -8889,6 +8955,11 @@ public final class User {
         }
         if (other.getUserPermissions() != 0L) {
           setUserPermissions(other.getUserPermissions());
+        }
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          bitField0_ |= 0x00000400;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -8970,6 +9041,11 @@ public final class User {
                 bitField0_ |= 0x00000200;
                 break;
               } // case 80
+              case 90: {
+                userId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -9693,6 +9769,78 @@ public final class User {
       public Builder clearUserPermissions() {
         bitField0_ = (bitField0_ & ~0x00000200);
         userPermissions_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string userId = 11;</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string userId = 11;</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string userId = 11;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        userId_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userId = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        userId_ = getDefaultInstance().getUserId();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string userId = 11;</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        userId_ = value;
+        bitField0_ |= 0x00000400;
         onChanged();
         return this;
       }
@@ -27579,107 +27727,107 @@ public final class User {
       "anyName\030\005 \001(\t\022\024\n\014mobileNumber\030\006 \001(\t\022\025\n\rt" +
       "woFactorAuth\030\007 \001(\010\022\017\n\007isOwner\030\010 \001(\010\022\020\n\010r" +
       "eadOnly\030\t \001(\010\022\022\n\nteamMember\030\n \001(\010\022\r\n\005tok" +
-      "en\030\013 \001(\t\"\216\002\n\017GetUserResponse\022\r\n\005email\030\001 " +
+      "en\030\013 \001(\t\"\236\002\n\017GetUserResponse\022\r\n\005email\030\001 " +
       "\001(\t\022\020\n\010username\030\002 \001(\t\022\021\n\tcompanyId\030\003 \001(\t" +
       "\022\023\n\013companyName\030\004 \001(\t\022\025\n\rcompanyStatus\030\005" +
       " \001(\004\022-\n\tcreatedAt\030\006 \001(\0132\032.google.protobu" +
       "f.Timestamp\022-\n\texpiresAt\030\007 \001(\0132\032.google." +
       "protobuf.Timestamp\022\020\n\010regionId\030\010 \001(\t\022\022\n\n" +
       "userStatus\030\t \001(\004\022\027\n\017userPermissions\030\n \001(" +
-      "\004\"i\n\013BillingMeta\022\023\n\013companyName\030\001 \001(\t\022\r\n" +
-      "\005taxId\030\002 \001(\t\022\021\n\treference\030\003 \001(\t\022#\n\016billi" +
-      "ngAddress\030\004 \001(\0132\013.io.Address\"X\n\013Credenti" +
-      "als\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022" +
-      "\022\n\ntwoFAToken\030\003 \001(\t\022\021\n\ttwoFACode\030\004 \001(\t\"+" +
-      "\n\rVerifyRequest\022\013\n\003uid\030\001 \001(\t\022\r\n\005token\030\002 " +
-      "\001(\t\"\024\n\003JWT\022\r\n\005token\030\001 \001(\t\"j\n\022PasswordRes" +
-      "etInput\022\n\n\002id\030\001 \001(\t\022\027\n\017registeredEmail\030\002" +
-      " \001(\t\022\023\n\013newPassword\030\003 \001(\t\022\032\n\022confirmNewP" +
-      "assword\030\004 \001(\t\"\034\n\010Username\022\020\n\010username\030\001 " +
-      "\001(\t\"k\n\032OAuth2AuthorizationRequest\022\022\n\ncli" +
-      "entCode\030\001 \001(\t\022$\n\010provider\030\002 \001(\0162\022.io.OAu" +
-      "th2Provider\022\023\n\013redirectUri\030\003 \001(\t\"\214\002\n\024Sca" +
-      "nnerConfiguration\022?\n\025membershipPermissio" +
-      "ns\030\001 \003(\0162 .io.ScannerMembershipPermissio" +
-      "ns\0227\n\021couponPermissions\030\002 \003(\0162\034.io.Scann" +
-      "erCouponPermissions\022@\n\027defaultMembership" +
-      "Action\030\003 \003(\0162\037.io.DefaultMembershipScanA" +
-      "ction\0228\n\023defaultCouponAction\030\004 \003(\0162\033.io." +
-      "DefaultCouponScanAction\"\026\n\005Email\022\r\n\005emai" +
-      "l\030\001 \001(\t\"L\n\027ConfirmEmailChangeInput\022\020\n\010us" +
-      "ername\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r\n\005token\030" +
-      "\003 \001(\t\"\"\n\013CompanyName\022\023\n\013companyName\030\001 \001(" +
-      "\t\"Z\n\024DeleteAccountRequest\022\020\n\010username\030\001 " +
-      "\001(\t\022\020\n\010password\030\002 \001(\t\022\036\n\026confirmPermanen" +
-      "tDelete\030\003 \001(\010\" \n\014ProjectsList\022\020\n\010project" +
-      "s\030\001 \003(\t\"(\n\020CertificatesList\022\024\n\014certifica" +
-      "tes\030\001 \003(\t\" \n\014ProtocolList\022\020\n\010classIds\030\001 " +
-      "\003(\t\"\214\003\n\023ResourcePermissions\022+\n\017allowedPr" +
-      "ojects\030\001 \001(\0132\020.io.ProjectsListH\000\022.\n\022disa" +
-      "llowedProjects\030\002 \001(\0132\020.io.ProjectsListH\000" +
-      "\0223\n\023allowedCertificates\030\003 \001(\0132\024.io.Certi" +
-      "ficatesListH\001\0226\n\026disallowedCertificates\030" +
-      "\004 \001(\0132\024.io.CertificatesListH\001\022+\n\017allowed" +
-      "Programs\030\005 \001(\0132\020.io.ProtocolListH\002\022.\n\022di" +
-      "sallowedPrograms\030\006 \001(\0132\020.io.ProtocolList" +
-      "H\002B\024\n\022ProjectPermissionsB\030\n\026CertificateP" +
-      "ermissionsB\036\n\034MembershipProgramPermissio" +
-      "ns\"\227\002\n\025TeamMemberPermissions\022\n\n\002id\030\001 \001(\t" +
-      "\022\016\n\006userId\030\002 \001(\t\022,\n\017permissionScope\030\003 \001(" +
-      "\0162\023.io.PermissionScope\022$\n\006status\030\004 \001(\0162\024" +
-      ".io.TeamMemberStatus\0224\n\023resourcePermissi" +
-      "ons\030\005 \001(\0132\027.io.ResourcePermissions\022+\n\007cr" +
-      "eated\030\006 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "+\n\007updated\030\007 \001(\0132\032.google.protobuf.Times" +
-      "tamp\"Z\n\rNewTeamMember\022\031\n\004user\030\001 \001(\0132\013.io" +
-      ".NewUser\022.\n\013permissions\030\002 \001(\0132\031.io.TeamM" +
-      "emberPermissions\"j\n\025GetTeamMemberRespons" +
-      "e\022!\n\004user\030\001 \001(\0132\023.io.GetUserResponse\022.\n\013" +
-      "permissions\030\002 \001(\0132\031.io.TeamMemberPermiss" +
-      "ions\"[\n\027ListTeamMembersResponse\022\013\n\003uid\030\001" +
-      " \001(\t\022\r\n\005email\030\002 \001(\t\022$\n\006status\030\003 \001(\0162\024.io" +
-      ".TeamMemberStatus\"\032\n\tRecaptcha\022\r\n\005token\030" +
-      "\001 \001(\t*q\n\016OAuth2Provider\022\024\n\020OAUTH_DO_NOT_" +
-      "USE\020\000\022\021\n\rOAUTH_PATREON\020\n\022\020\n\014OAUTH_SPROUT" +
-      "\0202\022\023\n\017OAUTH_MAILCHIMP\020d\022\017\n\nOAUTH_XERO\020\226\001" +
-      "*\306\003\n\034ScannerMembershipPermissions\022\036\n\032MEM" +
-      "BERSHIP_PERMISSION_NONE\020\000\022%\n!MEMBERSHIP_" +
-      "PERMISSION_VIEW_MEMBER\020\001\022%\n!MEMBERSHIP_P" +
-      "ERMISSION_EDIT_MEMBER\020\002\022%\n!MEMBERSHIP_PE" +
-      "RMISSION_EARN_POINTS\020\004\022%\n!MEMBERSHIP_PER" +
-      "MISSION_BURN_POINTS\020\010\022$\n MEMBERSHIP_PERM" +
-      "ISSION_SET_POINTS\020\020\022%\n!MEMBERSHIP_PERMIS" +
-      "SION_CHANGE_TIER\020 \022%\n!MEMBERSHIP_PERMISS" +
-      "ION_VIEW_EVENTS\020@\022(\n#MEMBERSHIP_PERMISSI" +
-      "ON_CHANGE_EXPIRY\020\200\001\022\'\n\"MEMBERSHIP_PERMIS" +
-      "SION_CHECK_IN_OUT\020\200\002\022#\n\036MEMBERSHIP_PERMI" +
-      "SSION_VALIDATE\020\200\004*\202\002\n\030ScannerCouponPermi" +
-      "ssions\022\032\n\026COUPON_PERMISSION_NONE\020\000\022!\n\035CO" +
-      "UPON_PERMISSION_VIEW_COUPON\020\001\022!\n\035COUPON_" +
-      "PERMISSION_EDIT_COUPON\020\002\022\034\n\030COUPON_PERMI" +
-      "SSION_REDEEM\020\004\022!\n\035COUPON_PERMISSION_VIEW" +
-      "_EVENTS\020\010\022#\n\037COUPON_PERMISSION_CHANGE_EX" +
-      "PIRY\020\020\022\036\n\032COUPON_PERMISSION_VALIDATE\020 *\310" +
-      "\001\n\033DefaultMembershipScanAction\022\033\n\027MEMBER" +
-      "SHIP_DEFAULT_NONE\020\000\022\"\n\036MEMBERSHIP_DEFAUL" +
-      "T_EARN_POINTS\020\001\022\"\n\036MEMBERSHIP_DEFAULT_BU" +
-      "RN_POINTS\020\002\022#\n\037MEMBERSHIP_DEFAULT_CHECK_" +
-      "IN_OUT\020\004\022\037\n\033MEMBERSHIP_DEFAULT_VALIDATE\020" +
-      "\010*j\n\027DefaultCouponScanAction\022\027\n\023COUPON_D" +
-      "EFAULT_NONE\020\000\022\031\n\025COUPON_DEFAULT_REDEEM\020\001" +
-      "\022\033\n\027COUPON_DEFAULT_VALIDATE\020\002*\355\001\n\017Permis" +
-      "sionScope\022\023\n\017PERMISSION_NONE\020\000\022\016\n\nWEB_AC" +
-      "CESS\020\001\022\016\n\nAPP_ACCESS\020\002\022\020\n\014ALL_PROJECTS\020\004" +
-      "\022\024\n\020ALL_CERTIFICATES\020\010\022\022\n\016BILLING_ACCESS" +
-      "\020\020\022\027\n\023CERTIFICATES_ACCESS\020 \022\022\n\016MEMBERS_A" +
-      "CCESS\020@\022\023\n\016COUPONS_ACCESS\020\200\001\022\022\n\rEVENTS_A" +
-      "CCESS\020\200\002\022\023\n\016FLIGHTS_ACCESS\020\200\004*\207\001\n\020TeamMe" +
-      "mberStatus\022\017\n\013STATUS_NONE\020\000\022\026\n\022TEAM_MEMB" +
-      "ER_ACTIVE\020\001\022\030\n\024TEAM_MEMBER_DISABLED\020\002\022\027\n" +
-      "\023TEAM_MEMBER_EXPIRED\020\004\022\027\n\023TEAM_MEMBER_PE" +
-      "NDING\020\010BG\n\020com.passkit.grpcZ$stash.passk" +
-      "it.com/io/model/sdk/go/io\252\002\014PassKit.Grpc" +
-      "b\006proto3"
+      "\004\022\016\n\006userId\030\013 \001(\t\"i\n\013BillingMeta\022\023\n\013comp" +
+      "anyName\030\001 \001(\t\022\r\n\005taxId\030\002 \001(\t\022\021\n\treferenc" +
+      "e\030\003 \001(\t\022#\n\016billingAddress\030\004 \001(\0132\013.io.Add" +
+      "ress\"X\n\013Credentials\022\020\n\010username\030\001 \001(\t\022\020\n" +
+      "\010password\030\002 \001(\t\022\022\n\ntwoFAToken\030\003 \001(\t\022\021\n\tt" +
+      "woFACode\030\004 \001(\t\"+\n\rVerifyRequest\022\013\n\003uid\030\001" +
+      " \001(\t\022\r\n\005token\030\002 \001(\t\"\024\n\003JWT\022\r\n\005token\030\001 \001(" +
+      "\t\"j\n\022PasswordResetInput\022\n\n\002id\030\001 \001(\t\022\027\n\017r" +
+      "egisteredEmail\030\002 \001(\t\022\023\n\013newPassword\030\003 \001(" +
+      "\t\022\032\n\022confirmNewPassword\030\004 \001(\t\"\034\n\010Usernam" +
+      "e\022\020\n\010username\030\001 \001(\t\"k\n\032OAuth2Authorizati" +
+      "onRequest\022\022\n\nclientCode\030\001 \001(\t\022$\n\010provide" +
+      "r\030\002 \001(\0162\022.io.OAuth2Provider\022\023\n\013redirectU" +
+      "ri\030\003 \001(\t\"\214\002\n\024ScannerConfiguration\022?\n\025mem" +
+      "bershipPermissions\030\001 \003(\0162 .io.ScannerMem" +
+      "bershipPermissions\0227\n\021couponPermissions\030" +
+      "\002 \003(\0162\034.io.ScannerCouponPermissions\022@\n\027d" +
+      "efaultMembershipAction\030\003 \003(\0162\037.io.Defaul" +
+      "tMembershipScanAction\0228\n\023defaultCouponAc" +
+      "tion\030\004 \003(\0162\033.io.DefaultCouponScanAction\"" +
+      "\026\n\005Email\022\r\n\005email\030\001 \001(\t\"L\n\027ConfirmEmailC" +
+      "hangeInput\022\020\n\010username\030\001 \001(\t\022\020\n\010password" +
+      "\030\002 \001(\t\022\r\n\005token\030\003 \001(\t\"\"\n\013CompanyName\022\023\n\013" +
+      "companyName\030\001 \001(\t\"Z\n\024DeleteAccountReques" +
+      "t\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\036\n" +
+      "\026confirmPermanentDelete\030\003 \001(\010\" \n\014Project" +
+      "sList\022\020\n\010projects\030\001 \003(\t\"(\n\020CertificatesL" +
+      "ist\022\024\n\014certificates\030\001 \003(\t\" \n\014ProtocolLis" +
+      "t\022\020\n\010classIds\030\001 \003(\t\"\214\003\n\023ResourcePermissi" +
+      "ons\022+\n\017allowedProjects\030\001 \001(\0132\020.io.Projec" +
+      "tsListH\000\022.\n\022disallowedProjects\030\002 \001(\0132\020.i" +
+      "o.ProjectsListH\000\0223\n\023allowedCertificates\030" +
+      "\003 \001(\0132\024.io.CertificatesListH\001\0226\n\026disallo" +
+      "wedCertificates\030\004 \001(\0132\024.io.CertificatesL" +
+      "istH\001\022+\n\017allowedPrograms\030\005 \001(\0132\020.io.Prot" +
+      "ocolListH\002\022.\n\022disallowedPrograms\030\006 \001(\0132\020" +
+      ".io.ProtocolListH\002B\024\n\022ProjectPermissions" +
+      "B\030\n\026CertificatePermissionsB\036\n\034Membership" +
+      "ProgramPermissions\"\227\002\n\025TeamMemberPermiss" +
+      "ions\022\n\n\002id\030\001 \001(\t\022\016\n\006userId\030\002 \001(\t\022,\n\017perm" +
+      "issionScope\030\003 \001(\0162\023.io.PermissionScope\022$" +
+      "\n\006status\030\004 \001(\0162\024.io.TeamMemberStatus\0224\n\023" +
+      "resourcePermissions\030\005 \001(\0132\027.io.ResourceP" +
+      "ermissions\022+\n\007created\030\006 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022+\n\007updated\030\007 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"Z\n\rNewTeamMember\022\031\n" +
+      "\004user\030\001 \001(\0132\013.io.NewUser\022.\n\013permissions\030" +
+      "\002 \001(\0132\031.io.TeamMemberPermissions\"j\n\025GetT" +
+      "eamMemberResponse\022!\n\004user\030\001 \001(\0132\023.io.Get" +
+      "UserResponse\022.\n\013permissions\030\002 \001(\0132\031.io.T" +
+      "eamMemberPermissions\"[\n\027ListTeamMembersR" +
+      "esponse\022\013\n\003uid\030\001 \001(\t\022\r\n\005email\030\002 \001(\t\022$\n\006s" +
+      "tatus\030\003 \001(\0162\024.io.TeamMemberStatus\"\032\n\tRec" +
+      "aptcha\022\r\n\005token\030\001 \001(\t*q\n\016OAuth2Provider\022" +
+      "\024\n\020OAUTH_DO_NOT_USE\020\000\022\021\n\rOAUTH_PATREON\020\n" +
+      "\022\020\n\014OAUTH_SPROUT\0202\022\023\n\017OAUTH_MAILCHIMP\020d\022" +
+      "\017\n\nOAUTH_XERO\020\226\001*\306\003\n\034ScannerMembershipPe" +
+      "rmissions\022\036\n\032MEMBERSHIP_PERMISSION_NONE\020" +
+      "\000\022%\n!MEMBERSHIP_PERMISSION_VIEW_MEMBER\020\001" +
+      "\022%\n!MEMBERSHIP_PERMISSION_EDIT_MEMBER\020\002\022" +
+      "%\n!MEMBERSHIP_PERMISSION_EARN_POINTS\020\004\022%" +
+      "\n!MEMBERSHIP_PERMISSION_BURN_POINTS\020\010\022$\n" +
+      " MEMBERSHIP_PERMISSION_SET_POINTS\020\020\022%\n!M" +
+      "EMBERSHIP_PERMISSION_CHANGE_TIER\020 \022%\n!ME" +
+      "MBERSHIP_PERMISSION_VIEW_EVENTS\020@\022(\n#MEM" +
+      "BERSHIP_PERMISSION_CHANGE_EXPIRY\020\200\001\022\'\n\"M" +
+      "EMBERSHIP_PERMISSION_CHECK_IN_OUT\020\200\002\022#\n\036" +
+      "MEMBERSHIP_PERMISSION_VALIDATE\020\200\004*\202\002\n\030Sc" +
+      "annerCouponPermissions\022\032\n\026COUPON_PERMISS" +
+      "ION_NONE\020\000\022!\n\035COUPON_PERMISSION_VIEW_COU" +
+      "PON\020\001\022!\n\035COUPON_PERMISSION_EDIT_COUPON\020\002" +
+      "\022\034\n\030COUPON_PERMISSION_REDEEM\020\004\022!\n\035COUPON" +
+      "_PERMISSION_VIEW_EVENTS\020\010\022#\n\037COUPON_PERM" +
+      "ISSION_CHANGE_EXPIRY\020\020\022\036\n\032COUPON_PERMISS" +
+      "ION_VALIDATE\020 *\310\001\n\033DefaultMembershipScan" +
+      "Action\022\033\n\027MEMBERSHIP_DEFAULT_NONE\020\000\022\"\n\036M" +
+      "EMBERSHIP_DEFAULT_EARN_POINTS\020\001\022\"\n\036MEMBE" +
+      "RSHIP_DEFAULT_BURN_POINTS\020\002\022#\n\037MEMBERSHI" +
+      "P_DEFAULT_CHECK_IN_OUT\020\004\022\037\n\033MEMBERSHIP_D" +
+      "EFAULT_VALIDATE\020\010*j\n\027DefaultCouponScanAc" +
+      "tion\022\027\n\023COUPON_DEFAULT_NONE\020\000\022\031\n\025COUPON_" +
+      "DEFAULT_REDEEM\020\001\022\033\n\027COUPON_DEFAULT_VALID" +
+      "ATE\020\002*\355\001\n\017PermissionScope\022\023\n\017PERMISSION_" +
+      "NONE\020\000\022\016\n\nWEB_ACCESS\020\001\022\016\n\nAPP_ACCESS\020\002\022\020" +
+      "\n\014ALL_PROJECTS\020\004\022\024\n\020ALL_CERTIFICATES\020\010\022\022" +
+      "\n\016BILLING_ACCESS\020\020\022\027\n\023CERTIFICATES_ACCES" +
+      "S\020 \022\022\n\016MEMBERS_ACCESS\020@\022\023\n\016COUPONS_ACCES" +
+      "S\020\200\001\022\022\n\rEVENTS_ACCESS\020\200\002\022\023\n\016FLIGHTS_ACCE" +
+      "SS\020\200\004*\207\001\n\020TeamMemberStatus\022\017\n\013STATUS_NON" +
+      "E\020\000\022\026\n\022TEAM_MEMBER_ACTIVE\020\001\022\030\n\024TEAM_MEMB" +
+      "ER_DISABLED\020\002\022\027\n\023TEAM_MEMBER_EXPIRED\020\004\022\027" +
+      "\n\023TEAM_MEMBER_PENDING\020\010BG\n\020com.passkit.g" +
+      "rpcZ$stash.passkit.com/io/model/sdk/go/i" +
+      "o\252\002\014PassKit.Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -27717,7 +27865,7 @@ public final class User {
     internal_static_io_GetUserResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_io_GetUserResponse_descriptor,
-        new java.lang.String[] { "Email", "Username", "CompanyId", "CompanyName", "CompanyStatus", "CreatedAt", "ExpiresAt", "RegionId", "UserStatus", "UserPermissions", });
+        new java.lang.String[] { "Email", "Username", "CompanyId", "CompanyName", "CompanyStatus", "CreatedAt", "ExpiresAt", "RegionId", "UserStatus", "UserPermissions", "UserId", });
     internal_static_io_BillingMeta_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_io_BillingMeta_fieldAccessorTable = new

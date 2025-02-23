@@ -4147,6 +4147,73 @@ java.lang.String defaultValue) {
      */
     com.google.protobuf.ByteString
         getDarkModeContentBackgroundColorBytes();
+
+    /**
+     * <pre>
+     * Header label for the email.
+     * </pre>
+     *
+     * <code>string headerLabel = 23;</code>
+     * @return The headerLabel.
+     */
+    java.lang.String getHeaderLabel();
+    /**
+     * <pre>
+     * Header label for the email.
+     * </pre>
+     *
+     * <code>string headerLabel = 23;</code>
+     * @return The bytes for headerLabel.
+     */
+    com.google.protobuf.ByteString
+        getHeaderLabelBytes();
+
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @return Whether the localizedHeaderLabel field is set.
+     */
+    boolean hasLocalizedHeaderLabel();
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @return The localizedHeaderLabel.
+     */
+    com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderLabel();
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     */
+    com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderLabelOrBuilder();
+
+    /**
+     * <pre>
+     * Header value for the email.
+     * </pre>
+     *
+     * <code>string headerValue = 25;</code>
+     * @return The headerValue.
+     */
+    java.lang.String getHeaderValue();
+    /**
+     * <pre>
+     * Header value for the email.
+     * </pre>
+     *
+     * <code>string headerValue = 25;</code>
+     * @return The bytes for headerValue.
+     */
+    com.google.protobuf.ByteString
+        getHeaderValueBytes();
   }
   /**
    * <pre>
@@ -4190,6 +4257,8 @@ java.lang.String defaultValue) {
       darkModeButtonBackgroundColor_ = "";
       darkModePageBackgroundColor_ = "";
       darkModeContentBackgroundColor_ = "";
+      headerLabel_ = "";
+      headerValue_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -5154,6 +5223,138 @@ java.lang.String defaultValue) {
       }
     }
 
+    public static final int HEADERLABEL_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object headerLabel_ = "";
+    /**
+     * <pre>
+     * Header label for the email.
+     * </pre>
+     *
+     * <code>string headerLabel = 23;</code>
+     * @return The headerLabel.
+     */
+    @java.lang.Override
+    public java.lang.String getHeaderLabel() {
+      java.lang.Object ref = headerLabel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerLabel_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Header label for the email.
+     * </pre>
+     *
+     * <code>string headerLabel = 23;</code>
+     * @return The bytes for headerLabel.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeaderLabelBytes() {
+      java.lang.Object ref = headerLabel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerLabel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LOCALIZEDHEADERLABEL_FIELD_NUMBER = 24;
+    private com.passkit.grpc.Localization.LocalizedString localizedHeaderLabel_;
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @return Whether the localizedHeaderLabel field is set.
+     */
+    @java.lang.Override
+    public boolean hasLocalizedHeaderLabel() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     * @return The localizedHeaderLabel.
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderLabel() {
+      return localizedHeaderLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderLabel_;
+    }
+    /**
+     * <pre>
+     * Localized header label for the email.
+     * </pre>
+     *
+     * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+     */
+    @java.lang.Override
+    public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderLabelOrBuilder() {
+      return localizedHeaderLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderLabel_;
+    }
+
+    public static final int HEADERVALUE_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object headerValue_ = "";
+    /**
+     * <pre>
+     * Header value for the email.
+     * </pre>
+     *
+     * <code>string headerValue = 25;</code>
+     * @return The headerValue.
+     */
+    @java.lang.Override
+    public java.lang.String getHeaderValue() {
+      java.lang.Object ref = headerValue_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        headerValue_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Header value for the email.
+     * </pre>
+     *
+     * <code>string headerValue = 25;</code>
+     * @return The bytes for headerValue.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHeaderValueBytes() {
+      java.lang.Object ref = headerValue_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        headerValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5233,6 +5434,15 @@ java.lang.String defaultValue) {
       }
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(darkModeContentBackgroundColor_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 22, darkModeContentBackgroundColor_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(headerLabel_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 23, headerLabel_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeMessage(24, getLocalizedHeaderLabel());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(headerValue_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 25, headerValue_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5316,6 +5526,16 @@ java.lang.String defaultValue) {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(darkModeContentBackgroundColor_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(22, darkModeContentBackgroundColor_);
       }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(headerLabel_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(23, headerLabel_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(24, getLocalizedHeaderLabel());
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(headerValue_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(25, headerValue_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5393,6 +5613,15 @@ java.lang.String defaultValue) {
           .equals(other.getDarkModePageBackgroundColor())) return false;
       if (!getDarkModeContentBackgroundColor()
           .equals(other.getDarkModeContentBackgroundColor())) return false;
+      if (!getHeaderLabel()
+          .equals(other.getHeaderLabel())) return false;
+      if (hasLocalizedHeaderLabel() != other.hasLocalizedHeaderLabel()) return false;
+      if (hasLocalizedHeaderLabel()) {
+        if (!getLocalizedHeaderLabel()
+            .equals(other.getLocalizedHeaderLabel())) return false;
+      }
+      if (!getHeaderValue()
+          .equals(other.getHeaderValue())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5460,6 +5689,14 @@ java.lang.String defaultValue) {
       hash = (53 * hash) + getDarkModePageBackgroundColor().hashCode();
       hash = (37 * hash) + DARKMODECONTENTBACKGROUNDCOLOR_FIELD_NUMBER;
       hash = (53 * hash) + getDarkModeContentBackgroundColor().hashCode();
+      hash = (37 * hash) + HEADERLABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getHeaderLabel().hashCode();
+      if (hasLocalizedHeaderLabel()) {
+        hash = (37 * hash) + LOCALIZEDHEADERLABEL_FIELD_NUMBER;
+        hash = (53 * hash) + getLocalizedHeaderLabel().hashCode();
+      }
+      hash = (37 * hash) + HEADERVALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getHeaderValue().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5601,6 +5838,7 @@ java.lang.String defaultValue) {
           getConfigurationFieldBuilder();
           getLocalizedFooterTextContentFieldBuilder();
           getLocalizedFooterHtmlContentFieldBuilder();
+          getLocalizedHeaderLabelFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5653,6 +5891,13 @@ java.lang.String defaultValue) {
         darkModeButtonBackgroundColor_ = "";
         darkModePageBackgroundColor_ = "";
         darkModeContentBackgroundColor_ = "";
+        headerLabel_ = "";
+        localizedHeaderLabel_ = null;
+        if (localizedHeaderLabelBuilder_ != null) {
+          localizedHeaderLabelBuilder_.dispose();
+          localizedHeaderLabelBuilder_ = null;
+        }
+        headerValue_ = "";
         return this;
       }
 
@@ -5771,6 +6016,18 @@ java.lang.String defaultValue) {
         if (((from_bitField0_ & 0x00200000) != 0)) {
           result.darkModeContentBackgroundColor_ = darkModeContentBackgroundColor_;
         }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.headerLabel_ = headerLabel_;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.localizedHeaderLabel_ = localizedHeaderLabelBuilder_ == null
+              ? localizedHeaderLabel_
+              : localizedHeaderLabelBuilder_.build();
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.headerValue_ = headerValue_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -5880,6 +6137,19 @@ java.lang.String defaultValue) {
         if (!other.getDarkModeContentBackgroundColor().isEmpty()) {
           darkModeContentBackgroundColor_ = other.darkModeContentBackgroundColor_;
           bitField0_ |= 0x00200000;
+          onChanged();
+        }
+        if (!other.getHeaderLabel().isEmpty()) {
+          headerLabel_ = other.headerLabel_;
+          bitField0_ |= 0x00400000;
+          onChanged();
+        }
+        if (other.hasLocalizedHeaderLabel()) {
+          mergeLocalizedHeaderLabel(other.getLocalizedHeaderLabel());
+        }
+        if (!other.getHeaderValue().isEmpty()) {
+          headerValue_ = other.headerValue_;
+          bitField0_ |= 0x01000000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6030,6 +6300,23 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00200000;
                 break;
               } // case 178
+              case 186: {
+                headerLabel_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00400000;
+                break;
+              } // case 186
+              case 194: {
+                input.readMessage(
+                    getLocalizedHeaderLabelFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00800000;
+                break;
+              } // case 194
+              case 202: {
+                headerValue_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x01000000;
+                break;
+              } // case 202
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8409,6 +8696,347 @@ java.lang.String defaultValue) {
         checkByteStringIsUtf8(value);
         darkModeContentBackgroundColor_ = value;
         bitField0_ |= 0x00200000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object headerLabel_ = "";
+      /**
+       * <pre>
+       * Header label for the email.
+       * </pre>
+       *
+       * <code>string headerLabel = 23;</code>
+       * @return The headerLabel.
+       */
+      public java.lang.String getHeaderLabel() {
+        java.lang.Object ref = headerLabel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          headerLabel_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header label for the email.
+       * </pre>
+       *
+       * <code>string headerLabel = 23;</code>
+       * @return The bytes for headerLabel.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderLabelBytes() {
+        java.lang.Object ref = headerLabel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          headerLabel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header label for the email.
+       * </pre>
+       *
+       * <code>string headerLabel = 23;</code>
+       * @param value The headerLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderLabel(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        headerLabel_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header label for the email.
+       * </pre>
+       *
+       * <code>string headerLabel = 23;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeaderLabel() {
+        headerLabel_ = getDefaultInstance().getHeaderLabel();
+        bitField0_ = (bitField0_ & ~0x00400000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header label for the email.
+       * </pre>
+       *
+       * <code>string headerLabel = 23;</code>
+       * @param value The bytes for headerLabel to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        headerLabel_ = value;
+        bitField0_ |= 0x00400000;
+        onChanged();
+        return this;
+      }
+
+      private com.passkit.grpc.Localization.LocalizedString localizedHeaderLabel_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> localizedHeaderLabelBuilder_;
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       * @return Whether the localizedHeaderLabel field is set.
+       */
+      public boolean hasLocalizedHeaderLabel() {
+        return ((bitField0_ & 0x00800000) != 0);
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       * @return The localizedHeaderLabel.
+       */
+      public com.passkit.grpc.Localization.LocalizedString getLocalizedHeaderLabel() {
+        if (localizedHeaderLabelBuilder_ == null) {
+          return localizedHeaderLabel_ == null ? com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderLabel_;
+        } else {
+          return localizedHeaderLabelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public Builder setLocalizedHeaderLabel(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedHeaderLabelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          localizedHeaderLabel_ = value;
+        } else {
+          localizedHeaderLabelBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public Builder setLocalizedHeaderLabel(
+          com.passkit.grpc.Localization.LocalizedString.Builder builderForValue) {
+        if (localizedHeaderLabelBuilder_ == null) {
+          localizedHeaderLabel_ = builderForValue.build();
+        } else {
+          localizedHeaderLabelBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public Builder mergeLocalizedHeaderLabel(com.passkit.grpc.Localization.LocalizedString value) {
+        if (localizedHeaderLabelBuilder_ == null) {
+          if (((bitField0_ & 0x00800000) != 0) &&
+            localizedHeaderLabel_ != null &&
+            localizedHeaderLabel_ != com.passkit.grpc.Localization.LocalizedString.getDefaultInstance()) {
+            getLocalizedHeaderLabelBuilder().mergeFrom(value);
+          } else {
+            localizedHeaderLabel_ = value;
+          }
+        } else {
+          localizedHeaderLabelBuilder_.mergeFrom(value);
+        }
+        if (localizedHeaderLabel_ != null) {
+          bitField0_ |= 0x00800000;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public Builder clearLocalizedHeaderLabel() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        localizedHeaderLabel_ = null;
+        if (localizedHeaderLabelBuilder_ != null) {
+          localizedHeaderLabelBuilder_.dispose();
+          localizedHeaderLabelBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedString.Builder getLocalizedHeaderLabelBuilder() {
+        bitField0_ |= 0x00800000;
+        onChanged();
+        return getLocalizedHeaderLabelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      public com.passkit.grpc.Localization.LocalizedStringOrBuilder getLocalizedHeaderLabelOrBuilder() {
+        if (localizedHeaderLabelBuilder_ != null) {
+          return localizedHeaderLabelBuilder_.getMessageOrBuilder();
+        } else {
+          return localizedHeaderLabel_ == null ?
+              com.passkit.grpc.Localization.LocalizedString.getDefaultInstance() : localizedHeaderLabel_;
+        }
+      }
+      /**
+       * <pre>
+       * Localized header label for the email.
+       * </pre>
+       *
+       * <code>.io.LocalizedString localizedHeaderLabel = 24;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder> 
+          getLocalizedHeaderLabelFieldBuilder() {
+        if (localizedHeaderLabelBuilder_ == null) {
+          localizedHeaderLabelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.passkit.grpc.Localization.LocalizedString, com.passkit.grpc.Localization.LocalizedString.Builder, com.passkit.grpc.Localization.LocalizedStringOrBuilder>(
+                  getLocalizedHeaderLabel(),
+                  getParentForChildren(),
+                  isClean());
+          localizedHeaderLabel_ = null;
+        }
+        return localizedHeaderLabelBuilder_;
+      }
+
+      private java.lang.Object headerValue_ = "";
+      /**
+       * <pre>
+       * Header value for the email.
+       * </pre>
+       *
+       * <code>string headerValue = 25;</code>
+       * @return The headerValue.
+       */
+      public java.lang.String getHeaderValue() {
+        java.lang.Object ref = headerValue_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          headerValue_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header value for the email.
+       * </pre>
+       *
+       * <code>string headerValue = 25;</code>
+       * @return The bytes for headerValue.
+       */
+      public com.google.protobuf.ByteString
+          getHeaderValueBytes() {
+        java.lang.Object ref = headerValue_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          headerValue_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Header value for the email.
+       * </pre>
+       *
+       * <code>string headerValue = 25;</code>
+       * @param value The headerValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderValue(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        headerValue_ = value;
+        bitField0_ |= 0x01000000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header value for the email.
+       * </pre>
+       *
+       * <code>string headerValue = 25;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeaderValue() {
+        headerValue_ = getDefaultInstance().getHeaderValue();
+        bitField0_ = (bitField0_ & ~0x01000000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Header value for the email.
+       * </pre>
+       *
+       * <code>string headerValue = 25;</code>
+       * @param value The bytes for headerValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeaderValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        headerValue_ = value;
+        bitField0_ |= 0x01000000;
         onChanged();
         return this;
       }
@@ -16387,7 +17015,7 @@ java.lang.String defaultValue) {
       "nSettings\0225\n\024distributionChannels\030\001 \003(\0162" +
       "\027.io.DistributionChannel\022\'\n\014welcomeEmail" +
       "\030\002 \001(\0132\021.io.EmailTemplate\022#\n\nwelcomeSms\030" +
-      "\003 \001(\0132\017.io.SmsTemplate\"\231\006\n\rEmailTemplate" +
+      "\003 \001(\0132\017.io.SmsTemplate\"\366\006\n\rEmailTemplate" +
       "\022\017\n\007subject\030\001 \001(\t\022-\n\020localizedSubject\030\002 " +
       "\001(\0132\023.io.LocalizedString\022\027\n\017bodyTextCont" +
       "ent\030\003 \001(\t\0225\n\030localizedBodyTextContent\030\004 " +
@@ -16407,42 +17035,45 @@ java.lang.String defaultValue) {
       "eButtonTextColor\030\023 \001(\t\022%\n\035darkModeButton" +
       "BackgroundColor\030\024 \001(\t\022#\n\033darkModePageBac" +
       "kgroundColor\030\025 \001(\t\022&\n\036darkModeContentBac" +
-      "kgroundColor\030\026 \001(\t\"z\n\022EmailConfiguration" +
-      "\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remailFromName\030\002 \001" +
-      "(\t\022#\n\033EmailFromVerifiedForSending\030\003 \001(\010\022" +
-      "\025\n\ruseCustomHtml\030\004 \001(\010\"a\n\013SmsTemplate\022\026\n" +
-      "\007content\030\001 \001(\tB\005\222A\002xF\0224\n\020localizedConten" +
-      "t\030\002 \001(\0132\023.io.LocalizedStringB\005\222A\002xFJ\004\010\003\020" +
-      "\004\"\256\002\n\rEnrolmentUrls\022\017\n\007pageUrl\030\001 \001(\t\022\021\n\t" +
-      "qrCodeUrl\030\002 \001(\t\022C\n\021tierEnrolmentUrls\030\003 \003" +
-      "(\0132(.io.EnrolmentUrls.TierEnrolmentUrlsE" +
-      "ntry\022A\n\020tierEnrolmentQRs\030\004 \003(\0132\'.io.Enro" +
-      "lmentUrls.TierEnrolmentQRsEntry\0328\n\026TierE" +
-      "nrolmentUrlsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\t:\0028\001\0327\n\025TierEnrolmentQRsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n\024DataCollec" +
-      "tionFields\022\'\n\006fields\030\001 \003(\0132\027.io.DataColl" +
-      "ectionField\"\347\002\n\023DataCollectionField\022\022\n\nu" +
-      "niqueName\030\001 \001(\t\022 \n\tfieldType\030\002 \001(\0162\r.io." +
-      "FieldType\022\022\n\nisRequired\030\003 \001(\010\022\r\n\005label\030\004" +
-      " \001(\t\022+\n\016localizedLabel\030\005 \001(\0132\023.io.Locali" +
-      "zedString\022\036\n\010dataType\030\006 \001(\0162\014.io.DataTyp" +
-      "e\022\024\n\014defaultValue\030\007 \001(\t\0222\n\025localizedDefa" +
-      "ultValue\030\010 \001(\0132\023.io.LocalizedString\022\022\n\nv" +
-      "alidation\030\t \001(\t\022\027\n\017userCanSetValue\030\n \001(\010" +
-      "\022\024\n\014currencyCode\030\013 \001(\t\022\035\n\025defaultTelCoun" +
-      "tryCode\030\014 \001(\t\"H\n\031SmartPassCsvUploadReque" +
-      "st\022\027\n\017distributionUrl\030\001 \001(\t\022\022\n\ncsvConten" +
-      "t\030\002 \001(\t\"`\n\025ImportProtocolRequest\022\022\n\ncsvC" +
-      "ontent\030\001 \001(\t\022\017\n\007classId\030\002 \001(\t\022\"\n\010protoco" +
-      "l\030\003 \001(\0162\020.io.PassProtocol*N\n\023Distributio" +
-      "nChannel\022\023\n\017NO_DISTRIBUTION\020\000\022\021\n\rCHANNEL" +
-      "_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*x\n\024EmailTempla" +
-      "teOptions\022\027\n\023EMAIL_TEMP_OPT_NONE\020\000\022\036\n\032EM" +
-      "AIL_TEMP_OPT_HIDE_EXT_ID\020\001\022!\n\035EMAIL_TEMP" +
-      "_OPT_HIDE_FULL_NAME\020\002\"\004\010\004\020\004BG\n\020com.passk" +
-      "it.grpcZ$stash.passkit.com/io/model/sdk/" +
-      "go/io\252\002\014PassKit.Grpcb\006proto3"
+      "kgroundColor\030\026 \001(\t\022\023\n\013headerLabel\030\027 \001(\t\022" +
+      "1\n\024localizedHeaderLabel\030\030 \001(\0132\023.io.Local" +
+      "izedString\022\023\n\013headerValue\030\031 \001(\t\"z\n\022Email" +
+      "Configuration\022\021\n\temailFrom\030\001 \001(\t\022\025\n\remai" +
+      "lFromName\030\002 \001(\t\022#\n\033EmailFromVerifiedForS" +
+      "ending\030\003 \001(\010\022\025\n\ruseCustomHtml\030\004 \001(\010\"a\n\013S" +
+      "msTemplate\022\026\n\007content\030\001 \001(\tB\005\222A\002xF\0224\n\020lo" +
+      "calizedContent\030\002 \001(\0132\023.io.LocalizedStrin" +
+      "gB\005\222A\002xFJ\004\010\003\020\004\"\256\002\n\rEnrolmentUrls\022\017\n\007page" +
+      "Url\030\001 \001(\t\022\021\n\tqrCodeUrl\030\002 \001(\t\022C\n\021tierEnro" +
+      "lmentUrls\030\003 \003(\0132(.io.EnrolmentUrls.TierE" +
+      "nrolmentUrlsEntry\022A\n\020tierEnrolmentQRs\030\004 " +
+      "\003(\0132\'.io.EnrolmentUrls.TierEnrolmentQRsE" +
+      "ntry\0328\n\026TierEnrolmentUrlsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025TierEnrolmentQ" +
+      "RsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "?\n\024DataCollectionFields\022\'\n\006fields\030\001 \003(\0132" +
+      "\027.io.DataCollectionField\"\347\002\n\023DataCollect" +
+      "ionField\022\022\n\nuniqueName\030\001 \001(\t\022 \n\tfieldTyp" +
+      "e\030\002 \001(\0162\r.io.FieldType\022\022\n\nisRequired\030\003 \001" +
+      "(\010\022\r\n\005label\030\004 \001(\t\022+\n\016localizedLabel\030\005 \001(" +
+      "\0132\023.io.LocalizedString\022\036\n\010dataType\030\006 \001(\016" +
+      "2\014.io.DataType\022\024\n\014defaultValue\030\007 \001(\t\0222\n\025" +
+      "localizedDefaultValue\030\010 \001(\0132\023.io.Localiz" +
+      "edString\022\022\n\nvalidation\030\t \001(\t\022\027\n\017userCanS" +
+      "etValue\030\n \001(\010\022\024\n\014currencyCode\030\013 \001(\t\022\035\n\025d" +
+      "efaultTelCountryCode\030\014 \001(\t\"H\n\031SmartPassC" +
+      "svUploadRequest\022\027\n\017distributionUrl\030\001 \001(\t" +
+      "\022\022\n\ncsvContent\030\002 \001(\t\"`\n\025ImportProtocolRe" +
+      "quest\022\022\n\ncsvContent\030\001 \001(\t\022\017\n\007classId\030\002 \001" +
+      "(\t\022\"\n\010protocol\030\003 \001(\0162\020.io.PassProtocol*N" +
+      "\n\023DistributionChannel\022\023\n\017NO_DISTRIBUTION" +
+      "\020\000\022\021\n\rCHANNEL_EMAIL\020\001\022\017\n\013CHANNEL_SMS\020\002*x" +
+      "\n\024EmailTemplateOptions\022\027\n\023EMAIL_TEMP_OPT" +
+      "_NONE\020\000\022\036\n\032EMAIL_TEMP_OPT_HIDE_EXT_ID\020\001\022" +
+      "!\n\035EMAIL_TEMP_OPT_HIDE_FULL_NAME\020\002\"\004\010\004\020\004" +
+      "BG\n\020com.passkit.grpcZ$stash.passkit.com/" +
+      "io/model/sdk/go/io\252\002\014PassKit.Grpcb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16482,7 +17113,7 @@ java.lang.String defaultValue) {
     internal_static_io_EmailTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_io_EmailTemplate_descriptor,
-        new java.lang.String[] { "Subject", "LocalizedSubject", "BodyTextContent", "LocalizedBodyTextContent", "BodyHtmlContent", "LocalizedBodyHtmlContent", "Configuration", "ButtonText", "ButtonTextColor", "ButtonBackgroundColor", "ButtonBorderRadius", "FooterTextContent", "LocalizedFooterTextContent", "FooterHtmlContent", "LocalizedFooterHtmlContent", "MessageBackgroundColor", "PageBackgroundColor", "TemplateOptions", "DarkModeButtonTextColor", "DarkModeButtonBackgroundColor", "DarkModePageBackgroundColor", "DarkModeContentBackgroundColor", });
+        new java.lang.String[] { "Subject", "LocalizedSubject", "BodyTextContent", "LocalizedBodyTextContent", "BodyHtmlContent", "LocalizedBodyHtmlContent", "Configuration", "ButtonText", "ButtonTextColor", "ButtonBackgroundColor", "ButtonBorderRadius", "FooterTextContent", "LocalizedFooterTextContent", "FooterHtmlContent", "LocalizedFooterHtmlContent", "MessageBackgroundColor", "PageBackgroundColor", "TemplateOptions", "DarkModeButtonTextColor", "DarkModeButtonBackgroundColor", "DarkModePageBackgroundColor", "DarkModeContentBackgroundColor", "HeaderLabel", "LocalizedHeaderLabel", "HeaderValue", });
     internal_static_io_EmailConfiguration_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_io_EmailConfiguration_fieldAccessorTable = new

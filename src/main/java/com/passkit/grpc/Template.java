@@ -4007,6 +4007,132 @@ public final class Template {
     // @@protoc_insertion_point(enum_scope:io.PersonalizedDataField)
   }
 
+  /**
+   * Protobuf enum {@code io.ScreenshotEligibility}
+   */
+  public enum ScreenshotEligibility
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SCREENSHOT_ELIGIBILITY_UNSPECIFIED = 0;</code>
+     */
+    SCREENSHOT_ELIGIBILITY_UNSPECIFIED(0),
+    /**
+     * <code>ELIGIBLE = 1;</code>
+     */
+    ELIGIBLE(1),
+    /**
+     * <code>INELIGIBLE = 2;</code>
+     */
+    INELIGIBLE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 0,
+        /* suffix= */ "",
+        ScreenshotEligibility.class.getName());
+    }
+    /**
+     * <code>SCREENSHOT_ELIGIBILITY_UNSPECIFIED = 0;</code>
+     */
+    public static final int SCREENSHOT_ELIGIBILITY_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>ELIGIBLE = 1;</code>
+     */
+    public static final int ELIGIBLE_VALUE = 1;
+    /**
+     * <code>INELIGIBLE = 2;</code>
+     */
+    public static final int INELIGIBLE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ScreenshotEligibility valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ScreenshotEligibility forNumber(int value) {
+      switch (value) {
+        case 0: return SCREENSHOT_ELIGIBILITY_UNSPECIFIED;
+        case 1: return ELIGIBLE;
+        case 2: return INELIGIBLE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ScreenshotEligibility>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ScreenshotEligibility> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ScreenshotEligibility>() {
+            public ScreenshotEligibility findValueByNumber(int number) {
+              return ScreenshotEligibility.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.passkit.grpc.Template.getDescriptor().getEnumTypes().get(17);
+    }
+
+    private static final ScreenshotEligibility[] VALUES = values();
+
+    public static ScreenshotEligibility valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ScreenshotEligibility(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:io.ScreenshotEligibility)
+  }
+
   public interface SelectOptionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.SelectOption)
       com.google.protobuf.MessageOrBuilder {
@@ -18123,6 +18249,25 @@ public final class Template {
      * @return The enum numeric value on the wire of languageOverrides at the given index.
      */
     int getLanguageOverridesValue(int index);
+
+    /**
+     * <pre>
+     * Specifies if the pass holder can take a screenshot of the pass.
+     * </pre>
+     *
+     * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @return The enum numeric value on the wire for screenshotEligibility.
+     */
+    int getScreenshotEligibilityValue();
+    /**
+     * <pre>
+     * Specifies if the pass holder can take a screenshot of the pass.
+     * </pre>
+     *
+     * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @return The screenshotEligibility.
+     */
+    com.passkit.grpc.Template.ScreenshotEligibility getScreenshotEligibility();
   }
   /**
    * <pre>
@@ -18154,6 +18299,7 @@ public final class Template {
       classTemplateInfo_ = "";
       backgroundColor_ = "";
       languageOverrides_ = emptyIntList();
+      screenshotEligibility_ = 0;
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -18482,6 +18628,32 @@ public final class Template {
     }
     private int languageOverridesMemoizedSerializedSize;
 
+    public static final int SCREENSHOTELIGIBILITY_FIELD_NUMBER = 8;
+    private int screenshotEligibility_ = 0;
+    /**
+     * <pre>
+     * Specifies if the pass holder can take a screenshot of the pass.
+     * </pre>
+     *
+     * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @return The enum numeric value on the wire for screenshotEligibility.
+     */
+    @java.lang.Override public int getScreenshotEligibilityValue() {
+      return screenshotEligibility_;
+    }
+    /**
+     * <pre>
+     * Specifies if the pass holder can take a screenshot of the pass.
+     * </pre>
+     *
+     * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+     * @return The screenshotEligibility.
+     */
+    @java.lang.Override public com.passkit.grpc.Template.ScreenshotEligibility getScreenshotEligibility() {
+      com.passkit.grpc.Template.ScreenshotEligibility result = com.passkit.grpc.Template.ScreenshotEligibility.forNumber(screenshotEligibility_);
+      return result == null ? com.passkit.grpc.Template.ScreenshotEligibility.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -18521,6 +18693,9 @@ public final class Template {
       }
       for (int i = 0; i < languageOverrides_.size(); i++) {
         output.writeEnumNoTag(languageOverrides_.getInt(i));
+      }
+      if (screenshotEligibility_ != com.passkit.grpc.Template.ScreenshotEligibility.SCREENSHOT_ELIGIBILITY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, screenshotEligibility_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -18565,6 +18740,10 @@ public final class Template {
             .computeUInt32SizeNoTag(dataSize);
         }languageOverridesMemoizedSerializedSize = dataSize;
       }
+      if (screenshotEligibility_ != com.passkit.grpc.Template.ScreenshotEligibility.SCREENSHOT_ELIGIBILITY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, screenshotEligibility_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -18601,6 +18780,7 @@ public final class Template {
       if (!getBackgroundColor()
           .equals(other.getBackgroundColor())) return false;
       if (!languageOverrides_.equals(other.languageOverrides_)) return false;
+      if (screenshotEligibility_ != other.screenshotEligibility_) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -18634,6 +18814,8 @@ public final class Template {
         hash = (37 * hash) + LANGUAGEOVERRIDES_FIELD_NUMBER;
         hash = (53 * hash) + languageOverrides_.hashCode();
       }
+      hash = (37 * hash) + SCREENSHOTELIGIBILITY_FIELD_NUMBER;
+      hash = (53 * hash) + screenshotEligibility_;
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -18797,6 +18979,7 @@ public final class Template {
         backgroundColor_ = "";
         languageOverrides_ = emptyIntList();
         bitField0_ = (bitField0_ & ~0x00000040);
+        screenshotEligibility_ = 0;
         return this;
       }
 
@@ -18867,6 +19050,9 @@ public final class Template {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.backgroundColor_ = backgroundColor_;
         }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.screenshotEligibility_ = screenshotEligibility_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -18913,6 +19099,9 @@ public final class Template {
             languageOverrides_.addAll(other.languageOverrides_);
           }
           onChanged();
+        }
+        if (other.screenshotEligibility_ != 0) {
+          setScreenshotEligibilityValue(other.getScreenshotEligibilityValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -18993,6 +19182,11 @@ public final class Template {
                 input.popLimit(oldLimit);
                 break;
               } // case 58
+              case 64: {
+                screenshotEligibility_ = input.readEnum();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -19922,6 +20116,79 @@ public final class Template {
         for (int value : values) {
           languageOverrides_.addInt(value);
         }
+        onChanged();
+        return this;
+      }
+
+      private int screenshotEligibility_ = 0;
+      /**
+       * <pre>
+       * Specifies if the pass holder can take a screenshot of the pass.
+       * </pre>
+       *
+       * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+       * @return The enum numeric value on the wire for screenshotEligibility.
+       */
+      @java.lang.Override public int getScreenshotEligibilityValue() {
+        return screenshotEligibility_;
+      }
+      /**
+       * <pre>
+       * Specifies if the pass holder can take a screenshot of the pass.
+       * </pre>
+       *
+       * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+       * @param value The enum numeric value on the wire for screenshotEligibility to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScreenshotEligibilityValue(int value) {
+        screenshotEligibility_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies if the pass holder can take a screenshot of the pass.
+       * </pre>
+       *
+       * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+       * @return The screenshotEligibility.
+       */
+      @java.lang.Override
+      public com.passkit.grpc.Template.ScreenshotEligibility getScreenshotEligibility() {
+        com.passkit.grpc.Template.ScreenshotEligibility result = com.passkit.grpc.Template.ScreenshotEligibility.forNumber(screenshotEligibility_);
+        return result == null ? com.passkit.grpc.Template.ScreenshotEligibility.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies if the pass holder can take a screenshot of the pass.
+       * </pre>
+       *
+       * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+       * @param value The screenshotEligibility to set.
+       * @return This builder for chaining.
+       */
+      public Builder setScreenshotEligibility(com.passkit.grpc.Template.ScreenshotEligibility value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000080;
+        screenshotEligibility_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies if the pass holder can take a screenshot of the pass.
+       * </pre>
+       *
+       * <code>.io.ScreenshotEligibility screenshotEligibility = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearScreenshotEligibility() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        screenshotEligibility_ = 0;
         onChanged();
         return this;
       }
@@ -52735,289 +53002,293 @@ com.passkit.grpc.Localization.LocalizedString defaultValue) {
       "PersonalizationDetails\022\023\n\013description\030\001 " +
       "\001(\t\022>\n\033requiredPersonalizationData\030\002 \003(\016" +
       "2\031.io.PersonalizedDataField\022\032\n\022termsAndC" +
-      "onditions\030\003 \001(\t\"\207\002\n\021GooglePaySettings\022\'\n" +
+      "onditions\030\003 \001(\t\"\301\002\n\021GooglePaySettings\022\'\n" +
       "\010passType\030\001 \001(\0162\025.io.GooglePayPassType\022$" +
       "\n\nandroidApp\030\002 \001(\0132\020.io.GooglePayApp\022 \n\006" +
       "iosApp\030\003 \001(\0132\020.io.GooglePayApp\022 \n\006webApp" +
       "\030\004 \001(\0132\020.io.GooglePayApp\022\031\n\021classTemplat" +
       "eInfo\030\005 \001(\t\022\027\n\017backgroundColor\030\006 \001(\t\022+\n\021" +
       "languageOverrides\030\007 \003(\0162\020.io.LanguageCod" +
-      "e\"\366\001\n\014GooglePayApp\022\024\n\003url\030\001 \001(\0132\007.io.Url" +
-      "\022\r\n\005title\030\002 \001(\t\022+\n\016localizedTitle\030\003 \001(\0132" +
-      "\023.io.LocalizedString\022\023\n\013description\030\004 \001(" +
-      "\t\0221\n\024localizedDescription\030\005 \001(\0132\023.io.Loc" +
-      "alizedString\022\026\n\016urlDescription\030\006 \001(\t\0224\n\027" +
-      "localizedUrlDescription\030\007 \001(\0132\023.io.Local" +
-      "izedString\"m\n\004Data\022!\n\ndataFields\030\001 \003(\0132\r" +
-      ".io.DataField\022B\n\032dataCollectionPageSetti" +
-      "ngs\030\002 \001(\0132\036.io.DataCollectionPageSetting" +
-      "s\"\344\002\n\023LandingPageSettings\0225\n\033landingLoca" +
-      "lizationOverride\030\001 \003(\0162\020.io.LanguageCode" +
-      "\0221\n\035preferThirdPartyAndroidWallet\030\002 \001(\0162" +
-      "\n.io.Toggle\022:\n\026preferredAndroidWallet\030\003 " +
-      "\001(\0162\032.io.SupportedAndroidWallet\022S\n\026local" +
-      "izedTextOverrides\030\004 \003(\01323.io.LandingPage" +
-      "Settings.LocalizedTextOverridesEntry\032R\n\033" +
-      "LocalizedTextOverridesEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\"\n\005value\030\002 \001(\0132\023.io.LocalizedString:\0028\001" +
-      "\"\334\005\n\032DataCollectionPageSettings\022\r\n\005title" +
-      "\030\001 \001(\t\022+\n\016localizedTitle\030\002 \001(\0132\023.io.Loca" +
-      "lizedString\022\023\n\013description\030\003 \001(\t\0221\n\024loca" +
-      "lizedDescription\030\004 \001(\0132\023.io.LocalizedStr" +
-      "ing\022\030\n\020submitButtonText\030\005 \001(\t\0226\n\031localiz" +
-      "edSubmitButtonText\030\006 \001(\0132\023.io.LocalizedS" +
-      "tring\022\023\n\013loadingText\030\007 \001(\t\0221\n\024localizedL" +
-      "oadingText\030\010 \001(\0132\023.io.LocalizedString\022\024\n" +
-      "\014thankYouText\030\t \001(\t\0222\n\025localizedThankYou" +
-      "Text\030\n \001(\0132\023.io.LocalizedString\022\033\n\023pageB" +
-      "ackgroundColor\030\013 \001(\t\0229\n\034localizedPageBac" +
-      "kgroundColor\030\014 \001(\0132\023.io.LocalizedString\022" +
-      ".\n\020trackingSettings\030\r \001(\0132\024.io.TrackingS" +
-      "ettings\022\035\n\025submitButtonTextColor\030\016 \001(\t\022#" +
-      "\n\033submitButtonBackgroundColor\030\017 \001(\t\022\022\n\nf" +
-      "ooterText\030\020 \001(\t\0220\n\023localizedFooterText\030\021" +
-      " \001(\0132\023.io.LocalizedString\022\024\n\014cssOverride" +
-      "s\030\022 \001(\t\022.\n\020passwordSettings\030\023 \001(\0132\024.io.P" +
-      "asswordSettings\"\312\003\n\020PasswordSettings\022&\n\014" +
-      "passwordType\030\001 \001(\0162\020.io.PasswordType\022\020\n\010" +
-      "password\030\002 \001(\t\022\026\n\016inputLabelText\030\003 \001(\t\0224" +
-      "\n\027localizedInputLabelText\030\004 \001(\0132\023.io.Loc" +
-      "alizedString\022\021\n\terrorText\030\005 \001(\t\022/\n\022local" +
-      "izedErrorText\030\006 \001(\0132\023.io.LocalizedString" +
-      "\022\022\n\nheaderText\030\007 \001(\t\0220\n\023localizedHeaderT" +
-      "ext\030\010 \001(\0132\023.io.LocalizedString\022\022\n\nbutton" +
-      "Text\030\t \001(\t\0220\n\023localizedButtonText\030\n \001(\0132" +
-      "\023.io.LocalizedString\022\021\n\ttitleText\030\013 \001(\t\022" +
-      "/\n\022localizedTitleText\030\014 \001(\0132\023.io.Localiz" +
-      "edString\022\032\n\022autoLogoutOnSubmit\030\r \001(\010\"\363\001\n" +
-      "\024PassTemplateResponse\022\"\n\010template\030\001 \001(\0132" +
-      "\020.io.PassTemplate\022\014\n\004Name\030\002 \001(\t\022\025\n\rowner" +
-      "Username\030\003 \001(\t\022\"\n\010protocol\030\004 \001(\0162\020.io.Pa" +
-      "ssProtocol\022\020\n\010revision\030\005 \001(\r\022-\n\tcreatedA" +
-      "t\030\006 \001(\0132\032.google.protobuf.Timestamp\022-\n\tu" +
-      "pdatedAt\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\"\224\001\n\006Colors\022\027\n\017backgroundColor\030\001 \001(\t\022\022" +
-      "\n\nlabelColor\030\002 \001(\t\022\021\n\ttextColor\030\003 \001(\t\022\022\n" +
-      "\nstripColor\030\004 \001(\t\022\027\n\017foregroundColor\030\005 \001" +
-      "(\t\022\035\n\025footerBackgroundColor\030\006 \001(\t\".\n\017Cop" +
-      "yObjectInput\022\n\n\002id\030\001 \001(\t\022\017\n\007newName\030\002 \001(" +
-      "\t\"y\n\003NFC\022\017\n\007enabled\030\001 \001(\010\022\025\n\rcertificate" +
-      "Id\030\002 \001(\t\022\017\n\007payload\030\003 \001(\t\022\023\n\013iCloudBound" +
-      "\030\004 \001(\010\022$\n\013bindingInfo\030\005 \001(\0132\017.io.Binding" +
-      "Info\"<\n\013BindingInfo\022\027\n\017displayableName\030\001" +
-      " \001(\t\022\024\n\014learnMoreUrl\030\002 \001(\t\"\357\004\n\tDataField" +
-      "\022\022\n\nuniqueName\030\001 \001(\t\022\022\n\ntemplateId\030\002 \001(\t" +
-      "\022 \n\tfieldType\030\003 \001(\0162\r.io.FieldType\022\022\n\nis" +
-      "Required\030\004 \001(\010\022\r\n\005label\030\005 \001(\t\022+\n\016localiz" +
-      "edLabel\030\006 \001(\0132\023.io.LocalizedString\022\036\n\010da" +
-      "taType\030\007 \001(\0162\014.io.DataType\022\024\n\014defaultVal" +
-      "ue\030\010 \001(\t\0222\n\025localizedDefaultValue\030\t \001(\0132" +
-      "\023.io.LocalizedString\022\022\n\nvalidation\030\n \001(\t" +
-      "\022\027\n\017userCanSetValue\030\013 \001(\010\022\024\n\014currencyCod" +
-      "e\030\014 \001(\t\022H\n\035appleWalletFieldRenderOptions" +
-      "\030\r \001(\0132!.io.AppleWalletFieldRenderOption" +
-      "s\022N\n dataCollectionFieldRenderOptions\030\016 " +
-      "\001(\0132$.io.DataCollectionFieldRenderOption" +
-      "s\022\034\n\005usage\030\017 \003(\0162\r.io.UsageType\022D\n\033googl" +
-      "ePayFieldRenderOptions\030\020 \001(\0132\037.io.Google" +
-      "PayFieldRenderOptions\022\035\n\025defaultTelCount" +
-      "ryCode\030\021 \001(\t\"\230\003\n\035AppleWalletFieldRenderO" +
-      "ptions\022(\n\rtextAlignment\030\002 \001(\0162\021.io.TextA" +
-      "lignment\022.\n\020positionSettings\030\003 \001(\0132\024.io." +
-      "PositionSettings\022\025\n\rchangeMessage\030\004 \001(\t\022" +
-      "3\n\026localizedChangeMessage\030\005 \001(\0132\023.io.Loc" +
-      "alizedString\022$\n\tdateStyle\030\006 \001(\0162\021.io.Dat" +
-      "eTimeStyle\022$\n\ttimeStyle\030\007 \001(\0162\021.io.DateT" +
-      "imeStyle\022$\n\013numberStyle\030\010 \001(\0162\017.io.Numbe" +
-      "rStyle\022/\n\025suppressLinkDetection\030\t \003(\0162\020." +
-      "io.LinkDetector\022\026\n\016ignoreTimezone\030\n \001(\010\022" +
-      "\026\n\016isRelativeDate\030\013 \001(\010\"h\n\033GooglePayFiel" +
-      "dRenderOptions\022-\n\021googlePayPosition\030\001 \001(" +
-      "\0162\022.io.GooglePayField\022\032\n\022textModulePrior" +
-      "ity\030\002 \001(\r\"G\n\020PositionSettings\022!\n\007section" +
-      "\030\001 \001(\0162\020.io.FieldSection\022\020\n\010priority\030\002 \001" +
-      "(\r\"\237\003\n DataCollectionFieldRenderOptions\022" +
-      "\020\n\010helpText\030\001 \001(\t\022.\n\021localizedHelpText\030\002" +
-      " \001(\0132\023.io.LocalizedString\022\024\n\014displayOrde" +
-      "r\030\003 \001(\005\022\023\n\013placeholder\030\005 \001(\t\022\'\n\rselectOp" +
-      "tions\030\006 \003(\0132\020.io.SelectOption\0221\n\024localiz" +
-      "edPlaceholder\030\007 \001(\0132\023.io.LocalizedString" +
-      "\022\024\n\014autocomplete\030\010 \001(\010\0226\n\024addressRenderO" +
-      "ptions\030\t \001(\0132\030.io.AddressRenderOptions\022 " +
-      "\n\030localizedYearPlaceholder\030\n \001(\t\022!\n\031loca" +
-      "lizedMonthPlaceholder\030\013 \001(\t\022\037\n\027localized" +
-      "DayPlaceholder\030\014 \001(\t\"\242\006\n\024AddressRenderOp" +
-      "tions\022\025\n\raddress1Label\030\001 \001(\t\022\025\n\raddress2" +
-      "Label\030\002 \001(\t\022\021\n\tcityLabel\030\003 \001(\t\022\024\n\014countr" +
-      "yLabel\030\004 \001(\t\022\020\n\010zipLabel\030\005 \001(\t\022\033\n\023addres" +
-      "s1Placeholder\030\006 \001(\t\022\033\n\023address2Placehold" +
-      "er\030\007 \001(\t\022\027\n\017cityPlaceholder\030\010 \001(\t\022\032\n\022cou" +
-      "ntryPlaceholder\030\t \001(\t\022\026\n\016zipPlaceholder\030" +
-      "\n \001(\t\0223\n\026localizedAddress1Label\030\013 \001(\0132\023." +
-      "io.LocalizedString\0223\n\026localizedAddress2L" +
-      "abel\030\014 \001(\0132\023.io.LocalizedString\022/\n\022local" +
-      "izedCityLabel\030\r \001(\0132\023.io.LocalizedString" +
-      "\0222\n\025localizedCountryLabel\030\016 \001(\0132\023.io.Loc" +
-      "alizedString\022.\n\021localizedZipLabel\030\017 \001(\0132" +
-      "\023.io.LocalizedString\0229\n\034localizedAddress" +
-      "1Placeholder\030\020 \001(\0132\023.io.LocalizedString\022" +
-      "9\n\034localizedAddress2Placeholder\030\021 \001(\0132\023." +
-      "io.LocalizedString\0225\n\030localizedCityPlace" +
-      "holder\030\022 \001(\0132\023.io.LocalizedString\0228\n\033loc" +
-      "alizedCountryPlaceholder\030\023 \001(\0132\023.io.Loca" +
-      "lizedString\0224\n\027localizedZipPlaceholder\030\024" +
-      " \001(\0132\023.io.LocalizedString\"\267\001\n\007Sharing\022\027\n" +
-      "\017prohibitSharing\030\001 \001(\010\022\013\n\003url\030\002 \001(\t\022\023\n\013d" +
-      "escription\030\003 \001(\t\0221\n\024localizedDescription" +
-      "\030\004 \001(\0132\023.io.LocalizedString:>\222A;\n9*\007Shar" +
-      "ing2.Controls the sharing settings for t" +
-      "he program.\"N\n\026DefaultTemplateRequest\022\"\n" +
-      "\010protocol\030\001 \001(\0162\020.io.PassProtocol\022\020\n\010rev" +
-      "ision\030\002 \001(\r*v\n\rApplePassType\022\027\n\023APPLE_NO" +
-      "T_SUPPORTED\020\000\022\021\n\rBOARDING_PASS\020\001\022\n\n\006COUP" +
-      "ON\020\002\022\020\n\014EVENT_TICKET\020\003\022\013\n\007GENERIC\020\004\022\016\n\nS" +
-      "TORE_CARD\020\005*w\n\021GooglePayPassType\022\034\n\030GOOG" +
-      "LE_PAY_NOT_SUPPORTED\020\000\022\t\n\005EVENT\020\001\022\n\n\006FLI" +
-      "GHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOYALTY\020\004\022\t\n\005OFFER\020\005\022" +
-      "\013\n\007TRANSIT\020\006*`\n\013BarcodeType\022\033\n\027BARCODE_T" +
-      "YPE_DO_NOT_USE\020\000\022\006\n\002QR\020\001\022\t\n\005AZTEC\020\002\022\n\n\006P" +
-      "DF417\020\003\022\013\n\007CODE128\020\004\022\010\n\004NONE\020\005*q\n\tFieldT" +
-      "ype\022\023\n\017FIELD_TYPE_NONE\020\000\022\010\n\004META\020\001\022\007\n\003PI" +
-      "I\020\002\022\024\n\020UNIVERSAL_FIELDS\020\003\022\023\n\017PROTOCOL_FI" +
-      "ELDS\020\004\022\021\n\rCUSTOM_FIELDS\020\005*\276\001\n\016StandardFi" +
-      "elds\022\036\n\032STANDARD_FIELDS_DO_NOT_USE\020\000\022\025\n\021" +
-      "STANDARD_MESSAGES\020\001\022\022\n\016STANDARD_LEGAL\020\002\022" +
-      "\030\n\024STANDARD_EXPIRY_DATE\020\003\022\031\n\025STANDARD_US" +
-      "EFUL_LINKS\020\004\022\024\n\020STANDARD_OPT_OUT\020\005\022\026\n\022ST" +
-      "ANDARD_LOCATIONS\020\006*\\\n\rTextAlignment\022\035\n\031T" +
-      "EXT_ALIGNMENT_DO_NOT_USE\020\000\022\010\n\004LEFT\020\001\022\n\n\006" +
-      "CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n\007NATURAL\020\004*\232\001\n\rDat" +
-      "eTimeStyle\022\036\n\032DATE_TIME_STYLE_DO_NOT_USE" +
-      "\020\000\022\031\n\025DATE_TIME_STYLE_SHORT\020\001\022\032\n\026DATE_TI" +
-      "ME_STYLE_MEDIUM\020\002\022\030\n\024DATE_TIME_STYLE_LON" +
-      "G\020\003\022\030\n\024DATE_TIME_STYLE_FULL\020\004*\217\001\n\014LinkDe" +
-      "tector\022\034\n\030LINK_DETECTOR_DO_NOT_USE\020\000\022\031\n\025" +
-      "LINK_DETECTOR_ADDRESS\020\001\022\026\n\022LINK_DETECTOR" +
-      "_DATE\020\002\022\025\n\021LINK_DETECTOR_URL\020\003\022\027\n\023LINK_D" +
-      "ETECTOR_PHONE\020\004*\223\001\n\013NumberStyle\022\033\n\027NUMBE" +
-      "R_STYLE_DO_NOT_USE\020\000\022\030\n\024NUMBER_STYLE_DEC" +
-      "IMAL\020\001\022\030\n\024NUMBER_STYLE_PERCENT\020\002\022\033\n\027NUMB" +
-      "ER_STYLE_SCIENTIFIC\020\003\022\026\n\022NUMBER_STYLE_SP" +
-      "ELL\020\004*\266\001\n\013TransitType\022\033\n\027TRANSIT_TYPE_DO" +
-      "_NOT_USE\020\000\022\024\n\020TRANSIT_TYPE_AIR\020\001\022\025\n\021TRAN" +
-      "SIT_TYPE_BOAT\020\002\022\024\n\020TRANSIT_TYPE_BUS\020\003\022\030\n" +
-      "\024TRANSIT_TYPE_GENERIC\020\004\022\026\n\022TRANSIT_TYPE_" +
-      "TRAIN\020\005\022\025\n\021TRANSIT_TYPE_TRAM\020\006*\210\002\n\010DataT" +
-      "ype\022\022\n\016DATA_TYPE_NONE\020\000\022\010\n\004TEXT\020\001\022\r\n\tTEX" +
-      "T_LONG\020\002\022\021\n\rDATE_YYYYMMDD\020\003\022\017\n\013DATE_YYYY" +
-      "MM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n\004TIME\020\006\022\r\n\tDATE_TI" +
-      "ME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBER\020\t\022\t\n\005EMAIL\020\n\022\007\n\003" +
-      "URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDRESS\020\r\022\t\n\005IMAGE\020\017\022\014" +
-      "\n\010CURRENCY\020\020\022\013\n\007BOOLEAN\020\021\022\013\n\007OPTIONS\020\022\022\013" +
-      "\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\tDataStyle\022\014\n\010NO_ST" +
-      "YLE\020\000\022\016\n\nDATE_SHORT\020\001\022\017\n\013DATE_MEDIUM\020\002\022\r" +
-      "\n\tDATE_LONG\020\003\022\r\n\tDATE_FULL\020\004\022\016\n\nTIME_SHO" +
-      "RT\020\005\022\017\n\013TIME_MEDIUM\020\006\022\r\n\tTIME_LONG\020\007\022\r\n\t" +
-      "TIME_FULL\020\010\022\023\n\017DATE_TIME_SHORT\020\t\022\024\n\020DATE" +
-      "_TIME_MEDIUM\020\n\022\022\n\016DATE_TIME_LONG\020\013\022\022\n\016DA" +
-      "TE_TIME_FULL\020\014\022\022\n\016NUMBER_DECIMAL\020\r*\247\001\n\014F" +
-      "ieldSection\022\034\n\030FIELD_SECTION_DO_NOT_USE\020" +
-      "\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016PRIMARY_FIELDS\020\002\022\024" +
-      "\n\020SECONDARY_FIELDS\020\003\022\024\n\020AUXILIARY_FIELDS" +
-      "\020\004\022\021\n\rHEADER_FIELDS\020\005\022\025\n\021ADDITIONAL_FIEL" +
-      "DS\020\006*\216\031\n\016GooglePayField\022\037\n\033GOOGLE_PAY_FI" +
-      "ELD_DO_NOT_USE\020\000\022$\n GOOGLE_PAY_BOARDING_" +
-      "AIRLINE_NAME\020\001\022$\n GOOGLE_PAY_BOARDING_AI" +
-      "RLINE_CODE\020\002\022\036\n\032GOOGLE_PAY_BOARDING_ORIG" +
-      "IN\020\003\022#\n\037GOOGLE_PAY_BOARDING_DESTINATION\020" +
-      "\004\022\'\n#GOOGLE_PAY_BOARDING_ORIGIN_TERMINAL" +
-      "\020\005\022#\n\037GOOGLE_PAY_BOARDING_ORIGIN_GATE\020\006\022" +
-      "%\n!GOOGLE_PAY_BOARDING_BOARDING_TIME\020\007\022&" +
-      "\n\"GOOGLE_PAY_BOARDING_PASSENGER_NAME\020\010\022\"" +
-      "\n\036GOOGLE_PAY_BOARDING_ZONE_GROUP\020\t\022\034\n\030GO" +
-      "OGLE_PAY_BOARDING_SEAT\020\n\022)\n%GOOGLE_PAY_B" +
-      "OARDING_BOARDING_POSITION\020\013\022)\n%GOOGLE_PA" +
-      "Y_BOARDING_BOARDING_SEQUENCE\020\014\022%\n!GOOGLE" +
-      "_PAY_BOARDING_BOARDING_DOOR\020\r\022%\n!GOOGLE_" +
-      "PAY_BOARDING_FLIGHT_NUMBER\020\016\022+\n\'GOOGLE_P" +
-      "AY_BOARDING_CONFIRMATION_NUMBER\020\017\022%\n!GOO" +
-      "GLE_PAY_BOARDING_TICKET_NUMBER\020\020\022-\n)GOOG" +
-      "LE_PAY_BOARDING_FREQUENT_FLYER_NUMBER\020\021\022" +
-      "#\n\037GOOGLE_PAY_BOARDING_GATE_CLOSES\020\022\022&\n\"" +
-      "GOOGLE_PAY_BOARDING_DEPARTURE_TIME\020\023\022$\n " +
-      "GOOGLE_PAY_BOARDING_ARRIVAL_TIME\020\024\022(\n$GO" +
-      "OGLE_PAY_BOARDING_ARRIVAL_TERMINAL\020\025\022$\n " +
-      "GOOGLE_PAY_BOARDING_ARRIVAL_GATE\020\026\022\031\n\025GO" +
-      "OGLE_PAY_EVENT_NAME\020d\022\037\n\033GOOGLE_PAY_EVEN" +
-      "T_VENUE_NAME\020e\022\"\n\036GOOGLE_PAY_EVENT_VENUE" +
-      "_ADDRESS\020f\022\031\n\025GOOGLE_PAY_EVENT_GATE\020g\022\034\n" +
-      "\030GOOGLE_PAY_EVENT_SECTION\020h\022\030\n\024GOOGLE_PA" +
-      "Y_EVENT_ROW\020i\022\031\n\025GOOGLE_PAY_EVENT_SEAT\020j" +
-      "\022\"\n\036GOOGLE_PAY_EVENT_TICKET_HOLDER\020k\022\037\n\033" +
-      "GOOGLE_PAY_EVENT_DOORS_OPEN\020l\022\032\n\026GOOGLE_" +
-      "PAY_EVENT_START\020m\022\030\n\024GOOGLE_PAY_EVENT_EN" +
-      "D\020n\022 \n\034GOOGLE_PAY_EVENT_TICKET_TYPE\020o\022\"\n" +
-      "\036GOOGLE_PAY_EVENT_TICKET_NUMBER\020p\022(\n$GOO" +
-      "GLE_PAY_EVENT_CONFIRMATION_NUMBER\020q\022\037\n\033G" +
-      "OOGLE_PAY_EVENT_FACE_VALUE\020r\022\037\n\033GOOGLE_P" +
-      "AY_EVENT_FINE_PRINT\020s\022\"\n\035GOOGLE_PAY_GIFT" +
-      "_MERCHANT_NAME\020\310\001\022\034\n\027GOOGLE_PAY_GIFT_BAL" +
-      "ANCE\020\311\001\022 \n\033GOOGLE_PAY_GIFT_CARD_NUMBER\020\312" +
-      "\001\022(\n#GOOGLE_PAY_GIFT_BALANCE_UPDATE_TIME" +
-      "\020\313\001\022\030\n\023GOOGLE_PAY_GIFT_PIN\020\314\001\022!\n\034GOOGLE_" +
-      "PAY_GIFT_EVENT_NUMBER\020\315\001\022$\n\037GOOGLE_PAY_L" +
-      "OYALTY_PROGRAM_NAME\020\254\002\022\036\n\031GOOGLE_PAY_LOY" +
-      "ALTY_POINTS\020\255\002\022(\n#GOOGLE_PAY_LOYALTY_SEC" +
-      "ONDARY_POINTS\020\256\002\022$\n\037GOOGLE_PAY_LOYALTY_A" +
-      "CCOUNT_NAME\020\257\002\022\"\n\035GOOGLE_PAY_LOYALTY_ACC" +
-      "OUNT_ID\020\260\002\022$\n\037GOOGLE_PAY_LOYALTY_REWARDS" +
-      "_TIER\020\261\002\022.\n)GOOGLE_PAY_LOYALTY_SECONDARY" +
-      "_REWARDS_TIER\020\262\002\022\033\n\026GOOGLE_PAY_OFFER_TIT" +
-      "LE\020\220\003\022\036\n\031GOOGLE_PAY_OFFER_PROVIDER\020\221\003\022\035\n" +
-      "\030GOOGLE_PAY_OFFER_DETAILS\020\222\003\022 \n\033GOOGLE_P" +
-      "AY_OFFER_FINE_PRINT\020\223\003\022!\n\034GOOGLE_PAY_OFF" +
-      "ER_SHORT_TITLE\020\224\003\022#\n\036GOOGLE_PAY_TRANSIT_" +
-      "ISSUER_NAME\020\364\003\022!\n\034GOOGLE_PAY_TRANSIT_DEP" +
-      "ARTURE\020\365\003\022&\n!GOOGLE_PAY_TRANSIT_DEPARTUR" +
-      "E_TIME\020\366\003\022\"\n\035GOOGLE_PAY_TRANSIT_VALID_FR" +
-      "OM\020\367\003\022#\n\036GOOGLE_PAY_TRANSIT_VALID_UNTIL\020" +
-      "\370\003\022\037\n\032GOOGLE_PAY_TRANSIT_ARRIVAL\020\371\003\022\'\n\"G" +
-      "OOGLE_PAY_TRANSIT_PASSENGER_NAMES\020\372\003\022 \n\033" +
-      "GOOGLE_PAY_TRANSIT_CARRIAGE\020\373\003\022\035\n\030GOOGLE" +
-      "_PAY_TRANSIT_COACH\020\374\003\022\034\n\027GOOGLE_PAY_TRAN" +
-      "SIT_SEAT\020\375\003\022%\n GOOGLE_PAY_TRANSIT_TICKET" +
-      "_NUMBER\020\376\003\022%\n GOOGLE_PAY_TRANSIT_TICKET_" +
-      "STATUS\020\377\003\022!\n\034GOOGLE_PAY_TRANSIT_FARE_NAM" +
-      "E\020\200\004\022 \n\033GOOGLE_PAY_TRANSIT_PLATFORM\020\201\004\022\034" +
-      "\n\027GOOGLE_PAY_TRANSIT_ZONE\020\202\004\022\"\n\035GOOGLE_P" +
-      "AY_TRANSIT_FARE_CLASS\020\203\004\022+\n&GOOGLE_PAY_T" +
-      "RANSIT_CONCESSION_CATEGORY\020\204\004\022*\n%GOOGLE_" +
-      "PAY_TRANSIT_ROUTE_RESTRICTIONS\020\205\004\0221\n,GOO" +
-      "GLE_PAY_TRANSIT_ROUTE_RESTRICTION_DETAIL" +
-      "S\020\206\004\022)\n$GOOGLE_PAY_TRANSIT_TIME_RESTRICT" +
-      "IONS\020\207\004\022*\n%GOOGLE_PAY_TRANSIT_OTHER_REST" +
-      "RICTIONS\020\210\004\022&\n!GOOGLE_PAY_TRANSIT_RECEIP" +
-      "T_NUMBER\020\211\004\022%\n GOOGLE_PAY_TRANSIT_PURCHA" +
-      "SE_DATE\020\212\004\022\"\n\035GOOGLE_PAY_TRANSIT_ACCOUNT" +
-      "_ID\020\213\004\022)\n$GOOGLE_PAY_TRANSIT_CONFIRMATIO" +
-      "N_CODE\020\214\004\022\"\n\035GOOGLE_PAY_TRANSIT_FACE_VAL" +
-      "UE\020\215\004\022&\n!GOOGLE_PAY_TRANSIT_PURCHASE_PRI" +
-      "CE\020\216\004\022(\n#GOOGLE_PAY_TRANSIT_DISCOUNT_MES" +
-      "SAGE\020\217\004\022\033\n\026GOOGLE_PAY_TEXT_MODULE\020\350\007\022\033\n\026" +
-      "GOOGLE_PAY_ISSUER_NAME\020\351\007\022\"\n\035GOOGLE_PAY_" +
-      "STATIC_TEXT_MODULE\020\352\007*l\n\014PasswordType\022\034\n" +
-      "\030PASSWORD_TYPE_DO_NOT_USE\020\000\022\035\n\031PASSWORD_" +
-      "TYPE_NO_PASSWORD\020\001\022\037\n\033PASSWORD_TYPE_PASS" +
-      "WORD_ONLY\020\002*w\n\026SupportedAndroidWallet\022\035\n" +
-      "\031ANDROID_WALLET_DO_NOT_USE\020\000\022\035\n\031ANDROID_" +
-      "WALLET_PASSWALLET\020\001\022\037\n\033ANDROID_WALLET_WA" +
-      "LLETPASSES\020\002*\243\001\n\025PersonalizedDataField\022\032" +
-      "\n\026PERSONALIZE_DO_NOT_USE\020\000\022\024\n\020PERSONALIZ" +
-      "E_NAME\020\001\022\035\n\031PERSONALIZE_EMAIL_ADDRESS\020\002\022" +
-      "\034\n\030PERSONALIZE_PHONE_NUMBER\020\004\022\033\n\027PERSONA" +
-      "LIZE_POSTAL_CODE\020\010BG\n\020com.passkit.grpcZ$" +
-      "stash.passkit.com/io/model/sdk/go/io\252\002\014P" +
-      "assKit.Grpcb\006proto3"
+      "e\0228\n\025screenshotEligibility\030\010 \001(\0162\031.io.Sc" +
+      "reenshotEligibility\"\366\001\n\014GooglePayApp\022\024\n\003" +
+      "url\030\001 \001(\0132\007.io.Url\022\r\n\005title\030\002 \001(\t\022+\n\016loc" +
+      "alizedTitle\030\003 \001(\0132\023.io.LocalizedString\022\023" +
+      "\n\013description\030\004 \001(\t\0221\n\024localizedDescript" +
+      "ion\030\005 \001(\0132\023.io.LocalizedString\022\026\n\016urlDes" +
+      "cription\030\006 \001(\t\0224\n\027localizedUrlDescriptio" +
+      "n\030\007 \001(\0132\023.io.LocalizedString\"m\n\004Data\022!\n\n" +
+      "dataFields\030\001 \003(\0132\r.io.DataField\022B\n\032dataC" +
+      "ollectionPageSettings\030\002 \001(\0132\036.io.DataCol" +
+      "lectionPageSettings\"\344\002\n\023LandingPageSetti" +
+      "ngs\0225\n\033landingLocalizationOverride\030\001 \003(\016" +
+      "2\020.io.LanguageCode\0221\n\035preferThirdPartyAn" +
+      "droidWallet\030\002 \001(\0162\n.io.Toggle\022:\n\026preferr" +
+      "edAndroidWallet\030\003 \001(\0162\032.io.SupportedAndr" +
+      "oidWallet\022S\n\026localizedTextOverrides\030\004 \003(" +
+      "\01323.io.LandingPageSettings.LocalizedText" +
+      "OverridesEntry\032R\n\033LocalizedTextOverrides" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\"\n\005value\030\002 \001(\0132\023.io.L" +
+      "ocalizedString:\0028\001\"\334\005\n\032DataCollectionPag" +
+      "eSettings\022\r\n\005title\030\001 \001(\t\022+\n\016localizedTit" +
+      "le\030\002 \001(\0132\023.io.LocalizedString\022\023\n\013descrip" +
+      "tion\030\003 \001(\t\0221\n\024localizedDescription\030\004 \001(\013" +
+      "2\023.io.LocalizedString\022\030\n\020submitButtonTex" +
+      "t\030\005 \001(\t\0226\n\031localizedSubmitButtonText\030\006 \001" +
+      "(\0132\023.io.LocalizedString\022\023\n\013loadingText\030\007" +
+      " \001(\t\0221\n\024localizedLoadingText\030\010 \001(\0132\023.io." +
+      "LocalizedString\022\024\n\014thankYouText\030\t \001(\t\0222\n" +
+      "\025localizedThankYouText\030\n \001(\0132\023.io.Locali" +
+      "zedString\022\033\n\023pageBackgroundColor\030\013 \001(\t\0229" +
+      "\n\034localizedPageBackgroundColor\030\014 \001(\0132\023.i" +
+      "o.LocalizedString\022.\n\020trackingSettings\030\r " +
+      "\001(\0132\024.io.TrackingSettings\022\035\n\025submitButto" +
+      "nTextColor\030\016 \001(\t\022#\n\033submitButtonBackgrou" +
+      "ndColor\030\017 \001(\t\022\022\n\nfooterText\030\020 \001(\t\0220\n\023loc" +
+      "alizedFooterText\030\021 \001(\0132\023.io.LocalizedStr" +
+      "ing\022\024\n\014cssOverrides\030\022 \001(\t\022.\n\020passwordSet" +
+      "tings\030\023 \001(\0132\024.io.PasswordSettings\"\312\003\n\020Pa" +
+      "sswordSettings\022&\n\014passwordType\030\001 \001(\0162\020.i" +
+      "o.PasswordType\022\020\n\010password\030\002 \001(\t\022\026\n\016inpu" +
+      "tLabelText\030\003 \001(\t\0224\n\027localizedInputLabelT" +
+      "ext\030\004 \001(\0132\023.io.LocalizedString\022\021\n\terrorT" +
+      "ext\030\005 \001(\t\022/\n\022localizedErrorText\030\006 \001(\0132\023." +
+      "io.LocalizedString\022\022\n\nheaderText\030\007 \001(\t\0220" +
+      "\n\023localizedHeaderText\030\010 \001(\0132\023.io.Localiz" +
+      "edString\022\022\n\nbuttonText\030\t \001(\t\0220\n\023localize" +
+      "dButtonText\030\n \001(\0132\023.io.LocalizedString\022\021" +
+      "\n\ttitleText\030\013 \001(\t\022/\n\022localizedTitleText\030" +
+      "\014 \001(\0132\023.io.LocalizedString\022\032\n\022autoLogout" +
+      "OnSubmit\030\r \001(\010\"\363\001\n\024PassTemplateResponse\022" +
+      "\"\n\010template\030\001 \001(\0132\020.io.PassTemplate\022\014\n\004N" +
+      "ame\030\002 \001(\t\022\025\n\rownerUsername\030\003 \001(\t\022\"\n\010prot" +
+      "ocol\030\004 \001(\0162\020.io.PassProtocol\022\020\n\010revision" +
+      "\030\005 \001(\r\022-\n\tcreatedAt\030\006 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022-\n\tupdatedAt\030\007 \001(\0132\032.googl" +
+      "e.protobuf.Timestamp\"\224\001\n\006Colors\022\027\n\017backg" +
+      "roundColor\030\001 \001(\t\022\022\n\nlabelColor\030\002 \001(\t\022\021\n\t" +
+      "textColor\030\003 \001(\t\022\022\n\nstripColor\030\004 \001(\t\022\027\n\017f" +
+      "oregroundColor\030\005 \001(\t\022\035\n\025footerBackground" +
+      "Color\030\006 \001(\t\".\n\017CopyObjectInput\022\n\n\002id\030\001 \001" +
+      "(\t\022\017\n\007newName\030\002 \001(\t\"y\n\003NFC\022\017\n\007enabled\030\001 " +
+      "\001(\010\022\025\n\rcertificateId\030\002 \001(\t\022\017\n\007payload\030\003 " +
+      "\001(\t\022\023\n\013iCloudBound\030\004 \001(\010\022$\n\013bindingInfo\030" +
+      "\005 \001(\0132\017.io.BindingInfo\"<\n\013BindingInfo\022\027\n" +
+      "\017displayableName\030\001 \001(\t\022\024\n\014learnMoreUrl\030\002" +
+      " \001(\t\"\357\004\n\tDataField\022\022\n\nuniqueName\030\001 \001(\t\022\022" +
+      "\n\ntemplateId\030\002 \001(\t\022 \n\tfieldType\030\003 \001(\0162\r." +
+      "io.FieldType\022\022\n\nisRequired\030\004 \001(\010\022\r\n\005labe" +
+      "l\030\005 \001(\t\022+\n\016localizedLabel\030\006 \001(\0132\023.io.Loc" +
+      "alizedString\022\036\n\010dataType\030\007 \001(\0162\014.io.Data" +
+      "Type\022\024\n\014defaultValue\030\010 \001(\t\0222\n\025localizedD" +
+      "efaultValue\030\t \001(\0132\023.io.LocalizedString\022\022" +
+      "\n\nvalidation\030\n \001(\t\022\027\n\017userCanSetValue\030\013 " +
+      "\001(\010\022\024\n\014currencyCode\030\014 \001(\t\022H\n\035appleWallet" +
+      "FieldRenderOptions\030\r \001(\0132!.io.AppleWalle" +
+      "tFieldRenderOptions\022N\n dataCollectionFie" +
+      "ldRenderOptions\030\016 \001(\0132$.io.DataCollectio" +
+      "nFieldRenderOptions\022\034\n\005usage\030\017 \003(\0162\r.io." +
+      "UsageType\022D\n\033googlePayFieldRenderOptions" +
+      "\030\020 \001(\0132\037.io.GooglePayFieldRenderOptions\022" +
+      "\035\n\025defaultTelCountryCode\030\021 \001(\t\"\230\003\n\035Apple" +
+      "WalletFieldRenderOptions\022(\n\rtextAlignmen" +
+      "t\030\002 \001(\0162\021.io.TextAlignment\022.\n\020positionSe" +
+      "ttings\030\003 \001(\0132\024.io.PositionSettings\022\025\n\rch" +
+      "angeMessage\030\004 \001(\t\0223\n\026localizedChangeMess" +
+      "age\030\005 \001(\0132\023.io.LocalizedString\022$\n\tdateSt" +
+      "yle\030\006 \001(\0162\021.io.DateTimeStyle\022$\n\ttimeStyl" +
+      "e\030\007 \001(\0162\021.io.DateTimeStyle\022$\n\013numberStyl" +
+      "e\030\010 \001(\0162\017.io.NumberStyle\022/\n\025suppressLink" +
+      "Detection\030\t \003(\0162\020.io.LinkDetector\022\026\n\016ign" +
+      "oreTimezone\030\n \001(\010\022\026\n\016isRelativeDate\030\013 \001(" +
+      "\010\"h\n\033GooglePayFieldRenderOptions\022-\n\021goog" +
+      "lePayPosition\030\001 \001(\0162\022.io.GooglePayField\022" +
+      "\032\n\022textModulePriority\030\002 \001(\r\"G\n\020PositionS" +
+      "ettings\022!\n\007section\030\001 \001(\0162\020.io.FieldSecti" +
+      "on\022\020\n\010priority\030\002 \001(\r\"\237\003\n DataCollectionF" +
+      "ieldRenderOptions\022\020\n\010helpText\030\001 \001(\t\022.\n\021l" +
+      "ocalizedHelpText\030\002 \001(\0132\023.io.LocalizedStr" +
+      "ing\022\024\n\014displayOrder\030\003 \001(\005\022\023\n\013placeholder" +
+      "\030\005 \001(\t\022\'\n\rselectOptions\030\006 \003(\0132\020.io.Selec" +
+      "tOption\0221\n\024localizedPlaceholder\030\007 \001(\0132\023." +
+      "io.LocalizedString\022\024\n\014autocomplete\030\010 \001(\010" +
+      "\0226\n\024addressRenderOptions\030\t \001(\0132\030.io.Addr" +
+      "essRenderOptions\022 \n\030localizedYearPlaceho" +
+      "lder\030\n \001(\t\022!\n\031localizedMonthPlaceholder\030" +
+      "\013 \001(\t\022\037\n\027localizedDayPlaceholder\030\014 \001(\t\"\242" +
+      "\006\n\024AddressRenderOptions\022\025\n\raddress1Label" +
+      "\030\001 \001(\t\022\025\n\raddress2Label\030\002 \001(\t\022\021\n\tcityLab" +
+      "el\030\003 \001(\t\022\024\n\014countryLabel\030\004 \001(\t\022\020\n\010zipLab" +
+      "el\030\005 \001(\t\022\033\n\023address1Placeholder\030\006 \001(\t\022\033\n" +
+      "\023address2Placeholder\030\007 \001(\t\022\027\n\017cityPlaceh" +
+      "older\030\010 \001(\t\022\032\n\022countryPlaceholder\030\t \001(\t\022" +
+      "\026\n\016zipPlaceholder\030\n \001(\t\0223\n\026localizedAddr" +
+      "ess1Label\030\013 \001(\0132\023.io.LocalizedString\0223\n\026" +
+      "localizedAddress2Label\030\014 \001(\0132\023.io.Locali" +
+      "zedString\022/\n\022localizedCityLabel\030\r \001(\0132\023." +
+      "io.LocalizedString\0222\n\025localizedCountryLa" +
+      "bel\030\016 \001(\0132\023.io.LocalizedString\022.\n\021locali" +
+      "zedZipLabel\030\017 \001(\0132\023.io.LocalizedString\0229" +
+      "\n\034localizedAddress1Placeholder\030\020 \001(\0132\023.i" +
+      "o.LocalizedString\0229\n\034localizedAddress2Pl" +
+      "aceholder\030\021 \001(\0132\023.io.LocalizedString\0225\n\030" +
+      "localizedCityPlaceholder\030\022 \001(\0132\023.io.Loca" +
+      "lizedString\0228\n\033localizedCountryPlacehold" +
+      "er\030\023 \001(\0132\023.io.LocalizedString\0224\n\027localiz" +
+      "edZipPlaceholder\030\024 \001(\0132\023.io.LocalizedStr" +
+      "ing\"\267\001\n\007Sharing\022\027\n\017prohibitSharing\030\001 \001(\010" +
+      "\022\013\n\003url\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\0221\n\024lo" +
+      "calizedDescription\030\004 \001(\0132\023.io.LocalizedS" +
+      "tring:>\222A;\n9*\007Sharing2.Controls the shar" +
+      "ing settings for the program.\"N\n\026Default" +
+      "TemplateRequest\022\"\n\010protocol\030\001 \001(\0162\020.io.P" +
+      "assProtocol\022\020\n\010revision\030\002 \001(\r*v\n\rApplePa" +
+      "ssType\022\027\n\023APPLE_NOT_SUPPORTED\020\000\022\021\n\rBOARD" +
+      "ING_PASS\020\001\022\n\n\006COUPON\020\002\022\020\n\014EVENT_TICKET\020\003" +
+      "\022\013\n\007GENERIC\020\004\022\016\n\nSTORE_CARD\020\005*w\n\021GoogleP" +
+      "ayPassType\022\034\n\030GOOGLE_PAY_NOT_SUPPORTED\020\000" +
+      "\022\t\n\005EVENT\020\001\022\n\n\006FLIGHT\020\002\022\010\n\004GIFT\020\003\022\013\n\007LOY" +
+      "ALTY\020\004\022\t\n\005OFFER\020\005\022\013\n\007TRANSIT\020\006*`\n\013Barcod" +
+      "eType\022\033\n\027BARCODE_TYPE_DO_NOT_USE\020\000\022\006\n\002QR" +
+      "\020\001\022\t\n\005AZTEC\020\002\022\n\n\006PDF417\020\003\022\013\n\007CODE128\020\004\022\010" +
+      "\n\004NONE\020\005*q\n\tFieldType\022\023\n\017FIELD_TYPE_NONE" +
+      "\020\000\022\010\n\004META\020\001\022\007\n\003PII\020\002\022\024\n\020UNIVERSAL_FIELD" +
+      "S\020\003\022\023\n\017PROTOCOL_FIELDS\020\004\022\021\n\rCUSTOM_FIELD" +
+      "S\020\005*\276\001\n\016StandardFields\022\036\n\032STANDARD_FIELD" +
+      "S_DO_NOT_USE\020\000\022\025\n\021STANDARD_MESSAGES\020\001\022\022\n" +
+      "\016STANDARD_LEGAL\020\002\022\030\n\024STANDARD_EXPIRY_DAT" +
+      "E\020\003\022\031\n\025STANDARD_USEFUL_LINKS\020\004\022\024\n\020STANDA" +
+      "RD_OPT_OUT\020\005\022\026\n\022STANDARD_LOCATIONS\020\006*\\\n\r" +
+      "TextAlignment\022\035\n\031TEXT_ALIGNMENT_DO_NOT_U" +
+      "SE\020\000\022\010\n\004LEFT\020\001\022\n\n\006CENTER\020\002\022\t\n\005RIGHT\020\003\022\013\n" +
+      "\007NATURAL\020\004*\232\001\n\rDateTimeStyle\022\036\n\032DATE_TIM" +
+      "E_STYLE_DO_NOT_USE\020\000\022\031\n\025DATE_TIME_STYLE_" +
+      "SHORT\020\001\022\032\n\026DATE_TIME_STYLE_MEDIUM\020\002\022\030\n\024D" +
+      "ATE_TIME_STYLE_LONG\020\003\022\030\n\024DATE_TIME_STYLE" +
+      "_FULL\020\004*\217\001\n\014LinkDetector\022\034\n\030LINK_DETECTO" +
+      "R_DO_NOT_USE\020\000\022\031\n\025LINK_DETECTOR_ADDRESS\020" +
+      "\001\022\026\n\022LINK_DETECTOR_DATE\020\002\022\025\n\021LINK_DETECT" +
+      "OR_URL\020\003\022\027\n\023LINK_DETECTOR_PHONE\020\004*\223\001\n\013Nu" +
+      "mberStyle\022\033\n\027NUMBER_STYLE_DO_NOT_USE\020\000\022\030" +
+      "\n\024NUMBER_STYLE_DECIMAL\020\001\022\030\n\024NUMBER_STYLE" +
+      "_PERCENT\020\002\022\033\n\027NUMBER_STYLE_SCIENTIFIC\020\003\022" +
+      "\026\n\022NUMBER_STYLE_SPELL\020\004*\266\001\n\013TransitType\022" +
+      "\033\n\027TRANSIT_TYPE_DO_NOT_USE\020\000\022\024\n\020TRANSIT_" +
+      "TYPE_AIR\020\001\022\025\n\021TRANSIT_TYPE_BOAT\020\002\022\024\n\020TRA" +
+      "NSIT_TYPE_BUS\020\003\022\030\n\024TRANSIT_TYPE_GENERIC\020" +
+      "\004\022\026\n\022TRANSIT_TYPE_TRAIN\020\005\022\025\n\021TRANSIT_TYP" +
+      "E_TRAM\020\006*\210\002\n\010DataType\022\022\n\016DATA_TYPE_NONE\020" +
+      "\000\022\010\n\004TEXT\020\001\022\r\n\tTEXT_LONG\020\002\022\021\n\rDATE_YYYYM" +
+      "MDD\020\003\022\017\n\013DATE_YYYYMM\020\004\022\r\n\tDATE_MMDD\020\005\022\010\n" +
+      "\004TIME\020\006\022\r\n\tDATE_TIME\020\007\022\007\n\003INT\020\010\022\n\n\006NUMBE" +
+      "R\020\t\022\t\n\005EMAIL\020\n\022\007\n\003URL\020\013\022\007\n\003TEL\020\014\022\013\n\007ADDR" +
+      "ESS\020\r\022\t\n\005IMAGE\020\017\022\014\n\010CURRENCY\020\020\022\013\n\007BOOLEA" +
+      "N\020\021\022\013\n\007OPTIONS\020\022\022\013\n\007DATE_MM\020\023\"\004\010\016\020\016*\376\001\n\t" +
+      "DataStyle\022\014\n\010NO_STYLE\020\000\022\016\n\nDATE_SHORT\020\001\022" +
+      "\017\n\013DATE_MEDIUM\020\002\022\r\n\tDATE_LONG\020\003\022\r\n\tDATE_" +
+      "FULL\020\004\022\016\n\nTIME_SHORT\020\005\022\017\n\013TIME_MEDIUM\020\006\022" +
+      "\r\n\tTIME_LONG\020\007\022\r\n\tTIME_FULL\020\010\022\023\n\017DATE_TI" +
+      "ME_SHORT\020\t\022\024\n\020DATE_TIME_MEDIUM\020\n\022\022\n\016DATE" +
+      "_TIME_LONG\020\013\022\022\n\016DATE_TIME_FULL\020\014\022\022\n\016NUMB" +
+      "ER_DECIMAL\020\r*\247\001\n\014FieldSection\022\034\n\030FIELD_S" +
+      "ECTION_DO_NOT_USE\020\000\022\017\n\013BACK_FIELDS\020\001\022\022\n\016" +
+      "PRIMARY_FIELDS\020\002\022\024\n\020SECONDARY_FIELDS\020\003\022\024" +
+      "\n\020AUXILIARY_FIELDS\020\004\022\021\n\rHEADER_FIELDS\020\005\022" +
+      "\025\n\021ADDITIONAL_FIELDS\020\006*\216\031\n\016GooglePayFiel" +
+      "d\022\037\n\033GOOGLE_PAY_FIELD_DO_NOT_USE\020\000\022$\n GO" +
+      "OGLE_PAY_BOARDING_AIRLINE_NAME\020\001\022$\n GOOG" +
+      "LE_PAY_BOARDING_AIRLINE_CODE\020\002\022\036\n\032GOOGLE" +
+      "_PAY_BOARDING_ORIGIN\020\003\022#\n\037GOOGLE_PAY_BOA" +
+      "RDING_DESTINATION\020\004\022\'\n#GOOGLE_PAY_BOARDI" +
+      "NG_ORIGIN_TERMINAL\020\005\022#\n\037GOOGLE_PAY_BOARD" +
+      "ING_ORIGIN_GATE\020\006\022%\n!GOOGLE_PAY_BOARDING" +
+      "_BOARDING_TIME\020\007\022&\n\"GOOGLE_PAY_BOARDING_" +
+      "PASSENGER_NAME\020\010\022\"\n\036GOOGLE_PAY_BOARDING_" +
+      "ZONE_GROUP\020\t\022\034\n\030GOOGLE_PAY_BOARDING_SEAT" +
+      "\020\n\022)\n%GOOGLE_PAY_BOARDING_BOARDING_POSIT" +
+      "ION\020\013\022)\n%GOOGLE_PAY_BOARDING_BOARDING_SE" +
+      "QUENCE\020\014\022%\n!GOOGLE_PAY_BOARDING_BOARDING" +
+      "_DOOR\020\r\022%\n!GOOGLE_PAY_BOARDING_FLIGHT_NU" +
+      "MBER\020\016\022+\n\'GOOGLE_PAY_BOARDING_CONFIRMATI" +
+      "ON_NUMBER\020\017\022%\n!GOOGLE_PAY_BOARDING_TICKE" +
+      "T_NUMBER\020\020\022-\n)GOOGLE_PAY_BOARDING_FREQUE" +
+      "NT_FLYER_NUMBER\020\021\022#\n\037GOOGLE_PAY_BOARDING" +
+      "_GATE_CLOSES\020\022\022&\n\"GOOGLE_PAY_BOARDING_DE" +
+      "PARTURE_TIME\020\023\022$\n GOOGLE_PAY_BOARDING_AR" +
+      "RIVAL_TIME\020\024\022(\n$GOOGLE_PAY_BOARDING_ARRI" +
+      "VAL_TERMINAL\020\025\022$\n GOOGLE_PAY_BOARDING_AR" +
+      "RIVAL_GATE\020\026\022\031\n\025GOOGLE_PAY_EVENT_NAME\020d\022" +
+      "\037\n\033GOOGLE_PAY_EVENT_VENUE_NAME\020e\022\"\n\036GOOG" +
+      "LE_PAY_EVENT_VENUE_ADDRESS\020f\022\031\n\025GOOGLE_P" +
+      "AY_EVENT_GATE\020g\022\034\n\030GOOGLE_PAY_EVENT_SECT" +
+      "ION\020h\022\030\n\024GOOGLE_PAY_EVENT_ROW\020i\022\031\n\025GOOGL" +
+      "E_PAY_EVENT_SEAT\020j\022\"\n\036GOOGLE_PAY_EVENT_T" +
+      "ICKET_HOLDER\020k\022\037\n\033GOOGLE_PAY_EVENT_DOORS" +
+      "_OPEN\020l\022\032\n\026GOOGLE_PAY_EVENT_START\020m\022\030\n\024G" +
+      "OOGLE_PAY_EVENT_END\020n\022 \n\034GOOGLE_PAY_EVEN" +
+      "T_TICKET_TYPE\020o\022\"\n\036GOOGLE_PAY_EVENT_TICK" +
+      "ET_NUMBER\020p\022(\n$GOOGLE_PAY_EVENT_CONFIRMA" +
+      "TION_NUMBER\020q\022\037\n\033GOOGLE_PAY_EVENT_FACE_V" +
+      "ALUE\020r\022\037\n\033GOOGLE_PAY_EVENT_FINE_PRINT\020s\022" +
+      "\"\n\035GOOGLE_PAY_GIFT_MERCHANT_NAME\020\310\001\022\034\n\027G" +
+      "OOGLE_PAY_GIFT_BALANCE\020\311\001\022 \n\033GOOGLE_PAY_" +
+      "GIFT_CARD_NUMBER\020\312\001\022(\n#GOOGLE_PAY_GIFT_B" +
+      "ALANCE_UPDATE_TIME\020\313\001\022\030\n\023GOOGLE_PAY_GIFT" +
+      "_PIN\020\314\001\022!\n\034GOOGLE_PAY_GIFT_EVENT_NUMBER\020" +
+      "\315\001\022$\n\037GOOGLE_PAY_LOYALTY_PROGRAM_NAME\020\254\002" +
+      "\022\036\n\031GOOGLE_PAY_LOYALTY_POINTS\020\255\002\022(\n#GOOG" +
+      "LE_PAY_LOYALTY_SECONDARY_POINTS\020\256\002\022$\n\037GO" +
+      "OGLE_PAY_LOYALTY_ACCOUNT_NAME\020\257\002\022\"\n\035GOOG" +
+      "LE_PAY_LOYALTY_ACCOUNT_ID\020\260\002\022$\n\037GOOGLE_P" +
+      "AY_LOYALTY_REWARDS_TIER\020\261\002\022.\n)GOOGLE_PAY" +
+      "_LOYALTY_SECONDARY_REWARDS_TIER\020\262\002\022\033\n\026GO" +
+      "OGLE_PAY_OFFER_TITLE\020\220\003\022\036\n\031GOOGLE_PAY_OF" +
+      "FER_PROVIDER\020\221\003\022\035\n\030GOOGLE_PAY_OFFER_DETA" +
+      "ILS\020\222\003\022 \n\033GOOGLE_PAY_OFFER_FINE_PRINT\020\223\003" +
+      "\022!\n\034GOOGLE_PAY_OFFER_SHORT_TITLE\020\224\003\022#\n\036G" +
+      "OOGLE_PAY_TRANSIT_ISSUER_NAME\020\364\003\022!\n\034GOOG" +
+      "LE_PAY_TRANSIT_DEPARTURE\020\365\003\022&\n!GOOGLE_PA" +
+      "Y_TRANSIT_DEPARTURE_TIME\020\366\003\022\"\n\035GOOGLE_PA" +
+      "Y_TRANSIT_VALID_FROM\020\367\003\022#\n\036GOOGLE_PAY_TR" +
+      "ANSIT_VALID_UNTIL\020\370\003\022\037\n\032GOOGLE_PAY_TRANS" +
+      "IT_ARRIVAL\020\371\003\022\'\n\"GOOGLE_PAY_TRANSIT_PASS" +
+      "ENGER_NAMES\020\372\003\022 \n\033GOOGLE_PAY_TRANSIT_CAR" +
+      "RIAGE\020\373\003\022\035\n\030GOOGLE_PAY_TRANSIT_COACH\020\374\003\022" +
+      "\034\n\027GOOGLE_PAY_TRANSIT_SEAT\020\375\003\022%\n GOOGLE_" +
+      "PAY_TRANSIT_TICKET_NUMBER\020\376\003\022%\n GOOGLE_P" +
+      "AY_TRANSIT_TICKET_STATUS\020\377\003\022!\n\034GOOGLE_PA" +
+      "Y_TRANSIT_FARE_NAME\020\200\004\022 \n\033GOOGLE_PAY_TRA" +
+      "NSIT_PLATFORM\020\201\004\022\034\n\027GOOGLE_PAY_TRANSIT_Z" +
+      "ONE\020\202\004\022\"\n\035GOOGLE_PAY_TRANSIT_FARE_CLASS\020" +
+      "\203\004\022+\n&GOOGLE_PAY_TRANSIT_CONCESSION_CATE" +
+      "GORY\020\204\004\022*\n%GOOGLE_PAY_TRANSIT_ROUTE_REST" +
+      "RICTIONS\020\205\004\0221\n,GOOGLE_PAY_TRANSIT_ROUTE_" +
+      "RESTRICTION_DETAILS\020\206\004\022)\n$GOOGLE_PAY_TRA" +
+      "NSIT_TIME_RESTRICTIONS\020\207\004\022*\n%GOOGLE_PAY_" +
+      "TRANSIT_OTHER_RESTRICTIONS\020\210\004\022&\n!GOOGLE_" +
+      "PAY_TRANSIT_RECEIPT_NUMBER\020\211\004\022%\n GOOGLE_" +
+      "PAY_TRANSIT_PURCHASE_DATE\020\212\004\022\"\n\035GOOGLE_P" +
+      "AY_TRANSIT_ACCOUNT_ID\020\213\004\022)\n$GOOGLE_PAY_T" +
+      "RANSIT_CONFIRMATION_CODE\020\214\004\022\"\n\035GOOGLE_PA" +
+      "Y_TRANSIT_FACE_VALUE\020\215\004\022&\n!GOOGLE_PAY_TR" +
+      "ANSIT_PURCHASE_PRICE\020\216\004\022(\n#GOOGLE_PAY_TR" +
+      "ANSIT_DISCOUNT_MESSAGE\020\217\004\022\033\n\026GOOGLE_PAY_" +
+      "TEXT_MODULE\020\350\007\022\033\n\026GOOGLE_PAY_ISSUER_NAME" +
+      "\020\351\007\022\"\n\035GOOGLE_PAY_STATIC_TEXT_MODULE\020\352\007*" +
+      "l\n\014PasswordType\022\034\n\030PASSWORD_TYPE_DO_NOT_" +
+      "USE\020\000\022\035\n\031PASSWORD_TYPE_NO_PASSWORD\020\001\022\037\n\033" +
+      "PASSWORD_TYPE_PASSWORD_ONLY\020\002*w\n\026Support" +
+      "edAndroidWallet\022\035\n\031ANDROID_WALLET_DO_NOT" +
+      "_USE\020\000\022\035\n\031ANDROID_WALLET_PASSWALLET\020\001\022\037\n" +
+      "\033ANDROID_WALLET_WALLETPASSES\020\002*\243\001\n\025Perso" +
+      "nalizedDataField\022\032\n\026PERSONALIZE_DO_NOT_U" +
+      "SE\020\000\022\024\n\020PERSONALIZE_NAME\020\001\022\035\n\031PERSONALIZ" +
+      "E_EMAIL_ADDRESS\020\002\022\034\n\030PERSONALIZE_PHONE_N" +
+      "UMBER\020\004\022\033\n\027PERSONALIZE_POSTAL_CODE\020\010*]\n\025" +
+      "ScreenshotEligibility\022&\n\"SCREENSHOT_ELIG" +
+      "IBILITY_UNSPECIFIED\020\000\022\014\n\010ELIGIBLE\020\001\022\016\n\nI" +
+      "NELIGIBLE\020\002BG\n\020com.passkit.grpcZ$stash.p" +
+      "asskit.com/io/model/sdk/go/io\252\002\014PassKit." +
+      "Grpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -53074,7 +53345,7 @@ com.passkit.grpc.Localization.LocalizedString defaultValue) {
     internal_static_io_GooglePaySettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_io_GooglePaySettings_descriptor,
-        new java.lang.String[] { "PassType", "AndroidApp", "IosApp", "WebApp", "ClassTemplateInfo", "BackgroundColor", "LanguageOverrides", });
+        new java.lang.String[] { "PassType", "AndroidApp", "IosApp", "WebApp", "ClassTemplateInfo", "BackgroundColor", "LanguageOverrides", "ScreenshotEligibility", });
     internal_static_io_GooglePayApp_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_io_GooglePayApp_fieldAccessorTable = new
