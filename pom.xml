@@ -3,7 +3,7 @@
     <groupId>com.passkit.grpc</groupId>
     <artifactId>sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.119-SNAPSHOT</version>
+    <version>1.1.122-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -31,7 +31,7 @@
         <connection>scm:git:git://github.com/PassKit/passkit-java-grpc-sdk.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/PassKit/passkit-java-grpc-sdk.git</developerConnection>
         <url>https://github.com/PassKit/passkit-java-grpc-sdk/tree/main</url>
-        <tag>v1.1.118</tag>
+        <tag>v1.1.122</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
@@ -114,6 +114,11 @@
             <artifactId>protobuf-java</artifactId>
             <version>4.29.2</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.engine</groupId>
+            <artifactId>grpc-ecosystem-protoc-gen-openapiv2</artifactId>
+            <version>0.0.1-pre.1</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
