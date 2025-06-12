@@ -3,6 +3,9 @@ package com.passkit.grpc;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -339,10 +342,16 @@ public final class CertificatesGrpc {
   }
 
   /**
+   * <pre>
+   * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Retrieves the Apple pass certificate data for the provided Pass Type Identifier. Required Fields: passTypeId.
+     * </pre>
      */
     default void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -350,6 +359,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Certificate Signing Request (CSR) for the logged-in user. This is used to generate a new certificate on the Apple Developer portal.
+     * </pre>
      */
     default void getCertificateSigningRequest(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateSigningRequest> responseObserver) {
@@ -357,6 +369,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Uploads a new Apple certificate for use with Wallet passes. Required Field: fileBytes.
+     * </pre>
      */
     default void addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -364,6 +379,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates or renews an existing Apple certificate by uploading a new one. Required Fields: fileBytes.
+     * </pre>
      */
     default void updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -371,6 +389,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns a paginated list of Apple pass certificates for the current user. Required Fields: pagination fields.
+     * </pre>
      */
     default void listAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -378,6 +399,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a filtered list of Apple pass certificates for the current user. Required Fields: Filters.
+     * </pre>
      */
     default void listAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -385,6 +409,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of Apple certificates for the current user based on pagination criteria. Required fields: pagination fields.
+     * </pre>
      */
     default void countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -392,6 +419,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of Apple certificates for the current user using filter criteria. Required Fields: Filters (can be empty, but must be present)
+     * </pre>
      */
     default void countAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -399,6 +429,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
+     * </pre>
      */
     default void sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -408,6 +441,9 @@ public final class CertificatesGrpc {
 
   /**
    * Base class for the server implementation of the service Certificates.
+   * <pre>
+   * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+   * </pre>
    */
   public static abstract class CertificatesImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -419,6 +455,9 @@ public final class CertificatesGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Certificates.
+   * <pre>
+   * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+   * </pre>
    */
   public static final class CertificatesStub
       extends io.grpc.stub.AbstractAsyncStub<CertificatesStub> {
@@ -434,6 +473,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the Apple pass certificate data for the provided Pass Type Identifier. Required Fields: passTypeId.
+     * </pre>
      */
     public void getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -442,6 +484,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Certificate Signing Request (CSR) for the logged-in user. This is used to generate a new certificate on the Apple Developer portal.
+     * </pre>
      */
     public void getCertificateSigningRequest(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateSigningRequest> responseObserver) {
@@ -450,6 +495,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Uploads a new Apple certificate for use with Wallet passes. Required Field: fileBytes.
+     * </pre>
      */
     public void addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -458,6 +506,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates or renews an existing Apple certificate by uploading a new one. Required Fields: fileBytes.
+     * </pre>
      */
     public void updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -466,6 +517,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns a paginated list of Apple pass certificates for the current user. Required Fields: pagination fields.
+     * </pre>
      */
     public void listAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -474,6 +528,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a filtered list of Apple pass certificates for the current user. Required Fields: Filters.
+     * </pre>
      */
     public void listAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.CertificateData> responseObserver) {
@@ -482,6 +539,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of Apple certificates for the current user based on pagination criteria. Required fields: pagination fields.
+     * </pre>
      */
     public void countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -490,6 +550,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of Apple certificates for the current user using filter criteria. Required Fields: Filters (can be empty, but must be present)
+     * </pre>
      */
     public void countAppleCertificates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -498,6 +561,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
+     * </pre>
      */
     public void sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -508,6 +574,9 @@ public final class CertificatesGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Certificates.
+   * <pre>
+   * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+   * </pre>
    */
   public static final class CertificatesBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<CertificatesBlockingStub> {
@@ -523,6 +592,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the Apple pass certificate data for the provided Pass Type Identifier. Required Fields: passTypeId.
+     * </pre>
      */
     public com.passkit.grpc.Certificate.CertificateData getAppleCertificateData(com.passkit.grpc.Certificate.PassTypeIdentifier request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -530,6 +602,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Certificate Signing Request (CSR) for the logged-in user. This is used to generate a new certificate on the Apple Developer portal.
+     * </pre>
      */
     public com.passkit.grpc.Certificate.CertificateSigningRequest getCertificateSigningRequest(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -537,6 +612,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Uploads a new Apple certificate for use with Wallet passes. Required Field: fileBytes.
+     * </pre>
      */
     public com.passkit.grpc.Certificate.CertificateData addAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -544,6 +622,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates or renews an existing Apple certificate by uploading a new one. Required Fields: fileBytes.
+     * </pre>
      */
     public com.passkit.grpc.Certificate.CertificateData updateAppleCertificate(com.passkit.grpc.CommonObjects.FileBytes request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -551,6 +632,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns a paginated list of Apple pass certificates for the current user. Required Fields: pagination fields.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Certificate.CertificateData> listAppleCertificatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -559,6 +643,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a filtered list of Apple pass certificates for the current user. Required Fields: Filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Certificate.CertificateData> listAppleCertificates(
         com.passkit.grpc.Filter.Filters request) {
@@ -567,6 +654,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of Apple certificates for the current user based on pagination criteria. Required fields: pagination fields.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countAppleCertificatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -574,6 +664,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of Apple certificates for the current user using filter criteria. Required Fields: Filters (can be empty, but must be present)
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countAppleCertificates(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -581,6 +674,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
+     * </pre>
      */
     public com.google.protobuf.Empty sendNFCSigningCredentials(com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -590,6 +686,9 @@ public final class CertificatesGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Certificates.
+   * <pre>
+   * Manage your Apple Wallet Pass Type Identifiers &amp; Certificates
+   * </pre>
    */
   public static final class CertificatesFutureStub
       extends io.grpc.stub.AbstractFutureStub<CertificatesFutureStub> {
@@ -605,6 +704,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the Apple pass certificate data for the provided Pass Type Identifier. Required Fields: passTypeId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> getAppleCertificateData(
         com.passkit.grpc.Certificate.PassTypeIdentifier request) {
@@ -613,6 +715,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Certificate Signing Request (CSR) for the logged-in user. This is used to generate a new certificate on the Apple Developer portal.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateSigningRequest> getCertificateSigningRequest(
         com.google.protobuf.Empty request) {
@@ -621,6 +726,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Uploads a new Apple certificate for use with Wallet passes. Required Field: fileBytes.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> addAppleCertificate(
         com.passkit.grpc.CommonObjects.FileBytes request) {
@@ -629,6 +737,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates or renews an existing Apple certificate by uploading a new one. Required Fields: fileBytes.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.CertificateData> updateAppleCertificate(
         com.passkit.grpc.CommonObjects.FileBytes request) {
@@ -637,6 +748,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of Apple certificates for the current user based on pagination criteria. Required fields: pagination fields.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countAppleCertificatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -645,6 +759,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of Apple certificates for the current user using filter criteria. Required Fields: Filters (can be empty, but must be present)
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countAppleCertificates(
         com.passkit.grpc.Filter.Filters request) {
@@ -653,6 +770,9 @@ public final class CertificatesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendNFCSigningCredentials(
         com.passkit.grpc.Certificate.NFCSigningCredentialsRequest request) {

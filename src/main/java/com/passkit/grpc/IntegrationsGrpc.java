@@ -436,6 +436,9 @@ public final class IntegrationsGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     default void createIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -443,6 +446,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     default void getIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.IntegrationConfigs> responseObserver) {
@@ -450,6 +456,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     default void updateIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -457,6 +466,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     default void deleteIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -464,6 +476,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a sink subscription to receive webhook callbacks after specific events. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     default void createSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -471,6 +486,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     default void getSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -478,6 +496,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Lists sink subscriptions by segment with optional pagination. Required Fields: pagination.
+     * </pre>
      */
     default void listSinkSubscriptionsDeprecated(com.passkit.grpc.CommonObjects.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -485,6 +506,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all sink subscriptions by segment with optional pagination. Required Fields: filters.
+     * </pre>
      */
     default void listSinkSubscriptions(com.passkit.grpc.CommonObjects.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -492,6 +516,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a sink subscription configuration. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     default void updateSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -499,6 +526,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     default void deleteSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -506,6 +536,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a sample sink subscription payload. Required Fields: id.
+     * </pre>
      */
     default void getSampleSubscriptionEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -513,6 +546,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Dynamically calls an external API using configured credentials. Required Fields: url, method, headers, body (depending on the API).
+     * </pre>
      */
     default void callDynamicApi(com.passkit.grpc.Integration.DynamicApiInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.DynamicApiResponse> responseObserver) {
@@ -548,6 +584,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public void createIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -556,6 +595,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public void getIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.IntegrationConfigs> responseObserver) {
@@ -564,6 +606,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public void updateIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -572,6 +617,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public void deleteIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -580,6 +628,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a sink subscription to receive webhook callbacks after specific events. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public void createSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -588,6 +639,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public void getSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -596,6 +650,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Lists sink subscriptions by segment with optional pagination. Required Fields: pagination.
+     * </pre>
      */
     public void listSinkSubscriptionsDeprecated(com.passkit.grpc.CommonObjects.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -604,6 +661,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all sink subscriptions by segment with optional pagination. Required Fields: filters.
+     * </pre>
      */
     public void listSinkSubscriptions(com.passkit.grpc.CommonObjects.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -612,6 +672,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a sink subscription configuration. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public void updateSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -620,6 +683,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public void deleteSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -628,6 +694,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a sample sink subscription payload. Required Fields: id.
+     * </pre>
      */
     public void getSampleSubscriptionEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.SinkSubscription> responseObserver) {
@@ -636,6 +705,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Dynamically calls an external API using configured credentials. Required Fields: url, method, headers, body (depending on the API).
+     * </pre>
      */
     public void callDynamicApi(com.passkit.grpc.Integration.DynamicApiInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Integration.DynamicApiResponse> responseObserver) {
@@ -661,6 +733,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -668,6 +743,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public com.passkit.grpc.Integration.IntegrationConfigs getIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -675,6 +753,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateIntegrations(com.passkit.grpc.Integration.IntegrationConfigs request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -682,6 +763,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteIntegrations(com.passkit.grpc.Integration.ProtocolIdInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -689,6 +773,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a sink subscription to receive webhook callbacks after specific events. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -696,6 +783,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public com.passkit.grpc.Integration.SinkSubscription getSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -703,6 +793,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Lists sink subscriptions by segment with optional pagination. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Integration.SinkSubscription> listSinkSubscriptionsDeprecated(
         com.passkit.grpc.CommonObjects.ListRequestDeprecated request) {
@@ -711,6 +804,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all sink subscriptions by segment with optional pagination. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Integration.SinkSubscription> listSinkSubscriptions(
         com.passkit.grpc.CommonObjects.ListRequest request) {
@@ -719,6 +815,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a sink subscription configuration. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateSinkSubscription(com.passkit.grpc.Integration.SinkSubscription request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -726,6 +825,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteSinkSubscription(com.passkit.grpc.Integration.SubscriptionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -733,6 +835,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a sample sink subscription payload. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Integration.SinkSubscription getSampleSubscriptionEvent(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -740,6 +845,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Dynamically calls an external API using configured credentials. Required Fields: url, method, headers, body (depending on the API).
+     * </pre>
      */
     public com.passkit.grpc.Integration.DynamicApiResponse callDynamicApi(com.passkit.grpc.Integration.DynamicApiInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -764,6 +872,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createIntegrations(
         com.passkit.grpc.Integration.IntegrationConfigs request) {
@@ -772,6 +883,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Integration.IntegrationConfigs> getIntegrations(
         com.passkit.grpc.Integration.ProtocolIdInput request) {
@@ -780,6 +894,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates integration configurations for a pass type. Required Fields: protocol, classId, integrations.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateIntegrations(
         com.passkit.grpc.Integration.IntegrationConfigs request) {
@@ -788,6 +905,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes integration configurations for a protocol and class. Required Fields: protocol, classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteIntegrations(
         com.passkit.grpc.Integration.ProtocolIdInput request) {
@@ -796,6 +916,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a sink subscription to receive webhook callbacks after specific events. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createSinkSubscription(
         com.passkit.grpc.Integration.SinkSubscription request) {
@@ -804,6 +927,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Integration.SinkSubscription> getSinkSubscription(
         com.passkit.grpc.Integration.SubscriptionRequest request) {
@@ -812,6 +938,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a sink subscription configuration. Required Fields: protocol, classId, event, url.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateSinkSubscription(
         com.passkit.grpc.Integration.SinkSubscription request) {
@@ -820,6 +949,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a sink subscription configuration. Required Fields: protocol, subscriptionId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteSinkSubscription(
         com.passkit.grpc.Integration.SubscriptionRequest request) {
@@ -828,6 +960,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a sample sink subscription payload. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Integration.SinkSubscription> getSampleSubscriptionEvent(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -836,6 +971,9 @@ public final class IntegrationsGrpc {
     }
 
     /**
+     * <pre>
+     * Dynamically calls an external API using configured credentials. Required Fields: url, method, headers, body (depending on the API).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Integration.DynamicApiResponse> callDynamicApi(
         com.passkit.grpc.Integration.DynamicApiInput request) {

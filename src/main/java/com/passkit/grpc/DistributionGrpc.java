@@ -3,6 +3,9 @@ package com.passkit.grpc;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -246,10 +249,16 @@ public final class DistributionGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Sends a welcome email to a single recipient using a valid pass protocol (e.g., membership, coupon, ticket). Required Fields: passId or externalId, classId, protocol.
+     * </pre>
      */
     default void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -257,6 +266,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Generates and returns an encrypted SmartPass link for a member, coupon, or event ticket based on the request payload. Required Fields: passId or externalId, classId.
+     * </pre>
      */
     default void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -264,6 +276,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of fields to be displayed on the data collection page. For the Member protocol, classId is required. Required Fields: classId (only for MEMBERSHIP protocol)
+     * </pre>
      */
     default void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields> responseObserver) {
@@ -271,6 +286,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Accepts a CSV file containing user data and a project short code, processes SmartPass creation, and sends results to the user via email. Required Fields: shortCode, csv contents.
+     * </pre>
      */
     default void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -278,6 +296,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Imports and processes a formatted CSV file for a given protocol (e.g., member, coupon) and creates billable records. Required: classId, protocol, and valid csv contents.
+     * </pre>
      */
     default void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -285,6 +306,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a time-based one-time password (TOTP) barcode string in the format {{payload}}||{{key}}||{{timestamp}}||{{totp}}. If valid, returns the cleaned payload without TOTP metadata. Required Fields: payload.
+     * </pre>
      */
     default void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
@@ -294,6 +318,9 @@ public final class DistributionGrpc {
 
   /**
    * Base class for the server implementation of the service Distribution.
+   * <pre>
+   * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+   * </pre>
    */
   public static abstract class DistributionImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -305,6 +332,9 @@ public final class DistributionGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Distribution.
+   * <pre>
+   * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+   * </pre>
    */
   public static final class DistributionStub
       extends io.grpc.stub.AbstractAsyncStub<DistributionStub> {
@@ -320,6 +350,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a welcome email to a single recipient using a valid pass protocol (e.g., membership, coupon, ticket). Required Fields: passId or externalId, classId, protocol.
+     * </pre>
      */
     public void sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -328,6 +361,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Generates and returns an encrypted SmartPass link for a member, coupon, or event ticket based on the request payload. Required Fields: passId or externalId, classId.
+     * </pre>
      */
     public void getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -336,6 +372,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of fields to be displayed on the data collection page. For the Member protocol, classId is required. Required Fields: classId (only for MEMBERSHIP protocol)
+     * </pre>
      */
     public void getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.DataCollectionFields> responseObserver) {
@@ -344,6 +383,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Accepts a CSV file containing user data and a project short code, processes SmartPass creation, and sends results to the user via email. Required Fields: shortCode, csv contents.
+     * </pre>
      */
     public void uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -352,6 +394,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Imports and processes a formatted CSV file for a given protocol (e.g., member, coupon) and creates billable records. Required: classId, protocol, and valid csv contents.
+     * </pre>
      */
     public void importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -360,6 +405,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a time-based one-time password (TOTP) barcode string in the format {{payload}}||{{key}}||{{timestamp}}||{{totp}}. If valid, returns the cleaned payload without TOTP metadata. Required Fields: payload.
+     * </pre>
      */
     public void validateBarcode(com.passkit.grpc.CommonObjects.Payload request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
@@ -370,6 +418,9 @@ public final class DistributionGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Distribution.
+   * <pre>
+   * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+   * </pre>
    */
   public static final class DistributionBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DistributionBlockingStub> {
@@ -385,6 +436,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a welcome email to a single recipient using a valid pass protocol (e.g., membership, coupon, ticket). Required Fields: passId or externalId, classId, protocol.
+     * </pre>
      */
     public com.google.protobuf.Empty sendWelcomeEmail(com.passkit.grpc.Distribution.EmailDistributionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Generates and returns an encrypted SmartPass link for a member, coupon, or event ticket based on the request payload. Required Fields: passId or externalId, classId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getSmartPassLink(com.passkit.grpc.Distribution.SmartPassLinkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -399,6 +456,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of fields to be displayed on the data collection page. For the Member protocol, classId is required. Required Fields: classId (only for MEMBERSHIP protocol)
+     * </pre>
      */
     public com.passkit.grpc.Distribution.DataCollectionFields getDataCollectionPageFields(com.passkit.grpc.CommonObjects.ClassObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -406,6 +466,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Accepts a CSV file containing user data and a project short code, processes SmartPass creation, and sends results to the user via email. Required Fields: shortCode, csv contents.
+     * </pre>
      */
     public com.google.protobuf.Empty uploadSmartPassCsv(com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -413,6 +476,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Imports and processes a formatted CSV file for a given protocol (e.g., member, coupon) and creates billable records. Required: classId, protocol, and valid csv contents.
+     * </pre>
      */
     public com.google.protobuf.Empty importProtocolCsv(com.passkit.grpc.Distribution.ImportProtocolRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -420,6 +486,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a time-based one-time password (TOTP) barcode string in the format {{payload}}||{{key}}||{{timestamp}}||{{totp}}. If valid, returns the cleaned payload without TOTP metadata. Required Fields: payload.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Payload validateBarcode(com.passkit.grpc.CommonObjects.Payload request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -429,6 +498,9 @@ public final class DistributionGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Distribution.
+   * <pre>
+   * The PassKit Distribution API allows you to create SmartPass links and manage the distribution of digital passes to your customers via email.
+   * </pre>
    */
   public static final class DistributionFutureStub
       extends io.grpc.stub.AbstractFutureStub<DistributionFutureStub> {
@@ -444,6 +516,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a welcome email to a single recipient using a valid pass protocol (e.g., membership, coupon, ticket). Required Fields: passId or externalId, classId, protocol.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendWelcomeEmail(
         com.passkit.grpc.Distribution.EmailDistributionRequest request) {
@@ -452,6 +527,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Generates and returns an encrypted SmartPass link for a member, coupon, or event ticket based on the request payload. Required Fields: passId or externalId, classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getSmartPassLink(
         com.passkit.grpc.Distribution.SmartPassLinkRequest request) {
@@ -460,6 +538,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of fields to be displayed on the data collection page. For the Member protocol, classId is required. Required Fields: classId (only for MEMBERSHIP protocol)
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.DataCollectionFields> getDataCollectionPageFields(
         com.passkit.grpc.CommonObjects.ClassObjectInput request) {
@@ -468,6 +549,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Accepts a CSV file containing user data and a project short code, processes SmartPass creation, and sends results to the user via email. Required Fields: shortCode, csv contents.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> uploadSmartPassCsv(
         com.passkit.grpc.Distribution.SmartPassCsvUploadRequest request) {
@@ -476,6 +560,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Imports and processes a formatted CSV file for a given protocol (e.g., member, coupon) and creates billable records. Required: classId, protocol, and valid csv contents.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> importProtocolCsv(
         com.passkit.grpc.Distribution.ImportProtocolRequest request) {
@@ -484,6 +571,9 @@ public final class DistributionGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a time-based one-time password (TOTP) barcode string in the format {{payload}}||{{key}}||{{timestamp}}||{{totp}}. If valid, returns the cleaned payload without TOTP metadata. Required Fields: payload.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Payload> validateBarcode(
         com.passkit.grpc.CommonObjects.Payload request) {

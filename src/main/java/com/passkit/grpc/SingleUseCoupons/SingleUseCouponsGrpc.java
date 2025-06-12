@@ -3,6 +3,9 @@ package com.passkit.grpc.SingleUseCoupons;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -990,10 +993,16 @@ public final class SingleUseCouponsGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a new single-use coupon campaign with design, rules, and configuration settings. Required fields: name and status.
+     * </pre>
      */
     default void createCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1001,6 +1010,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the configuration of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     default void updateCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1008,6 +1020,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the details of a specific coupon campaign by id. Required fields: campaignId.
+     * </pre>
      */
     default void getCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1015,6 +1030,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon campaign by id. This also deletes its associated offer and voids all related coupons. Required fields: campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1022,6 +1040,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon campaigns using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponCampaigns call instead  as OR operator is not supported.
+     * </pre>
      */
     default void listCouponCampaignsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1029,6 +1050,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon campaigns with support for filters, sorting, and pagination.
+     * </pre>
      */
     default void listCouponCampaigns(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1036,6 +1060,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns analytics data (e.g., redemptions, activations) for a given coupon campaign. Required fields: classId (e.g. campaignId) and protocol (query parameter).
+     * </pre>
      */
     default void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse> responseObserver) {
@@ -1043,6 +1070,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     default void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1050,6 +1080,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon offer’s settings, visuals, or redemption configuration. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     default void updateCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1057,6 +1090,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the full configuration of a coupon offer by ID. Required fields: offerId.
+     * </pre>
      */
     default void getCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1064,6 +1100,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon offer and invalidates all associated coupons. Required fields: offerId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1071,6 +1110,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon offers using basic filters. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponOffers call instead as OR operator is not supported.
+     * </pre>
      */
     default void listCouponOffersDeprecated(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1078,6 +1120,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon offers with support for filters, sorting, and pagination. Required fields: campaignId.
+     * </pre>
      */
     default void listCouponOffers(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1085,6 +1130,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * </pre>
      */
     default void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1092,6 +1140,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon’s metadata or personalisation. Required fields: coupon id ,or externalId, offerId and campaignId.
+     * </pre>
      */
     default void updateCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1099,6 +1150,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Streams updates for multiple coupons for batch processing.
+     * </pre>
      */
     default io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponUpdates(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1106,6 +1160,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * </pre>
      */
     default void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1113,6 +1170,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the external ID of an existing coupon. Required fields: coupon id , or externalId, newExternalId and campaignId.
+     * </pre>
      */
     default void updateCouponExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1120,6 +1180,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Streams coupon redemptions for batch processing.
+     * </pre>
      */
     default io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponRedemptions(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1127,6 +1190,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon by its PassKit ID. Required fields: couponId.
+     * </pre>
      */
     default void getCouponById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1134,6 +1200,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon using an external ID and campaign ID. Required fields: externalId and couponCampaignId.
+     * </pre>
      */
     default void getCouponByExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1141,6 +1210,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1148,6 +1220,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids multiple coupons matching the given filters. All affected passes are invalidated. Required fields: classId, protocol and filters. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1155,6 +1230,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     default void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1162,6 +1240,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using filters and pagination. Required fields: couponCampaignId.
+     * </pre>
      */
     default void listCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1169,6 +1250,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated countCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     default void countCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1176,6 +1260,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign using advanced filters. Required fields: couponCampaignId.
+     * </pre>
      */
     default void countCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1183,6 +1270,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the personal information of the coupon holder (e.g., name, email). Required fields: couponId, or externalId + classId.
+     * </pre>
      */
     default void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1190,6 +1280,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     default void copyCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1197,6 +1290,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific campaign. Required fields: campaignId.
+     * </pre>
      */
     default void getMetaKeysForCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -1206,6 +1302,9 @@ public final class SingleUseCouponsGrpc {
 
   /**
    * Base class for the server implementation of the service SingleUseCoupons.
+   * <pre>
+   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * </pre>
    */
   public static abstract class SingleUseCouponsImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -1217,6 +1316,9 @@ public final class SingleUseCouponsGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service SingleUseCoupons.
+   * <pre>
+   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * </pre>
    */
   public static final class SingleUseCouponsStub
       extends io.grpc.stub.AbstractAsyncStub<SingleUseCouponsStub> {
@@ -1232,6 +1334,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new single-use coupon campaign with design, rules, and configuration settings. Required fields: name and status.
+     * </pre>
      */
     public void createCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1240,6 +1345,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the configuration of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public void updateCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1248,6 +1356,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the details of a specific coupon campaign by id. Required fields: campaignId.
+     * </pre>
      */
     public void getCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1256,6 +1367,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon campaign by id. This also deletes its associated offer and voids all related coupons. Required fields: campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteCouponCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1264,6 +1378,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon campaigns using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponCampaigns call instead  as OR operator is not supported.
+     * </pre>
      */
     public void listCouponCampaignsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1272,6 +1389,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon campaigns with support for filters, sorting, and pagination.
+     * </pre>
      */
     public void listCouponCampaigns(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> responseObserver) {
@@ -1280,6 +1400,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns analytics data (e.g., redemptions, activations) for a given coupon campaign. Required fields: classId (e.g. campaignId) and protocol (query parameter).
+     * </pre>
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse> responseObserver) {
@@ -1288,6 +1411,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1296,6 +1422,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon offer’s settings, visuals, or redemption configuration. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public void updateCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1304,6 +1433,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the full configuration of a coupon offer by ID. Required fields: offerId.
+     * </pre>
      */
     public void getCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1312,6 +1444,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon offer and invalidates all associated coupons. Required fields: offerId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteCouponOffer(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1320,6 +1455,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon offers using basic filters. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponOffers call instead as OR operator is not supported.
+     * </pre>
      */
     public void listCouponOffersDeprecated(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1328,6 +1466,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon offers with support for filters, sorting, and pagination. Required fields: campaignId.
+     * </pre>
      */
     public void listCouponOffers(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> responseObserver) {
@@ -1336,6 +1477,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * </pre>
      */
     public void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1344,6 +1488,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon’s metadata or personalisation. Required fields: coupon id ,or externalId, offerId and campaignId.
+     * </pre>
      */
     public void updateCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1352,6 +1499,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Streams updates for multiple coupons for batch processing.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponUpdates(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1360,6 +1510,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * </pre>
      */
     public void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1368,6 +1521,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the external ID of an existing coupon. Required fields: coupon id , or externalId, newExternalId and campaignId.
+     * </pre>
      */
     public void updateCouponExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1376,6 +1532,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Streams coupon redemptions for batch processing.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> streamCouponRedemptions(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1384,6 +1543,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon by its PassKit ID. Required fields: couponId.
+     * </pre>
      */
     public void getCouponById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1392,6 +1554,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon using an external ID and campaign ID. Required fields: externalId and couponCampaignId.
+     * </pre>
      */
     public void getCouponByExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1400,6 +1565,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1408,6 +1576,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids multiple coupons matching the given filters. All affected passes are invalidated. Required fields: classId, protocol and filters. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1416,6 +1587,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     public void listCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1424,6 +1598,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using filters and pagination. Required fields: couponCampaignId.
+     * </pre>
      */
     public void listCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> responseObserver) {
@@ -1432,6 +1609,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated countCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     public void countCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1440,6 +1620,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign using advanced filters. Required fields: couponCampaignId.
+     * </pre>
      */
     public void countCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1448,6 +1631,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the personal information of the coupon holder (e.g., name, email). Required fields: couponId, or externalId + classId.
+     * </pre>
      */
     public void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1456,6 +1642,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public void copyCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1464,6 +1653,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific campaign. Required fields: campaignId.
+     * </pre>
      */
     public void getMetaKeysForCampaign(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -1474,6 +1666,9 @@ public final class SingleUseCouponsGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SingleUseCoupons.
+   * <pre>
+   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * </pre>
    */
   public static final class SingleUseCouponsBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SingleUseCouponsBlockingStub> {
@@ -1489,6 +1684,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new single-use coupon campaign with design, rules, and configuration settings. Required fields: name and status.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1496,6 +1694,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the configuration of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign updateCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1503,6 +1704,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the details of a specific coupon campaign by id. Required fields: campaignId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign getCouponCampaign(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1510,6 +1714,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon campaign by id. This also deletes its associated offer and voids all related coupons. Required fields: campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteCouponCampaign(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1517,6 +1724,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon campaigns using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponCampaigns call instead  as OR operator is not supported.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> listCouponCampaignsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1525,6 +1735,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon campaigns with support for filters, sorting, and pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> listCouponCampaigns(
         com.passkit.grpc.Filter.Filters request) {
@@ -1533,6 +1746,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns analytics data (e.g., redemptions, activations) for a given coupon campaign. Required fields: classId (e.g. campaignId) and protocol (query parameter).
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1540,6 +1756,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1547,6 +1766,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon offer’s settings, visuals, or redemption configuration. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer updateCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1554,6 +1776,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the full configuration of a coupon offer by ID. Required fields: offerId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer getCouponOffer(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1561,6 +1786,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon offer and invalidates all associated coupons. Required fields: offerId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteCouponOffer(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1568,6 +1796,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupon offers using basic filters. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponOffers call instead as OR operator is not supported.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> listCouponOffersDeprecated(
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequestDeprecated request) {
@@ -1576,6 +1807,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists coupon offers with support for filters, sorting, and pagination. Required fields: campaignId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> listCouponOffers(
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffersListRequest request) {
@@ -1584,6 +1818,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1591,6 +1828,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon’s metadata or personalisation. Required fields: coupon id ,or externalId, offerId and campaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1598,6 +1838,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1605,6 +1848,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the external ID of an existing coupon. Required fields: coupon id , or externalId, newExternalId and campaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateCouponExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1612,6 +1858,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon by its PassKit ID. Required fields: couponId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon getCouponById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1619,6 +1868,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon using an external ID and campaign ID. Required fields: externalId and couponCampaignId.
+     * </pre>
      */
     public com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon getCouponByExternalId(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1626,6 +1878,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1633,6 +1888,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids multiple coupons matching the given filters. All affected passes are invalidated. Required fields: classId, protocol and filters. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty bulkVoidCoupons(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1640,6 +1898,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using basic pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> listCouponsByCouponCampaignDeprecated(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request) {
@@ -1648,6 +1909,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all coupons for a campaign using filters and pagination. Required fields: couponCampaignId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> listCouponsByCouponCampaign(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request) {
@@ -1656,6 +1920,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated countCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countCouponsByCouponCampaignDeprecated(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1663,6 +1930,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign using advanced filters. Required fields: couponCampaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countCouponsByCouponCampaign(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1670,6 +1940,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the personal information of the coupon holder (e.g., name, email). Required fields: couponId, or externalId + classId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id patchPerson(com.passkit.grpc.Personal.PersonRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1677,6 +1950,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyCouponCampaign(com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1684,6 +1960,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Strings getMetaKeysForCampaign(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1693,6 +1972,9 @@ public final class SingleUseCouponsGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service SingleUseCoupons.
+   * <pre>
+   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * </pre>
    */
   public static final class SingleUseCouponsFutureStub
       extends io.grpc.stub.AbstractFutureStub<SingleUseCouponsFutureStub> {
@@ -1708,6 +1990,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new single-use coupon campaign with design, rules, and configuration settings. Required fields: name and status.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createCouponCampaign(
         com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request) {
@@ -1716,6 +2001,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the configuration of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> updateCouponCampaign(
         com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign request) {
@@ -1724,6 +2012,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the details of a specific coupon campaign by id. Required fields: campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaign> getCouponCampaign(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1732,6 +2023,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon campaign by id. This also deletes its associated offer and voids all related coupons. Required fields: campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCouponCampaign(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1740,6 +2034,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Returns analytics data (e.g., redemptions, activations) for a given coupon campaign. Required fields: classId (e.g. campaignId) and protocol (query parameter).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.Campaign.CouponCampaignAnalyticsResponse> getAnalytics(
         com.passkit.grpc.Reporting.AnalyticsRequest request) {
@@ -1748,6 +2045,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createCouponOffer(
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request) {
@@ -1756,6 +2056,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon offer’s settings, visuals, or redemption configuration. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> updateCouponOffer(
         com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request) {
@@ -1764,6 +2067,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the full configuration of a coupon offer by ID. Required fields: offerId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer> getCouponOffer(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1772,6 +2078,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a coupon offer and invalidates all associated coupons. Required fields: offerId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCouponOffer(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1780,6 +2089,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createCoupon(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1788,6 +2100,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing coupon’s metadata or personalisation. Required fields: coupon id ,or externalId, offerId and campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateCoupon(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1796,6 +2111,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemCoupon(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1804,6 +2122,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the external ID of an existing coupon. Required fields: coupon id , or externalId, newExternalId and campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateCouponExternalId(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.CouponNewExternalIdRequest request) {
@@ -1812,6 +2133,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon by its PassKit ID. Required fields: couponId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> getCouponById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1820,6 +2144,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a coupon using an external ID and campaign ID. Required fields: externalId and couponCampaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon> getCouponByExternalId(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ExternalIdRequest request) {
@@ -1828,6 +2155,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> voidCoupon(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1836,6 +2166,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Voids multiple coupons matching the given filters. All affected passes are invalidated. Required fields: classId, protocol and filters. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkVoidCoupons(
         com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
@@ -1844,6 +2177,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated countCouponsByCouponCampaign call instead as OR operator is not supported.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countCouponsByCouponCampaignDeprecated(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequestDeprecated request) {
@@ -1852,6 +2188,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts all coupons for a campaign using advanced filters. Required fields: couponCampaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countCouponsByCouponCampaign(
         com.passkit.grpc.SingleUseCoupons.CouponOuterClass.ListRequest request) {
@@ -1860,6 +2199,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the personal information of the coupon holder (e.g., name, email). Required fields: couponId, or externalId + classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> patchPerson(
         com.passkit.grpc.Personal.PersonRequest request) {
@@ -1868,6 +2210,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing coupon campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyCouponCampaign(
         com.passkit.grpc.SingleUseCoupons.Campaign.CampaignCopyRequest request) {
@@ -1876,6 +2221,9 @@ public final class SingleUseCouponsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific campaign. Required fields: campaignId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Strings> getMetaKeysForCampaign(
         com.passkit.grpc.CommonObjects.Id request) {

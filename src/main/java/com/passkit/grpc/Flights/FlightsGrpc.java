@@ -3,6 +3,9 @@ package com.passkit.grpc.Flights;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -711,12 +714,15 @@ public final class FlightsGrpc {
   }
 
   /**
+   * <pre>
+   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert.
+     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert. Required Fields: airportCode, cityName, airportName, countryCode, timezone.
      * </pre>
      */
     default void createPort(com.passkit.grpc.Flights.Airport.Port request,
@@ -726,7 +732,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code.
+     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code. Required Fields: airportCode.
      * </pre>
      */
     default void getPort(com.passkit.grpc.Flights.Airport.AirportCode request,
@@ -736,7 +742,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update an airport record.
+     * Update an airport record. Required Fields: airportCode.
      * </pre>
      */
     default void updatePort(com.passkit.grpc.Flights.Airport.Port request,
@@ -746,7 +752,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data.
+     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data. Required Fields: airportCode.
      * </pre>
      */
     default void deletePort(com.passkit.grpc.Flights.Airport.AirportCode request,
@@ -756,7 +762,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record.
+     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     default void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -766,7 +772,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a carrier record.
+     * Retrieve a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     default void getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
@@ -776,7 +782,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a carrier record
+     * Update a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     default void updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -786,7 +792,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a carrier record.
+     * Delete a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     default void deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
@@ -796,7 +802,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records.
+     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records. Required Fields: carrierCode, flightNumber, revision, schedule, origin, destination.
      * </pre>
      */
     default void createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -806,7 +812,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record.
+     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -816,7 +822,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record.
+     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -826,7 +832,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record.
+     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -836,7 +842,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -846,7 +852,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight record.
+     * Retrieve a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
@@ -856,7 +862,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight record.
+     * Update a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -866,7 +872,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight record.
+     * Delete a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
@@ -876,7 +882,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.
+     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     default void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -886,7 +892,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a boarding pass record.
+     * Retrieve a boarding pass record. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     default void getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
@@ -896,7 +902,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id.
+     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     default void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
@@ -906,7 +912,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a boarding pass record.
+     * Update a boarding pass record. Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     default void updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -916,7 +922,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a boarding pass record.
+     * Delete a boarding pass record. Required Fields: ticketNumber or index or passId
      * </pre>
      */
     default void deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
@@ -927,6 +933,9 @@ public final class FlightsGrpc {
 
   /**
    * Base class for the server implementation of the service Flights.
+   * <pre>
+   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * </pre>
    */
   public static abstract class FlightsImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -938,6 +947,9 @@ public final class FlightsGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Flights.
+   * <pre>
+   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * </pre>
    */
   public static final class FlightsStub
       extends io.grpc.stub.AbstractAsyncStub<FlightsStub> {
@@ -954,7 +966,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert.
+     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert. Required Fields: airportCode, cityName, airportName, countryCode, timezone.
      * </pre>
      */
     public void createPort(com.passkit.grpc.Flights.Airport.Port request,
@@ -965,7 +977,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code.
+     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code. Required Fields: airportCode.
      * </pre>
      */
     public void getPort(com.passkit.grpc.Flights.Airport.AirportCode request,
@@ -976,7 +988,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update an airport record.
+     * Update an airport record. Required Fields: airportCode.
      * </pre>
      */
     public void updatePort(com.passkit.grpc.Flights.Airport.Port request,
@@ -987,7 +999,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data.
+     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data. Required Fields: airportCode.
      * </pre>
      */
     public void deletePort(com.passkit.grpc.Flights.Airport.AirportCode request,
@@ -998,7 +1010,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record.
+     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -1009,7 +1021,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a carrier record.
+     * Retrieve a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public void getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
@@ -1020,7 +1032,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a carrier record
+     * Update a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public void updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -1031,7 +1043,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a carrier record.
+     * Delete a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public void deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request,
@@ -1042,7 +1054,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records.
+     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records. Required Fields: carrierCode, flightNumber, revision, schedule, origin, destination.
      * </pre>
      */
     public void createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -1053,7 +1065,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record.
+     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -1064,7 +1076,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record.
+     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -1075,7 +1087,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record.
+     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -1086,7 +1098,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -1097,7 +1109,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight record.
+     * Retrieve a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
@@ -1108,7 +1120,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight record.
+     * Update a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -1119,7 +1131,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight record.
+     * Delete a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request,
@@ -1130,7 +1142,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.
+     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -1141,7 +1153,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a boarding pass record.
+     * Retrieve a boarding pass record. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public void getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
@@ -1152,7 +1164,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id.
+     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
@@ -1163,7 +1175,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a boarding pass record.
+     * Update a boarding pass record. Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public void updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -1174,7 +1186,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a boarding pass record.
+     * Delete a boarding pass record. Required Fields: ticketNumber or index or passId
      * </pre>
      */
     public void deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request,
@@ -1186,6 +1198,9 @@ public final class FlightsGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Flights.
+   * <pre>
+   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * </pre>
    */
   public static final class FlightsBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<FlightsBlockingStub> {
@@ -1202,7 +1217,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert.
+     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert. Required Fields: airportCode, cityName, airportName, countryCode, timezone.
      * </pre>
      */
     public com.google.protobuf.Empty createPort(com.passkit.grpc.Flights.Airport.Port request) {
@@ -1212,7 +1227,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code.
+     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code. Required Fields: airportCode.
      * </pre>
      */
     public com.passkit.grpc.Flights.Airport.Port getPort(com.passkit.grpc.Flights.Airport.AirportCode request) {
@@ -1222,7 +1237,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update an airport record.
+     * Update an airport record. Required Fields: airportCode.
      * </pre>
      */
     public com.passkit.grpc.Flights.Airport.Port updatePort(com.passkit.grpc.Flights.Airport.Port request) {
@@ -1232,7 +1247,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data.
+     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data. Required Fields: airportCode.
      * </pre>
      */
     public com.google.protobuf.Empty deletePort(com.passkit.grpc.Flights.Airport.AirportCode request) {
@@ -1242,7 +1257,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record.
+     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public com.google.protobuf.Empty createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
@@ -1252,7 +1267,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a carrier record.
+     * Retrieve a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.passkit.grpc.Flights.CarrierOuterClass.Carrier getCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
@@ -1262,7 +1277,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a carrier record
+     * Update a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.passkit.grpc.Flights.CarrierOuterClass.Carrier updateCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
@@ -1272,7 +1287,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a carrier record.
+     * Delete a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.google.protobuf.Empty deleteCarrier(com.passkit.grpc.Flights.CarrierOuterClass.CarrierCode request) {
@@ -1282,7 +1297,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records.
+     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records. Required Fields: carrierCode, flightNumber, revision, schedule, origin, destination.
      * </pre>
      */
     public com.google.protobuf.Empty createFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
@@ -1292,7 +1307,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record.
+     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
@@ -1302,7 +1317,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record.
+     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
@@ -1312,7 +1327,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record.
+     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.protobuf.Empty deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
@@ -1322,7 +1337,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.protobuf.Empty createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
@@ -1332,7 +1347,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight record.
+     * Retrieve a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightOuterClass.Flight getFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
@@ -1342,7 +1357,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight record.
+     * Update a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightOuterClass.Flight updateFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
@@ -1352,7 +1367,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight record.
+     * Delete a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.protobuf.Empty deleteFlight(com.passkit.grpc.Flights.FlightOuterClass.FlightRequest request) {
@@ -1362,7 +1377,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.
+     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
@@ -1372,7 +1387,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a boarding pass record.
+     * Retrieve a boarding pass record. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord getBoardingPassRecord(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
@@ -1382,7 +1397,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id.
+     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request) {
@@ -1392,7 +1407,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a boarding pass record.
+     * Update a boarding pass record. Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord updateBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
@@ -1402,7 +1417,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a boarding pass record.
+     * Delete a boarding pass record. Required Fields: ticketNumber or index or passId
      * </pre>
      */
     public com.google.protobuf.Empty deleteBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecordRequest request) {
@@ -1413,6 +1428,9 @@ public final class FlightsGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Flights.
+   * <pre>
+   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * </pre>
    */
   public static final class FlightsFutureStub
       extends io.grpc.stub.AbstractFutureStub<FlightsFutureStub> {
@@ -1429,7 +1447,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert.
+     * Create an airport record. Optional method allowing the carrier to specify how the airport name is rendered in the pass and the GPS location that will trigger a lock-screen alert. Required Fields: airportCode, cityName, airportName, countryCode, timezone.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createPort(
@@ -1440,7 +1458,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code.
+     * Retrieve an airport record. The AirportCode is the three character IATA code or 4 character ICAO code. Required Fields: airportCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.Airport.Port> getPort(
@@ -1451,7 +1469,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update an airport record.
+     * Update an airport record. Required Fields: airportCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.Airport.Port> updatePort(
@@ -1462,7 +1480,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data.
+     * Delete an airport record. Deleting a record will remove any custom data provided. A new Airport record may be automatically created for a flight departing, arriving or transiting an airport which does not have a record, using publicly available data. Required Fields: airportCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePort(
@@ -1473,7 +1491,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record.
+     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createCarrier(
@@ -1484,7 +1502,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a carrier record.
+     * Retrieve a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> getCarrier(
@@ -1495,7 +1513,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a carrier record
+     * Update a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.CarrierOuterClass.Carrier> updateCarrier(
@@ -1506,7 +1524,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a carrier record.
+     * Delete a carrier record. Required Fields: carrierCode.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteCarrier(
@@ -1517,7 +1535,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records.
+     * Create a flight designator record. As much default information as possible should be provided to facilitate the automatic generation of flight records. Required Fields: carrierCode, flightNumber, revision, schedule, origin, destination.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlightDesignator(
@@ -1528,7 +1546,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record.
+     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> getFlightDesignator(
@@ -1539,7 +1557,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record.
+     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> updateFlightDesignator(
@@ -1550,7 +1568,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record.
+     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFlightDesignator(
@@ -1561,7 +1579,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlight(
@@ -1572,7 +1590,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight record.
+     * Retrieve a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightOuterClass.Flight> getFlight(
@@ -1583,7 +1601,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight record.
+     * Update a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightOuterClass.Flight> updateFlight(
@@ -1594,7 +1612,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight record.
+     * Delete a flight record. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFlight(
@@ -1605,7 +1623,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.
+     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> createBoardingPass(
@@ -1616,7 +1634,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a boarding pass record.
+     * Retrieve a boarding pass record. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> getBoardingPassRecord(
@@ -1627,7 +1645,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id.
+     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> getBoardingPass(
@@ -1638,7 +1656,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a boarding pass record.
+     * Update a boarding pass record. Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord> updateBoardingPass(
@@ -1649,7 +1667,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a boarding pass record.
+     * Delete a boarding pass record. Required Fields: ticketNumber or index or passId
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteBoardingPass(

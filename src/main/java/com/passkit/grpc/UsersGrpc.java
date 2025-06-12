@@ -1211,6 +1211,9 @@ public final class UsersGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a user and issues a verification email. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     default void createUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.NewUserResponse> responseObserver) {
@@ -1218,6 +1221,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new user and returns a JWT token. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     default void newUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
@@ -1225,6 +1231,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Verifies the user with the email verification code. Required Fields: code.
+     * </pre>
      */
     default void verify(com.passkit.grpc.User.VerifyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
@@ -1232,6 +1241,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resends the verification email.
+     * </pre>
      */
     default void resendVerificationEmail(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
@@ -1239,6 +1251,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the authenticated user's profile.
+     * </pre>
      */
     default void getUser(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetUserResponse> responseObserver) {
@@ -1246,6 +1261,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Authenticates the user and returns a JWT token. Required Fields: username, password.
+     * </pre>
      */
     default void login(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
@@ -1253,6 +1271,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the barcode image URL for 2FA setup.
+     * </pre>
      */
     default void get2faBarcode(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1260,6 +1281,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resets the user's password if a reset code is already obtained. Required Fields: username, password, code.
+     * </pre>
      */
     default void resetPassword(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1267,6 +1291,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a password reset link to the user's email. Required Fields: username.
+     * </pre>
      */
     default void sendPasswordResetLink(com.passkit.grpc.User.Username request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1274,6 +1301,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes the user's password using a reset token. Required Fields: token, password.
+     * </pre>
      */
     default void changePassword(com.passkit.grpc.User.PasswordResetInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1281,6 +1311,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Initiates email change. Verification email is sent to new address. Required Fields: email.
+     * </pre>
      */
     default void changeEmail(com.passkit.grpc.User.Email request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1288,6 +1321,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Confirms and finalizes the email change. Required Fields: email, code.
+     * </pre>
      */
     default void confirmEmailChange(com.passkit.grpc.User.ConfirmEmailChangeInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1295,6 +1331,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the company name associated with the account. Required Fields: name.
+     * </pre>
      */
     default void updateCompanyName(com.passkit.grpc.User.CompanyName request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1302,6 +1341,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves user’s projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     default void getProjectsForUserQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1309,6 +1351,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all company projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     default void getProjectsQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1316,6 +1361,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves user’s projects using filters. Required Fields: filters.
+     * </pre>
      */
     default void getProjectsForUserQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1323,6 +1371,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects using filters. Required Fields: filters.
+     * </pre>
      */
     default void getProjectsQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1330,6 +1381,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project by its UUID. Required Fields: id.
+     * </pre>
      */
     default void getProjectByUuid(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1337,6 +1391,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project and template using short code. Required Fields: id.
+     * </pre>
      */
     default void getProjectAndTemplateByShortCode(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult> responseObserver) {
@@ -1344,6 +1401,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves projects belonging to a user by status. Required Fields: status.
+     * </pre>
      */
     default void getProjectsForUser(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1351,6 +1411,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects by status. Required Fields: status.
+     * </pre>
      */
     default void getProjects(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1358,6 +1421,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the scanner configuration for the user.
+     * </pre>
      */
     default void getScannerConfig(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
@@ -1365,6 +1431,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     default void createScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1372,6 +1441,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the existing scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     default void updateScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
@@ -1389,6 +1461,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an OAuth2 authorization resource. Required Fields: id.
+     * </pre>
      */
     default void deleteAuthorizationResource(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1396,6 +1471,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Refreshes the API secret key for the current user.
+     * </pre>
      */
     default void refreshApiSecret(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1403,6 +1481,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Permanently deletes the user's account and all associated data. Required Fields: password.
+     * </pre>
      */
     default void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1410,6 +1491,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Immediately revokes any old gRPC credentials.
+     * </pre>
      */
     default void revokeLegacyCredentials(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1418,7 +1502,7 @@ public final class UsersGrpc {
 
     /**
      * <pre>
-     * Team Members
+     * Creates a new sub-user account for the company. Required Fields: email, name, password.
      * </pre>
      */
     default void createTeamMember(com.passkit.grpc.User.NewTeamMember request,
@@ -1427,6 +1511,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Assigns permissions to a new team member. Required Fields: userId, permissions.
+     * </pre>
      */
     default void createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1434,6 +1521,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the entire permissions object for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     default void updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
@@ -1441,6 +1531,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates partial permissions for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     default void patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
@@ -1448,6 +1541,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a team member by ID. Required Fields: id.
+     * </pre>
      */
     default void getTeamMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetTeamMemberResponse> responseObserver) {
@@ -1455,6 +1551,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all team members.
+     * </pre>
      */
     default void getTeamMembers(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ListTeamMembersResponse> responseObserver) {
@@ -1462,6 +1561,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a team member. Required Fields: id.
+     * </pre>
      */
     default void deleteTeamMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1469,6 +1571,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves access logs for a company or user. Required Fields: protocol, classId, userId, dateRange.
+     * </pre>
      */
     default void getTeamMemberLogs(com.passkit.grpc.User.AuditLogRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.AuditLog> responseObserver) {
@@ -1504,6 +1609,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a user and issues a verification email. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public void createUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.NewUserResponse> responseObserver) {
@@ -1512,6 +1620,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new user and returns a JWT token. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public void newUser(com.passkit.grpc.User.NewUser request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
@@ -1520,6 +1631,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Verifies the user with the email verification code. Required Fields: code.
+     * </pre>
      */
     public void verify(com.passkit.grpc.User.VerifyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
@@ -1528,6 +1642,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resends the verification email.
+     * </pre>
      */
     public void resendVerificationEmail(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Boolean> responseObserver) {
@@ -1536,6 +1653,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the authenticated user's profile.
+     * </pre>
      */
     public void getUser(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetUserResponse> responseObserver) {
@@ -1544,6 +1664,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Authenticates the user and returns a JWT token. Required Fields: username, password.
+     * </pre>
      */
     public void login(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
@@ -1552,6 +1675,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the barcode image URL for 2FA setup.
+     * </pre>
      */
     public void get2faBarcode(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1560,6 +1686,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resets the user's password if a reset code is already obtained. Required Fields: username, password, code.
+     * </pre>
      */
     public void resetPassword(com.passkit.grpc.User.Credentials request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1568,6 +1697,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a password reset link to the user's email. Required Fields: username.
+     * </pre>
      */
     public void sendPasswordResetLink(com.passkit.grpc.User.Username request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1576,6 +1708,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes the user's password using a reset token. Required Fields: token, password.
+     * </pre>
      */
     public void changePassword(com.passkit.grpc.User.PasswordResetInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1584,6 +1719,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Initiates email change. Verification email is sent to new address. Required Fields: email.
+     * </pre>
      */
     public void changeEmail(com.passkit.grpc.User.Email request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1592,6 +1730,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Confirms and finalizes the email change. Required Fields: email, code.
+     * </pre>
      */
     public void confirmEmailChange(com.passkit.grpc.User.ConfirmEmailChangeInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1600,6 +1741,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the company name associated with the account. Required Fields: name.
+     * </pre>
      */
     public void updateCompanyName(com.passkit.grpc.User.CompanyName request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1608,6 +1752,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves user’s projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     public void getProjectsForUserQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1616,6 +1763,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all company projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     public void getProjectsQueryDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1624,6 +1774,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves user’s projects using filters. Required Fields: filters.
+     * </pre>
      */
     public void getProjectsForUserQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1632,6 +1785,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects using filters. Required Fields: filters.
+     * </pre>
      */
     public void getProjectsQuery(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1640,6 +1796,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project by its UUID. Required Fields: id.
+     * </pre>
      */
     public void getProjectByUuid(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1648,6 +1807,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project and template using short code. Required Fields: id.
+     * </pre>
      */
     public void getProjectAndTemplateByShortCode(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult> responseObserver) {
@@ -1656,6 +1818,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves projects belonging to a user by status. Required Fields: status.
+     * </pre>
      */
     public void getProjectsForUser(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1664,6 +1829,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects by status. Required Fields: status.
+     * </pre>
      */
     public void getProjects(com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ProjectOuterClass.Project> responseObserver) {
@@ -1672,6 +1840,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the scanner configuration for the user.
+     * </pre>
      */
     public void getScannerConfig(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
@@ -1680,6 +1851,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public void createScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1688,6 +1862,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the existing scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public void updateScannerConfig(com.passkit.grpc.User.ScannerConfiguration request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ScannerConfiguration> responseObserver) {
@@ -1707,6 +1884,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an OAuth2 authorization resource. Required Fields: id.
+     * </pre>
      */
     public void deleteAuthorizationResource(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1715,6 +1895,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Refreshes the API secret key for the current user.
+     * </pre>
      */
     public void refreshApiSecret(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1723,6 +1906,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Permanently deletes the user's account and all associated data. Required Fields: password.
+     * </pre>
      */
     public void deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1731,6 +1917,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Immediately revokes any old gRPC credentials.
+     * </pre>
      */
     public void revokeLegacyCredentials(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1740,7 +1929,7 @@ public final class UsersGrpc {
 
     /**
      * <pre>
-     * Team Members
+     * Creates a new sub-user account for the company. Required Fields: email, name, password.
      * </pre>
      */
     public void createTeamMember(com.passkit.grpc.User.NewTeamMember request,
@@ -1750,6 +1939,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Assigns permissions to a new team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public void createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1758,6 +1950,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the entire permissions object for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public void updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
@@ -1766,6 +1961,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates partial permissions for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public void patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.TeamMemberPermissions> responseObserver) {
@@ -1774,6 +1972,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a team member by ID. Required Fields: id.
+     * </pre>
      */
     public void getTeamMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.GetTeamMemberResponse> responseObserver) {
@@ -1782,6 +1983,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all team members.
+     * </pre>
      */
     public void getTeamMembers(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.ListTeamMembersResponse> responseObserver) {
@@ -1790,6 +1994,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a team member. Required Fields: id.
+     * </pre>
      */
     public void deleteTeamMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1798,6 +2005,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves access logs for a company or user. Required Fields: protocol, classId, userId, dateRange.
+     * </pre>
      */
     public void getTeamMemberLogs(com.passkit.grpc.User.AuditLogRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.User.AuditLog> responseObserver) {
@@ -1823,6 +2033,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a user and issues a verification email. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public com.passkit.grpc.User.NewUserResponse createUser(com.passkit.grpc.User.NewUser request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1830,6 +2043,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new user and returns a JWT token. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public com.passkit.grpc.User.JWT newUser(com.passkit.grpc.User.NewUser request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1837,6 +2053,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Verifies the user with the email verification code. Required Fields: code.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Boolean verify(com.passkit.grpc.User.VerifyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1844,6 +2063,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resends the verification email.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Boolean resendVerificationEmail(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1851,6 +2073,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the authenticated user's profile.
+     * </pre>
      */
     public com.passkit.grpc.User.GetUserResponse getUser(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1858,6 +2083,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Authenticates the user and returns a JWT token. Required Fields: username, password.
+     * </pre>
      */
     public com.passkit.grpc.User.JWT login(com.passkit.grpc.User.Credentials request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1865,6 +2093,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the barcode image URL for 2FA setup.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url get2faBarcode(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1872,6 +2103,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resets the user's password if a reset code is already obtained. Required Fields: username, password, code.
+     * </pre>
      */
     public com.google.protobuf.Empty resetPassword(com.passkit.grpc.User.Credentials request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1879,6 +2113,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a password reset link to the user's email. Required Fields: username.
+     * </pre>
      */
     public com.google.protobuf.Empty sendPasswordResetLink(com.passkit.grpc.User.Username request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1886,6 +2123,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes the user's password using a reset token. Required Fields: token, password.
+     * </pre>
      */
     public com.google.protobuf.Empty changePassword(com.passkit.grpc.User.PasswordResetInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1893,6 +2133,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Initiates email change. Verification email is sent to new address. Required Fields: email.
+     * </pre>
      */
     public com.google.protobuf.Empty changeEmail(com.passkit.grpc.User.Email request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1900,6 +2143,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Confirms and finalizes the email change. Required Fields: email, code.
+     * </pre>
      */
     public com.google.protobuf.Empty confirmEmailChange(com.passkit.grpc.User.ConfirmEmailChangeInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1907,6 +2153,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the company name associated with the account. Required Fields: name.
+     * </pre>
      */
     public com.google.protobuf.Empty updateCompanyName(com.passkit.grpc.User.CompanyName request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1914,6 +2163,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves user’s projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjectsForUserQueryDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1922,6 +2174,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all company projects using pagination. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjectsQueryDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1930,6 +2185,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves user’s projects using filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjectsForUserQuery(
         com.passkit.grpc.Filter.Filters request) {
@@ -1938,6 +2196,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects using filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjectsQuery(
         com.passkit.grpc.Filter.Filters request) {
@@ -1946,6 +2207,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project by its UUID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.ProjectOuterClass.Project getProjectByUuid(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1953,6 +2217,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project and template using short code. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult getProjectAndTemplateByShortCode(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1960,6 +2227,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves projects belonging to a user by status. Required Fields: status.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjectsForUser(
         com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request) {
@@ -1968,6 +2238,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company projects by status. Required Fields: status.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ProjectOuterClass.Project> getProjects(
         com.passkit.grpc.ProjectOuterClass.ProjectStatusFilter request) {
@@ -1976,6 +2249,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the scanner configuration for the user.
+     * </pre>
      */
     public com.passkit.grpc.User.ScannerConfiguration getScannerConfig(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1983,6 +2259,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public com.google.protobuf.Empty createScannerConfig(com.passkit.grpc.User.ScannerConfiguration request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1990,6 +2269,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the existing scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public com.passkit.grpc.User.ScannerConfiguration updateScannerConfig(com.passkit.grpc.User.ScannerConfiguration request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2007,6 +2289,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an OAuth2 authorization resource. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteAuthorizationResource(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2014,6 +2299,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Refreshes the API secret key for the current user.
+     * </pre>
      */
     public com.google.protobuf.Empty refreshApiSecret(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2021,6 +2309,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Permanently deletes the user's account and all associated data. Required Fields: password.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteAccount(com.passkit.grpc.User.DeleteAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2028,6 +2319,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Immediately revokes any old gRPC credentials.
+     * </pre>
      */
     public com.google.protobuf.Empty revokeLegacyCredentials(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2036,7 +2330,7 @@ public final class UsersGrpc {
 
     /**
      * <pre>
-     * Team Members
+     * Creates a new sub-user account for the company. Required Fields: email, name, password.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTeamMember(com.passkit.grpc.User.NewTeamMember request) {
@@ -2045,6 +2339,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Assigns permissions to a new team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createPermissionsForTeamMember(com.passkit.grpc.User.TeamMemberPermissions request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2052,6 +2349,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the entire permissions object for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.passkit.grpc.User.TeamMemberPermissions updateTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2059,6 +2359,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates partial permissions for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.passkit.grpc.User.TeamMemberPermissions patchTeamMemberPermissions(com.passkit.grpc.User.TeamMemberPermissions request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2066,6 +2369,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a team member by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.User.GetTeamMemberResponse getTeamMember(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2073,6 +2379,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all team members.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.User.ListTeamMembersResponse> getTeamMembers(
         com.google.protobuf.Empty request) {
@@ -2081,6 +2390,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a team member. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTeamMember(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2088,6 +2400,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves access logs for a company or user. Required Fields: protocol, classId, userId, dateRange.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.User.AuditLog> getTeamMemberLogs(
         com.passkit.grpc.User.AuditLogRequest request) {
@@ -2113,6 +2428,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a user and issues a verification email. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.NewUserResponse> createUser(
         com.passkit.grpc.User.NewUser request) {
@@ -2121,6 +2439,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new user and returns a JWT token. Required Fields: email, password, name, companyName.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.JWT> newUser(
         com.passkit.grpc.User.NewUser request) {
@@ -2129,6 +2450,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Verifies the user with the email verification code. Required Fields: code.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Boolean> verify(
         com.passkit.grpc.User.VerifyRequest request) {
@@ -2137,6 +2461,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resends the verification email.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Boolean> resendVerificationEmail(
         com.google.protobuf.Empty request) {
@@ -2145,6 +2472,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the authenticated user's profile.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.GetUserResponse> getUser(
         com.google.protobuf.Empty request) {
@@ -2153,6 +2483,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Authenticates the user and returns a JWT token. Required Fields: username, password.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.JWT> login(
         com.passkit.grpc.User.Credentials request) {
@@ -2161,6 +2494,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the barcode image URL for 2FA setup.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> get2faBarcode(
         com.google.protobuf.Empty request) {
@@ -2169,6 +2505,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Resets the user's password if a reset code is already obtained. Required Fields: username, password, code.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> resetPassword(
         com.passkit.grpc.User.Credentials request) {
@@ -2177,6 +2516,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a password reset link to the user's email. Required Fields: username.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> sendPasswordResetLink(
         com.passkit.grpc.User.Username request) {
@@ -2185,6 +2527,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes the user's password using a reset token. Required Fields: token, password.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> changePassword(
         com.passkit.grpc.User.PasswordResetInput request) {
@@ -2193,6 +2538,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Initiates email change. Verification email is sent to new address. Required Fields: email.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> changeEmail(
         com.passkit.grpc.User.Email request) {
@@ -2201,6 +2549,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Confirms and finalizes the email change. Required Fields: email, code.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> confirmEmailChange(
         com.passkit.grpc.User.ConfirmEmailChangeInput request) {
@@ -2209,6 +2560,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the company name associated with the account. Required Fields: name.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateCompanyName(
         com.passkit.grpc.User.CompanyName request) {
@@ -2217,6 +2571,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project by its UUID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ProjectOuterClass.Project> getProjectByUuid(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2225,6 +2582,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a project and template using short code. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ProjectOuterClass.ProjectByShortCodeResult> getProjectAndTemplateByShortCode(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2233,6 +2593,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the scanner configuration for the user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.ScannerConfiguration> getScannerConfig(
         com.google.protobuf.Empty request) {
@@ -2241,6 +2604,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createScannerConfig(
         com.passkit.grpc.User.ScannerConfiguration request) {
@@ -2249,6 +2615,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the existing scanner configuration. Required Fields: ScannerConfiguration fields.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.ScannerConfiguration> updateScannerConfig(
         com.passkit.grpc.User.ScannerConfiguration request) {
@@ -2268,6 +2637,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an OAuth2 authorization resource. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteAuthorizationResource(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2276,6 +2648,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Refreshes the API secret key for the current user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> refreshApiSecret(
         com.google.protobuf.Empty request) {
@@ -2284,6 +2659,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Permanently deletes the user's account and all associated data. Required Fields: password.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteAccount(
         com.passkit.grpc.User.DeleteAccountRequest request) {
@@ -2292,6 +2670,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Immediately revokes any old gRPC credentials.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> revokeLegacyCredentials(
         com.google.protobuf.Empty request) {
@@ -2301,7 +2682,7 @@ public final class UsersGrpc {
 
     /**
      * <pre>
-     * Team Members
+     * Creates a new sub-user account for the company. Required Fields: email, name, password.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTeamMember(
@@ -2311,6 +2692,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Assigns permissions to a new team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPermissionsForTeamMember(
         com.passkit.grpc.User.TeamMemberPermissions request) {
@@ -2319,6 +2703,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the entire permissions object for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.TeamMemberPermissions> updateTeamMemberPermissions(
         com.passkit.grpc.User.TeamMemberPermissions request) {
@@ -2327,6 +2714,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates partial permissions for a team member. Required Fields: userId, permissions.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.TeamMemberPermissions> patchTeamMemberPermissions(
         com.passkit.grpc.User.TeamMemberPermissions request) {
@@ -2335,6 +2725,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a team member by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.GetTeamMemberResponse> getTeamMember(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2343,6 +2736,9 @@ public final class UsersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a team member. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTeamMember(
         com.passkit.grpc.CommonObjects.Id request) {

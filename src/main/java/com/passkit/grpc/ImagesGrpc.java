@@ -3,6 +3,9 @@ package com.passkit.grpc;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -773,10 +776,16 @@ public final class ImagesGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Set the profile image for the logged in user. Required Fields: imageData.
+     * </pre>
      */
     default void setProfileImage(com.passkit.grpc.Image.ProfileImageInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -784,6 +793,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Get the profile image URL for the logged in user.
+     * </pre>
      */
     default void getProfileImage(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -791,6 +803,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates one or more images. Image data is provided in base64. Required Fields: name, imageData.
+     * </pre>
      */
     default void createImages(com.passkit.grpc.Image.CreateImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageIds> responseObserver) {
@@ -798,6 +813,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an image record's metadata. Required Fields: id.
+     * </pre>
      */
     default void updateImage(com.passkit.grpc.Image.UpdateImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -805,6 +823,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an image URL by its ID. Required Fields: id.
+     * </pre>
      */
     default void getImageURL(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -812,6 +833,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a stamp image URL with the supplied stamp status. Required Fields: id and status.
+     * </pre>
      */
     default void getStampImageURL(com.passkit.grpc.Image.StampImageRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -819,6 +843,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the configuration of a stamp image. Required Fields: id.
+     * </pre>
      */
     default void getStampImageConfig(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImageConfig> responseObserver) {
@@ -826,6 +853,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a stamp image configuration. Required Fields: id and config fields.
+     * </pre>
      */
     default void updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -833,6 +863,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Gets a preview image of the provided stamp image configuration. Required Fields: stampImageConfig and status.
+     * </pre>
      */
     default void getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImagePreview> responseObserver) {
@@ -840,6 +873,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a localized image URL for a specific language. Required Fields: iD and languageCode.
+     * </pre>
      */
     default void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -847,6 +883,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a profile image URL by a specific ID. Required Fields: id.
+     * </pre>
      */
     default void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -855,7 +894,7 @@ public final class ImagesGrpc {
 
     /**
      * <pre>
-     * returns a zip bundle containing all images for that ID
+     * Retrieves an image bundle (ZIP) containing all images for the given ID. Required Fields: id.
      * </pre>
      */
     default void getImageBundle(com.passkit.grpc.CommonObjects.Id request,
@@ -864,6 +903,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves metadata for an image record. Required: id.
+     * </pre>
      */
     default void getImageData(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -871,6 +913,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an image record. Required: id.
+     * </pre>
      */
     default void deleteImage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -878,6 +923,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a localized version of an image. Required Fields: id and language code.
+     * </pre>
      */
     default void deleteLocalizedImage(com.passkit.grpc.Image.LocalizedImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -885,6 +933,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all user-owned images using pagination.
+     * </pre>
      */
     default void listImagesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -892,6 +943,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the user account using filters. Required Fields: filters.
+     * </pre>
      */
     default void listImagesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -899,6 +953,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all images available to the company.
+     * </pre>
      */
     default void listImagesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -906,6 +963,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the company using filters. Required Fields: filters.
+     * </pre>
      */
     default void listImages(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -913,6 +973,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of all images available to the user.
+     * </pre>
      */
     default void countImagesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -920,6 +983,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of all images available to the user using filters.
+     * </pre>
      */
     default void countImages(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -927,6 +993,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of images stored under the user's account.
+     * </pre>
      */
     default void countImagesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -934,6 +1003,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of images stored under the user's account using filters.
+     * </pre>
      */
     default void countImagesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -943,6 +1015,9 @@ public final class ImagesGrpc {
 
   /**
    * Base class for the server implementation of the service Images.
+   * <pre>
+   * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+   * </pre>
    */
   public static abstract class ImagesImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -954,6 +1029,9 @@ public final class ImagesGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Images.
+   * <pre>
+   * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+   * </pre>
    */
   public static final class ImagesStub
       extends io.grpc.stub.AbstractAsyncStub<ImagesStub> {
@@ -969,6 +1047,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Set the profile image for the logged in user. Required Fields: imageData.
+     * </pre>
      */
     public void setProfileImage(com.passkit.grpc.Image.ProfileImageInput request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -977,6 +1058,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Get the profile image URL for the logged in user.
+     * </pre>
      */
     public void getProfileImage(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -985,6 +1069,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates one or more images. Image data is provided in base64. Required Fields: name, imageData.
+     * </pre>
      */
     public void createImages(com.passkit.grpc.Image.CreateImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageIds> responseObserver) {
@@ -993,6 +1080,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an image record's metadata. Required Fields: id.
+     * </pre>
      */
     public void updateImage(com.passkit.grpc.Image.UpdateImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1001,6 +1091,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an image URL by its ID. Required Fields: id.
+     * </pre>
      */
     public void getImageURL(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1009,6 +1102,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a stamp image URL with the supplied stamp status. Required Fields: id and status.
+     * </pre>
      */
     public void getStampImageURL(com.passkit.grpc.Image.StampImageRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1017,6 +1113,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the configuration of a stamp image. Required Fields: id.
+     * </pre>
      */
     public void getStampImageConfig(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImageConfig> responseObserver) {
@@ -1025,6 +1124,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a stamp image configuration. Required Fields: id and config fields.
+     * </pre>
      */
     public void updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1033,6 +1135,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Gets a preview image of the provided stamp image configuration. Required Fields: stampImageConfig and status.
+     * </pre>
      */
     public void getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.StampImagePreview> responseObserver) {
@@ -1041,6 +1146,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a localized image URL for a specific language. Required Fields: iD and languageCode.
+     * </pre>
      */
     public void getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1049,6 +1157,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a profile image URL by a specific ID. Required Fields: id.
+     * </pre>
      */
     public void getProfileImageById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Url> responseObserver) {
@@ -1058,7 +1169,7 @@ public final class ImagesGrpc {
 
     /**
      * <pre>
-     * returns a zip bundle containing all images for that ID
+     * Retrieves an image bundle (ZIP) containing all images for the given ID. Required Fields: id.
      * </pre>
      */
     public void getImageBundle(com.passkit.grpc.CommonObjects.Id request,
@@ -1068,6 +1179,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves metadata for an image record. Required: id.
+     * </pre>
      */
     public void getImageData(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1076,6 +1190,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an image record. Required: id.
+     * </pre>
      */
     public void deleteImage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1084,6 +1201,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a localized version of an image. Required Fields: id and language code.
+     * </pre>
      */
     public void deleteLocalizedImage(com.passkit.grpc.Image.LocalizedImageInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1092,6 +1212,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all user-owned images using pagination.
+     * </pre>
      */
     public void listImagesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1100,6 +1223,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the user account using filters. Required Fields: filters.
+     * </pre>
      */
     public void listImagesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1108,6 +1234,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all images available to the company.
+     * </pre>
      */
     public void listImagesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1116,6 +1245,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the company using filters. Required Fields: filters.
+     * </pre>
      */
     public void listImages(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Image.ImageRecord> responseObserver) {
@@ -1124,6 +1256,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of all images available to the user.
+     * </pre>
      */
     public void countImagesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1132,6 +1267,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of all images available to the user using filters.
+     * </pre>
      */
     public void countImages(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1140,6 +1278,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of images stored under the user's account.
+     * </pre>
      */
     public void countImagesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1148,6 +1289,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of images stored under the user's account using filters.
+     * </pre>
      */
     public void countImagesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1158,6 +1302,9 @@ public final class ImagesGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Images.
+   * <pre>
+   * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+   * </pre>
    */
   public static final class ImagesBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ImagesBlockingStub> {
@@ -1173,6 +1320,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Set the profile image for the logged in user. Required Fields: imageData.
+     * </pre>
      */
     public com.google.protobuf.Empty setProfileImage(com.passkit.grpc.Image.ProfileImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1180,6 +1330,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Get the profile image URL for the logged in user.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getProfileImage(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1187,6 +1340,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates one or more images. Image data is provided in base64. Required Fields: name, imageData.
+     * </pre>
      */
     public com.passkit.grpc.Image.ImageIds createImages(com.passkit.grpc.Image.CreateImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1194,6 +1350,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an image record's metadata. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Image.ImageRecord updateImage(com.passkit.grpc.Image.UpdateImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1201,6 +1360,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an image URL by its ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getImageURL(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1208,6 +1370,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a stamp image URL with the supplied stamp status. Required Fields: id and status.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getStampImageURL(com.passkit.grpc.Image.StampImageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1215,6 +1380,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the configuration of a stamp image. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Image.StampImageConfig getStampImageConfig(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1222,6 +1390,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a stamp image configuration. Required Fields: id and config fields.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateStampImageConfig(com.passkit.grpc.Image.StampImageConfig request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1229,6 +1400,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Gets a preview image of the provided stamp image configuration. Required Fields: stampImageConfig and status.
+     * </pre>
      */
     public com.passkit.grpc.Image.StampImagePreview getStampImagePreview(com.passkit.grpc.Image.StampImagePreviewRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1236,6 +1410,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a localized image URL for a specific language. Required Fields: iD and languageCode.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getLocalizedImageURL(com.passkit.grpc.Image.LocalizedImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1243,6 +1420,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a profile image URL by a specific ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Url getProfileImageById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1251,7 +1431,7 @@ public final class ImagesGrpc {
 
     /**
      * <pre>
-     * returns a zip bundle containing all images for that ID
+     * Retrieves an image bundle (ZIP) containing all images for the given ID. Required Fields: id.
      * </pre>
      */
     public com.passkit.grpc.Image.ImageBundle getImageBundle(com.passkit.grpc.CommonObjects.Id request) {
@@ -1260,6 +1440,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves metadata for an image record. Required: id.
+     * </pre>
      */
     public com.passkit.grpc.Image.ImageRecord getImageData(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1267,6 +1450,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an image record. Required: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteImage(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1274,6 +1460,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a localized version of an image. Required Fields: id and language code.
+     * </pre>
      */
     public com.passkit.grpc.Image.ImageRecord deleteLocalizedImage(com.passkit.grpc.Image.LocalizedImageInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1281,6 +1470,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all user-owned images using pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Image.ImageRecord> listImagesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1289,6 +1481,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the user account using filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Image.ImageRecord> listImagesForUser(
         com.passkit.grpc.Filter.Filters request) {
@@ -1297,6 +1492,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Retrieves all images available to the company.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Image.ImageRecord> listImagesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1305,6 +1503,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all images stored under the company using filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Image.ImageRecord> listImages(
         com.passkit.grpc.Filter.Filters request) {
@@ -1313,6 +1514,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of all images available to the user.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countImagesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1320,6 +1524,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of all images available to the user using filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countImages(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1327,6 +1534,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of images stored under the user's account.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countImagesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1334,6 +1544,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of images stored under the user's account using filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countImagesForUser(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -1343,6 +1556,9 @@ public final class ImagesGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Images.
+   * <pre>
+   * The PassKit Images API lets you manage your image assets for Apple Wallet, Google Wallet and the data collection pages.
+   * </pre>
    */
   public static final class ImagesFutureStub
       extends io.grpc.stub.AbstractFutureStub<ImagesFutureStub> {
@@ -1358,6 +1574,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Set the profile image for the logged in user. Required Fields: imageData.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> setProfileImage(
         com.passkit.grpc.Image.ProfileImageInput request) {
@@ -1366,6 +1585,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Get the profile image URL for the logged in user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getProfileImage(
         com.google.protobuf.Empty request) {
@@ -1374,6 +1596,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates one or more images. Image data is provided in base64. Required Fields: name, imageData.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.ImageIds> createImages(
         com.passkit.grpc.Image.CreateImageInput request) {
@@ -1382,6 +1607,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an image record's metadata. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.ImageRecord> updateImage(
         com.passkit.grpc.Image.UpdateImageInput request) {
@@ -1390,6 +1618,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an image URL by its ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getImageURL(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1398,6 +1629,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a stamp image URL with the supplied stamp status. Required Fields: id and status.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getStampImageURL(
         com.passkit.grpc.Image.StampImageRequest request) {
@@ -1406,6 +1640,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the configuration of a stamp image. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.StampImageConfig> getStampImageConfig(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1414,6 +1651,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a stamp image configuration. Required Fields: id and config fields.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateStampImageConfig(
         com.passkit.grpc.Image.StampImageConfig request) {
@@ -1422,6 +1662,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Gets a preview image of the provided stamp image configuration. Required Fields: stampImageConfig and status.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.StampImagePreview> getStampImagePreview(
         com.passkit.grpc.Image.StampImagePreviewRequest request) {
@@ -1430,6 +1673,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a localized image URL for a specific language. Required Fields: iD and languageCode.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getLocalizedImageURL(
         com.passkit.grpc.Image.LocalizedImageInput request) {
@@ -1438,6 +1684,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a profile image URL by a specific ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Url> getProfileImageById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1447,7 +1696,7 @@ public final class ImagesGrpc {
 
     /**
      * <pre>
-     * returns a zip bundle containing all images for that ID
+     * Retrieves an image bundle (ZIP) containing all images for the given ID. Required Fields: id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.ImageBundle> getImageBundle(
@@ -1457,6 +1706,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves metadata for an image record. Required: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.ImageRecord> getImageData(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1465,6 +1717,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an image record. Required: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteImage(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -1473,6 +1728,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a localized version of an image. Required Fields: id and language code.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Image.ImageRecord> deleteLocalizedImage(
         com.passkit.grpc.Image.LocalizedImageInput request) {
@@ -1481,6 +1739,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of all images available to the user.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countImagesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1489,6 +1750,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of all images available to the user using filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countImages(
         com.passkit.grpc.Filter.Filters request) {
@@ -1497,6 +1761,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED] Returns the count of images stored under the user's account.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countImagesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -1505,6 +1772,9 @@ public final class ImagesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of images stored under the user's account using filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countImagesForUser(
         com.passkit.grpc.Filter.Filters request) {

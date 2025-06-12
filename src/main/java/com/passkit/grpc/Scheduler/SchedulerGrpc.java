@@ -3,6 +3,9 @@ package com.passkit.grpc.Scheduler;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -277,10 +280,16 @@ public final class SchedulerGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a scheduling job. Required Fields: scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     default void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -288,6 +297,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a scheduling job by its ID. If the job has been deleted, only history logs will be returned. Required Fields: id.
+     * </pre>
      */
     default void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob> responseObserver) {
@@ -295,6 +307,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing scheduling job. The full SchedulingJob object must be supplied. Empty/null fields will overwrite existing data. Required Fields: id, scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     default void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -302,6 +317,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Patch updates a scheduling job. Only supplied fields will be updated. Required Fields: id.
+     * </pre>
      */
     default void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -309,6 +327,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a scheduling job by ID. History logs remain available after deletion. Required Fields: id.
+     * </pre>
      */
     default void deleteSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -316,6 +337,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a specific scheduling job history log by ID. Required Fields: id.
+     * </pre>
      */
     default void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
@@ -323,6 +347,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all history logs for a given scheduling job. Required Fields: jobId.
+     * </pre>
      */
     default void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
@@ -332,6 +359,9 @@ public final class SchedulerGrpc {
 
   /**
    * Base class for the server implementation of the service Scheduler.
+   * <pre>
+   * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+   * </pre>
    */
   public static abstract class SchedulerImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -343,6 +373,9 @@ public final class SchedulerGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Scheduler.
+   * <pre>
+   * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+   * </pre>
    */
   public static final class SchedulerStub
       extends io.grpc.stub.AbstractAsyncStub<SchedulerStub> {
@@ -358,6 +391,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a scheduling job. Required Fields: scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public void createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -366,6 +402,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a scheduling job by its ID. If the job has been deleted, only history logs will be returned. Required Fields: id.
+     * </pre>
      */
     public void getSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJob> responseObserver) {
@@ -374,6 +413,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing scheduling job. The full SchedulingJob object must be supplied. Empty/null fields will overwrite existing data. Required Fields: id, scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public void updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -382,6 +424,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Patch updates a scheduling job. Only supplied fields will be updated. Required Fields: id.
+     * </pre>
      */
     public void patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> responseObserver) {
@@ -390,6 +435,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a scheduling job by ID. History logs remain available after deletion. Required Fields: id.
+     * </pre>
      */
     public void deleteSchedulingJob(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -398,6 +446,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a specific scheduling job history log by ID. Required Fields: id.
+     * </pre>
      */
     public void getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
@@ -406,6 +457,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all history logs for a given scheduling job. Required Fields: jobId.
+     * </pre>
      */
     public void listSchedulingJobHistories(com.passkit.grpc.Scheduler.Scheduler.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.ct.Scheduler.JobHistory> responseObserver) {
@@ -416,6 +470,9 @@ public final class SchedulerGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Scheduler.
+   * <pre>
+   * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+   * </pre>
    */
   public static final class SchedulerBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SchedulerBlockingStub> {
@@ -431,6 +488,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a scheduling job. Required Fields: scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse createSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -438,6 +498,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a scheduling job by its ID. If the job has been deleted, only history logs will be returned. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.ct.Scheduler.SchedulingJob getSchedulingJob(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -445,6 +508,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing scheduling job. The full SchedulingJob object must be supplied. Empty/null fields will overwrite existing data. Required Fields: id, scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse updateSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -452,6 +518,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Patch updates a scheduling job. Only supplied fields will be updated. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.ct.Scheduler.SchedulingJobResponse patchSchedulingJob(com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -459,6 +528,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a scheduling job by ID. History logs remain available after deletion. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteSchedulingJob(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -466,6 +538,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a specific scheduling job history log by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.ct.Scheduler.JobHistory getSchedulingJobHistory(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -473,6 +548,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all history logs for a given scheduling job. Required Fields: jobId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.ct.Scheduler.JobHistory> listSchedulingJobHistories(
         com.passkit.grpc.Scheduler.Scheduler.ListRequest request) {
@@ -483,6 +561,9 @@ public final class SchedulerGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Scheduler.
+   * <pre>
+   * The PassKit Scheduler API allows you to automate tasks within your PassKit programs. This API allows you to schedule one-time or recurring jobs that interact with other PassKit APIs.
+   * </pre>
    */
   public static final class SchedulerFutureStub
       extends io.grpc.stub.AbstractFutureStub<SchedulerFutureStub> {
@@ -498,6 +579,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a scheduling job. Required Fields: scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> createSchedulingJob(
         com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
@@ -506,6 +590,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a scheduling job by its ID. If the job has been deleted, only history logs will be returned. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJob> getSchedulingJob(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -514,6 +601,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing scheduling job. The full SchedulingJob object must be supplied. Empty/null fields will overwrite existing data. Required Fields: id, scheduleType, protocol, classId, jobName, scheduledTime, timezone.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> updateSchedulingJob(
         com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
@@ -522,6 +612,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Patch updates a scheduling job. Only supplied fields will be updated. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.SchedulingJobResponse> patchSchedulingJob(
         com.passkit.grpc.ct.Scheduler.SchedulingJob request) {
@@ -530,6 +623,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a scheduling job by ID. History logs remain available after deletion. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteSchedulingJob(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -538,6 +634,9 @@ public final class SchedulerGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a specific scheduling job history log by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.ct.Scheduler.JobHistory> getSchedulingJobHistory(
         com.passkit.grpc.CommonObjects.Id request) {

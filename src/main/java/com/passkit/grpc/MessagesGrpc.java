@@ -219,6 +219,9 @@ public final class MessagesGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Retrieves a single message by its ID. Required Fields: id.
+     * </pre>
      */
     default void getMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
@@ -226,6 +229,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new message that can be linked to a pass or class. Required Fields: id.
+     * </pre>
      */
     default void createMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -233,6 +239,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing message by ID. Required Fields: id.
+     * </pre>
      */
     default void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -240,6 +249,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a message by its ID. Required Fields: id. Note: Deleting a message removes it from all linked passes.
+     * </pre>
      */
     default void deleteMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -247,6 +259,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a message to specified pass IDs or to all passes in a class. Required: passId, protocol.
+     * </pre>
      */
     default void sendMessage(com.passkit.grpc.MessageOuterClass.SendMessageRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.SendMessageResponse> responseObserver) {
@@ -282,6 +297,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single message by its ID. Required Fields: id.
+     * </pre>
      */
     public void getMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
@@ -290,6 +308,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new message that can be linked to a pass or class. Required Fields: id.
+     * </pre>
      */
     public void createMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -298,6 +319,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing message by ID. Required Fields: id.
+     * </pre>
      */
     public void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -306,6 +330,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a message by its ID. Required Fields: id. Note: Deleting a message removes it from all linked passes.
+     * </pre>
      */
     public void deleteMessage(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -314,6 +341,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a message to specified pass IDs or to all passes in a class. Required: passId, protocol.
+     * </pre>
      */
     public void sendMessage(com.passkit.grpc.MessageOuterClass.SendMessageRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.SendMessageResponse> responseObserver) {
@@ -339,6 +369,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single message by its ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.MessageOuterClass.Message getMessage(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -346,6 +379,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new message that can be linked to a pass or class. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createMessage(com.passkit.grpc.MessageOuterClass.Message request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -353,6 +389,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing message by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty updateMessage(com.passkit.grpc.MessageOuterClass.Message request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -360,6 +399,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a message by its ID. Required Fields: id. Note: Deleting a message removes it from all linked passes.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteMessage(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -367,6 +409,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a message to specified pass IDs or to all passes in a class. Required: passId, protocol.
+     * </pre>
      */
     public com.passkit.grpc.MessageOuterClass.SendMessageResponse sendMessage(com.passkit.grpc.MessageOuterClass.SendMessageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -391,6 +436,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single message by its ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.MessageOuterClass.Message> getMessage(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -399,6 +447,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new message that can be linked to a pass or class. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createMessage(
         com.passkit.grpc.MessageOuterClass.Message request) {
@@ -407,6 +458,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing message by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateMessage(
         com.passkit.grpc.MessageOuterClass.Message request) {
@@ -415,6 +469,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a message by its ID. Required Fields: id. Note: Deleting a message removes it from all linked passes.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMessage(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -423,6 +480,9 @@ public final class MessagesGrpc {
     }
 
     /**
+     * <pre>
+     * Sends a message to specified pass IDs or to all passes in a class. Required: passId, protocol.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.MessageOuterClass.SendMessageResponse> sendMessage(
         com.passkit.grpc.MessageOuterClass.SendMessageRequest request) {

@@ -3,6 +3,9 @@ package com.passkit.grpc;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -1331,10 +1334,16 @@ public final class TemplatesGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * </pre>
      */
     default void createTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1342,6 +1351,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing pass template. Required Fields: id
+     * </pre>
      */
     default void updateTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
@@ -1349,6 +1361,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a pass template by ID. Required Fields: id
+     * </pre>
      */
     default void getTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1356,6 +1371,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the default pass template for a given protocol and revision. Required Fields: protocol, revision
+     * </pre>
      */
     default void getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
@@ -1363,6 +1381,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing pass template and returns a new ID. Required Fields: id
+     * </pre>
      */
     default void copyTemplate(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1370,6 +1391,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a pass template. Required Fields: id
+     * </pre>
      */
     default void deleteTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1377,6 +1401,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all user-owned pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     default void listTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1384,6 +1411,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     default void listTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1391,6 +1421,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     default void listTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1398,6 +1431,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     default void listTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1405,6 +1441,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     default void countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1412,6 +1451,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     default void countTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1419,6 +1461,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     default void countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1426,6 +1471,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     default void countTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1433,6 +1481,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new location object. Required Fields: latitude, longitude, message.
+     * </pre>
      */
     default void createLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1440,6 +1491,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing location. Required Fields: id.
+     * </pre>
      */
     default void updateLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1447,6 +1501,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single location by ID. Required Fields: id.
+     * </pre>
      */
     default void getLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1454,6 +1511,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Lists all location objects matching filters. Required Fields: pagination.
+     * </pre>
      */
     default void listLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1461,6 +1521,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all location objects matching filters. Required Fields: filters.
+     * </pre>
      */
     default void listLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1468,6 +1531,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a location record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     default void copyLocation(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1475,6 +1541,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a location object. Required Fields: id.
+     * </pre>
      */
     default void deleteLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1482,6 +1551,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of locations that match the supplied criteria. Required: pagination.
+     * </pre>
      */
     default void countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1489,6 +1561,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of location records that match the supplied filters. Required: filters.
+     * </pre>
      */
     default void countLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1496,6 +1571,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new beacon object. Required Fields: proximityUUID, lockscreenMessage.
+     * </pre>
      */
     default void createBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1503,6 +1581,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing beacon object. Required Fields: id.
+     * </pre>
      */
     default void updateBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1510,6 +1591,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single beacon by ID. Required Fields: id.
+     * </pre>
      */
     default void getBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1517,6 +1601,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves beacon objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     default void listBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1524,6 +1611,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all beacon objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     default void listBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1531,6 +1621,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a beacon record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     default void copyBeacon(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1538,6 +1631,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a beacon object. Required Fields: id.
+     * </pre>
      */
     default void deleteBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1545,6 +1641,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of beacons that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     default void countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1552,6 +1651,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of beacons that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     default void countBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1559,6 +1661,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new link object. Required Fields: url, title, type.
+     * </pre>
      */
     default void createLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1566,6 +1671,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing link object. Required Fields: id.
+     * </pre>
      */
     default void updateLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1573,6 +1681,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single link by ID. Required Fields: id.
+     * </pre>
      */
     default void getLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1580,6 +1691,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves links objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     default void listLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1587,6 +1701,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all link objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     default void listLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1594,6 +1711,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a link record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     default void copyLink(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1601,6 +1721,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a link object. Required Fields: id.
+     * </pre>
      */
     default void deleteLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1608,6 +1731,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of links that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     default void countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1615,6 +1741,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of links that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     default void countLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1624,6 +1753,9 @@ public final class TemplatesGrpc {
 
   /**
    * Base class for the server implementation of the service Templates.
+   * <pre>
+   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * </pre>
    */
   public static abstract class TemplatesImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -1635,6 +1767,9 @@ public final class TemplatesGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Templates.
+   * <pre>
+   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * </pre>
    */
   public static final class TemplatesStub
       extends io.grpc.stub.AbstractAsyncStub<TemplatesStub> {
@@ -1650,6 +1785,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * </pre>
      */
     public void createTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1658,6 +1796,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing pass template. Required Fields: id
+     * </pre>
      */
     public void updateTemplate(com.passkit.grpc.Template.PassTemplate request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
@@ -1666,6 +1807,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a pass template by ID. Required Fields: id
+     * </pre>
      */
     public void getTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1674,6 +1818,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the default pass template for a given protocol and revision. Required Fields: protocol, revision
+     * </pre>
      */
     public void getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplate> responseObserver) {
@@ -1682,6 +1829,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing pass template and returns a new ID. Required Fields: id
+     * </pre>
      */
     public void copyTemplate(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1690,6 +1840,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a pass template. Required Fields: id
+     * </pre>
      */
     public void deleteTemplate(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1698,6 +1851,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all user-owned pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public void listTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1706,6 +1862,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public void listTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1714,6 +1873,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public void listTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1722,6 +1884,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public void listTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Template.PassTemplateResponse> responseObserver) {
@@ -1730,6 +1895,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public void countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1738,6 +1906,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public void countTemplates(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1746,6 +1917,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public void countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1754,6 +1928,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public void countTemplatesForUser(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1762,6 +1939,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new location object. Required Fields: latitude, longitude, message.
+     * </pre>
      */
     public void createLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1770,6 +1950,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing location. Required Fields: id.
+     * </pre>
      */
     public void updateLocation(com.passkit.grpc.Proximity.GPSLocation request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1778,6 +1961,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single location by ID. Required Fields: id.
+     * </pre>
      */
     public void getLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1786,6 +1972,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Lists all location objects matching filters. Required Fields: pagination.
+     * </pre>
      */
     public void listLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1794,6 +1983,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all location objects matching filters. Required Fields: filters.
+     * </pre>
      */
     public void listLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.GPSLocation> responseObserver) {
@@ -1802,6 +1994,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a location record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public void copyLocation(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1810,6 +2005,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a location object. Required Fields: id.
+     * </pre>
      */
     public void deleteLocation(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1818,6 +2016,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of locations that match the supplied criteria. Required: pagination.
+     * </pre>
      */
     public void countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1826,6 +2027,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of location records that match the supplied filters. Required: filters.
+     * </pre>
      */
     public void countLocations(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1834,6 +2038,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new beacon object. Required Fields: proximityUUID, lockscreenMessage.
+     * </pre>
      */
     public void createBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1842,6 +2049,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing beacon object. Required Fields: id.
+     * </pre>
      */
     public void updateBeacon(com.passkit.grpc.Proximity.Beacon request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1850,6 +2060,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single beacon by ID. Required Fields: id.
+     * </pre>
      */
     public void getBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1858,6 +2071,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves beacon objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public void listBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1866,6 +2082,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all beacon objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     public void listBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Proximity.Beacon> responseObserver) {
@@ -1874,6 +2093,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a beacon record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public void copyBeacon(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1882,6 +2104,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a beacon object. Required Fields: id.
+     * </pre>
      */
     public void deleteBeacon(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1890,6 +2115,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of beacons that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public void countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1898,6 +2126,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of beacons that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public void countBeacons(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1906,6 +2137,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new link object. Required Fields: url, title, type.
+     * </pre>
      */
     public void createLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1914,6 +2148,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing link object. Required Fields: id.
+     * </pre>
      */
     public void updateLink(com.passkit.grpc.Links.Link request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1922,6 +2159,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single link by ID. Required Fields: id.
+     * </pre>
      */
     public void getLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1930,6 +2170,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves links objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public void listLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1938,6 +2181,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all link objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     public void listLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Links.Link> responseObserver) {
@@ -1946,6 +2192,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a link record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public void copyLink(com.passkit.grpc.Template.CopyObjectInput request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1954,6 +2203,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a link object. Required Fields: id.
+     * </pre>
      */
     public void deleteLink(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1962,6 +2214,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of links that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public void countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1970,6 +2225,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of links that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public void countLinks(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1980,6 +2238,9 @@ public final class TemplatesGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Templates.
+   * <pre>
+   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * </pre>
    */
   public static final class TemplatesBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TemplatesBlockingStub> {
@@ -1995,6 +2256,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTemplate(com.passkit.grpc.Template.PassTemplate request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2002,6 +2266,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing pass template. Required Fields: id
+     * </pre>
      */
     public com.passkit.grpc.Template.PassTemplate updateTemplate(com.passkit.grpc.Template.PassTemplate request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2009,6 +2276,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a pass template by ID. Required Fields: id
+     * </pre>
      */
     public com.passkit.grpc.Template.PassTemplateResponse getTemplate(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2016,6 +2286,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the default pass template for a given protocol and revision. Required Fields: protocol, revision
+     * </pre>
      */
     public com.passkit.grpc.Template.PassTemplate getDefaultTemplate(com.passkit.grpc.Template.DefaultTemplateRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2023,6 +2296,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing pass template and returns a new ID. Required Fields: id
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyTemplate(com.passkit.grpc.Template.CopyObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2030,6 +2306,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a pass template. Required Fields: id
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTemplate(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2037,6 +2316,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all user-owned pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2045,6 +2327,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesForUser(
         com.passkit.grpc.Filter.Filters request) {
@@ -2053,6 +2338,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves all company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2061,6 +2349,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves all company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Template.PassTemplateResponse> listTemplates(
         com.passkit.grpc.Filter.Filters request) {
@@ -2069,6 +2360,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2076,6 +2370,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countTemplates(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2083,6 +2380,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesForUserDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2090,6 +2390,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countTemplatesForUser(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2097,6 +2400,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new location object. Required Fields: latitude, longitude, message.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createLocation(com.passkit.grpc.Proximity.GPSLocation request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2104,6 +2410,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing location. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Proximity.GPSLocation updateLocation(com.passkit.grpc.Proximity.GPSLocation request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2111,6 +2420,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single location by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Proximity.GPSLocation getLocation(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2118,6 +2430,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Lists all location objects matching filters. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.GPSLocation> listLocationsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2126,6 +2441,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all location objects matching filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.GPSLocation> listLocations(
         com.passkit.grpc.Filter.Filters request) {
@@ -2134,6 +2452,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a location record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyLocation(com.passkit.grpc.Template.CopyObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2141,6 +2462,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a location object. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteLocation(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2148,6 +2472,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of locations that match the supplied criteria. Required: pagination.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countLocationsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2155,6 +2482,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of location records that match the supplied filters. Required: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countLocations(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2162,6 +2492,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new beacon object. Required Fields: proximityUUID, lockscreenMessage.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createBeacon(com.passkit.grpc.Proximity.Beacon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2169,6 +2502,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing beacon object. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Proximity.Beacon updateBeacon(com.passkit.grpc.Proximity.Beacon request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2176,6 +2512,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single beacon by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Proximity.Beacon getBeacon(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2183,6 +2522,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves beacon objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.Beacon> listBeaconsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2191,6 +2533,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all beacon objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Proximity.Beacon> listBeacons(
         com.passkit.grpc.Filter.Filters request) {
@@ -2199,6 +2544,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a beacon record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyBeacon(com.passkit.grpc.Template.CopyObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2206,6 +2554,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a beacon object. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteBeacon(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2213,6 +2564,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of beacons that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countBeaconsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2220,6 +2574,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of beacons that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countBeacons(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2227,6 +2584,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new link object. Required Fields: url, title, type.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createLink(com.passkit.grpc.Links.Link request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2234,6 +2594,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing link object. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Links.Link updateLink(com.passkit.grpc.Links.Link request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2241,6 +2604,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single link by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Links.Link getLink(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2248,6 +2614,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves links objects that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Links.Link> listLinksDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2256,6 +2625,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all link objects that match the provided filters. Required Fields: filters.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Links.Link> listLinks(
         com.passkit.grpc.Filter.Filters request) {
@@ -2264,6 +2636,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a link record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyLink(com.passkit.grpc.Template.CopyObjectInput request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2271,6 +2646,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a link object. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteLink(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2278,6 +2656,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of links that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countLinksDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2285,6 +2666,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of links that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countLinks(com.passkit.grpc.Filter.Filters request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2294,6 +2678,9 @@ public final class TemplatesGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Templates.
+   * <pre>
+   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * </pre>
    */
   public static final class TemplatesFutureStub
       extends io.grpc.stub.AbstractFutureStub<TemplatesFutureStub> {
@@ -2309,6 +2696,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTemplate(
         com.passkit.grpc.Template.PassTemplate request) {
@@ -2317,6 +2707,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing pass template. Required Fields: id
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplate> updateTemplate(
         com.passkit.grpc.Template.PassTemplate request) {
@@ -2325,6 +2718,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a pass template by ID. Required Fields: id
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplateResponse> getTemplate(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2333,6 +2729,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the default pass template for a given protocol and revision. Required Fields: protocol, revision
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Template.PassTemplate> getDefaultTemplate(
         com.passkit.grpc.Template.DefaultTemplateRequest request) {
@@ -2341,6 +2740,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing pass template and returns a new ID. Required Fields: id
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyTemplate(
         com.passkit.grpc.Template.CopyObjectInput request) {
@@ -2349,6 +2751,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a pass template. Required Fields: id
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTemplate(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2357,6 +2762,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of company-wide pass templates matching filters. Required Fields: pagination.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2365,6 +2773,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of company-wide pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplates(
         com.passkit.grpc.Filter.Filters request) {
@@ -2373,6 +2784,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesForUserDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2381,6 +2795,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a count of user-owned pass templates matching filters. Required Fields: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTemplatesForUser(
         com.passkit.grpc.Filter.Filters request) {
@@ -2389,6 +2806,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new location object. Required Fields: latitude, longitude, message.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createLocation(
         com.passkit.grpc.Proximity.GPSLocation request) {
@@ -2397,6 +2817,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing location. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.GPSLocation> updateLocation(
         com.passkit.grpc.Proximity.GPSLocation request) {
@@ -2405,6 +2828,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single location by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.GPSLocation> getLocation(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2413,6 +2839,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a location record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyLocation(
         com.passkit.grpc.Template.CopyObjectInput request) {
@@ -2421,6 +2850,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a location object. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteLocation(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2429,6 +2861,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of locations that match the supplied criteria. Required: pagination.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLocationsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2437,6 +2872,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of location records that match the supplied filters. Required: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLocations(
         com.passkit.grpc.Filter.Filters request) {
@@ -2445,6 +2883,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new beacon object. Required Fields: proximityUUID, lockscreenMessage.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createBeacon(
         com.passkit.grpc.Proximity.Beacon request) {
@@ -2453,6 +2894,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing beacon object. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.Beacon> updateBeacon(
         com.passkit.grpc.Proximity.Beacon request) {
@@ -2461,6 +2905,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single beacon by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Proximity.Beacon> getBeacon(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2469,6 +2916,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a beacon record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyBeacon(
         com.passkit.grpc.Template.CopyObjectInput request) {
@@ -2477,6 +2927,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a beacon object. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteBeacon(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2485,6 +2938,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of beacons that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countBeaconsDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2493,6 +2949,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of beacons that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countBeacons(
         com.passkit.grpc.Filter.Filters request) {
@@ -2501,6 +2960,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new link object. Required Fields: url, title, type.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createLink(
         com.passkit.grpc.Links.Link request) {
@@ -2509,6 +2971,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing link object. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Links.Link> updateLink(
         com.passkit.grpc.Links.Link request) {
@@ -2517,6 +2982,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a single link by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Links.Link> getLink(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2525,6 +2993,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Copies a link record and returns a new ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyLink(
         com.passkit.grpc.Template.CopyObjectInput request) {
@@ -2533,6 +3004,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a link object. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteLink(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2541,6 +3015,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * [DEPRECATED: OR operator is not supported] Retrieves a count of links that match the supplied criteria. Required Fields: pagination.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLinksDeprecated(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2549,6 +3026,9 @@ public final class TemplatesGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the count of links that match the supplied filters. Required Fields: filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countLinks(
         com.passkit.grpc.Filter.Filters request) {

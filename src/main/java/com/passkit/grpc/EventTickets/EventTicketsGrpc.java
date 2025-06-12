@@ -3,6 +3,9 @@ package com.passkit.grpc.EventTickets;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -1424,10 +1427,16 @@ public final class EventTicketsGrpc {
   }
 
   /**
+   * <pre>
+   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a new Production record. Required fields: name.
+     * </pre>
      */
     default void createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1435,6 +1444,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Production. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     default void patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1442,6 +1454,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Production. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     default void updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1449,6 +1464,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Production by ID. Required fields: id.
+     * </pre>
      */
     default void getProduction(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1456,6 +1474,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Production and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1463,6 +1484,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Productions for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     default void listProductions(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1470,6 +1494,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves analytics for a specific Production. Required fields: classId and protocol.
+     * </pre>
      */
     default void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> responseObserver) {
@@ -1477,6 +1504,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing Production. Required fields: id.
+     * </pre>
      */
     default void copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1484,6 +1514,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Venue record. Required fields: name and address.
+     * </pre>
      */
     default void createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1491,6 +1524,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Venue. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     default void updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1498,6 +1534,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Venue. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     default void patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1505,6 +1544,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Venue by ID. Required fields: id.
+     * </pre>
      */
     default void getVenueById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1512,6 +1554,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Venue and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1519,6 +1564,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Venues for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     default void listVenues(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1526,6 +1574,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * </pre>
      */
     default void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1533,6 +1584,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Event. Required fields: id and all required fields are required. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     default void updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1540,6 +1594,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Event. Required fields: id and fields to update. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     default void patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1547,6 +1604,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by ID. Required fields: id.
+     * </pre>
      */
     default void getEventById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1554,6 +1614,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by start date and venue. Required fields: productionId, venueId, startDate.
+     * </pre>
      */
     default void getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1561,6 +1624,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an Event and all associated Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1568,6 +1634,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists Events for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     default void listEvents(com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> responseObserver) {
@@ -1575,6 +1644,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Ticket Type. Required fields: name, productionId and beforeRedeemPassTemplateId.
+     * </pre>
      */
     default void createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1582,6 +1654,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId and all required fields are required. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     default void updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1589,6 +1664,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId fields to update. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     default void patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1596,6 +1674,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by ID. Required fields: id.
+     * </pre>
      */
     default void getTicketTypeById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1603,6 +1684,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by User Defined ID. Required fields: productionId, uid.
+     * </pre>
      */
     default void getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1610,6 +1694,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket Type and all associated Tickets. Required fields: id, or productionId and uid. Use with caution, as this action is irreversible.
+     * </pre>
      */
     default void deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1617,6 +1704,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Ticket Types for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     default void listTicketTypes(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1624,6 +1714,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * </pre>
      */
     default void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1631,6 +1724,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by User Defined IDs. Required fields: productionUid, venueUid, ticketTypeUid, event.startDate and ticket.ticketNumber.
+     * </pre>
      */
     default void issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> responseObserver) {
@@ -1638,6 +1734,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     default void updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1645,6 +1744,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates personal information for a ticket holder. Required fields: ticketId or (ticketNumber + productionId), person.
+     * </pre>
      */
     default void patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1652,6 +1754,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     default void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> responseObserver) {
@@ -1659,6 +1764,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     default void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1666,6 +1774,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems multiple Tickets by order number. Required fields: productionid or productionUid, and orderNumber.
+     * </pre>
      */
     default void redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Ids> responseObserver) {
@@ -1673,6 +1784,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ID. Required fields: id.
+     * </pre>
      */
     default void getTicketById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
@@ -1680,6 +1794,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ticket number. Required fields: productionId and ticketNumber.
+     * </pre>
      */
     default void getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
@@ -1687,6 +1804,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves Tickets by order number. Required fields: productionId and orderNumber.
+     * </pre>
      */
     default void getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> responseObserver) {
@@ -1694,6 +1814,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * </pre>
      */
     default void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.PassBundles> responseObserver) {
@@ -1701,6 +1824,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     default void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1708,6 +1834,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple Tickets using a filter. Required fields: classId, protocol and filters.
+     * </pre>
      */
     default void bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1715,6 +1844,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes Tickets by order number. Required fields: productionId or productionUid and orderNumber.
+     * </pre>
      */
     default void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1722,6 +1854,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Tickets for a Production. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     default void listTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> responseObserver) {
@@ -1729,6 +1864,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of Tickets matching the filter. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     default void countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1738,6 +1876,9 @@ public final class EventTicketsGrpc {
 
   /**
    * Base class for the server implementation of the service EventTickets.
+   * <pre>
+   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * </pre>
    */
   public static abstract class EventTicketsImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -1749,6 +1890,9 @@ public final class EventTicketsGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service EventTickets.
+   * <pre>
+   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * </pre>
    */
   public static final class EventTicketsStub
       extends io.grpc.stub.AbstractAsyncStub<EventTicketsStub> {
@@ -1764,6 +1908,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Production record. Required fields: name.
+     * </pre>
      */
     public void createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1772,6 +1919,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Production. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public void patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1780,6 +1930,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Production. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public void updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1788,6 +1941,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Production by ID. Required fields: id.
+     * </pre>
      */
     public void getProduction(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1796,6 +1952,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Production and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1804,6 +1963,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Productions for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public void listProductions(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> responseObserver) {
@@ -1812,6 +1974,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves analytics for a specific Production. Required fields: classId and protocol.
+     * </pre>
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> responseObserver) {
@@ -1820,6 +1985,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing Production. Required fields: id.
+     * </pre>
      */
     public void copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1828,6 +1996,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Venue record. Required fields: name and address.
+     * </pre>
      */
     public void createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1836,6 +2007,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Venue. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public void updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1844,6 +2018,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Venue. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public void patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1852,6 +2029,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Venue by ID. Required fields: id.
+     * </pre>
      */
     public void getVenueById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1860,6 +2040,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Venue and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1868,6 +2051,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Venues for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public void listVenues(com.passkit.grpc.Filter.Filters request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> responseObserver) {
@@ -1876,6 +2062,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * </pre>
      */
     public void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1884,6 +2073,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Event. Required fields: id and all required fields are required. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public void updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1892,6 +2084,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Event. Required fields: id and fields to update. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public void patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1900,6 +2095,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by ID. Required fields: id.
+     * </pre>
      */
     public void getEventById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1908,6 +2106,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by start date and venue. Required fields: productionId, venueId, startDate.
+     * </pre>
      */
     public void getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.Event> responseObserver) {
@@ -1916,6 +2117,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an Event and all associated Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1924,6 +2128,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists Events for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public void listEvents(com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> responseObserver) {
@@ -1932,6 +2139,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Ticket Type. Required fields: name, productionId and beforeRedeemPassTemplateId.
+     * </pre>
      */
     public void createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1940,6 +2150,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId and all required fields are required. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public void updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1948,6 +2161,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId fields to update. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public void patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1956,6 +2172,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by ID. Required fields: id.
+     * </pre>
      */
     public void getTicketTypeById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1964,6 +2183,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by User Defined ID. Required fields: productionId, uid.
+     * </pre>
      */
     public void getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1972,6 +2194,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket Type and all associated Tickets. Required fields: id, or productionId and uid. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public void deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1980,6 +2205,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Ticket Types for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public void listTicketTypes(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> responseObserver) {
@@ -1988,6 +2216,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * </pre>
      */
     public void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1996,6 +2227,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by User Defined IDs. Required fields: productionUid, venueUid, ticketTypeUid, event.startDate and ticket.ticketNumber.
+     * </pre>
      */
     public void issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> responseObserver) {
@@ -2004,6 +2238,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public void updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2012,6 +2249,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates personal information for a ticket holder. Required fields: ticketId or (ticketNumber + productionId), person.
+     * </pre>
      */
     public void patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2020,6 +2260,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> responseObserver) {
@@ -2028,6 +2271,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2036,6 +2282,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems multiple Tickets by order number. Required fields: productionid or productionUid, and orderNumber.
+     * </pre>
      */
     public void redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Ids> responseObserver) {
@@ -2044,6 +2293,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ID. Required fields: id.
+     * </pre>
      */
     public void getTicketById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
@@ -2052,6 +2304,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ticket number. Required fields: productionId and ticketNumber.
+     * </pre>
      */
     public void getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> responseObserver) {
@@ -2060,6 +2315,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves Tickets by order number. Required fields: productionId and orderNumber.
+     * </pre>
      */
     public void getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> responseObserver) {
@@ -2068,6 +2326,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * </pre>
      */
     public void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.PassBundles> responseObserver) {
@@ -2076,6 +2337,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public void deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2084,6 +2348,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple Tickets using a filter. Required fields: classId, protocol and filters.
+     * </pre>
      */
     public void bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2092,6 +2359,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes Tickets by order number. Required fields: productionId or productionUid and orderNumber.
+     * </pre>
      */
     public void deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2100,6 +2370,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Tickets for a Production. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     public void listTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> responseObserver) {
@@ -2108,6 +2381,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of Tickets matching the filter. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     public void countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -2118,6 +2394,9 @@ public final class EventTicketsGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service EventTickets.
+   * <pre>
+   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * </pre>
    */
   public static final class EventTicketsBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<EventTicketsBlockingStub> {
@@ -2133,6 +2412,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Production record. Required fields: name.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2140,6 +2422,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Production. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production patchProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2147,6 +2432,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Production. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production updateProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2154,6 +2442,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Production by ID. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.Production getProduction(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2161,6 +2452,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Production and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2168,6 +2462,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Productions for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> listProductions(
         com.passkit.grpc.Filter.Filters request) {
@@ -2176,6 +2473,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves analytics for a specific Production. Required fields: classId and protocol.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2183,6 +2483,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing Production. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyProduction(com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2190,6 +2493,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Venue record. Required fields: name and address.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2197,6 +2503,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Venue. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue updateVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2204,6 +2513,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Venue. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue patchVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2211,6 +2523,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Venue by ID. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.VenueOuterClass.Venue getVenueById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2218,6 +2533,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Venue and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteVenue(com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2225,6 +2543,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Venues for the authenticated user. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> listVenues(
         com.passkit.grpc.Filter.Filters request) {
@@ -2233,6 +2554,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2240,6 +2564,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Event. Required fields: id and all required fields are required. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event updateEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2247,6 +2574,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Event. Required fields: id and fields to update. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event patchEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2254,6 +2584,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by ID. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event getEventById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2261,6 +2594,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by start date and venue. Required fields: productionId, venueId, startDate.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.EventOuterClass.Event getEventByStartDateAndVenue(com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2268,6 +2604,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an Event and all associated Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2275,6 +2614,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists Events for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.EventOuterClass.EventListResponse> listEvents(
         com.passkit.grpc.EventTickets.EventOuterClass.EventListRequest request) {
@@ -2283,6 +2625,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Ticket Type. Required fields: name, productionId and beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2290,6 +2635,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId and all required fields are required. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType updateTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2297,6 +2645,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId fields to update. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType patchTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2304,6 +2655,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by ID. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType getTicketTypeById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2311,6 +2665,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by User Defined ID. Required fields: productionId, uid.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType getTicketTypeByUserDefinedId(com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2318,6 +2675,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket Type and all associated Tickets. Required fields: id, or productionId and uid. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTicketType(com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2325,6 +2685,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Ticket Types for a Production. Required fields: productionId. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> listTicketTypes(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketTypeListRequest request) {
@@ -2333,6 +2696,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2340,6 +2706,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by User Defined IDs. Required fields: productionUid, venueUid, ticketTypeUid, event.startDate and ticket.ticketNumber.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds issueTicketById(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2347,6 +2716,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2354,6 +2726,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates personal information for a ticket holder. Required fields: ticketId or (ticketNumber + productionId), person.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id patchPerson(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2361,6 +2736,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2368,6 +2746,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2375,6 +2756,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems multiple Tickets by order number. Required fields: productionid or productionUid, and orderNumber.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Ids redeemTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2382,6 +2766,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ID. Required fields: id.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicketById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2389,6 +2776,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ticket number. Required fields: productionId and ticketNumber.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Ticket getTicketByTicketNumber(com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2396,6 +2786,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves Tickets by order number. Required fields: productionId and orderNumber.
+     * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.Tickets getTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2403,6 +2796,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.PassBundles getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2410,6 +2806,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTicket(com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2417,6 +2816,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple Tickets using a filter. Required fields: classId, protocol and filters.
+     * </pre>
      */
     public com.google.protobuf.Empty bulkDeleteTickets(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2424,6 +2826,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes Tickets by order number. Required fields: productionId or productionUid and orderNumber.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteTicketsByOrderNumber(com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2431,6 +2836,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all Tickets for a Production. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.EventTickets.TicketOuterClass.TicketLimitedFields> listTickets(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {
@@ -2439,6 +2847,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of Tickets matching the filter. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countTickets(com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2448,6 +2859,9 @@ public final class EventTicketsGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service EventTickets.
+   * <pre>
+   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * </pre>
    */
   public static final class EventTicketsFutureStub
       extends io.grpc.stub.AbstractFutureStub<EventTicketsFutureStub> {
@@ -2463,6 +2877,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Production record. Required fields: name.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
@@ -2471,6 +2888,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Production. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> patchProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
@@ -2479,6 +2899,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Production. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Production.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> updateProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
@@ -2487,6 +2910,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Production by ID. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.Production> getProduction(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2495,6 +2921,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Production and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.Production request) {
@@ -2503,6 +2932,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves analytics for a specific Production. Required fields: classId and protocol.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionAnalyticsResponse> getAnalytics(
         com.passkit.grpc.Reporting.AnalyticsRequest request) {
@@ -2511,6 +2943,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a copy of an existing Production. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyProduction(
         com.passkit.grpc.EventTickets.ProductionOuterClass.ProductionCopyRequest request) {
@@ -2519,6 +2954,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Venue record. Required fields: name and address.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
@@ -2527,6 +2965,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Venue. Required fields: id and all required fields are required. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> updateVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
@@ -2535,6 +2976,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Venue. Required fields: id and fields to update. Note: changes will update and affect all existing Events &amp; Tickets related to this Venue.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> patchVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
@@ -2543,6 +2987,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Venue by ID. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.VenueOuterClass.Venue> getVenueById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2551,6 +2998,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Venue and all associated Events and Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteVenue(
         com.passkit.grpc.EventTickets.VenueOuterClass.Venue request) {
@@ -2559,6 +3009,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
@@ -2567,6 +3020,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Event. Required fields: id and all required fields are required. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> updateEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
@@ -2575,6 +3031,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Event. Required fields: id and fields to update. Note: changes will update &amp; affect all existing tickets related to this event. Production and Venue cannot be changed from this endpoint.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> patchEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
@@ -2583,6 +3042,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by ID. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> getEventById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2591,6 +3053,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves an Event by start date and venue. Required fields: productionId, venueId, startDate.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.EventOuterClass.Event> getEventByStartDateAndVenue(
         com.passkit.grpc.EventTickets.EventOuterClass.GetEventRequest request) {
@@ -2599,6 +3064,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes an Event and all associated Tickets. Required fields: id. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteEvent(
         com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
@@ -2607,6 +3075,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Ticket Type. Required fields: name, productionId and beforeRedeemPassTemplateId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
@@ -2615,6 +3086,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Fully updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId and all required fields are required. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> updateTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
@@ -2623,6 +3097,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Partially updates an existing Ticket Type. Required fields: name, productionId, beforeRedeemPassTemplateId fields to update. Note: changes will update &amp; affect all existing Tickets related to this Ticket Type.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> patchTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
@@ -2631,6 +3108,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by ID. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> getTicketTypeById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2639,6 +3119,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket Type by User Defined ID. Required fields: productionId, uid.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType> getTicketTypeByUserDefinedId(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.GetByUidRequest request) {
@@ -2647,6 +3130,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket Type and all associated Tickets. Required fields: id, or productionId and uid. Use with caution, as this action is irreversible.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicketType(
         com.passkit.grpc.EventTickets.TicketTypeOuterClass.TicketType request) {
@@ -2655,6 +3141,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> issueTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request) {
@@ -2663,6 +3152,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Issues a new Ticket by User Defined IDs. Required fields: productionUid, venueUid, ticketTypeUid, event.startDate and ticket.ticketNumber.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketResponseIds> issueTicketById(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
@@ -2671,6 +3163,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.Ticket request) {
@@ -2679,6 +3174,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Updates personal information for a ticket holder. Required fields: ticketId or (ticketNumber + productionId), person.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> patchPerson(
         com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPerson request) {
@@ -2687,6 +3185,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> validateTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request) {
@@ -2695,6 +3196,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request) {
@@ -2703,6 +3207,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Redeems multiple Tickets by order number. Required fields: productionid or productionUid, and orderNumber.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Ids> redeemTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.RedeemByOrderNumber request) {
@@ -2711,6 +3218,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ID. Required fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> getTicketById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2719,6 +3229,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Ticket by ticket number. Required fields: productionId and ticketNumber.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Ticket> getTicketByTicketNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketNumberRequest request) {
@@ -2727,6 +3240,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves Tickets by order number. Required fields: productionId and orderNumber.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.Tickets> getTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
@@ -2735,6 +3251,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.PassBundles> getEventTicketPass(
         com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request) {
@@ -2743,6 +3262,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Ticket. Required fields: id or (ticketNumber + productionId).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicket(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketId request) {
@@ -2751,6 +3273,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple Tickets using a filter. Required fields: classId, protocol and filters.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkDeleteTickets(
         com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
@@ -2759,6 +3284,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes Tickets by order number. Required fields: productionId or productionUid and orderNumber.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTicketsByOrderNumber(
         com.passkit.grpc.EventTickets.TicketOuterClass.OrderNumberRequest request) {
@@ -2767,6 +3295,9 @@ public final class EventTicketsGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of Tickets matching the filter. Required fields: productionId + ticketTypeId + eventId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countTickets(
         com.passkit.grpc.EventTickets.TicketOuterClass.TicketListRequest request) {

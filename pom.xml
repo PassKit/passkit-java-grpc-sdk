@@ -3,7 +3,7 @@
     <groupId>com.passkit.grpc</groupId>
     <artifactId>sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.124-SNAPSHOT</version>
+    <version>1.1.135-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -112,23 +112,23 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>4.29.2</version>
+            <version>4.31.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>com.engine</groupId>
             <artifactId>grpc-ecosystem-protoc-gen-openapiv2</artifactId>
-            <version>0.0.1-pre.1</version>
+            <version>0.0.1-pre.2</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
-            <version>1.70.0</version>
+            <version>1.73.0</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
-            <version>1.70.0</version>
+            <version>1.73.0</version>
         </dependency>
         <dependency>
             <groupId>javax.annotation</groupId>

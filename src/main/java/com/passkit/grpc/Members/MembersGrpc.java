@@ -3,6 +3,9 @@ package com.passkit.grpc.Members;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -1455,12 +1458,15 @@ public final class MembersGrpc {
   }
 
   /**
+   * <pre>
+   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Create a program record. Allows a user to specify program details around enrolment, renewal and cancellation processes. Optionally allows the user to set the GPS location / Beacons that will trigger a lock-screen alert.
+     * Creates a new membership program with details about enrollment, renewal, and cancellation. Optionally configure GPS locations and Beacons to trigger lock-screen notifications. Required fields: program name.
      * </pre>
      */
     default void createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
@@ -1470,7 +1476,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing program record.
+     * Updates an existing membership program with new details or settings. Required fields: program id.
      * </pre>
      */
     default void updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
@@ -1480,7 +1486,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets an existing program record by id.
+     * Retrieves a membership program by its unique id. Required fields: program id.
      * </pre>
      */
     default void getProgram(com.passkit.grpc.CommonObjects.Id request,
@@ -1490,7 +1496,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Copies an existing program record to a new record, and allows for status of new program to be set; i.e. copy a draft to published (production) program. Will copy program AND related tier + template records.
+     * Creates a new program by copying the configuration and design of an existing program. Required fields: source program id.
      * </pre>
      */
     default void copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request,
@@ -1500,7 +1506,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes an existing program record by id. Deleting a program results in all tiers, and members underneath it being invalidated and removed. Needs to be used with care.
+     * Permanently deletes a membership program and its associated data, including all passes. Required fields: program id. Use with caution, as this action is irreversible.
      * </pre>
      */
     default void deleteProgram(com.passkit.grpc.CommonObjects.Id request,
@@ -1510,7 +1516,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering and pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listPrograms call instead.
      * </pre>
      */
     default void listProgramsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
@@ -1520,7 +1526,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     default void listPrograms(com.passkit.grpc.Filter.Filters request,
@@ -1530,7 +1536,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a new tier in an existing member program. Tiers allow a user to categorize their membership program; tiers allow for additional detail that is specific to that 'group' of members. A program needs at least one tier.
+     * Creates a new membership tier within a program, specifying criteria, benefits, and settings. Required fields: program id, tier name.
      * </pre>
      */
     default void createTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
@@ -1540,7 +1546,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates a tier by tier id
+     * Updates an existing membership tier’s details such as benefits, qualifications, and rules. Required fields: tier id.
      * </pre>
      */
     default void updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
@@ -1550,7 +1556,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets a tier by tier ID
+     * Retrieves details of a specific membership tier by its id. Required fields: tier id.
      * </pre>
      */
     default void getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
@@ -1560,7 +1566,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes a tier. Deleting a tier will invalidate and delete all the passes that are in the tier.
+     * Deletes a membership tier from a program. Required fields: tier id.
      * </pre>
      */
     default void deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
@@ -1570,7 +1576,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listTiers.
      * </pre>
      */
     default void listTiersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
@@ -1580,7 +1586,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     default void listTiers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
@@ -1590,7 +1596,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a tier of a program. Returns the PassKit Member ID.
+     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
      * </pre>
      */
     default void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -1600,7 +1606,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into the default tier (lowest tier index) of a program. Returns the PassKit Member ID.
+     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
      * </pre>
      */
     default void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -1609,6 +1615,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the PassKit id. Required fields: member id.
+     * </pre>
      */
     default void getMemberRecordById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -1616,6 +1625,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the member's external id. Required fields: program id and external id.
+     * </pre>
      */
     default void getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -1623,6 +1635,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks in a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     default void checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -1630,6 +1645,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks out a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     default void checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -1637,6 +1655,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listMembers as OR operator is not supported.
+     * </pre>
      */
     default void listMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -1644,6 +1665,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     default void listMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -1651,6 +1675,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * </pre>
      */
     default void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1659,7 +1686,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Adds (earns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to earn.
      * </pre>
      */
     default void earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
@@ -1669,7 +1696,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Removes (burns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to burn.
      * </pre>
      */
     default void burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
@@ -1678,6 +1705,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Sets loyalty points balance to a specific value for a member using PassKit Id or External Id. Required fields: member id, or program id and external id, and new points balance.
+     * </pre>
      */
     default void setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
@@ -1685,6 +1715,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a member’s tier within a program using PassKit Id or External Id. Required fields: member id, or program id and external id, and new tier id.
+     * </pre>
      */
     default void changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -1692,6 +1725,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkUpdateMembers.
+     * </pre>
      */
     default void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1699,6 +1735,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkDeleteMembers.
+     * </pre>
      */
     default void deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1706,6 +1745,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a single member by their PassKit Id or External ID. Required fields: member id or program id and external id.
+     * </pre>
      */
     default void deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1713,6 +1755,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Bulk deletes multiple members from a program based on provided criteria. Required fields: program id, protocol and filters criteria.
+     * </pre>
      */
     default void bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1720,6 +1765,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use countMembers as OR operator is not supported.
+     * </pre>
      */
     default void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1727,6 +1775,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id.
+     * </pre>
      */
     default void countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1734,6 +1785,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * [UNIMPLEMENTED] Retrieves the message history sent to a member. Required fields: member id.
+     * </pre>
      */
     default void getMessageHistoryForMember(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
@@ -1741,6 +1795,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific program. Required fields: program id.
+     * </pre>
      */
     default void getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -1748,6 +1805,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Batch updates the expiry dates for ALL members. Required fields: program id, tier id and new expiry settings.
+     * </pre>
      */
     default void renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1755,6 +1815,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the expiry date for a member’s pass using the PassKit Id or External Id. Required fields: member id, or external id and program id, and new expiry date.
+     * </pre>
      */
     default void updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1762,6 +1825,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a member's personal information, such as name, address, or contact details. Required fields: member id, or external id and program id, and new member information.
+     * </pre>
      */
     default void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -1769,6 +1835,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of member events for a specific program based on given filters. Required fields: program id.
+     * </pre>
      */
     default void countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -1776,6 +1845,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events related to members in a specific program, supporting filtering and pagination. Required fields: program id.
+     * </pre>
      */
     default void listMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -1783,6 +1855,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of meta keys associated with member events for a specific program. Required fields: program id.
+     * </pre>
      */
     default void getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -1790,6 +1865,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events for a specific member, such as check-ins/outs, changes to points etc. Required fields: member id.
+     * </pre>
      */
     default void listEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -1797,6 +1875,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes member event history for a program based on specified criteria. Required fields: program id.
+     * </pre>
      */
     default void deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1804,6 +1885,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes all member events associated with a specific member. Required fields: member id.
+     * </pre>
      */
     default void deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1811,6 +1895,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a specific individual member event. Required fields: member event id.
+     * </pre>
      */
     default void deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -1818,6 +1905,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves enrolment URLs and QR codes for a membership program, including tier-specific links if applicable. Required fields: program id.
+     * </pre>
      */
     default void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
@@ -1827,6 +1917,9 @@ public final class MembersGrpc {
 
   /**
    * Base class for the server implementation of the service Members.
+   * <pre>
+   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * </pre>
    */
   public static abstract class MembersImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -1838,6 +1931,9 @@ public final class MembersGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Members.
+   * <pre>
+   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * </pre>
    */
   public static final class MembersStub
       extends io.grpc.stub.AbstractAsyncStub<MembersStub> {
@@ -1854,7 +1950,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a program record. Allows a user to specify program details around enrolment, renewal and cancellation processes. Optionally allows the user to set the GPS location / Beacons that will trigger a lock-screen alert.
+     * Creates a new membership program with details about enrollment, renewal, and cancellation. Optionally configure GPS locations and Beacons to trigger lock-screen notifications. Required fields: program name.
      * </pre>
      */
     public void createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
@@ -1865,7 +1961,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing program record.
+     * Updates an existing membership program with new details or settings. Required fields: program id.
      * </pre>
      */
     public void updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request,
@@ -1876,7 +1972,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets an existing program record by id.
+     * Retrieves a membership program by its unique id. Required fields: program id.
      * </pre>
      */
     public void getProgram(com.passkit.grpc.CommonObjects.Id request,
@@ -1887,7 +1983,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Copies an existing program record to a new record, and allows for status of new program to be set; i.e. copy a draft to published (production) program. Will copy program AND related tier + template records.
+     * Creates a new program by copying the configuration and design of an existing program. Required fields: source program id.
      * </pre>
      */
     public void copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request,
@@ -1898,7 +1994,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes an existing program record by id. Deleting a program results in all tiers, and members underneath it being invalidated and removed. Needs to be used with care.
+     * Permanently deletes a membership program and its associated data, including all passes. Required fields: program id. Use with caution, as this action is irreversible.
      * </pre>
      */
     public void deleteProgram(com.passkit.grpc.CommonObjects.Id request,
@@ -1909,7 +2005,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering and pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listPrograms call instead.
      * </pre>
      */
     public void listProgramsDeprecated(com.passkit.grpc.PaginationOuterClass.Pagination request,
@@ -1920,7 +2016,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     public void listPrograms(com.passkit.grpc.Filter.Filters request,
@@ -1931,7 +2027,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a new tier in an existing member program. Tiers allow a user to categorize their membership program; tiers allow for additional detail that is specific to that 'group' of members. A program needs at least one tier.
+     * Creates a new membership tier within a program, specifying criteria, benefits, and settings. Required fields: program id, tier name.
      * </pre>
      */
     public void createTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
@@ -1942,7 +2038,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates a tier by tier id
+     * Updates an existing membership tier’s details such as benefits, qualifications, and rules. Required fields: tier id.
      * </pre>
      */
     public void updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request,
@@ -1953,7 +2049,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets a tier by tier ID
+     * Retrieves details of a specific membership tier by its id. Required fields: tier id.
      * </pre>
      */
     public void getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
@@ -1964,7 +2060,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes a tier. Deleting a tier will invalidate and delete all the passes that are in the tier.
+     * Deletes a membership tier from a program. Required fields: tier id.
      * </pre>
      */
     public void deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request,
@@ -1975,7 +2071,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listTiers.
      * </pre>
      */
     public void listTiersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
@@ -1986,7 +2082,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     public void listTiers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
@@ -1997,7 +2093,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a tier of a program. Returns the PassKit Member ID.
+     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
      * </pre>
      */
     public void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -2008,7 +2104,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into the default tier (lowest tier index) of a program. Returns the PassKit Member ID.
+     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
      * </pre>
      */
     public void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -2018,6 +2114,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the PassKit id. Required fields: member id.
+     * </pre>
      */
     public void getMemberRecordById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -2026,6 +2125,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the member's external id. Required fields: program id and external id.
+     * </pre>
      */
     public void getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -2034,6 +2136,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks in a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public void checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -2042,6 +2147,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks out a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public void checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -2050,6 +2158,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listMembers as OR operator is not supported.
+     * </pre>
      */
     public void listMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -2058,6 +2169,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public void listMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.Member> responseObserver) {
@@ -2066,6 +2180,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * </pre>
      */
     public void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2075,7 +2192,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Adds (earns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to earn.
      * </pre>
      */
     public void earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
@@ -2086,7 +2203,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Removes (burns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to burn.
      * </pre>
      */
     public void burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request,
@@ -2096,6 +2213,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Sets loyalty points balance to a specific value for a member using PassKit Id or External Id. Required fields: member id, or program id and external id, and new points balance.
+     * </pre>
      */
     public void setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> responseObserver) {
@@ -2104,6 +2224,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a member’s tier within a program using PassKit Id or External Id. Required fields: member id, or program id and external id, and new tier id.
+     * </pre>
      */
     public void changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -2112,6 +2235,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkUpdateMembers.
+     * </pre>
      */
     public void updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2120,6 +2246,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkDeleteMembers.
+     * </pre>
      */
     public void deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2128,6 +2257,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a single member by their PassKit Id or External ID. Required fields: member id or program id and external id.
+     * </pre>
      */
     public void deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2136,6 +2268,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Bulk deletes multiple members from a program based on provided criteria. Required fields: program id, protocol and filters criteria.
+     * </pre>
      */
     public void bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2144,6 +2279,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use countMembers as OR operator is not supported.
+     * </pre>
      */
     public void countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -2152,6 +2290,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id.
+     * </pre>
      */
     public void countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -2160,6 +2301,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * [UNIMPLEMENTED] Retrieves the message history sent to a member. Required fields: member id.
+     * </pre>
      */
     public void getMessageHistoryForMember(com.passkit.grpc.PaginationOuterClass.Pagination request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
@@ -2168,6 +2312,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific program. Required fields: program id.
+     * </pre>
      */
     public void getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -2176,6 +2323,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Batch updates the expiry dates for ALL members. Required fields: program id, tier id and new expiry settings.
+     * </pre>
      */
     public void renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -2184,6 +2334,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the expiry date for a member’s pass using the PassKit Id or External Id. Required fields: member id, or external id and program id, and new expiry date.
+     * </pre>
      */
     public void updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2192,6 +2345,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a member's personal information, such as name, address, or contact details. Required fields: member id, or external id and program id, and new member information.
+     * </pre>
      */
     public void patchPerson(com.passkit.grpc.Personal.PersonRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -2200,6 +2356,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of member events for a specific program based on given filters. Required fields: program id.
+     * </pre>
      */
     public void countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count> responseObserver) {
@@ -2208,6 +2367,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events related to members in a specific program, supporting filtering and pagination. Required fields: program id.
+     * </pre>
      */
     public void listMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -2216,6 +2378,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of meta keys associated with member events for a specific program. Required fields: program id.
+     * </pre>
      */
     public void getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Strings> responseObserver) {
@@ -2224,6 +2389,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events for a specific member, such as check-ins/outs, changes to points etc. Required fields: member id.
+     * </pre>
      */
     public void listEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> responseObserver) {
@@ -2232,6 +2400,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes member event history for a program based on specified criteria. Required fields: program id.
+     * </pre>
      */
     public void deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2240,6 +2411,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes all member events associated with a specific member. Required fields: member id.
+     * </pre>
      */
     public void deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2248,6 +2422,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a specific individual member event. Required fields: member event id.
+     * </pre>
      */
     public void deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2256,6 +2433,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves enrolment URLs and QR codes for a membership program, including tier-specific links if applicable. Required fields: program id.
+     * </pre>
      */
     public void getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
@@ -2266,6 +2446,9 @@ public final class MembersGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Members.
+   * <pre>
+   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * </pre>
    */
   public static final class MembersBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<MembersBlockingStub> {
@@ -2282,7 +2465,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a program record. Allows a user to specify program details around enrolment, renewal and cancellation processes. Optionally allows the user to set the GPS location / Beacons that will trigger a lock-screen alert.
+     * Creates a new membership program with details about enrollment, renewal, and cancellation. Optionally configure GPS locations and Beacons to trigger lock-screen notifications. Required fields: program name.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request) {
@@ -2292,7 +2475,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing program record.
+     * Updates an existing membership program with new details or settings. Required fields: program id.
      * </pre>
      */
     public com.passkit.grpc.Members.ProgramOuterClass.Program updateProgram(com.passkit.grpc.Members.ProgramOuterClass.Program request) {
@@ -2302,7 +2485,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets an existing program record by id.
+     * Retrieves a membership program by its unique id. Required fields: program id.
      * </pre>
      */
     public com.passkit.grpc.Members.ProgramOuterClass.Program getProgram(com.passkit.grpc.CommonObjects.Id request) {
@@ -2312,7 +2495,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Copies an existing program record to a new record, and allows for status of new program to be set; i.e. copy a draft to published (production) program. Will copy program AND related tier + template records.
+     * Creates a new program by copying the configuration and design of an existing program. Required fields: source program id.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyProgram(com.passkit.grpc.Members.ProgramOuterClass.ProgramCopyRequest request) {
@@ -2322,7 +2505,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes an existing program record by id. Deleting a program results in all tiers, and members underneath it being invalidated and removed. Needs to be used with care.
+     * Permanently deletes a membership program and its associated data, including all passes. Required fields: program id. Use with caution, as this action is irreversible.
      * </pre>
      */
     public com.google.protobuf.Empty deleteProgram(com.passkit.grpc.CommonObjects.Id request) {
@@ -2332,7 +2515,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering and pagination. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use the updated listPrograms call instead.
      * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.ProgramOuterClass.Program> listProgramsDeprecated(
@@ -2343,7 +2526,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all programs for the logged in user.
+     * Lists all membership programs associated with your project. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.ProgramOuterClass.Program> listPrograms(
@@ -2354,7 +2537,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a new tier in an existing member program. Tiers allow a user to categorize their membership program; tiers allow for additional detail that is specific to that 'group' of members. A program needs at least one tier.
+     * Creates a new membership tier within a program, specifying criteria, benefits, and settings. Required fields: program id, tier name.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTier(com.passkit.grpc.Members.TierOuterClass.Tier request) {
@@ -2364,7 +2547,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates a tier by tier id
+     * Updates an existing membership tier’s details such as benefits, qualifications, and rules. Required fields: tier id.
      * </pre>
      */
     public com.passkit.grpc.Members.TierOuterClass.Tier updateTier(com.passkit.grpc.Members.TierOuterClass.Tier request) {
@@ -2374,7 +2557,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets a tier by tier ID
+     * Retrieves details of a specific membership tier by its id. Required fields: tier id.
      * </pre>
      */
     public com.passkit.grpc.Members.TierOuterClass.Tier getTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
@@ -2384,7 +2567,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes a tier. Deleting a tier will invalidate and delete all the passes that are in the tier.
+     * Deletes a membership tier from a program. Required fields: tier id.
      * </pre>
      */
     public com.google.protobuf.Empty deleteTier(com.passkit.grpc.Members.TierOuterClass.TierRequestInput request) {
@@ -2394,7 +2577,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listTiers.
      * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.TierOuterClass.Tier> listTiersDeprecated(
@@ -2405,7 +2588,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Lists all the tiers.
+     * Retrieves a list of all membership tiers within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
      * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.TierOuterClass.Tier> listTiers(
@@ -2416,7 +2599,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a tier of a program. Returns the PassKit Member ID.
+     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2426,7 +2609,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into the default tier (lowest tier index) of a program. Returns the PassKit Member ID.
+     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2435,6 +2618,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the PassKit id. Required fields: member id.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.Member getMemberRecordById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2442,6 +2628,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the member's external id. Required fields: program id and external id.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.Member getMemberRecordByExternalId(com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2449,6 +2638,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks in a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent checkInMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2456,6 +2648,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks out a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent checkOutMember(com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2463,6 +2658,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use listMembers as OR operator is not supported.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberOuterClass.Member> listMembersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
@@ -2471,6 +2669,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a list of all members within a membership program. Required fields: program id. Supports filtering options to narrow down the results based on specific criteria.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberOuterClass.Member> listMembers(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
@@ -2479,6 +2680,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2487,7 +2691,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Adds (earns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to earn.
      * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints earnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
@@ -2497,7 +2701,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Removes (burns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to burn.
      * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints burnPoints(com.passkit.grpc.Members.MemberOuterClass.EarnBurnPointsRequest request) {
@@ -2506,6 +2710,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Sets loyalty points balance to a specific value for a member using PassKit Id or External Id. Required fields: member id, or program id and external id, and new points balance.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberOuterClass.MemberPoints setPoints(com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2513,6 +2720,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a member’s tier within a program using PassKit Id or External Id. Required fields: member id, or program id and external id, and new tier id.
+     * </pre>
      */
     public com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent changeMemberTier(com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2520,6 +2730,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkUpdateMembers.
+     * </pre>
      */
     public com.google.protobuf.Empty updateMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2527,6 +2740,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkDeleteMembers.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteMembersBySegment(com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2534,6 +2750,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a single member by their PassKit Id or External ID. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2541,6 +2760,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Bulk deletes multiple members from a program based on provided criteria. Required fields: program id, protocol and filters criteria.
+     * </pre>
      */
     public com.google.protobuf.Empty bulkDeleteMembers(com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2548,6 +2770,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use countMembers as OR operator is not supported.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countMembersDeprecated(com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2555,6 +2780,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countMembers(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2562,6 +2790,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * [UNIMPLEMENTED] Retrieves the message history sent to a member. Required fields: member id.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.MessageOuterClass.Message> getMessageHistoryForMember(
         com.passkit.grpc.PaginationOuterClass.Pagination request) {
@@ -2570,6 +2801,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific program. Required fields: program id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Strings getMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2577,6 +2811,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Batch updates the expiry dates for ALL members. Required fields: program id, tier id and new expiry settings.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count renewMembersExpiry(com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2584,6 +2821,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the expiry date for a member’s pass using the PassKit Id or External Id. Required fields: member id, or external id and program id, and new expiry date.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateMemberExpiry(com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2591,6 +2831,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a member's personal information, such as name, address, or contact details. Required fields: member id, or external id and program id, and new member information.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id patchPerson(com.passkit.grpc.Personal.PersonRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2598,6 +2841,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of member events for a specific program based on given filters. Required fields: program id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Count countMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2605,6 +2851,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events related to members in a specific program, supporting filtering and pagination. Required fields: program id.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> listMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
@@ -2613,6 +2862,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of meta keys associated with member events for a specific program. Required fields: program id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Strings getMemberEventMetaKeysForProgram(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2620,6 +2872,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Lists events for a specific member, such as check-ins/outs, changes to points etc. Required fields: member id.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> listEventsForMember(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2628,6 +2883,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes member event history for a program based on specified criteria. Required fields: program id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteMemberEvents(com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2635,6 +2893,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes all member events associated with a specific member. Required fields: member id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteEventsForMember(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2642,6 +2903,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a specific individual member event. Required fields: member event id.
+     * </pre>
      */
     public com.google.protobuf.Empty deleteMemberEvent(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2649,6 +2913,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves enrolment URLs and QR codes for a membership program, including tier-specific links if applicable. Required fields: program id.
+     * </pre>
      */
     public com.passkit.grpc.Distribution.EnrolmentUrls getProgramEnrolment(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -2658,6 +2925,9 @@ public final class MembersGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Members.
+   * <pre>
+   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * </pre>
    */
   public static final class MembersFutureStub
       extends io.grpc.stub.AbstractFutureStub<MembersFutureStub> {
@@ -2674,7 +2944,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a program record. Allows a user to specify program details around enrolment, renewal and cancellation processes. Optionally allows the user to set the GPS location / Beacons that will trigger a lock-screen alert.
+     * Creates a new membership program with details about enrollment, renewal, and cancellation. Optionally configure GPS locations and Beacons to trigger lock-screen notifications. Required fields: program name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createProgram(
@@ -2685,7 +2955,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing program record.
+     * Updates an existing membership program with new details or settings. Required fields: program id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.ProgramOuterClass.Program> updateProgram(
@@ -2696,7 +2966,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets an existing program record by id.
+     * Retrieves a membership program by its unique id. Required fields: program id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.ProgramOuterClass.Program> getProgram(
@@ -2707,7 +2977,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Copies an existing program record to a new record, and allows for status of new program to be set; i.e. copy a draft to published (production) program. Will copy program AND related tier + template records.
+     * Creates a new program by copying the configuration and design of an existing program. Required fields: source program id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyProgram(
@@ -2718,7 +2988,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes an existing program record by id. Deleting a program results in all tiers, and members underneath it being invalidated and removed. Needs to be used with care.
+     * Permanently deletes a membership program and its associated data, including all passes. Required fields: program id. Use with caution, as this action is irreversible.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteProgram(
@@ -2729,7 +2999,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Create a new tier in an existing member program. Tiers allow a user to categorize their membership program; tiers allow for additional detail that is specific to that 'group' of members. A program needs at least one tier.
+     * Creates a new membership tier within a program, specifying criteria, benefits, and settings. Required fields: program id, tier name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTier(
@@ -2740,7 +3010,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates a tier by tier id
+     * Updates an existing membership tier’s details such as benefits, qualifications, and rules. Required fields: tier id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.TierOuterClass.Tier> updateTier(
@@ -2751,7 +3021,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Gets a tier by tier ID
+     * Retrieves details of a specific membership tier by its id. Required fields: tier id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.TierOuterClass.Tier> getTier(
@@ -2762,7 +3032,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Deletes a tier. Deleting a tier will invalidate and delete all the passes that are in the tier.
+     * Deletes a membership tier from a program. Required fields: tier id.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTier(
@@ -2773,7 +3043,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a tier of a program. Returns the PassKit Member ID.
+     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMember(
@@ -2784,7 +3054,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into the default tier (lowest tier index) of a program. Returns the PassKit Member ID.
+     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMemberPublic(
@@ -2794,6 +3064,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the PassKit id. Required fields: member id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.Member> getMemberRecordById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2802,6 +3075,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a member record using the member's external id. Required fields: program id and external id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.Member> getMemberRecordByExternalId(
         com.passkit.grpc.Members.MemberOuterClass.MemberRecordByExternalIdRequest request) {
@@ -2810,6 +3086,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks in a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> checkInMember(
         com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
@@ -2818,6 +3097,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Checks out a member in by PassKit Id or External Id. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> checkOutMember(
         com.passkit.grpc.Members.MemberOuterClass.MemberCheckInOutRequest request) {
@@ -2826,6 +3108,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateMember(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2835,7 +3120,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Adds (earns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to earn.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> earnPoints(
@@ -2846,7 +3131,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * &#64;todo: define callback
+     * Removes (burns) loyalty points to a member's account using PassKit Id or External Id. Required fields: member id, or program id and external id, and number of points to burn.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> burnPoints(
@@ -2856,6 +3141,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Sets loyalty points balance to a specific value for a member using PassKit Id or External Id. Required fields: member id, or program id and external id, and new points balance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberOuterClass.MemberPoints> setPoints(
         com.passkit.grpc.Members.MemberOuterClass.SetPointsRequest request) {
@@ -2864,6 +3152,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a member’s tier within a program using PassKit Id or External Id. Required fields: member id, or program id and external id, and new tier id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Members.MemberEventsOuterClass.MemberEvent> changeMemberTier(
         com.passkit.grpc.Members.MemberOuterClass.ChangeTierRequest request) {
@@ -2872,6 +3163,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkUpdateMembers.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateMembersBySegment(
         com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
@@ -2880,6 +3174,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes multiple members based on filtering criteria. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use bulkDeleteMembers.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMembersBySegment(
         com.passkit.grpc.Members.MemberOuterClass.MemberSegmentRequest request) {
@@ -2888,6 +3185,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a single member by their PassKit Id or External ID. Required fields: member id or program id and external id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMember(
         com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2896,6 +3196,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Bulk deletes multiple members from a program based on provided criteria. Required fields: program id, protocol and filters criteria.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> bulkDeleteMembers(
         com.passkit.grpc.CommonObjects.BulkPassActionRequest request) {
@@ -2904,6 +3207,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id. This version uses the legacy request format and is maintained for backward compatibility. New integrations should use countMembers as OR operator is not supported.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMembersDeprecated(
         com.passkit.grpc.Members.MemberOuterClass.ListRequestDeprecated request) {
@@ -2912,6 +3218,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of members matching a filter. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMembers(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
@@ -2920,6 +3229,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves meta keys (custom fields) for a specific program. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Strings> getMetaKeysForProgram(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2928,6 +3240,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Batch updates the expiry dates for ALL members. Required fields: program id, tier id and new expiry settings.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> renewMembersExpiry(
         com.passkit.grpc.Members.MemberOuterClass.UpdateExpiryRequest request) {
@@ -2936,6 +3251,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates the expiry date for a member’s pass using the PassKit Id or External Id. Required fields: member id, or external id and program id, and new expiry date.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateMemberExpiry(
         com.passkit.grpc.Members.MemberOuterClass.MemberExpiry request) {
@@ -2944,6 +3262,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Updates a member's personal information, such as name, address, or contact details. Required fields: member id, or external id and program id, and new member information.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> patchPerson(
         com.passkit.grpc.Personal.PersonRequest request) {
@@ -2952,6 +3273,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Counts the number of member events for a specific program based on given filters. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Count> countMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
@@ -2960,6 +3284,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of meta keys associated with member events for a specific program. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Strings> getMemberEventMetaKeysForProgram(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2968,6 +3295,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes member event history for a program based on specified criteria. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMemberEvents(
         com.passkit.grpc.Members.MemberOuterClass.ListRequest request) {
@@ -2976,6 +3306,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes all member events associated with a specific member. Required fields: member id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteEventsForMember(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2984,6 +3317,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a specific individual member event. Required fields: member event id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteMemberEvent(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -2992,6 +3328,9 @@ public final class MembersGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves enrolment URLs and QR codes for a membership program, including tier-specific links if applicable. Required fields: program id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Distribution.EnrolmentUrls> getProgramEnrolment(
         com.passkit.grpc.CommonObjects.Id request) {

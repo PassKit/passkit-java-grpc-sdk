@@ -3,6 +3,9 @@ package com.passkit.grpc.Analytics;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Analytics provides access to daily, monthly, or yearly analytics reports.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.60.0)",
@@ -91,12 +94,15 @@ public final class AnalyticsGrpc {
   }
 
   /**
+   * <pre>
+   * Analytics provides access to daily, monthly, or yearly analytics reports.
+   * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Retrieve a daily, monthly or yearly record.
+     * Retrieves analytics data for a class or project, such as daily check-ins, installs, redemptions, etc. Required fields: classId, protocol.
      * </pre>
      */
     default void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
@@ -107,6 +113,9 @@ public final class AnalyticsGrpc {
 
   /**
    * Base class for the server implementation of the service Analytics.
+   * <pre>
+   * Analytics provides access to daily, monthly, or yearly analytics reports.
+   * </pre>
    */
   public static abstract class AnalyticsImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -118,6 +127,9 @@ public final class AnalyticsGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Analytics.
+   * <pre>
+   * Analytics provides access to daily, monthly, or yearly analytics reports.
+   * </pre>
    */
   public static final class AnalyticsStub
       extends io.grpc.stub.AbstractAsyncStub<AnalyticsStub> {
@@ -134,7 +146,7 @@ public final class AnalyticsGrpc {
 
     /**
      * <pre>
-     * Retrieve a daily, monthly or yearly record.
+     * Retrieves analytics data for a class or project, such as daily check-ins, installs, redemptions, etc. Required fields: classId, protocol.
      * </pre>
      */
     public void getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request,
@@ -146,6 +158,9 @@ public final class AnalyticsGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Analytics.
+   * <pre>
+   * Analytics provides access to daily, monthly, or yearly analytics reports.
+   * </pre>
    */
   public static final class AnalyticsBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AnalyticsBlockingStub> {
@@ -162,7 +177,7 @@ public final class AnalyticsGrpc {
 
     /**
      * <pre>
-     * Retrieve a daily, monthly or yearly record.
+     * Retrieves analytics data for a class or project, such as daily check-ins, installs, redemptions, etc. Required fields: classId, protocol.
      * </pre>
      */
     public com.passkit.grpc.Reporting.AnalyticsResponse getAnalytics(com.passkit.grpc.Reporting.AnalyticsRequest request) {
@@ -173,6 +188,9 @@ public final class AnalyticsGrpc {
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Analytics.
+   * <pre>
+   * Analytics provides access to daily, monthly, or yearly analytics reports.
+   * </pre>
    */
   public static final class AnalyticsFutureStub
       extends io.grpc.stub.AbstractFutureStub<AnalyticsFutureStub> {
@@ -189,7 +207,7 @@ public final class AnalyticsGrpc {
 
     /**
      * <pre>
-     * Retrieve a daily, monthly or yearly record.
+     * Retrieves analytics data for a class or project, such as daily check-ins, installs, redemptions, etc. Required fields: classId, protocol.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Reporting.AnalyticsResponse> getAnalytics(

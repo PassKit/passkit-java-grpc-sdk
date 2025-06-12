@@ -467,6 +467,9 @@ public final class RawGrpc {
   public interface AsyncService {
 
     /**
+     * <pre>
+     * Creates a Pass Project. Required Fields: name, protocol, classId.
+     * </pre>
      */
     default void createPassProject(com.passkit.grpc.Raw.Project.PassProject request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -474,6 +477,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass Project. Required Fields: id, name, protocol, classId.
+     * </pre>
      */
     default void updatePassProject(com.passkit.grpc.Raw.Project.PassProject request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
@@ -481,6 +487,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass Project by ID. Required Fields: id.
+     * </pre>
      */
     default void getPassProject(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
@@ -488,6 +497,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing Pass Project. Required Fields: id (of the source PassProject).
+     * </pre>
      */
     default void copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -495,6 +507,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass Project by ID. Deleting a Pass Project results in all passes being invalidated and removed. Use with caution. Required Fields: id.
+     * </pre>
      */
     default void deletePassProject(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -502,6 +517,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Pass record. Required Fields: passProjectId, externalId, and fields required by protocol template.
+     * </pre>
      */
     default void createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -509,6 +527,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass record. Required Fields: id.
+     * </pre>
      */
     default void updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -516,6 +537,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Streams multiple Pass updates via gRPC (not available via REST). Required Fields: id for each Pass.
+     * </pre>
      */
     default io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> streamPassUpdates(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -523,6 +547,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its internal ID. Required Fields: id.
+     * </pre>
      */
     default void getPassById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -530,6 +557,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its external ID and Pass Project ID. Required Fields: passProjectId, externalId.
+     * </pre>
      */
     default void getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -537,6 +567,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass record. Required Fields: id.
+     * </pre>
      */
     default void deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -544,6 +577,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Project. Supports pagination. Required Fields: passProjectId.
+     * </pre>
      */
     default void listPassesByPassProject(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -551,6 +587,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Template. Supports pagination. Required Fields: passTemplateId.
+     * </pre>
      */
     default void listPassesByPassTemplate(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -586,6 +625,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a Pass Project. Required Fields: name, protocol, classId.
+     * </pre>
      */
     public void createPassProject(com.passkit.grpc.Raw.Project.PassProject request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -594,6 +636,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass Project. Required Fields: id, name, protocol, classId.
+     * </pre>
      */
     public void updatePassProject(com.passkit.grpc.Raw.Project.PassProject request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
@@ -602,6 +647,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass Project by ID. Required Fields: id.
+     * </pre>
      */
     public void getPassProject(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.Project.PassProject> responseObserver) {
@@ -610,6 +658,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing Pass Project. Required Fields: id (of the source PassProject).
+     * </pre>
      */
     public void copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -618,6 +669,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass Project by ID. Deleting a Pass Project results in all passes being invalidated and removed. Use with caution. Required Fields: id.
+     * </pre>
      */
     public void deletePassProject(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -626,6 +680,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Pass record. Required Fields: passProjectId, externalId, and fields required by protocol template.
+     * </pre>
      */
     public void createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -634,6 +691,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass record. Required Fields: id.
+     * </pre>
      */
     public void updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -642,6 +702,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Streams multiple Pass updates via gRPC (not available via REST). Required Fields: id for each Pass.
+     * </pre>
      */
     public io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> streamPassUpdates(
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Id> responseObserver) {
@@ -650,6 +713,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its internal ID. Required Fields: id.
+     * </pre>
      */
     public void getPassById(com.passkit.grpc.CommonObjects.Id request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -658,6 +724,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its external ID and Pass Project ID. Required Fields: passProjectId, externalId.
+     * </pre>
      */
     public void getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -666,6 +735,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass record. Required Fields: id.
+     * </pre>
      */
     public void deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -674,6 +746,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Project. Supports pagination. Required Fields: passProjectId.
+     * </pre>
      */
     public void listPassesByPassProject(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -682,6 +757,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Template. Supports pagination. Required Fields: passTemplateId.
+     * </pre>
      */
     public void listPassesByPassTemplate(com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request,
         io.grpc.stub.StreamObserver<com.passkit.grpc.Raw.PassOuterClass.Pass> responseObserver) {
@@ -707,6 +785,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a Pass Project. Required Fields: name, protocol, classId.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createPassProject(com.passkit.grpc.Raw.Project.PassProject request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -714,6 +795,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass Project. Required Fields: id, name, protocol, classId.
+     * </pre>
      */
     public com.passkit.grpc.Raw.Project.PassProject updatePassProject(com.passkit.grpc.Raw.Project.PassProject request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -721,6 +805,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass Project by ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Raw.Project.PassProject getPassProject(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -728,6 +815,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing Pass Project. Required Fields: id (of the source PassProject).
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id copyPassProject(com.passkit.grpc.Raw.Project.PassProjectCopyRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -735,6 +825,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass Project by ID. Deleting a Pass Project results in all passes being invalidated and removed. Use with caution. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deletePassProject(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -742,6 +835,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Pass record. Required Fields: passProjectId, externalId, and fields required by protocol template.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createPass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -749,6 +845,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass record. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updatePass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -756,6 +855,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its internal ID. Required Fields: id.
+     * </pre>
      */
     public com.passkit.grpc.Raw.PassOuterClass.Pass getPassById(com.passkit.grpc.CommonObjects.Id request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -763,6 +865,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its external ID and Pass Project ID. Required Fields: passProjectId, externalId.
+     * </pre>
      */
     public com.passkit.grpc.Raw.PassOuterClass.Pass getPassByExternalId(com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -770,6 +875,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass record. Required Fields: id.
+     * </pre>
      */
     public com.google.protobuf.Empty deletePass(com.passkit.grpc.Raw.PassOuterClass.Pass request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -777,6 +885,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Project. Supports pagination. Required Fields: passProjectId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Raw.PassOuterClass.Pass> listPassesByPassProject(
         com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassProjectRequest request) {
@@ -785,6 +896,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Lists all passes for a Pass Template. Supports pagination. Required Fields: passTemplateId.
+     * </pre>
      */
     public java.util.Iterator<com.passkit.grpc.Raw.PassOuterClass.Pass> listPassesByPassTemplate(
         com.passkit.grpc.Raw.PassOuterClass.ListPassesByPassTemplateRequest request) {
@@ -810,6 +924,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a Pass Project. Required Fields: name, protocol, classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPassProject(
         com.passkit.grpc.Raw.Project.PassProject request) {
@@ -818,6 +935,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass Project. Required Fields: id, name, protocol, classId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.Project.PassProject> updatePassProject(
         com.passkit.grpc.Raw.Project.PassProject request) {
@@ -826,6 +946,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass Project by ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.Project.PassProject> getPassProject(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -834,6 +957,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Copies an existing Pass Project. Required Fields: id (of the source PassProject).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> copyPassProject(
         com.passkit.grpc.Raw.Project.PassProjectCopyRequest request) {
@@ -842,6 +968,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass Project by ID. Deleting a Pass Project results in all passes being invalidated and removed. Use with caution. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePassProject(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -850,6 +979,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a new Pass record. Required Fields: passProjectId, externalId, and fields required by protocol template.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createPass(
         com.passkit.grpc.Raw.PassOuterClass.Pass request) {
@@ -858,6 +990,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Updates an existing Pass record. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updatePass(
         com.passkit.grpc.Raw.PassOuterClass.Pass request) {
@@ -866,6 +1001,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its internal ID. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.PassOuterClass.Pass> getPassById(
         com.passkit.grpc.CommonObjects.Id request) {
@@ -874,6 +1012,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves a Pass by its external ID and Pass Project ID. Required Fields: passProjectId, externalId.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Raw.PassOuterClass.Pass> getPassByExternalId(
         com.passkit.grpc.Raw.PassOuterClass.PassRecordByExternalIdRequest request) {
@@ -882,6 +1023,9 @@ public final class RawGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a Pass record. Required Fields: id.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deletePass(
         com.passkit.grpc.Raw.PassOuterClass.Pass request) {
