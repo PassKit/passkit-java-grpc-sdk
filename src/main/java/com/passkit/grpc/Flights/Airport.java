@@ -305,7 +305,7 @@ public final class Airport {
      * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
      * </pre>
      *
-     * <code>string LoungeId = 13;</code>
+     * <code>string loungeId = 13;</code>
      * @return The loungeId.
      */
     java.lang.String getLoungeId();
@@ -314,7 +314,7 @@ public final class Airport {
      * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
      * </pre>
      *
-     * <code>string LoungeId = 13;</code>
+     * <code>string loungeId = 13;</code>
      * @return The bytes for loungeId.
      */
     com.google.protobuf.ByteString
@@ -901,7 +901,7 @@ public final class Airport {
      * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
      * </pre>
      *
-     * <code>string LoungeId = 13;</code>
+     * <code>string loungeId = 13;</code>
      * @return The loungeId.
      */
     @java.lang.Override
@@ -922,7 +922,7 @@ public final class Airport {
      * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
      * </pre>
      *
-     * <code>string LoungeId = 13;</code>
+     * <code>string loungeId = 13;</code>
      * @return The bytes for loungeId.
      */
     @java.lang.Override
@@ -2889,7 +2889,7 @@ public final class Airport {
        * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
        * </pre>
        *
-       * <code>string LoungeId = 13;</code>
+       * <code>string loungeId = 13;</code>
        * @return The loungeId.
        */
       public java.lang.String getLoungeId() {
@@ -2909,7 +2909,7 @@ public final class Airport {
        * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
        * </pre>
        *
-       * <code>string LoungeId = 13;</code>
+       * <code>string loungeId = 13;</code>
        * @return The bytes for loungeId.
        */
       public com.google.protobuf.ByteString
@@ -2930,7 +2930,7 @@ public final class Airport {
        * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
        * </pre>
        *
-       * <code>string LoungeId = 13;</code>
+       * <code>string loungeId = 13;</code>
        * @param value The loungeId to set.
        * @return This builder for chaining.
        */
@@ -2947,7 +2947,7 @@ public final class Airport {
        * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
        * </pre>
        *
-       * <code>string LoungeId = 13;</code>
+       * <code>string loungeId = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearLoungeId() {
@@ -2961,7 +2961,7 @@ public final class Airport {
        * Apple Place ID for Airline lounge. Can be overridden at the boarding pass level by providing additional data items 'airport.loungeId'.
        * </pre>
        *
-       * <code>string LoungeId = 13;</code>
+       * <code>string loungeId = 13;</code>
        * @param value The bytes for loungeId to set.
        * @return This builder for chaining.
        */
@@ -3612,7 +3612,7 @@ public final class Airport {
       "Programs\030\t \003(\0162 .flights.AirportSecurity" +
       "Programs\022\035\n\025DocumentsVerifiedText\030\n \001(\t\022" +
       ";\n\036localizedDocumentsVerifiedText\030\013 \001(\0132" +
-      "\023.io.LocalizedString\022\020\n\010LoungeId\030\r \001(\t:\256" +
+      "\023.io.LocalizedString\022\020\n\010loungeId\030\r \001(\t:\256" +
       "\001\222A\252\001\n\247\001*\016Airport Record2QAirport record" +
       "s are required for each port that a carr" +
       "ier operates in and out of.\322\001\017iataAirpor" +

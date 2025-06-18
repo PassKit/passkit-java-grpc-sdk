@@ -4953,23 +4953,143 @@ public final class Common {
 
     /**
      * <pre>
-     * A link to track luggage
+     * A link to report lost luggage.
      * </pre>
      *
-     * <code>string trackLuggageURL = 9;</code>
-     * @return The trackLuggageURL.
+     * <code>string reportLostBagURL = 9;</code>
+     * @return The reportLostBagURL.
      */
-    java.lang.String getTrackLuggageURL();
+    java.lang.String getReportLostBagURL();
     /**
      * <pre>
-     * A link to track luggage
+     * A link to report lost luggage.
      * </pre>
      *
-     * <code>string trackLuggageURL = 9;</code>
-     * @return The bytes for trackLuggageURL.
+     * <code>string reportLostBagURL = 9;</code>
+     * @return The bytes for reportLostBagURL.
      */
     com.google.protobuf.ByteString
-        getTrackLuggageURLBytes();
+        getReportLostBagURLBytes();
+
+    /**
+     * <pre>
+     * A link for managing the booking.
+     * </pre>
+     *
+     * <code>string managementURL = 10;</code>
+     * @return The managementURL.
+     */
+    java.lang.String getManagementURL();
+    /**
+     * <pre>
+     * A link for managing the booking.
+     * </pre>
+     *
+     * <code>string managementURL = 10;</code>
+     * @return The bytes for managementURL.
+     */
+    com.google.protobuf.ByteString
+        getManagementURLBytes();
+
+    /**
+     * <pre>
+     * A link to request a wheel chair.
+     * </pre>
+     *
+     * <code>string requestWheelchairURL = 11;</code>
+     * @return The requestWheelchairURL.
+     */
+    java.lang.String getRequestWheelchairURL();
+    /**
+     * <pre>
+     * A link to request a wheel chair.
+     * </pre>
+     *
+     * <code>string requestWheelchairURL = 11;</code>
+     * @return The bytes for requestWheelchairURL.
+     */
+    com.google.protobuf.ByteString
+        getRequestWheelchairURLBytes();
+
+    /**
+     * <pre>
+     * A link for registering a service animal.
+     * </pre>
+     *
+     * <code>string registerServiceAnimalURL = 12;</code>
+     * @return The registerServiceAnimalURL.
+     */
+    java.lang.String getRegisterServiceAnimalURL();
+    /**
+     * <pre>
+     * A link for registering a service animal.
+     * </pre>
+     *
+     * <code>string registerServiceAnimalURL = 12;</code>
+     * @return The bytes for registerServiceAnimalURL.
+     */
+    com.google.protobuf.ByteString
+        getRegisterServiceAnimalURLBytes();
+
+    /**
+     * <pre>
+     * The email for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderEmail = 13;</code>
+     * @return The transitProviderEmail.
+     */
+    java.lang.String getTransitProviderEmail();
+    /**
+     * <pre>
+     * The email for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderEmail = 13;</code>
+     * @return The bytes for transitProviderEmail.
+     */
+    com.google.protobuf.ByteString
+        getTransitProviderEmailBytes();
+
+    /**
+     * <pre>
+     * A link for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderWebsiteURL = 14;</code>
+     * @return The transitProviderWebsiteURL.
+     */
+    java.lang.String getTransitProviderWebsiteURL();
+    /**
+     * <pre>
+     * A link for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderWebsiteURL = 14;</code>
+     * @return The bytes for transitProviderWebsiteURL.
+     */
+    com.google.protobuf.ByteString
+        getTransitProviderWebsiteURLBytes();
+
+    /**
+     * <pre>
+     * A phone number for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderPhoneNumber = 15;</code>
+     * @return The transitProviderPhoneNumber.
+     */
+    java.lang.String getTransitProviderPhoneNumber();
+    /**
+     * <pre>
+     * A phone number for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderPhoneNumber = 15;</code>
+     * @return The bytes for transitProviderPhoneNumber.
+     */
+    com.google.protobuf.ByteString
+        getTransitProviderPhoneNumberBytes();
   }
   /**
    * <pre>
@@ -5005,7 +5125,13 @@ public final class Common {
       standbyListURL_ = "";
       purchaseAdditionalBaggageURL_ = "";
       purchaseLoungeAccessURL_ = "";
-      trackLuggageURL_ = "";
+      reportLostBagURL_ = "";
+      managementURL_ = "";
+      requestWheelchairURL_ = "";
+      registerServiceAnimalURL_ = "";
+      transitProviderEmail_ = "";
+      transitProviderWebsiteURL_ = "";
+      transitProviderPhoneNumber_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -5397,47 +5523,329 @@ public final class Common {
       }
     }
 
-    public static final int TRACKLUGGAGEURL_FIELD_NUMBER = 9;
+    public static final int REPORTLOSTBAGURL_FIELD_NUMBER = 9;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object trackLuggageURL_ = "";
+    private volatile java.lang.Object reportLostBagURL_ = "";
     /**
      * <pre>
-     * A link to track luggage
+     * A link to report lost luggage.
      * </pre>
      *
-     * <code>string trackLuggageURL = 9;</code>
-     * @return The trackLuggageURL.
+     * <code>string reportLostBagURL = 9;</code>
+     * @return The reportLostBagURL.
      */
     @java.lang.Override
-    public java.lang.String getTrackLuggageURL() {
-      java.lang.Object ref = trackLuggageURL_;
+    public java.lang.String getReportLostBagURL() {
+      java.lang.Object ref = reportLostBagURL_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        trackLuggageURL_ = s;
+        reportLostBagURL_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * A link to track luggage
+     * A link to report lost luggage.
      * </pre>
      *
-     * <code>string trackLuggageURL = 9;</code>
-     * @return The bytes for trackLuggageURL.
+     * <code>string reportLostBagURL = 9;</code>
+     * @return The bytes for reportLostBagURL.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTrackLuggageURLBytes() {
-      java.lang.Object ref = trackLuggageURL_;
+        getReportLostBagURLBytes() {
+      java.lang.Object ref = reportLostBagURL_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        trackLuggageURL_ = b;
+        reportLostBagURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MANAGEMENTURL_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object managementURL_ = "";
+    /**
+     * <pre>
+     * A link for managing the booking.
+     * </pre>
+     *
+     * <code>string managementURL = 10;</code>
+     * @return The managementURL.
+     */
+    @java.lang.Override
+    public java.lang.String getManagementURL() {
+      java.lang.Object ref = managementURL_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        managementURL_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A link for managing the booking.
+     * </pre>
+     *
+     * <code>string managementURL = 10;</code>
+     * @return The bytes for managementURL.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getManagementURLBytes() {
+      java.lang.Object ref = managementURL_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        managementURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUESTWHEELCHAIRURL_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestWheelchairURL_ = "";
+    /**
+     * <pre>
+     * A link to request a wheel chair.
+     * </pre>
+     *
+     * <code>string requestWheelchairURL = 11;</code>
+     * @return The requestWheelchairURL.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestWheelchairURL() {
+      java.lang.Object ref = requestWheelchairURL_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestWheelchairURL_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A link to request a wheel chair.
+     * </pre>
+     *
+     * <code>string requestWheelchairURL = 11;</code>
+     * @return The bytes for requestWheelchairURL.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestWheelchairURLBytes() {
+      java.lang.Object ref = requestWheelchairURL_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestWheelchairURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REGISTERSERVICEANIMALURL_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object registerServiceAnimalURL_ = "";
+    /**
+     * <pre>
+     * A link for registering a service animal.
+     * </pre>
+     *
+     * <code>string registerServiceAnimalURL = 12;</code>
+     * @return The registerServiceAnimalURL.
+     */
+    @java.lang.Override
+    public java.lang.String getRegisterServiceAnimalURL() {
+      java.lang.Object ref = registerServiceAnimalURL_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        registerServiceAnimalURL_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A link for registering a service animal.
+     * </pre>
+     *
+     * <code>string registerServiceAnimalURL = 12;</code>
+     * @return The bytes for registerServiceAnimalURL.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRegisterServiceAnimalURLBytes() {
+      java.lang.Object ref = registerServiceAnimalURL_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        registerServiceAnimalURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSITPROVIDEREMAIL_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transitProviderEmail_ = "";
+    /**
+     * <pre>
+     * The email for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderEmail = 13;</code>
+     * @return The transitProviderEmail.
+     */
+    @java.lang.Override
+    public java.lang.String getTransitProviderEmail() {
+      java.lang.Object ref = transitProviderEmail_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transitProviderEmail_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The email for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderEmail = 13;</code>
+     * @return The bytes for transitProviderEmail.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransitProviderEmailBytes() {
+      java.lang.Object ref = transitProviderEmail_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transitProviderEmail_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSITPROVIDERWEBSITEURL_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transitProviderWebsiteURL_ = "";
+    /**
+     * <pre>
+     * A link for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderWebsiteURL = 14;</code>
+     * @return The transitProviderWebsiteURL.
+     */
+    @java.lang.Override
+    public java.lang.String getTransitProviderWebsiteURL() {
+      java.lang.Object ref = transitProviderWebsiteURL_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transitProviderWebsiteURL_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A link for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderWebsiteURL = 14;</code>
+     * @return The bytes for transitProviderWebsiteURL.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransitProviderWebsiteURLBytes() {
+      java.lang.Object ref = transitProviderWebsiteURL_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transitProviderWebsiteURL_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSITPROVIDERPHONENUMBER_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transitProviderPhoneNumber_ = "";
+    /**
+     * <pre>
+     * A phone number for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderPhoneNumber = 15;</code>
+     * @return The transitProviderPhoneNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getTransitProviderPhoneNumber() {
+      java.lang.Object ref = transitProviderPhoneNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transitProviderPhoneNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A phone number for the transit provider.
+     * </pre>
+     *
+     * <code>string transitProviderPhoneNumber = 15;</code>
+     * @return The bytes for transitProviderPhoneNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransitProviderPhoneNumberBytes() {
+      java.lang.Object ref = transitProviderPhoneNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transitProviderPhoneNumber_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5482,8 +5890,26 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(purchaseLoungeAccessURL_)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 8, purchaseLoungeAccessURL_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trackLuggageURL_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 9, trackLuggageURL_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(reportLostBagURL_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 9, reportLostBagURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(managementURL_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 10, managementURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestWheelchairURL_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, requestWheelchairURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registerServiceAnimalURL_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 12, registerServiceAnimalURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderEmail_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 13, transitProviderEmail_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderWebsiteURL_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 14, transitProviderWebsiteURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderPhoneNumber_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 15, transitProviderPhoneNumber_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -5518,8 +5944,26 @@ public final class Common {
       if (!com.google.protobuf.GeneratedMessage.isStringEmpty(purchaseLoungeAccessURL_)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(8, purchaseLoungeAccessURL_);
       }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(trackLuggageURL_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, trackLuggageURL_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(reportLostBagURL_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(9, reportLostBagURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(managementURL_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(10, managementURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requestWheelchairURL_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, requestWheelchairURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(registerServiceAnimalURL_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(12, registerServiceAnimalURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderEmail_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(13, transitProviderEmail_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderWebsiteURL_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(14, transitProviderWebsiteURL_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(transitProviderPhoneNumber_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(15, transitProviderPhoneNumber_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5552,8 +5996,20 @@ public final class Common {
           .equals(other.getPurchaseAdditionalBaggageURL())) return false;
       if (!getPurchaseLoungeAccessURL()
           .equals(other.getPurchaseLoungeAccessURL())) return false;
-      if (!getTrackLuggageURL()
-          .equals(other.getTrackLuggageURL())) return false;
+      if (!getReportLostBagURL()
+          .equals(other.getReportLostBagURL())) return false;
+      if (!getManagementURL()
+          .equals(other.getManagementURL())) return false;
+      if (!getRequestWheelchairURL()
+          .equals(other.getRequestWheelchairURL())) return false;
+      if (!getRegisterServiceAnimalURL()
+          .equals(other.getRegisterServiceAnimalURL())) return false;
+      if (!getTransitProviderEmail()
+          .equals(other.getTransitProviderEmail())) return false;
+      if (!getTransitProviderWebsiteURL()
+          .equals(other.getTransitProviderWebsiteURL())) return false;
+      if (!getTransitProviderPhoneNumber()
+          .equals(other.getTransitProviderPhoneNumber())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -5581,8 +6037,20 @@ public final class Common {
       hash = (53 * hash) + getPurchaseAdditionalBaggageURL().hashCode();
       hash = (37 * hash) + PURCHASELOUNGEACCESSURL_FIELD_NUMBER;
       hash = (53 * hash) + getPurchaseLoungeAccessURL().hashCode();
-      hash = (37 * hash) + TRACKLUGGAGEURL_FIELD_NUMBER;
-      hash = (53 * hash) + getTrackLuggageURL().hashCode();
+      hash = (37 * hash) + REPORTLOSTBAGURL_FIELD_NUMBER;
+      hash = (53 * hash) + getReportLostBagURL().hashCode();
+      hash = (37 * hash) + MANAGEMENTURL_FIELD_NUMBER;
+      hash = (53 * hash) + getManagementURL().hashCode();
+      hash = (37 * hash) + REQUESTWHEELCHAIRURL_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestWheelchairURL().hashCode();
+      hash = (37 * hash) + REGISTERSERVICEANIMALURL_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterServiceAnimalURL().hashCode();
+      hash = (37 * hash) + TRANSITPROVIDEREMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getTransitProviderEmail().hashCode();
+      hash = (37 * hash) + TRANSITPROVIDERWEBSITEURL_FIELD_NUMBER;
+      hash = (53 * hash) + getTransitProviderWebsiteURL().hashCode();
+      hash = (37 * hash) + TRANSITPROVIDERPHONENUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getTransitProviderPhoneNumber().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5726,7 +6194,13 @@ public final class Common {
         standbyListURL_ = "";
         purchaseAdditionalBaggageURL_ = "";
         purchaseLoungeAccessURL_ = "";
-        trackLuggageURL_ = "";
+        reportLostBagURL_ = "";
+        managementURL_ = "";
+        requestWheelchairURL_ = "";
+        registerServiceAnimalURL_ = "";
+        transitProviderEmail_ = "";
+        transitProviderWebsiteURL_ = "";
+        transitProviderPhoneNumber_ = "";
         return this;
       }
 
@@ -5785,7 +6259,25 @@ public final class Common {
           result.purchaseLoungeAccessURL_ = purchaseLoungeAccessURL_;
         }
         if (((from_bitField0_ & 0x00000100) != 0)) {
-          result.trackLuggageURL_ = trackLuggageURL_;
+          result.reportLostBagURL_ = reportLostBagURL_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.managementURL_ = managementURL_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.requestWheelchairURL_ = requestWheelchairURL_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.registerServiceAnimalURL_ = registerServiceAnimalURL_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.transitProviderEmail_ = transitProviderEmail_;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.transitProviderWebsiteURL_ = transitProviderWebsiteURL_;
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.transitProviderPhoneNumber_ = transitProviderPhoneNumber_;
         }
       }
 
@@ -5841,9 +6333,39 @@ public final class Common {
           bitField0_ |= 0x00000080;
           onChanged();
         }
-        if (!other.getTrackLuggageURL().isEmpty()) {
-          trackLuggageURL_ = other.trackLuggageURL_;
+        if (!other.getReportLostBagURL().isEmpty()) {
+          reportLostBagURL_ = other.reportLostBagURL_;
           bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (!other.getManagementURL().isEmpty()) {
+          managementURL_ = other.managementURL_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (!other.getRequestWheelchairURL().isEmpty()) {
+          requestWheelchairURL_ = other.requestWheelchairURL_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getRegisterServiceAnimalURL().isEmpty()) {
+          registerServiceAnimalURL_ = other.registerServiceAnimalURL_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (!other.getTransitProviderEmail().isEmpty()) {
+          transitProviderEmail_ = other.transitProviderEmail_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        if (!other.getTransitProviderWebsiteURL().isEmpty()) {
+          transitProviderWebsiteURL_ = other.transitProviderWebsiteURL_;
+          bitField0_ |= 0x00002000;
+          onChanged();
+        }
+        if (!other.getTransitProviderPhoneNumber().isEmpty()) {
+          transitProviderPhoneNumber_ = other.transitProviderPhoneNumber_;
+          bitField0_ |= 0x00004000;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5913,10 +6435,40 @@ public final class Common {
                 break;
               } // case 66
               case 74: {
-                trackLuggageURL_ = input.readStringRequireUtf8();
+                reportLostBagURL_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000100;
                 break;
               } // case 74
+              case 82: {
+                managementURL_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                requestWheelchairURL_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                registerServiceAnimalURL_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                transitProviderEmail_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              case 114: {
+                transitProviderWebsiteURL_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00002000;
+                break;
+              } // case 114
+              case 122: {
+                transitProviderPhoneNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00004000;
+                break;
+              } // case 122
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6670,22 +7222,22 @@ public final class Common {
         return this;
       }
 
-      private java.lang.Object trackLuggageURL_ = "";
+      private java.lang.Object reportLostBagURL_ = "";
       /**
        * <pre>
-       * A link to track luggage
+       * A link to report lost luggage.
        * </pre>
        *
-       * <code>string trackLuggageURL = 9;</code>
-       * @return The trackLuggageURL.
+       * <code>string reportLostBagURL = 9;</code>
+       * @return The reportLostBagURL.
        */
-      public java.lang.String getTrackLuggageURL() {
-        java.lang.Object ref = trackLuggageURL_;
+      public java.lang.String getReportLostBagURL() {
+        java.lang.Object ref = reportLostBagURL_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          trackLuggageURL_ = s;
+          reportLostBagURL_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -6693,20 +7245,20 @@ public final class Common {
       }
       /**
        * <pre>
-       * A link to track luggage
+       * A link to report lost luggage.
        * </pre>
        *
-       * <code>string trackLuggageURL = 9;</code>
-       * @return The bytes for trackLuggageURL.
+       * <code>string reportLostBagURL = 9;</code>
+       * @return The bytes for reportLostBagURL.
        */
       public com.google.protobuf.ByteString
-          getTrackLuggageURLBytes() {
-        java.lang.Object ref = trackLuggageURL_;
+          getReportLostBagURLBytes() {
+        java.lang.Object ref = reportLostBagURL_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          trackLuggageURL_ = b;
+          reportLostBagURL_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -6714,50 +7266,602 @@ public final class Common {
       }
       /**
        * <pre>
-       * A link to track luggage
+       * A link to report lost luggage.
        * </pre>
        *
-       * <code>string trackLuggageURL = 9;</code>
-       * @param value The trackLuggageURL to set.
+       * <code>string reportLostBagURL = 9;</code>
+       * @param value The reportLostBagURL to set.
        * @return This builder for chaining.
        */
-      public Builder setTrackLuggageURL(
+      public Builder setReportLostBagURL(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        trackLuggageURL_ = value;
+        reportLostBagURL_ = value;
         bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * A link to track luggage
+       * A link to report lost luggage.
        * </pre>
        *
-       * <code>string trackLuggageURL = 9;</code>
+       * <code>string reportLostBagURL = 9;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTrackLuggageURL() {
-        trackLuggageURL_ = getDefaultInstance().getTrackLuggageURL();
+      public Builder clearReportLostBagURL() {
+        reportLostBagURL_ = getDefaultInstance().getReportLostBagURL();
         bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * A link to track luggage
+       * A link to report lost luggage.
        * </pre>
        *
-       * <code>string trackLuggageURL = 9;</code>
-       * @param value The bytes for trackLuggageURL to set.
+       * <code>string reportLostBagURL = 9;</code>
+       * @param value The bytes for reportLostBagURL to set.
        * @return This builder for chaining.
        */
-      public Builder setTrackLuggageURLBytes(
+      public Builder setReportLostBagURLBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        trackLuggageURL_ = value;
+        reportLostBagURL_ = value;
         bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object managementURL_ = "";
+      /**
+       * <pre>
+       * A link for managing the booking.
+       * </pre>
+       *
+       * <code>string managementURL = 10;</code>
+       * @return The managementURL.
+       */
+      public java.lang.String getManagementURL() {
+        java.lang.Object ref = managementURL_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          managementURL_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for managing the booking.
+       * </pre>
+       *
+       * <code>string managementURL = 10;</code>
+       * @return The bytes for managementURL.
+       */
+      public com.google.protobuf.ByteString
+          getManagementURLBytes() {
+        java.lang.Object ref = managementURL_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          managementURL_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for managing the booking.
+       * </pre>
+       *
+       * <code>string managementURL = 10;</code>
+       * @param value The managementURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagementURL(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        managementURL_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for managing the booking.
+       * </pre>
+       *
+       * <code>string managementURL = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearManagementURL() {
+        managementURL_ = getDefaultInstance().getManagementURL();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for managing the booking.
+       * </pre>
+       *
+       * <code>string managementURL = 10;</code>
+       * @param value The bytes for managementURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setManagementURLBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        managementURL_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestWheelchairURL_ = "";
+      /**
+       * <pre>
+       * A link to request a wheel chair.
+       * </pre>
+       *
+       * <code>string requestWheelchairURL = 11;</code>
+       * @return The requestWheelchairURL.
+       */
+      public java.lang.String getRequestWheelchairURL() {
+        java.lang.Object ref = requestWheelchairURL_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestWheelchairURL_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link to request a wheel chair.
+       * </pre>
+       *
+       * <code>string requestWheelchairURL = 11;</code>
+       * @return The bytes for requestWheelchairURL.
+       */
+      public com.google.protobuf.ByteString
+          getRequestWheelchairURLBytes() {
+        java.lang.Object ref = requestWheelchairURL_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestWheelchairURL_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link to request a wheel chair.
+       * </pre>
+       *
+       * <code>string requestWheelchairURL = 11;</code>
+       * @param value The requestWheelchairURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestWheelchairURL(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestWheelchairURL_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link to request a wheel chair.
+       * </pre>
+       *
+       * <code>string requestWheelchairURL = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestWheelchairURL() {
+        requestWheelchairURL_ = getDefaultInstance().getRequestWheelchairURL();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link to request a wheel chair.
+       * </pre>
+       *
+       * <code>string requestWheelchairURL = 11;</code>
+       * @param value The bytes for requestWheelchairURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestWheelchairURLBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestWheelchairURL_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object registerServiceAnimalURL_ = "";
+      /**
+       * <pre>
+       * A link for registering a service animal.
+       * </pre>
+       *
+       * <code>string registerServiceAnimalURL = 12;</code>
+       * @return The registerServiceAnimalURL.
+       */
+      public java.lang.String getRegisterServiceAnimalURL() {
+        java.lang.Object ref = registerServiceAnimalURL_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          registerServiceAnimalURL_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for registering a service animal.
+       * </pre>
+       *
+       * <code>string registerServiceAnimalURL = 12;</code>
+       * @return The bytes for registerServiceAnimalURL.
+       */
+      public com.google.protobuf.ByteString
+          getRegisterServiceAnimalURLBytes() {
+        java.lang.Object ref = registerServiceAnimalURL_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          registerServiceAnimalURL_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for registering a service animal.
+       * </pre>
+       *
+       * <code>string registerServiceAnimalURL = 12;</code>
+       * @param value The registerServiceAnimalURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterServiceAnimalURL(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        registerServiceAnimalURL_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for registering a service animal.
+       * </pre>
+       *
+       * <code>string registerServiceAnimalURL = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRegisterServiceAnimalURL() {
+        registerServiceAnimalURL_ = getDefaultInstance().getRegisterServiceAnimalURL();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for registering a service animal.
+       * </pre>
+       *
+       * <code>string registerServiceAnimalURL = 12;</code>
+       * @param value The bytes for registerServiceAnimalURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRegisterServiceAnimalURLBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        registerServiceAnimalURL_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transitProviderEmail_ = "";
+      /**
+       * <pre>
+       * The email for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderEmail = 13;</code>
+       * @return The transitProviderEmail.
+       */
+      public java.lang.String getTransitProviderEmail() {
+        java.lang.Object ref = transitProviderEmail_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transitProviderEmail_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The email for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderEmail = 13;</code>
+       * @return The bytes for transitProviderEmail.
+       */
+      public com.google.protobuf.ByteString
+          getTransitProviderEmailBytes() {
+        java.lang.Object ref = transitProviderEmail_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transitProviderEmail_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The email for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderEmail = 13;</code>
+       * @param value The transitProviderEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderEmail(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transitProviderEmail_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The email for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderEmail = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransitProviderEmail() {
+        transitProviderEmail_ = getDefaultInstance().getTransitProviderEmail();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The email for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderEmail = 13;</code>
+       * @param value The bytes for transitProviderEmail to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transitProviderEmail_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transitProviderWebsiteURL_ = "";
+      /**
+       * <pre>
+       * A link for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderWebsiteURL = 14;</code>
+       * @return The transitProviderWebsiteURL.
+       */
+      public java.lang.String getTransitProviderWebsiteURL() {
+        java.lang.Object ref = transitProviderWebsiteURL_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transitProviderWebsiteURL_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderWebsiteURL = 14;</code>
+       * @return The bytes for transitProviderWebsiteURL.
+       */
+      public com.google.protobuf.ByteString
+          getTransitProviderWebsiteURLBytes() {
+        java.lang.Object ref = transitProviderWebsiteURL_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transitProviderWebsiteURL_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A link for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderWebsiteURL = 14;</code>
+       * @param value The transitProviderWebsiteURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderWebsiteURL(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transitProviderWebsiteURL_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderWebsiteURL = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransitProviderWebsiteURL() {
+        transitProviderWebsiteURL_ = getDefaultInstance().getTransitProviderWebsiteURL();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A link for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderWebsiteURL = 14;</code>
+       * @param value The bytes for transitProviderWebsiteURL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderWebsiteURLBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transitProviderWebsiteURL_ = value;
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transitProviderPhoneNumber_ = "";
+      /**
+       * <pre>
+       * A phone number for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderPhoneNumber = 15;</code>
+       * @return The transitProviderPhoneNumber.
+       */
+      public java.lang.String getTransitProviderPhoneNumber() {
+        java.lang.Object ref = transitProviderPhoneNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transitProviderPhoneNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A phone number for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderPhoneNumber = 15;</code>
+       * @return The bytes for transitProviderPhoneNumber.
+       */
+      public com.google.protobuf.ByteString
+          getTransitProviderPhoneNumberBytes() {
+        java.lang.Object ref = transitProviderPhoneNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transitProviderPhoneNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A phone number for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderPhoneNumber = 15;</code>
+       * @param value The transitProviderPhoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderPhoneNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transitProviderPhoneNumber_ = value;
+        bitField0_ |= 0x00004000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A phone number for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderPhoneNumber = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransitProviderPhoneNumber() {
+        transitProviderPhoneNumber_ = getDefaultInstance().getTransitProviderPhoneNumber();
+        bitField0_ = (bitField0_ & ~0x00004000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A phone number for the transit provider.
+       * </pre>
+       *
+       * <code>string transitProviderPhoneNumber = 15;</code>
+       * @param value The bytes for transitProviderPhoneNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransitProviderPhoneNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transitProviderPhoneNumber_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -6850,42 +7954,47 @@ public final class Common {
       "e\030\001 \001(\0132\010.io.Time\022\036\n\014boardingTime\030\002 \001(\0132" +
       "\010.io.Time\022!\n\017gateClosingTime\030\003 \001(\0132\010.io." +
       "Time\022&\n\024scheduledArrivalTime\030\004 \001(\0132\010.io." +
-      "Time\"\370\001\n\nFlightURLs\022\022\n\nupgradeURL\030\001 \001(\t\022" +
+      "Time\"\265\003\n\nFlightURLs\022\022\n\nupgradeURL\030\001 \001(\t\022" +
       "\024\n\014orderFoodURL\030\002 \001(\t\022\027\n\017purchaseWifiURL" +
       "\030\003 \001(\t\022\025\n\rchangeSeatURL\030\004 \001(\t\022\030\n\020enterta" +
       "inmentURL\030\005 \001(\t\022\026\n\016standbyListURL\030\006 \001(\t\022" +
       "$\n\034purchaseAdditionalBaggageURL\030\007 \001(\t\022\037\n" +
-      "\027purchaseLoungeAccessURL\030\010 \001(\t\022\027\n\017trackL" +
-      "uggageURL\030\t \001(\t*\250\001\n\027AirportSecurityProgr" +
-      "ams\022\030\n\024NO_SECURITY_PROGRAMS\020\000\022\021\n\rTSA_PRE" +
-      "_CHECK\020\001\022\036\n\032TSA_PRE_CHECK_TOUCHLESS_ID\020\002" +
-      "\022\010\n\004TWOV\020\003\022\007\n\003OSS\020\004\022\007\n\003ITI\020\005\022\007\n\003ITD\020\006\022\020\n" +
-      "\014GLOBAL_ENTRY\020\007\022\t\n\005CLEAR\020\010*\372\001\n\014FlightSta" +
-      "tus\022\013\n\007UNKNOWN\020\000\022\r\n\tSCHEDULED\020\001\022\014\n\010DEPAR" +
-      "TED\020\002\022\t\n\005INAIR\020\003\022\n\n\006LANDED\020\004\022\013\n\007ARRIVED\020" +
-      "\005\022\r\n\tCANCELLED\020\006\022\013\n\007DELAYED\020\007\022\025\n\021DEPARTE" +
-      "D_DIVERTED\020\010\022\022\n\016INAIR_DIVERTED\020\t\022\024\n\020ARRI" +
-      "VED_DIVERTED\020\n\022\025\n\021DEPARTED_RECOVERY\020\013\022\022\n" +
-      "\016INAIR_RECOVERY\020\014\022\024\n\020ARRIVED_RECOVERY\020\r*" +
-      "=\n\020FlightCreateMode\022\016\n\nDO_NOT_USE\020\000\022\n\n\006M" +
-      "ANUAL\020\001\022\r\n\tAUTOMATIC\020\002*\251\001\n\014FlightAlerts\022" +
-      "\r\n\tNO_ALERTS\020\000\022\016\n\nALL_ALERTS\020\001\022\030\n\024DEPART" +
-      "URE_GATE_ALERT\020\002\022\030\n\024DEPARTURE_TIME_ALERT" +
-      "\020\004\022\026\n\022ARRIVAL_GATE_ALERT\020\010\022\026\n\022ARRIVAL_TI" +
-      "ME_ALERT\020\020\022\026\n\022BAGGAGE_BELT_ALERT\020 *m\n\016Bo" +
-      "ardingPolicy\022\037\n\033BOARDING_POLICY_UNSPECIF" +
-      "IED\020\000\022\016\n\nZONE_BASED\020\001\022\017\n\013GROUP_BASED\020\002\022\031" +
-      "\n\025BOARDING_POLICY_OTHER\020\003*\203\001\n\017SeatClassP" +
-      "olicy\022!\n\035SEAT_CLASS_POLICY_UNSPECIFIED\020\000" +
-      "\022\017\n\013CABIN_BASED\020\001\022\017\n\013CLASS_BASED\020\002\022\016\n\nTI" +
-      "ER_BASED\020\003\022\033\n\027SEAT_CLASS_POLICY_OTHER\020\004*" +
-      "\037\n\tAuthority\022\010\n\004IATA\020\000\022\010\n\004ICAO\020\001*v\n\025Pass" +
-      "engerCapabilities\022\023\n\017NO_CAPABILITIES\020\000\022\020" +
-      "\n\014PRE_BOARDING\020\001\022\025\n\021PRIORITY_BOARDING\020\002\022" +
-      "\014\n\010CARRY_ON\020\003\022\021\n\rPERSONAL_ITEM\020\004B_\n\030com." +
-      "passkit.grpc.FlightsZ,stash.passkit.com/" +
-      "io/model/sdk/go/io/flights\252\002\024PassKit.Grp" +
-      "c.Flightsb\006proto3"
+      "\027purchaseLoungeAccessURL\030\010 \001(\t\022\030\n\020report" +
+      "LostBagURL\030\t \001(\t\022\025\n\rmanagementURL\030\n \001(\t\022" +
+      "\034\n\024requestWheelchairURL\030\013 \001(\t\022 \n\030registe" +
+      "rServiceAnimalURL\030\014 \001(\t\022\034\n\024transitProvid" +
+      "erEmail\030\r \001(\t\022!\n\031transitProviderWebsiteU" +
+      "RL\030\016 \001(\t\022\"\n\032transitProviderPhoneNumber\030\017" +
+      " \001(\t*\250\001\n\027AirportSecurityPrograms\022\030\n\024NO_S" +
+      "ECURITY_PROGRAMS\020\000\022\021\n\rTSA_PRE_CHECK\020\001\022\036\n" +
+      "\032TSA_PRE_CHECK_TOUCHLESS_ID\020\002\022\010\n\004TWOV\020\003\022" +
+      "\007\n\003OSS\020\004\022\007\n\003ITI\020\005\022\007\n\003ITD\020\006\022\020\n\014GLOBAL_ENT" +
+      "RY\020\007\022\t\n\005CLEAR\020\010*\372\001\n\014FlightStatus\022\013\n\007UNKN" +
+      "OWN\020\000\022\r\n\tSCHEDULED\020\001\022\014\n\010DEPARTED\020\002\022\t\n\005IN" +
+      "AIR\020\003\022\n\n\006LANDED\020\004\022\013\n\007ARRIVED\020\005\022\r\n\tCANCEL" +
+      "LED\020\006\022\013\n\007DELAYED\020\007\022\025\n\021DEPARTED_DIVERTED\020" +
+      "\010\022\022\n\016INAIR_DIVERTED\020\t\022\024\n\020ARRIVED_DIVERTE" +
+      "D\020\n\022\025\n\021DEPARTED_RECOVERY\020\013\022\022\n\016INAIR_RECO" +
+      "VERY\020\014\022\024\n\020ARRIVED_RECOVERY\020\r*=\n\020FlightCr" +
+      "eateMode\022\016\n\nDO_NOT_USE\020\000\022\n\n\006MANUAL\020\001\022\r\n\t" +
+      "AUTOMATIC\020\002*\251\001\n\014FlightAlerts\022\r\n\tNO_ALERT" +
+      "S\020\000\022\016\n\nALL_ALERTS\020\001\022\030\n\024DEPARTURE_GATE_AL" +
+      "ERT\020\002\022\030\n\024DEPARTURE_TIME_ALERT\020\004\022\026\n\022ARRIV" +
+      "AL_GATE_ALERT\020\010\022\026\n\022ARRIVAL_TIME_ALERT\020\020\022" +
+      "\026\n\022BAGGAGE_BELT_ALERT\020 *m\n\016BoardingPolic" +
+      "y\022\037\n\033BOARDING_POLICY_UNSPECIFIED\020\000\022\016\n\nZO" +
+      "NE_BASED\020\001\022\017\n\013GROUP_BASED\020\002\022\031\n\025BOARDING_" +
+      "POLICY_OTHER\020\003*\203\001\n\017SeatClassPolicy\022!\n\035SE" +
+      "AT_CLASS_POLICY_UNSPECIFIED\020\000\022\017\n\013CABIN_B" +
+      "ASED\020\001\022\017\n\013CLASS_BASED\020\002\022\016\n\nTIER_BASED\020\003\022" +
+      "\033\n\027SEAT_CLASS_POLICY_OTHER\020\004*\037\n\tAuthorit" +
+      "y\022\010\n\004IATA\020\000\022\010\n\004ICAO\020\001*v\n\025PassengerCapabi" +
+      "lities\022\023\n\017NO_CAPABILITIES\020\000\022\020\n\014PRE_BOARD" +
+      "ING\020\001\022\025\n\021PRIORITY_BOARDING\020\002\022\014\n\010CARRY_ON" +
+      "\020\003\022\021\n\rPERSONAL_ITEM\020\004B_\n\030com.passkit.grp" +
+      "c.FlightsZ,stash.passkit.com/io/model/sd" +
+      "k/go/io/flights\252\002\024PassKit.Grpc.Flightsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6909,7 +8018,7 @@ public final class Common {
     internal_static_flights_FlightURLs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_flights_FlightURLs_descriptor,
-        new java.lang.String[] { "UpgradeURL", "OrderFoodURL", "PurchaseWifiURL", "ChangeSeatURL", "EntertainmentURL", "StandbyListURL", "PurchaseAdditionalBaggageURL", "PurchaseLoungeAccessURL", "TrackLuggageURL", });
+        new java.lang.String[] { "UpgradeURL", "OrderFoodURL", "PurchaseWifiURL", "ChangeSeatURL", "EntertainmentURL", "StandbyListURL", "PurchaseAdditionalBaggageURL", "PurchaseLoungeAccessURL", "ReportLostBagURL", "ManagementURL", "RequestWheelchairURL", "RegisterServiceAnimalURL", "TransitProviderEmail", "TransitProviderWebsiteURL", "TransitProviderPhoneNumber", });
     descriptor.resolveAllFeaturesImmutable();
     com.passkit.grpc.CommonObjects.getDescriptor();
   }
