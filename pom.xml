@@ -3,7 +3,7 @@
     <groupId>com.passkit.grpc</groupId>
     <artifactId>sdk</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.138</version>
+    <version>1.1.139-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -31,7 +31,7 @@
         <connection>scm:git:git://github.com/PassKit/passkit-java-grpc-sdk.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/PassKit/passkit-java-grpc-sdk.git</developerConnection>
         <url>https://github.com/PassKit/passkit-java-grpc-sdk/tree/main</url>
-        <tag>v1.1.138</tag>
+        <tag>v1.1.123</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
