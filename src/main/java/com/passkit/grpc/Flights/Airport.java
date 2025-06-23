@@ -212,7 +212,7 @@ public final class Airport {
      * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 9;</code>
      * @return A list containing the securityPrograms.
      */
-    java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList();
+    java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList();
     /**
      * <pre>
      * A list of security programs available at the airport. For use with Apple Semantic boarding passes.
@@ -231,7 +231,7 @@ public final class Airport {
      * @param index The index of the element to return.
      * @return The securityPrograms at the given index.
      */
-    com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index);
+    com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index);
     /**
      * <pre>
      * A list of security programs available at the airport. For use with Apple Semantic boarding passes.
@@ -258,7 +258,7 @@ public final class Airport {
      * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
      * </pre>
      *
-     * <code>string DocumentsVerifiedText = 10;</code>
+     * <code>string documentsVerifiedText = 10;</code>
      * @return The documentsVerifiedText.
      */
     java.lang.String getDocumentsVerifiedText();
@@ -267,7 +267,7 @@ public final class Airport {
      * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
      * </pre>
      *
-     * <code>string DocumentsVerifiedText = 10;</code>
+     * <code>string documentsVerifiedText = 10;</code>
      * @return The bytes for documentsVerifiedText.
      */
     com.google.protobuf.ByteString
@@ -734,12 +734,12 @@ public final class Airport {
     private com.google.protobuf.Internal.IntList securityPrograms_ =
         emptyIntList();
     private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
-        com.passkit.grpc.Flights.Common.AirportSecurityPrograms> securityPrograms_converter_ =
+        com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> securityPrograms_converter_ =
             new com.google.protobuf.Internal.IntListAdapter.IntConverter<
-                com.passkit.grpc.Flights.Common.AirportSecurityPrograms>() {
-              public com.passkit.grpc.Flights.Common.AirportSecurityPrograms convert(int from) {
-                com.passkit.grpc.Flights.Common.AirportSecurityPrograms result = com.passkit.grpc.Flights.Common.AirportSecurityPrograms.forNumber(from);
-                return result == null ? com.passkit.grpc.Flights.Common.AirportSecurityPrograms.UNRECOGNIZED : result;
+                com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>() {
+              public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms convert(int from) {
+                com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms result = com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms.forNumber(from);
+                return result == null ? com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms.UNRECOGNIZED : result;
               }
             };
     /**
@@ -751,9 +751,9 @@ public final class Airport {
      * @return A list containing the securityPrograms.
      */
     @java.lang.Override
-    public java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList() {
+    public java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList() {
       return new com.google.protobuf.Internal.IntListAdapter<
-          com.passkit.grpc.Flights.Common.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
+          com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
     }
     /**
      * <pre>
@@ -777,7 +777,7 @@ public final class Airport {
      * @return The securityPrograms at the given index.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index) {
+    public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index) {
       return securityPrograms_converter_.convert(securityPrograms_.getInt(index));
     }
     /**
@@ -816,7 +816,7 @@ public final class Airport {
      * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
      * </pre>
      *
-     * <code>string DocumentsVerifiedText = 10;</code>
+     * <code>string documentsVerifiedText = 10;</code>
      * @return The documentsVerifiedText.
      */
     @java.lang.Override
@@ -837,7 +837,7 @@ public final class Airport {
      * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
      * </pre>
      *
-     * <code>string DocumentsVerifiedText = 10;</code>
+     * <code>string documentsVerifiedText = 10;</code>
      * @return The bytes for documentsVerifiedText.
      */
     @java.lang.Override
@@ -2465,9 +2465,9 @@ public final class Airport {
        * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 9;</code>
        * @return A list containing the securityPrograms.
        */
-      public java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList() {
+      public java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList() {
         return new com.google.protobuf.Internal.IntListAdapter<
-            com.passkit.grpc.Flights.Common.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
+            com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
       }
       /**
        * <pre>
@@ -2489,7 +2489,7 @@ public final class Airport {
        * @param index The index of the element to return.
        * @return The securityPrograms at the given index.
        */
-      public com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index) {
+      public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index) {
         return securityPrograms_converter_.convert(securityPrograms_.getInt(index));
       }
       /**
@@ -2503,7 +2503,7 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder setSecurityPrograms(
-          int index, com.passkit.grpc.Flights.Common.AirportSecurityPrograms value) {
+          int index, com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value) {
         if (value == null) { throw new NullPointerException(); }
         ensureSecurityProgramsIsMutable();
         securityPrograms_.setInt(index, value.getNumber());
@@ -2519,7 +2519,7 @@ public final class Airport {
        * @param value The securityPrograms to add.
        * @return This builder for chaining.
        */
-      public Builder addSecurityPrograms(com.passkit.grpc.Flights.Common.AirportSecurityPrograms value) {
+      public Builder addSecurityPrograms(com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value) {
         if (value == null) { throw new NullPointerException(); }
         ensureSecurityProgramsIsMutable();
         securityPrograms_.addInt(value.getNumber());
@@ -2536,9 +2536,9 @@ public final class Airport {
        * @return This builder for chaining.
        */
       public Builder addAllSecurityPrograms(
-          java.lang.Iterable<? extends com.passkit.grpc.Flights.Common.AirportSecurityPrograms> values) {
+          java.lang.Iterable<? extends com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> values) {
         ensureSecurityProgramsIsMutable();
-        for (com.passkit.grpc.Flights.Common.AirportSecurityPrograms value : values) {
+        for (com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value : values) {
           securityPrograms_.addInt(value.getNumber());
         }
         onChanged();
@@ -2640,7 +2640,7 @@ public final class Airport {
        * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
        * </pre>
        *
-       * <code>string DocumentsVerifiedText = 10;</code>
+       * <code>string documentsVerifiedText = 10;</code>
        * @return The documentsVerifiedText.
        */
       public java.lang.String getDocumentsVerifiedText() {
@@ -2660,7 +2660,7 @@ public final class Airport {
        * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
        * </pre>
        *
-       * <code>string DocumentsVerifiedText = 10;</code>
+       * <code>string documentsVerifiedText = 10;</code>
        * @return The bytes for documentsVerifiedText.
        */
       public com.google.protobuf.ByteString
@@ -2681,7 +2681,7 @@ public final class Airport {
        * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
        * </pre>
        *
-       * <code>string DocumentsVerifiedText = 10;</code>
+       * <code>string documentsVerifiedText = 10;</code>
        * @param value The documentsVerifiedText to set.
        * @return This builder for chaining.
        */
@@ -2698,7 +2698,7 @@ public final class Airport {
        * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
        * </pre>
        *
-       * <code>string DocumentsVerifiedText = 10;</code>
+       * <code>string documentsVerifiedText = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearDocumentsVerifiedText() {
@@ -2712,7 +2712,7 @@ public final class Airport {
        * A localizable value to show whe a passenger's international documents have been verified. Examples include "Docs OK", or "TravelReady". If the boarding pass conditionalItems -&gt; InternationalDocVerification is COMPLETED, this value will show on the face of the pass.
        * </pre>
        *
-       * <code>string DocumentsVerifiedText = 10;</code>
+       * <code>string documentsVerifiedText = 10;</code>
        * @param value The bytes for documentsVerifiedText to set.
        * @return This builder for chaining.
        */
@@ -3600,33 +3600,33 @@ public final class Airport {
   static {
     java.lang.String[] descriptorData = {
       "\n\030io/flights/airport.proto\022\007flights\032\034io/" +
-      "common/localization.proto\032\027io/flights/co" +
-      "mmon.proto\032.protoc-gen-openapiv2/options" +
-      "/annotations.proto\"\322\004\n\004Port\022\036\n\017iataAirpo" +
-      "rtCode\030\001 \001(\tB\005\222A\002x\003\022\036\n\017icaoAirportCode\030\002" +
-      " \001(\tB\005\222A\002x\004\022\020\n\010cityName\030\003 \001(\t\022.\n\021localiz" +
-      "edCityName\030\004 \001(\0132\023.io.LocalizedString\022\023\n" +
-      "\013airportName\030\005 \001(\t\0221\n\024localizedAirportNa" +
-      "me\030\006 \001(\0132\023.io.LocalizedString\022\023\n\013country" +
-      "Code\030\007 \001(\t\022\020\n\010timezone\030\010 \001(\t\022:\n\020security" +
-      "Programs\030\t \003(\0162 .flights.AirportSecurity" +
-      "Programs\022\035\n\025DocumentsVerifiedText\030\n \001(\t\022" +
-      ";\n\036localizedDocumentsVerifiedText\030\013 \001(\0132" +
-      "\023.io.LocalizedString\022\020\n\010loungeId\030\r \001(\t:\256" +
-      "\001\222A\252\001\n\247\001*\016Airport Record2QAirport record" +
-      "s are required for each port that a carr" +
-      "ier operates in and out of.\322\001\017iataAirpor" +
-      "tCode\322\001\010cityName\322\001\013airportName\322\001\013country" +
-      "Code\322\001\010timezone\"\"\n\013AirportCode\022\023\n\013airpor" +
-      "tCode\030\001 \001(\tB_\n\030com.passkit.grpc.FlightsZ" +
-      ",stash.passkit.com/io/model/sdk/go/io/fl" +
-      "ights\252\002\024PassKit.Grpc.Flightsb\006proto3"
+      "common/localization.proto\032\030io/flights/ba" +
+      "rcode.proto\032.protoc-gen-openapiv2/option" +
+      "s/annotations.proto\"\322\004\n\004Port\022\036\n\017iataAirp" +
+      "ortCode\030\001 \001(\tB\005\222A\002x\003\022\036\n\017icaoAirportCode\030" +
+      "\002 \001(\tB\005\222A\002x\004\022\020\n\010cityName\030\003 \001(\t\022.\n\021locali" +
+      "zedCityName\030\004 \001(\0132\023.io.LocalizedString\022\023" +
+      "\n\013airportName\030\005 \001(\t\0221\n\024localizedAirportN" +
+      "ame\030\006 \001(\0132\023.io.LocalizedString\022\023\n\013countr" +
+      "yCode\030\007 \001(\t\022\020\n\010timezone\030\010 \001(\t\022:\n\020securit" +
+      "yPrograms\030\t \003(\0162 .flights.AirportSecurit" +
+      "yPrograms\022\035\n\025documentsVerifiedText\030\n \001(\t" +
+      "\022;\n\036localizedDocumentsVerifiedText\030\013 \001(\013" +
+      "2\023.io.LocalizedString\022\020\n\010loungeId\030\r \001(\t:" +
+      "\256\001\222A\252\001\n\247\001*\016Airport Record2QAirport recor" +
+      "ds are required for each port that a car" +
+      "rier operates in and out of.\322\001\017iataAirpo" +
+      "rtCode\322\001\010cityName\322\001\013airportName\322\001\013countr" +
+      "yCode\322\001\010timezone\"\"\n\013AirportCode\022\023\n\013airpo" +
+      "rtCode\030\001 \001(\tB_\n\030com.passkit.grpc.Flights" +
+      "Z,stash.passkit.com/io/model/sdk/go/io/f" +
+      "lights\252\002\024PassKit.Grpc.Flightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.passkit.grpc.Localization.getDescriptor(),
-          com.passkit.grpc.Flights.Common.getDescriptor(),
+          com.passkit.grpc.Flights.Barcode.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_Port_descriptor =
@@ -3643,7 +3643,7 @@ public final class Airport {
         new java.lang.String[] { "AirportCode", });
     descriptor.resolveAllFeaturesImmutable();
     com.passkit.grpc.Localization.getDescriptor();
-    com.passkit.grpc.Flights.Common.getDescriptor();
+    com.passkit.grpc.Flights.Barcode.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

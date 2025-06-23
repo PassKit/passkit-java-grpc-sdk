@@ -762,7 +762,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
+     * Create a carrier record. All Flight Designators and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     default void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -812,7 +812,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Retrieve a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -822,7 +822,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Update a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -832,7 +832,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Delete a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     default void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -842,7 +842,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -1010,7 +1010,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
+     * Create a carrier record. All Flight Designators and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public void createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request,
@@ -1065,7 +1065,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Retrieve a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -1076,7 +1076,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Update a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request,
@@ -1087,7 +1087,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Delete a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public void deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request,
@@ -1098,7 +1098,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -1257,7 +1257,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
+     * Create a carrier record. All Flight Designators and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public com.google.protobuf.Empty createCarrier(com.passkit.grpc.Flights.CarrierOuterClass.Carrier request) {
@@ -1307,7 +1307,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Retrieve a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator getFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
@@ -1317,7 +1317,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Update a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator updateFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator request) {
@@ -1327,7 +1327,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Delete a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.protobuf.Empty deleteFlightDesignator(com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignatorRequest request) {
@@ -1337,7 +1337,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.protobuf.Empty createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
@@ -1491,7 +1491,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a carrier record. All Flight Designations and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
+     * Create a carrier record. All Flight Designators and Flights must have a carrier record. Required Fields: carrierCode, airlineName, passTypeIdentifier.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createCarrier(
@@ -1546,7 +1546,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Retrieve a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> getFlightDesignator(
@@ -1557,7 +1557,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Update a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Update a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.FlightDesignatorOuterClass.FlightDesignator> updateFlightDesignator(
@@ -1568,7 +1568,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Delete a flight designation record. Required Fields: carrierCode, flightNumber, revision.
+     * Delete a flight designator record. Required Fields: carrierCode, flightNumber, revision.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteFlightDesignator(
@@ -1579,7 +1579,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designation records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlight(

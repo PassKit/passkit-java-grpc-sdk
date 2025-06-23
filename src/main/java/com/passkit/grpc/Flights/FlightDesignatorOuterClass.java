@@ -134,7 +134,7 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.FlightSchedule schedule = 6;</code>
      * @return The schedule.
      */
-    com.passkit.grpc.Flights.Common.FlightSchedule getSchedule();
+    com.passkit.grpc.Flights.Barcode.FlightSchedule getSchedule();
     /**
      * <pre>
      * The published flight schedule. If a flight object for a particular departure doesn't exist, these defaults are used. One-off changes to scheduled times for an individual departure should be handled by the Flight object. Long term changes should create a new revision of the FlightDesignator record.
@@ -142,7 +142,7 @@ public final class FlightDesignatorOuterClass {
      *
      * <code>.flights.FlightSchedule schedule = 6;</code>
      */
-    com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder getScheduleOrBuilder();
+    com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder getScheduleOrBuilder();
 
     /**
      * <pre>
@@ -404,7 +404,7 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.BoardingPolicy boardingPolicy = 16;</code>
      * @return The boardingPolicy.
      */
-    com.passkit.grpc.Flights.Common.BoardingPolicy getBoardingPolicy();
+    com.passkit.grpc.Flights.Barcode.BoardingPolicy getBoardingPolicy();
 
     /**
      * <pre>
@@ -423,7 +423,7 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.SeatClassPolicy seatClassPolicy = 17;</code>
      * @return The seatClassPolicy.
      */
-    com.passkit.grpc.Flights.Common.SeatClassPolicy getSeatClassPolicy();
+    com.passkit.grpc.Flights.Barcode.SeatClassPolicy getSeatClassPolicy();
 
     /**
      * <pre>
@@ -433,7 +433,7 @@ public final class FlightDesignatorOuterClass {
      * <code>repeated .flights.FlightAlerts alerts = 18;</code>
      * @return A list containing the alerts.
      */
-    java.util.List<com.passkit.grpc.Flights.Common.FlightAlerts> getAlertsList();
+    java.util.List<com.passkit.grpc.Flights.Barcode.FlightAlerts> getAlertsList();
     /**
      * <pre>
      * An array of alerts to subscribe to for the flight. Note that additional charges apply.
@@ -452,7 +452,7 @@ public final class FlightDesignatorOuterClass {
      * @param index The index of the element to return.
      * @return The alerts at the given index.
      */
-    com.passkit.grpc.Flights.Common.FlightAlerts getAlerts(int index);
+    com.passkit.grpc.Flights.Barcode.FlightAlerts getAlerts(int index);
     /**
      * <pre>
      * An array of alerts to subscribe to for the flight. Note that additional charges apply.
@@ -714,7 +714,7 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.FlightURLs urls = 37;</code>
      * @return The urls.
      */
-    com.passkit.grpc.Flights.Common.FlightURLs getUrls();
+    com.passkit.grpc.Flights.Barcode.FlightURLs getUrls();
     /**
      * <pre>
      * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -722,7 +722,7 @@ public final class FlightDesignatorOuterClass {
      *
      * <code>.flights.FlightURLs urls = 37;</code>
      */
-    com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder();
+    com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder();
   }
   /**
    * <pre>
@@ -952,7 +952,7 @@ public final class FlightDesignatorOuterClass {
     }
 
     public static final int SCHEDULE_FIELD_NUMBER = 6;
-    private com.passkit.grpc.Flights.Common.FlightSchedule schedule_;
+    private com.passkit.grpc.Flights.Barcode.FlightSchedule schedule_;
     /**
      * <pre>
      * The published flight schedule. If a flight object for a particular departure doesn't exist, these defaults are used. One-off changes to scheduled times for an individual departure should be handled by the Flight object. Long term changes should create a new revision of the FlightDesignator record.
@@ -974,8 +974,8 @@ public final class FlightDesignatorOuterClass {
      * @return The schedule.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightSchedule getSchedule() {
-      return schedule_ == null ? com.passkit.grpc.Flights.Common.FlightSchedule.getDefaultInstance() : schedule_;
+    public com.passkit.grpc.Flights.Barcode.FlightSchedule getSchedule() {
+      return schedule_ == null ? com.passkit.grpc.Flights.Barcode.FlightSchedule.getDefaultInstance() : schedule_;
     }
     /**
      * <pre>
@@ -985,8 +985,8 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.FlightSchedule schedule = 6;</code>
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder getScheduleOrBuilder() {
-      return schedule_ == null ? com.passkit.grpc.Flights.Common.FlightSchedule.getDefaultInstance() : schedule_;
+    public com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder getScheduleOrBuilder() {
+      return schedule_ == null ? com.passkit.grpc.Flights.Barcode.FlightSchedule.getDefaultInstance() : schedule_;
     }
 
     public static final int OPERATINGCARRIERCODE_FIELD_NUMBER = 7;
@@ -1451,9 +1451,9 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.BoardingPolicy boardingPolicy = 16;</code>
      * @return The boardingPolicy.
      */
-    @java.lang.Override public com.passkit.grpc.Flights.Common.BoardingPolicy getBoardingPolicy() {
-      com.passkit.grpc.Flights.Common.BoardingPolicy result = com.passkit.grpc.Flights.Common.BoardingPolicy.forNumber(boardingPolicy_);
-      return result == null ? com.passkit.grpc.Flights.Common.BoardingPolicy.UNRECOGNIZED : result;
+    @java.lang.Override public com.passkit.grpc.Flights.Barcode.BoardingPolicy getBoardingPolicy() {
+      com.passkit.grpc.Flights.Barcode.BoardingPolicy result = com.passkit.grpc.Flights.Barcode.BoardingPolicy.forNumber(boardingPolicy_);
+      return result == null ? com.passkit.grpc.Flights.Barcode.BoardingPolicy.UNRECOGNIZED : result;
     }
 
     public static final int SEATCLASSPOLICY_FIELD_NUMBER = 17;
@@ -1477,9 +1477,9 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.SeatClassPolicy seatClassPolicy = 17;</code>
      * @return The seatClassPolicy.
      */
-    @java.lang.Override public com.passkit.grpc.Flights.Common.SeatClassPolicy getSeatClassPolicy() {
-      com.passkit.grpc.Flights.Common.SeatClassPolicy result = com.passkit.grpc.Flights.Common.SeatClassPolicy.forNumber(seatClassPolicy_);
-      return result == null ? com.passkit.grpc.Flights.Common.SeatClassPolicy.UNRECOGNIZED : result;
+    @java.lang.Override public com.passkit.grpc.Flights.Barcode.SeatClassPolicy getSeatClassPolicy() {
+      com.passkit.grpc.Flights.Barcode.SeatClassPolicy result = com.passkit.grpc.Flights.Barcode.SeatClassPolicy.forNumber(seatClassPolicy_);
+      return result == null ? com.passkit.grpc.Flights.Barcode.SeatClassPolicy.UNRECOGNIZED : result;
     }
 
     public static final int ALERTS_FIELD_NUMBER = 18;
@@ -1487,12 +1487,12 @@ public final class FlightDesignatorOuterClass {
     private com.google.protobuf.Internal.IntList alerts_ =
         emptyIntList();
     private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
-        com.passkit.grpc.Flights.Common.FlightAlerts> alerts_converter_ =
+        com.passkit.grpc.Flights.Barcode.FlightAlerts> alerts_converter_ =
             new com.google.protobuf.Internal.IntListAdapter.IntConverter<
-                com.passkit.grpc.Flights.Common.FlightAlerts>() {
-              public com.passkit.grpc.Flights.Common.FlightAlerts convert(int from) {
-                com.passkit.grpc.Flights.Common.FlightAlerts result = com.passkit.grpc.Flights.Common.FlightAlerts.forNumber(from);
-                return result == null ? com.passkit.grpc.Flights.Common.FlightAlerts.UNRECOGNIZED : result;
+                com.passkit.grpc.Flights.Barcode.FlightAlerts>() {
+              public com.passkit.grpc.Flights.Barcode.FlightAlerts convert(int from) {
+                com.passkit.grpc.Flights.Barcode.FlightAlerts result = com.passkit.grpc.Flights.Barcode.FlightAlerts.forNumber(from);
+                return result == null ? com.passkit.grpc.Flights.Barcode.FlightAlerts.UNRECOGNIZED : result;
               }
             };
     /**
@@ -1504,9 +1504,9 @@ public final class FlightDesignatorOuterClass {
      * @return A list containing the alerts.
      */
     @java.lang.Override
-    public java.util.List<com.passkit.grpc.Flights.Common.FlightAlerts> getAlertsList() {
+    public java.util.List<com.passkit.grpc.Flights.Barcode.FlightAlerts> getAlertsList() {
       return new com.google.protobuf.Internal.IntListAdapter<
-          com.passkit.grpc.Flights.Common.FlightAlerts>(alerts_, alerts_converter_);
+          com.passkit.grpc.Flights.Barcode.FlightAlerts>(alerts_, alerts_converter_);
     }
     /**
      * <pre>
@@ -1530,7 +1530,7 @@ public final class FlightDesignatorOuterClass {
      * @return The alerts at the given index.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightAlerts getAlerts(int index) {
+    public com.passkit.grpc.Flights.Barcode.FlightAlerts getAlerts(int index) {
       return alerts_converter_.convert(alerts_.getInt(index));
     }
     /**
@@ -1912,7 +1912,7 @@ public final class FlightDesignatorOuterClass {
     }
 
     public static final int URLS_FIELD_NUMBER = 37;
-    private com.passkit.grpc.Flights.Common.FlightURLs urls_;
+    private com.passkit.grpc.Flights.Barcode.FlightURLs urls_;
     /**
      * <pre>
      * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -1934,8 +1934,8 @@ public final class FlightDesignatorOuterClass {
      * @return The urls.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightURLs getUrls() {
-      return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+    public com.passkit.grpc.Flights.Barcode.FlightURLs getUrls() {
+      return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
     }
     /**
      * <pre>
@@ -1945,8 +1945,8 @@ public final class FlightDesignatorOuterClass {
      * <code>.flights.FlightURLs urls = 37;</code>
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder() {
-      return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+    public com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder() {
+      return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2009,10 +2009,10 @@ public final class FlightDesignatorOuterClass {
       for (int i = 0; i < transitTerminals_.size(); i++) {
         com.google.protobuf.GeneratedMessage.writeString(output, 15, transitTerminals_.getRaw(i));
       }
-      if (boardingPolicy_ != com.passkit.grpc.Flights.Common.BoardingPolicy.BOARDING_POLICY_UNSPECIFIED.getNumber()) {
+      if (boardingPolicy_ != com.passkit.grpc.Flights.Barcode.BoardingPolicy.BOARDING_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(16, boardingPolicy_);
       }
-      if (seatClassPolicy_ != com.passkit.grpc.Flights.Common.SeatClassPolicy.SEAT_CLASS_POLICY_UNSPECIFIED.getNumber()) {
+      if (seatClassPolicy_ != com.passkit.grpc.Flights.Barcode.SeatClassPolicy.SEAT_CLASS_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(17, seatClassPolicy_);
       }
       if (getAlertsList().size() > 0) {
@@ -2125,11 +2125,11 @@ public final class FlightDesignatorOuterClass {
         size += dataSize;
         size += 1 * getTransitTerminalsList().size();
       }
-      if (boardingPolicy_ != com.passkit.grpc.Flights.Common.BoardingPolicy.BOARDING_POLICY_UNSPECIFIED.getNumber()) {
+      if (boardingPolicy_ != com.passkit.grpc.Flights.Barcode.BoardingPolicy.BOARDING_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(16, boardingPolicy_);
       }
-      if (seatClassPolicy_ != com.passkit.grpc.Flights.Common.SeatClassPolicy.SEAT_CLASS_POLICY_UNSPECIFIED.getNumber()) {
+      if (seatClassPolicy_ != com.passkit.grpc.Flights.Barcode.SeatClassPolicy.SEAT_CLASS_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(17, seatClassPolicy_);
       }
@@ -3582,9 +3582,9 @@ public final class FlightDesignatorOuterClass {
         return this;
       }
 
-      private com.passkit.grpc.Flights.Common.FlightSchedule schedule_;
+      private com.passkit.grpc.Flights.Barcode.FlightSchedule schedule_;
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightSchedule, com.passkit.grpc.Flights.Common.FlightSchedule.Builder, com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder> scheduleBuilder_;
+          com.passkit.grpc.Flights.Barcode.FlightSchedule, com.passkit.grpc.Flights.Barcode.FlightSchedule.Builder, com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder> scheduleBuilder_;
       /**
        * <pre>
        * The published flight schedule. If a flight object for a particular departure doesn't exist, these defaults are used. One-off changes to scheduled times for an individual departure should be handled by the Flight object. Long term changes should create a new revision of the FlightDesignator record.
@@ -3604,9 +3604,9 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightSchedule schedule = 6;</code>
        * @return The schedule.
        */
-      public com.passkit.grpc.Flights.Common.FlightSchedule getSchedule() {
+      public com.passkit.grpc.Flights.Barcode.FlightSchedule getSchedule() {
         if (scheduleBuilder_ == null) {
-          return schedule_ == null ? com.passkit.grpc.Flights.Common.FlightSchedule.getDefaultInstance() : schedule_;
+          return schedule_ == null ? com.passkit.grpc.Flights.Barcode.FlightSchedule.getDefaultInstance() : schedule_;
         } else {
           return scheduleBuilder_.getMessage();
         }
@@ -3618,7 +3618,7 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
-      public Builder setSchedule(com.passkit.grpc.Flights.Common.FlightSchedule value) {
+      public Builder setSchedule(com.passkit.grpc.Flights.Barcode.FlightSchedule value) {
         if (scheduleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3639,7 +3639,7 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
       public Builder setSchedule(
-          com.passkit.grpc.Flights.Common.FlightSchedule.Builder builderForValue) {
+          com.passkit.grpc.Flights.Barcode.FlightSchedule.Builder builderForValue) {
         if (scheduleBuilder_ == null) {
           schedule_ = builderForValue.build();
         } else {
@@ -3656,11 +3656,11 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
-      public Builder mergeSchedule(com.passkit.grpc.Flights.Common.FlightSchedule value) {
+      public Builder mergeSchedule(com.passkit.grpc.Flights.Barcode.FlightSchedule value) {
         if (scheduleBuilder_ == null) {
           if (((bitField0_ & 0x00000020) != 0) &&
             schedule_ != null &&
-            schedule_ != com.passkit.grpc.Flights.Common.FlightSchedule.getDefaultInstance()) {
+            schedule_ != com.passkit.grpc.Flights.Barcode.FlightSchedule.getDefaultInstance()) {
             getScheduleBuilder().mergeFrom(value);
           } else {
             schedule_ = value;
@@ -3698,7 +3698,7 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightSchedule.Builder getScheduleBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightSchedule.Builder getScheduleBuilder() {
         bitField0_ |= 0x00000020;
         onChanged();
         return internalGetScheduleFieldBuilder().getBuilder();
@@ -3710,12 +3710,12 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder getScheduleOrBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder getScheduleOrBuilder() {
         if (scheduleBuilder_ != null) {
           return scheduleBuilder_.getMessageOrBuilder();
         } else {
           return schedule_ == null ?
-              com.passkit.grpc.Flights.Common.FlightSchedule.getDefaultInstance() : schedule_;
+              com.passkit.grpc.Flights.Barcode.FlightSchedule.getDefaultInstance() : schedule_;
         }
       }
       /**
@@ -3726,11 +3726,11 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightSchedule schedule = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightSchedule, com.passkit.grpc.Flights.Common.FlightSchedule.Builder, com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder> 
+          com.passkit.grpc.Flights.Barcode.FlightSchedule, com.passkit.grpc.Flights.Barcode.FlightSchedule.Builder, com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder> 
           internalGetScheduleFieldBuilder() {
         if (scheduleBuilder_ == null) {
           scheduleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.passkit.grpc.Flights.Common.FlightSchedule, com.passkit.grpc.Flights.Common.FlightSchedule.Builder, com.passkit.grpc.Flights.Common.FlightScheduleOrBuilder>(
+              com.passkit.grpc.Flights.Barcode.FlightSchedule, com.passkit.grpc.Flights.Barcode.FlightSchedule.Builder, com.passkit.grpc.Flights.Barcode.FlightScheduleOrBuilder>(
                   getSchedule(),
                   getParentForChildren(),
                   isClean());
@@ -4768,9 +4768,9 @@ public final class FlightDesignatorOuterClass {
        * @return The boardingPolicy.
        */
       @java.lang.Override
-      public com.passkit.grpc.Flights.Common.BoardingPolicy getBoardingPolicy() {
-        com.passkit.grpc.Flights.Common.BoardingPolicy result = com.passkit.grpc.Flights.Common.BoardingPolicy.forNumber(boardingPolicy_);
-        return result == null ? com.passkit.grpc.Flights.Common.BoardingPolicy.UNRECOGNIZED : result;
+      public com.passkit.grpc.Flights.Barcode.BoardingPolicy getBoardingPolicy() {
+        com.passkit.grpc.Flights.Barcode.BoardingPolicy result = com.passkit.grpc.Flights.Barcode.BoardingPolicy.forNumber(boardingPolicy_);
+        return result == null ? com.passkit.grpc.Flights.Barcode.BoardingPolicy.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -4781,7 +4781,7 @@ public final class FlightDesignatorOuterClass {
        * @param value The boardingPolicy to set.
        * @return This builder for chaining.
        */
-      public Builder setBoardingPolicy(com.passkit.grpc.Flights.Common.BoardingPolicy value) {
+      public Builder setBoardingPolicy(com.passkit.grpc.Flights.Barcode.BoardingPolicy value) {
         if (value == null) { throw new NullPointerException(); }
         bitField0_ |= 0x00008000;
         boardingPolicy_ = value.getNumber();
@@ -4839,9 +4839,9 @@ public final class FlightDesignatorOuterClass {
        * @return The seatClassPolicy.
        */
       @java.lang.Override
-      public com.passkit.grpc.Flights.Common.SeatClassPolicy getSeatClassPolicy() {
-        com.passkit.grpc.Flights.Common.SeatClassPolicy result = com.passkit.grpc.Flights.Common.SeatClassPolicy.forNumber(seatClassPolicy_);
-        return result == null ? com.passkit.grpc.Flights.Common.SeatClassPolicy.UNRECOGNIZED : result;
+      public com.passkit.grpc.Flights.Barcode.SeatClassPolicy getSeatClassPolicy() {
+        com.passkit.grpc.Flights.Barcode.SeatClassPolicy result = com.passkit.grpc.Flights.Barcode.SeatClassPolicy.forNumber(seatClassPolicy_);
+        return result == null ? com.passkit.grpc.Flights.Barcode.SeatClassPolicy.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -4852,7 +4852,7 @@ public final class FlightDesignatorOuterClass {
        * @param value The seatClassPolicy to set.
        * @return This builder for chaining.
        */
-      public Builder setSeatClassPolicy(com.passkit.grpc.Flights.Common.SeatClassPolicy value) {
+      public Builder setSeatClassPolicy(com.passkit.grpc.Flights.Barcode.SeatClassPolicy value) {
         if (value == null) { throw new NullPointerException(); }
         bitField0_ |= 0x00010000;
         seatClassPolicy_ = value.getNumber();
@@ -4889,9 +4889,9 @@ public final class FlightDesignatorOuterClass {
        * <code>repeated .flights.FlightAlerts alerts = 18;</code>
        * @return A list containing the alerts.
        */
-      public java.util.List<com.passkit.grpc.Flights.Common.FlightAlerts> getAlertsList() {
+      public java.util.List<com.passkit.grpc.Flights.Barcode.FlightAlerts> getAlertsList() {
         return new com.google.protobuf.Internal.IntListAdapter<
-            com.passkit.grpc.Flights.Common.FlightAlerts>(alerts_, alerts_converter_);
+            com.passkit.grpc.Flights.Barcode.FlightAlerts>(alerts_, alerts_converter_);
       }
       /**
        * <pre>
@@ -4913,7 +4913,7 @@ public final class FlightDesignatorOuterClass {
        * @param index The index of the element to return.
        * @return The alerts at the given index.
        */
-      public com.passkit.grpc.Flights.Common.FlightAlerts getAlerts(int index) {
+      public com.passkit.grpc.Flights.Barcode.FlightAlerts getAlerts(int index) {
         return alerts_converter_.convert(alerts_.getInt(index));
       }
       /**
@@ -4927,7 +4927,7 @@ public final class FlightDesignatorOuterClass {
        * @return This builder for chaining.
        */
       public Builder setAlerts(
-          int index, com.passkit.grpc.Flights.Common.FlightAlerts value) {
+          int index, com.passkit.grpc.Flights.Barcode.FlightAlerts value) {
         if (value == null) { throw new NullPointerException(); }
         ensureAlertsIsMutable();
         alerts_.setInt(index, value.getNumber());
@@ -4943,7 +4943,7 @@ public final class FlightDesignatorOuterClass {
        * @param value The alerts to add.
        * @return This builder for chaining.
        */
-      public Builder addAlerts(com.passkit.grpc.Flights.Common.FlightAlerts value) {
+      public Builder addAlerts(com.passkit.grpc.Flights.Barcode.FlightAlerts value) {
         if (value == null) { throw new NullPointerException(); }
         ensureAlertsIsMutable();
         alerts_.addInt(value.getNumber());
@@ -4960,9 +4960,9 @@ public final class FlightDesignatorOuterClass {
        * @return This builder for chaining.
        */
       public Builder addAllAlerts(
-          java.lang.Iterable<? extends com.passkit.grpc.Flights.Common.FlightAlerts> values) {
+          java.lang.Iterable<? extends com.passkit.grpc.Flights.Barcode.FlightAlerts> values) {
         ensureAlertsIsMutable();
-        for (com.passkit.grpc.Flights.Common.FlightAlerts value : values) {
+        for (com.passkit.grpc.Flights.Barcode.FlightAlerts value : values) {
           alerts_.addInt(value.getNumber());
         }
         onChanged();
@@ -6387,9 +6387,9 @@ public final class FlightDesignatorOuterClass {
         return this;
       }
 
-      private com.passkit.grpc.Flights.Common.FlightURLs urls_;
+      private com.passkit.grpc.Flights.Barcode.FlightURLs urls_;
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder> urlsBuilder_;
+          com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder> urlsBuilder_;
       /**
        * <pre>
        * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -6409,9 +6409,9 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightURLs urls = 37;</code>
        * @return The urls.
        */
-      public com.passkit.grpc.Flights.Common.FlightURLs getUrls() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLs getUrls() {
         if (urlsBuilder_ == null) {
-          return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+          return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
         } else {
           return urlsBuilder_.getMessage();
         }
@@ -6423,7 +6423,7 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public Builder setUrls(com.passkit.grpc.Flights.Common.FlightURLs value) {
+      public Builder setUrls(com.passkit.grpc.Flights.Barcode.FlightURLs value) {
         if (urlsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6444,7 +6444,7 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightURLs urls = 37;</code>
        */
       public Builder setUrls(
-          com.passkit.grpc.Flights.Common.FlightURLs.Builder builderForValue) {
+          com.passkit.grpc.Flights.Barcode.FlightURLs.Builder builderForValue) {
         if (urlsBuilder_ == null) {
           urls_ = builderForValue.build();
         } else {
@@ -6461,11 +6461,11 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public Builder mergeUrls(com.passkit.grpc.Flights.Common.FlightURLs value) {
+      public Builder mergeUrls(com.passkit.grpc.Flights.Barcode.FlightURLs value) {
         if (urlsBuilder_ == null) {
           if (((bitField0_ & 0x08000000) != 0) &&
             urls_ != null &&
-            urls_ != com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance()) {
+            urls_ != com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance()) {
             getUrlsBuilder().mergeFrom(value);
           } else {
             urls_ = value;
@@ -6503,7 +6503,7 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightURLs.Builder getUrlsBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLs.Builder getUrlsBuilder() {
         bitField0_ |= 0x08000000;
         onChanged();
         return internalGetUrlsFieldBuilder().getBuilder();
@@ -6515,12 +6515,12 @@ public final class FlightDesignatorOuterClass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder() {
         if (urlsBuilder_ != null) {
           return urlsBuilder_.getMessageOrBuilder();
         } else {
           return urls_ == null ?
-              com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+              com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
         }
       }
       /**
@@ -6531,11 +6531,11 @@ public final class FlightDesignatorOuterClass {
        * <code>.flights.FlightURLs urls = 37;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder> 
+          com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder> 
           internalGetUrlsFieldBuilder() {
         if (urlsBuilder_ == null) {
           urlsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder>(
+              com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder>(
                   getUrls(),
                   getParentForChildren(),
                   isClean());
@@ -7439,47 +7439,47 @@ public final class FlightDesignatorOuterClass {
       "\n\"io/flights/flight_designator.proto\022\007fl" +
       "ights\032\036io/common/common_objects.proto\032\031i" +
       "o/common/proximity.proto\032\025io/common/link" +
-      "s.proto\032\027io/flights/common.proto\032.protoc" +
-      "-gen-openapiv2/options/annotations.proto" +
-      "\"\247\t\n\020FlightDesignator\022*\n\013carrierCode\030\001 \001" +
-      "(\tB\025\222A\022\212\001\017^[A-Z0-9]{3,4}$\022\033\n\014flightNumbe" +
-      "r\030\002 \001(\tB\005\222A\002x\005\022\033\n\tvalidFrom\030\003 \001(\0132\010.io.D" +
-      "ate\022\020\n\010revision\030\004 \001(\r\022\031\n\006active\030\005 \001(\010B\t\222" +
-      "A\006:\004TRUE\022)\n\010schedule\030\006 \001(\0132\027.flights.Fli" +
-      "ghtSchedule\022&\n\024operatingCarrierCode\030\007 \001(" +
-      "\tB\010\222A\005x\003\200\001\002\022$\n\025operatingFlightNumber\030\010 \001" +
-      "(\tB\005\222A\002x\005\022\036\n\026codeShareFlightNumbers\030\t \003(" +
-      "\t\022\016\n\006origin\030\n \001(\t\022\023\n\013destination\030\013 \001(\t\022\025" +
-      "\n\rtransitPoints\030\014 \003(\t\022\031\n\021departureTermin" +
-      "al\030\r \001(\t\022\027\n\017arrivalTerminal\030\016 \001(\t\022\030\n\020tra" +
-      "nsitTerminals\030\017 \003(\t\022/\n\016boardingPolicy\030\020 " +
-      "\001(\0162\027.flights.BoardingPolicy\0221\n\017seatClas" +
-      "sPolicy\030\021 \001(\0162\030.flights.SeatClassPolicy\022" +
-      "%\n\006alerts\030\022 \003(\0162\025.flights.FlightAlerts\022\026" +
-      "\n\016passTemplateId\030\023 \001(\t\022&\n\023autoInvalidate" +
-      "After\030\024 \001(\rB\t\222A\006:\0042880\022)\n\035autoInvalidate" +
-      "CancelledPasses\030\025 \001(\010B\002\030\001\0221\n\020locationMes" +
-      "sages\030\026 \003(\0132\017.io.GPSLocationB\006\222A\003\240\001\n\022*\n\016" +
-      "beaconMessages\030\027 \003(\0132\n.io.BeaconB\006\222A\003\240\001\n" +
-      "\022\036\n\014defaultLinks\030\030 \003(\0132\010.io.Link\022\030\n\020Cond" +
-      "itionalItems\030\031 \001(\010\022\035\n\025BarcodeAdditionalD" +
-      "ata\030\032 \001(\t\0228\n\031invalidateCancelledPasses\030\033" +
-      " \001(\0162\n.io.ToggleB\t\222A\006:\004TRUE\022!\n\004urls\030% \001(" +
-      "\0132\023.flights.FlightURLs:\321\001\222A\315\001\n\312\001*\021Flight" +
-      " Designator2ZA flight designator record " +
-      "describes mostly static data with regard" +
-      " to a flight operation.\322\001\013carrierCode\322\001\014" +
-      "flightNumber\322\001\006origin\322\001\010schedule\322\001\010revis" +
-      "ion\322\001\013destination\322\001\016passTemplateId\"\346\001\n\027F" +
-      "lightDesignatorRequest\022\035\n\013carrierCode\030\001 " +
-      "\001(\tB\010\222A\005x\003\200\001\002\022\033\n\014flightNumber\030\002 \001(\tB\005\222A\002" +
-      "x\005\022\020\n\010revision\030\003 \001(\r:}\222Az\nx*\031Flight Desi" +
-      "gnator Request2>Used for retrieving deta" +
-      "ils of a particular flight designator.\322\001" +
-      "\013carrierCode\322\001\014flightNumberB_\n\030com.passk" +
-      "it.grpc.FlightsZ,stash.passkit.com/io/mo" +
-      "del/sdk/go/io/flights\252\002\024PassKit.Grpc.Fli" +
-      "ghtsb\006proto3"
+      "s.proto\032\030io/flights/barcode.proto\032.proto" +
+      "c-gen-openapiv2/options/annotations.prot" +
+      "o\"\247\t\n\020FlightDesignator\022*\n\013carrierCode\030\001 " +
+      "\001(\tB\025\222A\022\212\001\017^[A-Z0-9]{3,4}$\022\033\n\014flightNumb" +
+      "er\030\002 \001(\tB\005\222A\002x\005\022\033\n\tvalidFrom\030\003 \001(\0132\010.io." +
+      "Date\022\020\n\010revision\030\004 \001(\r\022\031\n\006active\030\005 \001(\010B\t" +
+      "\222A\006:\004TRUE\022)\n\010schedule\030\006 \001(\0132\027.flights.Fl" +
+      "ightSchedule\022&\n\024operatingCarrierCode\030\007 \001" +
+      "(\tB\010\222A\005x\003\200\001\002\022$\n\025operatingFlightNumber\030\010 " +
+      "\001(\tB\005\222A\002x\005\022\036\n\026codeShareFlightNumbers\030\t \003" +
+      "(\t\022\016\n\006origin\030\n \001(\t\022\023\n\013destination\030\013 \001(\t\022" +
+      "\025\n\rtransitPoints\030\014 \003(\t\022\031\n\021departureTermi" +
+      "nal\030\r \001(\t\022\027\n\017arrivalTerminal\030\016 \001(\t\022\030\n\020tr" +
+      "ansitTerminals\030\017 \003(\t\022/\n\016boardingPolicy\030\020" +
+      " \001(\0162\027.flights.BoardingPolicy\0221\n\017seatCla" +
+      "ssPolicy\030\021 \001(\0162\030.flights.SeatClassPolicy" +
+      "\022%\n\006alerts\030\022 \003(\0162\025.flights.FlightAlerts\022" +
+      "\026\n\016passTemplateId\030\023 \001(\t\022&\n\023autoInvalidat" +
+      "eAfter\030\024 \001(\rB\t\222A\006:\0042880\022)\n\035autoInvalidat" +
+      "eCancelledPasses\030\025 \001(\010B\002\030\001\0221\n\020locationMe" +
+      "ssages\030\026 \003(\0132\017.io.GPSLocationB\006\222A\003\240\001\n\022*\n" +
+      "\016beaconMessages\030\027 \003(\0132\n.io.BeaconB\006\222A\003\240\001" +
+      "\n\022\036\n\014defaultLinks\030\030 \003(\0132\010.io.Link\022\030\n\020Con" +
+      "ditionalItems\030\031 \001(\010\022\035\n\025BarcodeAdditional" +
+      "Data\030\032 \001(\t\0228\n\031invalidateCancelledPasses\030" +
+      "\033 \001(\0162\n.io.ToggleB\t\222A\006:\004TRUE\022!\n\004urls\030% \001" +
+      "(\0132\023.flights.FlightURLs:\321\001\222A\315\001\n\312\001*\021Fligh" +
+      "t Designator2ZA flight designator record" +
+      " describes mostly static data with regar" +
+      "d to a flight operation.\322\001\013carrierCode\322\001" +
+      "\014flightNumber\322\001\006origin\322\001\010schedule\322\001\010revi" +
+      "sion\322\001\013destination\322\001\016passTemplateId\"\346\001\n\027" +
+      "FlightDesignatorRequest\022\035\n\013carrierCode\030\001" +
+      " \001(\tB\010\222A\005x\003\200\001\002\022\033\n\014flightNumber\030\002 \001(\tB\005\222A" +
+      "\002x\005\022\020\n\010revision\030\003 \001(\r:}\222Az\nx*\031Flight Des" +
+      "ignator Request2>Used for retrieving det" +
+      "ails of a particular flight designator.\322" +
+      "\001\013carrierCode\322\001\014flightNumberB_\n\030com.pass" +
+      "kit.grpc.FlightsZ,stash.passkit.com/io/m" +
+      "odel/sdk/go/io/flights\252\002\024PassKit.Grpc.Fl" +
+      "ightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -7487,7 +7487,7 @@ public final class FlightDesignatorOuterClass {
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
           com.passkit.grpc.Links.getDescriptor(),
-          com.passkit.grpc.Flights.Common.getDescriptor(),
+          com.passkit.grpc.Flights.Barcode.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_flights_FlightDesignator_descriptor =
@@ -7506,7 +7506,7 @@ public final class FlightDesignatorOuterClass {
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
     com.passkit.grpc.Links.getDescriptor();
-    com.passkit.grpc.Flights.Common.getDescriptor();
+    com.passkit.grpc.Flights.Barcode.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

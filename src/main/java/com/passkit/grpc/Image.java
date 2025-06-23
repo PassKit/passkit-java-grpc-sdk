@@ -227,7 +227,7 @@ public final class Image {
     artwork(23),
     /**
      * <pre>
-     * used in the top left hand corner for Apple poster style Event tickets, and Semantic Boarding Passes (&lt;=378px x 30px).
+     * used in the top left hand corner for Apple poster style Event tickets, and Semantic Boarding Passes (&lt;=378px x 90px).
      * </pre>
      *
      * <code>primaryLogo = 24;</code>
@@ -445,7 +445,7 @@ public final class Image {
     public static final int artwork_VALUE = 23;
     /**
      * <pre>
-     * used in the top left hand corner for Apple poster style Event tickets, and Semantic Boarding Passes (&lt;=378px x 30px).
+     * used in the top left hand corner for Apple poster style Event tickets, and Semantic Boarding Passes (&lt;=378px x 90px).
      * </pre>
      *
      * <code>primaryLogo = 24;</code>

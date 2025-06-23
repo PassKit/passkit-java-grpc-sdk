@@ -633,7 +633,7 @@ public final class BoardingPass {
 
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -642,7 +642,7 @@ public final class BoardingPass {
         getLocationMessagesList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -650,7 +650,7 @@ public final class BoardingPass {
     com.passkit.grpc.Proximity.GPSLocation getLocationMessages(int index);
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -658,7 +658,7 @@ public final class BoardingPass {
     int getLocationMessagesCount();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -667,7 +667,7 @@ public final class BoardingPass {
         getLocationMessagesOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -677,7 +677,7 @@ public final class BoardingPass {
 
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -686,7 +686,7 @@ public final class BoardingPass {
         getBeaconMessagesList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -694,7 +694,7 @@ public final class BoardingPass {
     com.passkit.grpc.Proximity.Beacon getBeaconMessages(int index);
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -702,7 +702,7 @@ public final class BoardingPass {
     int getBeaconMessagesCount();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -711,7 +711,7 @@ public final class BoardingPass {
         getBeaconMessagesOrBuilderList();
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -827,7 +827,7 @@ public final class BoardingPass {
      * <code>.flights.FlightURLs urls = 37;</code>
      * @return The urls.
      */
-    com.passkit.grpc.Flights.Common.FlightURLs getUrls();
+    com.passkit.grpc.Flights.Barcode.FlightURLs getUrls();
     /**
      * <pre>
      * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -835,23 +835,23 @@ public final class BoardingPass {
      *
      * <code>.flights.FlightURLs urls = 37;</code>
      */
-    com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder();
+    com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder();
 
     /**
      * <pre>
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return A list containing the capabilities.
      */
-    java.util.List<com.passkit.grpc.Flights.Common.PassengerCapabilities> getCapabilitiesList();
+    java.util.List<com.passkit.grpc.Flights.Barcode.PassengerCapabilities> getCapabilitiesList();
     /**
      * <pre>
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return The count of capabilities.
      */
     int getCapabilitiesCount();
@@ -860,17 +860,17 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @param index The index of the element to return.
      * @return The capabilities at the given index.
      */
-    com.passkit.grpc.Flights.Common.PassengerCapabilities getCapabilities(int index);
+    com.passkit.grpc.Flights.Barcode.PassengerCapabilities getCapabilities(int index);
     /**
      * <pre>
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return A list containing the enum numeric values on the wire for capabilities.
      */
     java.util.List<java.lang.Integer>
@@ -880,7 +880,7 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of capabilities at the given index.
      */
@@ -891,16 +891,16 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return A list containing the securityPrograms.
      */
-    java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList();
+    java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList();
     /**
      * <pre>
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return The count of securityPrograms.
      */
     int getSecurityProgramsCount();
@@ -909,17 +909,17 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @param index The index of the element to return.
      * @return The securityPrograms at the given index.
      */
-    com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index);
+    com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index);
     /**
      * <pre>
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return A list containing the enum numeric values on the wire for securityPrograms.
      */
     java.util.List<java.lang.Integer>
@@ -929,7 +929,7 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of securityPrograms at the given index.
      */
@@ -984,7 +984,7 @@ public final class BoardingPass {
   }
   /**
    * <pre>
-   * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designation record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designation record and other publicly available data.
+   * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designator record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designator record and other publicly available data.
    * </pre>
    *
    * Protobuf type {@code flights.BoardingPassRecord}
@@ -2256,7 +2256,7 @@ public final class BoardingPass {
     private java.util.List<com.passkit.grpc.Proximity.GPSLocation> locationMessages_;
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2267,7 +2267,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2279,7 +2279,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2290,7 +2290,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2301,7 +2301,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2317,7 +2317,7 @@ public final class BoardingPass {
     private java.util.List<com.passkit.grpc.Proximity.Beacon> beaconMessages_;
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2328,7 +2328,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2340,7 +2340,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2351,7 +2351,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2362,7 +2362,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+     * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
      * </pre>
      *
      * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -2520,7 +2520,7 @@ public final class BoardingPass {
     }
 
     public static final int URLS_FIELD_NUMBER = 37;
-    private com.passkit.grpc.Flights.Common.FlightURLs urls_;
+    private com.passkit.grpc.Flights.Barcode.FlightURLs urls_;
     /**
      * <pre>
      * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -2542,8 +2542,8 @@ public final class BoardingPass {
      * @return The urls.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightURLs getUrls() {
-      return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+    public com.passkit.grpc.Flights.Barcode.FlightURLs getUrls() {
+      return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
     }
     /**
      * <pre>
@@ -2553,8 +2553,8 @@ public final class BoardingPass {
      * <code>.flights.FlightURLs urls = 37;</code>
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder() {
-      return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+    public com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder() {
+      return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
     }
 
     public static final int CAPABILITIES_FIELD_NUMBER = 38;
@@ -2562,12 +2562,12 @@ public final class BoardingPass {
     private com.google.protobuf.Internal.IntList capabilities_ =
         emptyIntList();
     private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
-        com.passkit.grpc.Flights.Common.PassengerCapabilities> capabilities_converter_ =
+        com.passkit.grpc.Flights.Barcode.PassengerCapabilities> capabilities_converter_ =
             new com.google.protobuf.Internal.IntListAdapter.IntConverter<
-                com.passkit.grpc.Flights.Common.PassengerCapabilities>() {
-              public com.passkit.grpc.Flights.Common.PassengerCapabilities convert(int from) {
-                com.passkit.grpc.Flights.Common.PassengerCapabilities result = com.passkit.grpc.Flights.Common.PassengerCapabilities.forNumber(from);
-                return result == null ? com.passkit.grpc.Flights.Common.PassengerCapabilities.UNRECOGNIZED : result;
+                com.passkit.grpc.Flights.Barcode.PassengerCapabilities>() {
+              public com.passkit.grpc.Flights.Barcode.PassengerCapabilities convert(int from) {
+                com.passkit.grpc.Flights.Barcode.PassengerCapabilities result = com.passkit.grpc.Flights.Barcode.PassengerCapabilities.forNumber(from);
+                return result == null ? com.passkit.grpc.Flights.Barcode.PassengerCapabilities.UNRECOGNIZED : result;
               }
             };
     /**
@@ -2575,20 +2575,20 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return A list containing the capabilities.
      */
     @java.lang.Override
-    public java.util.List<com.passkit.grpc.Flights.Common.PassengerCapabilities> getCapabilitiesList() {
+    public java.util.List<com.passkit.grpc.Flights.Barcode.PassengerCapabilities> getCapabilitiesList() {
       return new com.google.protobuf.Internal.IntListAdapter<
-          com.passkit.grpc.Flights.Common.PassengerCapabilities>(capabilities_, capabilities_converter_);
+          com.passkit.grpc.Flights.Barcode.PassengerCapabilities>(capabilities_, capabilities_converter_);
     }
     /**
      * <pre>
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return The count of capabilities.
      */
     @java.lang.Override
@@ -2600,12 +2600,12 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @param index The index of the element to return.
      * @return The capabilities at the given index.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.PassengerCapabilities getCapabilities(int index) {
+    public com.passkit.grpc.Flights.Barcode.PassengerCapabilities getCapabilities(int index) {
       return capabilities_converter_.convert(capabilities_.getInt(index));
     }
     /**
@@ -2613,7 +2613,7 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @return A list containing the enum numeric values on the wire for capabilities.
      */
     @java.lang.Override
@@ -2626,7 +2626,7 @@ public final class BoardingPass {
      * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
      * </pre>
      *
-     * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+     * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of capabilities at the given index.
      */
@@ -2641,12 +2641,12 @@ public final class BoardingPass {
     private com.google.protobuf.Internal.IntList securityPrograms_ =
         emptyIntList();
     private static final     com.google.protobuf.Internal.IntListAdapter.IntConverter<
-        com.passkit.grpc.Flights.Common.AirportSecurityPrograms> securityPrograms_converter_ =
+        com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> securityPrograms_converter_ =
             new com.google.protobuf.Internal.IntListAdapter.IntConverter<
-                com.passkit.grpc.Flights.Common.AirportSecurityPrograms>() {
-              public com.passkit.grpc.Flights.Common.AirportSecurityPrograms convert(int from) {
-                com.passkit.grpc.Flights.Common.AirportSecurityPrograms result = com.passkit.grpc.Flights.Common.AirportSecurityPrograms.forNumber(from);
-                return result == null ? com.passkit.grpc.Flights.Common.AirportSecurityPrograms.UNRECOGNIZED : result;
+                com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>() {
+              public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms convert(int from) {
+                com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms result = com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms.forNumber(from);
+                return result == null ? com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms.UNRECOGNIZED : result;
               }
             };
     /**
@@ -2654,20 +2654,20 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return A list containing the securityPrograms.
      */
     @java.lang.Override
-    public java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList() {
+    public java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList() {
       return new com.google.protobuf.Internal.IntListAdapter<
-          com.passkit.grpc.Flights.Common.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
+          com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
     }
     /**
      * <pre>
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return The count of securityPrograms.
      */
     @java.lang.Override
@@ -2679,12 +2679,12 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @param index The index of the element to return.
      * @return The securityPrograms at the given index.
      */
     @java.lang.Override
-    public com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index) {
+    public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index) {
       return securityPrograms_converter_.convert(securityPrograms_.getInt(index));
     }
     /**
@@ -2692,7 +2692,7 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @return A list containing the enum numeric values on the wire for securityPrograms.
      */
     @java.lang.Override
@@ -2705,7 +2705,7 @@ public final class BoardingPass {
      * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
      * </pre>
      *
-     * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+     * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of securityPrograms at the given index.
      */
@@ -3418,7 +3418,7 @@ public final class BoardingPass {
     }
     /**
      * <pre>
-     * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designation record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designation record and other publicly available data.
+     * A Boarding Pass record is unique to an individual passenger journey form a boarding point to a deplaning point. A Carrier and a Flight Designator record must exist. If a Flight record does not already exist, then it will be auto-generated based on the Flight Designator record and other publicly available data.
      * </pre>
      *
      * Protobuf type {@code flights.BoardingPassRecord}
@@ -7071,7 +7071,7 @@ public final class BoardingPass {
 
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7085,7 +7085,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7099,7 +7099,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7113,7 +7113,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7134,7 +7134,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7152,7 +7152,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7172,7 +7172,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7193,7 +7193,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7211,7 +7211,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7229,7 +7229,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7248,7 +7248,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7265,7 +7265,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7282,7 +7282,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7293,7 +7293,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7307,7 +7307,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7322,7 +7322,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7333,7 +7333,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7345,7 +7345,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 GPS locations where this boarding pass should be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.GPSLocation locationMessages = 30 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7383,7 +7383,7 @@ public final class BoardingPass {
 
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7397,7 +7397,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7411,7 +7411,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7425,7 +7425,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7446,7 +7446,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7464,7 +7464,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7484,7 +7484,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7505,7 +7505,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7523,7 +7523,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7541,7 +7541,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7560,7 +7560,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7577,7 +7577,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7594,7 +7594,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7605,7 +7605,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7619,7 +7619,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7634,7 +7634,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7645,7 +7645,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -7657,7 +7657,7 @@ public final class BoardingPass {
       }
       /**
        * <pre>
-       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designation and flight values.
+       * A list of up to 10 Beacon UUIDs that should trigger the boarding pass to be presented on the lock-screen. Values here will override the designator and flight values.
        * </pre>
        *
        * <code>repeated .io.Beacon beaconMessages = 31 [(.grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = { ... }</code>
@@ -8242,9 +8242,9 @@ public final class BoardingPass {
         return additionalDataItemsBuilder_;
       }
 
-      private com.passkit.grpc.Flights.Common.FlightURLs urls_;
+      private com.passkit.grpc.Flights.Barcode.FlightURLs urls_;
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder> urlsBuilder_;
+          com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder> urlsBuilder_;
       /**
        * <pre>
        * URLs at the flight level will be completely overwritten by URLs at boarding pass level. For example, a Purchase Wifi, or Purchase Lounge Access may apply to every passenger except for passengers that have already purchased. In these cases, it is more efficient to update the boarding pass objects of those that have purchased, so as not to display a redundant link.
@@ -8264,9 +8264,9 @@ public final class BoardingPass {
        * <code>.flights.FlightURLs urls = 37;</code>
        * @return The urls.
        */
-      public com.passkit.grpc.Flights.Common.FlightURLs getUrls() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLs getUrls() {
         if (urlsBuilder_ == null) {
-          return urls_ == null ? com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+          return urls_ == null ? com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
         } else {
           return urlsBuilder_.getMessage();
         }
@@ -8278,7 +8278,7 @@ public final class BoardingPass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public Builder setUrls(com.passkit.grpc.Flights.Common.FlightURLs value) {
+      public Builder setUrls(com.passkit.grpc.Flights.Barcode.FlightURLs value) {
         if (urlsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8299,7 +8299,7 @@ public final class BoardingPass {
        * <code>.flights.FlightURLs urls = 37;</code>
        */
       public Builder setUrls(
-          com.passkit.grpc.Flights.Common.FlightURLs.Builder builderForValue) {
+          com.passkit.grpc.Flights.Barcode.FlightURLs.Builder builderForValue) {
         if (urlsBuilder_ == null) {
           urls_ = builderForValue.build();
         } else {
@@ -8316,11 +8316,11 @@ public final class BoardingPass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public Builder mergeUrls(com.passkit.grpc.Flights.Common.FlightURLs value) {
+      public Builder mergeUrls(com.passkit.grpc.Flights.Barcode.FlightURLs value) {
         if (urlsBuilder_ == null) {
           if (((bitField1_ & 0x00000002) != 0) &&
             urls_ != null &&
-            urls_ != com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance()) {
+            urls_ != com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance()) {
             getUrlsBuilder().mergeFrom(value);
           } else {
             urls_ = value;
@@ -8358,7 +8358,7 @@ public final class BoardingPass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightURLs.Builder getUrlsBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLs.Builder getUrlsBuilder() {
         bitField1_ |= 0x00000002;
         onChanged();
         return internalGetUrlsFieldBuilder().getBuilder();
@@ -8370,12 +8370,12 @@ public final class BoardingPass {
        *
        * <code>.flights.FlightURLs urls = 37;</code>
        */
-      public com.passkit.grpc.Flights.Common.FlightURLsOrBuilder getUrlsOrBuilder() {
+      public com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder getUrlsOrBuilder() {
         if (urlsBuilder_ != null) {
           return urlsBuilder_.getMessageOrBuilder();
         } else {
           return urls_ == null ?
-              com.passkit.grpc.Flights.Common.FlightURLs.getDefaultInstance() : urls_;
+              com.passkit.grpc.Flights.Barcode.FlightURLs.getDefaultInstance() : urls_;
         }
       }
       /**
@@ -8386,11 +8386,11 @@ public final class BoardingPass {
        * <code>.flights.FlightURLs urls = 37;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder> 
+          com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder> 
           internalGetUrlsFieldBuilder() {
         if (urlsBuilder_ == null) {
           urlsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.passkit.grpc.Flights.Common.FlightURLs, com.passkit.grpc.Flights.Common.FlightURLs.Builder, com.passkit.grpc.Flights.Common.FlightURLsOrBuilder>(
+              com.passkit.grpc.Flights.Barcode.FlightURLs, com.passkit.grpc.Flights.Barcode.FlightURLs.Builder, com.passkit.grpc.Flights.Barcode.FlightURLsOrBuilder>(
                   getUrls(),
                   getParentForChildren(),
                   isClean());
@@ -8411,19 +8411,19 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @return A list containing the capabilities.
        */
-      public java.util.List<com.passkit.grpc.Flights.Common.PassengerCapabilities> getCapabilitiesList() {
+      public java.util.List<com.passkit.grpc.Flights.Barcode.PassengerCapabilities> getCapabilitiesList() {
         return new com.google.protobuf.Internal.IntListAdapter<
-            com.passkit.grpc.Flights.Common.PassengerCapabilities>(capabilities_, capabilities_converter_);
+            com.passkit.grpc.Flights.Barcode.PassengerCapabilities>(capabilities_, capabilities_converter_);
       }
       /**
        * <pre>
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @return The count of capabilities.
        */
       public int getCapabilitiesCount() {
@@ -8434,11 +8434,11 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param index The index of the element to return.
        * @return The capabilities at the given index.
        */
-      public com.passkit.grpc.Flights.Common.PassengerCapabilities getCapabilities(int index) {
+      public com.passkit.grpc.Flights.Barcode.PassengerCapabilities getCapabilities(int index) {
         return capabilities_converter_.convert(capabilities_.getInt(index));
       }
       /**
@@ -8446,13 +8446,13 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param index The index to set the value at.
        * @param value The capabilities to set.
        * @return This builder for chaining.
        */
       public Builder setCapabilities(
-          int index, com.passkit.grpc.Flights.Common.PassengerCapabilities value) {
+          int index, com.passkit.grpc.Flights.Barcode.PassengerCapabilities value) {
         if (value == null) { throw new NullPointerException(); }
         ensureCapabilitiesIsMutable();
         capabilities_.setInt(index, value.getNumber());
@@ -8464,11 +8464,11 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param value The capabilities to add.
        * @return This builder for chaining.
        */
-      public Builder addCapabilities(com.passkit.grpc.Flights.Common.PassengerCapabilities value) {
+      public Builder addCapabilities(com.passkit.grpc.Flights.Barcode.PassengerCapabilities value) {
         if (value == null) { throw new NullPointerException(); }
         ensureCapabilitiesIsMutable();
         capabilities_.addInt(value.getNumber());
@@ -8480,14 +8480,14 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param values The capabilities to add.
        * @return This builder for chaining.
        */
       public Builder addAllCapabilities(
-          java.lang.Iterable<? extends com.passkit.grpc.Flights.Common.PassengerCapabilities> values) {
+          java.lang.Iterable<? extends com.passkit.grpc.Flights.Barcode.PassengerCapabilities> values) {
         ensureCapabilitiesIsMutable();
-        for (com.passkit.grpc.Flights.Common.PassengerCapabilities value : values) {
+        for (com.passkit.grpc.Flights.Barcode.PassengerCapabilities value : values) {
           capabilities_.addInt(value.getNumber());
         }
         onChanged();
@@ -8498,7 +8498,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @return This builder for chaining.
        */
       public Builder clearCapabilities() {
@@ -8512,7 +8512,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @return A list containing the enum numeric values on the wire for capabilities.
        */
       public java.util.List<java.lang.Integer>
@@ -8525,7 +8525,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of capabilities at the given index.
        */
@@ -8537,7 +8537,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for capabilities to set.
        * @return This builder for chaining.
@@ -8554,7 +8554,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param value The enum numeric value on the wire for capabilities to add.
        * @return This builder for chaining.
        */
@@ -8569,7 +8569,7 @@ public final class BoardingPass {
        * Passenger Capabilities are used by Apple Semantic boarding passes to visibly display useful information at the boarding gate.
        * </pre>
        *
-       * <code>repeated .flights.PassengerCapabilities Capabilities = 38;</code>
+       * <code>repeated .flights.PassengerCapabilities capabilities = 38;</code>
        * @param values The enum numeric values on the wire for capabilities to add.
        * @return This builder for chaining.
        */
@@ -8595,19 +8595,19 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @return A list containing the securityPrograms.
        */
-      public java.util.List<com.passkit.grpc.Flights.Common.AirportSecurityPrograms> getSecurityProgramsList() {
+      public java.util.List<com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> getSecurityProgramsList() {
         return new com.google.protobuf.Internal.IntListAdapter<
-            com.passkit.grpc.Flights.Common.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
+            com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms>(securityPrograms_, securityPrograms_converter_);
       }
       /**
        * <pre>
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @return The count of securityPrograms.
        */
       public int getSecurityProgramsCount() {
@@ -8618,11 +8618,11 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param index The index of the element to return.
        * @return The securityPrograms at the given index.
        */
-      public com.passkit.grpc.Flights.Common.AirportSecurityPrograms getSecurityPrograms(int index) {
+      public com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms getSecurityPrograms(int index) {
         return securityPrograms_converter_.convert(securityPrograms_.getInt(index));
       }
       /**
@@ -8630,13 +8630,13 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param index The index to set the value at.
        * @param value The securityPrograms to set.
        * @return This builder for chaining.
        */
       public Builder setSecurityPrograms(
-          int index, com.passkit.grpc.Flights.Common.AirportSecurityPrograms value) {
+          int index, com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value) {
         if (value == null) { throw new NullPointerException(); }
         ensureSecurityProgramsIsMutable();
         securityPrograms_.setInt(index, value.getNumber());
@@ -8648,11 +8648,11 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param value The securityPrograms to add.
        * @return This builder for chaining.
        */
-      public Builder addSecurityPrograms(com.passkit.grpc.Flights.Common.AirportSecurityPrograms value) {
+      public Builder addSecurityPrograms(com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value) {
         if (value == null) { throw new NullPointerException(); }
         ensureSecurityProgramsIsMutable();
         securityPrograms_.addInt(value.getNumber());
@@ -8664,14 +8664,14 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param values The securityPrograms to add.
        * @return This builder for chaining.
        */
       public Builder addAllSecurityPrograms(
-          java.lang.Iterable<? extends com.passkit.grpc.Flights.Common.AirportSecurityPrograms> values) {
+          java.lang.Iterable<? extends com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms> values) {
         ensureSecurityProgramsIsMutable();
-        for (com.passkit.grpc.Flights.Common.AirportSecurityPrograms value : values) {
+        for (com.passkit.grpc.Flights.Barcode.AirportSecurityPrograms value : values) {
           securityPrograms_.addInt(value.getNumber());
         }
         onChanged();
@@ -8682,7 +8682,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @return This builder for chaining.
        */
       public Builder clearSecurityPrograms() {
@@ -8696,7 +8696,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @return A list containing the enum numeric values on the wire for securityPrograms.
        */
       public java.util.List<java.lang.Integer>
@@ -8709,7 +8709,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param index The index of the value to return.
        * @return The enum numeric value on the wire of securityPrograms at the given index.
        */
@@ -8721,7 +8721,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param index The index to set the value at.
        * @param value The enum numeric value on the wire for securityPrograms to set.
        * @return This builder for chaining.
@@ -8738,7 +8738,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param value The enum numeric value on the wire for securityPrograms to add.
        * @return This builder for chaining.
        */
@@ -8753,7 +8753,7 @@ public final class BoardingPass {
        * Airport Security Programs are by Apple Semantic boarding passes to visibly display on the pass. Both the Airport and the Passenger must be members of the program, otherwise value is ignored.
        * </pre>
        *
-       * <code>repeated .flights.AirportSecurityPrograms SecurityPrograms = 39;</code>
+       * <code>repeated .flights.AirportSecurityPrograms securityPrograms = 39;</code>
        * @param values The enum numeric values on the wire for securityPrograms to add.
        * @return This builder for chaining.
        */
@@ -15741,105 +15741,105 @@ public final class BoardingPass {
       "\n\036io/flights/boarding_pass.proto\022\007flight" +
       "s\032\030io/flights/airport.proto\032\032io/flights/" +
       "passenger.proto\032\030io/flights/barcode.prot" +
-      "o\032\027io/flights/flight.proto\032\027io/flights/c" +
-      "ommon.proto\032(io/flights/cabin_codes/cabi" +
-      "n_codes.proto\032\036io/common/common_objects." +
-      "proto\032\031io/common/proximity.proto\032\025io/com" +
-      "mon/links.proto\032\027io/common/metrics.proto" +
-      "\032.protoc-gen-openapiv2/options/annotatio" +
-      "ns.proto\"\324\020\n\022BoardingPassRecord\022\n\n\002id\030\001 " +
-      "\001(\t\0222\n\023operatingCarrierPNR\030\002 \001(\tB\025\222A\022\212\001\017" +
-      "^[A-Z0-9]{5,7}$\022\330\002\n\013relatedPNRs\030\003 \003(\tB\302\002" +
-      "\222A\276\0022\227\002Related PNRs can be used to index" +
-      " the record and can be the marketing car" +
-      "rier PNR or a master PNR containing mult" +
-      "iple bookings. If required, a related PN" +
-      "R can be followed by the two or three ch" +
-      "aracter designator of the carrier or CRS" +
-      " controlling the PNR, separated by an ob" +
-      "lique.\212\001!^[A-Z0-9]{5,7}(\\/[A-Z0-9]{2,3})" +
-      "?$\022*\n\014ticketNumber\030\004 \001(\tB\024\222A\021\212\001\016^([0-9]{" +
-      "3,10}$\022\037\n\tticketLeg\030\005 \001(\005B\014\222A\ti\000\000\000\000\000\000\360?\022" +
-      ")\n\rboardingPoint\030\006 \001(\tB\022\222A\017\212\001\014^[A-Z]{3,4" +
-      "}$\022*\n\016deplaningPoint\030\007 \001(\tB\022\222A\017\212\001\014^[A-Z]" +
-      "{3,4}$\022\035\n\013carrierCode\030\010 \001(\tB\010\222A\005x\003\200\001\002\022\033\n" +
-      "\014flightNumber\030\t \001(\tB\005\222A\002x\005\022\037\n\rdepartureD" +
-      "ate\030\013 \001(\0132\010.io.Date\022%\n\tpassenger\030\014 \001(\0132\022" +
-      ".flights.Passenger\022\r\n\005class\030\r \001(\t\0225\n\017com" +
-      "partmentCode\030\016 \001(\0162\034.cabin_codes.Compart" +
-      "mentCode\022\031\n\nseatNumber\030\017 \001(\tB\005\222A\002x\005\022\026\n\016s" +
-      "equenceNumber\030\020 \001(\005\022\025\n\rboardingGroup\030\021 \001" +
-      "(\t\022\030\n\020boardingPosition\030\022 \001(\t\022&\n\024freeBagg" +
-      "ageAllowance\030\023 \001(\tB\010\222A\005x\003\200\001\003\022\"\n\020carryOnA" +
-      "llowance\030\024 \001(\tB\010\222A\005x\003\200\001\003\022\020\n\010ssrCodes\030\025 \003" +
-      "(\t\022\013\n\003osi\030\026 \001(\t\022\017\n\007remarks\030\027 \001(\t\0221\n\017pass" +
-      "engerStatus\030\030 \001(\0162\030.flights.PassengerSta" +
-      "tus\0223\n\020conditionalItems\030\031 \001(\0132\031.flights." +
-      "ConditionalItems\022\026\n\016barcodePayload\030\032 \001(\t" +
-      "\022\025\n\rsecurityImage\030\033 \001(\t\022\026\n\016privilegeImag" +
-      "e\030\034 \001(\t\022\023\n\013footerImage\030\035 \001(\t\0221\n\020location" +
-      "Messages\030\036 \003(\0132\017.io.GPSLocationB\006\222A\003\240\001\n\022" +
-      "*\n\016beaconMessages\030\037 \003(\0132\n.io.BeaconB\006\222A\003" +
-      "\240\001\n\022\037\n\005links\030  \003(\0132\010.io.LinkB\006\222A\003\240\001\n\022\035\n\025" +
-      "barcodeAdditionalData\030! \001(\t\022*\n\023additiona" +
-      "lDataItems\030# \001(\0132\r.io.DataItems\022!\n\004urls\030" +
-      "% \001(\0132\023.flights.FlightURLs\0224\n\014Capabiliti" +
-      "es\030& \003(\0162\036.flights.PassengerCapabilities" +
-      "\022:\n\020SecurityPrograms\030\' \003(\0162 .flights.Air" +
-      "portSecurityPrograms\022\024\n\014infantPassId\030\" \001" +
-      "(\t\022\036\n\010metadata\030$ \001(\0132\014.io.Metadata:\372\003\222A\366" +
-      "\003\n\363\003*\024Boarding Pass Record2\331\002A Boarding " +
-      "Pass record is unique to an individual p" +
-      "assenger journey form a boarding point t" +
-      "o a deplaning point. A Carrier and a Fli" +
-      "ght Designation record must exist. If a " +
-      "Flight record does not already exist, th" +
-      "en it will be auto-generated based on th" +
-      "e Flight Designation record (and other p" +
-      "ublicly available data if subscribed to " +
-      "data updates).\322\001\023operatingCarrierPNR\322\001\016s" +
-      "equenceNumber\322\001\rboardingPoint\322\001\016deplanin" +
-      "gPoint\322\001\014flightNumber\322\001\rdepartureDate\322\001\t" +
-      "passenger\322\001\013carrierCode\"\271\002\n\'BoardingPass" +
-      "RecordRequestByTicketNumber\022*\n\014ticketNum" +
-      "ber\030\001 \001(\tB\024\222A\021\212\001\016^([0-9]{3,10}$\022\021\n\tticke" +
-      "tLeg\030\002 \001(\005\022\025\n\rboardingPoint\030\003 \001(\t:\267\001\222A\263\001" +
-      "\n\260\001*%Boarding Pass Record By Ticket Numb" +
-      "er2xUsed to access a single boarding pas" +
-      "s or boarding pass record.  Either a tic" +
-      "ket leg or boarding point should be prov" +
-      "ided\322\001\014ticketNumber\"\371\002\n BoardingPassReco" +
-      "rdRequestByIndex\022\035\n\013carrierCode\030\001 \001(\tB\010\222" +
-      "A\005x\003\200\001\002\022\033\n\014flightNumber\030\002 \001(\tB\005\222A\002x\005\022\037\n\r" +
-      "departureDate\030\003 \001(\0132\010.io.Date\022)\n\rboardin" +
-      "gPoint\030\004 \001(\tB\022\222A\017\212\001\014^[A-Z]{3,4}$\022\026\n\016sequ" +
-      "enceNumber\030\005 \001(\005:\264\001\222A\260\001\n\255\001*\035Boarding Pas" +
-      "s Record By Index2>Used to access a sing" +
-      "le boarding pass or boarding pass record" +
-      ".\322\001\013carrierCode\322\001\014flightNumber\322\001\rdepartu" +
-      "reDate\322\001\rboardingPoint\322\001\016sequenceNumber\"" +
-      "\237\002\n\023BoardingPassRequest\022H\n\014ticketNumber\030" +
-      "\001 \001(\01320.flights.BoardingPassRecordReques" +
-      "tByTicketNumberH\000\022:\n\005index\030\002 \001(\0132).fligh" +
-      "ts.BoardingPassRecordRequestByIndexH\000\0227\n" +
-      "\003pnr\030\003 \001(\0132(.flights.BoardingPassesForBo" +
-      "okingRequestH\000\022\030\n\006passId\030\004 \001(\0132\006.io.IdH\000" +
-      "\022$\n\006format\030\005 \003(\0162\024.io.PassBundleFormatB\t" +
-      "\n\007request\"\306\001\n\031BoardingPassRecordRequest\022" +
-      "H\n\014ticketNumber\030\001 \001(\01320.flights.Boarding" +
-      "PassRecordRequestByTicketNumberH\000\022:\n\005ind" +
-      "ex\030\002 \001(\0132).flights.BoardingPassRecordReq" +
-      "uestByIndexH\000\022\030\n\006passId\030\003 \001(\0132\006.io.IdH\000B" +
-      "\t\n\007request\"\330\001\n\037BoardingPassesForBookingR" +
-      "equest\022\013\n\003pnr\030\001 \001(\t\022\021\n\tticketLeg\030\002 \001(\005\022\025" +
-      "\n\rboardingPoint\030\003 \001(\t:~\222A{\ny*\"Boarding P" +
-      "ass Record By PNR record2MUsed to access" +
-      " a single or multiple boarding passed or" +
-      " boarding pass records.\322\001\003pnr\"@\n\026Boardin" +
-      "gPassesResponse\022&\n\016boardingPasses\030\001 \003(\0132" +
-      "\016.io.PassBundleB_\n\030com.passkit.grpc.Flig" +
-      "htsZ,stash.passkit.com/io/model/sdk/go/i" +
-      "o/flights\252\002\024PassKit.Grpc.Flightsb\006proto3"
+      "o\032\027io/flights/flight.proto\032(io/flights/c" +
+      "abin_codes/cabin_codes.proto\032\036io/common/" +
+      "common_objects.proto\032\031io/common/proximit" +
+      "y.proto\032\025io/common/links.proto\032\027io/commo" +
+      "n/metrics.proto\032.protoc-gen-openapiv2/op" +
+      "tions/annotations.proto\"\322\020\n\022BoardingPass" +
+      "Record\022\n\n\002id\030\001 \001(\t\0222\n\023operatingCarrierPN" +
+      "R\030\002 \001(\tB\025\222A\022\212\001\017^[A-Z0-9]{5,7}$\022\330\002\n\013relat" +
+      "edPNRs\030\003 \003(\tB\302\002\222A\276\0022\227\002Related PNRs can b" +
+      "e used to index the record and can be th" +
+      "e marketing carrier PNR or a master PNR " +
+      "containing multiple bookings. If require" +
+      "d, a related PNR can be followed by the " +
+      "two or three character designator of the" +
+      " carrier or CRS controlling the PNR, sep" +
+      "arated by an oblique.\212\001!^[A-Z0-9]{5,7}(\\" +
+      "/[A-Z0-9]{2,3})?$\022*\n\014ticketNumber\030\004 \001(\tB" +
+      "\024\222A\021\212\001\016^([0-9]{3,10}$\022\037\n\tticketLeg\030\005 \001(\005" +
+      "B\014\222A\ti\000\000\000\000\000\000\360?\022)\n\rboardingPoint\030\006 \001(\tB\022\222" +
+      "A\017\212\001\014^[A-Z]{3,4}$\022*\n\016deplaningPoint\030\007 \001(" +
+      "\tB\022\222A\017\212\001\014^[A-Z]{3,4}$\022\035\n\013carrierCode\030\010 \001" +
+      "(\tB\010\222A\005x\003\200\001\002\022\033\n\014flightNumber\030\t \001(\tB\005\222A\002x" +
+      "\005\022\037\n\rdepartureDate\030\013 \001(\0132\010.io.Date\022%\n\tpa" +
+      "ssenger\030\014 \001(\0132\022.flights.Passenger\022\r\n\005cla" +
+      "ss\030\r \001(\t\0225\n\017compartmentCode\030\016 \001(\0162\034.cabi" +
+      "n_codes.CompartmentCode\022\031\n\nseatNumber\030\017 " +
+      "\001(\tB\005\222A\002x\005\022\026\n\016sequenceNumber\030\020 \001(\005\022\025\n\rbo" +
+      "ardingGroup\030\021 \001(\t\022\030\n\020boardingPosition\030\022 " +
+      "\001(\t\022&\n\024freeBaggageAllowance\030\023 \001(\tB\010\222A\005x\003" +
+      "\200\001\003\022\"\n\020carryOnAllowance\030\024 \001(\tB\010\222A\005x\003\200\001\003\022" +
+      "\020\n\010ssrCodes\030\025 \003(\t\022\013\n\003osi\030\026 \001(\t\022\017\n\007remark" +
+      "s\030\027 \001(\t\0221\n\017passengerStatus\030\030 \001(\0162\030.fligh" +
+      "ts.PassengerStatus\0223\n\020conditionalItems\030\031" +
+      " \001(\0132\031.flights.ConditionalItems\022\026\n\016barco" +
+      "dePayload\030\032 \001(\t\022\025\n\rsecurityImage\030\033 \001(\t\022\026" +
+      "\n\016privilegeImage\030\034 \001(\t\022\023\n\013footerImage\030\035 " +
+      "\001(\t\0221\n\020locationMessages\030\036 \003(\0132\017.io.GPSLo" +
+      "cationB\006\222A\003\240\001\n\022*\n\016beaconMessages\030\037 \003(\0132\n" +
+      ".io.BeaconB\006\222A\003\240\001\n\022\037\n\005links\030  \003(\0132\010.io.L" +
+      "inkB\006\222A\003\240\001\n\022\035\n\025barcodeAdditionalData\030! \001" +
+      "(\t\022*\n\023additionalDataItems\030# \001(\0132\r.io.Dat" +
+      "aItems\022!\n\004urls\030% \001(\0132\023.flights.FlightURL" +
+      "s\0224\n\014capabilities\030& \003(\0162\036.flights.Passen" +
+      "gerCapabilities\022:\n\020securityPrograms\030\' \003(" +
+      "\0162 .flights.AirportSecurityPrograms\022\024\n\014i" +
+      "nfantPassId\030\" \001(\t\022\036\n\010metadata\030$ \001(\0132\014.io" +
+      ".Metadata:\370\003\222A\364\003\n\361\003*\024Boarding Pass Recor" +
+      "d2\327\002A Boarding Pass record is unique to " +
+      "an individual passenger journey form a b" +
+      "oarding point to a deplaning point. A Ca" +
+      "rrier and a Flight Designator record mus" +
+      "t exist. If a Flight record does not alr" +
+      "eady exist, then it will be auto-generat" +
+      "ed based on the Flight Designator record" +
+      " (and other publicly available data if s" +
+      "ubscribed to data updates).\322\001\023operatingC" +
+      "arrierPNR\322\001\016sequenceNumber\322\001\rboardingPoi" +
+      "nt\322\001\016deplaningPoint\322\001\014flightNumber\322\001\rdep" +
+      "artureDate\322\001\tpassenger\322\001\013carrierCode\"\271\002\n" +
+      "\'BoardingPassRecordRequestByTicketNumber" +
+      "\022*\n\014ticketNumber\030\001 \001(\tB\024\222A\021\212\001\016^([0-9]{3," +
+      "10}$\022\021\n\tticketLeg\030\002 \001(\005\022\025\n\rboardingPoint" +
+      "\030\003 \001(\t:\267\001\222A\263\001\n\260\001*%Boarding Pass Record B" +
+      "y Ticket Number2xUsed to access a single" +
+      " boarding pass or boarding pass record. " +
+      " Either a ticket leg or boarding point s" +
+      "hould be provided\322\001\014ticketNumber\"\371\002\n Boa" +
+      "rdingPassRecordRequestByIndex\022\035\n\013carrier" +
+      "Code\030\001 \001(\tB\010\222A\005x\003\200\001\002\022\033\n\014flightNumber\030\002 \001" +
+      "(\tB\005\222A\002x\005\022\037\n\rdepartureDate\030\003 \001(\0132\010.io.Da" +
+      "te\022)\n\rboardingPoint\030\004 \001(\tB\022\222A\017\212\001\014^[A-Z]{" +
+      "3,4}$\022\026\n\016sequenceNumber\030\005 \001(\005:\264\001\222A\260\001\n\255\001*" +
+      "\035Boarding Pass Record By Index2>Used to " +
+      "access a single boarding pass or boardin" +
+      "g pass record.\322\001\013carrierCode\322\001\014flightNum" +
+      "ber\322\001\rdepartureDate\322\001\rboardingPoint\322\001\016se" +
+      "quenceNumber\"\237\002\n\023BoardingPassRequest\022H\n\014" +
+      "ticketNumber\030\001 \001(\01320.flights.BoardingPas" +
+      "sRecordRequestByTicketNumberH\000\022:\n\005index\030" +
+      "\002 \001(\0132).flights.BoardingPassRecordReques" +
+      "tByIndexH\000\0227\n\003pnr\030\003 \001(\0132(.flights.Boardi" +
+      "ngPassesForBookingRequestH\000\022\030\n\006passId\030\004 " +
+      "\001(\0132\006.io.IdH\000\022$\n\006format\030\005 \003(\0162\024.io.PassB" +
+      "undleFormatB\t\n\007request\"\306\001\n\031BoardingPassR" +
+      "ecordRequest\022H\n\014ticketNumber\030\001 \001(\01320.fli" +
+      "ghts.BoardingPassRecordRequestByTicketNu" +
+      "mberH\000\022:\n\005index\030\002 \001(\0132).flights.Boarding" +
+      "PassRecordRequestByIndexH\000\022\030\n\006passId\030\003 \001" +
+      "(\0132\006.io.IdH\000B\t\n\007request\"\330\001\n\037BoardingPass" +
+      "esForBookingRequest\022\013\n\003pnr\030\001 \001(\t\022\021\n\ttick" +
+      "etLeg\030\002 \001(\005\022\025\n\rboardingPoint\030\003 \001(\t:~\222A{\n" +
+      "y*\"Boarding Pass Record By PNR record2MU" +
+      "sed to access a single or multiple board" +
+      "ing passed or boarding pass records.\322\001\003p" +
+      "nr\"@\n\026BoardingPassesResponse\022&\n\016boarding" +
+      "Passes\030\001 \003(\0132\016.io.PassBundleB_\n\030com.pass" +
+      "kit.grpc.FlightsZ,stash.passkit.com/io/m" +
+      "odel/sdk/go/io/flights\252\002\024PassKit.Grpc.Fl" +
+      "ightsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -15848,7 +15848,6 @@ public final class BoardingPass {
           com.passkit.grpc.Flights.PassengerOuterClass.getDescriptor(),
           com.passkit.grpc.Flights.Barcode.getDescriptor(),
           com.passkit.grpc.Flights.FlightOuterClass.getDescriptor(),
-          com.passkit.grpc.Flights.Common.getDescriptor(),
           com.passkit.grpc.Flights.CabinCodes.CabinCodes.getDescriptor(),
           com.passkit.grpc.CommonObjects.getDescriptor(),
           com.passkit.grpc.Proximity.getDescriptor(),
@@ -15903,7 +15902,6 @@ public final class BoardingPass {
     com.passkit.grpc.Flights.PassengerOuterClass.getDescriptor();
     com.passkit.grpc.Flights.Barcode.getDescriptor();
     com.passkit.grpc.Flights.FlightOuterClass.getDescriptor();
-    com.passkit.grpc.Flights.Common.getDescriptor();
     com.passkit.grpc.Flights.CabinCodes.CabinCodes.getDescriptor();
     com.passkit.grpc.CommonObjects.getDescriptor();
     com.passkit.grpc.Proximity.getDescriptor();
