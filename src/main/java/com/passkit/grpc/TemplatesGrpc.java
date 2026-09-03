@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+ * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -1335,14 +1335,14 @@ public final class TemplatesGrpc {
 
   /**
    * <pre>
-   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
    * </pre>
    */
   public interface AsyncService {
 
     /**
      * <pre>
-     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * Creates a pass template for a protocol and revision. Required fields: protocol, revision, name, colors, fields.
      * </pre>
      */
     default void createTemplate(com.passkit.grpc.Template.PassTemplate request,
@@ -1754,7 +1754,7 @@ public final class TemplatesGrpc {
   /**
    * Base class for the server implementation of the service Templates.
    * <pre>
-   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
    * </pre>
    */
   public static abstract class TemplatesImplBase
@@ -1768,7 +1768,7 @@ public final class TemplatesGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Templates.
    * <pre>
-   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
    * </pre>
    */
   public static final class TemplatesStub
@@ -1786,7 +1786,7 @@ public final class TemplatesGrpc {
 
     /**
      * <pre>
-     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * Creates a pass template for a protocol and revision. Required fields: protocol, revision, name, colors, fields.
      * </pre>
      */
     public void createTemplate(com.passkit.grpc.Template.PassTemplate request,
@@ -2239,7 +2239,7 @@ public final class TemplatesGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Templates.
    * <pre>
-   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
    * </pre>
    */
   public static final class TemplatesBlockingStub
@@ -2257,7 +2257,7 @@ public final class TemplatesGrpc {
 
     /**
      * <pre>
-     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * Creates a pass template for a protocol and revision. Required fields: protocol, revision, name, colors, fields.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createTemplate(com.passkit.grpc.Template.PassTemplate request) {
@@ -2679,7 +2679,7 @@ public final class TemplatesGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Templates.
    * <pre>
-   * The PassKit Templates API allows you to manage your pass templates for Apple Wallet and Google Wallet.
+   * Manages pass templates and designs for Apple Wallet, Google Wallet, and data collection forms.
    * </pre>
    */
   public static final class TemplatesFutureStub
@@ -2697,7 +2697,7 @@ public final class TemplatesGrpc {
 
     /**
      * <pre>
-     * Creates a new pass template record. Required Fields: protocol, revision, name, colors, fields
+     * Creates a pass template for a protocol and revision. Required fields: protocol, revision, name, colors, fields.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createTemplate(

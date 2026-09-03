@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+ * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -1413,6 +1413,37 @@ public final class MembersGrpc {
     return getGetProgramEnrolmentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.BatchUpdate.BatchUpdateRequest,
+      com.google.protobuf.Empty> getBatchUpdateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "batchUpdate",
+      requestType = com.passkit.grpc.BatchUpdate.BatchUpdateRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.BatchUpdate.BatchUpdateRequest,
+      com.google.protobuf.Empty> getBatchUpdateMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.BatchUpdate.BatchUpdateRequest, com.google.protobuf.Empty> getBatchUpdateMethod;
+    if ((getBatchUpdateMethod = MembersGrpc.getBatchUpdateMethod) == null) {
+      synchronized (MembersGrpc.class) {
+        if ((getBatchUpdateMethod = MembersGrpc.getBatchUpdateMethod) == null) {
+          MembersGrpc.getBatchUpdateMethod = getBatchUpdateMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.BatchUpdate.BatchUpdateRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "batchUpdate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.BatchUpdate.BatchUpdateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new MembersMethodDescriptorSupplier("batchUpdate"))
+              .build();
+        }
+      }
+    }
+    return getBatchUpdateMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -1459,7 +1490,7 @@ public final class MembersGrpc {
 
   /**
    * <pre>
-   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
    * </pre>
    */
   public interface AsyncService {
@@ -1596,7 +1627,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
+     * Enrols a member in a programme and creates their pass record. The request must identify the target programme and member data.
      * </pre>
      */
     default void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -1606,7 +1637,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
+     * Enrols a member through the public, unauthenticated enrolment endpoint. The request must identify the target programme and member data.
      * </pre>
      */
     default void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -1676,7 +1707,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * Updates a member record by PassKit ID or external ID. Use patchPerson when changing personal information only.
      * </pre>
      */
     default void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -1913,12 +1944,22 @@ public final class MembersGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProgramEnrolmentMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Applies the supplied field updates to members selected by the request filters. Required fields: classId, filterGroups, updateEntries.
+     * </pre>
+     */
+    default void batchUpdate(com.passkit.grpc.BatchUpdate.BatchUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchUpdateMethod(), responseObserver);
+    }
   }
 
   /**
    * Base class for the server implementation of the service Members.
    * <pre>
-   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
    * </pre>
    */
   public static abstract class MembersImplBase
@@ -1932,7 +1973,7 @@ public final class MembersGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Members.
    * <pre>
-   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
    * </pre>
    */
   public static final class MembersStub
@@ -2093,7 +2134,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
+     * Enrols a member in a programme and creates their pass record. The request must identify the target programme and member data.
      * </pre>
      */
     public void enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -2104,7 +2145,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
+     * Enrols a member through the public, unauthenticated enrolment endpoint. The request must identify the target programme and member data.
      * </pre>
      */
     public void enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -2181,7 +2222,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * Updates a member record by PassKit ID or external ID. Use patchPerson when changing personal information only.
      * </pre>
      */
     public void updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request,
@@ -2442,12 +2483,23 @@ public final class MembersGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Applies the supplied field updates to members selected by the request filters. Required fields: classId, filterGroups, updateEntries.
+     * </pre>
+     */
+    public void batchUpdate(com.passkit.grpc.BatchUpdate.BatchUpdateRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchUpdateMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Members.
    * <pre>
-   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
    * </pre>
    */
   public static final class MembersBlockingStub
@@ -2599,7 +2651,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
+     * Enrols a member in a programme and creates their pass record. The request must identify the target programme and member data.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2609,7 +2661,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
+     * Enrols a member through the public, unauthenticated enrolment endpoint. The request must identify the target programme and member data.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id enrolMemberPublic(com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2681,7 +2733,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * Updates a member record by PassKit ID or external ID. Use patchPerson when changing personal information only.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id updateMember(com.passkit.grpc.Members.MemberOuterClass.Member request) {
@@ -2921,12 +2973,22 @@ public final class MembersGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetProgramEnrolmentMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Applies the supplied field updates to members selected by the request filters. Required fields: classId, filterGroups, updateEntries.
+     * </pre>
+     */
+    public com.google.protobuf.Empty batchUpdate(com.passkit.grpc.BatchUpdate.BatchUpdateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchUpdateMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Members.
    * <pre>
-   *The PassKit Members API provides a powerful and flexible way to manage your membership programs, including creating, updating, and maintaining digital membership passes for Apple Wallet and Google Wallet. Easily integrate membership functionality into your applications to deliver seamless, real-time experiences for your members.
+   * Manages membership programmes, tiers, members, member events, pass lifecycle, and point balances. Create a programme before creating tiers or enrolling members.
    * </pre>
    */
   public static final class MembersFutureStub
@@ -3043,7 +3105,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Enrols a new member into a program and generates a pass. Required fields: program id and member data.
+     * Enrols a member in a programme and creates their pass record. The request must identify the target programme and member data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMember(
@@ -3054,7 +3116,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Public endpoint to enrol a new member into a program without authentication. Required fields: program id and member data.
+     * Enrols a member through the public, unauthenticated enrolment endpoint. The request must identify the target programme and member data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> enrolMemberPublic(
@@ -3109,7 +3171,7 @@ public final class MembersGrpc {
 
     /**
      * <pre>
-     * Updates an existing member’s personal details or status using PassKit Id or External Id. Required fields: member id or program id and external id. If updating personal information only use patchPerson.
+     * Updates a member record by PassKit ID or external ID. Use patchPerson when changing personal information only.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> updateMember(
@@ -3337,6 +3399,17 @@ public final class MembersGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetProgramEnrolmentMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Applies the supplied field updates to members selected by the request filters. Required fields: classId, filterGroups, updateEntries.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> batchUpdate(
+        com.passkit.grpc.BatchUpdate.BatchUpdateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchUpdateMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_PROGRAM = 0;
@@ -3384,6 +3457,7 @@ public final class MembersGrpc {
   private static final int METHODID_DELETE_EVENTS_FOR_MEMBER = 42;
   private static final int METHODID_DELETE_MEMBER_EVENT = 43;
   private static final int METHODID_GET_PROGRAM_ENROLMENT = 44;
+  private static final int METHODID_BATCH_UPDATE = 45;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -3581,6 +3655,10 @@ public final class MembersGrpc {
         case METHODID_GET_PROGRAM_ENROLMENT:
           serviceImpl.getProgramEnrolment((com.passkit.grpc.CommonObjects.Id) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.Distribution.EnrolmentUrls>) responseObserver);
+          break;
+        case METHODID_BATCH_UPDATE:
+          serviceImpl.batchUpdate((com.passkit.grpc.BatchUpdate.BatchUpdateRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -3915,6 +3993,13 @@ public final class MembersGrpc {
               com.passkit.grpc.CommonObjects.Id,
               com.passkit.grpc.Distribution.EnrolmentUrls>(
                 service, METHODID_GET_PROGRAM_ENROLMENT)))
+        .addMethod(
+          getBatchUpdateMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.BatchUpdate.BatchUpdateRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_BATCH_UPDATE)))
         .build();
   }
 
@@ -4008,6 +4093,7 @@ public final class MembersGrpc {
               .addMethod(getDeleteEventsForMemberMethod())
               .addMethod(getDeleteMemberEventMethod())
               .addMethod(getGetProgramEnrolmentMethod())
+              .addMethod(getBatchUpdateMethod())
               .build();
         }
       }

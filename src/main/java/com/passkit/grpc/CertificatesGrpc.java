@@ -266,6 +266,161 @@ public final class CertificatesGrpc {
     return getCountAppleCertificatesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getCreateAppleCertificateRenewalAuthorityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createAppleCertificateRenewalAuthority",
+      requestType = com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest.class,
+      responseType = com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getCreateAppleCertificateRenewalAuthorityMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getCreateAppleCertificateRenewalAuthorityMethod;
+    if ((getCreateAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getCreateAppleCertificateRenewalAuthorityMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getCreateAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getCreateAppleCertificateRenewalAuthorityMethod) == null) {
+          CertificatesGrpc.getCreateAppleCertificateRenewalAuthorityMethod = getCreateAppleCertificateRenewalAuthorityMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createAppleCertificateRenewalAuthority"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("createAppleCertificateRenewalAuthority"))
+              .build();
+        }
+      }
+    }
+    return getCreateAppleCertificateRenewalAuthorityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getGetAppleCertificateRenewalAuthorityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getAppleCertificateRenewalAuthority",
+      requestType = com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest.class,
+      responseType = com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getGetAppleCertificateRenewalAuthorityMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getGetAppleCertificateRenewalAuthorityMethod;
+    if ((getGetAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getGetAppleCertificateRenewalAuthorityMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getGetAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getGetAppleCertificateRenewalAuthorityMethod) == null) {
+          CertificatesGrpc.getGetAppleCertificateRenewalAuthorityMethod = getGetAppleCertificateRenewalAuthorityMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getAppleCertificateRenewalAuthority"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("getAppleCertificateRenewalAuthority"))
+              .build();
+        }
+      }
+    }
+    return getGetAppleCertificateRenewalAuthorityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getUpdateAppleCertificateRenewalAuthorityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updateAppleCertificateRenewalAuthority",
+      requestType = com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest.class,
+      responseType = com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getUpdateAppleCertificateRenewalAuthorityMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getUpdateAppleCertificateRenewalAuthorityMethod;
+    if ((getUpdateAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getUpdateAppleCertificateRenewalAuthorityMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getUpdateAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getUpdateAppleCertificateRenewalAuthorityMethod) == null) {
+          CertificatesGrpc.getUpdateAppleCertificateRenewalAuthorityMethod = getUpdateAppleCertificateRenewalAuthorityMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateAppleCertificateRenewalAuthority"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("updateAppleCertificateRenewalAuthority"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAppleCertificateRenewalAuthorityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> getDeleteAppleCertificateRenewalAuthorityMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteAppleCertificateRenewalAuthority",
+      requestType = com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest.class,
+      responseType = com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+      com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> getDeleteAppleCertificateRenewalAuthorityMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> getDeleteAppleCertificateRenewalAuthorityMethod;
+    if ((getDeleteAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getDeleteAppleCertificateRenewalAuthorityMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getDeleteAppleCertificateRenewalAuthorityMethod = CertificatesGrpc.getDeleteAppleCertificateRenewalAuthorityMethod) == null) {
+          CertificatesGrpc.getDeleteAppleCertificateRenewalAuthorityMethod = getDeleteAppleCertificateRenewalAuthorityMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest, com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteAppleCertificateRenewalAuthority"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("deleteAppleCertificateRenewalAuthority"))
+              .build();
+        }
+      }
+    }
+    return getDeleteAppleCertificateRenewalAuthorityMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getListAppleCertificateRenewalAuthoritiesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "listAppleCertificateRenewalAuthorities",
+      requestType = com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest.class,
+      responseType = com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest,
+      com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getListAppleCertificateRenewalAuthoritiesMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getListAppleCertificateRenewalAuthoritiesMethod;
+    if ((getListAppleCertificateRenewalAuthoritiesMethod = CertificatesGrpc.getListAppleCertificateRenewalAuthoritiesMethod) == null) {
+      synchronized (CertificatesGrpc.class) {
+        if ((getListAppleCertificateRenewalAuthoritiesMethod = CertificatesGrpc.getListAppleCertificateRenewalAuthoritiesMethod) == null) {
+          CertificatesGrpc.getListAppleCertificateRenewalAuthoritiesMethod = getListAppleCertificateRenewalAuthoritiesMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest, com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listAppleCertificateRenewalAuthorities"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority.getDefaultInstance()))
+              .setSchemaDescriptor(new CertificatesMethodDescriptorSupplier("listAppleCertificateRenewalAuthorities"))
+              .build();
+        }
+      }
+    }
+    return getListAppleCertificateRenewalAuthoritiesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.Certificate.NFCSigningCredentialsRequest,
       com.google.protobuf.Empty> getSendNFCSigningCredentialsMethod;
 
@@ -430,6 +585,56 @@ public final class CertificatesGrpc {
 
     /**
      * <pre>
+     * Creates an Apple certificate renewal authority for the authenticated user.
+     * </pre>
+     */
+    default void createAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAppleCertificateRenewalAuthorityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves an Apple certificate renewal authority by ID.
+     * </pre>
+     */
+    default void getAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetAppleCertificateRenewalAuthorityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates an Apple certificate renewal authority.
+     * </pre>
+     */
+    default void updateAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAppleCertificateRenewalAuthorityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes an Apple certificate renewal authority.
+     * </pre>
+     */
+    default void deleteAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteAppleCertificateRenewalAuthorityMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists Apple certificate renewal authorities visible to the authenticated user.
+     * </pre>
+     */
+    default void listAppleCertificateRenewalAuthorities(com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAppleCertificateRenewalAuthoritiesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
      * </pre>
      */
@@ -562,6 +767,61 @@ public final class CertificatesGrpc {
 
     /**
      * <pre>
+     * Creates an Apple certificate renewal authority for the authenticated user.
+     * </pre>
+     */
+    public void createAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves an Apple certificate renewal authority by ID.
+     * </pre>
+     */
+    public void getAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates an Apple certificate renewal authority.
+     * </pre>
+     */
+    public void updateAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes an Apple certificate renewal authority.
+     * </pre>
+     */
+    public void deleteAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Lists Apple certificate renewal authorities visible to the authenticated user.
+     * </pre>
+     */
+    public void listAppleCertificateRenewalAuthorities(com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getListAppleCertificateRenewalAuthoritiesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
      * </pre>
      */
@@ -675,6 +935,57 @@ public final class CertificatesGrpc {
 
     /**
      * <pre>
+     * Creates an Apple certificate renewal authority for the authenticated user.
+     * </pre>
+     */
+    public com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority createAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateAppleCertificateRenewalAuthorityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves an Apple certificate renewal authority by ID.
+     * </pre>
+     */
+    public com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority getAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetAppleCertificateRenewalAuthorityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates an Apple certificate renewal authority.
+     * </pre>
+     */
+    public com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority updateAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAppleCertificateRenewalAuthorityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an Apple certificate renewal authority.
+     * </pre>
+     */
+    public com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse deleteAppleCertificateRenewalAuthority(com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteAppleCertificateRenewalAuthorityMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists Apple certificate renewal authorities visible to the authenticated user.
+     * </pre>
+     */
+    public java.util.Iterator<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> listAppleCertificateRenewalAuthorities(
+        com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getListAppleCertificateRenewalAuthoritiesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
      * </pre>
      */
@@ -771,6 +1082,50 @@ public final class CertificatesGrpc {
 
     /**
      * <pre>
+     * Creates an Apple certificate renewal authority for the authenticated user.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> createAppleCertificateRenewalAuthority(
+        com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves an Apple certificate renewal authority by ID.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> getAppleCertificateRenewalAuthority(
+        com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates an Apple certificate renewal authority.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority> updateAppleCertificateRenewalAuthority(
+        com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an Apple certificate renewal authority.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse> deleteAppleCertificateRenewalAuthority(
+        com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteAppleCertificateRenewalAuthorityMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Sends NFC signing credentials for an NFC-enabled Apple certificate to the user's registered email address. Required Fields: certificateId, user email must be associated with the cert.
      * </pre>
      */
@@ -789,7 +1144,12 @@ public final class CertificatesGrpc {
   private static final int METHODID_LIST_APPLE_CERTIFICATES = 5;
   private static final int METHODID_COUNT_APPLE_CERTIFICATES_DEPRECATED = 6;
   private static final int METHODID_COUNT_APPLE_CERTIFICATES = 7;
-  private static final int METHODID_SEND_NFCSIGNING_CREDENTIALS = 8;
+  private static final int METHODID_CREATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY = 8;
+  private static final int METHODID_GET_APPLE_CERTIFICATE_RENEWAL_AUTHORITY = 9;
+  private static final int METHODID_UPDATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY = 10;
+  private static final int METHODID_DELETE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY = 11;
+  private static final int METHODID_LIST_APPLE_CERTIFICATE_RENEWAL_AUTHORITIES = 12;
+  private static final int METHODID_SEND_NFCSIGNING_CREDENTIALS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -839,6 +1199,26 @@ public final class CertificatesGrpc {
         case METHODID_COUNT_APPLE_CERTIFICATES:
           serviceImpl.countAppleCertificates((com.passkit.grpc.Filter.Filters) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Count>) responseObserver);
+          break;
+        case METHODID_CREATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY:
+          serviceImpl.createAppleCertificateRenewalAuthority((com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>) responseObserver);
+          break;
+        case METHODID_GET_APPLE_CERTIFICATE_RENEWAL_AUTHORITY:
+          serviceImpl.getAppleCertificateRenewalAuthority((com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>) responseObserver);
+          break;
+        case METHODID_UPDATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY:
+          serviceImpl.updateAppleCertificateRenewalAuthority((com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>) responseObserver);
+          break;
+        case METHODID_DELETE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY:
+          serviceImpl.deleteAppleCertificateRenewalAuthority((com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse>) responseObserver);
+          break;
+        case METHODID_LIST_APPLE_CERTIFICATE_RENEWAL_AUTHORITIES:
+          serviceImpl.listAppleCertificateRenewalAuthorities((com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>) responseObserver);
           break;
         case METHODID_SEND_NFCSIGNING_CREDENTIALS:
           serviceImpl.sendNFCSigningCredentials((com.passkit.grpc.Certificate.NFCSigningCredentialsRequest) request,
@@ -919,6 +1299,41 @@ public final class CertificatesGrpc {
               com.passkit.grpc.CommonObjects.Count>(
                 service, METHODID_COUNT_APPLE_CERTIFICATES)))
         .addMethod(
+          getCreateAppleCertificateRenewalAuthorityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Certificate.CreateAppleCertificateRenewalAuthorityRequest,
+              com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>(
+                service, METHODID_CREATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY)))
+        .addMethod(
+          getGetAppleCertificateRenewalAuthorityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+              com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>(
+                service, METHODID_GET_APPLE_CERTIFICATE_RENEWAL_AUTHORITY)))
+        .addMethod(
+          getUpdateAppleCertificateRenewalAuthorityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Certificate.UpdateAppleCertificateRenewalAuthorityRequest,
+              com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>(
+                service, METHODID_UPDATE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY)))
+        .addMethod(
+          getDeleteAppleCertificateRenewalAuthorityMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.Certificate.GetAppleCertificateRenewalAuthorityRequest,
+              com.passkit.grpc.Certificate.DeleteAppleCertificateRenewalAuthorityResponse>(
+                service, METHODID_DELETE_APPLE_CERTIFICATE_RENEWAL_AUTHORITY)))
+        .addMethod(
+          getListAppleCertificateRenewalAuthoritiesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.passkit.grpc.Certificate.ListAppleCertificateRenewalAuthoritiesRequest,
+              com.passkit.grpc.Certificate.AppleCertificateRenewalAuthority>(
+                service, METHODID_LIST_APPLE_CERTIFICATE_RENEWAL_AUTHORITIES)))
+        .addMethod(
           getSendNFCSigningCredentialsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -981,6 +1396,11 @@ public final class CertificatesGrpc {
               .addMethod(getListAppleCertificatesMethod())
               .addMethod(getCountAppleCertificatesDeprecatedMethod())
               .addMethod(getCountAppleCertificatesMethod())
+              .addMethod(getCreateAppleCertificateRenewalAuthorityMethod())
+              .addMethod(getGetAppleCertificateRenewalAuthorityMethod())
+              .addMethod(getUpdateAppleCertificateRenewalAuthorityMethod())
+              .addMethod(getDeleteAppleCertificateRenewalAuthorityMethod())
+              .addMethod(getListAppleCertificateRenewalAuthoritiesMethod())
               .addMethod(getSendNFCSigningCredentialsMethod())
               .build();
         }

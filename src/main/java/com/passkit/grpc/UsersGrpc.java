@@ -325,6 +325,37 @@ public final class UsersGrpc {
     return getChangePasswordMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.ChangeOwnPasswordInput,
+      com.passkit.grpc.User.JWT> getChangeOwnPasswordMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "changeOwnPassword",
+      requestType = com.passkit.grpc.User.ChangeOwnPasswordInput.class,
+      responseType = com.passkit.grpc.User.JWT.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.User.ChangeOwnPasswordInput,
+      com.passkit.grpc.User.JWT> getChangeOwnPasswordMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.User.ChangeOwnPasswordInput, com.passkit.grpc.User.JWT> getChangeOwnPasswordMethod;
+    if ((getChangeOwnPasswordMethod = UsersGrpc.getChangeOwnPasswordMethod) == null) {
+      synchronized (UsersGrpc.class) {
+        if ((getChangeOwnPasswordMethod = UsersGrpc.getChangeOwnPasswordMethod) == null) {
+          UsersGrpc.getChangeOwnPasswordMethod = getChangeOwnPasswordMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.User.ChangeOwnPasswordInput, com.passkit.grpc.User.JWT>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "changeOwnPassword"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.ChangeOwnPasswordInput.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.User.JWT.getDefaultInstance()))
+              .setSchemaDescriptor(new UsersMethodDescriptorSupplier("changeOwnPassword"))
+              .build();
+        }
+      }
+    }
+    return getChangeOwnPasswordMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.User.Email,
       com.google.protobuf.Empty> getChangeEmailMethod;
 
@@ -1312,6 +1343,16 @@ public final class UsersGrpc {
 
     /**
      * <pre>
+     * Changes the currently authenticated user's password. Requires a valid auth token and the current password. Required Fields: currentPassword, newPassword, confirmNewPassword.
+     * </pre>
+     */
+    default void changeOwnPassword(com.passkit.grpc.User.ChangeOwnPasswordInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getChangeOwnPasswordMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Initiates email change. Verification email is sent to new address. Required Fields: email.
      * </pre>
      */
@@ -1716,6 +1757,17 @@ public final class UsersGrpc {
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getChangePasswordMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Changes the currently authenticated user's password. Requires a valid auth token and the current password. Required Fields: currentPassword, newPassword, confirmNewPassword.
+     * </pre>
+     */
+    public void changeOwnPassword(com.passkit.grpc.User.ChangeOwnPasswordInput request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getChangeOwnPasswordMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2134,6 +2186,16 @@ public final class UsersGrpc {
 
     /**
      * <pre>
+     * Changes the currently authenticated user's password. Requires a valid auth token and the current password. Required Fields: currentPassword, newPassword, confirmNewPassword.
+     * </pre>
+     */
+    public com.passkit.grpc.User.JWT changeOwnPassword(com.passkit.grpc.User.ChangeOwnPasswordInput request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getChangeOwnPasswordMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Initiates email change. Verification email is sent to new address. Required Fields: email.
      * </pre>
      */
@@ -2539,6 +2601,17 @@ public final class UsersGrpc {
 
     /**
      * <pre>
+     * Changes the currently authenticated user's password. Requires a valid auth token and the current password. Required Fields: currentPassword, newPassword, confirmNewPassword.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.User.JWT> changeOwnPassword(
+        com.passkit.grpc.User.ChangeOwnPasswordInput request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getChangeOwnPasswordMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Initiates email change. Verification email is sent to new address. Required Fields: email.
      * </pre>
      */
@@ -2757,33 +2830,34 @@ public final class UsersGrpc {
   private static final int METHODID_RESET_PASSWORD = 7;
   private static final int METHODID_SEND_PASSWORD_RESET_LINK = 8;
   private static final int METHODID_CHANGE_PASSWORD = 9;
-  private static final int METHODID_CHANGE_EMAIL = 10;
-  private static final int METHODID_CONFIRM_EMAIL_CHANGE = 11;
-  private static final int METHODID_UPDATE_COMPANY_NAME = 12;
-  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED = 13;
-  private static final int METHODID_GET_PROJECTS_QUERY_DEPRECATED = 14;
-  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY = 15;
-  private static final int METHODID_GET_PROJECTS_QUERY = 16;
-  private static final int METHODID_GET_PROJECT_BY_UUID = 17;
-  private static final int METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE = 18;
-  private static final int METHODID_GET_PROJECTS_FOR_USER = 19;
-  private static final int METHODID_GET_PROJECTS = 20;
-  private static final int METHODID_GET_SCANNER_CONFIG = 21;
-  private static final int METHODID_CREATE_SCANNER_CONFIG = 22;
-  private static final int METHODID_UPDATE_SCANNER_CONFIG = 23;
-  private static final int METHODID_CREATE_AUTHORIZATION_RESOURCE = 24;
-  private static final int METHODID_DELETE_AUTHORIZATION_RESOURCE = 25;
-  private static final int METHODID_REFRESH_API_SECRET = 26;
-  private static final int METHODID_DELETE_ACCOUNT = 27;
-  private static final int METHODID_REVOKE_LEGACY_CREDENTIALS = 28;
-  private static final int METHODID_CREATE_TEAM_MEMBER = 29;
-  private static final int METHODID_CREATE_PERMISSIONS_FOR_TEAM_MEMBER = 30;
-  private static final int METHODID_UPDATE_TEAM_MEMBER_PERMISSIONS = 31;
-  private static final int METHODID_PATCH_TEAM_MEMBER_PERMISSIONS = 32;
-  private static final int METHODID_GET_TEAM_MEMBER = 33;
-  private static final int METHODID_GET_TEAM_MEMBERS = 34;
-  private static final int METHODID_DELETE_TEAM_MEMBER = 35;
-  private static final int METHODID_GET_TEAM_MEMBER_LOGS = 36;
+  private static final int METHODID_CHANGE_OWN_PASSWORD = 10;
+  private static final int METHODID_CHANGE_EMAIL = 11;
+  private static final int METHODID_CONFIRM_EMAIL_CHANGE = 12;
+  private static final int METHODID_UPDATE_COMPANY_NAME = 13;
+  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY_DEPRECATED = 14;
+  private static final int METHODID_GET_PROJECTS_QUERY_DEPRECATED = 15;
+  private static final int METHODID_GET_PROJECTS_FOR_USER_QUERY = 16;
+  private static final int METHODID_GET_PROJECTS_QUERY = 17;
+  private static final int METHODID_GET_PROJECT_BY_UUID = 18;
+  private static final int METHODID_GET_PROJECT_AND_TEMPLATE_BY_SHORT_CODE = 19;
+  private static final int METHODID_GET_PROJECTS_FOR_USER = 20;
+  private static final int METHODID_GET_PROJECTS = 21;
+  private static final int METHODID_GET_SCANNER_CONFIG = 22;
+  private static final int METHODID_CREATE_SCANNER_CONFIG = 23;
+  private static final int METHODID_UPDATE_SCANNER_CONFIG = 24;
+  private static final int METHODID_CREATE_AUTHORIZATION_RESOURCE = 25;
+  private static final int METHODID_DELETE_AUTHORIZATION_RESOURCE = 26;
+  private static final int METHODID_REFRESH_API_SECRET = 27;
+  private static final int METHODID_DELETE_ACCOUNT = 28;
+  private static final int METHODID_REVOKE_LEGACY_CREDENTIALS = 29;
+  private static final int METHODID_CREATE_TEAM_MEMBER = 30;
+  private static final int METHODID_CREATE_PERMISSIONS_FOR_TEAM_MEMBER = 31;
+  private static final int METHODID_UPDATE_TEAM_MEMBER_PERMISSIONS = 32;
+  private static final int METHODID_PATCH_TEAM_MEMBER_PERMISSIONS = 33;
+  private static final int METHODID_GET_TEAM_MEMBER = 34;
+  private static final int METHODID_GET_TEAM_MEMBERS = 35;
+  private static final int METHODID_DELETE_TEAM_MEMBER = 36;
+  private static final int METHODID_GET_TEAM_MEMBER_LOGS = 37;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2841,6 +2915,10 @@ public final class UsersGrpc {
         case METHODID_CHANGE_PASSWORD:
           serviceImpl.changePassword((com.passkit.grpc.User.PasswordResetInput) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_CHANGE_OWN_PASSWORD:
+          serviceImpl.changeOwnPassword((com.passkit.grpc.User.ChangeOwnPasswordInput) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.User.JWT>) responseObserver);
           break;
         case METHODID_CHANGE_EMAIL:
           serviceImpl.changeEmail((com.passkit.grpc.User.Email) request,
@@ -3038,6 +3116,13 @@ public final class UsersGrpc {
               com.passkit.grpc.User.PasswordResetInput,
               com.google.protobuf.Empty>(
                 service, METHODID_CHANGE_PASSWORD)))
+        .addMethod(
+          getChangeOwnPasswordMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.User.ChangeOwnPasswordInput,
+              com.passkit.grpc.User.JWT>(
+                service, METHODID_CHANGE_OWN_PASSWORD)))
         .addMethod(
           getChangeEmailMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -3285,6 +3370,7 @@ public final class UsersGrpc {
               .addMethod(getResetPasswordMethod())
               .addMethod(getSendPasswordResetLinkMethod())
               .addMethod(getChangePasswordMethod())
+              .addMethod(getChangeOwnPasswordMethod())
               .addMethod(getChangeEmailMethod())
               .addMethod(getConfirmEmailChangeMethod())
               .addMethod(getUpdateCompanyNameMethod())

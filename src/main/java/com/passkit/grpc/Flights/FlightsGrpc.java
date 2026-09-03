@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+ * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -715,7 +715,7 @@ public final class FlightsGrpc {
 
   /**
    * <pre>
-   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
    * </pre>
    */
   public interface AsyncService {
@@ -842,7 +842,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Creates a flight record. Flight records can be generated automatically; values on this record override carrier and flight-designator data. Required fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     default void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -882,7 +882,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
+     * Creates a boarding-pass record. Missing flight data is populated from the related flight, flight designator, or carrier records. Required fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     default void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -902,7 +902,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
+     * Retrieves digital boarding passes in the requested format by ticket number, index, PNR, or pass ID. Required fields: ticketNumber, index, or passId.
      * </pre>
      */
     default void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
@@ -934,7 +934,7 @@ public final class FlightsGrpc {
   /**
    * Base class for the server implementation of the service Flights.
    * <pre>
-   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
    * </pre>
    */
   public static abstract class FlightsImplBase
@@ -948,7 +948,7 @@ public final class FlightsGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service Flights.
    * <pre>
-   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
    * </pre>
    */
   public static final class FlightsStub
@@ -1098,7 +1098,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Creates a flight record. Flight records can be generated automatically; values on this record override carrier and flight-designator data. Required fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public void createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request,
@@ -1142,7 +1142,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
+     * Creates a boarding-pass record. Missing flight data is populated from the related flight, flight designator, or carrier records. Required fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public void createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request,
@@ -1164,7 +1164,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
+     * Retrieves digital boarding passes in the requested format by ticket number, index, PNR, or pass ID. Required fields: ticketNumber, index, or passId.
      * </pre>
      */
     public void getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request,
@@ -1199,7 +1199,7 @@ public final class FlightsGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service Flights.
    * <pre>
-   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
    * </pre>
    */
   public static final class FlightsBlockingStub
@@ -1337,7 +1337,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Creates a flight record. Flight records can be generated automatically; values on this record override carrier and flight-designator data. Required fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.protobuf.Empty createFlight(com.passkit.grpc.Flights.FlightOuterClass.Flight request) {
@@ -1377,7 +1377,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
+     * Creates a boarding-pass record. Missing flight data is populated from the related flight, flight designator, or carrier records. Required fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse createBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRecord request) {
@@ -1397,7 +1397,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
+     * Retrieves digital boarding passes in the requested format by ticket number, index, PNR, or pass ID. Required fields: ticketNumber, index, or passId.
      * </pre>
      */
     public com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse getBoardingPass(com.passkit.grpc.Flights.BoardingPass.BoardingPassRequest request) {
@@ -1429,7 +1429,7 @@ public final class FlightsGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service Flights.
    * <pre>
-   * Manage digital boarding passes for Apple Wallet and Google Wallet with the PassKit Flights API.
+   * Manages carriers, flight designators, flights, and digital boarding passes. Carrier and flight-designator records provide data used when creating flights and boarding passes.
    * </pre>
    */
   public static final class FlightsFutureStub
@@ -1579,7 +1579,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a flight record. In practice, this method is not often used, since flight records can be automatically generated. Any information in the flight record will override information in the carrier and flight designator records. Required Fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
+     * Creates a flight record. Flight records can be generated automatically; values on this record override carrier and flight-designator data. Required fields: carrierCode, flightNumber, departureDate, boardingPoint, deplaningPoint.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> createFlight(
@@ -1623,7 +1623,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Create a boarding pass record. Flight related information not present in the boarding pass record will be populated from the flight, flight designator or carrier records.  Required Fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
+     * Creates a boarding-pass record. Missing flight data is populated from the related flight, flight designator, or carrier records. Required fields: operatingCarrierPNR, boardingPoint, deplaningPoint, carrierCode, flightNumber, departureDate, passenger, sequenceNumber.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> createBoardingPass(
@@ -1645,7 +1645,7 @@ public final class FlightsGrpc {
 
     /**
      * <pre>
-     * Retrieve digital boarding pass(es) in the requested format by ticket number, index, PNR or id. Required Fields: ticketNumber or index or passId.
+     * Retrieves digital boarding passes in the requested format by ticket number, index, PNR, or pass ID. Required fields: ticketNumber, index, or passId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.Flights.BoardingPass.BoardingPassesResponse> getBoardingPass(

@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+ * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -1428,7 +1428,7 @@ public final class EventTicketsGrpc {
 
   /**
    * <pre>
-   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
    * </pre>
    */
   public interface AsyncService {
@@ -1575,7 +1575,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * Creates an event for a production at a venue. Required fields: production and venue.
      * </pre>
      */
     default void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
@@ -1715,7 +1715,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * Issues a ticket using PassKit IDs for its ticket type and event. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
      * </pre>
      */
     default void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
@@ -1755,7 +1755,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Validates a ticket without redeeming it. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     default void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
@@ -1765,7 +1765,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Redeems a ticket and records the redemption. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     default void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
@@ -1815,7 +1815,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * Retrieves the digital pass bundle for a ticket. Required fields: ticketId, or productionId with ticketNumber or orderNumber.
      * </pre>
      */
     default void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
@@ -1877,7 +1877,7 @@ public final class EventTicketsGrpc {
   /**
    * Base class for the server implementation of the service EventTickets.
    * <pre>
-   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
    * </pre>
    */
   public static abstract class EventTicketsImplBase
@@ -1891,7 +1891,7 @@ public final class EventTicketsGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service EventTickets.
    * <pre>
-   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
    * </pre>
    */
   public static final class EventTicketsStub
@@ -2063,7 +2063,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * Creates an event for a production at a venue. Required fields: production and venue.
      * </pre>
      */
     public void createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request,
@@ -2217,7 +2217,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * Issues a ticket using PassKit IDs for its ticket type and event. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
      * </pre>
      */
     public void issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request,
@@ -2261,7 +2261,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Validates a ticket without redeeming it. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public void validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request,
@@ -2272,7 +2272,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Redeems a ticket and records the redemption. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public void redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request,
@@ -2327,7 +2327,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * Retrieves the digital pass bundle for a ticket. Required fields: ticketId, or productionId with ticketNumber or orderNumber.
      * </pre>
      */
     public void getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request,
@@ -2395,7 +2395,7 @@ public final class EventTicketsGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service EventTickets.
    * <pre>
-   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
    * </pre>
    */
   public static final class EventTicketsBlockingStub
@@ -2555,7 +2555,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * Creates an event for a production at a venue. Required fields: production and venue.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createEvent(com.passkit.grpc.EventTickets.EventOuterClass.Event request) {
@@ -2697,7 +2697,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * Issues a ticket using PassKit IDs for its ticket type and event. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id issueTicket(com.passkit.grpc.EventTickets.TicketOuterClass.IssueTicketRequest request) {
@@ -2737,7 +2737,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Validates a ticket without redeeming it. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse validateTicket(com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketRequest request) {
@@ -2747,7 +2747,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Redeems a ticket and records the redemption. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id redeemTicket(com.passkit.grpc.EventTickets.TicketOuterClass.RedeemTicketRequest request) {
@@ -2797,7 +2797,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * Retrieves the digital pass bundle for a ticket. Required fields: ticketId, or productionId with ticketNumber or orderNumber.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.PassBundles getEventTicketPass(com.passkit.grpc.EventTickets.TicketOuterClass.EventTicketPassRequest request) {
@@ -2860,7 +2860,7 @@ public final class EventTicketsGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service EventTickets.
    * <pre>
-   * The PassKit Event Tickets API allows you to create, manage, and distribute digital tickets for events, including productions, venues, ticket types, and individual tickets. Seamlessly issue and validate Apple Wallet and Google Wallet passes, automate event flows, and track redemptions in real time.
+   * Manages event-ticket productions, venues, events, ticket types, tickets, validation, and redemption. Ticket types belong to a production; issued tickets are associated with an event and ticket type.
    * </pre>
    */
   public static final class EventTicketsFutureStub
@@ -3010,7 +3010,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Creates a new Event for a Production. Required fields: production object and venue object.
+     * Creates an event for a production at a venue. Required fields: production and venue.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createEvent(
@@ -3142,7 +3142,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Issues a new Ticket by PassKit IDs. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
+     * Issues a ticket using PassKit IDs for its ticket type and event. Required fields: ticketTypeId, eventId, ticketNumber, person.name.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> issueTicket(
@@ -3186,7 +3186,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Validates a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Validates a ticket without redeeming it. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.EventTickets.TicketOuterClass.ValidateTicketResponse> validateTicket(
@@ -3197,7 +3197,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Redeems a Ticket. Required fields: id or (ticketNumber + productionId).
+     * Redeems a ticket and records the redemption. Required fields: id or ticketNumber with productionId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemTicket(
@@ -3252,7 +3252,7 @@ public final class EventTicketsGrpc {
 
     /**
      * <pre>
-     * Retrieves the digital pass bundle for a Ticket. Required fields: ticketId or (productionId + ticketNumber/orderNumber).
+     * Retrieves the digital pass bundle for a ticket. Required fields: ticketId, or productionId with ticketNumber or orderNumber.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.PassBundles> getEventTicketPass(

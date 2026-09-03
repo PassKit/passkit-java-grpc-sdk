@@ -204,6 +204,161 @@ public final class DistributionGrpc {
     return getValidateBarcodeMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message,
+      com.google.protobuf.Empty> getAddMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "addMessage",
+      requestType = com.passkit.grpc.MessageOuterClass.Message.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message,
+      com.google.protobuf.Empty> getAddMessageMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message, com.google.protobuf.Empty> getAddMessageMethod;
+    if ((getAddMessageMethod = DistributionGrpc.getAddMessageMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getAddMessageMethod = DistributionGrpc.getAddMessageMethod) == null) {
+          DistributionGrpc.getAddMessageMethod = getAddMessageMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.MessageOuterClass.Message, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "addMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("addMessage"))
+              .build();
+        }
+      }
+    }
+    return getAddMessageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.MessageOuterClass.Message> getGetMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getMessage",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.passkit.grpc.MessageOuterClass.Message.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.passkit.grpc.MessageOuterClass.Message> getGetMessageMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.MessageOuterClass.Message> getGetMessageMethod;
+    if ((getGetMessageMethod = DistributionGrpc.getGetMessageMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getGetMessageMethod = DistributionGrpc.getGetMessageMethod) == null) {
+          DistributionGrpc.getGetMessageMethod = getGetMessageMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.passkit.grpc.MessageOuterClass.Message>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getMessage"))
+              .build();
+        }
+      }
+    }
+    return getGetMessageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.MessageOuterClass.Message> getGetMessagesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getMessages",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = com.passkit.grpc.MessageOuterClass.Message.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      com.passkit.grpc.MessageOuterClass.Message> getGetMessagesMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.passkit.grpc.MessageOuterClass.Message> getGetMessagesMethod;
+    if ((getGetMessagesMethod = DistributionGrpc.getGetMessagesMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getGetMessagesMethod = DistributionGrpc.getGetMessagesMethod) == null) {
+          DistributionGrpc.getGetMessagesMethod = getGetMessagesMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.passkit.grpc.MessageOuterClass.Message>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMessages"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("getMessages"))
+              .build();
+        }
+      }
+    }
+    return getGetMessagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message,
+      com.google.protobuf.Empty> getUpdateMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "updateMessage",
+      requestType = com.passkit.grpc.MessageOuterClass.Message.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message,
+      com.google.protobuf.Empty> getUpdateMessageMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.MessageOuterClass.Message, com.google.protobuf.Empty> getUpdateMessageMethod;
+    if ((getUpdateMessageMethod = DistributionGrpc.getUpdateMessageMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getUpdateMessageMethod = DistributionGrpc.getUpdateMessageMethod) == null) {
+          DistributionGrpc.getUpdateMessageMethod = getUpdateMessageMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.MessageOuterClass.Message, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "updateMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.MessageOuterClass.Message.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("updateMessage"))
+              .build();
+        }
+      }
+    }
+    return getUpdateMessageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getCancelMessageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "cancelMessage",
+      requestType = com.passkit.grpc.CommonObjects.Id.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id,
+      com.google.protobuf.Empty> getCancelMessageMethod() {
+    io.grpc.MethodDescriptor<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty> getCancelMessageMethod;
+    if ((getCancelMessageMethod = DistributionGrpc.getCancelMessageMethod) == null) {
+      synchronized (DistributionGrpc.class) {
+        if ((getCancelMessageMethod = DistributionGrpc.getCancelMessageMethod) == null) {
+          DistributionGrpc.getCancelMessageMethod = getCancelMessageMethod =
+              io.grpc.MethodDescriptor.<com.passkit.grpc.CommonObjects.Id, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "cancelMessage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.passkit.grpc.CommonObjects.Id.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DistributionMethodDescriptorSupplier("cancelMessage"))
+              .build();
+        }
+      }
+    }
+    return getCancelMessageMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -314,6 +469,41 @@ public final class DistributionGrpc {
         io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getValidateBarcodeMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void addMessage(com.passkit.grpc.MessageOuterClass.Message request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddMessageMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getMessage(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessageMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void getMessages(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMessagesMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateMessageMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void cancelMessage(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCancelMessageMethod(), responseObserver);
+    }
   }
 
   /**
@@ -414,6 +604,46 @@ public final class DistributionGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getValidateBarcodeMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void addMessage(com.passkit.grpc.MessageOuterClass.Message request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddMessageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getMessage(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMessageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getMessages(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetMessagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void updateMessage(com.passkit.grpc.MessageOuterClass.Message request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateMessageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void cancelMessage(com.passkit.grpc.CommonObjects.Id request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCancelMessageMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -493,6 +723,42 @@ public final class DistributionGrpc {
     public com.passkit.grpc.CommonObjects.Payload validateBarcode(com.passkit.grpc.CommonObjects.Payload request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getValidateBarcodeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty addMessage(com.passkit.grpc.MessageOuterClass.Message request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.passkit.grpc.MessageOuterClass.Message getMessage(com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.passkit.grpc.MessageOuterClass.Message> getMessages(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetMessagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty updateMessage(com.passkit.grpc.MessageOuterClass.Message request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateMessageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty cancelMessage(com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCancelMessageMethod(), getCallOptions(), request);
     }
   }
 
@@ -580,6 +846,38 @@ public final class DistributionGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getValidateBarcodeMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> addMessage(
+        com.passkit.grpc.MessageOuterClass.Message request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddMessageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.MessageOuterClass.Message> getMessage(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMessageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> updateMessage(
+        com.passkit.grpc.MessageOuterClass.Message request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateMessageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> cancelMessage(
+        com.passkit.grpc.CommonObjects.Id request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCancelMessageMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_WELCOME_EMAIL = 0;
@@ -588,6 +886,11 @@ public final class DistributionGrpc {
   private static final int METHODID_UPLOAD_SMART_PASS_CSV = 3;
   private static final int METHODID_IMPORT_PROTOCOL_CSV = 4;
   private static final int METHODID_VALIDATE_BARCODE = 5;
+  private static final int METHODID_ADD_MESSAGE = 6;
+  private static final int METHODID_GET_MESSAGE = 7;
+  private static final int METHODID_GET_MESSAGES = 8;
+  private static final int METHODID_UPDATE_MESSAGE = 9;
+  private static final int METHODID_CANCEL_MESSAGE = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -629,6 +932,26 @@ public final class DistributionGrpc {
         case METHODID_VALIDATE_BARCODE:
           serviceImpl.validateBarcode((com.passkit.grpc.CommonObjects.Payload) request,
               (io.grpc.stub.StreamObserver<com.passkit.grpc.CommonObjects.Payload>) responseObserver);
+          break;
+        case METHODID_ADD_MESSAGE:
+          serviceImpl.addMessage((com.passkit.grpc.MessageOuterClass.Message) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_GET_MESSAGE:
+          serviceImpl.getMessage((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message>) responseObserver);
+          break;
+        case METHODID_GET_MESSAGES:
+          serviceImpl.getMessages((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<com.passkit.grpc.MessageOuterClass.Message>) responseObserver);
+          break;
+        case METHODID_UPDATE_MESSAGE:
+          serviceImpl.updateMessage((com.passkit.grpc.MessageOuterClass.Message) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
+          break;
+        case METHODID_CANCEL_MESSAGE:
+          serviceImpl.cancelMessage((com.passkit.grpc.CommonObjects.Id) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -690,6 +1013,41 @@ public final class DistributionGrpc {
               com.passkit.grpc.CommonObjects.Payload,
               com.passkit.grpc.CommonObjects.Payload>(
                 service, METHODID_VALIDATE_BARCODE)))
+        .addMethod(
+          getAddMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.MessageOuterClass.Message,
+              com.google.protobuf.Empty>(
+                service, METHODID_ADD_MESSAGE)))
+        .addMethod(
+          getGetMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.passkit.grpc.MessageOuterClass.Message>(
+                service, METHODID_GET_MESSAGE)))
+        .addMethod(
+          getGetMessagesMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              com.passkit.grpc.MessageOuterClass.Message>(
+                service, METHODID_GET_MESSAGES)))
+        .addMethod(
+          getUpdateMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.MessageOuterClass.Message,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPDATE_MESSAGE)))
+        .addMethod(
+          getCancelMessageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.passkit.grpc.CommonObjects.Id,
+              com.google.protobuf.Empty>(
+                service, METHODID_CANCEL_MESSAGE)))
         .build();
   }
 
@@ -744,6 +1102,11 @@ public final class DistributionGrpc {
               .addMethod(getUploadSmartPassCsvMethod())
               .addMethod(getImportProtocolCsvMethod())
               .addMethod(getValidateBarcodeMethod())
+              .addMethod(getAddMessageMethod())
+              .addMethod(getGetMessageMethod())
+              .addMethod(getGetMessagesMethod())
+              .addMethod(getUpdateMessageMethod())
+              .addMethod(getCancelMessageMethod())
               .build();
         }
       }

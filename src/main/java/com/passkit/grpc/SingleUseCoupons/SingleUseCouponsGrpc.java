@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+ * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -994,7 +994,7 @@ public final class SingleUseCouponsGrpc {
 
   /**
    * <pre>
-   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
    * </pre>
    */
   public interface AsyncService {
@@ -1071,7 +1071,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * Creates an offer within a coupon campaign, including its pass design and redemption rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * </pre>
      */
     default void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
@@ -1131,7 +1131,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * Issues a unique coupon for an offer in a campaign. Required fields: campaignId, offerId, pass data.
      * </pre>
      */
     default void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1161,7 +1161,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * Marks a coupon as redeemed and applies its redemption-specific design. Required fields: coupon ID, or externalId with offerId and campaignId.
      * </pre>
      */
     default void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1211,7 +1211,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * Voids a coupon and invalidates it in the customer’s wallet. Required fields: coupon ID, or externalId with offerId and campaignId. This action is irreversible.
      * </pre>
      */
     default void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1303,7 +1303,7 @@ public final class SingleUseCouponsGrpc {
   /**
    * Base class for the server implementation of the service SingleUseCoupons.
    * <pre>
-   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
    * </pre>
    */
   public static abstract class SingleUseCouponsImplBase
@@ -1317,7 +1317,7 @@ public final class SingleUseCouponsGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service SingleUseCoupons.
    * <pre>
-   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
    * </pre>
    */
   public static final class SingleUseCouponsStub
@@ -1412,7 +1412,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * Creates an offer within a coupon campaign, including its pass design and redemption rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * </pre>
      */
     public void createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request,
@@ -1478,7 +1478,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * Issues a unique coupon for an offer in a campaign. Required fields: campaignId, offerId, pass data.
      * </pre>
      */
     public void createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1511,7 +1511,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * Marks a coupon as redeemed and applies its redemption-specific design. Required fields: coupon ID, or externalId with offerId and campaignId.
      * </pre>
      */
     public void redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1566,7 +1566,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * Voids a coupon and invalidates it in the customer’s wallet. Required fields: coupon ID, or externalId with offerId and campaignId. This action is irreversible.
      * </pre>
      */
     public void voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request,
@@ -1667,7 +1667,7 @@ public final class SingleUseCouponsGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service SingleUseCoupons.
    * <pre>
-   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
    * </pre>
    */
   public static final class SingleUseCouponsBlockingStub
@@ -1757,7 +1757,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * Creates an offer within a coupon campaign, including its pass design and redemption rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createCouponOffer(com.passkit.grpc.SingleUseCoupons.Offer.CouponOffer request) {
@@ -1819,7 +1819,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * Issues a unique coupon for an offer in a campaign. Required fields: campaignId, offerId, pass data.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id createCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1839,7 +1839,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * Marks a coupon as redeemed and applies its redemption-specific design. Required fields: coupon ID, or externalId with offerId and campaignId.
      * </pre>
      */
     public com.passkit.grpc.CommonObjects.Id redeemCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1879,7 +1879,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * Voids a coupon and invalidates it in the customer’s wallet. Required fields: coupon ID, or externalId with offerId and campaignId. This action is irreversible.
      * </pre>
      */
     public com.google.protobuf.Empty voidCoupon(com.passkit.grpc.SingleUseCoupons.CouponOuterClass.Coupon request) {
@@ -1973,7 +1973,7 @@ public final class SingleUseCouponsGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service SingleUseCoupons.
    * <pre>
-   * The PassKit Coupons API offers a robust and adaptable solution for managing your digital coupon programs. Effortlessly create, update, and maintain mobile coupons for Apple Wallet and Google Wallet. Seamlessly integrate coupon functionality into your applications to deliver engaging, real-time promotions to your customers.
+   * Manages coupon campaigns, offers, coupon issuance, redemption, and voiding. Create a campaign and offer before issuing coupons.
    * </pre>
    */
   public static final class SingleUseCouponsFutureStub
@@ -2046,7 +2046,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new coupon offer, including title, pass design, and rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
+     * Creates an offer within a coupon campaign, including its pass design and redemption rules. Required fields: campaignId, offerTitle, offerDetails, beforeRedeemPassTemplateId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createCouponOffer(
@@ -2090,7 +2090,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Creates a new unique coupon assigned to a specific offer. Required fields: campaignId, offerId, pass data.
+     * Issues a unique coupon for an offer in a campaign. Required fields: campaignId, offerId, pass data.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> createCoupon(
@@ -2112,7 +2112,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Marks a coupon as redeemed and triggers redemption-specific design. Required fields: coupon id , or externalId, offerId and campaignId.
+     * Marks a coupon as redeemed and applies its redemption-specific design. Required fields: coupon ID, or externalId with offerId and campaignId.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.passkit.grpc.CommonObjects.Id> redeemCoupon(
@@ -2156,7 +2156,7 @@ public final class SingleUseCouponsGrpc {
 
     /**
      * <pre>
-     * Voids a coupon and invalidates it in the customer’s mobile wallet. Required fields: coupon id, or externalId, offerId and campaignId. Use with caution, as this action is irreversible.
+     * Voids a coupon and invalidates it in the customer’s wallet. Required fields: coupon ID, or externalId with offerId and campaignId. This action is irreversible.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> voidCoupon(
